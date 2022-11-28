@@ -1,0 +1,19 @@
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: "Jura";
+  /* TODO: confirm font type for this app */
+  src: url("../public/fonts/Jura-Regular.ttf");
+}
+
+.nav-info {
+  font-family: "Jura", sans-serif;
+}
+
+.hiro-content {
+  font-family: "Jura", sans-serif;
+}
