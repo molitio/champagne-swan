@@ -1,4 +1,4 @@
-import { AppShell, MolitioNavBar } from "@molitio/ui-core";
+import { AppShell, Footer, MolitioNavBar } from "@molitio/ui-core";
 
 import type { AppProps } from "next/app";
 import { createTheme } from "@mui/material";
@@ -22,8 +22,11 @@ function MolitioWeb({ Component, pageProps }: AppProps) {
       externalAppContextRoot={ChampagneSwanContextRoot}
     >
       <MuiThemeProvider externalTheme={appTheme}>
-        <MolitioNavBar />
+        <MolitioNavBar
+          contactProps={{ contactInfoTextShadow: "0 2px 4px #8C7B6C" }}
+        />
         <Component {...pageProps} />
+        <Footer fixed={true} />
       </MuiThemeProvider>
     </AppShell>
   );

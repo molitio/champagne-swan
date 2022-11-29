@@ -5,7 +5,7 @@ const HomePage: NextPage = () => {
   return (
     <main>
       <Page>
-        <ChampagneSwanHomePage />
+        <ChampagneSwanHomePage segmentParams={{ innerPaddingTop: "2em" }} />
       </Page>
     </main>
   );
