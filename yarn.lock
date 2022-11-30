@@ -466,7 +466,7 @@ __metadata:
     "@emotion/react": ^11.10.0
     "@emotion/styled": ^11.10.0
     "@molitio/common-ui": "workspace:^"
-    "@molitio/ui-core": 0.16.3-rc.128
+    "@molitio/ui-core": 0.16.4-rc.128
     "@mui/icons-material": ^5.10.3
     "@mui/material": ^5.10.2
     "@mui/styled-engine-sc": ^5.10.1
@@ -500,7 +500,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@molitio/common-ui@workspace:packages/common"
   dependencies:
-    "@molitio/ui-core": 0.16.3-rc.128
+    "@molitio/ui-core": 0.16.4-rc.128
     "@mui/icons-material": ^5.10.9
     "@mui/material": ^5.10.12
     "@types/node": 18.7.11
@@ -520,9 +520,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@molitio/ui-core@npm:0.16.3-rc.128":
-  version: 0.16.3-rc.128
-  resolution: "@molitio/ui-core@npm:0.16.3-rc.128"
+"@molitio/ui-core@npm:0.16.4-rc.128":
+  version: 0.16.4-rc.128
+  resolution: "@molitio/ui-core@npm:0.16.4-rc.128"
   peerDependencies:
     device-detector-js: "*"
     nanoid: "*"
@@ -530,7 +530,7 @@ __metadata:
     react-dom: ^18.2.0
     react-is: "*"
     styled-components: "*"
-  checksum: 8d6a0bd0fe783f0aff275bce3542095a09b473dee0dc1f36d8a62cecaee03ff71b997ed6ab20def82301449a0d244dc31b0e5402fdf264a86d37079d7a20463b
+  checksum: 6caa3a044c2fd3867353f43c51abb2f7bde491a61270cfb8482001faa571185c6d38b5fc568625e3c415cad6e711cc4643d6d6df5184717f38d8e53908d80659
   languageName: node
   linkType: hard
 

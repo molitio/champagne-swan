@@ -20,6 +20,8 @@ function MolitioWeb({ Component, pageProps }: AppProps) {
       applyGlobalStyleRules={true}
       externalTheme={appTheme}
       externalAppContextRoot={ChampagneSwanContextRoot}
+      fontFamily="'Tenor Sans', sans-serif"
+      fontFamilyHref="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap"
     >
       <MuiThemeProvider externalTheme={appTheme}>
         <MolitioNavBar

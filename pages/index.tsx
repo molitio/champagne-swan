@@ -3,11 +3,26 @@ import { ChampagneSwanHomePage, Page } from "@molitio/ui-core";
 
 const HomePage: NextPage = () => {
   return (
-    <main>
-      <Page>
-        <ChampagneSwanHomePage segmentParams={{ innerPaddingTop: "2em" }} />
-      </Page>
-    </main>
+    <Page>
+      <ChampagneSwanHomePage
+        segmentParams={{
+          hero: {
+            titleFontSize: "2.8rem",
+            titleTextShadow: "0 2px 4px #8c7b6ccc",
+            titleFontWeight: "lighter",
+            descriptionTextFontWeight: "lighter",
+            descriptionTextAlign: "center",
+            descriptionSubTextAlign: "center",
+            descriptionTextShadow: "0 1px 1.5px #8c7b6ccc",
+            backgroundType: "image",
+            heroIconType: "drop-shadow",
+            innerPaddingTop: "10em",
+            disableLineDecorator: true,
+            iconBorderRadius: "0.2em",
+          },
+        }}
+      />
+    </Page>
   );
 };
 
