@@ -3,7 +3,7 @@ import { ChampagneSwanHomePage, Page } from "@molitio/ui-core";
 
 const HomePage: NextPage = () => {
   return (
-    <Page>
+    <Page minHeight="100vh">
       <ChampagneSwanHomePage
         segmentParams={{
           hero: {

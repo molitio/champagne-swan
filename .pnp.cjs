@@ -41,7 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/react", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:11.10.5"],\
             ["@emotion/styled", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:11.10.5"],\
             ["@molitio/common-ui", "workspace:packages/common"],\
-            ["@molitio/ui-core", "virtual:faab18e7cce0d9362f5df187bc789e94cbb77aadeca99af405d2321675ec928741b80d833ebcdac450f333e66534c5c5875001c87bf15caa788b850997a843ae#npm:0.16.4-rc.128"],\
+            ["@molitio/ui-core", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:0.16.4-rc.128"],\
             ["@mui/icons-material", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.10.15"],\
             ["@mui/material", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.10.15"],\
             ["@mui/styled-engine-sc", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.10.14"],\
@@ -51,6 +51,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:18.0.6"],\
             ["@types/smoothscroll-polyfill", "npm:0.3.1"],\
             ["@types/styled-components", "npm:5.1.26"],\
+            ["babel-plugin-styled-components", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:2.0.7"],\
             ["device-detector-js", "npm:3.0.3"],\
             ["eslint", "npm:8.22.0"],\
             ["eslint-config-next", "virtual:faab18e7cce0d9362f5df187bc789e94cbb77aadeca99af405d2321675ec928741b80d833ebcdac450f333e66534c5c5875001c87bf15caa788b850997a843ae#npm:12.2.5"],\
@@ -64,7 +65,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-is", "npm:18.2.0"],\
             ["sass", "npm:1.56.1"],\
             ["smoothscroll-polyfill", "npm:0.4.4"],\
-            ["styled-components", "virtual:faab18e7cce0d9362f5df187bc789e94cbb77aadeca99af405d2321675ec928741b80d833ebcdac450f333e66534c5c5875001c87bf15caa788b850997a843ae#npm:5.3.6"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=a1c5e5"],\
             ["webpack", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.75.0"],\
             ["workspaces", "npm:0.1.0"]\
@@ -650,7 +650,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/react", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:11.10.5"],\
             ["@emotion/styled", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:11.10.5"],\
             ["@molitio/common-ui", "workspace:packages/common"],\
-            ["@molitio/ui-core", "virtual:faab18e7cce0d9362f5df187bc789e94cbb77aadeca99af405d2321675ec928741b80d833ebcdac450f333e66534c5c5875001c87bf15caa788b850997a843ae#npm:0.16.4-rc.128"],\
+            ["@molitio/ui-core", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:0.16.4-rc.128"],\
             ["@mui/icons-material", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.10.15"],\
             ["@mui/material", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.10.15"],\
             ["@mui/styled-engine-sc", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.10.14"],\
@@ -660,6 +660,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:18.0.6"],\
             ["@types/smoothscroll-polyfill", "npm:0.3.1"],\
             ["@types/styled-components", "npm:5.1.26"],\
+            ["babel-plugin-styled-components", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:2.0.7"],\
             ["device-detector-js", "npm:3.0.3"],\
             ["eslint", "npm:8.22.0"],\
             ["eslint-config-next", "virtual:faab18e7cce0d9362f5df187bc789e94cbb77aadeca99af405d2321675ec928741b80d833ebcdac450f333e66534c5c5875001c87bf15caa788b850997a843ae#npm:12.2.5"],\
@@ -673,7 +674,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-is", "npm:18.2.0"],\
             ["sass", "npm:1.56.1"],\
             ["smoothscroll-polyfill", "npm:0.4.4"],\
-            ["styled-components", "virtual:faab18e7cce0d9362f5df187bc789e94cbb77aadeca99af405d2321675ec928741b80d833ebcdac450f333e66534c5c5875001c87bf15caa788b850997a843ae#npm:5.3.6"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=a1c5e5"],\
             ["webpack", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.75.0"],\
             ["workspaces", "npm:0.1.0"]\
@@ -693,6 +693,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:18.0.17"],\
             ["@types/react-dom", "npm:18.0.6"],\
             ["@types/styled-components", "npm:5.1.26"],\
+            ["babel-plugin-styled-components", "virtual:faab18e7cce0d9362f5df187bc789e94cbb77aadeca99af405d2321675ec928741b80d833ebcdac450f333e66534c5c5875001c87bf15caa788b850997a843ae#npm:2.0.7"],\
             ["device-detector-js", "npm:3.0.3"],\
             ["eslint", "npm:8.22.0"],\
             ["eslint-config-next", "virtual:faab18e7cce0d9362f5df187bc789e94cbb77aadeca99af405d2321675ec928741b80d833ebcdac450f333e66534c5c5875001c87bf15caa788b850997a843ae#npm:12.2.5"],\
@@ -714,6 +715,39 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@molitio/ui-core", "npm:0.16.4-rc.128"]\
           ],\
           "linkType": "SOFT"\
+        }],\
+        ["virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:0.16.4-rc.128", {\
+          "packageLocation": "./.yarn/__virtual__/@molitio-ui-core-virtual-bd0da6a953/0/cache/@molitio-ui-core-npm-0.16.4-rc.128-65f998bed0-6caa3a044c.zip/node_modules/@molitio/ui-core/",\
+          "packageDependencies": [\
+            ["@molitio/ui-core", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:0.16.4-rc.128"],\
+            ["@types/device-detector-js", null],\
+            ["@types/nanoid", null],\
+            ["@types/react", "npm:18.0.17"],\
+            ["@types/react-dom", "npm:18.0.6"],\
+            ["@types/react-is", null],\
+            ["@types/styled-components", "npm:5.1.26"],\
+            ["device-detector-js", "npm:3.0.3"],\
+            ["nanoid", "npm:4.0.0"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:faab18e7cce0d9362f5df187bc789e94cbb77aadeca99af405d2321675ec928741b80d833ebcdac450f333e66534c5c5875001c87bf15caa788b850997a843ae#npm:18.2.0"],\
+            ["react-is", "npm:18.2.0"],\
+            ["styled-components", null]\
+          ],\
+          "packagePeers": [\
+            "@types/device-detector-js",\
+            "@types/nanoid",\
+            "@types/react-dom",\
+            "@types/react-is",\
+            "@types/react",\
+            "@types/styled-components",\
+            "device-detector-js",\
+            "nanoid",\
+            "react-dom",\
+            "react-is",\
+            "react",\
+            "styled-components"\
+          ],\
+          "linkType": "HARD"\
         }],\
         ["virtual:faab18e7cce0d9362f5df187bc789e94cbb77aadeca99af405d2321675ec928741b80d833ebcdac450f333e66534c5c5875001c87bf15caa788b850997a843ae#npm:0.16.4-rc.128", {\
           "packageLocation": "./.yarn/__virtual__/@molitio-ui-core-virtual-a8adcaef6c/0/cache/@molitio-ui-core-npm-0.16.4-rc.128-65f998bed0-6caa3a044c.zip/node_modules/@molitio/ui-core/",\
@@ -1019,7 +1053,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/runtime", "npm:7.20.6"],\
             ["@types/styled-components", "npm:5.1.26"],\
             ["prop-types", "npm:15.8.1"],\
-            ["styled-components", "virtual:faab18e7cce0d9362f5df187bc789e94cbb77aadeca99af405d2321675ec928741b80d833ebcdac450f333e66534c5c5875001c87bf15caa788b850997a843ae#npm:5.3.6"]\
+            ["styled-components", null]\
           ],\
           "packagePeers": [\
             "@types/styled-components",\
@@ -2282,6 +2316,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/helper-annotate-as-pure", "npm:7.18.6"],\
             ["@babel/helper-module-imports", "npm:7.18.6"],\
             ["@types/styled-components", null],\
+            ["babel-plugin-syntax-jsx", "npm:6.18.0"],\
+            ["lodash", "npm:4.17.21"],\
+            ["picomatch", "npm:2.3.1"],\
+            ["styled-components", "virtual:faab18e7cce0d9362f5df187bc789e94cbb77aadeca99af405d2321675ec928741b80d833ebcdac450f333e66534c5c5875001c87bf15caa788b850997a843ae#npm:5.3.6"]\
+          ],\
+          "packagePeers": [\
+            "@types/styled-components",\
+            "styled-components"\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:2.0.7", {\
+          "packageLocation": "./.yarn/__virtual__/babel-plugin-styled-components-virtual-7ec0449073/0/cache/babel-plugin-styled-components-npm-2.0.7-543710bd48-80b06b10db.zip/node_modules/babel-plugin-styled-components/",\
+          "packageDependencies": [\
+            ["babel-plugin-styled-components", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:2.0.7"],\
+            ["@babel/helper-annotate-as-pure", "npm:7.18.6"],\
+            ["@babel/helper-module-imports", "npm:7.18.6"],\
+            ["@types/styled-components", "npm:5.1.26"],\
+            ["babel-plugin-syntax-jsx", "npm:6.18.0"],\
+            ["lodash", "npm:4.17.21"],\
+            ["picomatch", "npm:2.3.1"],\
+            ["styled-components", null]\
+          ],\
+          "packagePeers": [\
+            "@types/styled-components",\
+            "styled-components"\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:faab18e7cce0d9362f5df187bc789e94cbb77aadeca99af405d2321675ec928741b80d833ebcdac450f333e66534c5c5875001c87bf15caa788b850997a843ae#npm:2.0.7", {\
+          "packageLocation": "./.yarn/__virtual__/babel-plugin-styled-components-virtual-6e70f9400c/0/cache/babel-plugin-styled-components-npm-2.0.7-543710bd48-80b06b10db.zip/node_modules/babel-plugin-styled-components/",\
+          "packageDependencies": [\
+            ["babel-plugin-styled-components", "virtual:faab18e7cce0d9362f5df187bc789e94cbb77aadeca99af405d2321675ec928741b80d833ebcdac450f333e66534c5c5875001c87bf15caa788b850997a843ae#npm:2.0.7"],\
+            ["@babel/helper-annotate-as-pure", "npm:7.18.6"],\
+            ["@babel/helper-module-imports", "npm:7.18.6"],\
+            ["@types/styled-components", "npm:5.1.26"],\
             ["babel-plugin-syntax-jsx", "npm:6.18.0"],\
             ["lodash", "npm:4.17.21"],\
             ["picomatch", "npm:2.3.1"],\
