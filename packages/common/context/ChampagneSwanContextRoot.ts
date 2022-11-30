@@ -46,8 +46,8 @@ vagy vedd fel velünk a kapcsolatot az alábbi elérhetőségek egyikén!`,
           textContent: {
             email: "info@jelizaclean.com",
             phoneMain: "+36 30 123 4567",
-            address: `1234. Budapest,
-             Példa utca 12.`,
+            address: `4321 Budapest,
+             Példa utca 14.`,
           },
           assetUrls: {
             emailHref: "mailto:info@jelizaclean.com",

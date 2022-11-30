@@ -29,7 +29,7 @@ export default function ChampagneSwanApp({ Component, pageProps }: AppProps) {
           contactProps={{ contactInfoTextShadow: "0 2px 4px #8C7B6C" }}
         />
         <Component {...pageProps} />
-        <Footer fixed={true} />
+        <Footer fixed={false} />
       </MuiThemeProvider>
     </AppShell>
   );
