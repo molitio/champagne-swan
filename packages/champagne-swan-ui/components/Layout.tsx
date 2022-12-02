@@ -11,12 +11,6 @@ type LayoutProps = {
 const Layout: React.FC<LayoutProps & React.PropsWithChildren> = (props) => {
   const { children, appTheme } = props;
 
-  console.log(
-    "context root hero background",
-    ChampagneSwanContextRoot?.contentRoot?.home?.leafs?.hero?.assetUrls
-      ?.heroBackground
-  );
-
   return (
     <AppShell
       externalTheme={appTheme}
@@ -27,8 +21,8 @@ const Layout: React.FC<LayoutProps & React.PropsWithChildren> = (props) => {
     >
       <MuiThemeProvider externalTheme={appTheme}>
         <AppHeader key={"champagen-swan-header"}>
-          <title>Champagne Swan</title>
-          <meta property="og:title" content="Champagne Swan" key="title" />
+          <title>Jeliza Clean</title>
+          <meta property="og:title" content="Jeliza Clean" key="title" />
         </AppHeader>
         <MolitioNavBar
           contactProps={{ contactInfoTextShadow: "0 2px 4px #8C7B6C" }}

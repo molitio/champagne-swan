@@ -28,7 +28,7 @@ const MuiThemeProvider: React.FC<React.PropsWithChildren<any>> = (props) => {
 
   return (
     <ThemeProvider theme={externalTheme ?? createTheme()}>
-      {children}{" "}
+      {children}
     </ThemeProvider>
   );
 };
