@@ -71,7 +71,7 @@ const nextConfig = {
         {
           protocol: "https",
           hostname: "s3.eu-west-1.amazonaws.com",
-          pathname: "/filestore.molitio.org/green-brick/web-content/**",
+          pathname: "/filestore.molitio.org/champagne-swan/web-content/**",
         },
       ],
     },
@@ -79,7 +79,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-
-const withVideos = require("next-videos");
-
-module.exports = withVideos();

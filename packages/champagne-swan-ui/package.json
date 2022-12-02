@@ -1,12 +1,12 @@
 {
-  "name": "@molitio/common-ui",
+  "name": "@molitio/champagne-swan-ui",
   "version": "0.1.0",
   "private": true,
   "resolutions": {
     "styled-components": "^5"
   },
   "dependencies": {
-    "@molitio/ui-core": "0.16.4-rc.128",
+    "@molitio/ui-core": "0.16.7-rc.7",
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.12",
     "device-detector-js": "^3.0.3",
@@ -14,15 +14,13 @@
     "next": "^13.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-is": "^18.2.0",
-    "styled-components": "^5.3.6"
+    "react-is": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "18.7.11",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
     "@types/styled-components": "^5.1.26",
-    "babel-plugin-styled-components": "^2.0.7",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
     "typescript": "4.7.4"
