@@ -14,8 +14,8 @@
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
-    "@molitio/common-ui": "workspace:^",
-    "@molitio/ui-core": "0.16.4-rc.128",
+    "@molitio/champagne-swan-ui": "workspace:^",
+    "@molitio/ui-core": "0.16.7-rc.7",
     "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.10.2",
     "@mui/styled-engine-sc": "^5.10.1",

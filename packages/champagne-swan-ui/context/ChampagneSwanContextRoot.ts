@@ -1,5 +1,5 @@
 export const ChampagneSwanContextRoot = {
-  appName: "champagne swan story app",
+  appName: "Champagne Swan v1.0.0",
   navRoot: {
     home: {
       label: "Home",
@@ -12,23 +12,26 @@ export const ChampagneSwanContextRoot = {
         hero: {
           textContent: {
             title: "TISZTASÁG FELSŐFOKON!",
-            description: `Cégünk magas színvonalon kínál takarító szolgáltatást szállodák, irodaházak és magánszemélyek részére,
+            description: `Cégünk magas színvonalon kínál \n takarító szolgáltatást szállodák, irodaházak és magánszemélyek részére,
 valamint vállaljuk nagy belmagasságú ipari üzemek, gyártó csarnokok, raktárak és logisztikai központok speciális takarítását!`,
             desciptionSubText: `Oldalunk fejlesztés alatt áll, kérjük látogass vissza később, 
 vagy vedd fel velünk a kapcsolatot az alábbi elérhetőségek egyikén!`,
           },
           iconDefinitions: {
-            email: {
+            phone: {
               title: "Phone",
               url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/icons/icons_jeliza-01.svg",
+              hrefUrl: "tel:+36999999999",
             },
-            github: {
+            email: {
               title: "Email",
-              url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/icons/icons_jeliza_envelope.svg",
-            },
-            mobile: {
-              title: "Address",
               url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/icons/icons_jeliza_phone.svg",
+              hrefUrl: "mailto:web-dev@molitio.com",
+            },
+            address: {
+              title: "Address",
+              url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/icons/icons_jeliza_envelope.svg",
+              hrefUrl: "https://goo.gl/maps/wPiPuYZaD9W8rmQK8",
             },
           },
           assetUrls: {
@@ -63,7 +66,7 @@ vagy vedd fel velünk a kapcsolatot az alábbi elérhetőségek egyikén!`,
       leafs: {
         maintainer: {
           textContent: {
-            maintainer: `© 2022 All Rights Reserved | molitio llc. | ${"Champagne Swan v1.0.0"}`,
+            maintainer: `© 2022 All Rights Reserved molitio llc. ${"Champagne Swan v1.0.0"}`,
           },
         },
       },

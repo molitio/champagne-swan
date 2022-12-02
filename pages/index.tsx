@@ -3,10 +3,11 @@ import { ChampagneSwanHomePage, Page } from "@molitio/ui-core";
 
 const HomePage: NextPage = () => {
   return (
-    <Page minHeight="100vh">
+    <Page id={"home"}>
       <ChampagneSwanHomePage
         segmentParams={{
           hero: {
+            pageName: "home",
             titleFontSize: "2.8rem",
             titleTextShadow: "0 2px 4px #8c7b6ccc",
             titleFontWeight: "lighter",
