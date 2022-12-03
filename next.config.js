@@ -52,13 +52,13 @@ const nextConfig = {
               process.env.NODE_ENV === "development"
                 ? ``
                 : `
-                    default-src 'self' https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/ https://*-molitio.vercel.app/;
-                    script-src 'self';
-                    child-src 'self';
-                    object-src 'self';
-                    style-src 'self' https://fonts.googleapis.com https://*-molitio.vercel.app/;
                     require-trusted-types-for 'script';
-                    font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://s3.eu-west-1.amazonaws.com/filestore.molitio.org;  
+                    default-src 'self' https://champagne-swan.vercel.app/ https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/;
+                    script-src 'self' https://champagne-swan.vercel.app/;
+                    child-src 'self' https://champagne-swan.vercel.app/;
+                    object-src 'self' https://champagne-swan.vercel.app/;
+                    style-src 'self' https://champagne-swan.vercel.app/ https://fonts.googleapis.com;
+                    font-src 'self' https://champagne-swan.vercel.app/ https://fonts.googleapis.com https://fonts.gstatic.com https://s3.eu-west-1.amazonaws.com/filestore.molitio.org;  
                   `
                     .replace(/\s{2,}/g, " ")
                     .trim(),
