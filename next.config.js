@@ -54,11 +54,13 @@ const nextConfig = {
                 : `
                     base-uri 'self';
                     object-src 'none';
+                    script-src 'self' 'unsafle-inline' unsafe-eval;
                     style-src 'self' *.jelizaclean.com/ *.vercel.app/ *.fonts.googleapis.com/;
                     default-src 'self' *.jelizaclean.com/ *.vercel.app/ *.amazonaws.com/filestore.molitio.org/;
-                    script-src 'strict-dynamic' 'nonce-kX41H2LmrDTHXwBZ9uhRBBDS' 'unsafe-inline'; 
                     font-src 'self' *.jelizaclean.com/ *.vercel.app/ *.fonts.googleapis.com/ *.fonts.gstatic.com/ *.amazonaws.com/filestore.molitio.org/;  
-                  `
+                    `
+                    /* TODO: find solution for a more safe approach with hash or nonce, for ssr and static 
+                    script-src 'strict-dynamic' 'nonce-kX41H2LmrDTHXwBZ9uhRBBDS' ;  */
                     .replace(/\s{2,}/g, " ")
                     .trim(),
           },
