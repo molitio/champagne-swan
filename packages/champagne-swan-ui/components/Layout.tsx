@@ -20,6 +20,9 @@ const Layout: React.FC<LayoutProps & React.PropsWithChildren> = (props) => {
       fontFamilyHref="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap"
     >
       <MuiThemeProvider externalTheme={appTheme}>
+        {/* TODO: can be provided in _document.tsx?
+
+*/}
         <AppHeader key={"champagen-swan-header"}>
           <title>Jeliza Clean</title>
           <meta property="og:title" content="Jeliza Clean" key="title" />

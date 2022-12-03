@@ -6,6 +6,7 @@ const nextConfig = {
     styledComponents: true,
   },
   async headers() {
+    console.log("headers nonce", process.env.NONCE);
     return [
       {
         // Apply these headers to all routes in your application.
@@ -43,23 +44,26 @@ const nextConfig = {
           {
             key: "Access-Control-Allow-Origin",
             value:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org https://fonts.googleapis.com https://fonts.gstatic.com ",
+              "https://s3.eu-west-1.amazonaws.comfilestore.molitio.org https://fonts.googleapis.com https://fonts.gstatic.com ",
           },
           {
             key: "Content-Security-Policy",
 
             value:
               process.env.NODE_ENV === "development"
-                ? ``
-                : `
-                    require-trusted-types-for 'script';
-                    default-src 'self' https://jelizaclean.com/ https://www.jelizaclean.com/ https://champagne-swan.vercel.app/ https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/;
-                    script-src 'self' https://jelizaclean.com/ https://www.jelizaclean.com/ https://champagne-swan.vercel.app/;
-                    child-src 'self' https://jelizaclean.com/ https://www.jelizaclean.com/ https://champagne-swan.vercel.app/;
-                    object-src 'self' https://jelizaclean.com/ https://www.jelizaclean.com/ https://champagne-swan.vercel.app/;
-                    style-src 'self' https://jelizaclean.com/ https://www.jelizaclean.com/ https://champagne-swan.vercel.app/ https://fonts.googleapis.com;
-                    font-src 'self' https://jelizaclean.com/ https://www.jelizaclean.com/ https://champagne-swan.vercel.app/ https://fonts.googleapis.com https://fonts.gstatic.com https://s3.eu-west-1.amazonaws.com/filestore.molitio.org;  
+                ? `
+                    script-src 'strict-dynamic' 'nonce-kX41H2LmrDTHXwBZ9uhRBBDS'; 
                   `
+                : "" /* `
+                    base-uri 'self';
+                    object-src 'none';
+                    script-src 'strict-dynamic' 'nonce-${process.env.NONCE}'; 
+                    style-src 'self' *.jelizaclean.com/ *.vercel.app/ *.fonts.googleapis.com/;
+                    default-src 'self' *.jelizaclean.com/ *.vercel.app/ *.amazonaws.com/filestore.molitio.org/;
+                    font-src 'self' *.jelizaclean.com/ *.vercel.app/ *.fonts.googleapis.com/ *.fonts.gstatic.com/ *.amazonaws.com/filestore.molitio.org/;  
+                    ` */
+                    /* TODO: find solution for a more safe approach with hash or nonce, for ssr and static 
+                    script-src 'strict-dynamic' 'nonce-kX41H2LmrDTHXwBZ9uhRBBDS' ;  */
                     .replace(/\s{2,}/g, " ")
                     .trim(),
           },
@@ -73,7 +77,7 @@ const nextConfig = {
         {
           protocol: "https",
           hostname: "s3.eu-west-1.amazonaws.com",
-          pathname: "/filestore.molitio.org/champagne-swan/web-content/**",
+          pathname: "/filestore.molitio.orgchampagne-swan/web-content/**/*",
         },
       ],
     },
