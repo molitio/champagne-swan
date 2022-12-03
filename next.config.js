@@ -53,12 +53,12 @@ const nextConfig = {
                 ? ``
                 : `
                     require-trusted-types-for 'script';
-                    default-src 'self' https://*jelizaclean.com/ https://champagne-swan.vercel.app/ https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/;
-                    script-src 'self' https://*jelizaclean.com/ https://champagne-swan.vercel.app/;
-                    child-src 'self' https://*jelizaclean.com/ https://champagne-swan.vercel.app/;
-                    object-src 'self' https://*jelizaclean.com/ https://champagne-swan.vercel.app/;
-                    style-src 'self' https://*jelizaclean.com/ https://champagne-swan.vercel.app/ https://fonts.googleapis.com;
-                    font-src 'self' https://*jelizaclean.com/ https://champagne-swan.vercel.app/ https://fonts.googleapis.com https://fonts.gstatic.com https://s3.eu-west-1.amazonaws.com/filestore.molitio.org;  
+                    default-src 'self' https://jelizaclean.com/ https://www.jelizaclean.com/ https://champagne-swan.vercel.app/ https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/;
+                    script-src 'self' https://jelizaclean.com/ https://www.jelizaclean.com/ https://champagne-swan.vercel.app/;
+                    child-src 'self' https://jelizaclean.com/ https://www.jelizaclean.com/ https://champagne-swan.vercel.app/;
+                    object-src 'self' https://jelizaclean.com/ https://www.jelizaclean.com/ https://champagne-swan.vercel.app/;
+                    style-src 'self' https://jelizaclean.com/ https://www.jelizaclean.com/ https://champagne-swan.vercel.app/ https://fonts.googleapis.com;
+                    font-src 'self' https://jelizaclean.com/ https://www.jelizaclean.com/ https://champagne-swan.vercel.app/ https://fonts.googleapis.com https://fonts.gstatic.com https://s3.eu-west-1.amazonaws.com/filestore.molitio.org;  
                   `
                     .replace(/\s{2,}/g, " ")
                     .trim(),
