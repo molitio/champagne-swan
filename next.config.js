@@ -55,7 +55,9 @@ const nextConfig = {
                     default-src 'self' https://s3.eu-west-1.amazonaws.com/filestore.molitio.org;
                     script-src 'self';
                     child-src 'self';
+                    object-src 'self';
                     style-src 'self' https://fonts.googleapis.com;
+                    require-trusted-types-for 'script';
                     font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://s3.eu-west-1.amazonaws.com/filestore.molitio.org;  
                   `
                     .replace(/\s{2,}/g, " ")
