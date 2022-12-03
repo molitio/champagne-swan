@@ -38,7 +38,7 @@ const nextConfig = {
           },
           {
             key: "Referrer-Policy",
-            value: "origin-when-cross-origin",
+            value: "strict-origin-when-cross-origin",
           },
           {
             key: "Access-Control-Allow-Origin",
@@ -52,11 +52,13 @@ const nextConfig = {
               process.env.NODE_ENV === "development"
                 ? ``
                 : `
-                    default-src 'self';
-                    script-src 'self';
-                    child-src 'self';
-                    style-src 'self';
-                    font-src 'self' https://fonts.googleapis.com https://s3.eu-west-1.amazonaws.com/filestore.molitio.org https://fonts.gstatic.com;  
+                    require-trusted-types-for 'script';
+                    default-src 'self' https://champagne-swan.vercel.app/ https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/;
+                    script-src 'self' https://champagne-swan.vercel.app/;
+                    child-src 'self' https://champagne-swan.vercel.app/;
+                    object-src 'self' https://champagne-swan.vercel.app/;
+                    style-src 'self' https://champagne-swan.vercel.app/ https://fonts.googleapis.com;
+                    font-src 'self' https://champagne-swan.vercel.app/ https://fonts.googleapis.com https://fonts.gstatic.com https://s3.eu-west-1.amazonaws.com/filestore.molitio.org;  
                   `
                     .replace(/\s{2,}/g, " ")
                     .trim(),
