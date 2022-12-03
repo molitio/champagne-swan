@@ -38,7 +38,7 @@ const nextConfig = {
           },
           {
             key: "Referrer-Policy",
-            value: "origin-when-cross-origin",
+            value: "strict-origin-when-cross-origin",
           },
           {
             key: "Access-Control-Allow-Origin",
@@ -52,7 +52,7 @@ const nextConfig = {
               process.env.NODE_ENV === "development"
                 ? ``
                 : `
-                    default-src 'self' https://s3.eu-west-1.amazonaws.com/filestore.molitio.org;
+                    default-src 'self' https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/;
                     script-src 'self';
                     child-src 'self';
                     object-src 'self';
