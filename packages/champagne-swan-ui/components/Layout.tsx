@@ -28,7 +28,7 @@ const Layout: React.FC<LayoutProps & React.PropsWithChildren> = (props) => {
           contactProps={{ contactInfoTextShadow: "0 2px 4px #8C7B6C" }}
         />
         {children}
-        <Footer fixed={false} />
+        <Footer />
       </MuiThemeProvider>
     </AppShell>
   );

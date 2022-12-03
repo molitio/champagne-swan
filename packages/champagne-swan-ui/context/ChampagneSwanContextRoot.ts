@@ -21,17 +21,17 @@ vagy vedd fel velünk a kapcsolatot az alábbi elérhetőségek egyikén!`,
             phone: {
               title: "Phone",
               url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/icons/icons_jeliza-01.svg",
-              hrefUrl: "tel:+36999999999",
+              hrefUrl: "tel:+36204160391",
             },
             email: {
               title: "Email",
               url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/icons/icons_jeliza_phone.svg",
-              hrefUrl: "mailto:web-dev@molitio.com",
+              hrefUrl: "mailto:info@jelizaclean.com",
             },
             address: {
               title: "Address",
               url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/icons/icons_jeliza_envelope.svg",
-              hrefUrl: "https://goo.gl/maps/wPiPuYZaD9W8rmQK8",
+              hrefUrl: "https://goo.gl/maps/FK9mXYG25HLPXEvR6",
             },
           },
           assetUrls: {
@@ -48,14 +48,14 @@ vagy vedd fel velünk a kapcsolatot az alábbi elérhetőségek egyikén!`,
         contacts: {
           textContent: {
             email: "info@jelizaclean.com",
-            phoneMain: "+36 30 123 4567",
-            address: `4321 Budapest,
-             Példa utca 14.`,
+            phoneMain: "+36 20 416 0391",
+            address: "1134 Budapest, Lehel utca 11.",
           },
           assetUrls: {
             emailHref: "mailto:info@jelizaclean.com",
             webSiteHref: "https://jelizaclean.com",
-            phoneMainHref: "tel:+36301234567",
+            addressHref: "https://goo.gl/maps/FK9mXYG25HLPXEvR6",
+            phoneMainHref: "tel:+36204160391",
             logoImage:
               "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/logo/jeliza_logo_horizontal_jeliza_logo_horizontal.svg",
           },
