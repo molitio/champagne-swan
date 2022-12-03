@@ -53,7 +53,7 @@ const nextConfig = {
                 ? ``
                 : `
                     object-src 'none';
-                    script-src 'self' 'strict-dynamic' 'nonce-gb$1d5B!44GRXW&AH2#s%M6kAJ9YvJf6ODeBgZBPnUVMApky9$$f^P*gE0py0jFJ'; 
+                    script-src 'self' 'strict-dynamic' 'nonce-kX41H2LmrDTHXwBZ9uhRBBDS' 'unsafe-inline' http: https:;; 
                     style-src 'self' jelizaclean.com vercel.app fonts.googleapis.com;
                     default-src 'self' jelizaclean.com vercel.app amazonaws.com/filestore.molitio.org;
                     font-src 'self' jelizaclean.com vercel.app fonts.googleapis.com fonts.gstatic.com amazonaws.com/filestore.molitio.org;  
