@@ -53,8 +53,7 @@ const nextConfig = {
                 ? ``
                 : `
                     object-src 'none';
-                    require-trusted-types-for 'script';
-                    script-src 'self' jelizaclean.com vercel.app; 
+                    script-src 'self' 'strict-dynamic' jelizaclean.com vercel.app; 
                     style-src 'self' jelizaclean.com vercel.app fonts.googleapis.com;
                     default-src 'self' jelizaclean.com vercel.app amazonaws.com/filestore.molitio.org;
                     font-src 'self' jelizaclean.com vercel.app fonts.googleapis.com fonts.gstatic.com amazonaws.com/filestore.molitio.org;  
