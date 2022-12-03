@@ -43,7 +43,7 @@ const nextConfig = {
           {
             key: "Access-Control-Allow-Origin",
             value:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org https://fonts.googleapis.com https://fonts.gstatic.com ",
+              "https://s3.eu-west-1.amazonaws.comfilestore.molitio.org https://fonts.googleapis.com https://fonts.gstatic.com ",
           },
           {
             key: "Content-Security-Policy",
@@ -52,12 +52,12 @@ const nextConfig = {
               process.env.NODE_ENV === "development"
                 ? ``
                 : `
+                    object-src 'none';
                     require-trusted-types-for 'script';
-                    default-src 'self' *.jelizaclean.com/ *.vercel.app/ *.amazonaws.com/filestore.molitio.org/;
-                    script-src 'self' *.jelizaclean.com/ *.vercel.app/; 
-                    object-src 'self' *.jelizaclean.com/ *.vercel.app/;
-                    style-src 'self' *.jelizaclean.com/ *.vercel.app/ https://fonts.googleapis.com/;
-                    font-src 'self' *.jelizaclean.com/ *.vercel.app/ https://fonts.googleapis.com/ https://fonts.gstatic.com/ *.amazonaws.com/filestore.molitio.org/;  
+                    script-src 'self' jelizaclean.com vercel.app; 
+                    style-src 'self' jelizaclean.com vercel.app fonts.googleapis.com;
+                    default-src 'self' jelizaclean.com vercel.app amazonaws.com/filestore.molitio.org;
+                    font-src 'self' jelizaclean.com vercel.app fonts.googleapis.com fonts.gstatic.com amazonaws.com/filestore.molitio.org;  
                   `
                     .replace(/\s{2,}/g, " ")
                     .trim(),
@@ -72,7 +72,7 @@ const nextConfig = {
         {
           protocol: "https",
           hostname: "s3.eu-west-1.amazonaws.com",
-          pathname: "/filestore.molitio.org/champagne-swan/web-content/**/*",
+          pathname: "/filestore.molitio.orgchampagne-swan/web-content/**/*",
         },
       ],
     },
