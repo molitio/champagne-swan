@@ -53,11 +53,11 @@ const nextConfig = {
                 ? ``
                 : `
                     require-trusted-types-for 'script';
-                    default-src 'self' https://jelizaclean.com/ https://www.jelizaclean.com/ https://champagne-swan.vercel.app/ https://*-molitio.vercel.app/ https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/;
-                    script-src 'self' https://jelizaclean.com/ https://www.jelizaclean.com/ https://champagne-swan.vercel.app/ https://*-molitio.vercel.app/;
-                    object-src 'self' https://jelizaclean.com/ https://www.jelizaclean.com/ https://champagne-swan.vercel.app/ https://*-molitio.vercel.app/;
-                    style-src 'self' https://jelizaclean.com/ https://www.jelizaclean.com/ https://champagne-swan.vercel.app/ https://fonts.googleapis.com; https://*-molitio.vercel.app/
-                    font-src 'self' https://jelizaclean.com/ https://www.jelizaclean.com/ https://champagne-swan.vercel.app/ https://*-molitio.vercel.app/ https://fonts.googleapis.com https://fonts.gstatic.com https://s3.eu-west-1.amazonaws.com/filestore.molitio.org;  
+                    default-src 'self' *.jelizaclean.com/ *.vercel.app/ *.amazonaws.com/filestore.molitio.org/;
+                    script-src 'self' *.jelizaclean.com/ *.vercel.app/; 
+                    object-src 'self' *.jelizaclean.com/ *.vercel.app/;
+                    style-src 'self' *.jelizaclean.com/ *.vercel.app/ https://fonts.googleapis.com/;
+                    font-src 'self' *.jelizaclean.com/ *.vercel.app/ https://fonts.googleapis.com/ https://fonts.gstatic.com/ *.amazonaws.com/filestore.molitio.org/;  
                   `
                     .replace(/\s{2,}/g, " ")
                     .trim(),
@@ -72,7 +72,7 @@ const nextConfig = {
         {
           protocol: "https",
           hostname: "s3.eu-west-1.amazonaws.com",
-          pathname: "/filestore.molitio.org/champagne-swan/web-content/**",
+          pathname: "/filestore.molitio.org/champagne-swan/web-content/**/*",
         },
       ],
     },
