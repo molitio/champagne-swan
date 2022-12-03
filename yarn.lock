@@ -459,24 +459,48 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@molitio/champagne-swan-ui@workspace:^, @molitio/champagne-swan-ui@workspace:packages/champagne-swan-ui":
+  version: 0.0.0-use.local
+  resolution: "@molitio/champagne-swan-ui@workspace:packages/champagne-swan-ui"
+  dependencies:
+    "@molitio/ui-core": 0.16.12-rc.7
+    "@mui/icons-material": ^5.10.9
+    "@mui/material": ^5.10.12
+    "@types/node": 18.7.11
+    "@types/react": 18.0.17
+    "@types/react-dom": 18.0.6
+    "@types/styled-components": ^5.1.26
+    device-detector-js: ^3.0.3
+    eslint: 8.22.0
+    eslint-config-next: 12.2.5
+    nanoid: ^4.0.0
+    next: ^13.0.2
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-is: ^18.2.0
+    styled-components: ^5.3.6
+    typescript: 4.7.4
+  languageName: unknown
+  linkType: soft
+
 "@molitio/champagne-swan@workspace:.":
   version: 0.0.0-use.local
   resolution: "@molitio/champagne-swan@workspace:."
   dependencies:
     "@emotion/react": ^11.10.0
     "@emotion/styled": ^11.10.0
-    "@molitio/common-ui": "workspace:^"
-    "@molitio/ui-core": 0.16.4-rc.128
+    "@molitio/champagne-swan-ui": "workspace:^"
+    "@molitio/ui-core": 0.16.12-rc.7
     "@mui/icons-material": ^5.10.3
     "@mui/material": ^5.10.2
     "@mui/styled-engine-sc": ^5.10.1
     "@types/material-ui": ^0.21.12
+    "@types/nanoid": ^3.0.0
     "@types/node": 18.7.11
     "@types/react": 18.0.17
     "@types/react-dom": 18.0.6
     "@types/smoothscroll-polyfill": ^0.3.1
     "@types/styled-components": ^5.1.26
-    babel-plugin-styled-components: ^2.0.7
     device-detector-js: ^3.0.3
     dotenv: ^16.0.3
     eslint: 8.22.0
@@ -491,48 +515,23 @@ __metadata:
     react-is: ^18.2.0
     sass: ^1.56.0
     smoothscroll-polyfill: ^0.4.4
+    styled-components: ^5.3.6
     typescript: 4.7.4
     webpack: ^5.75.0
     workspaces: ^0.1.0
   languageName: unknown
   linkType: soft
 
-"@molitio/common-ui@workspace:^, @molitio/common-ui@workspace:packages/common":
-  version: 0.0.0-use.local
-  resolution: "@molitio/common-ui@workspace:packages/common"
-  dependencies:
-    "@molitio/ui-core": 0.16.4-rc.128
-    "@mui/icons-material": ^5.10.9
-    "@mui/material": ^5.10.12
-    "@types/node": 18.7.11
-    "@types/react": 18.0.17
-    "@types/react-dom": 18.0.6
-    "@types/styled-components": ^5.1.26
-    babel-plugin-styled-components: ^2.0.7
-    device-detector-js: ^3.0.3
-    eslint: 8.22.0
-    eslint-config-next: 12.2.5
-    nanoid: ^4.0.0
-    next: ^13.0.2
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-is: ^18.2.0
-    styled-components: ^5.3.6
-    typescript: 4.7.4
-  languageName: unknown
-  linkType: soft
-
-"@molitio/ui-core@npm:0.16.4-rc.128":
-  version: 0.16.4-rc.128
-  resolution: "@molitio/ui-core@npm:0.16.4-rc.128"
+"@molitio/ui-core@npm:0.16.12-rc.7":
+  version: 0.16.12-rc.7
+  resolution: "@molitio/ui-core@npm:0.16.12-rc.7"
   peerDependencies:
     device-detector-js: "*"
-    nanoid: "*"
     react: ^18.2.0
     react-dom: ^18.2.0
     react-is: "*"
     styled-components: "*"
-  checksum: 6caa3a044c2fd3867353f43c51abb2f7bde491a61270cfb8482001faa571185c6d38b5fc568625e3c415cad6e711cc4643d6d6df5184717f38d8e53908d80659
+  checksum: 385602093623dfd23c97526aa9c496ca496b547c6b43497c228d5bf11cbac9dd60a66e99f1feb5fb67c77d5825bb8154020194829c121392594dabd5e3d356e3
   languageName: node
   linkType: hard
 
@@ -1080,6 +1079,15 @@ __metadata:
     "@types/react": "*"
     "@types/react-addons-linked-state-mixin": "*"
   checksum: 008c7a528e0440424641a39af1c225b63fd2c4383a51dbb11db5bd2041771bb7b49d7a651a970b833629bd85df463c1beff74f81b9b9abbdd74674fa1ed472b6
+  languageName: node
+  linkType: hard
+
+"@types/nanoid@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@types/nanoid@npm:3.0.0"
+  dependencies:
+    nanoid: "*"
+  checksum: 6e84d71ce2b8a2e23b20a018249a2e6a1c36b4ea0f45ff0265e8db514010ccf13141d87d6892f35b8e50ca5832d1d04ddc27062b5e69f91db2d5b3c5321c8c56
   languageName: node
   linkType: hard
 
@@ -1664,7 +1672,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-styled-components@npm:>= 1.12.0, babel-plugin-styled-components@npm:^2.0.7":
+"babel-plugin-styled-components@npm:>= 1.12.0":
   version: 2.0.7
   resolution: "babel-plugin-styled-components@npm:2.0.7"
   dependencies:
@@ -3661,21 +3669,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanoid@npm:*, nanoid@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "nanoid@npm:4.0.0"
+  bin:
+    nanoid: bin/nanoid.js
+  checksum: 7d5946df5c6d383694195b781ae7b5067c149d164ec71e910d6b06676309c3459b68af570b944fb5ecd5065d19df464f05700d141d70bb712ff8ca06642fd8df
+  languageName: node
+  linkType: hard
+
 "nanoid@npm:^3.3.4":
   version: 3.3.4
   resolution: "nanoid@npm:3.3.4"
   bin:
     nanoid: bin/nanoid.cjs
   checksum: 2fddd6dee994b7676f008d3ffa4ab16035a754f4bb586c61df5a22cf8c8c94017aadd360368f47d653829e0569a92b129979152ff97af23a558331e47e37cd9c
-  languageName: node
-  linkType: hard
-
-"nanoid@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "nanoid@npm:4.0.0"
-  bin:
-    nanoid: bin/nanoid.js
-  checksum: 7d5946df5c6d383694195b781ae7b5067c149d164ec71e910d6b06676309c3459b68af570b944fb5ecd5065d19df464f05700d141d70bb712ff8ca06642fd8df
   languageName: node
   linkType: hard
 
