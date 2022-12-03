@@ -56,7 +56,7 @@ const nextConfig = {
                     object-src 'none';
                     style-src 'self' *.jelizaclean.com/ *.vercel.app/ *.fonts.googleapis.com/;
                     default-src 'self' *.jelizaclean.com/ *.vercel.app/ *.amazonaws.com/filestore.molitio.org/;
-                    script-src *.jelizaclean.com/ *.vercel.app/ 'strict-dynamic' 'nonce-kX41H2LmrDTHXwBZ9uhRBBDS'; 
+                    script-src 'strict-dynamic' 'nonce-kX41H2LmrDTHXwBZ9uhRBBDS' 'unsafe-inline'; 
                     font-src 'self' *.jelizaclean.com/ *.vercel.app/ *.fonts.googleapis.com/ *.fonts.gstatic.com/ *.amazonaws.com/filestore.molitio.org/;  
                   `
                     .replace(/\s{2,}/g, " ")
