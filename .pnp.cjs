@@ -53,6 +53,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/smoothscroll-polyfill", "npm:0.3.1"],\
             ["@types/styled-components", "npm:5.1.26"],\
             ["device-detector-js", "npm:3.0.3"],\
+            ["dotenv", "npm:16.0.3"],\
             ["eslint", "npm:8.22.0"],\
             ["eslint-config-next", "virtual:320204f1b3ce36a62b70c537359b248ac8639dc9f8f670162e5d9172479700270a7d889e2380ef58a1509f963455f61fa14521b3d2f132cf7a73ae8e82414769#npm:12.2.5"],\
             ["nanoid", "npm:4.0.0"],\
@@ -663,6 +664,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/smoothscroll-polyfill", "npm:0.3.1"],\
             ["@types/styled-components", "npm:5.1.26"],\
             ["device-detector-js", "npm:3.0.3"],\
+            ["dotenv", "npm:16.0.3"],\
             ["eslint", "npm:8.22.0"],\
             ["eslint-config-next", "virtual:320204f1b3ce36a62b70c537359b248ac8639dc9f8f670162e5d9172479700270a7d889e2380ef58a1509f963455f61fa14521b3d2f132cf7a73ae8e82414769#npm:12.2.5"],\
             ["nanoid", "npm:4.0.0"],\
@@ -2837,6 +2839,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["dom-helpers", "npm:5.2.1"],\
             ["@babel/runtime", "npm:7.20.6"],\
             ["csstype", "npm:3.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["dotenv", [\
+        ["npm:16.0.3", {\
+          "packageLocation": "./.yarn/cache/dotenv-npm-16.0.3-4cc29121dc-afcf03f373.zip/node_modules/dotenv/",\
+          "packageDependencies": [\
+            ["dotenv", "npm:16.0.3"]\
           ],\
           "linkType": "HARD"\
         }]\

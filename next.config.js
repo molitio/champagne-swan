@@ -6,6 +6,7 @@ const nextConfig = {
     styledComponents: true,
   },
   async headers() {
+    console.log("headers nonce", process.env.NONCE);
     return [
       {
         // Apply these headers to all routes in your application.
@@ -50,15 +51,17 @@ const nextConfig = {
 
             value:
               process.env.NODE_ENV === "development"
-                ? ``
-                : `
+                ? `
+                    script-src 'strict-dynamic' 'nonce-kX41H2LmrDTHXwBZ9uhRBBDS'; 
+                  `
+                : "" /* `
                     base-uri 'self';
                     object-src 'none';
-                    script-src 'self' 'unsafe-inline' 'unsafe-eval';
+                    script-src 'strict-dynamic' 'nonce-${process.env.NONCE}'; 
                     style-src 'self' *.jelizaclean.com/ *.vercel.app/ *.fonts.googleapis.com/;
                     default-src 'self' *.jelizaclean.com/ *.vercel.app/ *.amazonaws.com/filestore.molitio.org/;
                     font-src 'self' *.jelizaclean.com/ *.vercel.app/ *.fonts.googleapis.com/ *.fonts.gstatic.com/ *.amazonaws.com/filestore.molitio.org/;  
-                    `
+                    ` */
                     /* TODO: find solution for a more safe approach with hash or nonce, for ssr and static 
                     script-src 'strict-dynamic' 'nonce-kX41H2LmrDTHXwBZ9uhRBBDS' ;  */
                     .replace(/\s{2,}/g, " ")
