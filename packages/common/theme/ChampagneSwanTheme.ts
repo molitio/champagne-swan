@@ -23,8 +23,5 @@ export const ChampagneSwanTheme = {
     header: {
       height: "5em",
     },
-    footer: {
-      height: "4.2em",
-    },
   },
 };

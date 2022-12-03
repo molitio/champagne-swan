@@ -1,5 +1,5 @@
 import React from "react";
-import { createTheme, ThemeProvider } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 
 // TODO need to add missing props to extend SystemTheme
 declare module "@mui/material" {
@@ -16,9 +16,6 @@ declare module "@mui/material" {
       header: {
         height: string;
       };
-      footer: {
-        height: string;
-      };
     };
   }
 }
@@ -26,11 +23,7 @@ declare module "@mui/material" {
 const MuiThemeProvider: React.FC<React.PropsWithChildren<any>> = (props) => {
   const { children, externalTheme } = props;
 
-  return (
-    <ThemeProvider theme={externalTheme ?? createTheme()}>
-      {children}
-    </ThemeProvider>
-  );
+  return <ThemeProvider theme={externalTheme}>{children} </ThemeProvider>;
 };
 
 export default MuiThemeProvider;
