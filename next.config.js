@@ -54,7 +54,7 @@ const nextConfig = {
                 : `
                     base-uri 'self';
                     object-src 'none';
-                    script-src 'self' 'unsafe-inline' unsafe-eval;
+                    script-src 'self' 'unsafe-inline' 'unsafe-eval';
                     style-src 'self' *.jelizaclean.com/ *.vercel.app/ *.fonts.googleapis.com/;
                     default-src 'self' *.jelizaclean.com/ *.vercel.app/ *.amazonaws.com/filestore.molitio.org/;
                     font-src 'self' *.jelizaclean.com/ *.vercel.app/ *.fonts.googleapis.com/ *.fonts.gstatic.com/ *.amazonaws.com/filestore.molitio.org/;  
