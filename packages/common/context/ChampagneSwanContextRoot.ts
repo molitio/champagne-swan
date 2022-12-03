@@ -1,5 +1,5 @@
 export const ChampagneSwanContextRoot = {
-  appName: "Champagne Swan v1.0.0",
+  appName: "champagne swan story app",
   navRoot: {
     home: {
       label: "Home",
@@ -12,26 +12,23 @@ export const ChampagneSwanContextRoot = {
         hero: {
           textContent: {
             title: "TISZTASÁG FELSŐFOKON!",
-            description: `Cégünk magas színvonalon kínál \n takarító szolgáltatást szállodák, irodaházak és magánszemélyek részére,
+            description: `Cégünk magas színvonalon kínál takarító szolgáltatást szállodák, irodaházak és magánszemélyek részére,
 valamint vállaljuk nagy belmagasságú ipari üzemek, gyártó csarnokok, raktárak és logisztikai központok speciális takarítását!`,
             desciptionSubText: `Oldalunk fejlesztés alatt áll, kérjük látogass vissza később, 
 vagy vedd fel velünk a kapcsolatot az alábbi elérhetőségek egyikén!`,
           },
           iconDefinitions: {
-            phone: {
+            email: {
               title: "Phone",
               url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/icons/icons_jeliza-01.svg",
-              hrefUrl: "tel:+36204160391",
             },
-            email: {
+            github: {
               title: "Email",
-              url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/icons/icons_jeliza_phone.svg",
-              hrefUrl: "mailto:info@jelizaclean.com",
-            },
-            address: {
-              title: "Address",
               url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/icons/icons_jeliza_envelope.svg",
-              hrefUrl: "https://goo.gl/maps/FK9mXYG25HLPXEvR6",
+            },
+            mobile: {
+              title: "Address",
+              url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/icons/icons_jeliza_phone.svg",
             },
           },
           assetUrls: {
@@ -48,14 +45,14 @@ vagy vedd fel velünk a kapcsolatot az alábbi elérhetőségek egyikén!`,
         contacts: {
           textContent: {
             email: "info@jelizaclean.com",
-            phoneMain: "+36 20 416 0391",
-            address: "1134 Budapest, Lehel utca 11.",
+            phoneMain: "+36 30 123 4567",
+            address: `4321 Budapest,
+             Példa utca 14.`,
           },
           assetUrls: {
             emailHref: "mailto:info@jelizaclean.com",
             webSiteHref: "https://jelizaclean.com",
-            addressHref: "https://goo.gl/maps/FK9mXYG25HLPXEvR6",
-            phoneMainHref: "tel:+36204160391",
+            phoneMainHref: "tel:+36301234567",
             logoImage:
               "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/logo/jeliza_logo_horizontal_jeliza_logo_horizontal.svg",
           },
@@ -66,7 +63,7 @@ vagy vedd fel velünk a kapcsolatot az alábbi elérhetőségek egyikén!`,
       leafs: {
         maintainer: {
           textContent: {
-            maintainer: `© 2022 All Rights Reserved molitio llc. ${"Champagne Swan v1.0.0"}`,
+            maintainer: `© 2022 All Rights Reserved | molitio llc. | ${"Champagne Swan v1.0.0"}`,
           },
         },
       },
