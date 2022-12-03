@@ -52,11 +52,11 @@ const nextConfig = {
               process.env.NODE_ENV === "development"
                 ? ``
                 : `
-                    default-src 'self' https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/;
+                    default-src 'self' https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/ https://champagne-swan-9qjeo5190-molitio.vercel.app/;
                     script-src 'self';
                     child-src 'self';
                     object-src 'self';
-                    style-src 'self' https://fonts.googleapis.com;
+                    style-src 'self' https://fonts.googleapis.com https://champagne-swan-9qjeo5190-molitio.vercel.app/;
                     require-trusted-types-for 'script';
                     font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://s3.eu-west-1.amazonaws.com/filestore.molitio.org;  
                   `
