@@ -41,7 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/react", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:11.10.5"],\
             ["@emotion/styled", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:11.10.5"],\
             ["@molitio/champagne-swan-ui", "workspace:packages/champagne-swan-ui"],\
-            ["@molitio/ui-core", "virtual:320204f1b3ce36a62b70c537359b248ac8639dc9f8f670162e5d9172479700270a7d889e2380ef58a1509f963455f61fa14521b3d2f132cf7a73ae8e82414769#npm:0.16.12-rc.7"],\
+            ["@molitio/ui-core", "virtual:320204f1b3ce36a62b70c537359b248ac8639dc9f8f670162e5d9172479700270a7d889e2380ef58a1509f963455f61fa14521b3d2f132cf7a73ae8e82414769#npm:0.16.12-rc.24"],\
             ["@mui/icons-material", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.10.16"],\
             ["@mui/material", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.10.16"],\
             ["@mui/styled-engine-sc", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.10.16"],\
@@ -652,7 +652,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/react", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:11.10.5"],\
             ["@emotion/styled", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:11.10.5"],\
             ["@molitio/champagne-swan-ui", "workspace:packages/champagne-swan-ui"],\
-            ["@molitio/ui-core", "virtual:320204f1b3ce36a62b70c537359b248ac8639dc9f8f670162e5d9172479700270a7d889e2380ef58a1509f963455f61fa14521b3d2f132cf7a73ae8e82414769#npm:0.16.12-rc.7"],\
+            ["@molitio/ui-core", "virtual:320204f1b3ce36a62b70c537359b248ac8639dc9f8f670162e5d9172479700270a7d889e2380ef58a1509f963455f61fa14521b3d2f132cf7a73ae8e82414769#npm:0.16.12-rc.24"],\
             ["@mui/icons-material", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.10.16"],\
             ["@mui/material", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.10.16"],\
             ["@mui/styled-engine-sc", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.10.16"],\
@@ -690,7 +690,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/champagne-swan-ui/",\
           "packageDependencies": [\
             ["@molitio/champagne-swan-ui", "workspace:packages/champagne-swan-ui"],\
-            ["@molitio/ui-core", "virtual:320204f1b3ce36a62b70c537359b248ac8639dc9f8f670162e5d9172479700270a7d889e2380ef58a1509f963455f61fa14521b3d2f132cf7a73ae8e82414769#npm:0.16.12-rc.7"],\
+            ["@molitio/ui-core", "virtual:320204f1b3ce36a62b70c537359b248ac8639dc9f8f670162e5d9172479700270a7d889e2380ef58a1509f963455f61fa14521b3d2f132cf7a73ae8e82414769#npm:0.16.12-rc.24"],\
             ["@mui/icons-material", "virtual:320204f1b3ce36a62b70c537359b248ac8639dc9f8f670162e5d9172479700270a7d889e2380ef58a1509f963455f61fa14521b3d2f132cf7a73ae8e82414769#npm:5.10.16"],\
             ["@mui/material", "virtual:320204f1b3ce36a62b70c537359b248ac8639dc9f8f670162e5d9172479700270a7d889e2380ef58a1509f963455f61fa14521b3d2f132cf7a73ae8e82414769#npm:5.10.16"],\
             ["@types/node", "npm:18.7.11"],\
@@ -712,17 +712,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@molitio/ui-core", [\
-        ["npm:0.16.12-rc.7", {\
-          "packageLocation": "./.yarn/cache/@molitio-ui-core-npm-0.16.12-rc.7-ec01490040-3856020936.zip/node_modules/@molitio/ui-core/",\
+        ["npm:0.16.12-rc.24", {\
+          "packageLocation": "./.yarn/cache/@molitio-ui-core-npm-0.16.12-rc.24-ad3c8b7aed-c49d51ffee.zip/node_modules/@molitio/ui-core/",\
           "packageDependencies": [\
-            ["@molitio/ui-core", "npm:0.16.12-rc.7"]\
+            ["@molitio/ui-core", "npm:0.16.12-rc.24"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:320204f1b3ce36a62b70c537359b248ac8639dc9f8f670162e5d9172479700270a7d889e2380ef58a1509f963455f61fa14521b3d2f132cf7a73ae8e82414769#npm:0.16.12-rc.7", {\
-          "packageLocation": "./.yarn/__virtual__/@molitio-ui-core-virtual-eea3288a6d/0/cache/@molitio-ui-core-npm-0.16.12-rc.7-ec01490040-3856020936.zip/node_modules/@molitio/ui-core/",\
+        ["virtual:320204f1b3ce36a62b70c537359b248ac8639dc9f8f670162e5d9172479700270a7d889e2380ef58a1509f963455f61fa14521b3d2f132cf7a73ae8e82414769#npm:0.16.12-rc.24", {\
+          "packageLocation": "./.yarn/__virtual__/@molitio-ui-core-virtual-7f0637f568/0/cache/@molitio-ui-core-npm-0.16.12-rc.24-ad3c8b7aed-c49d51ffee.zip/node_modules/@molitio/ui-core/",\
           "packageDependencies": [\
-            ["@molitio/ui-core", "virtual:320204f1b3ce36a62b70c537359b248ac8639dc9f8f670162e5d9172479700270a7d889e2380ef58a1509f963455f61fa14521b3d2f132cf7a73ae8e82414769#npm:0.16.12-rc.7"],\
+            ["@molitio/ui-core", "virtual:320204f1b3ce36a62b70c537359b248ac8639dc9f8f670162e5d9172479700270a7d889e2380ef58a1509f963455f61fa14521b3d2f132cf7a73ae8e82414769#npm:0.16.12-rc.24"],\
             ["@types/device-detector-js", null],\
             ["@types/react", "npm:18.0.17"],\
             ["@types/react-dom", "npm:18.0.6"],\

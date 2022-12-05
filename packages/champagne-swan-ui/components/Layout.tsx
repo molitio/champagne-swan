@@ -28,6 +28,7 @@ const Layout: React.FC<LayoutProps & React.PropsWithChildren> = (props) => {
           <meta property="og:title" content="Jeliza Clean" key="title" />
         </AppHeader>
         <MolitioNavBar
+          navHeight={"5em"}
           contactProps={{ contactInfoTextShadow: "0 2px 4px #8C7B6C" }}
         />
         {children}

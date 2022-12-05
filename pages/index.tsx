@@ -19,7 +19,7 @@ const HomePage: NextPage = () => {
             descriptionSubTextDimensions: { maxWidth: "18em" },
             backgroundType: "image",
             heroIconType: "drop-shadow",
-            innerPaddingTop: "10em",
+            innerPaddingTop: "2em",
             disableLineDecorator: true,
             iconBorderRadius: "0.2em",
           },
