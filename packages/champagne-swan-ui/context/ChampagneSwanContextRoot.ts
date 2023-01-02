@@ -26,7 +26,7 @@ vagy vedd fel velünk a kapcsolatot az alábbi elérhetőségek egyikén!`,
             email: {
               title: "Email",
               url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/icons/icons_jeliza_phone.svg",
-              hrefUrl: "mailto:info@jelizaclean.com",
+              hrefUrl: "mailto:szatmari.marica@gmail.com",
             },
             address: {
               title: "Address",
@@ -47,12 +47,12 @@ vagy vedd fel velünk a kapcsolatot az alábbi elérhetőségek egyikén!`,
       leafs: {
         contacts: {
           textContent: {
-            email: "info@jelizaclean.com",
+            email: "szatmari.marica@gmail.com",
             phoneMain: "+36 20 416 0391",
             address: "1134 Budapest, Lehel utca 11.",
           },
           assetUrls: {
-            emailHref: "mailto:info@jelizaclean.com",
+            emailHref: "mailto:szatmari.marica@gmail.com",
             webSiteHref: "https://jelizaclean.com",
             addressHref: "https://goo.gl/maps/FK9mXYG25HLPXEvR6",
             phoneMainHref: "tel:+36204160391",

@@ -51,9 +51,9 @@ const nextConfig = {
 
             value:
               process.env.NODE_ENV === "development"
-                ? `
+                ? "" /* `
                     script-src 'strict-dynamic' 'nonce-kX41H2LmrDTHXwBZ9uhRBBDS'; 
-                  `
+                  ` */
                 : "" /* `
                     base-uri 'self';
                     object-src 'none';
