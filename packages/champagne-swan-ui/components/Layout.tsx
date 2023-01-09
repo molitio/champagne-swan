@@ -1,40 +1,25 @@
 import React from "react";
-import { AppShell, Footer, MolitioNavBar } from "@molitio/ui-core";
-import MuiThemeProvider from "./MuiThemeProvider";
-import { ChampagneSwanContextRoot } from "../context";
-import AppHeader from "./Header";
+import ScrollButton from './ScrollButton';
+import Footer from "./Footer";
+import { ChampagneSwanContextProvider } from "../context";
+import NavBar from "./NavBar";
 
 type LayoutProps = {
   appTheme: any;
 };
 
+
+
 const Layout: React.FC<LayoutProps & React.PropsWithChildren> = (props) => {
   const { children, appTheme } = props;
 
   return (
-    <AppShell
-      externalTheme={appTheme}
-      externalAppContextRoot={ChampagneSwanContextRoot}
-      applyGlobalStyleRules={true}
-      fontFamily="'Tenor Sans', sans-serif"
-      fontFamilyHref="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap"
-    >
-      <MuiThemeProvider externalTheme={appTheme}>
-        {/* TODO: can be provided in _document.tsx?
-
-*/}
-        <AppHeader key={"champagen-swan-header"}>
-          <title>Jeliza Clean</title>
-          <meta property="og:title" content="Jeliza Clean" key="title" />
-        </AppHeader>
-        <MolitioNavBar
-          navHeight={"5em"}
-          contactProps={{ contactInfoTextShadow: "0 2px 4px #8C7B6C" }}
-        />
-        {children}
-        <Footer />
-      </MuiThemeProvider>
-    </AppShell>
+    <ChampagneSwanContextProvider>
+      <NavBar />
+      {children}
+      <ScrollButton/>
+      <Footer/>
+    </ChampagneSwanContextProvider>
   );
 };
 

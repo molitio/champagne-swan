@@ -499,6 +499,7 @@ __metadata:
     "@types/node": 18.7.11
     "@types/react": 18.0.17
     "@types/react-dom": 18.0.6
+    "@types/react-icons": ^3.0.0
     "@types/smoothscroll-polyfill": ^0.3.1
     "@types/styled-components": ^5.1.26
     device-detector-js: ^3.0.3
@@ -511,7 +512,7 @@ __metadata:
     next-videos: 1.5.0
     react: 18.2.0
     react-dom: 18.2.0
-    react-icons: ^4.4.0
+    react-icons: ^4.7.1
     react-is: ^18.2.0
     sass: ^1.56.0
     smoothscroll-polyfill: ^0.4.4
@@ -1134,6 +1135,15 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: db571047af1a567631758700b9f7d143e566df939cfe5fbf7535347cc0c726a1cdbb5e3f8566d076e54cf708b6c1166689de194a9ba09ee35efc9e1d45911685
+  languageName: node
+  linkType: hard
+
+"@types/react-icons@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@types/react-icons@npm:3.0.0"
+  dependencies:
+    react-icons: "*"
+  checksum: 885a9e9d43fd5543c3405b75b7d4f910492bd3bf2a2aa0a6784c6566fc3a9804bd0f6b0678779b4a15df642c35db0069a1d3f3f2c548bfc8414d5abe1fcc6469
   languageName: node
   linkType: hard
 
@@ -4207,7 +4217,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-icons@npm:^4.4.0":
+"react-icons@npm:*, react-icons@npm:^4.7.1":
   version: 4.7.1
   resolution: "react-icons@npm:4.7.1"
   peerDependencies:
