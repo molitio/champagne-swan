@@ -23,7 +23,7 @@ const NavBarContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  z-index: 1;
+  z-index: 1000;
 `;
 
 const StyledNavLink = styled.a`
@@ -33,6 +33,7 @@ const StyledNavLink = styled.a`
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
+  z-index: 1000;
 
   :hover {
     text-decoration: underline;
@@ -45,12 +46,13 @@ const StyledNavLink = styled.a`
 
 const ExtendedStyledNavLink = styled.a`
   cursor: pointer;
-  color: #0c7b93;
+   color: #0c7b93;
   text-decoration: none;
-  margin: 2em 1em 0 0;
+  margin: 2em 0 0 0;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
+  z-index: 1000;
   :hover {
     text-decoration: underline;
   }
@@ -208,7 +210,8 @@ const NavBar: React.FC = () => {
                         !champagneSwanContext.interactive.navBarExpanded
                       );
                     }}
-                  >{`${navTree[branch].label}`}
+                  >
+                    {`${navTree[branch].label}`}
                   </ExtendedStyledNavLink>
                 </Link>
               ))

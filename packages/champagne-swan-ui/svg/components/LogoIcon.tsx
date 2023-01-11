@@ -18,7 +18,6 @@ const LogoIcon: React.FC<LogoIconProps> = ({ fill, dx, dy, stdDeviation, floodOp
       viewBox="0 0 1024 1024"
     >
       <filter id="drop-shadow">
-        0
         <feDropShadow
           dx={dx}
           dy={dy}

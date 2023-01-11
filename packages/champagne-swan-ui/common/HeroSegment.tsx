@@ -4,19 +4,36 @@ import HeroSegmentContent from "../common/HeroSegmentContent";
 import { ChampagneSwanContext } from "../context";
 import Link from "next/link";
 
-import SkillsComponent from "./SkillsComponent";
-
 const StyledLayerSegment = styled.div`
-  margin: 0;
+  /*  margin: 0;
   padding: 0;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  min-height: 850px;
+  height: 525px;
   align-items: center;
   background: url(https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_hero.png);
-  background-size: cover;
+  background-size: cover;*/
+`;
+const SimpledLayer = styled.img`
+  position: absolute;
+  margin: 0;
+  margin-top: 0px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1069px;
+`;
+
+const RotatedLayer = styled.img`
+  position: absolute;
+  transform: rotate(180deg);
+  margin: 0;
+  margin-top: 535px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 535px;
 `;
 
 const StyledImg = styled.div`
@@ -26,7 +43,9 @@ const StyledImg = styled.div`
   background-position: center;
   width: 100%;
   height: 100vh;
-  min-height: 850px;
+  height: 1069px;
+  opacity: 0.9;
+  z-index: -1;
 `;
 
 const WaterSplash = styled.img`
@@ -87,6 +106,16 @@ const HeroSegment: React.FC = (props) => {
 
   return (
     <StyledImg>
+      <SimpledLayer
+        src={
+          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_hero.png"
+        }
+      />
+      <RotatedLayer
+        src={
+          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_top.png"
+        }
+      />
       <StyledLayerSegment>
         {!navBarExpanded ? (
           <HeroSegmentContainer>
@@ -109,7 +138,6 @@ const HeroSegment: React.FC = (props) => {
                 </StyledButtonContainer>
               }
             />
-            <SkillsComponent />
           </HeroSegmentContainer>
         ) : null}
       </StyledLayerSegment>

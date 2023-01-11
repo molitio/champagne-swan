@@ -24,7 +24,7 @@ export const IconGoldGroup: React.FC<IconGroupProps> = () => {
           dx="0"
           dy="25"
           stdDeviation="60"
-          floodOpacity="0.5"
+          floodOpacity="0.7"
           key={i}
         />
       ))}
@@ -39,7 +39,7 @@ export const IconBlueGroup: React.FC<IconGroupProps> = () => {
     <IconContainer>
       {Array.from({ length: 5 }).map((_, i) => (
         <LogoIcon
-          fill="#0C7B93"
+          fill="#0c7a9352"
           dx="0"
           dy="0"
           stdDeviation="0"

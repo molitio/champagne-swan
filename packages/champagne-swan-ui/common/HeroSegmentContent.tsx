@@ -20,13 +20,13 @@ const StyledMainTitle = styled.h1`
   text-align: center;
   font-size: 3.6rem;
   position: relative;
-  margin: 0 30px 0 30px;
+  margin: 30px 30px 0 30px;
   font-style: normal;
   font-weight: 400;
   font-size: 60px;
   line-height: 78px;
   color: #ffffff;
-  z-index: 2000;
+
   text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.5);
 
   @media (max-width: 770px) {
@@ -75,7 +75,7 @@ const HeroSegmentContent: React.FC<HeroSegmentContentProps> = (props) => {
   return (
     <StyledCoverContainer>
          <IconGoldGroup fill={""} dx={""} dy={""} stdDeviation={""} floodOpacity={""} />
-      <StyledMainTitle>{`${title}`}</StyledMainTitle>
+      <StyledMainTitle className="title">{`${title}`}</StyledMainTitle>
       <StyledDescription className="hiro-conten">
         {`Cégünk magas színvonalon kínál takarító szolgáltatást szállodák,
                 irodaházak és magánszemélyek részére,`}

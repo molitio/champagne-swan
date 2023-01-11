@@ -5,7 +5,8 @@ const SkillsContainer = styled.div`
 display:flex;
 flex-direction: row;
 justify-content: space-around;
-flex:0.5;
+flex: 0.65;
+padding-top:60px;
 `;
 
 const SkillInfoContainer = styled.div` 
@@ -13,6 +14,7 @@ display: flex;
 text-align: center;
 flex-direction: column;
 color: white;
+ filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2))
 `;
 const SkillScore = styled.h1` 
 margin: 0;
