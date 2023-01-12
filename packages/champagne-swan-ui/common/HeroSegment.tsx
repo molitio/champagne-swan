@@ -45,7 +45,7 @@ const StyledImg = styled.div`
   height: 100vh;
   height: 1069px;
   opacity: 0.9;
-  z-index: -1;
+ /*  z-index: -1; */
 `;
 
 const WaterSplash = styled.img`

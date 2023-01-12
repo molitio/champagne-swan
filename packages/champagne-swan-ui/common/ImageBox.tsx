@@ -42,21 +42,21 @@ const ImageContainer = styled.div<ImageContainerProps>`
   background-position: center;
   z-index: 1;
   box-shadow: 0px 3px 3px 0px #888888;
-
+/* 
   @media (max-width: ${(props) => props.breakpoint1 || "768px"}) {
-    height: ${(props) => props.tabletHeight || "400px"};
-    width: ${(props) => props.tabletWidth || "600px"};
-    min-height: ${(props) => props.tabletMinHeight || "350px"};
-    min-width: ${(props) => props.tabletMinWidth || "550px"};
+    height: ${(props) => props.tabletHeight || "353px"};
+    width: ${(props) => props.tabletWidth || "529px"};
+    min-height: ${(props) => props.tabletMinHeight || "353px"};
+    min-width: ${(props) => props.tabletMinWidth || "529px"};
   }
 
-  @media (max-width: ${(props) => props.breakpoint2 || "576px"}) {
-    height: ${(props) => props.mobileHeight || "250px"};
-    width: ${(props) => props.mobileWidth || "300px"};
-    min-height: ${(props) => props.mobileMinHeight || "250px"};
-    min-width: ${(props) => props.mobileMinWidth || "300px"};
-  }
-`;
+  @media (max-width: ${(props) => props.breakpoint2 || "529px"}) {
+    height: ${(props) => props.mobileHeight || "176px"};
+    width: ${(props) => props.mobileWidth || "264px"};
+    min-height: ${(props) => props.mobileMinHeight || "176p"};
+    min-width: ${(props) => props.mobileMinWidth || "264px"};
+  }*/
+`; 
 
 
 const ImageBox = ({ 

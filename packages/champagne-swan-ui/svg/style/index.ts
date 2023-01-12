@@ -1,3 +1,3 @@
 
 export { StyledCloseIconSVG } from './StyledCloseIcon';
-export { StyledLogoIconSVG } from './StyledLogoIcon';
+export { StyledStarSvgIcon } from './StyledStarSvgIcon';

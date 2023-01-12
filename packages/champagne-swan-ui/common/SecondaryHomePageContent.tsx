@@ -6,14 +6,19 @@ import Link from "next/link";
 import { ChampagneSwanContext } from "../context";
 import ImageBox from "./ImageBox";
 
-const SecondaryHompageContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`;
+
 const SecondaryContentContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  bottom: 260px;
+ 
+  @media (max-width: 1440px) {
+    align-items: center;
+    flex-direction: column-reverse;
+    bottom: 260px;
+  }
+
 `;
 
 const LayerContainer = styled.div`
@@ -22,11 +27,15 @@ const LayerContainer = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 1150px;
-  height: 1150px;
+  
   align-items: center;
   background-size: cover;
   background: #c1dadff0;
+  height: 1150px;
+
+  @media (max-width: 1440px) {
+    height: 1750px;
+  }
 `;
 
 const StyledIconContainer = styled.div`
@@ -39,7 +48,13 @@ const SecondaryContentTitle = styled.h1`
   font-weight: 400;
   font-size: 105px;
   opacity: 0.5;
-  margin-top: 0.4em;
+  margin-top: 0.6em;
+  
+  @media (max-width: 1440px) {
+    font-size: 67px;
+    margin-bottom: 20px;
+  }
+
 `;
 
 const SecondaryContentBox = styled.div`
@@ -48,7 +63,13 @@ const SecondaryContentBox = styled.div`
   width: 529px;
   min-width: 529px;
   margin: 30px 10px 0 0;
-`;
+  
+  @media (max-width: 1440px) {
+    text-align: center;
+    height: 1750px;
+    margin: 150px 10px 0 0;
+  }
+  `;
 
 const SecondaryContentBoxTitle = styled.h1`
   text-align: initial;
@@ -57,13 +78,16 @@ const SecondaryContentBoxTitle = styled.h1`
   font-size: 30px;
   margin-top: 0;
   margin-bottom: 55px;
-`;
+  
+
+  `;
 const SecondaryContentBoxText = styled.p`
   text-align: start;
   color: #0c7b93;
   font-weight: 400;
   font-size: 15px;
   margin-bottom: 110px;
+  
 `;
 
 const WaterSplash = styled.img`
@@ -74,8 +98,14 @@ const WaterSplash = styled.img`
   height: 300px;
   object-fit: cover;
   transform: rotate(-15deg);
-  bottom: 160px;
+  bottom: -255px;
   left: 490px;
+  
+  @media (max-width: 1440px) {
+    bottom: -265px;
+    left: 230px;
+  }
+
 `;
 
 const ContactLink = styled.a`
@@ -115,7 +145,11 @@ const SecondaryHomePageContent: React.FC = () => {
       <SecondaryContentTitle className="secondary-title">
         {"PRÉMIUM MINŐSÉG"}
       </SecondaryContentTitle>
-
+      <WaterSplash
+        src={
+          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png"
+        }
+      />
       <SecondaryContentContainer>
         <SecondaryContentBox>
           <SecondaryContentBoxTitle>
@@ -148,11 +182,7 @@ const SecondaryHomePageContent: React.FC = () => {
                 breakpoint2={'900px'}
               /> 
       </SecondaryContentContainer>
-      <WaterSplash
-        src={
-          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png"
-        }
-      />
+     
         
     </LayerContainer>
   );

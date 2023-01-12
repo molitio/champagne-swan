@@ -1,10 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { IconGoldGroup}  from "../components/IconGroups";
+import { IconGoldGroup } from "../components/IconGroups";
 
-const StyledCoverContainer = styled.div`
-
-`;
+const StyledCoverContainer = styled.div``;
 
 const StyledCallToAction = styled.div`
   text-align: center;
@@ -26,11 +24,10 @@ const StyledMainTitle = styled.h1`
   font-size: 60px;
   line-height: 78px;
   color: #ffffff;
-
   text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.5);
 
-  @media (max-width: 770px) {
-    font-size: 2.4rem;
+  @media (max-width: 1400px) {
+    font-size: 3.2rem;
   }
 
   @media (max-width: 645px) {
@@ -48,7 +45,6 @@ const StyledMainTitle = styled.h1`
 `;
 
 const StyledDescription = styled.h3`
-
   width: 27em;
   font-style: normal;
   font-weight: 400;
@@ -59,7 +55,6 @@ const StyledDescription = styled.h3`
   margin-right: auto;
   margin-left: auto;
   text-align: center;
-
   font-size: 1.25rem;
   padding: 0 2em 0 2em;
   text-shadow: 2px 4px 8px #000000;
@@ -74,7 +69,13 @@ const HeroSegmentContent: React.FC<HeroSegmentContentProps> = (props) => {
 
   return (
     <StyledCoverContainer>
-         <IconGoldGroup fill={""} dx={""} dy={""} stdDeviation={""} floodOpacity={""} />
+      <IconGoldGroup
+        fill={""}
+        dx={""}
+        dy={""}
+        stdDeviation={""}
+        floodOpacity={""}
+      />
       <StyledMainTitle className="title">{`${title}`}</StyledMainTitle>
       <StyledDescription className="hiro-conten">
         {`Cégünk magas színvonalon kínál takarító szolgáltatást szállodák,

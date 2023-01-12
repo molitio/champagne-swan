@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledLogoIconSVG = styled.svg<{ fill: string }>`
+export const StyledStarSvgIcon = styled.svg<{ fill: string }>`
 height: 27px;
 width: 27px;
 fill: ${props => props.fill};

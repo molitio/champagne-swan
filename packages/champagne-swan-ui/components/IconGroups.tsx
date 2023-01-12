@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import LogoIcon from "../svg/components/LogoIcon";
+import StarIcon from "../svg/components/StarIcon";
 
 const IconContainer = styled.div`
   display: flex;
@@ -8,18 +8,18 @@ const IconContainer = styled.div`
 `;
 
 type IconGroupProps = {
-  fill: string;
-  dx: string;
-  dy: string;
-  stdDeviation: string;
-  floodOpacity: string;
+  fill?: string;
+  dx?: string;
+  dy?: string;
+  stdDeviation?: string;
+  floodOpacity?: string;
 };
 
 export const IconGoldGroup: React.FC<IconGroupProps> = () => {
   return (
     <IconContainer>
       {Array.from({ length: 5 }).map((_, i) => (
-        <LogoIcon
+        <StarIcon
           fill="#D2C5AA"
           dx="0"
           dy="25"
@@ -32,19 +32,37 @@ export const IconGoldGroup: React.FC<IconGroupProps> = () => {
   );
 };
 
-export default IconGoldGroup;
+
 
 export const IconBlueGroup: React.FC<IconGroupProps> = () => {
   return (
     <IconContainer>
       {Array.from({ length: 5 }).map((_, i) => (
-        <LogoIcon
+        <StarIcon
           fill="#0c7a9352"
           dx="0"
           dy="0"
           stdDeviation="0"
           floodOpacity="0"
           key={i}
+        />
+      ))}
+    </IconContainer>
+  );
+};
+
+export const IconWhiteGroup: React.FC<IconGroupProps> = () => {
+  return (
+    <IconContainer>
+      {Array.from({ length: 5 }).map((_, i) => (
+        <StarIcon
+          fill={"#ffffff"}
+      /*     dx={"0"}
+          dy={"0"}
+          stdDeviation={"0"}
+          floodOpacity={"0.1"} */
+          key={i}
+         
         />
       ))}
     </IconContainer>
