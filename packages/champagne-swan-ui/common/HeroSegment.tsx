@@ -5,15 +5,6 @@ import { ChampagneSwanContext } from "../context";
 import Link from "next/link";
 
 const StyledLayerSegment = styled.div`
-  /*  margin: 0;
-  padding: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 525px;
-  align-items: center;
-  background: url(https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_hero.png);
-  background-size: cover;*/
 `;
 const SimpledLayer = styled.img`
   position: absolute;
@@ -45,7 +36,6 @@ const StyledImg = styled.div`
   height: 100vh;
   height: 1069px;
   opacity: 0.9;
- /*  z-index: -1; */
 `;
 
 const WaterSplash = styled.img`

@@ -1,21 +1,26 @@
 import React from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { IconWhiteGroup } from "../components";
 
 const OpinionsMainContainer = styled.div`
   position: relative;
-  height: 2200px;
+  height: 1200px;
+
+  @media (max-width: 1440px) {
+    height: 1400px;
+  }
 `;
 
 const StyledIconContainer = styled.div`
   position: relative;
-  padding-top: 5em;
+  padding-top: 6em;
   padding-bottom: 3em;
 `;
 
 const StyledLayer = styled.img`
   position: absolute;
-  height: 600px;
+  height: 400px;
   margin: 0;
   padding: 0;
   left: 0;
@@ -23,89 +28,44 @@ const StyledLayer = styled.img`
   align-items: center;
 `;
 
+const StyledMiddleLayer = styled.div`
+  position: absolute;
+  height: 236px;
+  top: 400px;
+  width: 100%;
+  background: #c1dadf;
+
+  @media (max-width: 1440px) {
+    height: 834x;
+  }
+`;
+
 const RotateLayer = styled.img`
   position: absolute;
-  height: 600px;
+  height: 800px;
   margin-top: 0px;
-  border-bottom: 1px solid rgb(167, 203, 212);
   padding: 0;
-  top: 600px;
+  top: 636px;
   left: 0;
   width: 100%;
   align-items: center;
   transform: rotate(180deg);
 `;
 
+
 const MainTitle = styled.h1`
+  position: relative;
   text-align: center;
   color: #ffffff;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.08);
   font-weight: 400;
   font-size: 105px;
-  opacity: 0.5;
-  margin-top: 0.4em;
-  margin-bottom: 1em;
+  margin-top: 0.3em;
+  margin-bottom: 0em;
 
   @media (max-width: 1440px) {
     font-size: 65px;
   }
-`;
-
-const OurPartnersTitle = styled.h1`
-  text-align: center;
-  color: #C1A87D;
-  font-weight: 400;
-  font-size: 105px;
-  margin-top: 1.8em;
-  margin-bottom: 1em;
-
-  @media (max-width: 1440px) {
-    font-size: 65px;
-  }
-`;
-
-const OurPartnersContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-
-  @media (max-width: 1440px) {
-    margin: auto;
-  }
-`;
-
-const PartnersImageContainer = styled.div`
-  display: flex;
-justify-content: space-around;
-  
-
-
-  margin-top: 40px;
-  margin-bottom: 40px;
-
-  flex: 25%;
-
-  @media (max-width: 1440px) {
-    flex: 50%;
-  }
-`;
-
-const PartnerImg = styled.img`
-     height: 130px;
-     width: 130px;
-`;
-
-const HouseLogo = styled.img`
-     height: 130px;
-     width: 190px;
-`;
-const BrandLogo = styled.img`
-     height: 130px;
-     width: 150px;
-`;
-
-const SkillName = styled.h4`
-  margin: 0;
 `;
 
 const InternalContentContainer = styled.div`
@@ -131,7 +91,7 @@ const ServiceEvaluatorContainer = styled.div`
 const ServiceEvaluatorContainerImage = styled.img`
   margin-left: auto;
   margin-right: auto;
-  margin-top: 60px;
+  margin-top: 80px;
   width: 130px;
   height: 120px;
   border-radius: 50px;
@@ -149,7 +109,7 @@ const ServiceEvaluatorContainerName = styled.h1`
   color: #0c7b93;
 `;
 
-const StyledLogoPng = styled.img`
+const StyledLogoImage = styled.img`
   position: relative;
   padding-top: 100px;
   display: block;
@@ -162,22 +122,23 @@ const Opinions: React.FC = () => {
     <OpinionsMainContainer>
       <StyledLayer
         src={
-          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_hero.png"
+          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_bottom.png"
         }
       />
+      <StyledMiddleLayer />
       <RotateLayer
         src={
-          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_hero.png"
+          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_bottom.png"
         }
       />
 
       <StyledIconContainer>
         <IconWhiteGroup
           fill={"#ffffff"}
-          /*    dx={"0"}
-          dy={"0"}
-          stdDeviation={"0"}
-          floodOpacity={"1"} */
+          dx={"1"}
+          dy={"1"}
+          stdDeviation={"1"}
+          floodOpacity={"1"}
         />
       </StyledIconContainer>
 
@@ -216,26 +177,10 @@ const Opinions: React.FC = () => {
         </ServiceEvaluatorContainer>
       </InternalContentContainer>
 
-      <StyledLogoPng
+      <StyledLogoImage
         src="https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/logo/jeliza_logokit_jeliza_logo_submark.svg"
         alt="logo"
       />
-      <OurPartnersTitle className="title">{"PARTNEREINK"}</OurPartnersTitle>
-      <OurPartnersContainer>
-        <PartnersImageContainer>
-          <PartnerImg src={"https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/mlogo.png"} />
-        </PartnersImageContainer>
-        <PartnersImageContainer>
-          <HouseLogo src={"https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/houselogo.png"}/>
-        </PartnersImageContainer>
-        <PartnersImageContainer>
-          <BrandLogo src={"https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/brand.png"}/>
-        </PartnersImageContainer>
-        <PartnersImageContainer>
-          <PartnerImg src={"https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/officelogo.png"}/>
-        </PartnersImageContainer>
-      </OurPartnersContainer>
-
     </OpinionsMainContainer>
   );
 };

@@ -6,7 +6,6 @@ type ImageContainerProps = {
   imageUrl?: string;
   
   margin?: number | string;
-
   height?: number | string;
   width?: number | string;
   minHeight?: number | string;
@@ -21,6 +20,7 @@ type ImageContainerProps = {
   mobileWidth?: number | string;
   mobileMinHeight?: number | string;
   mobileMinWidth?: number | string;
+  marginTablet?: number | string;
 
   breakpoint1?: number | string;
   breakpoint2?: number | string;
@@ -36,20 +36,21 @@ const ImageContainer = styled.div<ImageContainerProps>`
   width: ${(props) => props.width || "529px"};
   min-height: ${(props) => props.minHeight || "353px"};
   min-width: ${(props) => props.minWidth || "529px"};
-  margin: ${(props) => props.margin || "30px 0 0 10px"};;
+  margin: ${(props) => props.margin || "0px 0px 0px 0px"};
   object-fit: fill;
   background-size: cover;
   background-position: center;
   z-index: 1;
   box-shadow: 0px 3px 3px 0px #888888;
-/* 
+
   @media (max-width: ${(props) => props.breakpoint1 || "768px"}) {
     height: ${(props) => props.tabletHeight || "353px"};
     width: ${(props) => props.tabletWidth || "529px"};
     min-height: ${(props) => props.tabletMinHeight || "353px"};
     min-width: ${(props) => props.tabletMinWidth || "529px"};
+    margin: ${(props) => props.marginTablet || "30px 0px 0px 0px"};
   }
-
+/* 
   @media (max-width: ${(props) => props.breakpoint2 || "529px"}) {
     height: ${(props) => props.mobileHeight || "176px"};
     width: ${(props) => props.mobileWidth || "264px"};
@@ -98,3 +99,7 @@ const ImageBox = ({
 };
 
 export default ImageBox;
+
+
+
+

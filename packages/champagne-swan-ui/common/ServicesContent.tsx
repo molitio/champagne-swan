@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {IconGoldGroup }from "../components/IconGroups";
+import { IconGoldGroup } from "../components/IconGroups";
 import ImageBox from "./ImageBox";
 
 const StyledIconContainer = styled.div`
@@ -31,7 +31,6 @@ const ServicesMainTitle = styled.h1`
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   font-weight: 400;
   font-size: 105px;
-  opacity: 0.5;
   margin-top: 0.4em;
   margin-bottom: 2em;
 
@@ -131,33 +130,25 @@ const ContentBox = styled.div`
 `;
 
 const ContactLink = styled.a`
-  /*  color: white;
-  background-color: #c1a87d;
-  padding: 0.5em 0.93em 0.5em 0.93em;
-  font-weight: 200;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  text-decoration: none;
-  z-index: 100; */
   font-size: 20px;
   color: #c1a87d;
   text-decoration: underline;
 `;
 
 const ContentBoxTitle = styled.h1`
+  font-family: "Lato", sans-serif;
+  font-weight: 200;
   text-align: initial;
   color: #c1a87d;
-  font-weight: 400;
   font-size: 30px;
   margin-top: 0;
   margin-bottom: 55px;
 `;
 const ContentBoxText = styled.p`
+  font-family: "Lato", sans-serif;
   text-align: start;
   color: #c1a87d;
-  font-weight: 400;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 200;
 `;
 
@@ -178,7 +169,7 @@ const ServicesContainer: React.FC = () => {
           floodOpacity={"0"}
         />
       </StyledIconContainer>
-      <ServicesMainTitle className="title">{`SZOLGÁLTATÁSAINK`}</ServicesMainTitle>
+      <ServicesMainTitle>{`SZOLGÁLTATÁSAINK`}</ServicesMainTitle>
 
       <UniqueExternalContentContainer>
         <ReverseInternalContentContainer>
@@ -191,11 +182,11 @@ const ServicesContainer: React.FC = () => {
             minWidth={"490px"}
           />
           <ContentBox>
-            <ContentBoxTitle className="text-lato">{`Szállodák és irodaházak takarítása`}</ContentBoxTitle>
-            <ContentBoxText className="text-lato">
+            <ContentBoxTitle>{`Szállodák és irodaházak takarítása`}</ContentBoxTitle>
+            <ContentBoxText>
               {`Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is`}
             </ContentBoxText>
-            <ContactLink className="text-lato">{`Bővebben...`}</ContactLink>
+            <ContactLink>{`Bővebben...`}</ContactLink>
           </ContentBox>
         </ReverseInternalContentContainer>
         <WaterSplash
@@ -207,11 +198,11 @@ const ServicesContainer: React.FC = () => {
       <ExternalContentContainer>
         <InternalContentContainer>
           <ContentBox>
-            <ContentBoxTitle className="text-lato">{`Magánszemélyeknél végzett takarítás`}</ContentBoxTitle>
-            <ContentBoxText className="text-lato">
+            <ContentBoxTitle>{`Magánszemélyeknél végzett takarítás`}</ContentBoxTitle>
+            <ContentBoxText>
               {`Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is`}
             </ContentBoxText>
-            <ContactLink className="text-lato">{`Bővebben...`}</ContactLink>
+            <ContactLink>{`Bővebben...`}</ContactLink>
           </ContentBox>
           <ImageBox
             imageUrl="https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/flatroom.jpg"
@@ -250,11 +241,11 @@ const ServicesContainer: React.FC = () => {
           />
 
           <ContentBox>
-            <ContentBoxTitle className="text-lato">{`Nagy belmagasságú épületek takarítása`}</ContentBoxTitle>
-            <ContentBoxText className="text-lato">
+            <ContentBoxTitle>{`Nagy belmagasságú épületek takarítása`}</ContentBoxTitle>
+            <ContentBoxText>
               {`Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is`}
             </ContentBoxText>
-            <ContactLink className="text-lato">{`Bővebben...`}</ContactLink>
+            <ContactLink>{`Bővebben...`}</ContactLink>
           </ContentBox>
         </ReverseInternalContentContainer>
         <BottomWaterSplash
