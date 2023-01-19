@@ -3,10 +3,10 @@ import { StyledStarSvgIcon } from "../style";
 
 type StarIconProps = {
   fill: string;
-  dx?: string;
-  dy?: string;
-  stdDeviation?: string;
-  floodOpacity?: string;
+  dx: string;
+  dy: string;
+  stdDeviation: string;
+  floodOpacity: string;
 };
 
 const StarSvgIcon: React.FC<StarIconProps> = ({ fill, dx, dy, stdDeviation, floodOpacity }) => {

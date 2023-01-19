@@ -1,12 +1,20 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const StyledStarSvgIcon = styled.svg<{ fill: string }>`
-height: 27px;
-width: 27px;
-fill: ${props => props.fill};
-padding: 7px;
+type StyledStarSvgIcon = {
+  fill: string;
+  dx?: string;
+  dy?: string;
+  stdDeviation?: string;
+  floodOpacity?: string;
+};
 
-path {
-  filter: url(#drop-shadow);
-}
+export const StyledStarSvgIcon = styled.svg<StyledStarSvgIcon>`
+  height: 27px;
+  width: 27px;
+  fill: ${(props) => props.fill};
+  padding: 3px;
+
+  path {
+    filter: url(#drop-shadow);
+  }
 `;

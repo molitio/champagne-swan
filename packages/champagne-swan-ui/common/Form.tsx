@@ -60,8 +60,8 @@ const Form: React.FC<FormProps> = () => {
 
   const handleChangeInput = (
     e:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
+       React.ChangeEvent<HTMLInputElement & HTMLTextAreaElement>
+      /* | React.ChangeEvent<HTMLTextAreaElement> */
   ) => {
     setInputFields({
       ...inputFields,
