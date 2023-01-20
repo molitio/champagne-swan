@@ -100,7 +100,7 @@ const Form: React.FC<FormProps> = () => {
       />
 
       <ContactButton type="submit" className="hiro-content">
-        {`Bővebben`}
+        {`Elküld`}
       </ContactButton>
     </StyledForm>
   );

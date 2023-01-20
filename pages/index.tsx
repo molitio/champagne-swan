@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import HeroSegment from "../packages/champagne-swan-ui/common/HeroSegment";
 import PremiumQuality from "@molitio/champagne-swan-ui/common/PremiumQuality";
-import ServicesContent from "@molitio/champagne-swan-ui/common/ServicesContent";
+import ServicesHomeContent from "@molitio/champagne-swan-ui/common/ServicesHomeContent";
 import Opinions from "@molitio/champagne-swan-ui/common/Opinions";
 import OurPartnersContent from "@molitio/champagne-swan-ui/common/OurPartnersContent";
 import ContactContent from "@molitio/champagne-swan-ui/common/ContactContent";
@@ -15,7 +15,7 @@ const HomePage: NextPage = () => {
     <StyledSection>
       <HeroSegment />
       <PremiumQuality />
-      <ServicesContent />
+      <ServicesHomeContent />
       <Opinions />
       <OurPartnersContent />
       <ContactContent/>

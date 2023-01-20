@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { IconGoldGroup } from "../components/IconGroups";
 import ImageBox from "./ImageBox";
@@ -19,7 +18,7 @@ import {
   UniqueExternalContentContainer,
 } from "./style";
 
-const ServicesContainer: React.FC = () => {
+const ServicesHomeContent: React.FC = () => {
   return (
     <ServicesMainContainer>
       <StyledIconContainer>
@@ -90,18 +89,6 @@ const ServicesContainer: React.FC = () => {
             width={"529px"}
             minHeight={"396px"}
             minWidth={"529px"}
-            /*
-              tabletHeight={"235px"}
-              tabletWidth={"353px"}
-              tabletMinHeight={"235px"}
-              tabletMinWidth={"353px"}
-              mobileHeight={"176px"}
-              mobileWidth={"264px"}
-              mobileMinHeight={"176px"}
-              mobileMinWidth={"264px"}
-              breakpoint1={"1440px"}
-              breakpoint2={"900px"} 
-              */
           />
 
           <ContentBox>
@@ -122,4 +109,4 @@ const ServicesContainer: React.FC = () => {
   );
 };
 
-export default ServicesContainer;
+export default ServicesHomeContent;
