@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import ServicesPageContent from "@molitio/champagne-swan-ui/common/ServicesPageContent";
-import ServicesHeroSegment from "@molitio/champagne-swan-ui/common/ServicesHeroSegment";
+import { ServicesPageContent } from "../components/page";
+import { ServicesHeroSegment } from "../components/page";
+
 
 
 const Services: React.FC = () => {

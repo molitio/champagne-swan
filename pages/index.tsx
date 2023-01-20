@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
 import React from "react";
 import styled from "styled-components";
-import HeroSegment from "../packages/champagne-swan-ui/common/HeroSegment";
-import PremiumQuality from "@molitio/champagne-swan-ui/common/PremiumQuality";
-import ServicesHomeContent from "@molitio/champagne-swan-ui/common/ServicesHomeContent";
-import Opinions from "@molitio/champagne-swan-ui/common/Opinions";
-import OurPartnersContent from "@molitio/champagne-swan-ui/common/OurPartnersContent";
-import ContactContent from "@molitio/champagne-swan-ui/common/ContactContent";
+import { HeroSegment } from "../components/page";
+import PremiumQuality from "../components/page/PremiumQuality";
+import ServicesHomeContent from "../components/page/ServicesHomeContent";
+import Opinions from "../components/page/Opinions";
+import OurPartnersContent from "../components/page/OurPartnersContent"; 
+
+import ContactContent from "../components/page/ContactContent";
 
 const StyledSection = styled.section``;
 
