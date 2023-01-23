@@ -1,69 +1,19 @@
-import styled from "styled-components";
 import React from "react";
-
-const OurPartnerContainer = styled.div``;
-
-const OurPartnersTitle = styled.h1`
-  position: relative;
-  text-align: center;
-  color: #c1a87d;
-  font-weight: 400;
-  font-size: 105px;
-  margin-top: 0em;
-  margin-bottom: 1em;
-
-  @media (max-width: 1440px) {
-    font-size: 65px;
-  }
-`;
-
-const OurPartnersConten = styled.div`
-  margin-top: 180px;
-  margin-bottom: 140px;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-
-  @media (max-width: 1440px) {
-
-  }
-`;
-
-const PartnersImageContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-
-  margin-top: 40px;
-  margin-bottom: 40px;
-
-  flex: 25%;
-
-  @media (max-width: 1440px) {
-    flex: 50%;
-  }
-`;
-
-const PartnerImg = styled.img`
-  height: 130px;
-  width: 130px;
-`;
-
-const HouseLogo = styled.img`
-  height: 130px;
-  width: 190px;
-`;
-const BrandLogo = styled.img`
-  height: 130px;
-  width: 150px;
-`;
+import {
+  OurPartnersContainer,
+  OurPartnersTitle,
+  OurPartnersContentContainer,
+  PartnersImageContainer,
+  PartnerImg,
+  HouseLogo,
+  BrandLogo
+} from "./style/StyledOurPartnersContent";
 
 const OurPartnersContent: React.FC = () => {
   return (
-    <OurPartnerContainer>
+    <OurPartnersContainer>
       <OurPartnersTitle className="title">{"PARTNEREINK"}</OurPartnersTitle>
-      <OurPartnersConten>
+      <OurPartnersContentContainer>
         <PartnersImageContainer>
           <PartnerImg
             src={
@@ -92,8 +42,8 @@ const OurPartnersContent: React.FC = () => {
             }
           />
         </PartnersImageContainer>
-      </OurPartnersConten>
-    </OurPartnerContainer>
+      </OurPartnersContentContainer>
+    </OurPartnersContainer>
   );
 };
 
