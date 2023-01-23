@@ -58,7 +58,7 @@ export {
   BrandLogo,
 } from "./StyledOurPartnersContent";
 
-export  {
+export {
   PremiumQualityContentBox,
   PremiumQualityContainer,
   PremiumQualityBackgroundLayerContainer,
@@ -67,5 +67,16 @@ export  {
   PremiumQualityWaterSplash,
   PremiumQualityContactLink,
   StyledPremiumQualityIconContainer,
-  PremiumQualityContentTitle
+  PremiumQualityContentTitle,
 } from "./StyledPremiumQuality";
+
+export {
+  StyledLayerSegment,
+  RotatedLayer,
+  SimpledHeroLayer,
+  StyledImg,
+  HeroWaterSplash,
+  StyledHeroSegmentContainer,
+  HeroContactLink,
+  StyledButtonContainer,
+} from "./StyledHeroSegment";
