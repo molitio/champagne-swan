@@ -21,7 +21,7 @@ export type ImageBoxParams = {
   positioning: {
     top?: string;
     margin?: string;
-    tablet: {
+    tablet?: {
       top?: string;
       margin?: string;
     },

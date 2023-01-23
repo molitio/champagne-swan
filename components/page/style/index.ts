@@ -1,19 +1,4 @@
-export {
-  StyledIconContainer,
-  ServicesMainContainer,
-  ServicesMainTitle,
-  WaterSplash,
-  RightSideWaterSplash,
-  BottomWaterSplash,
-  ReverseInternalContentContainer,
-  ContentBox,
-  ContactLink,
-  InternalContentContainer,
-  ContentBoxTitle,
-  ContentBoxText,
-  ExternalContentContainer,
-  UniqueExternalContentContainer,
-} from "./StyledServicesContent";
+
 export {
   ContactContainer,
   SimpledLayer,
@@ -80,3 +65,39 @@ export {
   HeroContactLink,
   StyledButtonContainer,
 } from "./StyledHeroSegment";
+
+export {
+  SkillsContainer,
+  SkillInfoContainer,
+  SkillScore,
+  SkillName
+} from "./StyleSkillComponent";
+
+export {
+  ServicesStyledLayerSegment,
+  SimpleServicesLayer,
+  RotatedServicesLayer,
+  ServicesStyledImg,
+  ServicesWaterSplash,
+  ServicesHeroSegmentContainer,
+  StyledServicesButtonContainer,
+  ContactButton
+} from "./StyledServicesHeroSegment";
+
+export {
+  StyledIconContainer,
+  ServicesMainContainer,
+  ServicesMainTitle,
+  WaterSplash,
+  RightSideWaterSplash,
+  BottomWaterSplash,
+  ReverseInternalContentContainer,
+  ContentBox,
+  ContactLink,
+  InternalContentContainer,
+  ContentBoxTitle,
+  ContentBoxText,
+  ExternalContentContainer,
+  UniqueExternalContentContainer,
+} from "./StyledServicesPageContent";
+

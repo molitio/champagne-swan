@@ -7,7 +7,7 @@ import {
   PartnerImg,
   HouseLogo,
   BrandLogo
-} from "./style/StyledOurPartnersContent";
+} from "./style";
 
 const OurPartnersContent: React.FC = () => {
   return (

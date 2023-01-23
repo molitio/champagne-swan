@@ -27,12 +27,6 @@ const HeroSegmentContent: React.FC<HeroSegmentContentProps> = (props) => {
       />
       <StyledMainTitle className="title">{`${title}`}</StyledMainTitle>
       <StyledDescription className="hiro-conten">
-        {/*  {`Cégünk magas színvonalon kínál takarító szolgáltatást szállodák,
-                irodaházak és magánszemélyek részére,`}
-        <br /> {`valamint vállaljuk nagy belmagasságú ipari üzemek,`}
-        <br />{" "}
-        {`gyártó csarnokok, raktárak és logisztikai központok
-                speciális takarítását!`} */}
         {description}
       </StyledDescription>
       <StyledCallToAction>{callToAction}</StyledCallToAction>

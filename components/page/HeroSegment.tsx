@@ -14,7 +14,7 @@ import {
   StyledButtonContainer,
 } from "./style";
 
-const HeroSegment: React.FC = (props) => {
+const HeroSegment: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
   const navTree = champagneSwanContext.navTree ?? {};
   const navBarExpanded = champagneSwanContext.interactive.navBarExpanded;

@@ -14,7 +14,7 @@ import {
   PremiumQualityContentTitle,
   StyledPremiumQualityIconContainer,
   PremiumQualityContentBox
- } from "./style/StyledPremiumQuality";
+ } from "./style";
 
 
 const SecondaryHomePageContent: React.FC = () => {

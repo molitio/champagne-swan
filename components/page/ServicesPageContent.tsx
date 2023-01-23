@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { ImageBox } from "../common/ImageBox";
 import { IconGoldGroup } from "../common/IconGroups";
 import {
@@ -11,85 +10,11 @@ import {
   ContentBoxText,
   ExternalContentContainer,
   UniqueExternalContentContainer,
+  ServicesMainContainer,
+  WaterSplash,
+  RightSideWaterSplash,
+  BottomWaterSplash
 } from "./style";
-
-export const ServicesMainContainer = styled.div`
-  margin: 0;
-  margin-top: -2px;
-  padding: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3500px;
-  align-items: center;
-  background: url(https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_top.png);
-  background-size: cover;
-
-  @media (max-width: 1440px) {
-    height: 4300px;
-  }
-`;
-
-export const WaterSplash = styled.img`
-  -moz-transform: scaleX(-1) rotate(-15deg);
-  -webkit-transform: scaleX(-1) rotate(-15deg);
-  -o-transform: scaleX(-1) rotate(-15deg);
-  -ms-transform: scaleX(-1) rotate(-15deg);
-  -webkit-transform: scaleX(-1) rotate(-15deg);
-  transform: scaleX(-1) rotate(-15deg);
-  display: block;
-  margin: auto;
-  position: relative;
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  bottom: 450px;
-  right: 490px;
-
-  @media (max-width: 1440px) {
-    bottom: 160px;
-    right: 190px;
-  }
-`;
-
-export const RightSideWaterSplash = styled.img`
-  display: block;
-  margin: auto;
-  position: relative;
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  transform: rotate(-15deg);
-  bottom: 390px;
-  left: 505px;
-
-  @media (max-width: 1440px) {
-    bottom: 160px;
-    left: 225px;
-  }
-`;
-
-export const BottomWaterSplash = styled.img`
-  -moz-transform: scaleX(-1) rotate(-15deg);
-  -webkit-transform: scaleX(-1) rotate(-15deg);
-  -o-transform: scaleX(-1) rotate(-15deg);
-  -ms-transform: scaleX(-1) rotate(-15deg);
-  -webkit-transform: scaleX(-1) rotate(-15deg);
-  transform: scaleX(-1) rotate(-15deg);
-  display: block;
-  margin: auto;
-  position: relative;
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  bottom: 380px;
-  right: 490px;
-
-  @media (max-width: 1440px) {
-    bottom: 160px;
-    right: 190px;
-  }
-`;
 
 const ServicesPageContent: React.FC = () => {
   return (
