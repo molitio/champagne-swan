@@ -13,6 +13,8 @@ import {
   ContactButton,
 } from "./style";
 
+import SelectForm from "../common/SelectForm";
+
 const ServicesHeroSegment: React.FC = (props) => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
   const navBarExpanded = champagneSwanContext.interactive.navBarExpanded;
@@ -51,6 +53,7 @@ const ServicesHeroSegment: React.FC = (props) => {
                 </StyledServicesButtonContainer>
               }
             />
+            <SelectForm/>
           </ServicesHeroSegmentContainer>
         ) : null}
       </ServicesStyledLayerSegment>

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import {SyledInput, SyledTextArea } from './style'
+import { SyledInput, SyledTextArea, SyledSelectInput } from "./style";
 
 interface InputProps<T> {
   type?: string;
   name?: string;
-  value?: string;
+  value?: string | number;
   placeholder?: string;
   onChange?: T;
   margin?: string;
@@ -15,12 +15,16 @@ interface InputProps<T> {
   position?: string;
   border?: string;
   placeholderColor?: string;
+  options?: ( number | string )[];
 }
 
-
-
-
-const Input: React.FC<InputProps< React.ChangeEventHandler<HTMLInputElement>| React.ChangeEventHandler<HTMLTextAreaElement>>> = ({
+const Input: React.FC<
+  InputProps<
+    | React.ChangeEventHandler<HTMLInputElement>
+    | React.ChangeEventHandler<HTMLTextAreaElement>
+    | React.ChangeEventHandler<HTMLSelectElement>
+  >
+> = ({
   type,
   name,
   placeholder,
@@ -32,6 +36,7 @@ const Input: React.FC<InputProps< React.ChangeEventHandler<HTMLInputElement>| Re
   position,
   border,
   placeholderColor,
+  options
 }) => {
   if (type === "input") {
     return (
@@ -71,7 +76,32 @@ const Input: React.FC<InputProps< React.ChangeEventHandler<HTMLInputElement>| Re
     );
   }
 
+  if (type === "select") {
+    return (
+      <div>
+        <SyledSelectInput
+          name={name}
+          value={value}
+          placeholder={placeholder}
+          placeholderColor={placeholderColor}
+          margin={margin}
+          height={height}
+          width={width}
+          border={border}
+          onChange = {onChange as React.ChangeEventHandler<HTMLSelectElement>}
+        >
+          {options &&
+            options.map((option, index) => (
+              <option key={index} value={option}>
+                {option}
+              </option>
+            ))}
+        </SyledSelectInput>
+      </div>
+    );
+  }
   return null;
 };
 
 export default Input;
+

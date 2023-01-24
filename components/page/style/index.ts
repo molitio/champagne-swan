@@ -9,6 +9,8 @@ export {
   ContactInfoContainer,
   ContactInfo,
   StyledLogoImage,
+  ResponsiveFormBox,
+  FormText
 } from "./StyledContactContent";
 
 export {
@@ -100,4 +102,3 @@ export {
   ExternalContentContainer,
   UniqueExternalContentContainer,
 } from "./StyledServicesPageContent";
-

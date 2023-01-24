@@ -6,6 +6,14 @@ export const ContactContainer = styled.div`
   width: 100%;
 `;
 
+export const FormText = styled.text`
+display: block;
+color: white;
+text-align: center;
+width: 40em;
+margin:2em auto auto;
+`;
+
 export const SimpledLayer = styled.img`
   position: relative;
   margin: 0;
@@ -24,6 +32,16 @@ export const BackgroundLayer = styled.div`
   width: 100%;
 `;
 
+export const ResponsiveFormBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @media (max-width: 1440px) {
+    flex-direction: column;
+  }
+`;
+
 export const StyledRelIconContainer = styled.div`
   position: relative;
   bottom: 130px;
@@ -37,7 +55,6 @@ export const MainTitle = styled.h1`
   font-weight: 400;
   font-size: 105px;
   margin-top: 0.4em;
-  margin-bottom: 2em;
 
   @media (max-width: 1440px) {
     font-size: 65px;
@@ -48,14 +65,19 @@ export const FormContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  width: 100%;
+  padding: 5em 0 0 10em;
+  @media (max-width: 1440px) {
+    
+    padding: 5em 0 0 0;
+  }
 `;
 
 export const ContactInfoContainer = styled.div`
   position: relative;
   text-align: center;
-  padding-top: 5em;
+  padding: 5em;
   color: white;
+  line-height: 1.6;
 `;
 
 export const ContactInfo = styled.p`
