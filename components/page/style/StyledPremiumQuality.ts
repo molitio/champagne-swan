@@ -12,6 +12,17 @@ export const PremiumQualityContainer = styled.div`
     bottom: 260px;
   }
 `;
+export const AboutPremiumQualityContainer = styled.div`
+/*   display: flex;
+  justify-content: center;
+  bottom: 260px;
+
+  @media (max-width: 1440px) {
+    align-items: center;
+    flex-direction: column-reverse;
+    bottom: 260px;
+  } */
+`;
 
 export const PremiumQualityBackgroundLayerContainer = styled.div`
   position: relative;
@@ -22,7 +33,7 @@ export const PremiumQualityBackgroundLayerContainer = styled.div`
 
   align-items: center;
   background-size: cover;
-  background: #c1dadff0;
+  background: #c1dadf;
   height: 1350px;
 
   @media (max-width: 1440px) {
@@ -41,6 +52,18 @@ export const PremiumQualityContentTitle = styled.h1`
   font-size: 105px;
   opacity: 0.5;
   margin-top: 0.6em;
+
+  @media (max-width: 1440px) {
+    font-size: 67px;
+    margin-bottom: 20px;
+  }
+`;
+export const PremiumQualitySecondaryTitle = styled.h1`
+  text-align: center;
+  color: #0c7a93;
+  font-weight: 400;
+  font-size: 105px;
+  opacity: 0.5;
 
   @media (max-width: 1440px) {
     font-size: 67px;
@@ -70,12 +93,19 @@ export const PremiumQualityContentBoxTitle = styled.h1`
   margin-top: 0;
   margin-bottom: 55px;
 `;
-export const PremiumQualityContentBoxText = styled.p`
-  text-align: start;
+
+type PremiumQuality = {
+  fontSize?: string;
+};
+
+export const PremiumQualityContentBoxText = styled.p<PremiumQuality>`
+  position: relative;
+  text-align: center;
   color: #0c7b93;
-  font-weight: 400;
-  font-size: 15px;
-  margin-bottom: 110px;
+  width: 45em;
+  font-weight: 200;
+  font-size: ${(props) => props.fontSize || "15px"};
+  margin: auto;
 `;
 
 export const PremiumQualityWaterSplash = styled.img`

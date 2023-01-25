@@ -13,6 +13,8 @@ import {
   ContactButton,
 } from "./style";
 
+import { StyledMainTitle, StyledDescription } from "./style";
+
 import SelectForm from "../common/SelectForm";
 
 const ServicesHeroSegment: React.FC = (props) => {
@@ -20,12 +22,13 @@ const ServicesHeroSegment: React.FC = (props) => {
   const navBarExpanded = champagneSwanContext.interactive.navBarExpanded;
 
   const content = `Válassza ki a tisztítandó felületet és annak nagyságát, majd a “SZÁMOL” gombra kattintva tudja meg a szolgáltatás árát! Görgessen lejjebb és ismerje meg szolgáltatásainkat, majd foglalja le online időpontját az oldal alján!`;
+  const warning =`*a kalkulált árak tájékoztató jellegűek és nem minősülnek ajánlattételnek!`;
 
   return (
     <ServicesStyledImg>
       <SimpleServicesLayer
         src={
-          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_hero.png"
+          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_bottom.png"
         }
       />
       <RotatedServicesLayer
@@ -36,23 +39,10 @@ const ServicesHeroSegment: React.FC = (props) => {
       <ServicesStyledLayerSegment>
         {!navBarExpanded ? (
           <ServicesHeroSegmentContainer>
-            <HeroSegmentContent
-              title={"TESZT SZÖVEG"}
-              description={content}
-              callToAction={
-                <StyledServicesButtonContainer>
-                  <ContactButton type="submit" className="hiro-content">
-                    {`Számol`}
-                  </ContactButton>
-
-                  <ServicesWaterSplash
-                    src={
-                      "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png"
-                    }
-                  />
-                </StyledServicesButtonContainer>
-              }
-            />
+        <StyledMainTitle color="#0C7B93">{`A TISZTASÁG SZINONIMÁJA`}</StyledMainTitle>
+        <StyledDescription textShadow="0px 0px 0px " color="#0C7B93">{content}</StyledDescription>
+        <br/>
+        <StyledDescription textShadow="0px 0px 0px " color="#0C7B93">{warning}</StyledDescription>
             <SelectForm/>
           </ServicesHeroSegmentContainer>
         ) : null}

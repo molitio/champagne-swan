@@ -1,13 +1,12 @@
 import React from "react";
 import HeroSegmentContent from "./HeroSegmentContent";
 import { ChampagneSwanContext } from "../context";
-import { IconGoldGroup } from "../common/IconGroups";
 import Link from "next/link";
 import {
   StyledLayerSegment,
   RotatedLayer,
   SimpledHeroLayer,
-  StyledImg,
+  StyledAboutImg,
   HeroWaterSplash,
   StyledHeroSegmentContainer,
   HeroContactLink,
@@ -19,13 +18,12 @@ const HeroSegment: React.FC = () => {
   const navTree = champagneSwanContext.navTree ?? {};
   const navBarExpanded = champagneSwanContext.interactive.navBarExpanded;
 
-  const content = `Cégünk magas színvonalon kínál takarító szolgáltatást szállodák,irodaházak és magánszemélyek részére, valamint vállaljuk nagy belmagasságú ipari üzemek, gyártó csarnokok, raktárak és logisztikai központok speciális takarítását!`;
-
+  
   return (
-    <StyledImg>
+    <StyledAboutImg>
       <SimpledHeroLayer
         src={
-          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_hero.png"
+          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_bottom.png"
         }
       />
       <RotatedLayer
@@ -36,22 +34,14 @@ const HeroSegment: React.FC = () => {
       <StyledLayerSegment>
         {!navBarExpanded ? (
           <StyledHeroSegmentContainer>
-            <IconGoldGroup
-              fill={""}
-              dx={""}
-              dy={""}
-              stdDeviation={""}
-              floodOpacity={""}
-            />
             <HeroSegmentContent
-              title={"TISZTASÁG FELSŐFOKON!"}
-              anotherTitle={""}
-              description={content}
+              title={"SZAKKÉPZETT MUNKAERŐ"}
+              anotherTitle={"MINŐSÉGI SZOLGÁLTATÁS"}
               callToAction={
                 <StyledButtonContainer>
                   <Link key={navTree.contact.path} href={navTree.contact.path}>
                     <HeroContactLink className="hiro-content">
-                      {`Bővebben`}
+                      {`Kapcsolat`}
                     </HeroContactLink>
                   </Link>
 
@@ -66,7 +56,7 @@ const HeroSegment: React.FC = () => {
           </StyledHeroSegmentContainer>
         ) : null}
       </StyledLayerSegment>
-    </StyledImg>
+    </StyledAboutImg>
   );
 };
 

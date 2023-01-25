@@ -17,7 +17,9 @@ export {
   StyledCoverContainer,
   StyledCallToAction,
   StyledMainTitle,
+  StyledSecondaryTitle,
   StyledDescription,
+  IconContainer
 } from "./StyledHeroSegmentContent";
 
 export {
@@ -55,6 +57,8 @@ export {
   PremiumQualityContactLink,
   StyledPremiumQualityIconContainer,
   PremiumQualityContentTitle,
+  PremiumQualitySecondaryTitle,
+  AboutPremiumQualityContainer
 } from "./StyledPremiumQuality";
 
 export {
@@ -102,3 +106,5 @@ export {
   ExternalContentContainer,
   UniqueExternalContentContainer,
 } from "./StyledServicesPageContent";
+
+export {StyledAboutImg} from "./StyledAboutHeroSegment";

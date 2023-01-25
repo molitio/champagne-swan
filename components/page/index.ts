@@ -7,3 +7,5 @@ export {default as ServicesHeroSegment} from './ServicesHeroSegment';
 export {default as ServicesHeroContent} from './ServicesHomeContent';
 export {default as ServicesPageContent} from './ServicesPageContent';
 export {default as SkillsComponent } from './SkillsComponent';
+export {default as AboutHeroSegment } from './AboutHeroSegment';
+export {default as AboutPremiumQuality } from './AboutPremiumQuality';

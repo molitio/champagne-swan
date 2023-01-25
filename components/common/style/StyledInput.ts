@@ -19,7 +19,7 @@ position: ${(props) => props.position || "relative"};
 margin: ${(props) => props.margin || "0px 0px 0px 0px"};
 height: ${(props) => props.height || "80px"};
 width: ${(props) => props.width || "486px"};
-border: ${(props) => props.width || "solid 1px #0C7B93"};
+border: ${(props) => props.border || "solid 1px #0C7B93"};
 &::placeholder {
   color: ${(props) => props.placeholderColor || "red"};
   opacity: 1;
@@ -36,7 +36,7 @@ position: ${(props) => props.position || "relative"};
 margin: ${(props) => props.margin || "0px 0px 0px 0px"};
 height: ${(props) => props.height || "320px"};
 width: ${(props) => props.width || "486px"};
-border: ${(props) => props.width || "solid 1px #0C7B93"};
+border: ${(props) => props.border || "solid 1px #0C7B93"};
 &::placeholder {
   padding-top: 10px;
   color: ${(props) => props.placeholderColor || "red"};
@@ -53,7 +53,7 @@ position: ${(props) => props.position || "relative"};
 margin: ${(props) => props.margin || "0px 0px 0px 0px"};
 height: ${(props) => props.height || "80px"};
 width: ${(props) => props.width || "486px"};
-border: ${(props) => props.width || "solid 1px #0C7B93"};
+border: ${(props) => props.border || "solid 1px #0C7B93"};
 &::placeholder {
   color: ${(props) => props.placeholderColor || "red"};
   opacity: 1;
