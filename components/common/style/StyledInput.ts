@@ -20,6 +20,7 @@ margin: ${(props) => props.margin || "0px 0px 0px 0px"};
 height: ${(props) => props.height || "80px"};
 width: ${(props) => props.width || "486px"};
 border: ${(props) => props.border || "solid 1px #0C7B93"};
+background-color: white;
 &::placeholder {
   color: ${(props) => props.placeholderColor || "red"};
   opacity: 1;
@@ -37,6 +38,7 @@ margin: ${(props) => props.margin || "0px 0px 0px 0px"};
 height: ${(props) => props.height || "320px"};
 width: ${(props) => props.width || "486px"};
 border: ${(props) => props.border || "solid 1px #0C7B93"};
+background-color: white;
 &::placeholder {
   padding-top: 10px;
   color: ${(props) => props.placeholderColor || "red"};
@@ -54,6 +56,7 @@ margin: ${(props) => props.margin || "0px 0px 0px 0px"};
 height: ${(props) => props.height || "80px"};
 width: ${(props) => props.width || "486px"};
 border: ${(props) => props.border || "solid 1px #0C7B93"};
+background-color: white;
 &::placeholder {
   color: ${(props) => props.placeholderColor || "red"};
   opacity: 1;

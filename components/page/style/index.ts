@@ -35,6 +35,7 @@ export {
   ServiceEvaluatorContainerText,
   ServiceEvaluatorContainerName,
   StyledOpininsLogoImage,
+  AboutStyledMiddleLayer
 } from "./StyledOpinions";
 
 export {
@@ -57,8 +58,16 @@ export {
   PremiumQualityContactLink,
   StyledPremiumQualityIconContainer,
   PremiumQualityContentTitle,
-  PremiumQualitySecondaryTitle,
-  AboutPremiumQualityContainer
+  AboutPremiumQualityTitle,
+  AboutPremiumQualityContainer,
+  AboutQuote,
+  AboutQuoteAuthor,
+  AboutQuoteContainer,
+  AboutTextPQualityContent,
+  AboutPremiumQualityContentText,
+  AboutPremiumQualityImageBox,
+  AboutPQBackgroundLayerContainer,
+  AboutPremiumQualityWaterSplash
 } from "./StyledPremiumQuality";
 
 export {

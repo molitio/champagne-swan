@@ -1,6 +1,6 @@
 import { AboutHeroSegment } from "../components/page";
 import {AboutPremiumQuality} from "../components/page";
-
+import {AboutOpinions}from "../components/page";
 
 
 const About: React.FC = () => {
@@ -8,6 +8,7 @@ const About: React.FC = () => {
     <>
   <AboutHeroSegment/>
   <AboutPremiumQuality/>
+  <AboutOpinions/>
     </>
   );
 };
