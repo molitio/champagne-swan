@@ -2,34 +2,110 @@ import React, { useState } from "react";
 import { StyledForm } from "./style";
 import { ContactButton } from "./style";
 import Input from "./Input";
+import { Formik, Form } from "formik";
+import { handleRecaptcha } from "../utils";
+import * as Yup from "yup";
 
 interface FormProps {
   position?: string;
 }
 
-const Form: React.FC<FormProps> = () => {
+type FormValues = {
+  from_name: string;
+  from_email: string;
+  message: string;
+};
+
+const ContactForm: React.FC<FormProps> = () => {
   const [inputFields, setInputFields] = useState({
     name: "",
     email: "",
     textarea: "",
   });
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log(inputFields);
+ const validationSchema = Yup.object().shape({
+    from_name: Yup.string().required("User name is required"),
+    from_email: Yup.string()
+      .email("Invalid email")
+      .required("Email is required"),
+    message: Yup.string().required("Message is required"),
+  });
+
+  const initialValues: FormValues = {
+    from_name: "",
+    from_email: "",
+    message: "",
   };
 
-  const handleChangeInput = (
-    e:
-       React.ChangeEvent<HTMLInputElement & HTMLTextAreaElement>
-  ) => {
-    setInputFields({
-      ...inputFields,
-      [e.target.name]: e.target.value,
-    });
+  const handleSubmit = async (values: FormValues, actions: any) => {
+    try {
+      const isRecaptchaPass = await handleRecaptcha(
+        "CONTACT_FORM",
+        process?.env?.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY ?? ""
+      );
+
+      if (!isRecaptchaPass) {
+        return;
+      } else {
+        const { from_name, from_email, message } = values;
+
+        const response = await fetch("/api/email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            from_name: from_name,
+            from_email: from_email,
+            message: message,
+          }),
+        });
+
+        const result = response.json();
+      }
+    } catch (error: any) {
+      console.error(error.message);
+    }
+
+    actions.setSubmitting(false);
+    actions.resetForm();
   };
 
   return (
+
+ <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      >
+        {({ isSubmitting }) => (
+          <StyledForm>
+            <StyledFormFieldContainer>
+              <StyledSingleLineTextField
+                type="text"
+                placeholder="Az Ön neve"
+                name="from_name"
+              />
+              <StyledSingleLineTextField
+                type="email"
+                placeholder="E-mail címe"
+                name="from_email"
+              />
+              <StyledMultiLineTextField
+                component="textarea"
+                placeholder="Az üzenet szövege"
+                name="message"
+              />
+              <StyledFormButton type="submit" disabled={isSubmitting}>
+                {`ELKÜLD`}
+              </StyledFormButton>
+            </StyledFormFieldContainer>
+          </StyledForm>
+        )}
+      </StyledForm>
+
+/* 
+    
     <StyledForm onSubmit={handleSubmit}>
       <Input
         type="input"
@@ -62,8 +138,8 @@ const Form: React.FC<FormProps> = () => {
       <ContactButton type="submit" className="hiro-content">
         {`Elküld`}
       </ContactButton>
-    </StyledForm>
+    </StyledForm> */
   );
 };
 
-export default Form;
+export default ContactForm;

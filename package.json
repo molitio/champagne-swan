@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
+    "@google-cloud/recaptcha-enterprise": "^3.2.0",
     "@molitio/ui-core": "0.16.12-rc.24",
     "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.10.2",
@@ -21,6 +23,7 @@
     "@types/smoothscroll-polyfill": "^0.3.1",
     "device-detector-js": "^3.0.3",
     "dotenv": "^16.0.3",
+    "formik": "^2.2.9",
     "nanoid": "^4.0.0",
     "next": "12.2.5",
     "next-fonts": "^1.5.1",
@@ -32,7 +35,8 @@
     "smoothscroll-polyfill": "^0.4.4",
     "styled-components": "^5.3.6",
     "webpack": "^5.75.0",
-    "workspaces": "^0.1.0"
+    "workspaces": "^0.1.0",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/node": "18.7.11",

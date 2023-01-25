@@ -11,7 +11,7 @@ import {
   ContactInfo,
   StyledLogoImage,
 } from "./style";
-import Form from "../common/Form";
+import ContactForm from "../common/Form";
 
 const ContactContent: React.FC = () => {
   return (
@@ -26,7 +26,7 @@ const ContactContent: React.FC = () => {
         <StyledRelIconContainer></StyledRelIconContainer>
         <MainTitle>{"KAPCSOLAT"}</MainTitle>
         <FormContainer>
-          <Form />
+          <ContactForm />
         </FormContainer>
         <ContactInfoContainer>
           <ContactInfo>
