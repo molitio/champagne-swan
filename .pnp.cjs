@@ -41,6 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@mui/icons-material", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.10.16"],\
             ["@mui/material", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.10.16"],\
             ["@mui/styled-engine-sc", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.10.16"],\
+            ["@types/grecaptcha", "npm:3.0.4"],\
             ["@types/material-ui", "npm:0.21.12"],\
             ["@types/nanoid", "npm:3.0.0"],\
             ["@types/node", "npm:18.7.11"],\
@@ -717,6 +718,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@mui/icons-material", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.10.16"],\
             ["@mui/material", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.10.16"],\
             ["@mui/styled-engine-sc", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.10.16"],\
+            ["@types/grecaptcha", "npm:3.0.4"],\
             ["@types/material-ui", "npm:0.21.12"],\
             ["@types/nanoid", "npm:3.0.0"],\
             ["@types/node", "npm:18.7.11"],\
@@ -1424,6 +1426,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-estree-npm-1.0.0-eddde5b631-910d97fb70.zip/node_modules/@types/estree/",\
           "packageDependencies": [\
             ["@types/estree", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/grecaptcha", [\
+        ["npm:3.0.4", {\
+          "packageLocation": "./.yarn/cache/@types-grecaptcha-npm-3.0.4-1bbea608c0-5413df122f.zip/node_modules/@types/grecaptcha/",\
+          "packageDependencies": [\
+            ["@types/grecaptcha", "npm:3.0.4"]\
           ],\
           "linkType": "HARD"\
         }]\

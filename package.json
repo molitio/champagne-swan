@@ -17,6 +17,7 @@
     "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.10.2",
     "@mui/styled-engine-sc": "^5.10.1",
+    "@types/grecaptcha": "^3.0.4",
     "@types/material-ui": "^0.21.12",
     "@types/nanoid": "^3.0.0",
     "@types/react-icons": "^3.0.0",

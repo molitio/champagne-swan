@@ -530,6 +530,7 @@ __metadata:
     "@mui/icons-material": ^5.10.3
     "@mui/material": ^5.10.2
     "@mui/styled-engine-sc": ^5.10.1
+    "@types/grecaptcha": ^3.0.4
     "@types/material-ui": ^0.21.12
     "@types/nanoid": ^3.0.0
     "@types/node": 18.7.11
@@ -1051,6 +1052,13 @@ __metadata:
   version: 0.0.51
   resolution: "@types/estree@npm:0.0.51"
   checksum: e56a3bcf759fd9185e992e7fdb3c6a5f81e8ff120e871641607581fb3728d16c811702a7d40fa5f869b7f7b4437ab6a87eb8d98ffafeee51e85bbe955932a189
+  languageName: node
+  linkType: hard
+
+"@types/grecaptcha@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "@types/grecaptcha@npm:3.0.4"
+  checksum: 5413df122f73a0bfc9304860c42f8e78549557fc03d9e3f97d4241c607103c575503024f3f67ac66700474f1d673e5fbffa466679844e1e0383a8d3239912343
   languageName: node
   linkType: hard
 
