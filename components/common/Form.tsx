@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { StyledForm } from "./style";
 import { ContactButton } from "./style";
 import Input from "./Input";
-import { Formik, Form } from "formik";
+import { Formik, Form, Field } from "formik";
 import { handleRecaptcha } from "../utils";
 import * as Yup from "yup";
 
@@ -17,11 +17,6 @@ type FormValues = {
 };
 
 const ContactForm: React.FC<FormProps> = () => {
-  const [inputFields, setInputFields] = useState({
-    name: "",
-    email: "",
-    textarea: "",
-  });
 
  const validationSchema = Yup.object().shape({
     from_name: Yup.string().required("User name is required"),
@@ -80,29 +75,29 @@ const ContactForm: React.FC<FormProps> = () => {
       >
         {({ isSubmitting }) => (
           <StyledForm>
-            <StyledFormFieldContainer>
-              <StyledSingleLineTextField
+ 
+              <Field
                 type="text"
                 placeholder="Az Ön neve"
                 name="from_name"
               />
-              <StyledSingleLineTextField
+              <Field
                 type="email"
                 placeholder="E-mail címe"
                 name="from_email"
               />
-              <StyledMultiLineTextField
+              <Field
                 component="textarea"
                 placeholder="Az üzenet szövege"
                 name="message"
               />
-              <StyledFormButton type="submit" disabled={isSubmitting}>
+              <button type="submit" disabled={isSubmitting}>
                 {`ELKÜLD`}
-              </StyledFormButton>
-            </StyledFormFieldContainer>
+              </button>
+
           </StyledForm>
         )}
-      </StyledForm>
+      </Formik>
 
 /* 
     
