@@ -50,6 +50,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-icons", "npm:3.0.0"],\
             ["@types/smoothscroll-polyfill", "npm:0.3.1"],\
             ["@types/styled-components", "npm:5.1.26"],\
+            ["@types/uuid", "npm:9.0.0"],\
             ["device-detector-js", "npm:3.0.3"],\
             ["dotenv", "npm:16.0.3"],\
             ["eslint", "npm:8.22.0"],\
@@ -727,6 +728,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-icons", "npm:3.0.0"],\
             ["@types/smoothscroll-polyfill", "npm:0.3.1"],\
             ["@types/styled-components", "npm:5.1.26"],\
+            ["@types/uuid", "npm:9.0.0"],\
             ["device-detector-js", "npm:3.0.3"],\
             ["dotenv", "npm:16.0.3"],\
             ["eslint", "npm:8.22.0"],\
@@ -1675,6 +1677,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/hoist-non-react-statics", "npm:3.3.1"],\
             ["@types/react", "npm:18.0.26"],\
             ["csstype", "npm:3.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/uuid", [\
+        ["npm:9.0.0", {\
+          "packageLocation": "./.yarn/cache/@types-uuid-npm-9.0.0-979023c16f-59ae56d954.zip/node_modules/@types/uuid/",\
+          "packageDependencies": [\
+            ["@types/uuid", "npm:9.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\

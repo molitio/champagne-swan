@@ -539,6 +539,7 @@ __metadata:
     "@types/react-icons": ^3.0.0
     "@types/smoothscroll-polyfill": ^0.3.1
     "@types/styled-components": ^5.1.26
+    "@types/uuid": ^9.0.0
     device-detector-js: ^3.0.3
     dotenv: ^16.0.3
     eslint: 8.22.0
@@ -1267,6 +1268,13 @@ __metadata:
     "@types/react": "*"
     csstype: ^3.0.2
   checksum: 84f53b3101739b20d1731554fb7735bc2f3f5d050a8b392e9845403c8c8bbd729737d033978649f9195a97b557875b010d46e35a4538564a2d0dbcce661dbf76
+  languageName: node
+  linkType: hard
+
+"@types/uuid@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "@types/uuid@npm:9.0.0"
+  checksum: 59ae56d9547c8758588659da2a2b4c97cce79c2aae1798c892bb29452ef08e87859dea2ec3a66bfa88d0d2153147520be2b1893be920f9f0bc9c53a3207ea6aa
   languageName: node
   linkType: hard
 
