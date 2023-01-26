@@ -13,7 +13,7 @@ import {
   ResponsiveFormBox,
   FormText
 } from "./style";
-import Form from "../common/Form";
+import {ContactForm} from "../common";
 
 const ContactContent: React.FC = () => {
   return (
@@ -49,7 +49,7 @@ const ContactContent: React.FC = () => {
           </ContactInfo>
         </ContactInfoContainer>  
         <FormContainer>
-          <Form />
+          <ContactForm />
         </FormContainer>
       </ResponsiveFormBox>
         <StyledLogoImage

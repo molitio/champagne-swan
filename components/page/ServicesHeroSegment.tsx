@@ -22,7 +22,7 @@ const ServicesHeroSegment: React.FC = (props) => {
   const navBarExpanded = champagneSwanContext.interactive.navBarExpanded;
 
   const content = `Válassza ki a tisztítandó felületet és annak nagyságát, majd a “SZÁMOL” gombra kattintva tudja meg a szolgáltatás árát! Görgessen lejjebb és ismerje meg szolgáltatásainkat, majd foglalja le online időpontját az oldal alján!`;
-  const warning =`*a kalkulált árak tájékoztató jellegűek és nem minősülnek ajánlattételnek!`;
+  const warning = `*a kalkulált árak tájékoztató jellegűek és nem minősülnek ajánlattételnek!`;
 
   return (
     <ServicesStyledImg>
@@ -39,11 +39,16 @@ const ServicesHeroSegment: React.FC = (props) => {
       <ServicesStyledLayerSegment>
         {!navBarExpanded ? (
           <ServicesHeroSegmentContainer>
-        <StyledMainTitle color="#0C7B93">{`A TISZTASÁG SZINONIMÁJA`}</StyledMainTitle>
-        <StyledDescription textShadow="0px 0px 0px " color="#0C7B93">{content}</StyledDescription>
-        <br/>
-        <StyledDescription textShadow="0px 0px 0px " color="#0C7B93">{warning}</StyledDescription>
-            <SelectForm/>
+            <StyledMainTitle color="#0C7B93">{`A TISZTASÁG SZINONIMÁJA`}</StyledMainTitle>
+            <StyledDescription textShadow="0px 0px 0px " color="#0C7B93">
+              {content}
+            </StyledDescription>
+            <br />
+            <StyledDescription textShadow="0px 0px 0px " color="#0C7B93">
+              {warning}
+            </StyledDescription>
+            {/* TODO: fix select form */}
+            {/*    <SelectForm/> */}
           </ServicesHeroSegmentContainer>
         ) : null}
       </ServicesStyledLayerSegment>

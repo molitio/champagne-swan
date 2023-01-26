@@ -29,7 +29,7 @@ const SelectForm: React.FC = () => {
       [event.target.name]: event.target.value,
     });
   };
-
+  /* 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const Num1: number | string = inputFields.input1Value;
@@ -39,11 +39,12 @@ const SelectForm: React.FC = () => {
     }
   };
 
+  */
   const options1 = ["Válassza ki a felületet!", 0, 400, 600, 800];
   const options2 = ["Válassza ki a felületet!", 100, 500, 1000, 2000];
-
   return (
-    <StyledForm margin={"8em 0 0 0"} onSubmit={handleSubmit}>
+    //TODO: fix on submit
+    <StyledForm margin={"8em 0 0 0"} onSubmit={() => {}}>
       <StyledFormContainer>
         <div>
           <Input
