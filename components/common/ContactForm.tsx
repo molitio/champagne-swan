@@ -17,8 +17,7 @@ type FormValues = {
 };
 
 const ContactForm: React.FC<FormProps> = () => {
-
- const validationSchema = Yup.object().shape({
+  const validationSchema = Yup.object().shape({
     from_name: Yup.string().required("User name is required"),
     from_email: Yup.string()
       .email("Invalid email")
@@ -67,39 +66,28 @@ const ContactForm: React.FC<FormProps> = () => {
   };
 
   return (
+    <Formik
+      initialValues={initialValues}
+      validationSchema={validationSchema}
+      onSubmit={handleSubmit}
+    >
+      {({ isSubmitting }) => (
+        <Form>
+          <Field type="text" placeholder="Az Ön neve" name="from_name" />
+          <Field type="email" placeholder="E-mail címe" name="from_email" />
+          <Field
+            component="textarea"
+            placeholder="Az üzenet szövege"
+            name="message"
+          />
+          <button type="submit" disabled={isSubmitting}>
+            {`ELKÜLD`}
+          </button>
+        </Form>
+      )}
+    </Formik>
 
- <Formik
-        initialValues={initialValues}
-        validationSchema={validationSchema}
-        onSubmit={handleSubmit}
-      >
-        {({ isSubmitting }) => (
-          <StyledForm>
- 
-              <Field
-                type="text"
-                placeholder="Az Ön neve"
-                name="from_name"
-              />
-              <Field
-                type="email"
-                placeholder="E-mail címe"
-                name="from_email"
-              />
-              <Field
-                component="textarea"
-                placeholder="Az üzenet szövege"
-                name="message"
-              />
-              <button type="submit" disabled={isSubmitting}>
-                {`ELKÜLD`}
-              </button>
-
-          </StyledForm>
-        )}
-      </Formik>
-
-/* 
+    /* 
     
     <StyledForm onSubmit={handleSubmit}>
       <Input

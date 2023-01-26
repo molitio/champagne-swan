@@ -5,23 +5,35 @@ import { HeroSegment } from "../components/page";
 import PremiumQuality from "../components/page/PremiumQuality";
 import ServicesHomeContent from "../components/page/ServicesHomeContent";
 import Opinions from "../components/page/Opinions";
-import OurPartnersContent from "../components/page/OurPartnersContent"; 
+import OurPartnersContent from "../components/page/OurPartnersContent";
 
 import ContactContent from "../components/page/ContactContent";
 
-const StyledSection = styled.section``;
+type HomeProps = {
+  title?: string;
+  description?: string;
+};
 
-const HomePage: NextPage = () => {
+const HomePage: NextPage<HomeProps> = (props) => {
   return (
-    <StyledSection>
+    <section>
       <HeroSegment />
       <PremiumQuality />
       <ServicesHomeContent />
       <Opinions />
       <OurPartnersContent />
-      <ContactContent/>
-    </StyledSection>
+      <ContactContent />
+    </section>
   );
 };
 
 export default HomePage;
+
+export async function getStaticProps() {
+  return {
+    props: {
+      title: "Champagne Swan",
+      description: "Champagne Swan",
+    },
+  };
+}
