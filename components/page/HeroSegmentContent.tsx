@@ -5,27 +5,25 @@ import {
   StyledCallToAction,
   StyledMainTitle,
   StyledDescription,
+  StyledSecondaryTitle
 } from "./style";
 
-type HeroSegmentContentProps = {
-  title?: string;
+interface HeroSegmentContentProps {
+  title?: string | React.ReactNode;
+  anotherTitle?: string | React.ReactNode;
   description?: string;
   callToAction?: React.ReactNode;
+ 
 };
 
 const HeroSegmentContent: React.FC<HeroSegmentContentProps> = (props) => {
-  const { title, description, callToAction } = props;
+  const { title, description, callToAction, anotherTitle} = props;
 
   return (
     <StyledCoverContainer>
-      <IconGoldGroup
-        fill={""}
-        dx={""}
-        dy={""}
-        stdDeviation={""}
-        floodOpacity={""}
-      />
-      <StyledMainTitle className="title">{`${title}`}</StyledMainTitle>
+ 
+      <StyledMainTitle  className="title">{`${title}`}</StyledMainTitle>
+      <StyledSecondaryTitle  className="title">{`${anotherTitle}`}</StyledSecondaryTitle>
       <StyledDescription className="hiro-conten">
         {description}
       </StyledDescription>

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+
 import { IconGoldGroup } from "../common/IconGroups";
 import { ImageBox } from "../common/ImageBox";
 import {
@@ -58,7 +58,7 @@ const ServicesHomeContent: React.FC = () => {
           <ContentBox>
             <ContentBoxTitle>{`Szállodák és irodaházak takarítása`}</ContentBoxTitle>
             <ContentBoxText>
-              {`Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is`}
+              {`Szállodák és irodaházak takarítása Minden egyes  munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is`}
             </ContentBoxText>
             <ContactLink href="/services/#first-content">{`Bővebben...`}</ContactLink>
           </ContentBox>
