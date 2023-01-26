@@ -29,7 +29,7 @@ const HomePage: NextPage<HomeProps> = (props) => {
 
 export default HomePage;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   return {
     props: {
       title: "Champagne Swan",
