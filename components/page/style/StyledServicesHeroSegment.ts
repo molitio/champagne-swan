@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-export const ServicesStyledLayerSegment = styled.div``;
+export const ServicesStyledLayerSegment = styled.div`
+`;
 
 export const SimpleServicesLayer = styled.img`
   position: absolute;
@@ -10,6 +11,8 @@ export const SimpleServicesLayer = styled.img`
   left: 0;
   width: 100%;
   height: 1069px;
+
+  
 `;
 
 export const RotatedServicesLayer = styled.img`
@@ -21,17 +24,17 @@ export const RotatedServicesLayer = styled.img`
   left: 0;
   width: 100%;
   height: 535px;
+
 `;
 
 export const ServicesStyledImg = styled.div`
-  object-fit: fill;
+/* position:relative; */
   background: url(https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/window.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100vh;
   height: 1069px;
-  opacity: 0.9;
+
 `;
 
 export const ServicesWaterSplash = styled.img`
@@ -42,12 +45,14 @@ export const ServicesWaterSplash = styled.img`
 `;
 
 export const ServicesHeroSegmentContainer = styled.div`
+
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   min-height: 850px;
-  top: 23em;
+  /* top: 23em; */
+  padding-top: 23em;
   position: relative;
+  margin-bottom: 10em;
 `;
 
 export const StyledServicesButtonContainer = styled.div`

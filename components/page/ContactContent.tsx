@@ -10,6 +10,8 @@ import {
   ContactInfoContainer,
   ContactInfo,
   StyledLogoImage,
+  ResponsiveFormBox,
+  FormText
 } from "./style";
 import ContactForm from "../common/Form";
 
@@ -25,16 +27,14 @@ const ContactContent: React.FC = () => {
         <IconGoldGroup />
         <StyledRelIconContainer></StyledRelIconContainer>
         <MainTitle>{"KAPCSOLAT"}</MainTitle>
-        <FormContainer>
-          <ContactForm />
-        </FormContainer>
+        <FormText>{`Írjon Nekünk az alábbi kapcsolati űrlapon keresztül vagy vegye fel velünk a kapcsolatot az alábbi elérhetőségek egyikén!`}</FormText>
+      <ResponsiveFormBox>
         <ContactInfoContainer>
           <ContactInfo>
             {`Mobil:`}
             <br />
             {`+36 20 416 0391`}
           </ContactInfo>
-
           <ContactInfo>
             {`E-mail:`}
             <br />
@@ -47,7 +47,11 @@ const ContactContent: React.FC = () => {
             <br />
             {`Lehel utca 11.`}
           </ContactInfo>
-        </ContactInfoContainer>
+        </ContactInfoContainer>  
+        <FormContainer>
+          <Form />
+        </FormContainer>
+      </ResponsiveFormBox>
         <StyledLogoImage
           src="https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/logo/jeliza_logokit_jeliza_logo_complete.svg"
           alt="logo"
@@ -58,3 +62,4 @@ const ContactContent: React.FC = () => {
 };
 
 export default ContactContent;
+

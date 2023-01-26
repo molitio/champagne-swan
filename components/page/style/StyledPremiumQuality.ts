@@ -22,11 +22,26 @@ export const PremiumQualityBackgroundLayerContainer = styled.div`
 
   align-items: center;
   background-size: cover;
-  background: #c1dadff0;
+  background: #c1dadf;
   height: 1350px;
 
   @media (max-width: 1440px) {
     height: 1750px;
+  }
+`;
+export const AboutPQBackgroundLayerContainer = styled.div`
+  position: relative;
+  padding: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  background-size: cover;
+  background: #c1dadf;
+  height: 1836px;
+
+  @media (max-width: 1440px) {
+    height: 2363px;
   }
 `;
 
@@ -46,6 +61,62 @@ export const PremiumQualityContentTitle = styled.h1`
     font-size: 67px;
     margin-bottom: 20px;
   }
+`;
+
+export const AboutPremiumQualityContainer = styled.div`
+  @media (max-width: 1440px) {
+  }
+`;
+export const AboutPremiumQualityImageBox = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 1440px) {
+    align-items: center;
+    flex-direction: column;
+  }
+`;
+
+export const AboutPremiumQualityTitle = styled.h1`
+  text-align: center;
+  color: #0c7a93;
+  font-weight: 400;
+  font-size: 90px;
+  opacity: 0.5;
+
+  @media (max-width: 1440px) {
+    font-size: 67px;
+    margin-bottom: 20px;
+  }
+`;
+
+export const AboutQuoteContainer = styled.div`
+  width: 54em;
+  display: block;
+  margin: 0 auto 3em auto;
+`;
+export const AboutQuote = styled.p`
+  color: #0c7b93;
+  font-style: italic;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 100;
+  padding: 3em 0 1em 0;
+`;
+export const AboutQuoteAuthor = styled.p`
+  color: #0c7b93;
+  font-size: 24px;
+  text-align: end;
+  font-weight: 100;
+  padding: 0em 0 0em 0;
+`;
+export const AboutTextPQualityContent = styled.p`
+  color: #0c7b93;
+  font-size: 24px;
+  text-align: end;
+  font-weight: 100;
+  padding: 0em 0 0em 0;
 `;
 
 export const PremiumQualityContentBox = styled.div`
@@ -70,12 +141,30 @@ export const PremiumQualityContentBoxTitle = styled.h1`
   margin-top: 0;
   margin-bottom: 55px;
 `;
-export const PremiumQualityContentBoxText = styled.p`
+
+type PremiumQuality = {
+  fontSize?: string;
+  width?: string;
+};
+
+export const PremiumQualityContentBoxText = styled.p<PremiumQuality>`
+  position: relative;
   text-align: start;
   color: #0c7b93;
-  font-weight: 400;
-  font-size: 15px;
-  margin-bottom: 110px;
+  font-weight: 200;
+  font-size: ${(props) => props.fontSize || "15px"};
+  margin-bottom: 7em;
+`;
+export const AboutPremiumQualityContentText = styled.p<PremiumQuality>`
+  display: block;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  color: #0c7b93;
+  font-weight: 100;
+  font-size: ${(props) => props.fontSize || "25px"};
+  width: ${(props) => props.width || ""};
+  margin-bottom: 7em;
 `;
 
 export const PremiumQualityWaterSplash = styled.img`
@@ -92,6 +181,19 @@ export const PremiumQualityWaterSplash = styled.img`
   @media (max-width: 1440px) {
     bottom: -265px;
     left: 230px;
+  }
+`;
+export const AboutPremiumQualityWaterSplash = styled.img`
+  display: block;
+  margin: auto;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  transform: rotate(-15deg);
+  top: -140px;
+  @media (max-width: 1440px) {
+    top: 0px;
   }
 `;
 

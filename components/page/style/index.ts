@@ -9,13 +9,17 @@ export {
   ContactInfoContainer,
   ContactInfo,
   StyledLogoImage,
+  ResponsiveFormBox,
+  FormText
 } from "./StyledContactContent";
 
 export {
   StyledCoverContainer,
   StyledCallToAction,
   StyledMainTitle,
+  StyledSecondaryTitle,
   StyledDescription,
+  IconContainer
 } from "./StyledHeroSegmentContent";
 
 export {
@@ -31,6 +35,7 @@ export {
   ServiceEvaluatorContainerText,
   ServiceEvaluatorContainerName,
   StyledOpininsLogoImage,
+  AboutStyledMiddleLayer
 } from "./StyledOpinions";
 
 export {
@@ -53,6 +58,16 @@ export {
   PremiumQualityContactLink,
   StyledPremiumQualityIconContainer,
   PremiumQualityContentTitle,
+  AboutPremiumQualityTitle,
+  AboutPremiumQualityContainer,
+  AboutQuote,
+  AboutQuoteAuthor,
+  AboutQuoteContainer,
+  AboutTextPQualityContent,
+  AboutPremiumQualityContentText,
+  AboutPremiumQualityImageBox,
+  AboutPQBackgroundLayerContainer,
+  AboutPremiumQualityWaterSplash
 } from "./StyledPremiumQuality";
 
 export {
@@ -101,3 +116,4 @@ export {
   UniqueExternalContentContainer,
 } from "./StyledServicesPageContent";
 
+export {StyledAboutImg} from "./StyledAboutHeroSegment";

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledLayerSegment = styled.div``;
+
 export const SimpledHeroLayer = styled.img`
   position: absolute;
   margin: 0;
@@ -23,6 +24,7 @@ export const RotatedLayer = styled.img`
 `;
 
 export const StyledImg = styled.div`
+
   object-fit: fill;
   background: url(https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/hero.jpg);
   background-size: cover;
@@ -30,7 +32,6 @@ export const StyledImg = styled.div`
   width: 100%;
   height: 100vh;
   height: 1069px;
-  opacity: 0.9;
 `;
 
 export const HeroWaterSplash = styled.img`
@@ -43,7 +44,6 @@ export const HeroWaterSplash = styled.img`
 export const StyledHeroSegmentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   min-height: 850px;
   top: 23em;
   position: relative;

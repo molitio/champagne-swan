@@ -1,3 +1,4 @@
+import { type } from "os";
 import styled from "styled-components";
 
 export const OpinionsMainContainer = styled.div`
@@ -36,28 +37,48 @@ export const StyledMiddleLayer = styled.div`
     height: 834x;
   }
 `;
-
-export const RotateLayer = styled.img`
+export const AboutStyledMiddleLayer = styled.div`
   position: absolute;
+  height: 236px;
+  width: 100%;
+  background: #c1dadf;
+
+  @media (max-width: 1440px) {
+    height: 834x;
+  }
+`;
+
+type RotateLayer = {
+  top?: string;
+  position?: string;
+};
+
+export const RotateLayer = styled.img<RotateLayer>`
+ position: ${(props) => props.position || "absolute"};;
   height: 800px;
   margin-top: 0px;
   padding: 0;
-  top: 636px;
+  top: ${(props) => props.top || "636px"};
   left: 0;
   width: 100%;
   align-items: center;
   transform: rotate(180deg);
 `;
 
+type MainOpinionsTitleProps = {
+  color?: string;
+  fontSize?: string;
+  padding?: string;
+};
 
-export const MainOpinionsTitle = styled.h1`
+export const MainOpinionsTitle = styled.h1<MainOpinionsTitleProps>`
   position: relative;
   text-align: center;
-  color: #ffffff;
+  color: ${(props) => props.color || "#ffffff"};
+  font-size: ${(props) => props.fontSize || "105px"};
+  padding: ${(props) => props.padding || "0.3em 0 0.3em 0"};
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.08);
   font-weight: 400;
-  font-size: 105px;
-  margin-top: 0.3em;
   margin-bottom: 0em;
 
   @media (max-width: 1440px) {
@@ -94,15 +115,26 @@ export const ServiceEvaluatorContainerImage = styled.img`
   padding: 0px;
   margin-bottom: 30px;
 `;
-export const ServiceEvaluatorContainerText = styled.p`
+
+type ServiceEvaluatorProps = {
+  color?: string;
+  fontSize?: string;
+  padding?: string;
+};
+export const ServiceEvaluatorContainerText = styled.p<ServiceEvaluatorProps>`
+  color: ${(props) => props.color || "#0c7b93"};
   width: 320px;
-  color: #0c7b93;
+  
   text-align: center;
   margin-bottom: 30px;
 `;
-export  const ServiceEvaluatorContainerName = styled.h1`
+type ServiceEvaluatorName = {
+  color?:string;
+}
+
+export const ServiceEvaluatorContainerName = styled.h1<ServiceEvaluatorName>`
   text-align: center;
-  color: #0c7b93;
+  color: ${(props) => props.color || "#0c7b93"};
 `;
 
 export const StyledOpininsLogoImage = styled.img`
