@@ -34,6 +34,17 @@ export const StyledImg = styled.div`
   height: 1069px;
 `;
 
+export const ContactStyledImg = styled.div`
+
+  object-fit: fill;
+  background: url(https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/skyscraper.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  height: 1069px;
+`;
+
 export const HeroWaterSplash = styled.img`
   position: absolute;
   width: 250px;

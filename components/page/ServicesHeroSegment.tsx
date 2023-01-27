@@ -48,7 +48,7 @@ const ServicesHeroSegment: React.FC = (props) => {
               {warning}
             </StyledDescription>
             {/* TODO: fix select form */}
-            {/*    <SelectForm/> */}
+            <SelectForm/> 
           </ServicesHeroSegmentContainer>
         ) : null}
       </ServicesStyledLayerSegment>

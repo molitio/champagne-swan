@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { StyledForm } from "./style";
 import { ContactButton } from "./style";
 import Input from "./Input";
-import { Formik, Form, Field } from "formik";
+import { StyledField } from "./style";
 import { handleRecaptcha } from "../utils";
+import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 
 interface FormProps {
@@ -72,56 +73,34 @@ const ContactForm: React.FC<FormProps> = () => {
       onSubmit={handleSubmit}
     >
       {({ isSubmitting }) => (
-        <Form>
-          <Field type="text" placeholder="Az Ön neve" name="from_name" />
-          <Field type="email" placeholder="E-mail címe" name="from_email" />
-          <Field
+        <StyledForm>
+          <StyledField
+            placeholdercolor={"#0C7B93"}
+            type="text"
+            placeholder=" Név:"
+            name="from_name"
+          />
+          <StyledField
+            margin={"43px 0px 0px 0px"}
+            placeholdercolor={"#0C7B93"}
+            type="email"
+            placeholder=" E-mail cím:"
+            name="from_email"
+          />
+          <StyledField
+            margin={"43px 0px 43px 0px "}
+            height={"320px"}
+            placeholdercolor={"#0C7B93"}
             component="textarea"
-            placeholder="Az üzenet szövege"
+            placeholder=" Üzenet szövege"
             name="message"
           />
-          <button type="submit" disabled={isSubmitting}>
-            {`ELKÜLD`}
-          </button>
-        </Form>
+          <ContactButton type="submit" disabled={isSubmitting} className="hiro-content">
+            {`Elküld`}
+          </ContactButton>
+        </StyledForm>
       )}
     </Formik>
-
-    /* 
-    
-    <StyledForm onSubmit={handleSubmit}>
-      <Input
-        type="input"
-        name="name"
-        placeholder=" Név:"
-        value={inputFields.name}
-        onChange={handleChangeInput}
-        margin={"0px 0px 40px 0px"}
-        placeholderColor={"#0C7B93"}
-      />
-      <Input
-        type="input"
-        name="email"
-        placeholder=" E-mail cím:"
-        value={inputFields.email}
-        onChange={handleChangeInput}
-        margin={"0px 0px 40px 0px"}
-        placeholderColor={"#0C7B93"}
-      />
-      <Input
-        type="textarea"
-        name="textarea"
-        placeholder=" Üzenet szövege:"
-        value={inputFields.textarea}
-        onChange={handleChangeInput}
-        margin={"0px 0px 40px 0px"}
-        placeholderColor={"#0C7B93"}
-      />
-
-      <ContactButton type="submit" className="hiro-content">
-        {`Elküld`}
-      </ContactButton>
-    </StyledForm> */
   );
 };
 

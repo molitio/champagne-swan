@@ -11,7 +11,7 @@ export {
   StyledLogoImage,
   ResponsiveFormBox,
   FormText
-} from "./StyledContactContent";
+} from "./StyledContactPageContent";
 
 export {
   StyledCoverContainer,
@@ -75,6 +75,7 @@ export {
   RotatedLayer,
   SimpledHeroLayer,
   StyledImg,
+  ContactStyledImg,
   HeroWaterSplash,
   StyledHeroSegmentContainer,
   HeroContactLink,

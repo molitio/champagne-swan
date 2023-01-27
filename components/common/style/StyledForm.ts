@@ -6,10 +6,15 @@ type StyledFormProps = {
     margin?: string;
   };
 
- const StyledForm = styled(Form)<StyledFormProps>`
+ export const StyledForm = styled(Form)<StyledFormProps>`
   position: ${(props) => props.position || "relative"};
   margin: ${(props) => props.margin || "0 0 0 0"};
+  display: flex;
+  flex-direction: column;
 `;
-
-
-export default StyledForm;
+ export const StyledSelectForm = styled.form<StyledFormProps>`
+  position: ${(props) => props.position || "relative"};
+  margin: ${(props) => props.margin || "0 0 0 0"};
+  display: flex;
+  flex-direction: column;
+`;

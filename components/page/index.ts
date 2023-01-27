@@ -1,4 +1,5 @@
 export {default as ContactContent} from './ContactContent';
+export {default as ContactPageContent} from './ContactPageContent';
 export {default as HeroSegment} from './HeroSegment';
 export {default as HeroSegmentContent} from './HeroSegmentContent';
 export {default as Opinions} from './Opinions';
@@ -10,3 +11,4 @@ export {default as SkillsComponent } from './SkillsComponent';
 export {default as AboutHeroSegment } from './AboutHeroSegment';
 export {default as AboutPremiumQuality } from './AboutPremiumQuality';
 export {default as AboutOpinions } from './AboutOpinions';
+export {default as ContactPageHero } from './ContactPageHero';

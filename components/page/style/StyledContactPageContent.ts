@@ -7,7 +7,7 @@ export const ContactContainer = styled.div`
   width: 100%;
 `;
 
-export const FormText = styled.text`
+export const FormText = styled.p`
 display: block;
 color: white;
 text-align: center;
