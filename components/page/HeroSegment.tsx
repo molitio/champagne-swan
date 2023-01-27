@@ -50,7 +50,7 @@ const HeroSegment: React.FC = () => {
               callToAction={
                 <StyledButtonContainer>
                   <Link key={navTree.contact.path} href={navTree.contact.path}>
-                    <HeroContactLink className="hiro-content">
+                    <HeroContactLink>
                       {`Bővebben`}
                     </HeroContactLink>
                   </Link>

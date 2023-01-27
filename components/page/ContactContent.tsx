@@ -37,7 +37,7 @@ const ContactContent: React.FC = () => {
           <ContactInfo>
             {`Cím:`}
             <br />
-            {` 1134 Budapest,`}
+            {` 1134. Budapest,`}
             <br />
             {`Lehel utca 11.`}
           </ContactInfo>

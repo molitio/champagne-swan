@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 export const OpinionsMainContainer = styled.div`
   position: relative;
-  height: 1200px;
+  height: 1300px;
 
   @media (max-width: 1440px) {
-    height: 1400px;
+    height: 1600px;
   }
 `;
 
@@ -54,7 +54,7 @@ type RotateLayer = {
 };
 
 export const RotateLayer = styled.img<RotateLayer>`
- position: ${(props) => props.position || "absolute"};;
+  position: ${(props) => props.position || "absolute"};
   height: 800px;
   margin-top: 0px;
   padding: 0;
@@ -123,19 +123,25 @@ type ServiceEvaluatorProps = {
 };
 export const ServiceEvaluatorContainerText = styled.p<ServiceEvaluatorProps>`
   color: ${(props) => props.color || "#0c7b93"};
-  width: 320px;
-  
+  width: 400px;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-weight: 300;
   text-align: center;
+  font-size: 25px;
   margin-bottom: 30px;
 `;
 type ServiceEvaluatorName = {
-  color?:string;
-}
+  color?: string;
+};
 
-export const ServiceEvaluatorContainerName = styled.h1<ServiceEvaluatorName>`
+export const ServiceEvaluatorContainerName = styled.p<ServiceEvaluatorName>`
   text-align: center;
   color: ${(props) => props.color || "#0c7b93"};
-`;
+  font-family: "Lato" sans-serif;
+  font-weight: 100;
+  font-size: 30px;
+  `;
 
 export const StyledOpininsLogoImage = styled.img`
   position: relative;

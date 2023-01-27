@@ -4,6 +4,7 @@ import Script from "next/script";
 import { ChampagneSwanTheme } from "../theme";
 import { Layout } from "../components/common";
 import "../styles/globals.scss";
+import GlobalStyle from "../global-style/globalStyle";
 
 export default function ChampagneSwanApp({ Component, pageProps }: AppProps) {
   const muiDefault = createTheme();
@@ -13,6 +14,7 @@ export default function ChampagneSwanApp({ Component, pageProps }: AppProps) {
 
   return (
     <Layout appTheme={appTheme}>
+      <GlobalStyle/>
           <Script
             strategy="lazyOnload"
             /* nonce={nonce} */

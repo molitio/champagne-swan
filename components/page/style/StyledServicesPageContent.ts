@@ -123,7 +123,7 @@ export const ContentBox = styled.div`
   min-height: 353px;
   width: 529px;
   min-width: 529px;
-  margin: 30px 0 110px 20px;
+  margin: 30px 25px 110px 25px;
  
 `;
 
@@ -135,10 +135,10 @@ export const ContactLink = styled.a`
 
 export const ContentBoxTitle = styled.h1`
   font-family: "Lato", sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   text-align: initial;
   color: #c1a87d;
-  font-size: 30px;
+  font-size:35px;
   margin-top: 0;
   margin-bottom: 55px;
 `;

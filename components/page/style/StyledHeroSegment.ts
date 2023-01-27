@@ -9,7 +9,7 @@ export const SimpledHeroLayer = styled.img`
   top: 0;
   left: 0;
   width: 100%;
-  height: 1069px;
+  height: 1062px;
 `;
 
 export const RotatedLayer = styled.img`

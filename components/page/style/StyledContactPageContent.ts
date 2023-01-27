@@ -9,6 +9,8 @@ export const ContactContainer = styled.div`
 
 export const FormText = styled.p`
 display: block;
+font-family: 'Lato' sans-serif;
+font-size:20px;
 color: white;
 text-align: center;
 width: 40em;
@@ -84,7 +86,8 @@ export const ContactInfoContainer = styled.div`
 
 export const ContactInfo = styled.p`
   font-size: 2.4rem;
-  font-family: "Tenor Sans";
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 200;
   text-shadow: 0px 2px 4px #8c7b6c;
 `;
 

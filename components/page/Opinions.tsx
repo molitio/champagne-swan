@@ -40,7 +40,7 @@ const Opinions: React.FC = () => {
         />
       </StyledOpinionsIconContainer>
 
-      <MainOpinionsTitle className="title">{"VÉLEMÉNYEK"}</MainOpinionsTitle>
+      <MainOpinionsTitle>{"VÉLEMÉNYEK"}</MainOpinionsTitle>
 
       <InternalOpinionsContentContainer>
         <ServiceEvaluatorContainer>

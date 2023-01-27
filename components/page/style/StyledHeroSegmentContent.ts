@@ -6,9 +6,7 @@ export const StyledCoverContainer = styled.div``;
 export const StyledCallToAction = styled.div`
   text-align: center;
 `;
-export const IconContainer = styled.div`
-
-`; 
+export const IconContainer = styled.div``;
 
 type StyledProps = {
   color?: string;
@@ -25,7 +23,8 @@ export const StyledMainTitle = styled.h1<StyledProps>`
   font-size: 60px;
   line-height: 78px;
   color: ${(props) => props.color || " #ffffff"};
-
+  text-shadow: 1px 3px 5px #000000;
+  
   @media (max-width: 1400px) {
     font-size: 3.2rem;
   }
@@ -37,7 +36,7 @@ export const StyledMainTitle = styled.h1<StyledProps>`
   @media (max-width: 400px) {
     margin-bottom: 0em;
   }
-  text-shadow: 2px 4px 8px #000000;
+
 
   @media (max-width: 280px) {
     font-size: 1.6rem;
@@ -77,6 +76,7 @@ export const StyledSecondaryTitle = styled.h1<StyledProps>`
 export const StyledDescription = styled.h3<StyledProps>`
   width: 40em;
   font-style: normal;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 24px;
   color: ${(props) => props.color || " #ffffff"};
@@ -88,6 +88,7 @@ export const StyledDescription = styled.h3<StyledProps>`
   font-size: 1.25rem;
   padding: 0 2em 0 2em;
   text-shadow: ${(props) => props.textShadow || "2px 4px 8px #000000"};
+
   @media (max-width: 400px) {
     font-size: 0.9rem;
   }

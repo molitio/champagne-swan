@@ -13,7 +13,7 @@ import {
 const OurPartnersContent: React.FC = () => {
   return (
     <OurPartnersContainer>
-      <OurPartnersTitle className="title">{"PARTNEREINK"}</OurPartnersTitle>
+      <OurPartnersTitle>{"PARTNEREINK"}</OurPartnersTitle>
       <OurPartnersContentContainer>
         <PartnersImageContainer>
           <PartnerImg

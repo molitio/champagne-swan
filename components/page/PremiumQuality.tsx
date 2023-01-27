@@ -33,7 +33,7 @@ const SecondaryHomePageContent: React.FC = () => {
           floodOpacity={""}
         />
       </StyledPremiumQualityIconContainer>
-      <PremiumQualityContentTitle className="secondary-title">
+      <PremiumQualityContentTitle >
         {"PRÉMIUM MINŐSÉG"}
       </PremiumQualityContentTitle>
       <PremiumQualityWaterSplash
@@ -60,7 +60,7 @@ const SecondaryHomePageContent: React.FC = () => {
             imageUrl:
               "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/officecleaners.jpg",
             positioning: {
-              margin: "30px 0 0 10px",
+              margin: "30px 0 0 25px",
               tablet: { margin: "30px 0 0 0" },
             },
             dimensions: {

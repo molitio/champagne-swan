@@ -16,6 +16,8 @@ export const SkillInfoContainer = styled.div`
 display: flex;
 text-align: center;
 flex-direction: column;
+font-family: 'Lato', sans-serif;
+font-weight: 400;
 color: white;
 margin-top: 40px;
 margin-bottom: 40px;
@@ -29,11 +31,14 @@ margin-bottom: 40px;
 `;
 
 export const SkillScore = styled.h1` 
+font-family: 'Lato', sans-serif;
+font-weight: 400;
 margin: 0;
-font-size: 90px;
+font-size: 110px;
 font-weight: 100;
 `;
 
-export const SkillName = styled.h4` 
+export const SkillName = styled.h4`
+font-size: 21.6px; 
 margin: 0;
 `;

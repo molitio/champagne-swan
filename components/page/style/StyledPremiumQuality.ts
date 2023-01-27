@@ -38,10 +38,10 @@ export const AboutPQBackgroundLayerContainer = styled.div`
   align-items: center;
   background-size: cover;
   background: #c1dadf;
-  height: 1836px;
+  height: 1862px;
 
   @media (max-width: 1440px) {
-    height: 2363px;
+    height: 2288px;
   }
 `;
 
@@ -124,7 +124,7 @@ export const PremiumQualityContentBox = styled.div`
   min-height: 353px;
   width: 529px;
   min-width: 529px;
-  margin: 30px 10px 0 0;
+  margin: 30px 25px 0 0;
 
   @media (max-width: 1440px) {
     text-align: center;
@@ -135,9 +135,10 @@ export const PremiumQualityContentBox = styled.div`
 
 export const PremiumQualityContentBoxTitle = styled.h1`
   text-align: initial;
+  font-family: 'Lato', sans-serif;
   color: #0c7b93;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 35px;
   margin-top: 0;
   margin-bottom: 55px;
 `;
@@ -148,11 +149,12 @@ type PremiumQuality = {
 };
 
 export const PremiumQualityContentBoxText = styled.p<PremiumQuality>`
+ font-family: 'Lato', sans-serif;
   position: relative;
   text-align: start;
   color: #0c7b93;
   font-weight: 200;
-  font-size: ${(props) => props.fontSize || "15px"};
+  font-size: ${(props) => props.fontSize || "20px"};
   margin-bottom: 7em;
 `;
 export const AboutPremiumQualityContentText = styled.p<PremiumQuality>`
@@ -161,6 +163,7 @@ export const AboutPremiumQualityContentText = styled.p<PremiumQuality>`
   position: relative;
   text-align: center;
   color: #0c7b93;
+  font-family: 'Lato' sans-serif;
   font-weight: 100;
   font-size: ${(props) => props.fontSize || "25px"};
   width: ${(props) => props.width || ""};

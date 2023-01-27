@@ -45,7 +45,7 @@ const ServicesHomeContent: React.FC = () => {
                               minWidth: "490px",
                             },
                             positioning: {
-                              margin: "30px 15px 0 15px",
+                              margin: "30px 25px 0 15px",
                               tablet:{
                                 top:"0px"
                               },
