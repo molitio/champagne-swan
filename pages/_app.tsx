@@ -13,11 +13,11 @@ export default function ChampagneSwanApp({ Component, pageProps }: AppProps) {
 
   return (
     <Layout appTheme={appTheme}>
-          <Script
-            strategy="lazyOnload"
-            /* nonce={nonce} */
-            src={`https://www.google.com/recaptcha/enterprise.js?render=${process?.env?.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY}`}
-          />
+      <Script
+        strategy="lazyOnload"
+        /* nonce={nonce} */
+        src={`https://www.google.com/recaptcha/enterprise.js?render=${process?.env?.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY}`}
+      />
       <Component {...pageProps} />
     </Layout>
   );
