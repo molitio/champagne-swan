@@ -10,7 +10,7 @@ import {
 interface HeroSegmentContentProps {
   title?: string;
   anotherTitle?: string;
-  description?: string;
+  description?: string | React.ReactElement;
   callToAction?: React.ReactNode;
  
 };
@@ -22,7 +22,7 @@ const HeroSegmentContent: React.FC<HeroSegmentContentProps> = (props) => {
     <StyledCoverContainer>
  
       <StyledMainTitle>{`${title}`}</StyledMainTitle>
-      <StyledSecondaryTitle  className="title">{`${anotherTitle}`}</StyledSecondaryTitle>
+      <StyledSecondaryTitle >{`${anotherTitle}`}</StyledSecondaryTitle>
       <StyledDescription>
         {description}
       </StyledDescription>

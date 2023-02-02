@@ -9,14 +9,19 @@ import {
   ContactInfo,
   StyledLogoImage,
   ResponsiveFormBox,
-  FormText
 } from "./style/StyledContactPageContent";
 import {ContactForm} from "../common";
 
 const ContactPageContent: React.FC = () => {
   return (
-    <ContactContainer>
-      <BackgroundLayer>
+    <ContactContainer
+    height={"1200px"} 
+    heightTablet={"1900px"} 
+    >
+      <BackgroundLayer
+         height={"1200px"} 
+         heightTablet={"1900px"}
+      >
       <ResponsiveFormBox>
         <ContactInfoContainer>
           <ContactInfo>

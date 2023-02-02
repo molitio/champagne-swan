@@ -557,6 +557,7 @@ __metadata:
     sass: ^1.56.0
     smoothscroll-polyfill: ^0.4.4
     styled-components: ^5.3.6
+    typeface-lato: ^1.1.13
     typescript: 4.7.4
     uuid: ^9.0.0
     webpack: ^5.75.0
@@ -5583,6 +5584,13 @@ __metadata:
   version: 0.20.2
   resolution: "type-fest@npm:0.20.2"
   checksum: 4fb3272df21ad1c552486f8a2f8e115c09a521ad7a8db3d56d53718d0c907b62c6e9141ba5f584af3f6830d0872c521357e512381f24f7c44acae583ad517d73
+  languageName: node
+  linkType: hard
+
+"typeface-lato@npm:^1.1.13":
+  version: 1.1.13
+  resolution: "typeface-lato@npm:1.1.13"
+  checksum: 682b3cae914928d23a274385b281977f61db1436f387134a6b6467a29c432a95405ec9c70ce7bd63f6f84ee276c095b1282f2c61bd430d089a232ff46f296ec1
   languageName: node
   linkType: hard
 

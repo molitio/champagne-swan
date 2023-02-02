@@ -67,7 +67,8 @@ export {
   AboutPremiumQualityContentText,
   AboutPremiumQualityImageBox,
   AboutPQBackgroundLayerContainer,
-  AboutPremiumQualityWaterSplash
+  AboutPremiumQualityWaterSplash,
+  PremiumLayerContainer
 } from "./StyledPremiumQuality";
 
 export {

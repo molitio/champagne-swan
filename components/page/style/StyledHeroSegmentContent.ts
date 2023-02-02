@@ -1,4 +1,3 @@
-import { type } from "os";
 import styled from "styled-components";
 
 export const StyledCoverContainer = styled.div``;
@@ -29,8 +28,10 @@ export const StyledMainTitle = styled.h1<StyledProps>`
     font-size: 3.2rem;
   }
 
-  @media (max-width: 645px) {
-    font-size: 2.25rem;
+  @media (max-width: 975px) {
+  display: block;
+  margin:30px auto 30px auto;
+    width: 12em;
   }
 
   @media (max-width: 400px) {
@@ -58,8 +59,9 @@ export const StyledSecondaryTitle = styled.h1<StyledProps>`
     font-size: 3.2rem;
   }
 
-  @media (max-width: 645px) {
-    font-size: 2.25rem;
+  @media (max-width: 975px) {
+    margin: auto;
+   width:10em;
   }
 
   @media (max-width: 400px) {
@@ -73,11 +75,11 @@ export const StyledSecondaryTitle = styled.h1<StyledProps>`
   }
 `;
 
-export const StyledDescription = styled.h3<StyledProps>`
-  width: 40em;
+export const StyledDescription = styled.p<StyledProps>`
+  width: 36em;
   font-style: normal;
   font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 24px;
   color: ${(props) => props.color || " #ffffff"};
   margin-top: 1em;
@@ -85,11 +87,11 @@ export const StyledDescription = styled.h3<StyledProps>`
   margin-right: auto;
   margin-left: auto;
   text-align: center;
-  font-size: 1.25rem;
   padding: 0 2em 0 2em;
-  text-shadow: ${(props) => props.textShadow || "2px 4px 8px #000000"};
+  text-shadow: ${(props) => props.textShadow || "2px 4px 4px #000000"};
 
-  @media (max-width: 400px) {
-    font-size: 0.9rem;
+  @media (max-width: 975px) {
+    font-size: 28px;
+    width: 16em;
   }
 `;

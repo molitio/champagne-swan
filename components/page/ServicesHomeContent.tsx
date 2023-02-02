@@ -20,8 +20,13 @@ import {
 
 const ServicesHomeContent: React.FC = () => {
   return (
-    <ServicesMainContainer>
-      <StyledIconContainer>
+    <ServicesMainContainer
+    height={"2800px"}
+    tabletHeight={"4200px"}
+    mobileHeight={"3350px"}
+
+    >
+      <StyledIconContainer mobilePaddingTop={'7em'} tabletPaddingTop={'10em'}>
         <IconGoldGroup
           fill={""}
           dx={"0"}

@@ -33,10 +33,10 @@ const Opinions: React.FC = () => {
       <StyledOpinionsIconContainer>
         <IconWhiteGroup
           fill={"#ffffff"}
-          dx={"1"}
-          dy={"1"}
-          stdDeviation={"1"}
-          floodOpacity={"1"}
+          dx={"0"}
+          dy={"0"}
+          stdDeviation={"0"}
+          floodOpacity={"0"}
         />
       </StyledOpinionsIconContainer>
 

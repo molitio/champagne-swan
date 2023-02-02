@@ -13,14 +13,14 @@ import {
   ServicesMainContainer,
   WaterSplash,
   RightSideWaterSplash,
-  BottomWaterSplash
+  SimpledLayer,
 } from "./style";
 
 const ServicesPageContent: React.FC = () => {
   return (
     <>
-      <ServicesMainContainer>
-        <StyledIconContainer>
+      <ServicesMainContainer mobileHeight={"4500px"} tabletHeight={"4500px"}>
+        <StyledIconContainer mobilePaddingTop={"40em"}>
           <IconGoldGroup
             fill={""}
             dx={"0"}
@@ -37,23 +37,26 @@ const ServicesPageContent: React.FC = () => {
               imageBoxParams={{
                 imageUrl:
                   "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/officecleaners.jpg",
-                  dimensions: {
-                    height: "350px",
-                    width: "490px",
-                    minHeight: "350px",
-                    minWidth: "490px",
+                dimensions: {
+                  height: "350px",
+                  width: "490px",
+                  minHeight: "350px",
+                  minWidth: "490px",
+                },
+                positioning: {
+                  margin: "30px 15px 0 15px",
+                  tablet: {
+                    top: "220px",
                   },
-                  positioning: {
-                    margin: "30px 15px 0 15px",
-                    tablet:{
-                      top:"180px"
-                    },
-                  },
+                  mobile:{
+                    top:"300px"
+                  }
+                },
                 breakpoints: {
-                  breakpoint1: "1440px"
-                }
+                  breakpoint1: "1440px",
+                },
               }}
-              />
+            />
 
             <ContentBox>
               <ContentBoxTitle>{`Szállodák és irodaházak takarítása`}</ContentBoxTitle>
@@ -80,12 +83,19 @@ const ServicesPageContent: React.FC = () => {
             top={"-50px"}
             display={"block"}
             displayTablet={"none"}
+            displayMobile={"none"}
           >
             {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.`}
           </ContentBoxText>
 
           <div id="middle-content"></div>
           <WaterSplash
+            bottom={"430px"}
+            bottomTablet={"-50px"}
+            right={"500px"}
+            rightTablet={"220px"}
+            rightMobile={"170px"}
+            bottomMobile={"-170px"}
             src={
               "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png"
             }
@@ -93,7 +103,7 @@ const ServicesPageContent: React.FC = () => {
         </UniqueExternalContentContainer>
 
         <ExternalContentContainer>
-          <InternalContentContainer>
+          <InternalContentContainer tabletTop={"200px"} mobileTop={"250px"}>
             <ContentBox>
               <ContentBoxTitle>{`Magánszemélyeknél végzett takarítás`}</ContentBoxTitle>
               <ContentBoxText>
@@ -115,62 +125,74 @@ const ServicesPageContent: React.FC = () => {
               imageBoxParams={{
                 imageUrl:
                   "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/flatroom.jpg",
-                  dimensions: {
-                    height: "397px",
-                    width: "556px",
-                    minHeight:  "397px",
-                    minWidth:"397px",      
+                dimensions: {
+                  height: "397px",
+                  width: "556px",
+                  minHeight: "397px",
+                  minWidth: "397px",
+                },
+                positioning: {
+                  margin: "30px 15px 0 15px",
+                  tablet: {
+                    top: "220px",
                   },
-                  positioning: {
-                    margin: "30px 15px 0 15px",
-                    tablet:{
-                      top:"180px"
-                    },
-                  },
+                  mobile:{
+                    top:"300px"
+                  }
+                },
                 breakpoints: {
-                  breakpoint1: "1440px"
-                }
+                  breakpoint1: "1440px",
+                },
               }}
             />
           </InternalContentContainer>
           <ContentBoxText
             width={"1100px"}
             margin={"0px auto 0px auto"}
-            top={"-30px"}
+            top={"0px"}
             display={"block"}
             displayTablet={"none"}
+            displayMobile={"none"}
           >
             {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.`}
           </ContentBoxText>
 
           <div id="last-content"></div>
           <RightSideWaterSplash
+            bottom={"380px"}
+            bottomTablet={"-250px"}
+            bottomMobile={"-420px"}
+            left={""}
+            leftTablet={""}
             src={
               "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png"
             }
           />
         </ExternalContentContainer>
         <ExternalContentContainer>
-          <ReverseInternalContentContainer>
+          <ReverseInternalContentContainer tabletTop={"390px"} mobileTop={"480px"}>
             <ImageBox
               imageBoxParams={{
                 imageUrl:
                   "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/industrial.jpg",
-                  dimensions: {
-                    height:"396px",
-                    width: "529px",
-                    minHeight:  "529px",
-                    minWidth:"396px",      
+                dimensions: {
+                  height: "396px",
+                  width: "529px",
+                  minHeight: "396px",
+                  minWidth: "529px",
+                },
+                positioning: {
+                  margin: "30px 15px 0 15px",
+                  tablet: {
+                    top: "240px",
                   },
-                  positioning: {
-                    margin: "30px 15px 0 15px",
-                    tablet:{
-                      top:"240px"
-                    },
-                  },
+                  mobile:{
+                    top:"300px"
+                  }
+                },
                 breakpoints: {
-                  breakpoint1: "1440px"
-                }
+                  breakpoint1: "1440px",
+                },
               }}
             />
 
@@ -195,19 +217,31 @@ const ServicesPageContent: React.FC = () => {
           <ContentBoxText
             width={"1080px"}
             margin={"0px auto 0px auto"}
-            top={"0px"}
+            top={"60px"}
             display={"block"}
             displayTablet={"none"}
+            displayMobile={"none"}
           >
             {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.`}
           </ContentBoxText>
-          <BottomWaterSplash
+          <WaterSplash
+            bottom={"380px"}
+            bottomTablet={"-470px"}
+            bottomMobile={"-660px"}
+            right={""}
+            rightTablet={""}
             src={
               "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png"
             }
           />
         </ExternalContentContainer>
       </ServicesMainContainer>
+      <SimpledLayer
+        top={"4px"}
+        src={
+          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_bottom.png"
+        }
+      />
     </>
   );
 };

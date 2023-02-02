@@ -1,39 +1,38 @@
 import React from "react";
 import styled from "styled-components";
 
-export const ContactContainer = styled.div`
+type ContactContainerLayerProps = {
+height?: string;
+heightTablet?: string;
+};
+
+export const ContactContainer = styled.div<ContactContainerLayerProps>`
   position: relative;
-  height: 2000px;
   width: 100%;
+  height:${(props) => props.height || '1600px'};
+@media (max-width: 1440px) {
+  height:${(props) => props.heightTablet || '2200px'};
+  }
+`;
+export const BackgroundLayer = styled.div<ContactContainerLayerProps>`
+  position: absolute;
+  background-color: #c1dadf;
+  height:${(props) => props.height || '1600px'};
+  width: 100%;
+
+  @media (max-width: 1440px) {
+    height:${(props) => props.heightTablet || '2200px'};
+  }
 `;
 
 export const FormText = styled.p`
-display: block;
-font-family: 'Lato' sans-serif;
-font-size:20px;
-color: white;
-text-align: center;
-width: 40em;
-margin:2em auto auto;
-`;
-
-
-
-export const SimpledLayer = styled.img<React.CSSProperties>`
-  position: relative;
-  margin: 0;
-  margin-top: 0px;
-  top:${(props)  => props.top || "0"};
-  left: 0;
-  height: 200px;
-  width: 100%;
-`;
-
-export const BackgroundLayer = styled.div`
-  position: absolute;
-  background-color: #c1dadf;
-  height: 2000px;
-  width: 100%;
+  display: block;
+  font-family: "Lato" sans-serif;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  width: 31em;
+  margin: 2em auto 0 auto;
 `;
 
 export const ResponsiveFormBox = styled.div`
@@ -45,6 +44,18 @@ export const ResponsiveFormBox = styled.div`
     flex-direction: column;
   }
 `;
+
+export const SimpledLayer = styled.img<React.CSSProperties>`
+  position: relative;
+  margin: 0;
+  margin-top: 0px;
+  top: ${(props) => props.top || "0"};
+  left: 0;
+  height: 200px;
+  width: 100%;
+`;
+
+
 
 export const StyledRelIconContainer = styled.div`
   position: relative;
@@ -58,7 +69,7 @@ export const MainTitle = styled.h1`
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   font-weight: 400;
   font-size: 105px;
-  margin-top: 0.4em;
+  margin-top: 1em;
 
   @media (max-width: 1440px) {
     font-size: 65px;
@@ -71,7 +82,6 @@ export const FormContainer = styled.div`
   justify-content: center;
   padding: 5em 0 0 10em;
   @media (max-width: 1440px) {
-    
     padding: 5em 0 0 0;
   }
 `;

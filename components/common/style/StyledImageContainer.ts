@@ -38,4 +38,17 @@ export const ImageContainer = styled.div<ImageContainerProps>`
       props.imageBoxParams.positioning.tablet?.margin || "30px 0px 0px 0px"};
     top: ${(props) => props.imageBoxParams.positioning.tablet?.top || "0px"};
   }
+  @media (max-width: ${(props) => props.imageBoxParams.breakpoints.breakpoint2 || "975px"}) {
+    height: ${(props) =>
+      props.imageBoxParams.dimensions.mobile?.height || "300px"};
+    width: ${(props) =>
+      props.imageBoxParams.dimensions.mobile?.width || "450px"};
+    min-height: ${(props) =>
+      props.imageBoxParams.dimensions.mobile?.minHeight || "300px"};
+    min-width: ${(props) =>
+      props.imageBoxParams.dimensions.mobile?.minWidth || "450px"};
+    margin: ${(props) =>
+      props.imageBoxParams.positioning.mobile?.margin || "30px 0px 0px 0px"};
+    top: ${(props) => props.imageBoxParams.positioning.mobile?.top || "0px"};
+  }
 `;

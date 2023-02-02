@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const SkillsContainer = styled.div`
+position: relative;
+z-index: 0;
 display:flex;
 flex-direction: row;
 justify-content: space-around;
@@ -35,10 +37,19 @@ font-family: 'Lato', sans-serif;
 font-weight: 400;
 margin: 0;
 font-size: 110px;
-font-weight: 100;
+
+@media (max-width: 975px) {
+  font-size: 80px;
+  }
+
 `;
 
 export const SkillName = styled.h4`
 font-size: 21.6px; 
 margin: 0;
+
+@media (max-width: 975px) {
+  font-size: 15px;
+  }
+
 `;

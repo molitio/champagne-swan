@@ -28,7 +28,6 @@ export const RotatedServicesLayer = styled.img`
 `;
 
 export const ServicesStyledImg = styled.div`
-/* position:relative; */
   background: url(https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/window.jpg);
   background-size: cover;
   background-position: center;

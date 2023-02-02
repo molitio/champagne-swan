@@ -1,8 +1,7 @@
 import React from "react";
-import HeroSegmentContent from "./HeroSegmentContent";
 import { ChampagneSwanContext } from "../context";
-import { IconGoldGroup } from "../common/IconGroups";
-import Link from "next/link";
+import { SimpledLayer } from "./style";
+
 import {
   StyledLayerSegment,
   RotatedLayer,
@@ -36,7 +35,7 @@ const ContactPageHero: React.FC = () => {
         {!navBarExpanded ? (
           <StyledHeroSegmentContainer>
             <MainTitle>{"KAPCSOLAT"}</MainTitle>
-            <FormText>{`Írjon Nekünk az alábbi kapcsolati űrlapon keresztül vagy vegye fel velünk a kapcsolatot az alábbi elérhetőségek egyikén!`}</FormText>
+            <FormText>{content}</FormText>
           </StyledHeroSegmentContainer>
         ) : null}
       </StyledLayerSegment>

@@ -1,24 +1,31 @@
-import { type } from "os";
+import React from "react";
 import styled from "styled-components";
+import 'typeface-lato';
 
-export const OpinionsMainContainer = styled.div`
+type OpinionsMainContainerProps = {
+  height?: string;
+  tabletHeight?: string;
+};
+
+export const OpinionsMainContainer = styled.div<OpinionsMainContainerProps>`
   position: relative;
-  height: 1300px;
-
+  height: ${(props) => props.height || '1300px'};
+  
   @media (max-width: 1440px) {
-    height: 1600px;
+    height: ${(props) => props.tabletHeight || '1600px'};
   }
 `;
 
 export const StyledOpinionsIconContainer = styled.div`
   position: relative;
-  padding-top: 6em;
-  padding-bottom: 3em;
+  /* padding-top: 6em; */
+  /* padding-bottom: 3em; */
 `;
 
 export const StyledLayer = styled.img`
   position: absolute;
-  height: 400px;
+  top: -400px;
+  height: 800px;
   margin: 0;
   padding: 0;
   left: 0;
@@ -32,9 +39,10 @@ export const StyledMiddleLayer = styled.div`
   top: 400px;
   width: 100%;
   background: #c1dadf;
-
+  
   @media (max-width: 1440px) {
-    height: 834x;
+    top: 400px;
+    height: 536px;
   }
 `;
 export const AboutStyledMiddleLayer = styled.div`
@@ -50,6 +58,7 @@ export const AboutStyledMiddleLayer = styled.div`
 
 type RotateLayer = {
   top?: string;
+  tabletTop?: string;
   position?: string;
 };
 
@@ -63,6 +72,10 @@ export const RotateLayer = styled.img<RotateLayer>`
   width: 100%;
   align-items: center;
   transform: rotate(180deg);
+  
+  @media (max-width: 1440px) {
+      top: ${(props) => props.tabletTop || "936px"};
+  }
 `;
 
 type MainOpinionsTitleProps = {
@@ -83,6 +96,10 @@ export const MainOpinionsTitle = styled.h1<MainOpinionsTitleProps>`
 
   @media (max-width: 1440px) {
     font-size: 65px;
+  }
+  @media (max-width: 975px) {
+    margin: auto;
+   width:10em;
   }
 `;
 
@@ -127,7 +144,7 @@ export const ServiceEvaluatorContainerText = styled.p<ServiceEvaluatorProps>`
   font-family: "Lato", sans-serif;
   font-style: italic;
   font-weight: 300;
-  text-align: center;
+   text-align:center;
   font-size: 25px;
   margin-bottom: 30px;
 `;

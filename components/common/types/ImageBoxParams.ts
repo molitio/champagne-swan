@@ -25,6 +25,10 @@ export type ImageBoxParams = {
       top?: string;
       margin?: string;
     },
+    mobile?:{
+      top?: string;
+      margin?: string;
+    }
   };
   breakpoints: {
     breakpoint1?: string;
