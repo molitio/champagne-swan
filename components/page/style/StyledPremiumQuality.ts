@@ -158,7 +158,7 @@ export const AboutQuote = styled.p`
   }
     @media (max-width: 665px) {
       font-size: 17px;
-   width: 17em;
+      width: 17em;
   }
 `;
 export const AboutQuoteAuthor = styled.p`
