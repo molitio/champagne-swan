@@ -13,6 +13,10 @@ export const ContactContainer = styled.div<ContactContainerLayerProps>`
 @media (max-width: 1440px) {
   height:${(props) => props.heightTablet || '2200px'};
   }
+
+  @media (max-width: 665px) {
+    height:${(props) => props.heightTablet || '2000px'};
+  }
 `;
 export const BackgroundLayer = styled.div<ContactContainerLayerProps>`
   position: absolute;
@@ -22,6 +26,9 @@ export const BackgroundLayer = styled.div<ContactContainerLayerProps>`
 
   @media (max-width: 1440px) {
     height:${(props) => props.heightTablet || '2200px'};
+  }
+  @media (max-width: 665px) {
+    height:${(props) => props.heightTablet || '2000px'};
   }
 `;
 
@@ -33,6 +40,10 @@ export const FormText = styled.p`
   text-align: center;
   width: 31em;
   margin: 2em auto 0 auto;
+  @media (max-width: 660px) {
+        width: 15em;
+    font-size: 20px;
+  }
 `;
 
 export const ResponsiveFormBox = styled.div`
@@ -41,7 +52,7 @@ export const ResponsiveFormBox = styled.div`
   justify-content: center;
 
   @media (max-width: 1440px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 `;
 
@@ -74,6 +85,9 @@ export const MainTitle = styled.h1`
   @media (max-width: 1440px) {
     font-size: 65px;
   }
+  @media (max-width: 665px) {
+    font-size: 45px;
+  }
 `;
 
 export const FormContainer = styled.div`
@@ -84,7 +98,7 @@ export const FormContainer = styled.div`
   @media (max-width: 1440px) {
     padding: 5em 0 0 0;
   }
-`;
+  `;
 
 export const ContactInfoContainer = styled.div`
   position: relative;
@@ -92,6 +106,11 @@ export const ContactInfoContainer = styled.div`
   padding: 5em;
   color: white;
   line-height: 1.6;
+  
+  @media (max-width: 665px) {
+    padding: 5em 0 0 0;
+  }
+
 `;
 
 export const ContactInfo = styled.p`
@@ -99,6 +118,10 @@ export const ContactInfo = styled.p`
   font-family: "Tenor Sans", sans-serif;
   font-weight: 200;
   text-shadow: 0px 2px 4px #8c7b6c;
+
+    @media (max-width: 665px) {
+  font-size:2em;
+  }
 `;
 
 export const StyledLogoImage = styled.img`

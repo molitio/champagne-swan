@@ -31,7 +31,7 @@ export const PremiumQualityBackgroundLayerContainer = styled.div`
   background-size: cover;
   background: #c1dadf;
   height: 1500px;
-  
+
   @media (max-width: 1440px) {
     height: 1750px;
   }
@@ -51,23 +51,24 @@ export const AboutPQBackgroundLayerContainer = styled.div`
   height: 1905px;
 
   @media (max-width: 1440px) {
-    height: 2476px;
-  }
-  
-  @media (max-width: 975px) {
-    height: 2500px;
-  }
-  @media (max-width: 900px) {
-    height: 2650px;
+    height: 2356px;
   }
 
+  @media (max-width: 975px) {
+    height: 2739px;
+  }
+  @media (max-width: 900px) {
+    height: 2900px;
+  }
+  @media (max-width: 665px) {
+    height: 2358px;
+  }
 `;
 
 export const StyledPremiumQualityIconContainer = styled.div`
   padding-top: 6em;
-  
+
   @media (max-width: 975px) {
-  
   }
 `;
 
@@ -78,13 +79,17 @@ export const PremiumQualityContentTitle = styled.h1`
   font-size: 105px;
   opacity: 0.5;
   margin-top: 0.6em;
-
+  
   @media (max-width: 1440px) {
     font-size: 67px;
     margin-bottom: 20px;
   }
   @media (max-width: 975px) {
-  font-size: 50px;
+    font-size: 50px;
+  }
+  @media (max-width: 665px) {
+    margin-top: 1em;
+    font-size: 32px;
   }
 `;
 
@@ -111,15 +116,33 @@ export const AboutPremiumQualityTitle = styled.h1`
   opacity: 0.5;
 
   @media (max-width: 1440px) {
-    font-size: 67px;
+    font-size: 60px;
     margin-bottom: 20px;
   }
+  @media (max-width: 665px) {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+
+
 `;
 
 export const AboutQuoteContainer = styled.div`
   width: 54em;
   display: block;
   margin: 0 auto 3em auto;
+
+  @media (max-width: 1440px) {
+  width: 30em;
+  }
+  @media (max-width: 665px) {
+  width: 25em;
+  }
+
+  @media (max-width: 436px) {
+  width: 20em;
+  }
+
 `;
 export const AboutQuote = styled.p`
   color: #0c7b93;
@@ -128,10 +151,14 @@ export const AboutQuote = styled.p`
   text-align: center;
   font-weight: 300;
   padding: 3em 0 1em 0;
-  @media(max-width: 975px){
+  @media (max-width: 975px) {
     display: block;
     margin: auto;
     width: 20em;
+  }
+    @media (max-width: 665px) {
+      font-size: 17px;
+   width: 17em;
   }
 `;
 export const AboutQuoteAuthor = styled.p`
@@ -140,9 +167,13 @@ export const AboutQuoteAuthor = styled.p`
   text-align: end;
   font-weight: 300;
   padding: 0em 2em 0em 0;
-  @media (max-width: 975px){
+  @media (max-width: 975px) {
+    padding: 0em 2em 0em 0;
+  }
+  @media (max-width: 665px) {
+        padding: 0em 3em 0em 0;
+      font-size: 17px;
     
-    padding: 0em 10em 0em 0;
   }
 `;
 export const AboutTextPQualityContent = styled.p`
@@ -165,7 +196,12 @@ export const PremiumQualityContentBox = styled.div`
     height: 1750px;
     margin: 150px 0px 0 0;
   }
-  `;
+  @media (max-width: 1440px) {
+    text-align: center;
+    min-width: 350px;
+    width: 350px;
+  }
+`;
 
 export const PremiumQualityContentBoxTitle = styled.h1`
   text-align: initial;
@@ -175,12 +211,15 @@ export const PremiumQualityContentBoxTitle = styled.h1`
   font-size: 35px;
   margin-top: 0;
   margin-bottom: 55px;
-  
+
   @media (max-width: 975px) {
-    display :block ;
+    display: block;
     margin: auto;
-    text-align:center;
-   width:10em ;
+    text-align: center;
+    width: 10em;
+  }
+  @media (max-width: 665px) {
+    font-size: 30px;
   }
 `;
 
@@ -190,6 +229,8 @@ type PremiumQuality = {
   tabletFontSize?: string;
   tabletWidth?: string;
   mobileWidth?: string;
+  smallMobileWidth?: string;
+  smallMobileFonsize?:string;
 };
 
 export const PremiumQualityContentBoxText = styled.p<PremiumQuality>`
@@ -200,12 +241,15 @@ export const PremiumQualityContentBoxText = styled.p<PremiumQuality>`
   font-weight: 300;
   font-size: ${(props) => props.fontSize || "20px"};
   margin-bottom: 2em;
-  
+
   @media (max-width: 975px) {
     display: block;
-     margin: 2em auto 2em auto;
-    text-align:center;
-    width: 450px;
+    margin: 2em auto 2em auto;
+    text-align: center;
+  }
+
+  @media (max-width: 665px) {
+    width: 350px;
   }
 `;
 export const AboutPremiumQualityContentText = styled.p<PremiumQuality>`
@@ -224,10 +268,13 @@ export const AboutPremiumQualityContentText = styled.p<PremiumQuality>`
     font-size: ${(props) => props.tabletFontSize || "25px"};
     width: ${(props) => props.tabletWidth || ""};
   }
-  @media (max-width: 1440px) {
+  @media (max-width: 975px) {
     width: ${(props) => props.mobileWidth || ""};
   }
-
+  @media (max-width: 665px) {
+    width: ${(props) => props.smallMobileWidth || ""};
+    font-size: ${(props) => props.smallMobileFonsize || ""};
+  }
 
 `;
 
@@ -252,6 +299,12 @@ export const PremiumQualityWaterSplash = styled.img`
     width: 250px;
     height: 250px;
   }
+  @media (max-width: 665px) {
+    bottom: -160px;
+    left: 0px;
+    width: 220px;
+    height: 220px;
+  }
 `;
 export const AboutPremiumQualityWaterSplash = styled.img`
   display: block;
@@ -263,6 +316,10 @@ export const AboutPremiumQualityWaterSplash = styled.img`
   transform: rotate(-15deg);
   top: -140px;
   @media (max-width: 1440px) {
+    top: 0px;
+  }
+  @media (max-width: 655px) {
+    transform: rotate(0deg);
     top: 0px;
   }
 `;

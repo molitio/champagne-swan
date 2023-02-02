@@ -1,21 +1,20 @@
 import styled from "styled-components";
 
-type IconContainerProps ={
-paddingTop?:string;
-tabletPaddingTop?:string;
-mobilePaddingTop?:string;
-}
+type IconContainerProps = {
+  paddingTop?: string;
+  tabletPaddingTop?: string;
+  mobilePaddingTop?: string;
+};
 
 export const StyledIconContainer = styled.div<IconContainerProps>`
-  
-  padding-top:${(props) => props.paddingTop || '10em'} ;
+  padding-top: ${(props) => props.paddingTop || "10em"};
   padding-bottom: 3em;
-  
+
   @media (max-width: 1440px) {
-    padding-top:${(props) => props.tabletPaddingTop || '26em'} ;
+    padding-top: ${(props) => props.tabletPaddingTop || "26em"};
   }
   @media (max-width: 975px) {
-    padding-top:${(props) => props.mobilePaddingTop || '26em'} ;
+    padding-top: ${(props) => props.mobilePaddingTop || "26em"};
   }
 `;
 
@@ -23,6 +22,7 @@ type ServicesMainContainerProps = {
   height?: string;
   tabletHeight?: string;
   mobileHeight?: string;
+  smallMobileHeight?: string;
 };
 
 export const ServicesMainContainer = styled.div<ServicesMainContainerProps>`
@@ -43,6 +43,9 @@ export const ServicesMainContainer = styled.div<ServicesMainContainerProps>`
   @media (max-width: 975px) {
     height: ${(props) => props.mobileHeight || "3350px"};
   }
+  @media (max-width: 665px) {
+    height: ${(props) => props.smallMobileHeight || "3350px"};
+  }
 `;
 
 export const ServicesMainTitle = styled.h1`
@@ -62,6 +65,10 @@ export const ServicesMainTitle = styled.h1`
   @media (max-width: 975px) {
     font-size: 50px;
   }
+
+  @media (max-width: 660px) {
+    font-size: 30px;
+  }
 `;
 
 type WaterSplashProp = {
@@ -70,10 +77,13 @@ type WaterSplashProp = {
   left?: string;
   leftTablet?: string;
   leftMobile?: string;
+  leftSmallMobile?: string;
   rightTablet?: string;
   rightMobile?: string;
+  rightSmallMobile?: string;
   bottomTablet?: string;
   bottomMobile?: string;
+  bottomSmallMobile?: string;
 };
 
 export const WaterSplash = styled.img<WaterSplashProp>`
@@ -86,7 +96,7 @@ export const WaterSplash = styled.img<WaterSplashProp>`
   object-fit: cover;
   bottom: ${(props) => props.bottom || "270px"};
   right: ${(props) => props.right || "490px"};
-  
+
   @media (max-width: 1440px) {
     bottom: ${(props) => props.bottomTablet || "150px"};
     right: ${(props) => props.rightTablet || "200px"};
@@ -97,8 +107,13 @@ export const WaterSplash = styled.img<WaterSplashProp>`
     bottom: ${(props) => props.bottomMobile || "130px"};
     right: ${(props) => props.rightMobile || "160px"};
   }
- 
-`;
+  @media (max-width: 665px) {
+    width: 230px;
+    height: 230px;
+    bottom: ${(props) => props.bottomSmallMobile || "100px"};
+    right: ${(props) => props.rightSmallMobile || "0px"};
+  }
+  `;
 
 export const RightSideWaterSplash = styled.img<WaterSplashProp>`
   display: block;
@@ -110,17 +125,23 @@ export const RightSideWaterSplash = styled.img<WaterSplashProp>`
   transform: rotate(-15deg);
   bottom: ${(props) => props.bottom || "220px"};
   left: ${(props) => props.left || "505px"};
-
+  
   @media (max-width: 1440px) {
     bottom: ${(props) => props.bottomTablet || "160px"};
     left: ${(props) => props.leftTablet || "225px"};
   }
-
-@media (max-width: 975px) {
+  
+  @media (max-width: 975px) {
     width: 230px;
     height: 230px;
     bottom: ${(props) => props.bottomMobile || "130px"};
     left: ${(props) => props.leftMobile || "170px"};
+  }
+  @media (max-width: 665px) {
+    width: 230px;
+    height: 230px;
+    bottom: ${(props) => props.bottomSmallMobile || "100px"};
+    left: ${(props) => props.leftSmallMobile || "0px"};
   }
 `;
 
@@ -151,19 +172,26 @@ export const BottomWaterSplash = styled.img<WaterSplashProp>`
     bottom: ${(props) => props.bottomMobile || "130px"};
     right: ${(props) => props.rightMobile || "165px"};
   }
-  
-  `;
+  @media (max-width: 665px) {
+    width: 230px;
+    height: 230px;
+    bottom: ${(props) => props.bottomSmallMobile || "100px"};
+    right: ${(props) => props.rightSmallMobile || "0px"};
+    transform: scaleX(-1) rotate(-15deg);
+  }
+`;
 
 type InternalContainerProps = {
   tabletTop?: string;
-   mobileTop?: string;
+  mobileTop?: string;
+  smallMobileTop?: string;
 };
 
 export const ReverseInternalContentContainer = styled.div<InternalContainerProps>`
   position: relative;
   display: flex;
   justify-content: center;
-  
+
   @media (max-width: 1440px) {
     align-items: center;
     flex-direction: column-reverse;
@@ -174,13 +202,18 @@ export const ReverseInternalContentContainer = styled.div<InternalContainerProps
     flex-direction: column-reverse;
     top: ${(props) => props.mobileTop};
   }
-  `;
+  @media (max-width: 665px) {
+    top: ${(props) => props.smallMobileTop};
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+`;
 
 export const InternalContentContainer = styled.div<InternalContainerProps>`
   position: relative;
   display: flex;
   justify-content: center;
-  
+
   @media (max-width: 1440px) {
     top: ${(props) => props.tabletTop};
     align-items: center;
@@ -191,9 +224,12 @@ export const InternalContentContainer = styled.div<InternalContainerProps>`
     align-items: center;
     flex-direction: column;
   }
-
-
-  `;
+  @media (max-width: 665px) {
+    top: ${(props) => props.smallMobileTop};
+    align-items: center;
+    flex-direction: column;
+  }
+`;
 
 export const ContentBox = styled.div`
   height: 353px;
@@ -201,23 +237,27 @@ export const ContentBox = styled.div`
   width: 529px;
   min-width: 529px;
   margin: 30px 25px 110px 25px;
-  
+
   @media (max-width: 975px) {
     width: 450px;
     min-width: 450px;
-   
   }
-  
-  `;
+
+  @media (max-width: 645px) {
+    width: 350px;
+    min-width: 350px;
+    margin: 30px auto 110px auto;
+  }
+`;
 
 export const ContactLink = styled.a`
   font-size: 20px;
   color: #c1a87d;
   text-decoration: underline;
-  
+
   @media (max-width: 975px) {
     position: relative;
-    top:30px;
+    top: 30px;
     left: 30px;
   }
 `;
@@ -230,12 +270,17 @@ export const ContentBoxTitle = styled.h1`
   font-size: 35px;
   margin-top: 0;
   margin-bottom: 55px;
-  
+
   @media (max-width: 1440px) {
     display: block;
     margin: 0 auto 55px auto;
     text-align: center;
     width: 450px;
+  }
+
+  @media (max-width: 665px) {
+    width: 300px;
+    font-size: 25px;
   }
 `;
 
@@ -256,6 +301,7 @@ type ContentBoxTextProps = {
   paddingTablet?: string;
   breakpoint1?: string;
   breakpoint2?: string;
+  breakpoint3?: string;
 };
 
 export const ContentBoxText = styled.p<ContentBoxTextProps>`
@@ -278,13 +324,15 @@ export const ContentBoxText = styled.p<ContentBoxTextProps>`
     display: ${(props) => props.displayTablet};
   }
   @media (max-width: ${(props) => props.breakpoint2 || "975px"}) {
-   display: ${(props) => props.displayMobile || 'block'};
-   text-align: center;
-   margin: auto;
-   width: 450px;
+    display: ${(props) => props.displayMobile || "block"};
+    text-align: center;
+    margin: auto;
+    width: 450px;
   }
 
-
+  @media (max-width: 665px) {
+    width: 350px;
+  }
 `;
 
 export const ExternalContentContainer = styled.div`

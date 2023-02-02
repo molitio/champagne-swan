@@ -17,6 +17,12 @@ export type ImageBoxParams = {
       minHeight?: string;
       minWidth?: string;
     };
+    mobileSmall?:{
+      height?: string;
+      width?: string;
+      minHeight?: string;
+      minWidth?: string;
+    }
   };
   positioning: {
     top?: string;
@@ -28,10 +34,15 @@ export type ImageBoxParams = {
     mobile?:{
       top?: string;
       margin?: string;
+    },
+    mobileSmall?:{
+      top?: string;
+      margin?: string;
     }
   };
   breakpoints: {
     breakpoint1?: string;
     breakpoint2?: string;
+    breakpoint3?: string;
   };
 };

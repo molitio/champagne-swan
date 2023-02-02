@@ -51,4 +51,18 @@ export const ImageContainer = styled.div<ImageContainerProps>`
       props.imageBoxParams.positioning.mobile?.margin || "30px 0px 0px 0px"};
     top: ${(props) => props.imageBoxParams.positioning.mobile?.top || "0px"};
   }
+  @media (max-width: ${(props) => props.imageBoxParams.breakpoints.breakpoint3 || "665px"}) {
+    height: ${(props) =>
+      props.imageBoxParams.dimensions.mobileSmall?.height || "219px"};
+    width: ${(props) =>
+      props.imageBoxParams.dimensions.mobileSmall?.width || "328px"};
+    min-height: ${(props) =>
+      props.imageBoxParams.dimensions.mobileSmall?.minHeight || "219px"};
+    min-width: ${(props) =>
+      props.imageBoxParams.dimensions.mobileSmall?.minWidth || "328px"};
+    margin: ${(props) =>
+      props.imageBoxParams.positioning.mobileSmall?.margin || "30px 0px 0px 0px"};
+    top: ${(props) => props.imageBoxParams.positioning.mobileSmall?.top || "0px"};
+    margin-top: 70px;
+  }
 `;

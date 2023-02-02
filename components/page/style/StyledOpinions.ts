@@ -1,25 +1,27 @@
 import React from "react";
 import styled from "styled-components";
-import 'typeface-lato';
+import "typeface-lato";
 
 type OpinionsMainContainerProps = {
   height?: string;
   tabletHeight?: string;
+  mobileHeight?: string;
 };
 
 export const OpinionsMainContainer = styled.div<OpinionsMainContainerProps>`
   position: relative;
-  height: ${(props) => props.height || '1300px'};
-  
+  height: ${(props) => props.height || "1300px"};
+
   @media (max-width: 1440px) {
-    height: ${(props) => props.tabletHeight || '1600px'};
+    height: ${(props) => props.tabletHeight || "1600px"};
+  }
+  @media (max-width: 665px) {
+    height: ${(props) => props.mobileHeight || "1600px"};
   }
 `;
 
 export const StyledOpinionsIconContainer = styled.div`
   position: relative;
-  /* padding-top: 6em; */
-  /* padding-bottom: 3em; */
 `;
 
 export const StyledLayer = styled.img`
@@ -39,7 +41,7 @@ export const StyledMiddleLayer = styled.div`
   top: 400px;
   width: 100%;
   background: #c1dadf;
-  
+
   @media (max-width: 1440px) {
     top: 400px;
     height: 536px;
@@ -72,9 +74,9 @@ export const RotateLayer = styled.img<RotateLayer>`
   width: 100%;
   align-items: center;
   transform: rotate(180deg);
-  
+
   @media (max-width: 1440px) {
-      top: ${(props) => props.tabletTop || "936px"};
+    top: ${(props) => props.tabletTop || "936px"};
   }
 `;
 
@@ -99,7 +101,12 @@ export const MainOpinionsTitle = styled.h1<MainOpinionsTitleProps>`
   }
   @media (max-width: 975px) {
     margin: auto;
-   width:10em;
+    width: 10em;
+  }
+  @media (max-width: 665px) {
+    padding-top: 60px;
+    font-size: 40px;
+    width: 8em;
   }
 `;
 
@@ -120,6 +127,11 @@ export const ServiceEvaluatorContainer = styled.div`
   justify-content: center;
   margin-right: 100px;
   margin-left: 100px;
+
+  @media (max-width: 665px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
 `;
 
 export const ServiceEvaluatorContainerImage = styled.img`
@@ -144,9 +156,14 @@ export const ServiceEvaluatorContainerText = styled.p<ServiceEvaluatorProps>`
   font-family: "Lato", sans-serif;
   font-style: italic;
   font-weight: 300;
-   text-align:center;
+  text-align: center;
   font-size: 25px;
   margin-bottom: 30px;
+
+  @media (max-width: 665px) {
+    font-size: 18px;
+    width: 300px;
+  }
 `;
 type ServiceEvaluatorName = {
   color?: string;
@@ -158,7 +175,7 @@ export const ServiceEvaluatorContainerName = styled.p<ServiceEvaluatorName>`
   font-family: "Lato" sans-serif;
   font-weight: 100;
   font-size: 30px;
-  `;
+`;
 
 export const StyledOpininsLogoImage = styled.img`
   position: relative;

@@ -15,7 +15,6 @@ type StyledProps = {
 export const StyledMainTitle = styled.h1<StyledProps>`
   position: relative;
   text-align: center;
-  font-size: 3.6rem;
   margin: 30px 30px 0 30px;
   font-style: normal;
   font-weight: 200;
@@ -23,27 +22,27 @@ export const StyledMainTitle = styled.h1<StyledProps>`
   line-height: 78px;
   color: ${(props) => props.color || " #ffffff"};
   text-shadow: 1px 3px 5px #000000;
-  
+
   @media (max-width: 1400px) {
     font-size: 3.2rem;
   }
-
+  
   @media (max-width: 975px) {
-  display: block;
-  margin:30px auto 30px auto;
+    display: block;
+    margin: 30px auto 30px auto;
     width: 12em;
   }
-
-  @media (max-width: 400px) {
-    margin-bottom: 0em;
-  }
-
-
-  @media (max-width: 280px) {
-    font-size: 1.6rem;
+  
+  @media (max-width: 660px) {
+    display: block;
+    margin: 30px auto 30px auto; 
+    font-size: 2.5rem;
     width: 8em;
+    line-height: 50px;
   }
-`;
+  
+  `;
+
 export const StyledSecondaryTitle = styled.h1<StyledProps>`
   position: relative;
   text-align: center;
@@ -54,21 +53,27 @@ export const StyledSecondaryTitle = styled.h1<StyledProps>`
   font-size: 60px;
   line-height: 78px;
   color: ${(props) => props.color || " #ffffff"};
-
+  text-shadow: 2px 4px 8px #000000;
+  
   @media (max-width: 1400px) {
     font-size: 3.2rem;
   }
-
+  
   @media (max-width: 975px) {
     margin: auto;
-   width:10em;
+    width: 10em;
+  }
+  
+  @media (max-width: 660px) {
+    display: block;
+    margin: 30px auto 30px auto; 
+    font-size: 2.5rem;
+    width: 8em;
+    line-height: 50px;
   }
 
-  @media (max-width: 400px) {
-    margin-bottom: 0em;
-  }
-  text-shadow: 2px 4px 8px #000000;
-
+  
+  
   @media (max-width: 280px) {
     font-size: 1.6rem;
     width: 8em;
@@ -78,7 +83,7 @@ export const StyledSecondaryTitle = styled.h1<StyledProps>`
 export const StyledDescription = styled.p<StyledProps>`
   width: 36em;
   font-style: normal;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 24px;
   color: ${(props) => props.color || " #ffffff"};
@@ -94,4 +99,11 @@ export const StyledDescription = styled.p<StyledProps>`
     font-size: 28px;
     width: 16em;
   }
+
+  @media (max-width: 660px) {
+    font-size: 21px;
+    width: 16.5em;
+    padding:0 ;
+  }
+
 `;

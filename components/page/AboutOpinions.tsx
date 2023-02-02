@@ -13,7 +13,7 @@ import {
 const AboutOpinions: React.FC = () => {
   return (
     <>
-      <OpinionsMainContainer tabletHeight={'600px'} height={'600px'}>
+      <OpinionsMainContainer tabletHeight={'600px'} height={'600px'} mobileHeight={'600px'}>
         <MainOpinionsTitle
           padding={"1em 0 0.3em 0"}
           color={"#C1A87D"}

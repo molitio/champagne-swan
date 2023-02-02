@@ -17,7 +17,7 @@ import {
 
 const Opinions: React.FC = () => {
   return (
-    <OpinionsMainContainer>
+    <OpinionsMainContainer mobileHeight={"1400px"}>
       <StyledLayer
         src={
           "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_bottom.png"

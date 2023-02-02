@@ -53,7 +53,7 @@ const SecondaryHomePageContent: React.FC = () => {
           </PremiumQualityContentBoxText>
 
           <Link key={navTree.about.path} href={navTree.about.path}>
-            <PremiumQualityContactLink className="hiro-content">{`Bővebben`}</PremiumQualityContactLink>
+            <PremiumQualityContactLink>{`Bővebben`}</PremiumQualityContactLink>
           </Link>
         </PremiumQualityContentBox>
         <ImageBox

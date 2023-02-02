@@ -5,7 +5,7 @@ type StyledInputProps = {
   position?: string;
   margin?: string;
   height?: string;
-  width?: string;
+  width?: string | number;
   minHeight?: string;
   minWidth?: string;
   border?: string;
@@ -31,6 +31,10 @@ export const StyledField = styled(Field)<StyledInputProps>`
   :focus {
     outline: none !important;
   }
+
+    @media (max-width: 665px) {
+    width: 320px;
+  }
 `;
 
 export const SyledInput = styled.input<StyledInputProps>`
@@ -48,6 +52,10 @@ export const SyledInput = styled.input<StyledInputProps>`
 
   :focus {
     outline: none !important;
+  }
+
+  @media (max-width: 665px) {
+    width: 320px;
   }
 `;
 
@@ -68,6 +76,9 @@ export const SyledTextArea = styled.textarea<StyledInputProps>`
   :focus {
     outline: none !important;
   }
+   @media (max-width: 665px) {
+    width: 320px;
+  }
 `;
 export const SyledSelectInput = styled.select<StyledInputProps>`
   position: ${(props) => props.position || "relative"};
@@ -84,5 +95,8 @@ export const SyledSelectInput = styled.select<StyledInputProps>`
 
   :focus {
     outline: none !important;
+  }
+   @media (max-width: 665px) {
+    width: 320px;
   }
 `;
