@@ -51,7 +51,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/smoothscroll-polyfill", "npm:0.3.1"],\
             ["@types/styled-components", "npm:5.1.26"],\
             ["@types/uuid", "npm:9.0.0"],\
-            ["@types/yup", "npm:0.32.0"],\
             ["device-detector-js", "npm:3.0.3"],\
             ["dotenv", "npm:16.0.3"],\
             ["eslint", "npm:8.22.0"],\
@@ -731,7 +730,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/smoothscroll-polyfill", "npm:0.3.1"],\
             ["@types/styled-components", "npm:5.1.26"],\
             ["@types/uuid", "npm:9.0.0"],\
-            ["@types/yup", "npm:0.32.0"],\
             ["device-detector-js", "npm:3.0.3"],\
             ["dotenv", "npm:16.0.3"],\
             ["eslint", "npm:8.22.0"],\
@@ -1690,16 +1688,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-uuid-npm-9.0.0-979023c16f-59ae56d954.zip/node_modules/@types/uuid/",\
           "packageDependencies": [\
             ["@types/uuid", "npm:9.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@types/yup", [\
-        ["npm:0.32.0", {\
-          "packageLocation": "./.yarn/cache/@types-yup-npm-0.32.0-e4c93584ed-5b30f1118b.zip/node_modules/@types/yup/",\
-          "packageDependencies": [\
-            ["@types/yup", "npm:0.32.0"],\
-            ["yup", "npm:0.32.11"]\
           ],\
           "linkType": "HARD"\
         }]\
