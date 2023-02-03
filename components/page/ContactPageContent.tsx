@@ -15,8 +15,8 @@ import {ContactForm} from "../common";
 const ContactPageContent: React.FC = () => {
   return (
     <ContactContainer
-    height={"1200px"} 
     heightTablet={"1900px"} 
+    height={"1200px"} 
     >
       <BackgroundLayer
          height={"1200px"} 
