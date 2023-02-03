@@ -17,7 +17,6 @@ import {
   OpenLinksButton,
   StyledLogoPng,
 } from "./style";
-import { signIn } from "../utils";
 
 const NavBar: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
@@ -75,7 +74,6 @@ const NavBar: React.FC = () => {
             </OpenLinksButtonContainer>
           </RightContainer>
         </NavBarInnerContainer>
-        <button onClick={signIn}>Login</button>
         <NavBarExtendedContainer>
           {navBarExpanded ?? navTree
             ? Object.keys(navTree).map((branch) => (

@@ -63,6 +63,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next-videos", "npm:1.5.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:18.2.0"],\
+            ["react-firebase-hooks", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.1.1"],\
             ["react-icons", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:4.7.1"],\
             ["react-is", "npm:18.2.0"],\
             ["sass", "npm:1.56.1"],\
@@ -1773,6 +1774,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next-videos", "npm:1.5.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:18.2.0"],\
+            ["react-firebase-hooks", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.1.1"],\
             ["react-icons", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:4.7.1"],\
             ["react-is", "npm:18.2.0"],\
             ["sass", "npm:1.56.1"],\
@@ -7041,6 +7043,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/react-fast-compare-npm-2.0.4-ab3f6356e2-06046595f9.zip/node_modules/react-fast-compare/",\
           "packageDependencies": [\
             ["react-fast-compare", "npm:2.0.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-firebase-hooks", [\
+        ["npm:5.1.1", {\
+          "packageLocation": "./.yarn/cache/react-firebase-hooks-npm-5.1.1-a1335e328c-f7dbc42202.zip/node_modules/react-firebase-hooks/",\
+          "packageDependencies": [\
+            ["react-firebase-hooks", "npm:5.1.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.1.1", {\
+          "packageLocation": "./.yarn/__virtual__/react-firebase-hooks-virtual-377956f2c8/0/cache/react-firebase-hooks-npm-5.1.1-a1335e328c-f7dbc42202.zip/node_modules/react-firebase-hooks/",\
+          "packageDependencies": [\
+            ["react-firebase-hooks", "virtual:f8433bc58cc41498f7dbdf1dd32de78fbd125a0a6a236e916ef6f3b5590fe7ba3cf526ee15f621eaabff7f11c74bc92b963b02b5c347e1c0f6d5224bc48fbc48#npm:5.1.1"],\
+            ["@types/firebase", null],\
+            ["@types/react", "npm:18.0.17"],\
+            ["firebase", "npm:9.16.0"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/firebase",\
+            "@types/react",\
+            "firebase",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
