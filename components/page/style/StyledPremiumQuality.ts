@@ -61,7 +61,7 @@ export const AboutPQBackgroundLayerContainer = styled.div`
     height: 2900px;
   }
   @media (max-width: 665px) {
-    height: 2358px;
+    height: 2258px;
   }
 `;
 
@@ -140,7 +140,7 @@ export const AboutQuoteContainer = styled.div`
   }
 
   @media (max-width: 436px) {
-  width: 20em;
+  width: 18em;
   }
 
 `;
@@ -196,10 +196,10 @@ export const PremiumQualityContentBox = styled.div`
     height: 1750px;
     margin: 150px 0px 0 0;
   }
-  @media (max-width: 1440px) {
+  @media (max-width: 665px) {
     text-align: center;
-    min-width: 350px;
-    width: 350px;
+    min-width: 300px;
+    width: 300px;
   }
 `;
 
@@ -249,7 +249,7 @@ export const PremiumQualityContentBoxText = styled.p<PremiumQuality>`
   }
 
   @media (max-width: 665px) {
-    width: 350px;
+    width: 290px;
   }
 `;
 export const AboutPremiumQualityContentText = styled.p<PremiumQuality>`
@@ -300,7 +300,7 @@ export const PremiumQualityWaterSplash = styled.img`
     height: 250px;
   }
   @media (max-width: 665px) {
-    bottom: -160px;
+    bottom: -130px;
     left: 0px;
     width: 220px;
     height: 220px;

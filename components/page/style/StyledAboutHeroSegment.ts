@@ -8,4 +8,9 @@ export const StyledAboutImg = styled.div`
   background-position: center;
   width: 100%;
   height: 1150px;
+  
+  @media(max-width:665px) {
+    
+    height: 900px;
+  }
 `;

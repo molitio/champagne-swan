@@ -33,7 +33,9 @@ export const ServicesStyledImg = styled.div`
   background-position: center;
   width: 100%;
   height: 1069px;
-
+@media(max-width:665px) {
+  height:969px;
+}
 `;
 
 export const ServicesWaterSplash = styled.img`
@@ -48,10 +50,13 @@ export const ServicesHeroSegmentContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 850px;
-  /* top: 23em; */
   padding-top: 23em;
   position: relative;
   margin-bottom: 10em;
+  @media(max-width:665px ) {
+    
+    padding-top: 18em;
+  }
 `;
 
 export const StyledServicesButtonContainer = styled.div`

@@ -33,7 +33,7 @@ export const StyledField = styled(Field)<StyledInputProps>`
   }
 
     @media (max-width: 665px) {
-    width: 320px;
+    width: 280px;
   }
 `;
 
@@ -55,7 +55,7 @@ export const SyledInput = styled.input<StyledInputProps>`
   }
 
   @media (max-width: 665px) {
-    width: 320px;
+    width: 280px;
   }
 `;
 
@@ -97,6 +97,6 @@ export const SyledSelectInput = styled.select<StyledInputProps>`
     outline: none !important;
   }
    @media (max-width: 665px) {
-    width: 320px;
+    width: 280px;
   }
 `;

@@ -33,10 +33,10 @@ export const StyledMainTitle = styled.h1<StyledProps>`
     width: 12em;
   }
   
-  @media (max-width: 660px) {
+  @media (max-width: 665px) {
     display: block;
     margin: 30px auto 30px auto; 
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     width: 8em;
     line-height: 50px;
   }
@@ -64,10 +64,10 @@ export const StyledSecondaryTitle = styled.h1<StyledProps>`
     width: 10em;
   }
   
-  @media (max-width: 660px) {
+  @media (max-width: 665px) {
     display: block;
     margin: 30px auto 30px auto; 
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     width: 8em;
     line-height: 50px;
   }
@@ -102,7 +102,7 @@ export const StyledDescription = styled.p<StyledProps>`
 
   @media (max-width: 660px) {
     font-size: 21px;
-    width: 16.5em;
+    width: 13em;
     padding:0 ;
   }
 

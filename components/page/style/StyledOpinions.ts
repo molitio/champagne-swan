@@ -104,8 +104,8 @@ export const MainOpinionsTitle = styled.h1<MainOpinionsTitleProps>`
     width: 10em;
   }
   @media (max-width: 665px) {
-    padding-top: 60px;
-    font-size: 40px;
+    padding-top: 150px;
+    font-size: 36px;
     width: 8em;
   }
 `;

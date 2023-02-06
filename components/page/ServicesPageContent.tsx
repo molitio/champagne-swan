@@ -20,7 +20,7 @@ const ServicesPageContent: React.FC = () => {
   return (
     <>
       <ServicesMainContainer
-        smallMobileHeight={"4500px"}
+        smallMobileHeight={"4900px"}
         mobileHeight={"4500px"}
         tabletHeight={"4500px"}
       >
@@ -56,7 +56,7 @@ const ServicesPageContent: React.FC = () => {
                     top: "300px",
                   },
                   mobileSmall: {
-                    top: "420px",
+                    top: "570px",
                   },
                 },
                 breakpoints: {
@@ -103,7 +103,7 @@ const ServicesPageContent: React.FC = () => {
             rightTablet={"220px"}
             rightMobile={"170px"}
             bottomMobile={"-170px"}
-            bottomSmallMobile={"-300px"}
+            bottomSmallMobile={"-470px"}
             src={
               "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png"
             }
@@ -112,9 +112,9 @@ const ServicesPageContent: React.FC = () => {
 
         <ExternalContentContainer>
           <InternalContentContainer
-            smallMobileTop={"380px"}
             tabletTop={"200px"}
             mobileTop={"250px"}
+            smallMobileTop={"550px"}
           >
             <ContentBox>
               <ContentBoxTitle>{`Magánszemélyeknél végzett takarítás`}</ContentBoxTitle>
@@ -152,7 +152,7 @@ const ServicesPageContent: React.FC = () => {
                     top: "300px",
                   },
                   mobileSmall: {
-                    top: "420px",
+                    top: "570px",
                   },
                 },
                 breakpoints: {
@@ -177,7 +177,7 @@ const ServicesPageContent: React.FC = () => {
             bottom={"380px"}
             bottomTablet={"-250px"}
             bottomMobile={"-420px"}
-            bottomSmallMobile={"-670px"}
+            bottomSmallMobile={"-1020px"}
             leftSmallMobile={"0px"}
        
             src={
@@ -189,7 +189,7 @@ const ServicesPageContent: React.FC = () => {
           <ReverseInternalContentContainer
             tabletTop={"390px"}
             mobileTop={"480px"}
-            smallMobileTop={"730px"}
+            smallMobileTop={"1150px"}
           >
             <ImageBox
               imageBoxParams={{
@@ -251,7 +251,7 @@ const ServicesPageContent: React.FC = () => {
             bottom={"380px"}
             bottomTablet={"-470px"}
             bottomMobile={"-660px"}
-            bottomSmallMobile={"-1020px"}
+            bottomSmallMobile={"-1470px"}
             right={""}
             rightTablet={""}
             src={

@@ -3,13 +3,17 @@ import styled from "styled-components";
 export const StyledLayerSegment = styled.div``;
 
 export const SimpledHeroLayer = styled.img`
-   position: absolute;
- margin: 0; 
+  position: absolute;
+  margin: 0;
   margin-top: 0px;
   top: 0;
   left: 0;
   width: 100%;
   height: 1150px;
+
+  @media (max-width: 665px) {
+    height: 900px;
+  }
 `;
 
 export const RotatedLayer = styled.img`
@@ -21,32 +25,40 @@ export const RotatedLayer = styled.img`
   left: 0;
   width: 100%;
   height: 634px;
+
+  @media (max-width: 665px) {
+    height: 364px;
+  }
 `;
 
 export const StyledImg = styled.div`
-position: relative;
+  position: relative;
   object-fit: fill;
   background: url(https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/hero.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
   height: 1169px;
- 
   z-index: -1;
+  @media (max-width: 665px) {
+    height: 900px;
+  }
 `;
 
 export const ContactStyledImg = styled.div`
-
   object-fit: fill;
   background: url(https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/skyscraper.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
   height: 1169px;
+  @media(max-width:665px) {
+    height: 900px;
+  }
 `;
 
 export const HeroWaterSplash = styled.img`
-margin-top: 30px;
+  margin-top: 30px;
   position: absolute;
   width: 250px;
   height: 250px;
@@ -59,6 +71,10 @@ export const StyledHeroSegmentContainer = styled.div`
   min-height: 850px;
   top: 23em;
   position: relative;
+
+  @media (max-width: 665px) {
+    top: 15em;
+  }
 `;
 
 export const HeroContactLink = styled.a`

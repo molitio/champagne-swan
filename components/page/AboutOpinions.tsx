@@ -15,7 +15,7 @@ const AboutOpinions: React.FC = () => {
     <>
       <OpinionsMainContainer tabletHeight={'600px'} height={'600px'} mobileHeight={'600px'}>
         <MainOpinionsTitle
-          padding={"1em 0 0.3em 0"}
+          padding={" 0em 0 0.3em 0"}
           color={"#C1A87D"}
           className="title"
         >

@@ -67,7 +67,7 @@ export const ServicesMainTitle = styled.h1`
   }
 
   @media (max-width: 660px) {
-    font-size: 30px;
+    font-size: 27px;
   }
 `;
 
@@ -244,8 +244,8 @@ export const ContentBox = styled.div`
   }
 
   @media (max-width: 645px) {
-    width: 350px;
-    min-width: 350px;
+    width: 300px;
+    min-width: 30px;
     margin: 30px auto 110px auto;
   }
 `;
@@ -331,7 +331,7 @@ export const ContentBoxText = styled.p<ContentBoxTextProps>`
   }
 
   @media (max-width: 665px) {
-    width: 350px;
+    width: 290px;
   }
 `;
 
