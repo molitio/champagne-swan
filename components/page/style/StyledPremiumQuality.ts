@@ -61,7 +61,7 @@ export const AboutPQBackgroundLayerContainer = styled.div`
     height: 2900px;
   }
   @media (max-width: 665px) {
-    height: 2240px;
+    height: 2230px;
   }
 `;
 
@@ -319,6 +319,8 @@ export const AboutPremiumQualityWaterSplash = styled.img`
     top: 0px;
   }
   @media (max-width: 655px) {
+    height: 270px;
+    width:270px;
     transform: rotate(0deg);
     top: 0px;
   }
