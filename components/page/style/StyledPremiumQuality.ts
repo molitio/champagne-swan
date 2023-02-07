@@ -63,6 +63,9 @@ export const AboutPQBackgroundLayerContainer = styled.div`
   @media (max-width: 665px) {
     height: 2230px;
   }
+  @media (max-width: 400px) {
+    height: 2235px;
+  }
 `;
 
 export const StyledPremiumQualityIconContainer = styled.div`
