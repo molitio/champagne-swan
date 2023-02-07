@@ -34,7 +34,7 @@ export const ServicesStyledImg = styled.div`
   width: 100%;
   height: 1069px;
 @media(max-width:665px) {
-  height:969px;
+  height: 1069px;
 }
 `;
 

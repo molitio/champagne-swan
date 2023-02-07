@@ -12,7 +12,7 @@ export const SimpledHeroLayer = styled.img`
   height: 1150px;
 
   @media (max-width: 665px) {
-    height: 900px;
+    height: 910px;
   }
 `;
 
@@ -27,7 +27,7 @@ export const RotatedLayer = styled.img`
   height: 634px;
 
   @media (max-width: 665px) {
-    height: 364px;
+    height: 363px;
   }
 `;
 
@@ -39,9 +39,8 @@ export const StyledImg = styled.div`
   background-position: center;
   width: 100%;
   height: 1169px;
-  z-index: -1;
   @media (max-width: 665px) {
-    height: 900px;
+    height: 896px;
   }
 `;
 
@@ -53,7 +52,7 @@ export const ContactStyledImg = styled.div`
   width: 100%;
   height: 1169px;
   @media(max-width:665px) {
-    height: 900px;
+    height: 896px;
   }
 `;
 

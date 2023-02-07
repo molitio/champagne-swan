@@ -61,7 +61,7 @@ export const AboutPQBackgroundLayerContainer = styled.div`
     height: 2900px;
   }
   @media (max-width: 665px) {
-    height: 2258px;
+    height: 2240px;
   }
 `;
 
