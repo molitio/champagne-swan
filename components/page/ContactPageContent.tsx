@@ -3,25 +3,25 @@ import { IconGoldGroup } from "../common/IconGroups";
 import {
   ContactContainer,
   BackgroundLayer,
-  StyledRelIconContainer,
   MainTitle,
   FormContainer,
   ContactInfoContainer,
   ContactInfo,
   StyledLogoImage,
   ResponsiveFormBox,
-  FormText
-} from "./style";
+} from "./style/StyledContactPageContent";
 import {ContactForm} from "../common";
 
-const ContactContent: React.FC = () => {
+const ContactPageContent: React.FC = () => {
   return (
-    <ContactContainer>
-      <BackgroundLayer>
-        <IconGoldGroup />
-        <StyledRelIconContainer></StyledRelIconContainer>
-        <MainTitle>{"KAPCSOLAT"}</MainTitle>
-        <FormText>{`Írjon Nekünk az alábbi kapcsolati űrlapon keresztül vagy vegye fel velünk a kapcsolatot az alábbi elérhetőségek egyikén!`}</FormText>
+    <ContactContainer
+    heightTablet={"1900px"} 
+    height={"1200px"} 
+    >
+      <BackgroundLayer
+         height={"1200px"} 
+         heightTablet={"1900px"}
+      >
       <ResponsiveFormBox>
         <ContactInfoContainer>
           <ContactInfo>
@@ -37,7 +37,7 @@ const ContactContent: React.FC = () => {
           <ContactInfo>
             {`Cím:`}
             <br />
-            {` 1134. Budapest,`}
+            {` 1134 Budapest,`}
             <br />
             {`Lehel utca 11.`}
           </ContactInfo>
@@ -55,5 +55,5 @@ const ContactContent: React.FC = () => {
   );
 };
 
-export default ContactContent;
+export default ContactPageContent;
 

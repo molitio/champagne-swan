@@ -1,5 +1,4 @@
 import React from "react";
-import { IconGoldGroup } from "../common/IconGroups";
 import {
   StyledCoverContainer,
   StyledCallToAction,
@@ -9,9 +8,9 @@ import {
 } from "./style";
 
 interface HeroSegmentContentProps {
-  title?: string | React.ReactNode;
-  anotherTitle?: string | React.ReactNode;
-  description?: string;
+  title?: string;
+  anotherTitle?: string;
+  description?: string | React.ReactElement;
   callToAction?: React.ReactNode;
  
 };
@@ -22,9 +21,9 @@ const HeroSegmentContent: React.FC<HeroSegmentContentProps> = (props) => {
   return (
     <StyledCoverContainer>
  
-      <StyledMainTitle  className="title">{`${title}`}</StyledMainTitle>
-      <StyledSecondaryTitle  className="title">{`${anotherTitle}`}</StyledSecondaryTitle>
-      <StyledDescription className="hiro-conten">
+      <StyledMainTitle>{`${title}`}</StyledMainTitle>
+      <StyledSecondaryTitle >{`${anotherTitle}`}</StyledSecondaryTitle>
+      <StyledDescription>
         {description}
       </StyledDescription>
       <StyledCallToAction>{callToAction}</StyledCallToAction>

@@ -14,20 +14,30 @@ import {
   StyledButtonContainer,
 } from "./style";
 
+const content = <>Cégünk magas színvonalon kínál takarító szolgáltatást szállodák,irodaházak <br/> 
+és magánszemélyek részére, <br/>
+valamint vállaljuk nagy belmagasságú ipari üzemek, 
+<br/> gyártó csarnokok, raktárak és logisztikai központok speciális takarítását!</>;
+
 const HeroSegment: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
   const navTree = champagneSwanContext.navTree ?? {};
   const navBarExpanded = champagneSwanContext.interactive.navBarExpanded;
 
-  const content = `Cégünk magas színvonalon kínál takarító szolgáltatást szállodák,irodaházak és magánszemélyek részére, valamint vállaljuk nagy belmagasságú ipari üzemek, gyártó csarnokok, raktárak és logisztikai központok speciális takarítását!`;
 
   return (
     <StyledImg>
-      <SimpledHeroLayer
+
+      {!navBarExpanded ? (<SimpledHeroLayer
         src={
           "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_hero.png"
         }
-      />
+      />) : (<SimpledHeroLayer
+        src={
+          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_top.png"
+        }
+      />) }
+
       <RotatedLayer
         src={
           "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_top.png"
@@ -50,7 +60,7 @@ const HeroSegment: React.FC = () => {
               callToAction={
                 <StyledButtonContainer>
                   <Link key={navTree.contact.path} href={navTree.contact.path}>
-                    <HeroContactLink className="hiro-content">
+                    <HeroContactLink>
                       {`Bővebben`}
                     </HeroContactLink>
                   </Link>

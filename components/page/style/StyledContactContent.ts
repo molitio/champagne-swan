@@ -1,8 +1,9 @@
+import React from "react";
 import styled from "styled-components";
 
 export const ContactContainer = styled.div`
   position: relative;
-  height: 2200px;
+  height: 2000px;
   width: 100%;
 `;
 
@@ -14,11 +15,13 @@ width: 40em;
 margin:2em auto auto;
 `;
 
-export const SimpledLayer = styled.img`
+
+
+export const SimpledLayer = styled.img<React.CSSProperties>`
   position: relative;
   margin: 0;
   margin-top: 0px;
-  top: 0;
+  top:${(props)  => props.top || "0"};
   left: 0;
   height: 200px;
   width: 100%;
@@ -27,7 +30,6 @@ export const SimpledLayer = styled.img`
 export const BackgroundLayer = styled.div`
   position: absolute;
   background-color: #c1dadf;
-  top: 200px;
   height: 2000px;
   width: 100%;
 `;

@@ -8,7 +8,7 @@ import {
 
 const SkillsComponent: React.FC = () => {
   return (
-    <SkillsContainer className="hiro-content">
+    <SkillsContainer >
       <SkillInfoContainer>
         <SkillScore>{`50`}</SkillScore>
         <SkillName>{`TAPASZTALT KOLLÉGÁK`}</SkillName>

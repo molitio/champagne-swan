@@ -27,21 +27,21 @@ const AboutPremiumQuality: React.FC = () => {
           floodOpacity={""}
         />
       </StyledPremiumQualityIconContainer>
-      <AboutPremiumQualityTitle className="secondary-title">
-        {"ISMERJEN MEG"}
-      </AboutPremiumQualityTitle>
-      <AboutPremiumQualityTitle className="secondary-title">
-        {"BENNÜNKET"}
-      </AboutPremiumQualityTitle>
+      <AboutPremiumQualityTitle>{"ISMERJEN MEG"}</AboutPremiumQualityTitle>
+      <AboutPremiumQualityTitle>{"BENNÜNKET"}</AboutPremiumQualityTitle>
       <AboutQuoteContainer>
-        <AboutQuote className="text-fahkwang">{`"A minőség azt jelenti, hogy akkor is jól csinálsz valamit amikor nem látják."`}</AboutQuote>
-        <AboutQuoteAuthor className="text-fahkwang">{`Henry Ford`}</AboutQuoteAuthor>
+        <AboutQuote>{`"A minőség azt jelenti, hogy akkor is jól csinálsz valamit amikor nem látják."`}</AboutQuote>
+        <AboutQuoteAuthor>{`Henry Ford`}</AboutQuoteAuthor>
       </AboutQuoteContainer>
       <AboutPremiumQualityContainer>
         <AboutPremiumQualityContentText
-          className="text-fahkwang"
           width={"1150px"}
-          fontSize={"30px"}
+          fontSize={"27px"}
+          tabletWidth={"800px"}
+          tabletFontSize={"25px"}
+          mobileWidth={"400px"}
+          smallMobileFonsize={'18px'}
+          smallMobileWidth={'300px'}
         >
           {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Cras convallis, elit in efficitur tristique, metus metus semper massa, consequat convallis orci diam quis massa. Integer varius laoreet augue sed mollis. Curabitur id scelerisque lacus, non pellentesque tellus. Cras molestie, ligula rutrum convallis placerat, arcu ante sollicitudin elit, pretium interdum sapien tortor nec urna. Cras molestie auctor nisi, nec fringilla nisl vulputate gravida. Suspendisse potenti. Morbi eu posuere leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse quis neque mollis, porta turpis in, fermentum lectus.`}
         </AboutPremiumQualityContentText>
@@ -134,7 +134,8 @@ const AboutPremiumQuality: React.FC = () => {
       />
       <RotateLayer
         position={"relative"}
-        top={"0px"}
+        top={"-20px"}
+        tabletTop={"-13px"}
         src={
           "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_bottom.png"
         }

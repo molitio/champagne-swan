@@ -1,4 +1,3 @@
-import { type } from "os";
 import styled from "styled-components";
 
 export const StyledCoverContainer = styled.div``;
@@ -6,9 +5,7 @@ export const StyledCoverContainer = styled.div``;
 export const StyledCallToAction = styled.div`
   text-align: center;
 `;
-export const IconContainer = styled.div`
-
-`; 
+export const IconContainer = styled.div``;
 
 type StyledProps = {
   color?: string;
@@ -18,32 +15,34 @@ type StyledProps = {
 export const StyledMainTitle = styled.h1<StyledProps>`
   position: relative;
   text-align: center;
-  font-size: 3.6rem;
   margin: 30px 30px 0 30px;
   font-style: normal;
   font-weight: 200;
   font-size: 60px;
   line-height: 78px;
   color: ${(props) => props.color || " #ffffff"};
+  text-shadow: 1px 3px 5px #000000;
 
   @media (max-width: 1400px) {
     font-size: 3.2rem;
   }
-
-  @media (max-width: 645px) {
+  
+  @media (max-width: 975px) {
+    display: block;
+    margin: 30px auto 30px auto;
+    width: 12em;
+  }
+  
+  @media (max-width: 665px) {
+    display: block;
+    margin: 30px auto 30px auto; 
     font-size: 2.25rem;
-  }
-
-  @media (max-width: 400px) {
-    margin-bottom: 0em;
-  }
-  text-shadow: 2px 4px 8px #000000;
-
-  @media (max-width: 280px) {
-    font-size: 1.6rem;
     width: 8em;
+    line-height: 50px;
   }
-`;
+  
+  `;
+
 export const StyledSecondaryTitle = styled.h1<StyledProps>`
   position: relative;
   text-align: center;
@@ -54,30 +53,38 @@ export const StyledSecondaryTitle = styled.h1<StyledProps>`
   font-size: 60px;
   line-height: 78px;
   color: ${(props) => props.color || " #ffffff"};
-
+  text-shadow: 2px 4px 8px #000000;
+  
   @media (max-width: 1400px) {
     font-size: 3.2rem;
   }
-
-  @media (max-width: 645px) {
-    font-size: 2.25rem;
+  
+  @media (max-width: 975px) {
+    margin: auto;
+    width: 10em;
+  }
+  
+  @media (max-width: 665px) {
+    display: block;
+    margin: 30px auto 30px auto; 
+    font-size: 2.1rem;
+    width: 8em;
+    line-height: 50px;
   }
 
-  @media (max-width: 400px) {
-    margin-bottom: 0em;
-  }
-  text-shadow: 2px 4px 8px #000000;
-
+  
+  
   @media (max-width: 280px) {
     font-size: 1.6rem;
     width: 8em;
   }
 `;
 
-export const StyledDescription = styled.h3<StyledProps>`
-  width: 40em;
+export const StyledDescription = styled.p<StyledProps>`
+  width: 36em;
   font-style: normal;
-  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
   font-size: 24px;
   color: ${(props) => props.color || " #ffffff"};
   margin-top: 1em;
@@ -85,10 +92,18 @@ export const StyledDescription = styled.h3<StyledProps>`
   margin-right: auto;
   margin-left: auto;
   text-align: center;
-  font-size: 1.25rem;
   padding: 0 2em 0 2em;
-  text-shadow: ${(props) => props.textShadow || "2px 4px 8px #000000"};
-  @media (max-width: 400px) {
-    font-size: 0.9rem;
+  text-shadow: ${(props) => props.textShadow || "2px 4px 4px #000000"};
+
+  @media (max-width: 975px) {
+    font-size: 28px;
+    width: 16em;
   }
+
+  @media (max-width: 660px) {
+    font-size: 21px;
+    width: 13em;
+    padding:0 ;
+  }
+
 `;
