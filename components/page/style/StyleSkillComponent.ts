@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const SkillsContainer = styled.div`
+position: relative;
+z-index: 0;
 display:flex;
 flex-direction: row;
 justify-content: space-around;
@@ -16,6 +18,8 @@ export const SkillInfoContainer = styled.div`
 display: flex;
 text-align: center;
 flex-direction: column;
+font-family: 'Lato', sans-serif;
+font-weight: 400;
 color: white;
 margin-top: 40px;
 margin-bottom: 40px;
@@ -29,11 +33,23 @@ margin-bottom: 40px;
 `;
 
 export const SkillScore = styled.h1` 
+font-family: 'Lato', sans-serif;
+font-weight: 400;
 margin: 0;
-font-size: 90px;
-font-weight: 100;
+font-size: 110px;
+
+@media (max-width: 975px) {
+  font-size: 80px;
+  }
+
 `;
 
-export const SkillName = styled.h4` 
+export const SkillName = styled.h4`
+font-size: 21.6px; 
 margin: 0;
+
+@media (max-width: 975px) {
+  font-size: 15px;
+  }
+
 `;

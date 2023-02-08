@@ -38,4 +38,31 @@ export const ImageContainer = styled.div<ImageContainerProps>`
       props.imageBoxParams.positioning.tablet?.margin || "30px 0px 0px 0px"};
     top: ${(props) => props.imageBoxParams.positioning.tablet?.top || "0px"};
   }
+  @media (max-width: ${(props) => props.imageBoxParams.breakpoints.breakpoint2 || "975px"}) {
+    height: ${(props) =>
+      props.imageBoxParams.dimensions.mobile?.height || "300px"};
+    width: ${(props) =>
+      props.imageBoxParams.dimensions.mobile?.width || "450px"};
+    min-height: ${(props) =>
+      props.imageBoxParams.dimensions.mobile?.minHeight || "300px"};
+    min-width: ${(props) =>
+      props.imageBoxParams.dimensions.mobile?.minWidth || "450px"};
+    margin: ${(props) =>
+      props.imageBoxParams.positioning.mobile?.margin || "30px 0px 0px 0px"};
+    top: ${(props) => props.imageBoxParams.positioning.mobile?.top || "0px"};
+  }
+  @media (max-width: ${(props) => props.imageBoxParams.breakpoints.breakpoint3 || "665px"}) {
+    height: ${(props) =>
+      props.imageBoxParams.dimensions.mobileSmall?.height || "190px"};
+    width: ${(props) =>
+      props.imageBoxParams.dimensions.mobileSmall?.width || "285px"};
+    min-height: ${(props) =>
+      props.imageBoxParams.dimensions.mobileSmall?.minHeight || "190px"};
+    min-width: ${(props) =>
+      props.imageBoxParams.dimensions.mobileSmall?.minWidth || "285px"};
+    margin: ${(props) =>
+      props.imageBoxParams.positioning.mobileSmall?.margin || "30px 0px 0px 0px"};
+    top: ${(props) => props.imageBoxParams.positioning.mobileSmall?.top || "20px"};
+    margin-top: 70px;
+  }
 `;

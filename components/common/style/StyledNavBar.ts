@@ -23,13 +23,15 @@ export const NavBarContainer = styled.div`
 `;
 
 export const StyledNavLink = styled.a`
+
   cursor: pointer;
+  font-family: 'Fahkwang', sans-serif;
+  font-weight: 400;
   color: #0c7b93;
   margin: 0em 1.7em 0 0;
   font-size: 24px;
   font-style: normal;
-  font-weight: 400;
-  z-index: 1000;
+ 
 
   :hover {
     text-decoration: underline;
@@ -41,12 +43,15 @@ export const StyledNavLink = styled.a`
 `;
 
 export const ExtendedStyledNavLink = styled.a`
+
+position: relative;
   cursor: pointer;
    color: #0c7b93;
   text-decoration: none;
   margin: 2em 0 0 0;
   font-size: 24px;
   font-style: normal;
+  font-family: 'Fahkwang', sans-serif;
   font-weight: 400;
   z-index: 1000;
   :hover {

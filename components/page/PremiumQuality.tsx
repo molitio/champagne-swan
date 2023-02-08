@@ -4,7 +4,7 @@ import SkillsComponent from "./SkillsComponent";
 import Link from "next/link";
 import { ChampagneSwanContext } from "../context";
 import { ImageBox } from "../common/ImageBox";
-import {   
+import {
   PremiumQualityContainer,
   PremiumQualityBackgroundLayerContainer,
   PremiumQualityContentBoxTitle,
@@ -13,15 +13,16 @@ import {
   PremiumQualityContactLink,
   PremiumQualityContentTitle,
   StyledPremiumQualityIconContainer,
-  PremiumQualityContentBox
- } from "./style";
-
+  PremiumQualityContentBox,
+  PremiumLayerContainer,
+} from "./style";
 
 const SecondaryHomePageContent: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
   const navTree = champagneSwanContext.navTree ?? {};
 
   return (
+    <>
     <PremiumQualityBackgroundLayerContainer>
       <SkillsComponent />
       <StyledPremiumQualityIconContainer>
@@ -33,7 +34,7 @@ const SecondaryHomePageContent: React.FC = () => {
           floodOpacity={""}
         />
       </StyledPremiumQualityIconContainer>
-      <PremiumQualityContentTitle className="secondary-title">
+      <PremiumQualityContentTitle>
         {"PRÉMIUM MINŐSÉG"}
       </PremiumQualityContentTitle>
       <PremiumQualityWaterSplash
@@ -52,7 +53,7 @@ const SecondaryHomePageContent: React.FC = () => {
           </PremiumQualityContentBoxText>
 
           <Link key={navTree.about.path} href={navTree.about.path}>
-            <PremiumQualityContactLink className="hiro-content">{`Bővebben`}</PremiumQualityContactLink>
+            <PremiumQualityContactLink>{`Bővebben`}</PremiumQualityContactLink>
           </Link>
         </PremiumQualityContentBox>
         <ImageBox
@@ -60,8 +61,9 @@ const SecondaryHomePageContent: React.FC = () => {
             imageUrl:
               "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/officecleaners.jpg",
             positioning: {
-              margin: "30px 0 0 10px",
+              margin: "30px 0 0 25px",
               tablet: { margin: "30px 0 0 0" },
+             
             },
             dimensions: {
               height: "353px",
@@ -74,15 +76,23 @@ const SecondaryHomePageContent: React.FC = () => {
                 minHeight: "353px",
                 minWidth: "529px",
               },
+              mobile: {
+                height: "300px",
+                width: "450px",
+                minHeight: "300px",
+                minWidth: "450px",
+              },
             },
             breakpoints: {
               breakpoint1: "1440px",
-              breakpoint2: "900px",
+              breakpoint2: "975px",
             },
           }}
         />
       </PremiumQualityContainer>
     </PremiumQualityBackgroundLayerContainer>
+  <PremiumLayerContainer src="https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_top.png" /> 
+  </>
   );
 };
 

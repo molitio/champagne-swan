@@ -1,8 +1,8 @@
-export { default as StyledForm } from "./StyledForm";
+export { StyledForm, StyledSelectForm } from "./StyledForm";
 export { IconContainer } from "./StyledIconContainer";
 export { ContactButton } from "./StyledContactButton";
 export { ImageContainer } from "./StyledImageContainer";
-export { SyledInput, SyledTextArea, SyledSelectInput } from "./StyledInput";
+export {StyledField, SyledInput, SyledTextArea, SyledSelectInput } from "./StyledInput";
 export {StyledFooter} from "./StyledFooter";
 export {
   StyledImageContainer,

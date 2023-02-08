@@ -46,7 +46,7 @@ const Input: React.FC<
           type={type}
           name={name}
           placeholder={placeholder}
-          placeholderColor={placeholderColor}
+          placeholdercolor={placeholderColor}
           value={value}
           onChange={onChange as React.ChangeEventHandler<HTMLInputElement>}
           margin={margin}
@@ -64,7 +64,7 @@ const Input: React.FC<
         <SyledTextArea
           name={name}
           placeholder={placeholder}
-          placeholderColor={placeholderColor}
+          placeholdercolor={placeholderColor}
           value={value}
           onChange={onChange as React.ChangeEventHandler<HTMLTextAreaElement>}
           margin={margin}
@@ -83,7 +83,7 @@ const Input: React.FC<
           name={name}
           value={value}
           placeholder={placeholder}
-          placeholderColor={placeholderColor}
+          placeholdercolor={placeholderColor}
           margin={margin}
           height={height}
           width={width}

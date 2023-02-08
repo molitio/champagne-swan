@@ -28,13 +28,14 @@ export const RotatedServicesLayer = styled.img`
 `;
 
 export const ServicesStyledImg = styled.div`
-/* position:relative; */
   background: url(https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/window.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
   height: 1069px;
-
+@media(max-width:665px) {
+  height: 1069px;
+}
 `;
 
 export const ServicesWaterSplash = styled.img`
@@ -49,10 +50,13 @@ export const ServicesHeroSegmentContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 850px;
-  /* top: 23em; */
   padding-top: 23em;
   position: relative;
   margin-bottom: 10em;
+  @media(max-width:665px ) {
+    
+    padding-top: 18em;
+  }
 `;
 
 export const StyledServicesButtonContainer = styled.div`

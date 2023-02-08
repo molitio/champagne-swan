@@ -32,6 +32,7 @@
     "react-is": "^18.2.0",
     "smoothscroll-polyfill": "^0.4.4",
     "styled-components": "^5.3.6",
+    "typeface-lato": "^1.1.13",
     "uuid": "^9.0.0",
     "webpack": "^5.75.0",
     "workspaces": "^0.1.0",

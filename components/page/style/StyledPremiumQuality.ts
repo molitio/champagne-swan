@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const PremiumLayerContainer = styled.img`
+  position: absolute;
+  width: 100%;
+  height: 540px;
+  z-index: -1;
+  margin-top: -1px;
+`;
+
 export const PremiumQualityContainer = styled.div`
   position: relative;
   display: flex;
@@ -19,14 +27,16 @@ export const PremiumQualityBackgroundLayerContainer = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-
   align-items: center;
   background-size: cover;
   background: #c1dadf;
-  height: 1350px;
+  height: 1500px;
 
   @media (max-width: 1440px) {
     height: 1750px;
+  }
+  @media (max-width: 975px) {
+    height: 1500px;
   }
 `;
 export const AboutPQBackgroundLayerContainer = styled.div`
@@ -38,15 +48,31 @@ export const AboutPQBackgroundLayerContainer = styled.div`
   align-items: center;
   background-size: cover;
   background: #c1dadf;
-  height: 1836px;
+  height: 1905px;
 
   @media (max-width: 1440px) {
-    height: 2363px;
+    height: 2356px;
+  }
+
+  @media (max-width: 975px) {
+    height: 2739px;
+  }
+  @media (max-width: 900px) {
+    height: 2900px;
+  }
+  @media (max-width: 665px) {
+    height: 2230px;
+  }
+  @media (max-width: 400px) {
+    height: 2235px;
   }
 `;
 
 export const StyledPremiumQualityIconContainer = styled.div`
   padding-top: 6em;
+
+  @media (max-width: 975px) {
+  }
 `;
 
 export const PremiumQualityContentTitle = styled.h1`
@@ -56,10 +82,17 @@ export const PremiumQualityContentTitle = styled.h1`
   font-size: 105px;
   opacity: 0.5;
   margin-top: 0.6em;
-
+  
   @media (max-width: 1440px) {
     font-size: 67px;
     margin-bottom: 20px;
+  }
+  @media (max-width: 975px) {
+    font-size: 50px;
+  }
+  @media (max-width: 665px) {
+    margin-top: 1em;
+    font-size: 32px;
   }
 `;
 
@@ -86,36 +119,71 @@ export const AboutPremiumQualityTitle = styled.h1`
   opacity: 0.5;
 
   @media (max-width: 1440px) {
-    font-size: 67px;
+    font-size: 60px;
     margin-bottom: 20px;
   }
+  @media (max-width: 665px) {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+
+
 `;
 
 export const AboutQuoteContainer = styled.div`
   width: 54em;
   display: block;
   margin: 0 auto 3em auto;
+
+  @media (max-width: 1440px) {
+  width: 30em;
+  }
+  @media (max-width: 665px) {
+  width: 25em;
+  }
+
+  @media (max-width: 436px) {
+  width: 18em;
+  }
+
 `;
 export const AboutQuote = styled.p`
   color: #0c7b93;
   font-style: italic;
   font-size: 24px;
   text-align: center;
-  font-weight: 100;
+  font-weight: 300;
   padding: 3em 0 1em 0;
+  @media (max-width: 975px) {
+    display: block;
+    margin: auto;
+    width: 20em;
+  }
+    @media (max-width: 665px) {
+      font-size: 17px;
+      width: 17em;
+  }
 `;
 export const AboutQuoteAuthor = styled.p`
   color: #0c7b93;
   font-size: 24px;
   text-align: end;
-  font-weight: 100;
-  padding: 0em 0 0em 0;
+  font-weight: 300;
+  padding: 0em 2em 0em 0;
+  @media (max-width: 975px) {
+    padding: 0em 2em 0em 0;
+  }
+  @media (max-width: 665px) {
+        padding: 0em 3em 0em 0;
+      font-size: 17px;
+    
+  }
 `;
 export const AboutTextPQualityContent = styled.p`
   color: #0c7b93;
   font-size: 24px;
   text-align: end;
-  font-weight: 100;
+  font-weight: 400;
   padding: 0em 0 0em 0;
 `;
 
@@ -124,36 +192,68 @@ export const PremiumQualityContentBox = styled.div`
   min-height: 353px;
   width: 529px;
   min-width: 529px;
-  margin: 30px 10px 0 0;
+  margin: 30px 25px 0 0;
 
   @media (max-width: 1440px) {
     text-align: center;
     height: 1750px;
     margin: 150px 0px 0 0;
   }
+  @media (max-width: 665px) {
+    text-align: center;
+    min-width: 300px;
+    width: 300px;
+  }
 `;
 
 export const PremiumQualityContentBoxTitle = styled.h1`
   text-align: initial;
+  font-family: "Lato", sans-serif;
   color: #0c7b93;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 35px;
   margin-top: 0;
   margin-bottom: 55px;
+
+  @media (max-width: 975px) {
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 10em;
+  }
+  @media (max-width: 665px) {
+    font-size: 30px;
+  }
 `;
 
 type PremiumQuality = {
   fontSize?: string;
   width?: string;
+  tabletFontSize?: string;
+  tabletWidth?: string;
+  mobileWidth?: string;
+  smallMobileWidth?: string;
+  smallMobileFonsize?:string;
 };
 
 export const PremiumQualityContentBoxText = styled.p<PremiumQuality>`
+  font-family: "Lato", sans-serif;
   position: relative;
   text-align: start;
   color: #0c7b93;
-  font-weight: 200;
-  font-size: ${(props) => props.fontSize || "15px"};
-  margin-bottom: 7em;
+  font-weight: 300;
+  font-size: ${(props) => props.fontSize || "20px"};
+  margin-bottom: 2em;
+
+  @media (max-width: 975px) {
+    display: block;
+    margin: 2em auto 2em auto;
+    text-align: center;
+  }
+
+  @media (max-width: 665px) {
+    width: 290px;
+  }
 `;
 export const AboutPremiumQualityContentText = styled.p<PremiumQuality>`
   display: block;
@@ -161,10 +261,24 @@ export const AboutPremiumQualityContentText = styled.p<PremiumQuality>`
   position: relative;
   text-align: center;
   color: #0c7b93;
-  font-weight: 100;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
   font-size: ${(props) => props.fontSize || "25px"};
   width: ${(props) => props.width || ""};
   margin-bottom: 7em;
+
+  @media (max-width: 1440px) {
+    font-size: ${(props) => props.tabletFontSize || "25px"};
+    width: ${(props) => props.tabletWidth || ""};
+  }
+  @media (max-width: 975px) {
+    width: ${(props) => props.mobileWidth || ""};
+  }
+  @media (max-width: 665px) {
+    width: ${(props) => props.smallMobileWidth || ""};
+    font-size: ${(props) => props.smallMobileFonsize || ""};
+  }
+
 `;
 
 export const PremiumQualityWaterSplash = styled.img`
@@ -182,6 +296,18 @@ export const PremiumQualityWaterSplash = styled.img`
     bottom: -265px;
     left: 230px;
   }
+  @media (max-width: 975px) {
+    bottom: -190px;
+    left: 170px;
+    width: 250px;
+    height: 250px;
+  }
+  @media (max-width: 665px) {
+    bottom: -130px;
+    left: 0px;
+    width: 220px;
+    height: 220px;
+  }
 `;
 export const AboutPremiumQualityWaterSplash = styled.img`
   display: block;
@@ -193,6 +319,12 @@ export const AboutPremiumQualityWaterSplash = styled.img`
   transform: rotate(-15deg);
   top: -140px;
   @media (max-width: 1440px) {
+    top: 0px;
+  }
+  @media (max-width: 655px) {
+    height: 270px;
+    width:270px;
+    transform: rotate(0deg);
     top: 0px;
   }
 `;

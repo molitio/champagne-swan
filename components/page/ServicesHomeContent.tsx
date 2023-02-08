@@ -1,4 +1,3 @@
-
 import { IconGoldGroup } from "../common/IconGroups";
 import { ImageBox } from "../common/ImageBox";
 import {
@@ -20,8 +19,13 @@ import {
 
 const ServicesHomeContent: React.FC = () => {
   return (
-    <ServicesMainContainer>
-      <StyledIconContainer>
+    <ServicesMainContainer
+      height={"2800px"}
+      tabletHeight={"4200px"}
+      mobileHeight={"3350px"}
+      smallMobileHeight={"3150px"}
+    >
+      <StyledIconContainer mobilePaddingTop={"7em"} tabletPaddingTop={"10em"}>
         <IconGoldGroup
           fill={""}
           dx={"0"}
@@ -35,25 +39,25 @@ const ServicesHomeContent: React.FC = () => {
       <UniqueExternalContentContainer>
         <ReverseInternalContentContainer>
           <ImageBox
-                        imageBoxParams={{
-                          imageUrl:
-                            "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/morning.jpg",
-                            dimensions: {
-                              height: "350px",
-                              width: "490px",
-                              minHeight: "350px",
-                              minWidth: "490px",
-                            },
-                            positioning: {
-                              margin: "30px 15px 0 15px",
-                              tablet:{
-                                top:"0px"
-                              },
-                            },
-                          breakpoints: {
-                            breakpoint1: "1440px"
-                          }
-                        }}
+            imageBoxParams={{
+              imageUrl:
+                "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/morning.jpg",
+              dimensions: {
+                height: "350px",
+                width: "490px",
+                minHeight: "350px",
+                minWidth: "490px",
+              },
+              positioning: {
+                margin: "30px 25px 0 15px",
+                tablet: {
+                  top: "0px",
+                },
+              },
+              breakpoints: {
+                breakpoint1: "1440px",
+              },
+            }}
           />
           <ContentBox>
             <ContentBoxTitle>{`Szállodák és irodaházak takarítása`}</ContentBoxTitle>
@@ -79,25 +83,25 @@ const ServicesHomeContent: React.FC = () => {
             <ContactLink href="/services/#middle-content">{`Bővebben...`}</ContactLink>
           </ContentBox>
           <ImageBox
-                        imageBoxParams={{
-                          imageUrl:
-                            "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/flatroom.jpg",
-                            dimensions: {
-                              height: "397px",
-                              width: "556px",
-                              minHeight: "397px",
-                              minWidth: "556px",
-                            },
-                            positioning: {
-                              margin: "30px 15px 0 15px",
-                              tablet:{
-                                top:"0px"
-                              },
-                            },
-                          breakpoints: {
-                            breakpoint1: "1440px"
-                          }
-                        }}
+            imageBoxParams={{
+              imageUrl:
+                "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/flatroom.jpg",
+              dimensions: {
+                height: "397px",
+                width: "556px",
+                minHeight: "397px",
+                minWidth: "556px",
+              },
+              positioning: {
+                margin: "30px 15px 0 15px",
+                tablet: {
+                  top: "0px",
+                },
+              },
+              breakpoints: {
+                breakpoint1: "1440px",
+              },
+            }}
           />
         </InternalContentContainer>
         <RightSideWaterSplash
@@ -109,25 +113,25 @@ const ServicesHomeContent: React.FC = () => {
       <ExternalContentContainer>
         <ReverseInternalContentContainer>
           <ImageBox
-                   imageBoxParams={{
-                    imageUrl:
-                      "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/industrial.jpg",
-                      dimensions: {
-                        height: "396px",
-                        width: "529px",
-                        minHeight: "396px",
-                        minWidth: "529px",
-                      },
-                      positioning: {
-                        margin: "30px 15px 0 15px",
-                        tablet:{
-                          top:"0px"
-                        },
-                      },
-                    breakpoints: {
-                      breakpoint1: "1440px"
-                    }
-                  }}
+            imageBoxParams={{
+              imageUrl:
+                "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/industrial.jpg",
+              dimensions: {
+                height: "396px",
+                width: "529px",
+                minHeight: "396px",
+                minWidth: "529px",
+              },
+              positioning: {
+                margin: "30px 15px 0 15px",
+                tablet: {
+                  top: "0px",
+                },
+              },
+              breakpoints: {
+                breakpoint1: "1440px",
+              },
+            }}
           />
 
           <ContentBox>

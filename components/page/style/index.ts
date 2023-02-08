@@ -11,7 +11,7 @@ export {
   StyledLogoImage,
   ResponsiveFormBox,
   FormText
-} from "./StyledContactContent";
+} from "./StyledContactPageContent";
 
 export {
   StyledCoverContainer,
@@ -67,7 +67,8 @@ export {
   AboutPremiumQualityContentText,
   AboutPremiumQualityImageBox,
   AboutPQBackgroundLayerContainer,
-  AboutPremiumQualityWaterSplash
+  AboutPremiumQualityWaterSplash,
+  PremiumLayerContainer
 } from "./StyledPremiumQuality";
 
 export {
@@ -75,6 +76,7 @@ export {
   RotatedLayer,
   SimpledHeroLayer,
   StyledImg,
+  ContactStyledImg,
   HeroWaterSplash,
   StyledHeroSegmentContainer,
   HeroContactLink,

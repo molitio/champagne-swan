@@ -6,13 +6,14 @@ import {
   PartnersImageContainer,
   PartnerImg,
   HouseLogo,
-  BrandLogo
+  BrandLogo,
+  SimpledLayer                                              
 } from "./style";
 
 const OurPartnersContent: React.FC = () => {
   return (
     <OurPartnersContainer>
-      <OurPartnersTitle className="title">{"PARTNEREINK"}</OurPartnersTitle>
+      <OurPartnersTitle>{"PARTNEREINK"}</OurPartnersTitle>
       <OurPartnersContentContainer>
         <PartnersImageContainer>
           <PartnerImg
@@ -43,6 +44,12 @@ const OurPartnersContent: React.FC = () => {
           />
         </PartnersImageContainer>
       </OurPartnersContentContainer>
+      <SimpledLayer
+        top={"4px"}
+        src={
+          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_bottom.png"
+        }
+      />
     </OurPartnersContainer>
   );
 };

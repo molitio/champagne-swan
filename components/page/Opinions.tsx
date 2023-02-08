@@ -17,7 +17,7 @@ import {
 
 const Opinions: React.FC = () => {
   return (
-    <OpinionsMainContainer>
+    <OpinionsMainContainer mobileHeight={"1400px"}>
       <StyledLayer
         src={
           "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_bottom.png"
@@ -33,14 +33,14 @@ const Opinions: React.FC = () => {
       <StyledOpinionsIconContainer>
         <IconWhiteGroup
           fill={"#ffffff"}
-          dx={"1"}
-          dy={"1"}
-          stdDeviation={"1"}
-          floodOpacity={"1"}
+          dx={"0"}
+          dy={"0"}
+          stdDeviation={"0"}
+          floodOpacity={"0"}
         />
       </StyledOpinionsIconContainer>
 
-      <MainOpinionsTitle className="title">{"VÉLEMÉNYEK"}</MainOpinionsTitle>
+      <MainOpinionsTitle>{"VÉLEMÉNYEK"}</MainOpinionsTitle>
 
       <InternalOpinionsContentContainer>
         <ServiceEvaluatorContainer>
