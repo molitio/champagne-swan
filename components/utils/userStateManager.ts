@@ -10,4 +10,8 @@ const signIn = async () => {
   const result = await signInWithPopup(auth, provider);
 };
 
-export { signIn };
+const signOut = async () => {
+  auth.signOut();
+};
+
+export { signIn, signOut, auth };

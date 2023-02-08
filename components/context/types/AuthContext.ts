@@ -1,5 +1,7 @@
+import { Auth } from "firebase/auth";
+
 export type AuthContext = {
-  auth?: {
-    signIn: () => void;
+  authContext: {
+    signIn?: () => void;
   };
 };

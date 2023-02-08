@@ -1,7 +1,8 @@
 import { createTheme } from "@mui/material";
 import React from "react";
 import ChampagneSwanContext from "./ChampagneSwanContext";
-import { signIn } from "../utils";
+import { signIn, signOut } from "../utils";
+import { getAuth } from "firebase/auth";
 
 const ChampagneSwanContextProvider: React.FC<React.PropsWithChildren> = (
   props
@@ -19,8 +20,9 @@ const ChampagneSwanContextProvider: React.FC<React.PropsWithChildren> = (
           navBarExpanded: extendNavBar,
           setNavBarExpanded: setExtendNavBar,
         },
-        auth: {
+        authContext: {
           signIn: signIn,
+          signOut: signOut,
         },
         theme: defaultTheme,
         navTree: {
