@@ -2,7 +2,7 @@ import React from "react";
 import { ChampagneSwanContext } from "../context";
 import { CloseIcon, MenuIcon } from "../svg";
 import Link from "next/link";
-import { 
+import {
   StyledImageContainer,
   RelativNav,
   NavBarContainer,
@@ -15,14 +15,18 @@ import {
   NavBarExtendedContainer,
   OpenLinksButtonContainer,
   OpenLinksButton,
-  StyledLogoPng} from './style'
-
+  StyledLogoPng,
+} from "./style";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { signIn, signOut, auth } from "../utils";
 
 const NavBar: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
   const setNavBarExpanded = champagneSwanContext.interactive.setNavBarExpanded;
   const navBarExpanded = champagneSwanContext.interactive.navBarExpanded;
   const navTree = champagneSwanContext.navTree ?? {};
+
+  const [user, loading] = useAuthState(auth);
 
   if (typeof window !== "undefined") {
     window.addEventListener("resize", function () {
@@ -31,6 +35,14 @@ const NavBar: React.FC = () => {
       }
     });
   }
+
+  const handleSignIn = () => {
+    if (user) {
+      signOut();
+    } else {
+      signIn();
+    }
+  };
 
   return (
     <RelativNav>
@@ -62,6 +74,9 @@ const NavBar: React.FC = () => {
                 );
               }}
             >
+              <button onClick={handleSignIn}>
+                {user ? "logout" : "login"}
+              </button>
               {navBarExpanded ? (
                 <OpenLinksButton>
                   <CloseIcon />
