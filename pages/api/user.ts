@@ -1,24 +1,25 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { PrismaClient } from "../../generated/client";
+
+type User = {
+  username: string;
+  email: string;
+  secretHash: string;
+};
 
 const registerUser = async (req: NextApiRequest, res: NextApiResponse) => {
-  const { name, email, secretHash } = req?.body;
+  const { username, email, secretHash } = req?.body;
   const result = register({
-    data: {
-      name: name,
-      email: email,
-      secretHash: secretHash,
-    },
+    username: username,
+    email: email,
+    secretHash: secretHash,
   });
 
   res.status(200).json({ result });
 };
 
-const register = async (data: {}) => {
-  const prisma = new PrismaClient();
-  const user = await prisma.user.create({
-    data: { ...data },
-  });
+const register = async (data: User) => {
+  //TODO add query to create user
+  const user = {};
 
   console.log("user", user);
   return { ...user };

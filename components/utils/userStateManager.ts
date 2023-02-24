@@ -18,7 +18,7 @@ const signIn = async () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        name: "Alice",
+        username: "Alice",
         email: "hello@email.com",
         secretHash: "secret",
       }),
