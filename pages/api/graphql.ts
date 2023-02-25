@@ -4,6 +4,8 @@ import { ApolloServer } from "@apollo/server";
 
 import { startServerWithHandler } from "../../components/utils";
 
+// _ codegen to generate from SSOT schema
+
 const user = {
   username: "test",
   email: "hello@email.com",
@@ -42,6 +44,8 @@ const resolvers = {
       return user;
     },
   },
+
+  // codegen to generate from SSOT schema _
 };
 const server = new ApolloServer({ typeDefs: typeDef, resolvers: resolvers });
 
