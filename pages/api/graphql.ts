@@ -30,6 +30,18 @@ const resolvers = {
   Query: {
     user: () => user,
   },
+
+  Mutation: {
+    createUser: async (root: any, args: any) => {
+      console.log("root", root);
+      console.log("args", args);
+      user.username = args.username;
+      user.email = args.email;
+      user.secretHash = args.secretHash;
+
+      return user;
+    },
+  },
 };
 const server = new ApolloServer({ typeDefs: typeDef, resolvers: resolvers });
 
