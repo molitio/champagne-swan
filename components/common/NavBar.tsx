@@ -18,7 +18,7 @@ import {
 } from "./style";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signIn, signOut, auth } from "../utils";
-import { Button } from "./style/StyledScrollButton";
+import Button from "./Button";
 
 const NavBar: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
