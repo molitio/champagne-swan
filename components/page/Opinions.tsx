@@ -1,5 +1,6 @@
+import { SystemContext } from "@molitio/ui-core";
 import React from "react";
-import { IconWhiteGroup } from "../common";
+import { IconGroup } from "../common";
 import {
   OpinionsMainContainer,
   StyledOpinionsIconContainer,
@@ -12,10 +13,12 @@ import {
   ServiceEvaluatorContainerName,
   ServiceEvaluatorContainer,
   StyledOpininsLogoImage,
-  MainOpinionsTitle
+  MainOpinionsTitle,
 } from "./style";
 
 const Opinions: React.FC = () => {
+  const systemContext = React.useContext(SystemContext);
+
   return (
     <OpinionsMainContainer mobileHeight={"1400px"}>
       <StyledLayer
@@ -31,12 +34,9 @@ const Opinions: React.FC = () => {
       />
 
       <StyledOpinionsIconContainer>
-        <IconWhiteGroup
-          fill={"#ffffff"}
-          dx={"0"}
-          dy={"0"}
-          stdDeviation={"0"}
-          floodOpacity={"0"}
+        <IconGroup
+          fill={systemContext?.theme?.palette?.stars?.white}
+          starCount={5}
         />
       </StyledOpinionsIconContainer>
 

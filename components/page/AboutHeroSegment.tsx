@@ -12,13 +12,14 @@ import {
   HeroContactLink,
   StyledButtonContainer,
 } from "./style";
+import { SystemContext } from "@molitio/ui-core";
 
 const HeroSegment: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
-  const navTree = champagneSwanContext.navTree ?? {};
+  const systemContext = React.useContext(SystemContext);
+  const navTree = systemContext?.navRoot ?? {};
   const navBarExpanded = champagneSwanContext.interactive.navBarExpanded;
 
-  
   return (
     <StyledAboutImg>
       <SimpledHeroLayer

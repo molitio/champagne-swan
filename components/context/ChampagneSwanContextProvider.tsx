@@ -15,21 +15,14 @@ const ChampagneSwanContextProvider: React.FC<React.PropsWithChildren> = (
   return (
     <ChampagneSwanContext.Provider
       value={{
-        appName: "Molitio",
         interactive: {
           navBarExpanded: extendNavBar,
           setNavBarExpanded: setExtendNavBar,
         },
         authContext: {
+          authEnabled: false,
           signIn: signIn,
           signOut: signOut,
-        },
-        theme: defaultTheme,
-        navTree: {
-          home: { label: "FŐOLDAL", path: "/" },
-          services: { label: "SZOLGÁLTATÁSOK", path: "/services" },
-          about: { label: "RÓLUNK", path: "/about" },
-          contact: { label: "KAPCSOLAT", path: "/contact" },
         },
       }}
     >

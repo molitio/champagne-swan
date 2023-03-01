@@ -1,4 +1,6 @@
-import { IconGoldGroup } from "../common/IconGroups";
+import { SystemContext } from "@molitio/ui-core";
+import React from "react";
+import { IconGroup } from "../common/IconGroup";
 import { ImageBox } from "../common/ImageBox";
 import {
   ServicesMainContainer,
@@ -18,6 +20,8 @@ import {
 } from "./style";
 
 const ServicesHomeContent: React.FC = () => {
+  const systemContext = React.useContext(SystemContext);
+
   return (
     <ServicesMainContainer
       height={"2800px"}
@@ -26,12 +30,9 @@ const ServicesHomeContent: React.FC = () => {
       smallMobileHeight={"3150px"}
     >
       <StyledIconContainer mobilePaddingTop={"7em"} tabletPaddingTop={"10em"}>
-        <IconGoldGroup
-          fill={""}
-          dx={"0"}
-          dy={"0"}
-          stdDeviation={"0"}
-          floodOpacity={"0"}
+        <IconGroup
+          fill={systemContext?.theme?.palette?.stars?.gold}
+          starCount={5}
         />
       </StyledIconContainer>
       <ServicesMainTitle>{`SZOLGÁLTATÁSAINK`}</ServicesMainTitle>

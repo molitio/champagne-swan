@@ -15,6 +15,11 @@ export const ChampagneSwanTheme = {
       primary: "#0C7B93",
       secondary: "#9D8D7B",
     },
+    stars: {
+      gold: "#D2C5AA",
+      blue: "#0c7a9352",
+      white: "#ffffff",
+    },
   },
   dimensions: {
     page: {

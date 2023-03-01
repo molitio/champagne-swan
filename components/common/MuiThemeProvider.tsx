@@ -1,7 +1,13 @@
-import React from "react";
 import { createTheme, ThemeProvider } from "@mui/material";
 
 declare module "@mui/material" {
+  export interface Palette {
+    stars?: {
+      gold?: string;
+      blue?: string;
+      white?: string;
+    };
+  }
   export interface TypeBackground {
     background: {
       inverse?: string;

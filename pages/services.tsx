@@ -4,11 +4,11 @@ import ContactContent from "../components/page/ContactContent";
 
 const Services: React.FC = () => {
   return (
-    <>
+    <section>
       <ServicesHeroSegment />
       <ServicesPageContent />
       <ContactContent />
-    </>
+    </section>
   );
 };
 

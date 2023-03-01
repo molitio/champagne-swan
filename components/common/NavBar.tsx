@@ -19,12 +19,14 @@ import {
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signIn, signOut, auth } from "../utils";
 import Button from "./Button";
+import { SystemContext } from "@molitio/ui-core";
 
 const NavBar: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
+  const systemContext = React.useContext(SystemContext);
   const setNavBarExpanded = champagneSwanContext.interactive.setNavBarExpanded;
   const navBarExpanded = champagneSwanContext.interactive.navBarExpanded;
-  const navTree = champagneSwanContext.navTree ?? {};
+  const navTree = systemContext?.navRoot ?? {};
 
   const [user, loading] = useAuthState(auth);
 
@@ -82,13 +84,13 @@ const NavBar: React.FC = () => {
                 );
               }}
             >
-              {
-                // provide a proper implementation of a react button component with an on click event handler (handleLoginWindow)
-                // and a conditional rendering of the button text based on the user state
-              }
-              <Button onClick={handleLoginWindow}>
-                {user ? "logout" : "login"}
-              </Button>
+              {champagneSwanContext?.authContext?.authEnabled ? (
+                <Button onClick={handleLoginWindow}>
+                  {user ? "logout" : "login"}
+                </Button>
+              ) : (
+                <></>
+              )}
               {navBarExpanded ? (
                 <OpenLinksButton>
                   <CloseIcon />

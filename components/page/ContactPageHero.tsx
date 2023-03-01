@@ -1,3 +1,4 @@
+import { SystemContext } from "@molitio/ui-core";
 import React from "react";
 import { ChampagneSwanContext } from "../context";
 import { SimpledLayer } from "./style";
@@ -14,7 +15,8 @@ import {
 
 const ContactPageHero: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
-  const navTree = champagneSwanContext.navTree ?? {};
+  const systemContext = React.useContext(SystemContext);
+  const navTree = systemContext?.navRoot ?? {};
   const navBarExpanded = champagneSwanContext.interactive.navBarExpanded;
 
   const content = `Írjon Nekünk az alábbi kapcsolati űrlapon keresztül vagy vegye fel velünk a kapcsolatot az alábbi elérhetőségek egyikén!`;

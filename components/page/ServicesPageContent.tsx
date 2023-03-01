@@ -1,5 +1,6 @@
+import React from "react";
 import { ImageBox } from "../common/ImageBox";
-import { IconGoldGroup } from "../common/IconGroups";
+import { IconGroup } from "../common/IconGroup";
 import {
   StyledIconContainer,
   ServicesMainTitle,
@@ -15,8 +16,10 @@ import {
   RightSideWaterSplash,
   SimpledLayer,
 } from "./style";
+import { SystemContext } from "@molitio/ui-core";
 
 const ServicesPageContent: React.FC = () => {
+  const systemContext = React.useContext(SystemContext);
   return (
     <>
       <ServicesMainContainer
@@ -25,12 +28,9 @@ const ServicesPageContent: React.FC = () => {
         tabletHeight={"4500px"}
       >
         <StyledIconContainer mobilePaddingTop={"40em"}>
-          <IconGoldGroup
-            fill={""}
-            dx={"0"}
-            dy={"0"}
-            stdDeviation={"0"}
-            floodOpacity={"0"}
+          <IconGroup
+            fill={systemContext?.theme?.palette?.stars?.gold}
+            starCount={5}
           />
         </StyledIconContainer>
         <ServicesMainTitle id="first-content">{`SZOLGÁLTATÁSAINK`}</ServicesMainTitle>
@@ -179,7 +179,6 @@ const ServicesPageContent: React.FC = () => {
             bottomMobile={"-420px"}
             bottomSmallMobile={"-1020px"}
             leftSmallMobile={"0px"}
-       
             src={
               "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png"
             }
