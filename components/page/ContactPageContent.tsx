@@ -9,40 +9,52 @@ import {
   StyledLogoImage,
   ResponsiveFormBox,
 } from "./style/StyledContactPageContent";
-import { ContactForm } from "../common";
+import { ContactForm, StyledAnchor } from "../common";
+import { SystemContext } from "@molitio/ui-core";
 
 const ContactPageContent: React.FC = () => {
+  const systemContext = React.useContext(SystemContext);
+
+  const contactLeafs = systemContext?.contentRoot?.contact?.leafs;
+  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
+  const iconDefinitions = contactLeafs?.contactInfo?.iconDefinitions;
+  const textContent = contactLeafs?.contactInfo?.textContent;
+  const commonAssetUrls = commonLeafs?.images?.assetUrls;
+
   return (
     <ContactContainer heightTablet={"1900px"} height={"1200px"}>
       <BackgroundLayer height={"1200px"} heightTablet={"1900px"}>
         <ResponsiveFormBox>
           <ContactInfoContainer>
             <ContactInfo>
-              {`Mobil:`}
-              <br />
-              {`+36 20 416 0391`}
+              <StyledAnchor href={iconDefinitions?.phone?.hrefUrl ?? ""}>
+                {iconDefinitions?.phone?.title ?? ""}
+                <br />
+                {textContent?.phoneMain ?? ""}
+              </StyledAnchor>
             </ContactInfo>
             <ContactInfo>
-              {`E-mail:`}
-              <br />
-              {`info@jeliza.com`}
+              <StyledAnchor href={iconDefinitions?.email?.hrefUrl ?? ""}>
+                {iconDefinitions?.email?.title ?? ""}
+                <br />
+                {textContent?.email ?? ""}
+              </StyledAnchor>
             </ContactInfo>
             <ContactInfo>
-              {`Cím:`}
-              <br />
-              {` 1134 Budapest,`}
-              <br />
-              {`Lehel utca 11.`}
+              <StyledAnchor href={iconDefinitions?.address?.hrefUrl ?? ""}>
+                {iconDefinitions?.address?.title ?? ""}
+                <br />
+                {textContent?.address1 ?? ""}
+                <br />
+                {textContent?.address2 ?? ""}
+              </StyledAnchor>
             </ContactInfo>
           </ContactInfoContainer>
           <FormContainer>
             <ContactForm />
           </FormContainer>
         </ResponsiveFormBox>
-        <StyledLogoImage
-          src="https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/logo/jeliza_logokit_jeliza_logo_complete.svg"
-          alt="logo"
-        />
+        <StyledLogoImage src={commonAssetUrls?.logo ?? ""} alt="logo" />
       </BackgroundLayer>
     </ContactContainer>
   );
