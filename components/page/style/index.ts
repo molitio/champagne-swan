@@ -1,4 +1,3 @@
-
 export {
   ContactContainer,
   SimpledLayer,
@@ -10,7 +9,7 @@ export {
   ContactInfo,
   StyledLogoImage,
   ResponsiveFormBox,
-  FormText
+  FormText,
 } from "./StyledContactPageContent";
 
 export {
@@ -19,7 +18,7 @@ export {
   StyledMainTitle,
   StyledSecondaryTitle,
   StyledDescription,
-  IconContainer
+  IconContainer,
 } from "./StyledHeroSegmentContent";
 
 export {
@@ -35,7 +34,7 @@ export {
   ServiceEvaluatorContainerText,
   ServiceEvaluatorContainerName,
   StyledOpininsLogoImage,
-  AboutStyledMiddleLayer
+  AboutStyledMiddleLayer,
 } from "./StyledOpinions";
 
 export {
@@ -68,13 +67,13 @@ export {
   AboutPremiumQualityImageBox,
   AboutPQBackgroundLayerContainer,
   AboutPremiumQualityWaterSplash,
-  PremiumLayerContainer
+  PremiumLayerContainer,
 } from "./StyledPremiumQuality";
 
 export {
   StyledLayerSegment,
   RotatedLayer,
-  SimpledHeroLayer,
+  ImageLayer,
   StyledImg,
   ContactStyledImg,
   HeroWaterSplash,
@@ -87,7 +86,7 @@ export {
   SkillsContainer,
   SkillInfoContainer,
   SkillScore,
-  SkillName
+  SkillName,
 } from "./StyleSkillComponent";
 
 export {
@@ -98,7 +97,7 @@ export {
   ServicesWaterSplash,
   ServicesHeroSegmentContainer,
   StyledServicesButtonContainer,
-  ContactButton
+  ContactButton,
 } from "./StyledServicesHeroSegment";
 
 export {
@@ -118,4 +117,4 @@ export {
   UniqueExternalContentContainer,
 } from "./StyledServicesPageContent";
 
-export {StyledAboutImg} from "./StyledAboutHeroSegment";
+export { StyledAboutImg } from "./StyledAboutHeroSegment";

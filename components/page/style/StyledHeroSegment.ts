@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledLayerSegment = styled.div``;
 
-export const SimpledHeroLayer = styled.img`
+export const ImageLayer = styled.img`
   position: absolute;
   margin: 0;
   margin-top: 0px;
@@ -51,7 +51,7 @@ export const ContactStyledImg = styled.div`
   background-position: center;
   width: 100%;
   height: 1169px;
-  @media(max-width:665px) {
+  @media (max-width: 665px) {
     height: 896px;
   }
 `;

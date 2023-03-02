@@ -26,22 +26,21 @@ export const StyledMainTitle = styled.h1<StyledProps>`
   @media (max-width: 1400px) {
     font-size: 3.2rem;
   }
-  
+
   @media (max-width: 975px) {
     display: block;
     margin: 30px auto 30px auto;
     width: 12em;
   }
-  
+
   @media (max-width: 665px) {
     display: block;
-    margin: 30px auto 30px auto; 
+    margin: 30px auto 30px auto;
     font-size: 2.25rem;
     width: 8em;
     line-height: 50px;
   }
-  
-  `;
+`;
 
 export const StyledSecondaryTitle = styled.h1<StyledProps>`
   position: relative;
@@ -54,33 +53,31 @@ export const StyledSecondaryTitle = styled.h1<StyledProps>`
   line-height: 78px;
   color: ${(props) => props.color || " #ffffff"};
   text-shadow: 2px 4px 8px #000000;
-  
+
   @media (max-width: 1400px) {
     font-size: 3.2rem;
   }
-  
+
   @media (max-width: 975px) {
     margin: auto;
     width: 10em;
   }
-  
+
   @media (max-width: 665px) {
     display: block;
-    margin: 30px auto 30px auto; 
+    margin: 30px auto 30px auto;
     font-size: 2.1rem;
     width: 8em;
     line-height: 50px;
   }
 
-  
-  
   @media (max-width: 280px) {
     font-size: 1.6rem;
     width: 8em;
   }
 `;
 
-export const StyledDescription = styled.p<StyledProps>`
+export const StyledDescription = styled.pre<StyledProps>`
   width: 36em;
   font-style: normal;
   font-family: "Lato", sans-serif;
@@ -103,7 +100,6 @@ export const StyledDescription = styled.p<StyledProps>`
   @media (max-width: 660px) {
     font-size: 21px;
     width: 13em;
-    padding:0 ;
+    padding: 0;
   }
-
 `;

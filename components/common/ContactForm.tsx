@@ -5,7 +5,7 @@ import Input from "./Input";
 import { StyledField } from "./style";
 import { handleRecaptcha } from "../utils";
 import { Formik, Form, Field } from "formik";
-//import * as Yup from "yup";
+import * as Yup from "yup";
 
 interface FormProps {
   position?: string;
@@ -18,13 +18,13 @@ type FormValues = {
 };
 
 const ContactForm: React.FC<FormProps> = () => {
-  /*   const validationSchema = Yup.object().shape({
+  const validationSchema = Yup.object().shape({
     from_name: Yup.string().required("User name is required"),
     from_email: Yup.string()
       .email("Invalid email")
       .required("Email is required"),
     message: Yup.string().required("Message is required"),
-  }); */
+  });
 
   const initialValues: FormValues = {
     from_name: "",
@@ -69,8 +69,7 @@ const ContactForm: React.FC<FormProps> = () => {
   return (
     <Formik
       initialValues={initialValues}
-      /* validationSchema={validationSchema} */
-      validationSchema={{}}
+      validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
       {({ isSubmitting }) => (

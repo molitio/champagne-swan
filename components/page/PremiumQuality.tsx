@@ -18,8 +18,13 @@ import {
 import { SystemContext } from "@molitio/ui-core";
 
 const SecondaryHomePageContent: React.FC = () => {
-  const champagneSwanContext = React.useContext(SystemContext);
-  const navTree = champagneSwanContext.navRoot ?? {};
+  const systemContext = React.useContext(SystemContext);
+  const navTree = systemContext.navRoot ?? {};
+  const premiumQualityLeafs = systemContext?.contentRoot?.premiumQuality?.leafs;
+  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
+  const textContent = premiumQualityLeafs?.cover?.textContent;
+  const assetUrls = premiumQualityLeafs?.cover?.assetUrls;
+  const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
     <>
@@ -27,39 +32,36 @@ const SecondaryHomePageContent: React.FC = () => {
         <SkillsComponent />
         <StyledPremiumQualityIconContainer>
           <IconGroup
-            fill={champagneSwanContext?.theme?.palette?.stars?.blue}
+            fill={systemContext?.theme?.palette?.stars?.blue ?? ""}
             starCount={5}
           />
         </StyledPremiumQualityIconContainer>
         <PremiumQualityContentTitle>
-          {"PRÉMIUM MINŐSÉG"}
+          {textContent?.title ?? ""}
         </PremiumQualityContentTitle>
-        <PremiumQualityWaterSplash
-          src={
-            "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png"
-          }
-        />
+        <PremiumQualityWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
         <PremiumQualityContainer>
           <PremiumQualityContentBox>
             <PremiumQualityContentBoxTitle>
-              {`Jeliza a tisztaság szinonimája`}
+              {textContent?.contentTitle ?? ""}
             </PremiumQualityContentBoxTitle>
 
             <PremiumQualityContentBoxText>
-              {`Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen.`}
+              {textContent?.contentText ?? ""}
             </PremiumQualityContentBoxText>
 
             <Link
               key={navTree?.about?.path ?? ""}
               href={navTree?.about?.path ?? ""}
             >
-              <PremiumQualityContactLink>{`Bővebben`}</PremiumQualityContactLink>
+              <PremiumQualityContactLink>
+                {textContent?.moreInfoButton ?? ""}
+              </PremiumQualityContactLink>
             </Link>
           </PremiumQualityContentBox>
           <ImageBox
             imageBoxParams={{
-              imageUrl:
-                "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/officecleaners.jpg",
+              imageUrl: assetUrls?.officeCleaners ?? "",
               positioning: {
                 margin: "30px 0 0 25px",
                 tablet: { margin: "30px 0 0 0" },
@@ -90,7 +92,7 @@ const SecondaryHomePageContent: React.FC = () => {
           />
         </PremiumQualityContainer>
       </PremiumQualityBackgroundLayerContainer>
-      <PremiumLayerContainer src="https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_top.png" />
+      <PremiumLayerContainer src={commonAssetUrls?.gradientTop ?? ""} />
     </>
   );
 };

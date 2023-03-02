@@ -9,7 +9,7 @@ import {
   ServicesStyledImg,
   ServicesWaterSplash,
   ServicesHeroSegmentContainer,
-  PremiumLayerContainer
+  PremiumLayerContainer,
 } from "./style";
 
 import { StyledMainTitle, StyledDescription } from "./style";
@@ -43,12 +43,12 @@ const ServicesHeroSegment: React.FC = (props) => {
               <StyledDescription textShadow="0px 0px 0px " color="#0C7B93">
                 {content}
               </StyledDescription>
-              <br />
+              {/*   <br />
               <StyledDescription textShadow="0px 0px 0px " color="#0C7B93">
                 {warning}
-              </StyledDescription>
+              </StyledDescription> */}
               {/* TODO: fix select form */}
-              <SelectForm />
+              {/*         <SelectForm /> */}
             </ServicesHeroSegmentContainer>
           ) : null}
         </ServicesStyledLayerSegment>

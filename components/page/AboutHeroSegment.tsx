@@ -5,7 +5,7 @@ import Link from "next/link";
 import {
   StyledLayerSegment,
   RotatedLayer,
-  SimpledHeroLayer,
+  ImageLayer,
   StyledAboutImg,
   HeroWaterSplash,
   StyledHeroSegmentContainer,
@@ -22,7 +22,7 @@ const HeroSegment: React.FC = () => {
 
   return (
     <StyledAboutImg>
-      <SimpledHeroLayer
+      <ImageLayer
         src={
           "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_bottom.png"
         }

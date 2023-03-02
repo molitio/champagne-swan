@@ -2,24 +2,78 @@ export const ChampagneSwanContextRoot = {
   appName: "Champagne Swan v1.0.0",
   navRoot: {
     home: {
-      label: "Home",
+      label: "Főoldal",
       path: "/",
     },
     services: {
       label: "Szolgáltatások",
       path: "/services",
     },
+    about: {
+      label: "Rólunk",
+      path: "/about",
+    },
+    contact: {
+      label: "Kapcsolat",
+      path: "/contact",
+    },
   },
   contentRoot: {
+    common: {
+      leafs: {
+        images: {
+          assetUrls: {
+            gradientHero:
+              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_hero.png",
+            gradientTop:
+              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_top.png",
+            waterSplash:
+              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png",
+          },
+        },
+      },
+    },
+    premiumQuality: {
+      leafs: {
+        cover: {
+          textContent: {
+            title: "PREMIUM MINŐSÉG",
+            contentTitle: "Jeliza a tisztaság szinonimája",
+            contentText:
+              "Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen.",
+            moreInfoButton: "Bővebben",
+          },
+          assetUrls: {
+            officeCleaners:
+              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/officecleaners.jpg",
+          },
+        },
+      },
+    },
+    opinions: {
+      leafs: {
+        opinionCards: {
+          textContent: {
+            colleagues: "TAPASZTALT KOLLÉGÁK",
+            colleaguesScore: "50",
+            clients: "ELÉGEDETT ÜGYFÉL",
+            clientsScore: "80",
+            projects: "SIKERES PROJECT",
+            projectsScore: "150",
+            equipment: "DARABOS GÉPPARK",
+            equipmentScore: "100",
+          },
+        },
+      },
+    },
     home: {
       leafs: {
         hero: {
           textContent: {
             title: "TISZTASÁG FELSŐFOKON!",
-            description: `Cégünk magas színvonalon kínál \n takarító szolgáltatást szállodák, irodaházak és magánszemélyek részére,
-valamint vállaljuk nagy belmagasságú ipari üzemek, gyártó csarnokok, raktárak és logisztikai központok speciális takarítását!`,
-            desciptionSubText: `Oldalunk fejlesztés alatt áll, kérjük látogass vissza később, 
-vagy vedd fel velünk a kapcsolatot az alábbi elérhetőségek egyikén!`,
+            description:
+              "Cégünk magas színvonalon kínál takarító szolgáltatást szállodák, irodaházak \\n és magánszemélyek részére, \\n valamint vállaljuk nagy belmagasságú ipari üzemek, \\ngyártó csarnokok, raktárak és logisztikai központok speciális \\ntakarítását!",
+            moreInfoButton: "Bővebben",
           },
           iconDefinitions: {
             phone: {

@@ -6,7 +6,7 @@ import { SimpledLayer } from "./style";
 import {
   StyledLayerSegment,
   RotatedLayer,
-  SimpledHeroLayer,
+  ImageLayer,
   ContactStyledImg,
   StyledHeroSegmentContainer,
   FormText,
@@ -23,7 +23,7 @@ const ContactPageHero: React.FC = () => {
 
   return (
     <ContactStyledImg>
-      <SimpledHeroLayer
+      <ImageLayer
         src={
           "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_top.png"
         }

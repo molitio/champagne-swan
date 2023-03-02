@@ -1,4 +1,5 @@
 import React from "react";
+import { SystemContext } from "@molitio/ui-core";
 import {
   SkillsContainer,
   SkillInfoContainer,
@@ -7,23 +8,27 @@ import {
 } from "./style";
 
 const SkillsComponent: React.FC = () => {
+  const systemContext = React.useContext(SystemContext);
+
+  const opinionsLeafs = systemContext?.contentRoot?.opinions?.leafs;
+  const textContent = opinionsLeafs?.opinionCards?.textContent;
   return (
-    <SkillsContainer >
+    <SkillsContainer>
       <SkillInfoContainer>
-        <SkillScore>{`50`}</SkillScore>
-        <SkillName>{`TAPASZTALT KOLLÉGÁK`}</SkillName>
+        <SkillScore>{textContent?.colleaguesScore ?? ""}</SkillScore>
+        <SkillName>{textContent?.colleagues ?? ""}</SkillName>
       </SkillInfoContainer>
       <SkillInfoContainer>
-        <SkillScore>{`80`}</SkillScore>
-        <SkillName>{`ELÉGEDETT ÜGYFÉL`}</SkillName>
+        <SkillScore>{textContent?.clientsScore ?? ""}</SkillScore>
+        <SkillName>{textContent?.clients}</SkillName>
       </SkillInfoContainer>
       <SkillInfoContainer>
-        <SkillScore>{`150`}</SkillScore>
-        <SkillName>{`SIKERES PROJECT`}</SkillName>
+        <SkillScore>{textContent?.projectsScore ?? ""}</SkillScore>
+        <SkillName>{textContent?.projects}</SkillName>
       </SkillInfoContainer>
       <SkillInfoContainer>
-        <SkillScore>{`100`}</SkillScore>
-        <SkillName>{`DARABOS GÉPPARK`}</SkillName>
+        <SkillScore>{textContent?.equipmentScore ?? ""}</SkillScore>
+        <SkillName>{textContent?.equipment ?? ""}</SkillName>
       </SkillInfoContainer>
     </SkillsContainer>
   );
