@@ -1,5 +1,5 @@
-import { SystemContext } from "@molitio/ui-core";
 import React from "react";
+import { SystemContext } from "@molitio/ui-core";
 import { IconGroup } from "../common/IconGroup";
 import { ImageBox } from "../common/ImageBox";
 import {
@@ -21,6 +21,13 @@ import {
 
 const ServicesHomeContent: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
+  const navTree = systemContext?.navRoot ?? {};
+  const navLeafs = navTree?.services?.leafs;
+  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
+  const servicesLeafs = systemContext?.contentRoot?.services?.leafs;
+  const textContent = servicesLeafs?.cover?.textContent;
+  const assetUrls = servicesLeafs?.cover?.assetUrls;
+  const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
     <ServicesMainContainer
@@ -35,14 +42,13 @@ const ServicesHomeContent: React.FC = () => {
           starCount={5}
         />
       </StyledIconContainer>
-      <ServicesMainTitle>{`SZOLGÁLTATÁSAINK`}</ServicesMainTitle>
+      <ServicesMainTitle>{textContent?.title ?? ""}</ServicesMainTitle>
 
       <UniqueExternalContentContainer>
         <ReverseInternalContentContainer>
           <ImageBox
             imageBoxParams={{
-              imageUrl:
-                "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/morning.jpg",
+              imageUrl: assetUrls?.morning ?? "",
               dimensions: {
                 height: "350px",
                 width: "490px",
@@ -61,32 +67,35 @@ const ServicesHomeContent: React.FC = () => {
             }}
           />
           <ContentBox>
-            <ContentBoxTitle>{`Szállodák és irodaházak takarítása`}</ContentBoxTitle>
+            <ContentBoxTitle>
+              {textContent?.comercialServicesContentTitle ?? ""}
+            </ContentBoxTitle>
             <ContentBoxText>
-              {`Szállodák és irodaházak takarítása Minden egyes  munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is`}
+              {textContent?.comercialServicesContentText ?? ""}
             </ContentBoxText>
-            <ContactLink href="/services/#first-content">{`Bővebben...`}</ContactLink>
+            <ContactLink href={navLeafs?.mainContent?.path ?? ""}>
+              {navLeafs?.mainContent?.label ?? ""}
+            </ContactLink>
           </ContentBox>
         </ReverseInternalContentContainer>
-        <WaterSplash
-          src={
-            "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png"
-          }
-        />
+        <WaterSplash src={commonAssetUrls?.waterSplash} />
       </UniqueExternalContentContainer>
       <ExternalContentContainer>
         <InternalContentContainer>
           <ContentBox>
-            <ContentBoxTitle>{`Magánszemélyeknél végzett takarítás`}</ContentBoxTitle>
+            <ContentBoxTitle>
+              {textContent?.privateServicesContentTitle ?? ""}
+            </ContentBoxTitle>
             <ContentBoxText>
-              {`Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is`}
+              {textContent?.privateServicesContentText ?? ""}
             </ContentBoxText>
-            <ContactLink href="/services/#middle-content">{`Bővebben...`}</ContactLink>
+            <ContactLink href={navLeafs?.privateServices?.path ?? ""}>
+              {navLeafs?.privateServices?.label ?? ""}
+            </ContactLink>
           </ContentBox>
           <ImageBox
             imageBoxParams={{
-              imageUrl:
-                "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/flatroom.jpg",
+              imageUrl: assetUrls?.flatRoom ?? "",
               dimensions: {
                 height: "397px",
                 width: "556px",
@@ -105,18 +114,13 @@ const ServicesHomeContent: React.FC = () => {
             }}
           />
         </InternalContentContainer>
-        <RightSideWaterSplash
-          src={
-            "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png"
-          }
-        />
+        <RightSideWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
       </ExternalContentContainer>
       <ExternalContentContainer>
         <ReverseInternalContentContainer>
           <ImageBox
             imageBoxParams={{
-              imageUrl:
-                "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/industrial.jpg",
+              imageUrl: assetUrls?.industry ?? "",
               dimensions: {
                 height: "396px",
                 width: "529px",
@@ -136,18 +140,18 @@ const ServicesHomeContent: React.FC = () => {
           />
 
           <ContentBox>
-            <ContentBoxTitle>{`Nagy belmagasságú épületek takarítása`}</ContentBoxTitle>
+            <ContentBoxTitle>
+              {textContent?.highCeilingContentTitle ?? ""}
+            </ContentBoxTitle>
             <ContentBoxText>
-              {`Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is`}
+              {textContent?.highCeilingContentText ?? ""}
             </ContentBoxText>
-            <ContactLink href="/services/#last-content">{`Bővebben...`}</ContactLink>
+            <ContactLink href={navLeafs?.highCeilingServices?.path ?? ""}>
+              {navLeafs?.highCeilingServices?.label ?? ""}
+            </ContactLink>
           </ContentBox>
         </ReverseInternalContentContainer>
-        <BottomWaterSplash
-          src={
-            "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png"
-          }
-        />
+        <BottomWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
       </ExternalContentContainer>
     </ServicesMainContainer>
   );

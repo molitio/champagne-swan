@@ -33,7 +33,7 @@ const ServicesPageContent: React.FC = () => {
             starCount={5}
           />
         </StyledIconContainer>
-        <ServicesMainTitle id="first-content">{`SZOLGÁLTATÁSAINK`}</ServicesMainTitle>
+        <ServicesMainTitle id="main-content">{`SZOLGÁLTATÁSAINK`}</ServicesMainTitle>
 
         <UniqueExternalContentContainer>
           <ReverseInternalContentContainer>
@@ -95,7 +95,7 @@ const ServicesPageContent: React.FC = () => {
             {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.`}
           </ContentBoxText>
 
-          <div id="middle-content"></div>
+          <div id="private-services"></div>
           <WaterSplash
             bottom={"430px"}
             bottomTablet={"-50px"}
@@ -172,7 +172,7 @@ const ServicesPageContent: React.FC = () => {
             {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.`}
           </ContentBoxText>
 
-          <div id="last-content"></div>
+          <div id="high-ceiling-services"></div>
           <RightSideWaterSplash
             bottom={"380px"}
             bottomTablet={"-250px"}

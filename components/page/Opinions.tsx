@@ -18,67 +18,52 @@ import {
 
 const Opinions: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
+  const opinionLeafs = systemContext?.contentRoot?.opinions?.leafs;
+  const textContent = opinionLeafs?.customerOpinions?.textContent;
+  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
+  const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
     <OpinionsMainContainer mobileHeight={"1400px"}>
-      <StyledLayer
-        src={
-          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_bottom.png"
-        }
-      />
+      <StyledLayer src={commonAssetUrls?.gradientBottom ?? ""} />
       <StyledMiddleLayer />
-      <RotateLayer
-        src={
-          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_bottom.png"
-        }
-      />
+      <RotateLayer src={commonAssetUrls?.gradientBottom ?? ""} />
 
       <StyledOpinionsIconContainer>
         <IconGroup
-          fill={systemContext?.theme?.palette?.stars?.white}
+          fill={systemContext?.theme?.palette?.stars?.white ?? ""}
           starCount={5}
         />
       </StyledOpinionsIconContainer>
 
-      <MainOpinionsTitle>{"VÉLEMÉNYEK"}</MainOpinionsTitle>
+      <MainOpinionsTitle>{textContent?.title ?? ""}</MainOpinionsTitle>
 
       <InternalOpinionsContentContainer>
         <ServiceEvaluatorContainer>
           <ServiceEvaluatorContainerImage
-            src={
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/person2.png"
-            }
+            src={commonAssetUrls?.stockPersonAvatar ?? ""}
           />
           <ServiceEvaluatorContainerText>
-            {
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit.consectetur adipiscing elit.consectetur adipiscing elit."
-            }
+            {textContent?.defaultCostumerOpinion ?? ""}
           </ServiceEvaluatorContainerText>
           <ServiceEvaluatorContainerName>
-            {"Lorem Ipsum"}
+            {textContent?.defaultCustomerName ?? ""}
           </ServiceEvaluatorContainerName>
         </ServiceEvaluatorContainer>
         <ServiceEvaluatorContainer>
           <ServiceEvaluatorContainerImage
-            src={
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/person2.png"
-            }
+            src={commonAssetUrls?.stockPersonAvatar ?? ""}
           />
           <ServiceEvaluatorContainerText>
-            {
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit.consectetur adipiscing elit.consectetur adipiscing elit."
-            }
+            {textContent?.defaultCostumerOpinion ?? ""}
           </ServiceEvaluatorContainerText>
           <ServiceEvaluatorContainerName>
-            {"Ipsum Lorem"}
+            {textContent?.defaultCustomerName ?? ""}
           </ServiceEvaluatorContainerName>
         </ServiceEvaluatorContainer>
       </InternalOpinionsContentContainer>
 
-      <StyledOpininsLogoImage
-        src="https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/logo/jeliza_logokit_jeliza_logo_submark.svg"
-        alt="logo"
-      />
+      <StyledOpininsLogoImage src={commonAssetUrls?.logo ?? ""} alt="logo" />
     </OpinionsMainContainer>
   );
 };

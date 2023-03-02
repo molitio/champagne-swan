@@ -19,11 +19,11 @@ type FormValues = {
 
 const ContactForm: React.FC<FormProps> = () => {
   const validationSchema = Yup.object().shape({
-    from_name: Yup.string().required("User name is required"),
+    from_name: Yup.string().required("Név megadása kötelező!"),
     from_email: Yup.string()
-      .email("Invalid email")
-      .required("Email is required"),
-    message: Yup.string().required("Message is required"),
+      .email("E-mail cím formátuma nem megfelelő!")
+      .required("E-mail cím megadása kötelező!"),
+    message: Yup.string().required("Szöveg megadása kötelező!"),
   });
 
   const initialValues: FormValues = {

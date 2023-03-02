@@ -2,8 +2,13 @@ export { StyledForm, StyledSelectForm } from "./StyledForm";
 export { IconContainer } from "./StyledIconContainer";
 export { ContactButton } from "./StyledContactButton";
 export { ImageContainer } from "./StyledImageContainer";
-export {StyledField, SyledInput, SyledTextArea, SyledSelectInput } from "./StyledInput";
-export {StyledFooter} from "./StyledFooter";
+export {
+  StyledField,
+  SyledInput,
+  SyledTextArea,
+  SyledSelectInput,
+} from "./StyledInput";
+export { StyledFooter } from "./StyledFooter";
 export {
   StyledImageContainer,
   RelativNav,
@@ -17,7 +22,6 @@ export {
   NavBarExtendedContainer,
   OpenLinksButtonContainer,
   OpenLinksButton,
-  StyledLogoPng
+  StyledLogoPng,
 } from "./StyledNavBar";
-
-import { Button, ArrowUp } from "./StyledScrollButton";
+export { StyledAnchor } from "./StyledAnchor";
