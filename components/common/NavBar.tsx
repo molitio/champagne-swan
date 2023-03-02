@@ -70,7 +70,7 @@ const NavBar: React.FC = () => {
               ? Object.keys(navTree).map((branch) => (
                   <Link
                     key={branch}
-                    href={navTree[branch].path}
+                    href={navTree[branch]?.path}
                     className="nav-text"
                   >
                     <StyledNavLink>{`${navTree[branch].label}`} </StyledNavLink>
@@ -106,7 +106,7 @@ const NavBar: React.FC = () => {
         <NavBarExtendedContainer>
           {navBarExpanded ?? navTree
             ? Object.keys(navTree).map((branch) => (
-                <Link key={branch} href={navTree[branch].path}>
+                <Link key={branch} href={navTree[branch]?.path ?? ""}>
                   <ExtendedStyledNavLink
                     onClick={(e: React.MouseEvent) => {
                       setNavBarExpanded?.(

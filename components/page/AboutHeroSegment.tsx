@@ -40,7 +40,10 @@ const HeroSegment: React.FC = () => {
               anotherTitle={"MINŐSÉGI SZOLGÁLTATÁS"}
               callToAction={
                 <StyledButtonContainer>
-                  <Link key={navTree.contact.path} href={navTree.contact.path}>
+                  <Link
+                    key={navTree?.contact?.path ?? ""}
+                    href={navTree?.contact?.path ?? ""}
+                  >
                     <HeroContactLink className="hiro-content">
                       {`Kapcsolat`}
                     </HeroContactLink>

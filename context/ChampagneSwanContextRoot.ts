@@ -5,6 +5,10 @@ export const ChampagneSwanContextRoot = {
       label: "Home",
       path: "/",
     },
+    services: {
+      label: "Szolgáltatások",
+      path: "/services",
+    },
   },
   contentRoot: {
     home: {
