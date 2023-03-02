@@ -23,14 +23,15 @@ import { SystemContext } from "@molitio/ui-core";
 
 const NavBar: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
-  const systemContext = React.useContext(SystemContext);
+  const navBarExpanded = champagneSwanContext?.interactive?.navBarExpanded;
   const setNavBarExpanded = champagneSwanContext.interactive.setNavBarExpanded;
-  const navBarExpanded = champagneSwanContext.interactive.navBarExpanded;
+
+  const systemContext = React.useContext(SystemContext);
   const navTree = systemContext?.navRoot ?? {};
+  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
+  const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   const [user, loading] = useAuthState(auth);
-
-  // write a const function and a state variable to handle isLoginWindowOpen and setIsLoginWindowOpen
 
   const [isLoginWindowOpen, setIsLoginWindowOpen] = React.useState(false);
 
@@ -41,7 +42,7 @@ const NavBar: React.FC = () => {
   if (typeof window !== "undefined") {
     window.addEventListener("resize", function () {
       if (window.innerWidth > 834 && navBarExpanded === true) {
-        setNavBarExpanded?.(!champagneSwanContext.interactive.navBarExpanded);
+        setNavBarExpanded?.(!champagneSwanContext?.interactive?.navBarExpanded);
       }
     });
   }
@@ -60,7 +61,7 @@ const NavBar: React.FC = () => {
         <NavBarInnerContainer>
           <StyledImageContainer>
             <StyledLogoPng
-              src="https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/logo/jeliza_logokit_jeliza_logo_horizontal.svg"
+              src={commonAssetUrls?.horizontalLogo ?? ""}
               alt="logo"
             />
           </StyledImageContainer>
@@ -80,7 +81,7 @@ const NavBar: React.FC = () => {
             <OpenLinksButtonContainer
               onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
                 setNavBarExpanded?.(
-                  !champagneSwanContext.interactive.navBarExpanded
+                  !champagneSwanContext?.interactive?.navBarExpanded
                 );
               }}
             >
@@ -110,7 +111,7 @@ const NavBar: React.FC = () => {
                   <ExtendedStyledNavLink
                     onClick={(e: React.MouseEvent) => {
                       setNavBarExpanded?.(
-                        !champagneSwanContext.interactive.navBarExpanded
+                        !champagneSwanContext?.interactive?.navBarExpanded
                       );
                     }}
                   >

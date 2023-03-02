@@ -25,8 +25,8 @@ const ServicesHomeContent: React.FC = () => {
   const navLeafs = navTree?.services?.leafs;
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
   const servicesLeafs = systemContext?.contentRoot?.services?.leafs;
-  const textContent = servicesLeafs?.cover?.textContent;
-  const assetUrls = servicesLeafs?.cover?.assetUrls;
+  const textContent = servicesLeafs?.home?.textContent;
+  const assetUrls = servicesLeafs?.home?.assetUrls;
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (

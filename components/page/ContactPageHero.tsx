@@ -1,8 +1,6 @@
-import { SystemContext } from "@molitio/ui-core";
 import React from "react";
+import { SystemContext } from "@molitio/ui-core";
 import { ChampagneSwanContext } from "../context";
-import { SimpledLayer } from "./style";
-
 import {
   StyledLayerSegment,
   RotatedLayer,
@@ -15,29 +13,23 @@ import {
 
 const ContactPageHero: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
-  const systemContext = React.useContext(SystemContext);
-  const navTree = systemContext?.navRoot ?? {};
-  const navBarExpanded = champagneSwanContext.interactive.navBarExpanded;
+  const navBarExpanded = champagneSwanContext?.interactive?.navBarExpanded;
 
-  const content = `Írjon Nekünk az alábbi kapcsolati űrlapon keresztül vagy vegye fel velünk a kapcsolatot az alábbi elérhetőségek egyikén!`;
+  const systemContext = React.useContext(SystemContext);
+  const contactLeafs = systemContext?.contentRoot?.contact?.leafs;
+  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
+  const textContent = contactLeafs?.contactInfo?.textContent;
+  const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
     <ContactStyledImg>
-      <ImageLayer
-        src={
-          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_top.png"
-        }
-      />
-      <RotatedLayer
-        src={
-          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_top.png"
-        }
-      />
+      <ImageLayer src={commonAssetUrls?.gradientTop ?? ""} />
+      <RotatedLayer src={commonAssetUrls?.gradientTop ?? ""} />
       <StyledLayerSegment>
         {!navBarExpanded ? (
           <StyledHeroSegmentContainer>
-            <MainTitle>{"KAPCSOLAT"}</MainTitle>
-            <FormText>{content}</FormText>
+            <MainTitle>{textContent?.title ?? ""}</MainTitle>
+            <FormText>{textContent?.formText ?? ""}</FormText>
           </StyledHeroSegmentContainer>
         ) : null}
       </StyledLayerSegment>

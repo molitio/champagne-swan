@@ -1,4 +1,5 @@
 import React from "react";
+import { SystemContext } from "@molitio/ui-core";
 import { IconGroup, StyledAnchor, ContactForm } from "../common";
 import {
   ContactContainer,
@@ -12,11 +13,9 @@ import {
   ResponsiveFormBox,
   FormText,
 } from "./style";
-import { SystemContext } from "@molitio/ui-core";
 
 const ContactContent: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
-
   const contactLeafs = systemContext?.contentRoot?.contact?.leafs;
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
   const textContent = contactLeafs?.contactInfo?.textContent;

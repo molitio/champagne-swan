@@ -1,5 +1,5 @@
-import { SystemContext } from "@molitio/ui-core";
 import React from "react";
+import { SystemContext } from "@molitio/ui-core";
 import { IconGroup } from "../common";
 import { ImageBox } from "../common/ImageBox";
 import {
@@ -18,6 +18,11 @@ import {
 
 const AboutPremiumQuality: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
+  const aboutLeafs = systemContext?.contentRoot?.about?.leafs;
+  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
+  const textContent = aboutLeafs?.premiumQuality?.textContent;
+  const assetUrls = aboutLeafs?.premiumQuality?.assetUrls;
+  const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
     <AboutPQBackgroundLayerContainer>
@@ -27,11 +32,17 @@ const AboutPremiumQuality: React.FC = () => {
           starCount={5}
         />
       </StyledPremiumQualityIconContainer>
-      <AboutPremiumQualityTitle>{"ISMERJEN MEG"}</AboutPremiumQualityTitle>
-      <AboutPremiumQualityTitle>{"BENNÜNKET"}</AboutPremiumQualityTitle>
+      <AboutPremiumQualityTitle>
+        {textContent?.title ?? ""}
+      </AboutPremiumQualityTitle>
+      <AboutPremiumQualityTitle>
+        {textContent?.subTitle ?? ""}
+      </AboutPremiumQualityTitle>
       <AboutQuoteContainer>
-        <AboutQuote>{`"A minőség azt jelenti, hogy akkor is jól csinálsz valamit amikor nem látják."`}</AboutQuote>
-        <AboutQuoteAuthor>{`Henry Ford`}</AboutQuoteAuthor>
+        <AboutQuote>{textContent?.aboutQuote}</AboutQuote>
+        <AboutQuoteAuthor>
+          {textContent?.aboutQuoteAuthor ?? ""}
+        </AboutQuoteAuthor>
       </AboutQuoteContainer>
       <AboutPremiumQualityContainer>
         <AboutPremiumQualityContentText
@@ -43,14 +54,13 @@ const AboutPremiumQuality: React.FC = () => {
           smallMobileFonsize={"18px"}
           smallMobileWidth={"300px"}
         >
-          {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Cras convallis, elit in efficitur tristique, metus metus semper massa, consequat convallis orci diam quis massa. Integer varius laoreet augue sed mollis. Curabitur id scelerisque lacus, non pellentesque tellus. Cras molestie, ligula rutrum convallis placerat, arcu ante sollicitudin elit, pretium interdum sapien tortor nec urna. Cras molestie auctor nisi, nec fringilla nisl vulputate gravida. Suspendisse potenti. Morbi eu posuere leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse quis neque mollis, porta turpis in, fermentum lectus.`}
+          {textContent?.premiumQualityContentText ?? ""}
         </AboutPremiumQualityContentText>
       </AboutPremiumQualityContainer>
       <AboutPremiumQualityImageBox>
         <ImageBox
           imageBoxParams={{
-            imageUrl:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/mop.jpg",
+            imageUrl: assetUrls?.mop ?? "",
             positioning: {
               margin: "30px 15px 15px 15px",
               tablet: { margin: "30px 0 0 0" },
@@ -75,8 +85,7 @@ const AboutPremiumQuality: React.FC = () => {
         />
         <ImageBox
           imageBoxParams={{
-            imageUrl:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/colleague.jpg",
+            imageUrl: assetUrls?.colleague ?? "",
             positioning: {
               margin: "30px 15px 15px 15px",
               tablet: { margin: "30px 0 0 0" },
@@ -101,8 +110,7 @@ const AboutPremiumQuality: React.FC = () => {
         />
         <ImageBox
           imageBoxParams={{
-            imageUrl:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/machine.jpg",
+            imageUrl: assetUrls?.machine ?? "",
             positioning: {
               margin: "30px 15px 15px 15px",
               tablet: { margin: "30px 0 0 0" },
@@ -128,17 +136,13 @@ const AboutPremiumQuality: React.FC = () => {
       </AboutPremiumQualityImageBox>
 
       <AboutPremiumQualityWaterSplash
-        src={
-          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png"
-        }
+        src={commonAssetUrls?.waterSplash ?? ""}
       />
       <RotateLayer
         position={"relative"}
         top={"-20px"}
         tabletTop={"-13px"}
-        src={
-          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_bottom.png"
-        }
+        src={commonAssetUrls?.gradientBottom ?? ""}
       />
     </AboutPQBackgroundLayerContainer>
   );

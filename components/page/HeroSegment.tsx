@@ -1,8 +1,9 @@
 import React from "react";
+import Link from "next/link";
+import { SystemContext } from "@molitio/ui-core";
 import HeroSegmentContent from "./HeroSegmentContent";
 import { ChampagneSwanContext } from "../context";
-import { IconGroup } from "../common/IconGroup";
-import Link from "next/link";
+import { IconGroup } from "../common";
 import {
   StyledLayerSegment,
   RotatedLayer,
@@ -13,13 +14,12 @@ import {
   HeroContactLink,
   StyledButtonContainer,
 } from "./style";
-import { SystemContext } from "@molitio/ui-core";
 
 const HeroSegment: React.FC = () => {
-  const systemContext = React.useContext(SystemContext);
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
-
   const navBarExpanded = champagneSwanContext?.interactive?.navBarExpanded;
+
+  const systemContext = React.useContext(SystemContext);
   const navTree = systemContext?.navRoot ?? {};
   const heroLeafs = systemContext?.contentRoot?.home?.leafs;
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
@@ -44,6 +44,7 @@ const HeroSegment: React.FC = () => {
             />
             <HeroSegmentContent
               title={textContent?.title ?? ""}
+              // TODO: this needs to be a Higher Order Functionality this is an adhoc solution, first discovered to solve new line from plain text
               description={textContent?.description.replace(/\\n/g, "\n") ?? ""}
               callToAction={
                 <StyledButtonContainer>
