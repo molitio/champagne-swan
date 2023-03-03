@@ -1,5 +1,6 @@
+import React from "react";
 import { ImageBox } from "../common/ImageBox";
-import { IconGoldGroup } from "../common/IconGroups";
+import { IconGroup } from "../common/IconGroup";
 import {
   StyledIconContainer,
   ServicesMainTitle,
@@ -15,8 +16,18 @@ import {
   RightSideWaterSplash,
   SimpledLayer,
 } from "./style";
+import { SystemContext } from "@molitio/ui-core";
 
 const ServicesPageContent: React.FC = () => {
+  const systemContext = React.useContext(SystemContext);
+  const navTree = systemContext?.navRoot ?? {};
+  const navLeafs = navTree?.services?.leafs;
+  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
+  const servicesLeafs = systemContext?.contentRoot?.services?.leafs;
+  const textContent = servicesLeafs?.content?.textContent;
+  const assetUrls = servicesLeafs?.content?.assetUrls;
+  const commonAssetUrls = commonLeafs?.images?.assetUrls;
+
   return (
     <>
       <ServicesMainContainer
@@ -25,22 +36,20 @@ const ServicesPageContent: React.FC = () => {
         tabletHeight={"4500px"}
       >
         <StyledIconContainer mobilePaddingTop={"40em"}>
-          <IconGoldGroup
-            fill={""}
-            dx={"0"}
-            dy={"0"}
-            stdDeviation={"0"}
-            floodOpacity={"0"}
+          <IconGroup
+            fill={systemContext?.theme?.palette?.stars?.gold ?? ""}
+            starCount={5}
           />
         </StyledIconContainer>
-        <ServicesMainTitle id="first-content">{`SZOLGÁLTATÁSAINK`}</ServicesMainTitle>
+        <ServicesMainTitle id="main-content">
+          {textContent?.title ?? ""}
+        </ServicesMainTitle>
 
         <UniqueExternalContentContainer>
           <ReverseInternalContentContainer>
             <ImageBox
               imageBoxParams={{
-                imageUrl:
-                  "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/officecleaners.jpg",
+                imageUrl: assetUrls?.officeCleaners ?? "",
                 dimensions: {
                   height: "350px",
                   width: "490px",
@@ -66,9 +75,11 @@ const ServicesPageContent: React.FC = () => {
             />
 
             <ContentBox>
-              <ContentBoxTitle>{`Szállodák és irodaházak takarítása`}</ContentBoxTitle>
+              <ContentBoxTitle>
+                {textContent?.officeCleaningTitle ?? ""}
+              </ContentBoxTitle>
               <ContentBoxText>
-                {`Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is`}
+                {textContent?.officeCleaningText ?? ""}
               </ContentBoxText>
               <ContentBoxText
                 width={"535px"}
@@ -79,11 +90,12 @@ const ServicesPageContent: React.FC = () => {
                 displayTablet={"block"}
                 paddingTablet={"20px 0px 0px 0px"}
               >
-                {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.`}
+                {textContent?.officeCleaningInfo ?? ""}
               </ContentBoxText>
             </ContentBox>
           </ReverseInternalContentContainer>
 
+          {/* TODO: fix layout to display text content on all devices */}
           <ContentBoxText
             width={"1050px"}
             margin={"0px auto 0px auto"}
@@ -92,10 +104,10 @@ const ServicesPageContent: React.FC = () => {
             displayTablet={"none"}
             displayMobile={"none"}
           >
-            {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.`}
+            {textContent?.officeCleaningExtendedInfo ?? ""}
           </ContentBoxText>
 
-          <div id="middle-content"></div>
+          <div id="private-services"></div>
           <WaterSplash
             bottom={"430px"}
             bottomTablet={"-50px"}
@@ -104,9 +116,7 @@ const ServicesPageContent: React.FC = () => {
             rightMobile={"170px"}
             bottomMobile={"-170px"}
             bottomSmallMobile={"-470px"}
-            src={
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png"
-            }
+            src={commonAssetUrls?.waterSplash ?? ""}
           />
         </UniqueExternalContentContainer>
 
@@ -117,9 +127,11 @@ const ServicesPageContent: React.FC = () => {
             smallMobileTop={"550px"}
           >
             <ContentBox>
-              <ContentBoxTitle>{`Magánszemélyeknél végzett takarítás`}</ContentBoxTitle>
+              <ContentBoxTitle>
+                {textContent?.personalCleaningTitle ?? ""}
+              </ContentBoxTitle>
               <ContentBoxText>
-                {`Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is`}
+                {textContent?.personalCleaningText ?? ""}
               </ContentBoxText>
               <ContentBoxText
                 width={"535px"}
@@ -130,13 +142,12 @@ const ServicesPageContent: React.FC = () => {
                 displayTablet={"block"}
                 paddingTablet={"20px 0px 0px 0px"}
               >
-                {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.`}
+                {textContent?.personalCleaningInfo ?? ""}
               </ContentBoxText>
             </ContentBox>
             <ImageBox
               imageBoxParams={{
-                imageUrl:
-                  "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/flatroom.jpg",
+                imageUrl: assetUrls?.flatRoom ?? "",
                 dimensions: {
                   height: "397px",
                   width: "556px",
@@ -169,20 +180,17 @@ const ServicesPageContent: React.FC = () => {
             displayTablet={"none"}
             displayMobile={"none"}
           >
-            {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.`}
+            {textContent?.personalCleaningExtendedInfo ?? ""}
           </ContentBoxText>
 
-          <div id="last-content"></div>
+          <div id="high-ceiling-services"></div>
           <RightSideWaterSplash
             bottom={"380px"}
             bottomTablet={"-250px"}
             bottomMobile={"-420px"}
             bottomSmallMobile={"-1020px"}
             leftSmallMobile={"0px"}
-       
-            src={
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png"
-            }
+            src={commonAssetUrls?.waterSplash ?? ""}
           />
         </ExternalContentContainer>
         <ExternalContentContainer>
@@ -193,8 +201,7 @@ const ServicesPageContent: React.FC = () => {
           >
             <ImageBox
               imageBoxParams={{
-                imageUrl:
-                  "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/industrial.jpg",
+                imageUrl: assetUrls?.industrial ?? "",
                 dimensions: {
                   height: "396px",
                   width: "529px",
@@ -220,9 +227,11 @@ const ServicesPageContent: React.FC = () => {
             />
 
             <ContentBox>
-              <ContentBoxTitle>{`Nagy belmagasságú épületek takarítása`}</ContentBoxTitle>
+              <ContentBoxTitle>
+                {textContent?.highCeilingTitle ?? ""}
+              </ContentBoxTitle>
               <ContentBoxText>
-                {`Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is`}
+                {textContent?.highCeilingText ?? ""}
               </ContentBoxText>
               <ContentBoxText
                 width={"535px"}
@@ -233,7 +242,7 @@ const ServicesPageContent: React.FC = () => {
                 displayTablet={"block"}
                 paddingTablet={"20px 0px 0px 0px"}
               >
-                {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.`}
+                {textContent?.highCeilingInfo ?? ""}
               </ContentBoxText>
             </ContentBox>
           </ReverseInternalContentContainer>
@@ -245,7 +254,7 @@ const ServicesPageContent: React.FC = () => {
             displayTablet={"none"}
             displayMobile={"none"}
           >
-            {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.`}
+            {textContent?.highCeilingExtendedInfo ?? ""}
           </ContentBoxText>
           <WaterSplash
             bottom={"380px"}
@@ -254,18 +263,11 @@ const ServicesPageContent: React.FC = () => {
             bottomSmallMobile={"-1470px"}
             right={""}
             rightTablet={""}
-            src={
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png"
-            }
+            src={commonAssetUrls?.waterSplash ?? ""}
           />
         </ExternalContentContainer>
       </ServicesMainContainer>
-      <SimpledLayer
-        top={"4px"}
-        src={
-          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_bottom.png"
-        }
-      />
+      <SimpledLayer top={"4px"} src={commonAssetUrls?.gradientBottom ?? ""} />
     </>
   );
 };

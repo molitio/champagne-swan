@@ -22,10 +22,9 @@ const SelectForm: React.FC = () => {
     input3Value: "",
   });
 
-console.log(inputFields.input1Value);
-console.log(inputFields.input2Value);
-console.log(inputFields.input3Value);
-
+  console.log(inputFields.input1Value);
+  console.log(inputFields.input2Value);
+  console.log(inputFields.input3Value);
 
   const [result, setResult] = useState<number>(0);
 
@@ -38,13 +37,12 @@ console.log(inputFields.input3Value);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
   };
 
   const options1 = ["Select interface!", 10, 400, 600, 800];
   const options2 = ["Select interface!", 100, 500, 1000, 2000];
   return (
-    <StyledSelectForm onSubmit={handleSubmit} margin={"8em 0 0 0"} >
+    <StyledSelectForm onSubmit={handleSubmit} margin={"8em 0 0 0"}>
       <StyledFormContainer>
         <div>
           <Input
@@ -83,7 +81,7 @@ console.log(inputFields.input3Value);
         </div>
       </StyledFormContainer>
       <StyledServicesButtonContainer>
-        <ContactButton type="submit"  className="hiro-content">
+        <ContactButton type="submit" className="hero-content">
           {"Számol"}
         </ContactButton>
         <ServicesWaterSplash

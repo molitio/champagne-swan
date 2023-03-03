@@ -1,4 +1,5 @@
 import React from "react";
+import { SystemContext } from "@molitio/ui-core";
 import {
   OurPartnersContainer,
   OurPartnersTitle,
@@ -7,49 +8,35 @@ import {
   PartnerImg,
   HouseLogo,
   BrandLogo,
-  SimpledLayer                                              
+  SimpledLayer,
 } from "./style";
 
 const OurPartnersContent: React.FC = () => {
+  const systemContext = React.useContext(SystemContext);
+  const partnersLeafs = systemContext?.contentRoot?.partners?.leafs;
+  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
+  const textContent = partnersLeafs?.cover?.textContent;
+  const assetUrls = partnersLeafs?.cover?.assetUrls;
+  const commonAssetUrls = commonLeafs?.images?.assetUrls;
+
   return (
     <OurPartnersContainer>
-      <OurPartnersTitle>{"PARTNEREINK"}</OurPartnersTitle>
+      <OurPartnersTitle>{textContent?.title ?? ""}</OurPartnersTitle>
       <OurPartnersContentContainer>
         <PartnersImageContainer>
-          <PartnerImg
-            src={
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/mlogo.png"
-            }
-          />
+          <PartnerImg src={assetUrls?.mLogo ?? ""} />
         </PartnersImageContainer>
         <PartnersImageContainer>
-          <HouseLogo
-            src={
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/houselogo.png"
-            }
-          />
+          <HouseLogo src={assetUrls?.houseLogo ?? ""} />
         </PartnersImageContainer>
         <PartnersImageContainer>
-          <BrandLogo
-            src={
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/brand.png"
-            }
-          />
+          <BrandLogo src={assetUrls?.brandLogo ?? ""} />
         </PartnersImageContainer>
         <PartnersImageContainer>
-          <PartnerImg
-            src={
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/officelogo.png"
-            }
-          />
+          <PartnerImg src={assetUrls?.officeLogo ?? ""} />
         </PartnersImageContainer>
       </OurPartnersContentContainer>
-      <SimpledLayer
-        top={"4px"}
-        src={
-          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_bottom.png"
-        }
-      />
+      <SimpledLayer top={"4px"} src={commonAssetUrls?.gradientBottom ?? ""} />
     </OurPartnersContainer>
   );
 };

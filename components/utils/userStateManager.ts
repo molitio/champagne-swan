@@ -8,6 +8,22 @@ const provider = new GoogleAuthProvider();
 
 const signIn = async () => {
   const result = await signInWithPopup(auth, provider);
+  if (result.user) {
+    const { displayName, email, uid } = result.user;
+    console.log({ displayName, email, uid });
+
+    const response = await fetch("/api/user", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: "Alice",
+        email: "hello@email.com",
+        secretHash: "secret",
+      }),
+    });
+  }
 };
 
 const signOut = async () => {

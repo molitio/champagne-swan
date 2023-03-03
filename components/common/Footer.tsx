@@ -1,11 +1,17 @@
 import React from "react";
-import styled from "styled-components";
+import { SystemContext } from "@molitio/ui-core";
 import { StyledFooter } from "./style/StyledFooter";
 
 const Footer: React.FC = () => {
-return(
-<StyledFooter className="footer">{`© 2022 All Rights Reserved | molitio llc`}</StyledFooter>
-  )
-}
+  const systemContext = React.useContext(SystemContext);
+  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
+  const commonTextContent = commonLeafs?.footer?.textContent;
+
+  return (
+    <StyledFooter className="footer">
+      {commonTextContent?.maintainer ?? ""}
+    </StyledFooter>
+  );
+};
 
 export default Footer;
