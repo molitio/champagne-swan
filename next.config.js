@@ -6,7 +6,15 @@ const nextConfig = {
     styledComponents: true,
   },
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false,
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**.amazonaws.com",
+      },
+    ],
   },
   async headers() {
     console.log("headers nonce", process.env.NONCE);
@@ -73,17 +81,6 @@ const nextConfig = {
         ],
       },
     ];
-  },
-  experimental: {
-    images: {
-      remotePatterns: [
-        {
-          protocol: "https",
-          hostname: "s3.eu-west-1.amazonaws.com",
-          pathname: "/filestore.molitio.orgchampagne-swan/web-content/**/*",
-        },
-      ],
-    },
   },
 };
 

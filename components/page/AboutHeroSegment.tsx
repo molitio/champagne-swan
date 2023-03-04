@@ -12,7 +12,9 @@ import {
   StyledHeroSegmentContainer,
   HeroContactLink,
   StyledButtonContainer,
+  StyledNextImage,
 } from "./style";
+import { StyledLinearGradient } from "../common";
 
 const AboutHeroSegment: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
@@ -21,14 +23,22 @@ const AboutHeroSegment: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
   const navTree = systemContext?.navRoot ?? {};
   const aboutLeafs = systemContext?.contentRoot?.about?.leafs;
+  const assetUrls = aboutLeafs?.cover?.assetUrls;
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
   const textContent = aboutLeafs?.cover?.textContent;
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
-    <StyledAboutImg>
-      <ImageLayer src={commonAssetUrls?.gradientBottom ?? ""} />
-      <RotatedLayer src={commonAssetUrls?.gradientTop ?? ""} />
+    <>
+      <StyledNextImage src={assetUrls?.cleaners ?? ""} layout={"fill"} />
+      {/*   <ImageLayer src={commonAssetUrls?.gradientBottom ?? ""} /> */}
+      {/*      <StyledLinearGradient
+        direction="bottom"
+        variation="partial"
+        opacity={1}
+      /> */}
+      {/*       <RotatedLayer src={commonAssetUrls?.gradientTop ?? ""} /> */}
+
       <StyledLayerSegment>
         {!navBarExpanded ? (
           <StyledHeroSegmentContainer>
@@ -53,7 +63,7 @@ const AboutHeroSegment: React.FC = () => {
           </StyledHeroSegmentContainer>
         ) : null}
       </StyledLayerSegment>
-    </StyledAboutImg>
+    </>
   );
 };
 
