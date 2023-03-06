@@ -1,10 +1,11 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 export const StyledImageContainer = styled.div`
   margin-left: 2em;
 `;
 
-export const RelativNav = styled.div`
+export const RelativeNav = styled.div`
   position: absolute;
   margin-top: -100px;
   top: 100px;
@@ -22,16 +23,15 @@ export const NavBarContainer = styled.div`
   z-index: 1000;
 `;
 
-export const StyledNavLink = styled.a`
-
+export const StyledNavLink = styled(Link)`
   cursor: pointer;
-  font-family: 'Fahkwang', sans-serif;
+  font-family: "Fahkwang", sans-serif;
   font-weight: 400;
   color: #0c7b93;
   margin: 0em 1.7em 0 0;
   font-size: 24px;
   font-style: normal;
- 
+  text-decoration: none;
 
   :hover {
     text-decoration: underline;
@@ -43,15 +43,14 @@ export const StyledNavLink = styled.a`
 `;
 
 export const ExtendedStyledNavLink = styled.a`
-
-position: relative;
+  position: relative;
   cursor: pointer;
-   color: #0c7b93;
+  color: #0c7b93;
   text-decoration: none;
   margin: 2em 0 0 0;
   font-size: 24px;
   font-style: normal;
-  font-family: 'Fahkwang', sans-serif;
+  font-family: "Fahkwang", sans-serif;
   font-weight: 400;
   z-index: 1000;
   :hover {

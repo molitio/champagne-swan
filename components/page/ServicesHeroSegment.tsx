@@ -53,15 +53,12 @@ const ServicesHeroSegment: React.FC = (props) => {
               {/* TODO: fix select form */}
               {/*         <SelectForm /> */}
               <StyledButtonContainer>
-                <Link
+                <HeroContactLink
                   key={assetUrls?.cover ?? ""}
                   href={assetUrls?.cover ?? ""}
                 >
-                  <HeroContactLink>
-                    {textContent?.introCta ?? ""}
-                  </HeroContactLink>
-                </Link>
-
+                  {textContent?.introCta ?? ""}
+                </HeroContactLink>
                 <ServicesWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
               </StyledButtonContainer>
             </ServicesHeroSegmentContainer>

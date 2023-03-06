@@ -274,6 +274,10 @@ export const ChampagneSwanContextRoot = {
             subTitle: "MINŐSÉGI SZOLGÁLTATÁS",
             contactLinkText: "Kapcsolat",
           },
+          assetUrls: {
+            cleaners:
+              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cleaners.jpg",
+          },
         },
         opinions: {
           textContent: {

@@ -12,7 +12,9 @@ import {
   StyledHeroSegmentContainer,
   HeroContactLink,
   StyledButtonContainer,
+  StyledNextImage,
 } from "./style";
+import { StyledLinearGradient } from "../common";
 
 const AboutHeroSegment: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
@@ -21,10 +23,28 @@ const AboutHeroSegment: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
   const navTree = systemContext?.navRoot ?? {};
   const aboutLeafs = systemContext?.contentRoot?.about?.leafs;
+  const assetUrls = aboutLeafs?.cover?.assetUrls;
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
   const textContent = aboutLeafs?.cover?.textContent;
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
+  /*     <>
+      <StyledNextImage
+        src={assetUrls?.cleaners ?? ""}
+        alt={"cover-image"}
+        fill
+      /> */
+  {
+    /*   <ImageLayer src={commonAssetUrls?.gradientBottom ?? ""} /> */
+  }
+  /*       <StyledLinearGradient
+        direction="bottom"
+        variation="partial"
+        opacity={1}
+      /> */
+  {
+    /*       <RotatedLayer src={commonAssetUrls?.gradientTop ?? ""} /> */
+  }
   return (
     <StyledAboutImg>
       <ImageLayer src={commonAssetUrls?.gradientBottom ?? ""} />
@@ -37,15 +57,13 @@ const AboutHeroSegment: React.FC = () => {
               subTitle={textContent?.subTitle ?? ""}
               callToAction={
                 <StyledButtonContainer>
-                  <Link
+                  <HeroContactLink
+                    className="hero-content"
                     key={navTree?.contact?.path ?? ""}
                     href={navTree?.contact?.path ?? ""}
                   >
-                    <HeroContactLink className="hero-content">
-                      {textContent?.contactLinkText ?? ""}
-                    </HeroContactLink>
-                  </Link>
-
+                    {textContent?.contactLinkText ?? ""}
+                  </HeroContactLink>
                   <HeroWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
                 </StyledButtonContainer>
               }
@@ -55,6 +73,10 @@ const AboutHeroSegment: React.FC = () => {
       </StyledLayerSegment>
     </StyledAboutImg>
   );
+  {
+    /* </StyledLayerSegment>
+    </> */
+  }
 };
 
 export default AboutHeroSegment;

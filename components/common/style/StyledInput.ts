@@ -12,14 +12,16 @@ type StyledInputProps = {
   placeholder?: string;
   placeholdercolor?: string;
   options?: (number | string)[];
+  padding?: string;
 };
 
 export const StyledField = styled(Field)<StyledInputProps>`
-  position: ${(props) => props.position || "relative"};
-  margin: ${(props) => props.margin || "0px 0px 0px 0px"};
-  height: ${(props) => props.height || "80px"};
-  width: ${(props) => props.width || "486px"};
-  border: ${(props) => props.border || "solid 1px #0C7B93"};
+  position: ${(props) => props.position ?? "relative"};
+  margin: ${(props) => props.margin ?? "0px 0px 0px 0px"};
+  height: ${(props) => props.height ?? "80px"};
+  width: ${(props) => props.width ?? "486px"};
+  border: ${(props) => props.border ?? "1px solid #0C7B93"};
+  padding: ${(props) => props.padding ?? "0px 0px 0px 0px"};
   background-color: white;
   &::placeholder {
     padding-top: 10px;
@@ -32,7 +34,7 @@ export const StyledField = styled(Field)<StyledInputProps>`
     outline: none !important;
   }
 
-    @media (max-width: 665px) {
+  @media (max-width: 665px) {
     width: 280px;
   }
 `;
@@ -76,7 +78,7 @@ export const SyledTextArea = styled.textarea<StyledInputProps>`
   :focus {
     outline: none !important;
   }
-   @media (max-width: 665px) {
+  @media (max-width: 665px) {
     width: 320px;
   }
 `;
@@ -96,7 +98,7 @@ export const SyledSelectInput = styled.select<StyledInputProps>`
   :focus {
     outline: none !important;
   }
-   @media (max-width: 665px) {
+  @media (max-width: 665px) {
     width: 280px;
   }
 `;

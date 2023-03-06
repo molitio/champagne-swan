@@ -1,3 +1,2 @@
-
-export { StyledCloseIconSVG } from './StyledCloseIcon';
-export { StyledStarSvgIcon } from './StyledStarSvgIcon';
+export * from "./StyledCloseIcon";
+export * from "./StyledStarSvgIcon";

@@ -48,15 +48,12 @@ const HeroSegment: React.FC = () => {
               description={textContent?.description.replace(/\\n/g, "\n") ?? ""}
               callToAction={
                 <StyledButtonContainer>
-                  <Link
+                  <HeroContactLink
                     key={navTree?.contact?.path ?? ""}
                     href={navTree?.contact?.path ?? ""}
                   >
-                    <HeroContactLink>
-                      {textContent?.moreInfoButton ?? ""}
-                    </HeroContactLink>
-                  </Link>
-
+                    {textContent?.moreInfoButton ?? ""}
+                  </HeroContactLink>
                   <HeroWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
                 </StyledButtonContainer>
               }

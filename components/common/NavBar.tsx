@@ -4,7 +4,7 @@ import { CloseIcon, MenuIcon } from "../svg";
 import Link from "next/link";
 import {
   StyledImageContainer,
-  RelativNav,
+  RelativeNav,
   NavBarContainer,
   StyledNavLink,
   ExtendedStyledNavLink,
@@ -56,7 +56,7 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <RelativNav>
+    <RelativeNav>
       <NavBarContainer>
         <NavBarInnerContainer>
           <StyledImageContainer>
@@ -69,13 +69,13 @@ const NavBar: React.FC = () => {
           <RightContainer>
             {navTree
               ? Object.keys(navTree).map((branch) => (
-                  <Link
+                  <StyledNavLink
                     key={branch}
                     href={navTree[branch]?.path}
                     className="nav-text"
                   >
-                    <StyledNavLink>{`${navTree[branch].label}`} </StyledNavLink>
-                  </Link>
+                    {`${navTree[branch].label}`}{" "}
+                  </StyledNavLink>
                 ))
               : null}
             <OpenLinksButtonContainer
@@ -122,7 +122,7 @@ const NavBar: React.FC = () => {
             : null}
         </NavBarExtendedContainer>
       </NavBarContainer>
-    </RelativNav>
+    </RelativeNav>
   );
 };
 

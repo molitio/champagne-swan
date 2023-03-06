@@ -90,9 +90,11 @@ const ContactForm: React.FC<FormProps> = () => {
             type="text"
             placeholder={textContent?.namePlaceholder ?? ""}
             name="from_name"
+            padding={"0 0 0 1rem"}
           />
           <StyledField
             margin={"43px 0px 0px 0px"}
+            padding={"0 0 0 1rem"}
             placeholdercolor={"#0C7B93"}
             type="email"
             placeholder={textContent?.emailPlaceholder ?? ""}
@@ -100,6 +102,7 @@ const ContactForm: React.FC<FormProps> = () => {
           />
           <StyledField
             margin={"43px 0px 43px 0px "}
+            padding={"1rem 0 0 1rem"}
             height={"320px"}
             placeholdercolor={"#0C7B93"}
             component="textarea"
