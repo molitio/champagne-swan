@@ -28,21 +28,27 @@ const AboutHeroSegment: React.FC = () => {
   const textContent = aboutLeafs?.cover?.textContent;
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
-  return (
-    <>
+  /*     <>
       <StyledNextImage
         src={assetUrls?.cleaners ?? ""}
         alt={"cover-image"}
         fill
-      />
-      {/*   <ImageLayer src={commonAssetUrls?.gradientBottom ?? ""} /> */}
-      <StyledLinearGradient
+      /> */
+  {
+    /*   <ImageLayer src={commonAssetUrls?.gradientBottom ?? ""} /> */
+  }
+  /*       <StyledLinearGradient
         direction="bottom"
         variation="partial"
         opacity={1}
-      />
-      {/*       <RotatedLayer src={commonAssetUrls?.gradientTop ?? ""} /> */}
-
+      /> */
+  {
+    /*       <RotatedLayer src={commonAssetUrls?.gradientTop ?? ""} /> */
+  }
+  return (
+    <StyledAboutImg>
+      <ImageLayer src={commonAssetUrls?.gradientBottom ?? ""} />
+      <RotatedLayer src={commonAssetUrls?.gradientTop ?? ""} />
       <StyledLayerSegment>
         {!navBarExpanded ? (
           <StyledHeroSegmentContainer>
@@ -51,15 +57,13 @@ const AboutHeroSegment: React.FC = () => {
               subTitle={textContent?.subTitle ?? ""}
               callToAction={
                 <StyledButtonContainer>
-                  <Link
+                  <HeroContactLink
+                    className="hero-content"
                     key={navTree?.contact?.path ?? ""}
                     href={navTree?.contact?.path ?? ""}
                   >
-                    <HeroContactLink className="hero-content">
-                      {textContent?.contactLinkText ?? ""}
-                    </HeroContactLink>
-                  </Link>
-
+                    {textContent?.contactLinkText ?? ""}
+                  </HeroContactLink>
                   <HeroWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
                 </StyledButtonContainer>
               }
@@ -67,8 +71,12 @@ const AboutHeroSegment: React.FC = () => {
           </StyledHeroSegmentContainer>
         ) : null}
       </StyledLayerSegment>
-    </>
+    </StyledAboutImg>
   );
+  {
+    /* </StyledLayerSegment>
+    </> */
+  }
 };
 
 export default AboutHeroSegment;
