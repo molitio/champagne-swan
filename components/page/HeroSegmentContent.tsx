@@ -4,29 +4,25 @@ import {
   StyledCallToAction,
   StyledMainTitle,
   StyledDescription,
-  StyledSecondaryTitle
+  StyledSecondaryTitle,
 } from "./style";
 
 interface HeroSegmentContentProps {
   title?: string;
-  anotherTitle?: string;
+  subTitle?: string;
   description?: string | React.ReactElement;
   callToAction?: React.ReactNode;
- 
-};
+}
 
 const HeroSegmentContent: React.FC<HeroSegmentContentProps> = (props) => {
-  const { title, description, callToAction, anotherTitle} = props;
+  const { title, description, callToAction, subTitle } = props;
 
   return (
     <StyledCoverContainer>
- 
-      <StyledMainTitle>{`${title}`}</StyledMainTitle>
-      <StyledSecondaryTitle >{`${anotherTitle}`}</StyledSecondaryTitle>
-      <StyledDescription>
-        {description}
-      </StyledDescription>
-      <StyledCallToAction>{callToAction}</StyledCallToAction>
+      <StyledMainTitle>{title ?? ""}</StyledMainTitle>
+      <StyledSecondaryTitle>{subTitle ?? ""}</StyledSecondaryTitle>
+      <StyledDescription>{description ?? ""}</StyledDescription>
+      <StyledCallToAction>{callToAction ?? ""}</StyledCallToAction>
     </StyledCoverContainer>
   );
 };

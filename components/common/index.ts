@@ -1,6 +1,9 @@
+export { default as IconGroup } from "./IconGroup";
 export { default as MuiThemeProvider } from "./MuiThemeProvider";
 export { default as Layout } from "./Layout";
-export { IconGoldGroup as IconGoldGroups}  from "./IconGroups";
-export { IconBlueGroup as IconBlueGroup }  from "./IconGroups";
-export { IconWhiteGroup as IconWhiteGroup } from "./IconGroups";
 export { default as ContactForm } from "./ContactForm";
+export { default as Button } from "./Button";
+export { default as NavBar } from "./NavBar";
+
+export * from "./types";
+export * from "./style";

@@ -15,7 +15,7 @@ interface InputProps<T> {
   position?: string;
   border?: string;
   placeholderColor?: string;
-  options?: ( number | string )[];
+  options?: (number | string)[];
 }
 
 const Input: React.FC<
@@ -36,8 +36,9 @@ const Input: React.FC<
   position,
   border,
   placeholderColor,
-  options
+  options,
 }) => {
+  // TODO: investigate if this onChange event handler conflicts with the onChange event handler in the Formik component
   if (type === "input") {
     return (
       <div>
@@ -88,7 +89,7 @@ const Input: React.FC<
           height={height}
           width={width}
           border={border}
-          onChange = {onChange as React.ChangeEventHandler<HTMLSelectElement>}
+          onChange={onChange as React.ChangeEventHandler<HTMLSelectElement>}
         >
           {options &&
             options.map((option, index) => (
@@ -104,4 +105,3 @@ const Input: React.FC<
 };
 
 export default Input;
-

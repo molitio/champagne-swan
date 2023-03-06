@@ -1,11 +1,9 @@
-import { createTheme } from "@mui/material";
 import React from "react";
-import { AppContext } from "../../types";
+import { AppContext } from "../common";
+import { AuthContext } from "./types";
 
-const ChampagneSwanContext = React.createContext<AppContext>({
-  appName: "",
+const ChampagneSwanContext = React.createContext<AppContext & AuthContext>({
   interactive: { navBarExpanded: false, setNavBarExpanded: undefined },
-  theme: createTheme(),
-  navTree: {},
+  authContext: {},
 });
 export default ChampagneSwanContext;

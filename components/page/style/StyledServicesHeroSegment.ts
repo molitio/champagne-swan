@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-export const ServicesStyledLayerSegment = styled.div`
-`;
+export const ServicesStyledLayerSegment = styled.div``;
 
 export const SimpleServicesLayer = styled.img`
   position: absolute;
@@ -11,8 +10,6 @@ export const SimpleServicesLayer = styled.img`
   left: 0;
   width: 100%;
   height: 1069px;
-
-  
 `;
 
 export const RotatedServicesLayer = styled.img`
@@ -24,7 +21,6 @@ export const RotatedServicesLayer = styled.img`
   left: 0;
   width: 100%;
   height: 535px;
-
 `;
 
 export const ServicesStyledImg = styled.div`
@@ -33,9 +29,9 @@ export const ServicesStyledImg = styled.div`
   background-position: center;
   width: 100%;
   height: 1069px;
-@media(max-width:665px) {
-  height: 1069px;
-}
+  @media (max-width: 665px) {
+    height: 1069px;
+  }
 `;
 
 export const ServicesWaterSplash = styled.img`
@@ -46,15 +42,12 @@ export const ServicesWaterSplash = styled.img`
 `;
 
 export const ServicesHeroSegmentContainer = styled.div`
-
   display: flex;
   flex-direction: column;
   min-height: 850px;
-  padding-top: 23em;
+  padding-top: 18em;
   position: relative;
-  margin-bottom: 10em;
-  @media(max-width:665px ) {
-    
+  @media (max-width: 665px) {
     padding-top: 18em;
   }
 `;

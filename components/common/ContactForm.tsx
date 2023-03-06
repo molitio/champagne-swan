@@ -5,7 +5,8 @@ import Input from "./Input";
 import { StyledField } from "./style";
 import { handleRecaptcha } from "../utils";
 import { Formik, Form, Field } from "formik";
-//import * as Yup from "yup";
+import * as Yup from "yup";
+import { SystemContext } from "@molitio/ui-core";
 
 interface FormProps {
   position?: string;
@@ -18,13 +19,21 @@ type FormValues = {
 };
 
 const ContactForm: React.FC<FormProps> = () => {
-  /*   const validationSchema = Yup.object().shape({
-    from_name: Yup.string().required("User name is required"),
+  const systemContext = React.useContext(SystemContext);
+  const navTree = systemContext?.navRoot ?? {};
+  const contactLeafs = systemContext?.contentRoot?.contact?.leafs;
+  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
+  const textContent = contactLeafs?.contactForm?.textContent;
+  const commonAssetUrls = commonLeafs?.images?.assetUrls;
+
+  // TODO: font validation has anomalies open ticket and implement fix
+  const validationSchema = Yup.object().shape({
+    from_name: Yup.string().required(textContent?.nameRequired ?? ""),
     from_email: Yup.string()
-      .email("Invalid email")
-      .required("Email is required"),
-    message: Yup.string().required("Message is required"),
-  }); */
+      .email(textContent?.emailRequired ?? "")
+      .required(textContent?.emailAddressInvalid ?? ""),
+    message: Yup.string().required(textContent?.messageRequired ?? ""),
+  });
 
   const initialValues: FormValues = {
     from_name: "",
@@ -35,7 +44,7 @@ const ContactForm: React.FC<FormProps> = () => {
   const handleSubmit = async (values: FormValues, actions: any) => {
     try {
       const isRecaptchaPass = await handleRecaptcha(
-        "CONTACT_FORM",
+        textContent?.recaptchaTag ?? "CONTACT_FORM",
         process?.env?.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY ?? ""
       );
 
@@ -44,19 +53,21 @@ const ContactForm: React.FC<FormProps> = () => {
       } else {
         const { from_name, from_email, message } = values;
 
-        const response = await fetch("/api/email", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            from_name: from_name,
-            from_email: from_email,
-            message: message,
-          }),
-        });
+        if (navTree?.api?.leafs?.email?.path) {
+          const response = await fetch(commonAssetUrls?.emailApi ?? "", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              from_name: from_name,
+              from_email: from_email,
+              message: message,
+            }),
+          });
 
-        const result = response.json();
+          const result = response.json();
+        }
       }
     } catch (error: any) {
       console.error(error.message);
@@ -69,8 +80,7 @@ const ContactForm: React.FC<FormProps> = () => {
   return (
     <Formik
       initialValues={initialValues}
-      /* validationSchema={validationSchema} */
-      validationSchema={{}}
+      validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
       {({ isSubmitting }) => (
@@ -78,30 +88,33 @@ const ContactForm: React.FC<FormProps> = () => {
           <StyledField
             placeholdercolor={"#0C7B93"}
             type="text"
-            placeholder=" Név:"
+            placeholder={textContent?.namePlaceholder ?? ""}
             name="from_name"
+            padding={"0 0 0 1rem"}
           />
           <StyledField
             margin={"43px 0px 0px 0px"}
+            padding={"0 0 0 1rem"}
             placeholdercolor={"#0C7B93"}
             type="email"
-            placeholder=" E-mail cím:"
+            placeholder={textContent?.emailPlaceholder ?? ""}
             name="from_email"
           />
           <StyledField
             margin={"43px 0px 43px 0px "}
+            padding={"1rem 0 0 1rem"}
             height={"320px"}
             placeholdercolor={"#0C7B93"}
             component="textarea"
-            placeholder=" Üzenet szövege"
+            placeholder={textContent?.messagePlaceholder ?? ""}
             name="message"
           />
           <ContactButton
             type="submit"
             disabled={isSubmitting}
-            className="hiro-content"
+            className="hero-content"
           >
-            {`Elküld`}
+            {textContent?.sendButtonText ?? ""}
           </ContactButton>
         </StyledForm>
       )}

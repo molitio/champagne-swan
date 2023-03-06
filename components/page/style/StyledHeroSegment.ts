@@ -1,8 +1,9 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 export const StyledLayerSegment = styled.div``;
 
-export const SimpledHeroLayer = styled.img`
+export const ImageLayer = styled.img`
   position: absolute;
   margin: 0;
   margin-top: 0px;
@@ -51,7 +52,7 @@ export const ContactStyledImg = styled.div`
   background-position: center;
   width: 100%;
   height: 1169px;
-  @media(max-width:665px) {
+  @media (max-width: 665px) {
     height: 896px;
   }
 `;
@@ -62,6 +63,7 @@ export const HeroWaterSplash = styled.img`
   width: 250px;
   height: 250px;
   object-fit: cover;
+  z-index: 90;
 `;
 
 export const StyledHeroSegmentContainer = styled.div`
@@ -76,7 +78,7 @@ export const StyledHeroSegmentContainer = styled.div`
   }
 `;
 
-export const HeroContactLink = styled.a`
+export const HeroContactLink = styled(Link)`
   color: white;
   background-color: #c1a87d;
   margin-top: 2em;

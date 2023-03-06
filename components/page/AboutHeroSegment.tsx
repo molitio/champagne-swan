@@ -1,55 +1,70 @@
 import React from "react";
+import Link from "next/link";
+import { SystemContext } from "@molitio/ui-core";
 import HeroSegmentContent from "./HeroSegmentContent";
 import { ChampagneSwanContext } from "../context";
-import Link from "next/link";
 import {
   StyledLayerSegment,
   RotatedLayer,
-  SimpledHeroLayer,
+  ImageLayer,
   StyledAboutImg,
   HeroWaterSplash,
   StyledHeroSegmentContainer,
   HeroContactLink,
   StyledButtonContainer,
+  StyledNextImage,
 } from "./style";
+import { StyledLinearGradient } from "../common";
 
-const HeroSegment: React.FC = () => {
+const AboutHeroSegment: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
-  const navTree = champagneSwanContext.navTree ?? {};
-  const navBarExpanded = champagneSwanContext.interactive.navBarExpanded;
+  const navBarExpanded = champagneSwanContext?.interactive?.navBarExpanded;
 
-  
+  const systemContext = React.useContext(SystemContext);
+  const navTree = systemContext?.navRoot ?? {};
+  const aboutLeafs = systemContext?.contentRoot?.about?.leafs;
+  const assetUrls = aboutLeafs?.cover?.assetUrls;
+  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
+  const textContent = aboutLeafs?.cover?.textContent;
+  const commonAssetUrls = commonLeafs?.images?.assetUrls;
+
+  /*     <>
+      <StyledNextImage
+        src={assetUrls?.cleaners ?? ""}
+        alt={"cover-image"}
+        fill
+      /> */
+  {
+    /*   <ImageLayer src={commonAssetUrls?.gradientBottom ?? ""} /> */
+  }
+  /*       <StyledLinearGradient
+        direction="bottom"
+        variation="partial"
+        opacity={1}
+      /> */
+  {
+    /*       <RotatedLayer src={commonAssetUrls?.gradientTop ?? ""} /> */
+  }
   return (
     <StyledAboutImg>
-      <SimpledHeroLayer
-        src={
-          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_bottom.png"
-        }
-      />
-      <RotatedLayer
-        src={
-          "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_top.png"
-        }
-      />
+      <ImageLayer src={commonAssetUrls?.gradientBottom ?? ""} />
+      <RotatedLayer src={commonAssetUrls?.gradientTop ?? ""} />
       <StyledLayerSegment>
         {!navBarExpanded ? (
           <StyledHeroSegmentContainer>
             <HeroSegmentContent
-              title={"SZAKKÉPZETT MUNKAERŐ"}
-              anotherTitle={"MINŐSÉGI SZOLGÁLTATÁS"}
+              title={textContent?.title ?? ""}
+              subTitle={textContent?.subTitle ?? ""}
               callToAction={
                 <StyledButtonContainer>
-                  <Link key={navTree.contact.path} href={navTree.contact.path}>
-                    <HeroContactLink className="hiro-content">
-                      {`Kapcsolat`}
-                    </HeroContactLink>
-                  </Link>
-
-                  <HeroWaterSplash
-                    src={
-                      "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png"
-                    }
-                  />
+                  <HeroContactLink
+                    className="hero-content"
+                    key={navTree?.contact?.path ?? ""}
+                    href={navTree?.contact?.path ?? ""}
+                  >
+                    {textContent?.contactLinkText ?? ""}
+                  </HeroContactLink>
+                  <HeroWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
                 </StyledButtonContainer>
               }
             />
@@ -58,6 +73,10 @@ const HeroSegment: React.FC = () => {
       </StyledLayerSegment>
     </StyledAboutImg>
   );
+  {
+    /* </StyledLayerSegment>
+    </> */
+  }
 };
 
-export default HeroSegment;
+export default AboutHeroSegment;

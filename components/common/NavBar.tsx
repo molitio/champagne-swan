@@ -2,43 +2,66 @@ import React from "react";
 import { ChampagneSwanContext } from "../context";
 import { CloseIcon, MenuIcon } from "../svg";
 import Link from "next/link";
-import { 
+import {
   StyledImageContainer,
-  RelativNav,
+  RelativeNav,
   NavBarContainer,
   StyledNavLink,
   ExtendedStyledNavLink,
   LeftContainer,
   RightContainer,
-  NavBarLinkContainer,
   NavBarInnerContainer,
   NavBarExtendedContainer,
   OpenLinksButtonContainer,
   OpenLinksButton,
-  StyledLogoPng} from './style'
-
+  StyledLogoPng,
+} from "./style";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { signIn, signOut, auth } from "../utils";
+import Button from "./Button";
+import { SystemContext } from "@molitio/ui-core";
 
 const NavBar: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
+  const navBarExpanded = champagneSwanContext?.interactive?.navBarExpanded;
   const setNavBarExpanded = champagneSwanContext.interactive.setNavBarExpanded;
-  const navBarExpanded = champagneSwanContext.interactive.navBarExpanded;
-  const navTree = champagneSwanContext.navTree ?? {};
+
+  const systemContext = React.useContext(SystemContext);
+  const navTree = systemContext?.navRoot ?? {};
+  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
+  const commonAssetUrls = commonLeafs?.images?.assetUrls;
+
+  const [user, loading] = useAuthState(auth);
+
+  const [isLoginWindowOpen, setIsLoginWindowOpen] = React.useState(false);
+
+  const handleLoginWindow = (): void => {
+    setIsLoginWindowOpen(!isLoginWindowOpen);
+  };
 
   if (typeof window !== "undefined") {
     window.addEventListener("resize", function () {
       if (window.innerWidth > 834 && navBarExpanded === true) {
-        setNavBarExpanded?.(!champagneSwanContext.interactive.navBarExpanded);
+        setNavBarExpanded?.(!champagneSwanContext?.interactive?.navBarExpanded);
       }
     });
   }
 
+  const handleSignIn = (): void => {
+    if (user) {
+      signOut();
+    } else {
+      signIn();
+    }
+  };
+
   return (
-    <RelativNav>
+    <RelativeNav>
       <NavBarContainer>
         <NavBarInnerContainer>
           <StyledImageContainer>
             <StyledLogoPng
-              src="https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/logo/jeliza_logokit_jeliza_logo_horizontal.svg"
+              src={commonAssetUrls?.horizontalLogo ?? ""}
               alt="logo"
             />
           </StyledImageContainer>
@@ -46,22 +69,29 @@ const NavBar: React.FC = () => {
           <RightContainer>
             {navTree
               ? Object.keys(navTree).map((branch) => (
-                  <Link
+                  <StyledNavLink
                     key={branch}
-                    href={navTree[branch].path}
+                    href={navTree[branch]?.path}
                     className="nav-text"
                   >
-                    <StyledNavLink>{`${navTree[branch].label}`} </StyledNavLink>
-                  </Link>
+                    {`${navTree[branch].label}`}{" "}
+                  </StyledNavLink>
                 ))
               : null}
             <OpenLinksButtonContainer
               onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
                 setNavBarExpanded?.(
-                  !champagneSwanContext.interactive.navBarExpanded
+                  !champagneSwanContext?.interactive?.navBarExpanded
                 );
               }}
             >
+              {champagneSwanContext?.authContext?.authEnabled ? (
+                <Button onClick={handleLoginWindow}>
+                  {user ? "logout" : "login"}
+                </Button>
+              ) : (
+                <></>
+              )}
               {navBarExpanded ? (
                 <OpenLinksButton>
                   <CloseIcon />
@@ -77,11 +107,11 @@ const NavBar: React.FC = () => {
         <NavBarExtendedContainer>
           {navBarExpanded ?? navTree
             ? Object.keys(navTree).map((branch) => (
-                <Link key={branch} href={navTree[branch].path}>
+                <Link key={branch} href={navTree[branch]?.path ?? ""}>
                   <ExtendedStyledNavLink
                     onClick={(e: React.MouseEvent) => {
                       setNavBarExpanded?.(
-                        !champagneSwanContext.interactive.navBarExpanded
+                        !champagneSwanContext?.interactive?.navBarExpanded
                       );
                     }}
                   >
@@ -92,7 +122,7 @@ const NavBar: React.FC = () => {
             : null}
         </NavBarExtendedContainer>
       </NavBarContainer>
-    </RelativNav>
+    </RelativeNav>
   );
 };
 
