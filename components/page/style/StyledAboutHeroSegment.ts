@@ -14,4 +14,7 @@ export const StyledAboutImg = styled.div`
   }
 `;
 
-export const StyledNextImage = styled(Image)``;
+export const StyledNextImage = styled(Image)`
+  position: absolute;
+  object-fit: cover;
+`;

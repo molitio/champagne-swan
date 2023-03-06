@@ -30,13 +30,17 @@ const AboutHeroSegment: React.FC = () => {
 
   return (
     <>
-      <StyledNextImage src={assetUrls?.cleaners ?? ""} layout={"fill"} />
+      <StyledNextImage
+        src={assetUrls?.cleaners ?? ""}
+        alt={"cover-image"}
+        fill
+      />
       {/*   <ImageLayer src={commonAssetUrls?.gradientBottom ?? ""} /> */}
-      {/*      <StyledLinearGradient
+      <StyledLinearGradient
         direction="bottom"
         variation="partial"
         opacity={1}
-      /> */}
+      />
       {/*       <RotatedLayer src={commonAssetUrls?.gradientTop ?? ""} /> */}
 
       <StyledLayerSegment>

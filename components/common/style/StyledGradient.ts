@@ -38,7 +38,7 @@ export const StyledLinearGradient = styled.div<StyledLinearGradientProps>`
   }}
   position: absolute;
   margin: 0;
-  height: 100vh;
+  height: 1150px;
   width: 100%;
   opacity: ${(props) => props?.opacity};
 
@@ -49,7 +49,7 @@ export const StyledLinearGradient = styled.div<StyledLinearGradientProps>`
         case "cover":
           return "rgba(229, 236, 238, 0) 0%, rgba(153, 198, 208, 0.5) 33%, rgba(13, 124, 149, 0.6) 100%";
         case "partial":
-          return "rgba(255,255,255, 0) 0%, rgba(247, 255, 255, 0.2) 20%, rgba(198, 221, 226, 0.8) 100%";
+          return "rgba(255,255,255, 0) 0%, rgba(247, 255, 255, 0.2) 20%, rgba(198, 221, 226, 1) 100%";
         default:
           return;
       }
