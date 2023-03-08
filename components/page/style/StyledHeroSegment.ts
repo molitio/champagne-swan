@@ -35,7 +35,7 @@ export const RotatedLayer = styled.img`
 export const StyledImg = styled.div`
   position: relative;
   object-fit: fill;
-  background: url(https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/hero.jpg);
+  background: url(https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/hero.webp);
   background-size: cover;
   background-position: center;
   width: 100%;
