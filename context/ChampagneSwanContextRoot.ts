@@ -184,7 +184,7 @@ export const ChampagneSwanContextRoot = {
           },
           assetUrls: {
             heroBackground:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/img/hero.jpeg",
+              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/img/hero.webp",
             effectLayer:
               "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/img/jeliza_hero_gradient.svg",
           },
