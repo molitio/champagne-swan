@@ -5,18 +5,18 @@ export const StyledImageContainer = styled.div`
   margin-left: 2em;
 `;
 
-export const RelativeNav = styled.div`
+export const StyledNav = styled.div`
   position: absolute;
-  margin-top: -100px;
-  top: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   z-index: 1000;
   width: 100%;
+  border: 3px dashed purple;
 `;
 
 export const NavBarContainer = styled.div`
+  border: 3px dashed purple;
   width: 100%;
   display: flex;
   flex-direction: column;

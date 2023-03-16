@@ -1,9 +1,9 @@
-import styled from 'styled-components';
- 
+import styled from "styled-components";
+
 export const StyledFooter = styled.footer`
-  position: relative;
   text-align: center;
   color: #9d8d7b;
-  margin-top: -28px;
-  bottom: -8px;
+  border: 1px solid purple;
+  width: 100%;
+  height: 100px;
 `;

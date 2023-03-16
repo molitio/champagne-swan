@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 export const PremiumLayerContainer = styled.img`
@@ -82,7 +83,7 @@ export const PremiumQualityContentTitle = styled.h1`
   font-size: 105px;
   opacity: 0.5;
   margin-top: 0.6em;
-  
+
   @media (max-width: 1440px) {
     font-size: 67px;
     margin-bottom: 20px;
@@ -126,8 +127,6 @@ export const AboutPremiumQualityTitle = styled.h1`
     font-size: 35px;
     margin-bottom: 20px;
   }
-
-
 `;
 
 export const AboutQuoteContainer = styled.div`
@@ -136,16 +135,15 @@ export const AboutQuoteContainer = styled.div`
   margin: 0 auto 3em auto;
 
   @media (max-width: 1440px) {
-  width: 30em;
+    width: 30em;
   }
   @media (max-width: 665px) {
-  width: 25em;
+    width: 25em;
   }
 
   @media (max-width: 436px) {
-  width: 18em;
+    width: 18em;
   }
-
 `;
 export const AboutQuote = styled.p`
   color: #0c7b93;
@@ -159,9 +157,9 @@ export const AboutQuote = styled.p`
     margin: auto;
     width: 20em;
   }
-    @media (max-width: 665px) {
-      font-size: 17px;
-      width: 17em;
+  @media (max-width: 665px) {
+    font-size: 17px;
+    width: 17em;
   }
 `;
 export const AboutQuoteAuthor = styled.p`
@@ -174,9 +172,8 @@ export const AboutQuoteAuthor = styled.p`
     padding: 0em 2em 0em 0;
   }
   @media (max-width: 665px) {
-        padding: 0em 3em 0em 0;
-      font-size: 17px;
-    
+    padding: 0em 3em 0em 0;
+    font-size: 17px;
   }
 `;
 export const AboutTextPQualityContent = styled.p`
@@ -233,7 +230,7 @@ type PremiumQuality = {
   tabletWidth?: string;
   mobileWidth?: string;
   smallMobileWidth?: string;
-  smallMobileFonsize?:string;
+  smallMobileFonsize?: string;
 };
 
 export const PremiumQualityContentBoxText = styled.p<PremiumQuality>`
@@ -278,7 +275,6 @@ export const AboutPremiumQualityContentText = styled.p<PremiumQuality>`
     width: ${(props) => props.smallMobileWidth || ""};
     font-size: ${(props) => props.smallMobileFonsize || ""};
   }
-
 `;
 
 export const PremiumQualityWaterSplash = styled.img`
@@ -323,13 +319,13 @@ export const AboutPremiumQualityWaterSplash = styled.img`
   }
   @media (max-width: 655px) {
     height: 270px;
-    width:270px;
+    width: 270px;
     transform: rotate(0deg);
     top: 0px;
   }
 `;
 
-export const PremiumQualityContactLink = styled.a`
+export const PremiumQualityContactLink = styled(Link)`
   color: white;
   background-color: #c1a87d;
   padding: 0.5em 0.93em 0.5em 0.93em;

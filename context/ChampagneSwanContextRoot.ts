@@ -78,22 +78,22 @@ export const ChampagneSwanContextRoot = {
             addressHref: "https://goo.gl/maps/FK9mXYG25HLPXEvR6",
             phoneMainHref: "tel:+36204160391",
             logoImage:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/logo/jeliza_logo_horizontal_jeliza_logo_horizontal.svg",
+              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/logo/jeliza_logo_horizontal_jeliza_logo_horizontal.svg",
           },
           iconDefinitions: {
             phone: {
               title: "Mobile",
-              url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/icons/icons_jeliza-01.svg",
+              url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/icons/icons_jeliza-01.svg",
               hrefUrl: "tel:+36204160391",
             },
             email: {
               title: "E-mail",
-              url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/icons/icons_jeliza_phone.svg",
+              url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/icons/icons_jeliza_phone.svg",
               hrefUrl: "mailto:info@jeliza.com",
             },
             address: {
               title: "Cím",
-              url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/icons/icons_jeliza_envelope.svg",
+              url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/icons/icons_jeliza_envelope.svg",
               hrefUrl: "https://goo.gl/maps/FK9mXYG25HLPXEvR6",
             },
           },
@@ -184,9 +184,9 @@ export const ChampagneSwanContextRoot = {
           },
           assetUrls: {
             heroBackground:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/img/hero.webp",
+              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/hero.jpg",
             effectLayer:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web-content/img/jeliza_hero_gradient.svg",
+              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/jeliza_hero_gradient.svg",
           },
         },
       },

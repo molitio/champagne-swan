@@ -13,8 +13,3 @@ export const StyledAboutImg = styled.div`
     height: 900px;
   }
 `;
-
-export const StyledNextImage = styled(Image)`
-  position: absolute;
-  object-fit: cover;
-`;

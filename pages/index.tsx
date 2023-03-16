@@ -16,14 +16,14 @@ type HomeProps = {
 
 const HomePage: NextPage<HomeProps> = (props) => {
   return (
-    <section>
+    <main>
       <HeroSegment />
-      <PremiumQuality />
+      {/*       <PremiumQuality />
       <ServicesHomeContent />
       <Opinions />
       <OurPartnersContent />
-      <ContactContent />
-    </section>
+      <ContactContent /> */}
+    </main>
   );
 };
 

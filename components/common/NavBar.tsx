@@ -4,7 +4,7 @@ import { CloseIcon, MenuIcon } from "../svg";
 import Link from "next/link";
 import {
   StyledImageContainer,
-  RelativeNav,
+  StyledNav,
   NavBarContainer,
   StyledNavLink,
   ExtendedStyledNavLink,
@@ -56,7 +56,7 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <RelativeNav>
+    <StyledNav>
       <NavBarContainer>
         <NavBarInnerContainer>
           <StyledImageContainer>
@@ -122,7 +122,7 @@ const NavBar: React.FC = () => {
             : null}
         </NavBarExtendedContainer>
       </NavBarContainer>
-    </RelativeNav>
+    </StyledNav>
   );
 };
 

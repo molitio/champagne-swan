@@ -50,14 +50,12 @@ const SecondaryHomePageContent: React.FC = () => {
               {textContent?.contentText ?? ""}
             </PremiumQualityContentBoxText>
 
-            <Link
+            <PremiumQualityContactLink
               key={navTree?.about?.path ?? ""}
               href={navTree?.about?.path ?? ""}
             >
-              <PremiumQualityContactLink>
-                {textContent?.moreInfoButton ?? ""}
-              </PremiumQualityContactLink>
-            </Link>
+              {textContent?.moreInfoButton ?? ""}
+            </PremiumQualityContactLink>
           </PremiumQualityContentBox>
           <ImageBox
             imageBoxParams={{
