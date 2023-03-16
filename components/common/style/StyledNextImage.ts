@@ -10,11 +10,12 @@ export const StyledNextImage = styled(Image)`
 `;
 
 type StyledNextImageContainerProps = {
+  position?: string;
   dimensions?: Dimensions;
 };
 
 export const StyledNextImageContainer = styled.div<StyledNextImageContainerProps>`
-  position: absolute;
+  position: ${(props) => props?.position ?? "absoulte"};
   ${(props) =>
     props?.dimensions
       ? css`

@@ -12,7 +12,6 @@ import {
   StyledHeroSegmentContainer,
   HeroContactLink,
   StyledButtonContainer,
-  StyledNextImage,
 } from "./style";
 import { StyledLinearGradient } from "../common";
 

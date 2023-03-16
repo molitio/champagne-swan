@@ -7,11 +7,7 @@ const Footer: React.FC = () => {
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
   const commonTextContent = commonLeafs?.footer?.textContent;
 
-  return (
-    <StyledFooter className="footer">
-      {commonTextContent?.maintainer ?? ""}
-    </StyledFooter>
-  );
+  return <StyledFooter>{commonTextContent?.maintainer ?? ""}</StyledFooter>;
 };
 
 export default Footer;

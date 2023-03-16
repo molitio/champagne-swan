@@ -6,13 +6,17 @@ import { StyledNextImage, StyledNextImageContainer } from "./style";
 type NextImageProps = {
   imageProps: ImageProps;
   containerDimensions?: Dimensions;
+  containerPosition?: string;
 };
 
 const NextImage: React.FC<NextImageProps> = (props) => {
-  const { containerDimensions, imageProps } = props;
+  const { containerDimensions, imageProps, containerPosition } = props;
 
   return (
-    <StyledNextImageContainer dimensions={containerDimensions}>
+    <StyledNextImageContainer
+      dimensions={containerDimensions}
+      position={containerPosition}
+    >
       <StyledNextImage {...imageProps} />
     </StyledNextImageContainer>
   );

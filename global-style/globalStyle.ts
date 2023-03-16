@@ -9,6 +9,10 @@ const GlobalStyle = createGlobalStyle`
       h1 {
         font-family: "Fahkwang", sans-serif;
       }
+      * {
+        box-sizing: border-box;
+  /*   outline: 1px solid red; */
+}
 `;
 
 export default GlobalStyle;
