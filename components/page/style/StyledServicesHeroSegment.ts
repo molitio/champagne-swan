@@ -44,7 +44,7 @@ export const ServicesWaterSplash = styled.img`
 export const ServicesHeroSegmentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 850px;
+  min-height: ${(props) => props?.theme?.dimensions?.page?.height ?? "100vh"};
   padding-top: 18em;
   position: relative;
   @media (max-width: 665px) {

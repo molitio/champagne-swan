@@ -7,7 +7,7 @@ export const StyledAboutImg = styled.div`
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 1150px;
+  height: ${(props) => props?.theme?.dimensions?.page?.height ?? "100vh"};
 
   @media (max-width: 665px) {
     height: 900px;

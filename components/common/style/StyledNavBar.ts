@@ -12,9 +12,9 @@ export const StyledNav = styled.nav<StyledNavProps>`
       ? css`
           background: linear-gradient(
             to top,
-            rgba(255, 255, 255, 1) 0%,
-            rgba(247, 255, 255, 0.8) 20%,
-            rgba(198, 221, 226, 0.7) 100%
+            rgba(255, 255, 255, 0.6) 0%,
+            rgba(247, 255, 255, 0.9) 20%,
+            rgba(198, 221, 226, 1) 100%
           );
           position: fixed;
           height: 100vh;

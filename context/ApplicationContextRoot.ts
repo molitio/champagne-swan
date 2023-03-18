@@ -1,4 +1,4 @@
-export const ChampagneSwanContextRoot = {
+export const ApplicationContextRoot = {
   appName: "Champagne Swan v1.0.0",
   navRoot: {
     home: {

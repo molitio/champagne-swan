@@ -15,7 +15,7 @@ type StyledNextImageContainerProps = {
 };
 
 export const StyledNextImageContainer = styled.div<StyledNextImageContainerProps>`
-  position: ${(props) => props?.position ?? "absoulte"};
+  position: ${(props) => props?.position ?? "absolute"};
   ${(props) =>
     props?.dimensions
       ? css`

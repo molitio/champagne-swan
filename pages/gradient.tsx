@@ -14,11 +14,10 @@ const GradientBottom: React.FC = () => {
   return (
     <StyledContainer>
       <StyledLinearGradient
-        direction="bottom"
-        variation="partial"
+        direction="top"
+        variation="reversePartial"
         opacity={1}
       />
-      ;
     </StyledContainer>
   );
 };

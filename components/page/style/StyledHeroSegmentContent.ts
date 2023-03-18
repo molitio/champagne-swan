@@ -42,7 +42,7 @@ export const StyledMainTitle = styled.h1<StyledProps>`
   }
 `;
 
-export const StyledSecondaryTitle = styled.h1<StyledProps>`
+export const StyledSubTitle = styled.h1<StyledProps>`
   position: relative;
   text-align: center;
   font-size: 3.6rem;
@@ -91,6 +91,7 @@ export const StyledDescription = styled.pre<StyledProps>`
   text-align: center;
   padding: 0 2em 0 2em;
   text-shadow: ${(props) => props.textShadow || "2px 4px 4px #000000"};
+  white-space: pre-wrap;
 
   @media (max-width: 975px) {
     font-size: 28px;

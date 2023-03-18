@@ -49,26 +49,24 @@ const AboutHeroSegment: React.FC = () => {
       <ImageLayer src={commonAssetUrls?.gradientBottom ?? ""} />
       <RotatedLayer src={commonAssetUrls?.gradientTop ?? ""} />
       <StyledLayerSegment>
-        {!navBarExpanded ? (
-          <StyledHeroSegmentContainer>
-            <HeroSegmentContent
-              title={textContent?.title ?? ""}
-              subTitle={textContent?.subTitle ?? ""}
-              callToAction={
-                <StyledButtonContainer>
-                  <HeroContactLink
-                    className="hero-content"
-                    key={navTree?.contact?.path ?? ""}
-                    href={navTree?.contact?.path ?? ""}
-                  >
-                    {textContent?.contactLinkText ?? ""}
-                  </HeroContactLink>
-                  <HeroWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
-                </StyledButtonContainer>
-              }
-            />
-          </StyledHeroSegmentContainer>
-        ) : null}
+        <StyledHeroSegmentContainer>
+          <HeroSegmentContent
+            title={textContent?.title ?? ""}
+            subTitle={textContent?.subTitle ?? ""}
+            callToAction={
+              <StyledButtonContainer>
+                <HeroContactLink
+                  className="hero-content"
+                  key={navTree?.contact?.path ?? ""}
+                  href={navTree?.contact?.path ?? ""}
+                >
+                  {textContent?.contactLinkText ?? ""}
+                </HeroContactLink>
+                <HeroWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
+              </StyledButtonContainer>
+            }
+          />
+        </StyledHeroSegmentContainer>
       </StyledLayerSegment>
     </StyledAboutImg>
   );

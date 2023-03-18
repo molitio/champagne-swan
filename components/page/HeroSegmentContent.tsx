@@ -4,7 +4,7 @@ import {
   StyledCallToAction,
   StyledMainTitle,
   StyledDescription,
-  StyledSecondaryTitle,
+  StyledSubTitle,
 } from "./style";
 
 interface HeroSegmentContentProps {
@@ -20,7 +20,7 @@ const HeroSegmentContent: React.FC<HeroSegmentContentProps> = (props) => {
   return (
     <StyledCoverContainer>
       <StyledMainTitle>{title ?? ""}</StyledMainTitle>
-      <StyledSecondaryTitle>{subTitle ?? ""}</StyledSecondaryTitle>
+      <StyledSubTitle>{subTitle ?? ""}</StyledSubTitle>
       <StyledDescription>{description ?? ""}</StyledDescription>
       <StyledCallToAction>{callToAction ?? ""}</StyledCallToAction>
     </StyledCoverContainer>

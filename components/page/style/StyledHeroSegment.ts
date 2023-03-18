@@ -69,10 +69,11 @@ export const HeroWaterSplash = styled.img`
 export const StyledHeroSegmentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 850px;
+  width: 100%;
+  /*height: 100%;  //${(props) =>
+    props?.theme?.dimensions?.page?.height ?? "100vh"}; */
   top: 23em;
-  position: relative;
-
+  position: absolute;
   @media (max-width: 665px) {
     top: 15em;
   }
