@@ -7,7 +7,7 @@ export const ApplicationTheme = {
       main: "#c1dadf",
     },
     background: {
-      default: "#2d2d2dff",
+      default: "#C6DDE2ff",
       secondary: "#f2f2f2cc",
       inverse: "#fff",
     },

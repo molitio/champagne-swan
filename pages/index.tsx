@@ -17,9 +17,9 @@ type HomeProps = {
 const HomePage: NextPage<HomeProps> = (props) => {
   return (
     <main>
-      <HeroSegment />
-      {/*       <PremiumQuality />
-      <ServicesHomeContent />
+      {/*  <HeroSegment /> */}
+      <PremiumQuality />
+      {/*    <ServicesHomeContent />
       <Opinions />
       <OurPartnersContent />
       <ContactContent /> */}

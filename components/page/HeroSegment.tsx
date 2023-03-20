@@ -10,9 +10,6 @@ import {
   StyledSegmentSection,
 } from "../common";
 import {
-  StyledLayerSegment,
-  RotatedLayer,
-  ImageLayer,
   HeroWaterSplash,
   StyledHeroSegmentContainer,
   HeroContactLink,
@@ -44,11 +41,6 @@ const HeroSegment: React.FC = () => {
           fill: true,
         }}
       />
-      {/*       <StyledLinearGradient direction="top" variation="partial" opacity={1} /> */}
-
-      {/*       <ImageLayer src={commonAssetUrls?.gradientTop ?? ""} /> */}
-
-      {/*       <RotatedLayer src={commonAssetUrls?.gradientTop ?? ""} /> */}
       <StyledLinearGradient
         direction="bottom"
         variation="reversePartial"

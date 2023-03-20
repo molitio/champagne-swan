@@ -70,12 +70,15 @@ export const StyledHeroSegmentContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  /*height: 100%;  //${(props) =>
+  /* height: 1150px;  //${(props) =>
     props?.theme?.dimensions?.page?.height ?? "100vh"}; */
   top: 23em;
   position: absolute;
+  @media (max-width: 1000px) {
+    top: 12em;
+  }
   @media (max-width: 665px) {
-    top: 15em;
+    top: 8em;
   }
 `;
 

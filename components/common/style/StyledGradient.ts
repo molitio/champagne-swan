@@ -13,7 +13,7 @@ export const StyledLinearGradient = styled.div<StyledLinearGradientProps>`
   bottom: 0;
   right: 0;
   margin: 0;
-  height: ${(props) => props?.theme?.dimensions?.page?.height ?? "100vh"};
+  min-height: ${(props) => props?.theme?.dimensions?.page?.height ?? "100vh"};
   width: 100%;
   opacity: ${(props) => props?.opacity};
   background: ${(props) => css`
@@ -23,6 +23,6 @@ export const StyledLinearGradient = styled.div<StyledLinearGradientProps>`
   `};
 
   @media (max-width: 665px) {
-    height: 910px;
+    min-height: 910px;
   }
 `;
