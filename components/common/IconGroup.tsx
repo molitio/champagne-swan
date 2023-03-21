@@ -1,5 +1,5 @@
 import React from "react";
-import StarSvgIcon from "../svg/StarSvgIcon";
+import StarSvgIcon from "./StarSvgIcon";
 import { IconContainer } from "./style";
 import { SystemContext } from "@molitio/ui-core";
 

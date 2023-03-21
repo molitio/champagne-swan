@@ -1,6 +1,6 @@
 import { SystemContext } from "@molitio/ui-core";
 import React from "react";
-import { IconGroup } from ".";
+import { IconGroup } from "./IconGroup";
 import {
   OpinionsMainContainer,
   StyledOpinionsIconContainer,

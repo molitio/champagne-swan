@@ -1,6 +1,6 @@
 import React from "react";
 import { ChampagneSwanContext } from "../context";
-import { CloseIcon, MenuIcon } from "../svg";
+import { CloseIcon, MenuIcon } from "../common";
 import {
   StyledImageContainer,
   StyledNav,

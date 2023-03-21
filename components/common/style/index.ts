@@ -15,3 +15,5 @@ export * from "./StyledOurPartnersContent";
 export * from "./StyledSkillComponent";
 export * from "./StyledOpinions";
 export * from "./StyledPremiumQuality";
+export * from "./StyledCloseIcon";
+export * from "./StyledStarSvgIcon";
