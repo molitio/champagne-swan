@@ -7,19 +7,19 @@ import ServicesHomeContent from "../components/page/ServicesHomeContent";
 import Opinions from "../components/page/Opinions";
 import OurPartnersContent from "../components/page/OurPartnersContent";
 
-import ContactContent from "../components/page/ContactContent";
+import ContactContent from "../components/contact/ContactContent";
 
-type HomeProps = {
+type IndexPageProps = {
   title?: string;
   description?: string;
 };
 
-const HomePage: NextPage<HomeProps> = (props) => {
+const IndexPage: NextPage<IndexPageProps> = (props) => {
   return (
     <main>
-      {/*  <HeroSegment /> */}
+      <HeroSegment />
       <SkillsComponent />
-      {/*       <PremiumQuality /> */}
+      <PremiumQuality />
       {/*    <ServicesHomeContent />
       <Opinions />
       <OurPartnersContent />
@@ -28,4 +28,4 @@ const HomePage: NextPage<HomeProps> = (props) => {
   );
 };
 
-export default HomePage;
+export default IndexPage;

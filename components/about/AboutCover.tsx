@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { SystemContext } from "@molitio/ui-core";
 import HeroSegmentContent from "../page/HeroSegmentContent";
 import { ChampagneSwanContext } from "../context";
@@ -11,10 +10,10 @@ import {
   HeroContactLink,
   StyledButtonContainer,
 } from "../common";
-import { StyledAboutImg } from "./style";
+import { StyledCoverImage } from "./style";
 import { StyledLinearGradient } from "../common";
 
-const AboutHeroSegment: React.FC = () => {
+const AboutCover: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
   const navBarExpanded = champagneSwanContext?.interactive?.navBarExpanded;
 
@@ -44,7 +43,7 @@ const AboutHeroSegment: React.FC = () => {
     /*       <RotatedLayer src={commonAssetUrls?.gradientTop ?? ""} /> */
   }
   return (
-    <StyledAboutImg>
+    <StyledCoverImage>
       <ImageLayer src={commonAssetUrls?.gradientBottom ?? ""} />
       <RotatedLayer src={commonAssetUrls?.gradientTop ?? ""} />
       <div>
@@ -67,8 +66,8 @@ const AboutHeroSegment: React.FC = () => {
           />
         </StyledHeroSegmentContainer>
       </div>
-    </StyledAboutImg>
+    </StyledCoverImage>
   );
 };
 
-export default AboutHeroSegment;
+export default AboutCover;

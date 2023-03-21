@@ -2,7 +2,7 @@ import React from "react";
 import { IconGroup, NextImage } from "../common";
 import SkillsComponent from "./SkillsComponent";
 import Link from "next/link";
-import { ImageBox } from "../common/ImageBox";
+import { ImageBox } from "../common";
 import {
   PremiumQualityContainer,
   PremiumQualityBackgroundLayerContainer,

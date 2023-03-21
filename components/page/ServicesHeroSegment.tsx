@@ -7,13 +7,14 @@ import {
   RotatedServicesLayer,
   ServicesStyledImg,
   ServicesWaterSplash,
-  StyledButtonContainer,
   ServicesHeroSegmentContainer,
   PremiumLayerContainer,
+} from "./style";
+import {
+  StyledButtonContainer,
   HeroContactLink,
   HeroWaterSplash,
-} from "./style";
-
+} from "../common";
 import { StyledMainTitle, StyledDescription } from "./style";
 
 /* import SelectForm from "../common/SelectForm"; */

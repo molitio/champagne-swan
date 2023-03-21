@@ -15,7 +15,7 @@ type StyledNextImageContainerProps = {
 };
 
 export const StyledNextImageContainer = styled.div<StyledNextImageContainerProps>`
-  outline: 3px dashed purple;
+  /*   outline: 3px dashed purple; */
   position: ${(props) => props?.position ?? "absolute"};
   ${(props) =>
     props?.dimensions

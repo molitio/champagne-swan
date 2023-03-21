@@ -6,8 +6,10 @@ type ImageContainerProps = {
   imageBoxParams: ImageBoxParams;
 };
 
-export const ImageBox: React.FC<ImageContainerProps> = (props) => {
+const ImageBox: React.FC<ImageContainerProps> = (props) => {
   const { imageBoxParams } = props;
 
   return <ImageContainer imageBoxParams={imageBoxParams} />;
 };
+
+export default ImageBox;

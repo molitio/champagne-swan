@@ -9,7 +9,7 @@ import {
 } from "../common";
 import { MainTitle, FormText } from "./style";
 
-const ContactPageHero: React.FC = () => {
+const ContactPageCover: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
   const navBarExpanded = champagneSwanContext?.interactive?.navBarExpanded;
 
@@ -35,4 +35,4 @@ const ContactPageHero: React.FC = () => {
   );
 };
 
-export default ContactPageHero;
+export default ContactPageCover;

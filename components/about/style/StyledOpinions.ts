@@ -1,5 +1,6 @@
-import React from "react";
 import styled from "styled-components";
+
+// TODO: need to ivestigate this with context font as direction
 import "typeface-lato";
 
 type OpinionsMainContainerProps = {

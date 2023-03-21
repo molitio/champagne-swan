@@ -2,16 +2,16 @@ import React from "react";
 import { SystemContext } from "@molitio/ui-core";
 import { IconGroup, StyledAnchor, ContactForm } from "../common";
 import {
-  ContactContainer,
-  BackgroundLayer,
-  StyledRelIconContainer,
-  MainTitle,
-  FormContainer,
-  ContactInfoContainer,
-  ContactInfo,
-  StyledLogoImage,
-  ResponsiveFormBox,
-  FormText,
+  StyledContentLogoImage,
+  StyledContentFormContainer,
+  StyledContentMainTitle,
+  SyledContentFormBox,
+  StyledContentFormText,
+  StyledContentBackgroundLayer,
+  StyledContentRelIcon,
+  StyledContentContainer,
+  StyledContentContactInfoContainer,
+  StyledContentContactInfo,
 } from "./style";
 
 const ContactContent: React.FC = () => {
@@ -23,32 +23,36 @@ const ContactContent: React.FC = () => {
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
-    <ContactContainer>
-      <BackgroundLayer>
+    <StyledContentContainer>
+      <StyledContentBackgroundLayer>
         <IconGroup
           starCount={5}
           fill={systemContext?.theme?.palette?.stars?.gold}
         />
-        <StyledRelIconContainer></StyledRelIconContainer>
-        <MainTitle>{textContent?.title ?? ""}</MainTitle>
-        <FormText>{textContent?.formText ?? ""}</FormText>
-        <ResponsiveFormBox>
-          <ContactInfoContainer>
-            <ContactInfo>
+        <StyledContentRelIcon />
+        <StyledContentMainTitle>
+          {textContent?.title ?? ""}
+        </StyledContentMainTitle>
+        <StyledContentFormText>
+          {textContent?.formText ?? ""}
+        </StyledContentFormText>
+        <SyledContentFormBox>
+          <StyledContentContactInfoContainer>
+            <StyledContentContactInfo>
               <StyledAnchor href={iconDefinitions?.phone?.hrefUrl ?? ""}>
                 {iconDefinitions?.phone?.title ?? ""}
                 <br />
                 {textContent?.phoneMain ?? ""}
               </StyledAnchor>
-            </ContactInfo>
-            <ContactInfo>
+            </StyledContentContactInfo>
+            <StyledContentContactInfo>
               <StyledAnchor href={iconDefinitions?.email?.hrefUrl ?? ""}>
                 {iconDefinitions?.email?.title ?? ""}
                 <br />
                 {textContent?.email ?? ""}
               </StyledAnchor>
-            </ContactInfo>
-            <ContactInfo>
+            </StyledContentContactInfo>
+            <StyledContentContactInfo>
               <StyledAnchor href={iconDefinitions?.address?.hrefUrl ?? ""}>
                 {iconDefinitions?.address?.title ?? ""}
                 <br />
@@ -56,15 +60,15 @@ const ContactContent: React.FC = () => {
                 <br />
                 {textContent?.address2 ?? ""}
               </StyledAnchor>
-            </ContactInfo>
-          </ContactInfoContainer>
-          <FormContainer>
+            </StyledContentContactInfo>
+          </StyledContentContactInfoContainer>
+          <StyledContentFormContainer>
             <ContactForm />
-          </FormContainer>
-        </ResponsiveFormBox>
-        <StyledLogoImage src={commonAssetUrls?.logo ?? ""} alt="logo" />
-      </BackgroundLayer>
-    </ContactContainer>
+          </StyledContentFormContainer>
+        </SyledContentFormBox>
+        <StyledContentLogoImage src={commonAssetUrls?.logo ?? ""} alt="logo" />
+      </StyledContentBackgroundLayer>
+    </StyledContentContainer>
   );
 };
 

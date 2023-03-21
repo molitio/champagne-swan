@@ -6,13 +6,11 @@ import {
   NextImage,
   StyledLinearGradient,
   StyledSegmentSection,
-} from "../common";
-import {
   HeroWaterSplash,
   StyledHeroSegmentContainer,
   HeroContactLink,
   StyledButtonContainer,
-} from "./style";
+} from "../common";
 import { useLineBreakParser } from "../utils";
 
 const HeroSegment: React.FC = () => {

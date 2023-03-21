@@ -1,1 +1,3 @@
-export * from "./StyledAboutHeroSegment";
+export * from "./StyledAboutCover";
+export * from "./StyledOpinions";
+export * from "./StyledPremiumQuality";

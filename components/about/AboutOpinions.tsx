@@ -7,7 +7,6 @@ import {
   ServiceEvaluatorContainerName,
   ServiceEvaluatorContainer,
   MainOpinionsTitle,
-  SimpledLayer,
 } from "./style";
 
 const AboutOpinions: React.FC = () => {
@@ -50,7 +49,12 @@ const AboutOpinions: React.FC = () => {
           </ServiceEvaluatorContainer>
         </InternalOpinionsContentContainer>
       </OpinionsMainContainer>
-      <SimpledLayer top={"4px"} src={commonAssetUrls?.gradientBottom ?? ""} />
+
+      {/*   
+
+TODO: this layer will be replaced when next/image is implemented
+
+<SimpledLayer top={"4px"} src={commonAssetUrls?.gradientBottom ?? ""} /> */}
     </>
   );
 };

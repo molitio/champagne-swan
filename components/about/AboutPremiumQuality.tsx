@@ -1,7 +1,7 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
 import { IconGroup } from "../common";
-import { ImageBox } from "../common/ImageBox";
+import { ImageBox } from "../common";
 import {
   StyledPremiumQualityIconContainer,
   AboutPremiumQualityContainer,

@@ -8,7 +8,6 @@ import {
   PartnerImg,
   HouseLogo,
   BrandLogo,
-  SimpledLayer,
 } from "./style";
 
 const OurPartnersContent: React.FC = () => {
@@ -36,7 +35,12 @@ const OurPartnersContent: React.FC = () => {
           <PartnerImg src={assetUrls?.officeLogo ?? ""} />
         </PartnersImageContainer>
       </OurPartnersContentContainer>
-      <SimpledLayer top={"4px"} src={commonAssetUrls?.gradientBottom ?? ""} />
+      {/* 
+
+TODO: this layer will be replaced when next/image is implemented
+
+
+<SimpledLayer top={"4px"} src={commonAssetUrls?.gradientBottom ?? ""} /> */}
     </OurPartnersContainer>
   );
 };

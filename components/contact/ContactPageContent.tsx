@@ -8,7 +8,7 @@ import {
   ContactInfo,
   StyledLogoImage,
   ResponsiveFormBox,
-} from "./style/StyledContactPageContent";
+} from "./style/StyledContactContent";
 import { ContactForm, StyledAnchor } from "../common";
 import { SystemContext } from "@molitio/ui-core";
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
-import { IconGroup } from "../common/IconGroup";
-import { ImageBox } from "../common/ImageBox";
+import { ImageBox, IconGroup } from "../common";
 import {
   ServicesMainContainer,
   StyledIconContainer,

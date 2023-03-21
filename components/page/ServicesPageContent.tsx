@@ -1,6 +1,6 @@
 import React from "react";
-import { ImageBox } from "../common/ImageBox";
-import { IconGroup } from "../common/IconGroup";
+import { SystemContext } from "@molitio/ui-core";
+import { ImageBox, IconGroup } from "../common";
 import {
   StyledIconContainer,
   ServicesMainTitle,
@@ -14,9 +14,7 @@ import {
   ServicesMainContainer,
   WaterSplash,
   RightSideWaterSplash,
-  SimpledLayer,
 } from "./style";
-import { SystemContext } from "@molitio/ui-core";
 
 const ServicesPageContent: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
@@ -267,7 +265,13 @@ const ServicesPageContent: React.FC = () => {
           />
         </ExternalContentContainer>
       </ServicesMainContainer>
-      <SimpledLayer top={"4px"} src={commonAssetUrls?.gradientBottom ?? ""} />
+      {/*      
+
+
+TODO: this layer will be replaced when next/image is implemented
+
+
+<SimpledLayer top={"4px"} src={commonAssetUrls?.gradientBottom ?? ""} /> */}
     </>
   );
 };

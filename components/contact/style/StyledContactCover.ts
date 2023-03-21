@@ -8,13 +8,17 @@ export const ContactContainer = styled.div`
 `;
 
 export const FormText = styled.text`
-display: block;
-color: white;
-text-align: center;
-width: 40em;
-margin:2em auto auto;
+  display: block;
+  color: white;
+  text-align: center;
+  width: 40em;
+  margin: 2em auto auto;
 `;
 
+/* 
+
+
+TODO: this layer will be replaced when next/image is implemented
 
 
 export const SimpledLayer = styled.img<React.CSSProperties>`
@@ -25,7 +29,7 @@ export const SimpledLayer = styled.img<React.CSSProperties>`
   left: 0;
   height: 200px;
   width: 100%;
-`;
+`; */
 
 export const BackgroundLayer = styled.div`
   position: absolute;
@@ -69,7 +73,6 @@ export const FormContainer = styled.div`
   justify-content: center;
   padding: 5em 0 0 10em;
   @media (max-width: 1440px) {
-    
     padding: 5em 0 0 0;
   }
 `;
