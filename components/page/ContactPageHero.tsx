@@ -2,14 +2,12 @@ import React from "react";
 import { SystemContext } from "@molitio/ui-core";
 import { ChampagneSwanContext } from "../context";
 import {
-  StyledLayerSegment,
   RotatedLayer,
   ImageLayer,
   ContactStyledImg,
   StyledHeroSegmentContainer,
-  FormText,
-  MainTitle,
-} from "./style";
+} from "../common";
+import { MainTitle, FormText } from "./style";
 
 const ContactPageHero: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
@@ -25,14 +23,14 @@ const ContactPageHero: React.FC = () => {
     <ContactStyledImg>
       <ImageLayer src={commonAssetUrls?.gradientTop ?? ""} />
       <RotatedLayer src={commonAssetUrls?.gradientTop ?? ""} />
-      <StyledLayerSegment>
+      <div>
         {!navBarExpanded ? (
           <StyledHeroSegmentContainer>
             <MainTitle>{textContent?.title ?? ""}</MainTitle>
             <FormText>{textContent?.formText ?? ""}</FormText>
           </StyledHeroSegmentContainer>
         ) : null}
-      </StyledLayerSegment>
+      </div>
     </ContactStyledImg>
   );
 };

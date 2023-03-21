@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import React from "react";
 import styled from "styled-components";
-import { HeroSegment } from "../components/page";
+import { HeroSegment, SkillsComponent } from "../components/page";
 import PremiumQuality from "../components/page/PremiumQuality";
 import ServicesHomeContent from "../components/page/ServicesHomeContent";
 import Opinions from "../components/page/Opinions";
@@ -18,7 +18,8 @@ const HomePage: NextPage<HomeProps> = (props) => {
   return (
     <main>
       {/*  <HeroSegment /> */}
-      <PremiumQuality />
+      <SkillsComponent />
+      {/*       <PremiumQuality /> */}
       {/*    <ServicesHomeContent />
       <Opinions />
       <OurPartnersContent />

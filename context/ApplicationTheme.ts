@@ -8,12 +8,13 @@ export const ApplicationTheme = {
     },
     background: {
       default: "#C6DDE2ff",
-      secondary: "#f2f2f2cc",
+      secondary: "#0c7b93ff",
       inverse: "#fff",
     },
     text: {
       primary: "#0C7B93",
       secondary: "#9D8D7B",
+      tertiary: "#fff",
     },
     stars: {
       gold: "#BDA982ff",

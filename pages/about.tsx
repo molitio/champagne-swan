@@ -1,7 +1,7 @@
-import { AboutHeroSegment } from "../components/page";
-import { AboutPremiumQuality } from "../components/page";
-import { AboutOpinions } from "../components/page";
-import ContactContent from "../components/page/ContactContent";
+import { AboutHeroSegment } from "../components";
+import { AboutPremiumQuality } from "../components";
+import { AboutOpinions } from "../components";
+import { ContactContent } from "../components";
 
 const About: React.FC = () => {
   return (

@@ -1,18 +1,17 @@
 import React from "react";
 import Link from "next/link";
 import { SystemContext } from "@molitio/ui-core";
-import HeroSegmentContent from "./HeroSegmentContent";
+import HeroSegmentContent from "../page/HeroSegmentContent";
 import { ChampagneSwanContext } from "../context";
 import {
-  StyledLayerSegment,
   RotatedLayer,
   ImageLayer,
-  StyledAboutImg,
   HeroWaterSplash,
   StyledHeroSegmentContainer,
   HeroContactLink,
   StyledButtonContainer,
-} from "./style";
+} from "../common";
+import { StyledAboutImg } from "./style";
 import { StyledLinearGradient } from "../common";
 
 const AboutHeroSegment: React.FC = () => {
@@ -48,7 +47,7 @@ const AboutHeroSegment: React.FC = () => {
     <StyledAboutImg>
       <ImageLayer src={commonAssetUrls?.gradientBottom ?? ""} />
       <RotatedLayer src={commonAssetUrls?.gradientTop ?? ""} />
-      <StyledLayerSegment>
+      <div>
         <StyledHeroSegmentContainer>
           <HeroSegmentContent
             title={textContent?.title ?? ""}
@@ -67,13 +66,9 @@ const AboutHeroSegment: React.FC = () => {
             }
           />
         </StyledHeroSegmentContainer>
-      </StyledLayerSegment>
+      </div>
     </StyledAboutImg>
   );
-  {
-    /* </StyledLayerSegment>
-    </> */
-  }
 };
 
 export default AboutHeroSegment;

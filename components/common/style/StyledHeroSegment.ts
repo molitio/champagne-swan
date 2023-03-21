@@ -1,8 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-export const StyledLayerSegment = styled.div``;
-
 export const ImageLayer = styled.img`
   position: absolute;
   margin: 0;

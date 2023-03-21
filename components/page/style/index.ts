@@ -3,8 +3,6 @@ export * from "./StyledHeroSegmentContent";
 export * from "./StyledOpinions";
 export * from "./StyledOurPartnersContent";
 export * from "./StyledPremiumQuality";
-export * from "./StyledHeroSegment";
 export * from "./StyleSkillComponent";
 export * from "./StyledServicesHeroSegment";
 export * from "./StyledServicesPageContent";
-export * from "./StyledAboutHeroSegment";

@@ -11,13 +11,20 @@ type NextImageProps = {
 
 const NextImage: React.FC<NextImageProps> = (props) => {
   const { containerDimensions, imageProps, containerPosition } = props;
+  const nextImageProps = {
+    ...imageProps,
+  };
+
+  if (!imageProps.width || !imageProps.height) {
+    nextImageProps.fill = true;
+  }
 
   return (
     <StyledNextImageContainer
       dimensions={containerDimensions}
       position={containerPosition}
     >
-      <StyledNextImage {...imageProps} />
+      <StyledNextImage {...nextImageProps} />
     </StyledNextImageContainer>
   );
 };

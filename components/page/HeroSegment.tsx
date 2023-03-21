@@ -1,8 +1,6 @@
 import React from "react";
-import Link from "next/link";
 import { SystemContext } from "@molitio/ui-core";
 import HeroSegmentContent from "./HeroSegmentContent";
-import { ChampagneSwanContext } from "../context";
 import {
   IconGroup,
   NextImage,

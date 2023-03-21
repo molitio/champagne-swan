@@ -1,5 +1,5 @@
 import React from "react";
-import { IconGroup } from "../common";
+import { IconGroup, NextImage } from "../common";
 import SkillsComponent from "./SkillsComponent";
 import Link from "next/link";
 import { ImageBox } from "../common/ImageBox";
@@ -14,6 +14,7 @@ import {
   StyledPremiumQualityIconContainer,
   PremiumQualityContentBox,
   PremiumLayerContainer,
+  SyledPremiumQuality,
 } from "./style";
 import { SystemContext } from "@molitio/ui-core";
 
@@ -27,9 +28,8 @@ const SecondaryHomePageContent: React.FC = () => {
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
-    <>
+    <SyledPremiumQuality>
       <PremiumQualityBackgroundLayerContainer>
-        <SkillsComponent />
         <StyledPremiumQualityIconContainer>
           <IconGroup
             fill={systemContext?.theme?.palette?.stars?.blue ?? ""}
@@ -39,7 +39,7 @@ const SecondaryHomePageContent: React.FC = () => {
         <PremiumQualityContentTitle>
           {textContent?.title ?? ""}
         </PremiumQualityContentTitle>
-        <PremiumQualityWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
+
         <PremiumQualityContainer>
           <PremiumQualityContentBox>
             <PremiumQualityContentBoxTitle>
@@ -57,7 +57,29 @@ const SecondaryHomePageContent: React.FC = () => {
               {textContent?.moreInfoButton ?? ""}
             </PremiumQualityContactLink>
           </PremiumQualityContentBox>
-          <ImageBox
+          {/*        <NextImage
+            containerPosition="relative"
+            containerDimensions={{
+              height: "353px",
+              width: "529px",
+            }}
+            imageProps={{
+              src: assetUrls?.officeCleaners ?? "",
+              alt: "office-cleaners",
+            }}
+          />
+          <NextImage
+            containerPosition="absolute"
+            containerDimensions={{
+              width: "300px",
+              height: "300px",
+            }}
+            imageProps={{
+              src: commonAssetUrls?.waterSplash ?? "",
+              alt: "water-splash",
+            }}
+          /> */}
+          {/* <ImageBox
             imageBoxParams={{
               imageUrl: assetUrls?.officeCleaners ?? "",
               positioning: {
@@ -88,10 +110,10 @@ const SecondaryHomePageContent: React.FC = () => {
               },
             }}
           />
+ */}
         </PremiumQualityContainer>
       </PremiumQualityBackgroundLayerContainer>
-      <PremiumLayerContainer src={commonAssetUrls?.gradientTop ?? ""} />
-    </>
+    </SyledPremiumQuality>
   );
 };
 

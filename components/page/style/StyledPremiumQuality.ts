@@ -1,5 +1,10 @@
 import Link from "next/link";
 import styled from "styled-components";
+import { NextImage } from "../../common";
+
+export const SyledPremiumQuality = styled.div`
+  outline: 3px dashed purple;
+`;
 
 export const PremiumLayerContainer = styled.img`
   position: absolute;
@@ -185,7 +190,7 @@ export const AboutTextPQualityContent = styled.p`
 `;
 
 export const PremiumQualityContentBox = styled.div`
-  height: 353px;
+  /*   height: 353px; */
   min-height: 353px;
   width: 529px;
   min-width: 529px;
@@ -193,7 +198,7 @@ export const PremiumQualityContentBox = styled.div`
 
   @media (max-width: 1440px) {
     text-align: center;
-    height: 1750px;
+    /*     height: 1750px; */
     margin: 150px 0px 0 0;
   }
   @media (max-width: 665px) {
@@ -277,14 +282,14 @@ export const AboutPremiumQualityContentText = styled.p<PremiumQuality>`
   }
 `;
 
-export const PremiumQualityWaterSplash = styled.img`
+export const PremiumQualityWaterSplash = styled(NextImage)`
   display: block;
   margin: auto;
   position: relative;
-  width: 300px;
-  height: 300px;
+
   object-fit: cover;
   transform: rotate(-15deg);
+  outline: 3px dashed purple;
   bottom: -255px;
   left: 490px;
 

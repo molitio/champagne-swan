@@ -9,3 +9,5 @@ export * from "./StyledAnchor";
 export * from "./StyledGradient";
 export * from "./StyledNextImage";
 export * from "./StyledSection";
+export * from "./StyledHeroSegment";
+export * from "./StyledHeroSegment";
