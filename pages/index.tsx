@@ -1,13 +1,11 @@
 import type { NextPage } from "next";
 import React from "react";
 import styled from "styled-components";
-import { HeroSegment, SkillsComponent } from "../components/page";
-import PremiumQuality from "../components/page/PremiumQuality";
-import ServicesHomeContent from "../components/page/ServicesHomeContent";
-import Opinions from "../components/page/Opinions";
-import OurPartnersContent from "../components/page/OurPartnersContent";
-
-import ContactContent from "../components/contact/ContactContent";
+import PremiumQuality from "../components/common/PremiumQuality";
+import Opinions from "../components/common/Opinions";
+import OurPartnersContent from "../components/common/OurPartnersContent";
+import { SkillsComponent, AppCover, ContactContent } from "../components";
+import ServicesHomeContent from "../components/services/ServicesHomeContent";
 
 type IndexPageProps = {
   title?: string;
@@ -17,13 +15,13 @@ type IndexPageProps = {
 const IndexPage: NextPage<IndexPageProps> = (props) => {
   return (
     <main>
-      <HeroSegment />
+      <AppCover />
       <SkillsComponent />
       <PremiumQuality />
-      {/*    <ServicesHomeContent />
+      <ServicesHomeContent />
       <Opinions />
       <OurPartnersContent />
-      <ContactContent /> */}
+      <ContactContent />
     </main>
   );
 };

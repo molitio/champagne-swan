@@ -184,7 +184,7 @@ export const ApplicationContextRoot = {
           },
           assetUrls: {
             heroBackground:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/hero.jpg",
+              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/hero.webp",
             effectLayer:
               "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/jeliza_hero_gradient.svg",
           },

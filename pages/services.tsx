@@ -1,5 +1,5 @@
-import { ServicesPageContent } from "../components/page";
-import { ServicesHeroSegment } from "../components/page";
+import { ServicesPageContent } from "../components";
+import { ServicesHeroSegment } from "../components";
 import ContactContent from "../components/contact/ContactContent";
 import { NextPage } from "next";
 

@@ -8,14 +8,14 @@ import {
   ServicesStyledImg,
   ServicesWaterSplash,
   ServicesHeroSegmentContainer,
-  PremiumLayerContainer,
 } from "./style";
 import {
+  PremiumLayerContainer,
   StyledButtonContainer,
   HeroContactLink,
   HeroWaterSplash,
 } from "../common";
-import { StyledMainTitle, StyledDescription } from "./style";
+import { StyledMainTitle, StyledDescription } from "../common";
 
 /* import SelectForm from "../common/SelectForm"; */
 import { SystemContext } from "@molitio/ui-core";

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styled from "styled-components";
-import { NextImage } from "../../common";
 
 export const SyledPremiumQuality = styled.div`
   outline: 3px dashed purple;
@@ -282,7 +281,7 @@ export const AboutPremiumQualityContentText = styled.p<PremiumQuality>`
   }
 `;
 
-export const PremiumQualityWaterSplash = styled(NextImage)`
+export const PremiumQualityWaterSplash = styled.img`
   display: block;
   margin: auto;
   position: relative;

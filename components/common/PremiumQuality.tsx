@@ -1,14 +1,13 @@
 import React from "react";
-import { IconGroup, NextImage } from "../common";
+import { IconGroup, NextImage } from ".";
 import SkillsComponent from "./SkillsComponent";
 import Link from "next/link";
-import { ImageBox } from "../common";
+import { ImageBox } from ".";
 import {
   PremiumQualityContainer,
   PremiumQualityBackgroundLayerContainer,
   PremiumQualityContentBoxTitle,
   PremiumQualityContentBoxText,
-  PremiumQualityWaterSplash,
   PremiumQualityContactLink,
   PremiumQualityContentTitle,
   StyledPremiumQualityIconContainer,
@@ -18,7 +17,7 @@ import {
 } from "./style";
 import { SystemContext } from "@molitio/ui-core";
 
-const SecondaryHomePageContent: React.FC = () => {
+const PremiumQuality: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
   const navTree = systemContext.navRoot ?? {};
   const premiumQualityLeafs = systemContext?.contentRoot?.premiumQuality?.leafs;
@@ -117,4 +116,4 @@ const SecondaryHomePageContent: React.FC = () => {
   );
 };
 
-export default SecondaryHomePageContent;
+export default PremiumQuality;

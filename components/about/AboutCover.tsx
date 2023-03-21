@@ -1,17 +1,23 @@
 import React from "react";
-import { SystemContext } from "@molitio/ui-core";
-import HeroSegmentContent from "../page/HeroSegmentContent";
+import {
+  StyledCallToAction,
+  StyledDescription,
+  StyledMainTitle,
+  SystemContext,
+} from "@molitio/ui-core";
 import { ChampagneSwanContext } from "../context";
 import {
   RotatedLayer,
   ImageLayer,
   HeroWaterSplash,
-  StyledHeroSegmentContainer,
+  StyledCoverContentContainer,
   HeroContactLink,
   StyledButtonContainer,
+  StyledSubTitle,
 } from "../common";
 import { StyledCoverImage } from "./style";
 import { StyledLinearGradient } from "../common";
+import { useLineBreakParser } from "../utils";
 
 const AboutCover: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
@@ -47,24 +53,28 @@ const AboutCover: React.FC = () => {
       <ImageLayer src={commonAssetUrls?.gradientBottom ?? ""} />
       <RotatedLayer src={commonAssetUrls?.gradientTop ?? ""} />
       <div>
-        <StyledHeroSegmentContainer>
-          <HeroSegmentContent
-            title={textContent?.title ?? ""}
-            subTitle={textContent?.subTitle ?? ""}
-            callToAction={
-              <StyledButtonContainer>
-                <HeroContactLink
-                  className="hero-content"
-                  key={navTree?.contact?.path ?? ""}
-                  href={navTree?.contact?.path ?? ""}
-                >
-                  {textContent?.contactLinkText ?? ""}
-                </HeroContactLink>
-                <HeroWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
-              </StyledButtonContainer>
-            }
-          />
-        </StyledHeroSegmentContainer>
+        <StyledCoverContentContainer>
+          <div>
+            <StyledMainTitle>{textContent?.title ?? ""}</StyledMainTitle>
+            <StyledSubTitle>{textContent?.subTitle ?? ""}</StyledSubTitle>
+            <StyledDescription>
+              {useLineBreakParser(textContent?.description ?? "")}
+            </StyledDescription>
+            <StyledCallToAction>
+              {
+                <StyledButtonContainer>
+                  <HeroContactLink
+                    key={navTree?.contact?.path ?? ""}
+                    href={navTree?.contact?.path ?? ""}
+                  >
+                    {textContent?.moreInfoButton ?? ""}
+                  </HeroContactLink>
+                  <HeroWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
+                </StyledButtonContainer>
+              }
+            </StyledCallToAction>
+          </div>
+        </StyledCoverContentContainer>
       </div>
     </StyledCoverImage>
   );

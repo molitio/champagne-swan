@@ -5,7 +5,7 @@ import {
   RotatedLayer,
   ImageLayer,
   ContactStyledImg,
-  StyledHeroSegmentContainer,
+  StyledCoverContentContainer,
 } from "../common";
 import { MainTitle, FormText } from "./style";
 
@@ -25,10 +25,10 @@ const ContactPageCover: React.FC = () => {
       <RotatedLayer src={commonAssetUrls?.gradientTop ?? ""} />
       <div>
         {!navBarExpanded ? (
-          <StyledHeroSegmentContainer>
+          <StyledCoverContentContainer>
             <MainTitle>{textContent?.title ?? ""}</MainTitle>
             <FormText>{textContent?.formText ?? ""}</FormText>
-          </StyledHeroSegmentContainer>
+          </StyledCoverContentContainer>
         ) : null}
       </div>
     </ContactStyledImg>

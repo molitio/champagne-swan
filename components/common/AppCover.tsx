@@ -1,19 +1,24 @@
 import React from "react";
-import { SystemContext } from "@molitio/ui-core";
-import HeroSegmentContent from "./HeroSegmentContent";
+import {
+  StyledCallToAction,
+  StyledDescription,
+  StyledMainTitle,
+  SystemContext,
+} from "@molitio/ui-core";
 import {
   IconGroup,
   NextImage,
   StyledLinearGradient,
   StyledSegmentSection,
   HeroWaterSplash,
-  StyledHeroSegmentContainer,
+  StyledCoverContentContainer,
   HeroContactLink,
   StyledButtonContainer,
-} from "../common";
+} from ".";
 import { useLineBreakParser } from "../utils";
+import { StyledSubTitle } from "./style";
 
-const HeroSegment: React.FC = () => {
+const AppCover: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
   const navTree = systemContext?.navRoot ?? {};
   const heroLeafs = systemContext?.contentRoot?.home?.leafs;
@@ -47,29 +52,34 @@ const HeroSegment: React.FC = () => {
         variation="partial"
         opacity={1}
       />
-      <StyledHeroSegmentContainer>
+      <StyledCoverContentContainer>
         <IconGroup
           fill={systemContext?.theme?.palette?.stars?.gold ?? ""}
           starCount={5}
         />
-        <HeroSegmentContent
-          title={textContent?.title ?? ""}
-          description={useLineBreakParser(textContent?.description ?? "")}
-          callToAction={
-            <StyledButtonContainer>
-              <HeroContactLink
-                key={navTree?.contact?.path ?? ""}
-                href={navTree?.contact?.path ?? ""}
-              >
-                {textContent?.moreInfoButton ?? ""}
-              </HeroContactLink>
-              <HeroWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
-            </StyledButtonContainer>
-          }
-        />
-      </StyledHeroSegmentContainer>
+        <div>
+          <StyledMainTitle>{textContent?.title ?? ""}</StyledMainTitle>
+          <StyledSubTitle>{textContent?.subTitle ?? ""}</StyledSubTitle>
+          <StyledDescription>
+            {useLineBreakParser(textContent?.description ?? "")}
+          </StyledDescription>
+          <StyledCallToAction>
+            {
+              <StyledButtonContainer>
+                <HeroContactLink
+                  key={navTree?.contact?.path ?? ""}
+                  href={navTree?.contact?.path ?? ""}
+                >
+                  {textContent?.moreInfoButton ?? ""}
+                </HeroContactLink>
+                <HeroWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
+              </StyledButtonContainer>
+            }
+          </StyledCallToAction>
+        </div>
+      </StyledCoverContentContainer>
     </StyledSegmentSection>
   );
 };
 
-export default HeroSegment;
+export default AppCover;
