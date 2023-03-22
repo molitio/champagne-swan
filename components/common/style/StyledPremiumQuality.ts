@@ -17,15 +17,15 @@ export const PremiumLayerContainer = styled.img`
 `;
 
 export const StyledContentContainer = styled.div`
-  outline: 3px dashed purple;
-
   display: flex;
   justify-content: center;
+  padding-top: 6em;
   /*  bottom: 260px; */
+  outline: 3px dashed navy;
 
   @media (max-width: 1440px) {
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     /* bottom: 260px; */
   }
 `;
@@ -65,32 +65,30 @@ export const AboutPremiumQualityBackgroundLayerContainer = styled.div`
 
 export const StyledIconContainer = styled.div`
   padding-top: 12em;
-  outline: 3px dashed yellow;
   @media (max-width: 975px) {
+    padding-top: 8em;
   }
 `;
 
 export const StyledContentTitle = styled.h1`
-  outline: 3px dashed orange;
-
   text-align: center;
   color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
   font-weight: 400;
-  font-size: 105px;
+  font-size: 6.5em;
   opacity: 0.5;
   margin: 0;
-  /* margin-top: 0.6em; */
+  padding-top: 0.6em;
 
   @media (max-width: 1440px) {
-    font-size: 67px;
-    /* margin-bottom: 20px; */
+    font-size: 4.2em;
   }
+
   @media (max-width: 975px) {
-    font-size: 50px;
+    font-size: 3.1em;
   }
+
   @media (max-width: 665px) {
-    /* margin-top: 1em; */
-    font-size: 32px;
+    font-size: 2em;
   }
 `;
 
@@ -188,15 +186,14 @@ export const StyledContentBox = styled.div`
   min-height: 353px;
   width: 529px;
   min-width: 529px;
-  margin: 30px 25px 0 0;
+  /*   margin: 30px 25px 0 0; */
+  text-align: center;
 
   @media (max-width: 1440px) {
-    text-align: center;
     /*     height: 1750px; */
-    margin: 150px 0px 0 0;
+    /*     margin: 150px 0px 0 0; */
   }
   @media (max-width: 665px) {
-    text-align: center;
     min-width: 300px;
     width: 300px;
   }
