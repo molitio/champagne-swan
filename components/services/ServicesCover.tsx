@@ -12,7 +12,7 @@ import {
 import {
   PremiumLayerContainer,
   StyledButtonContainer,
-  HeroContactLink,
+  StyledCoverContactLink,
   HeroWaterSplash,
   StyledMainTitle,
   StyledDescription,
@@ -55,12 +55,12 @@ const ServicesCover: React.FC = (props) => {
               {/* TODO: fix select form */}
               {/*         <SelectForm /> */}
               <StyledButtonContainer>
-                <HeroContactLink
+                <StyledCoverContactLink
                   key={assetUrls?.cover ?? ""}
                   href={assetUrls?.cover ?? ""}
                 >
                   {textContent?.introCta ?? ""}
-                </HeroContactLink>
+                </StyledCoverContactLink>
                 <ServicesWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
               </StyledButtonContainer>
             </ServicesCoverContainer>

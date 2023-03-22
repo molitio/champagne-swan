@@ -11,7 +11,7 @@ import {
   ImageLayer,
   HeroWaterSplash,
   StyledCoverContentContainer,
-  HeroContactLink,
+  StyledCoverContactLink,
   StyledButtonContainer,
   StyledSubTitle,
 } from "../common";
@@ -63,12 +63,12 @@ const AboutCover: React.FC = () => {
             <StyledCallToAction>
               {
                 <StyledButtonContainer>
-                  <HeroContactLink
+                  <StyledCoverContactLink
                     key={navTree?.contact?.path ?? ""}
                     href={navTree?.contact?.path ?? ""}
                   >
                     {textContent?.moreInfoButton ?? ""}
-                  </HeroContactLink>
+                  </StyledCoverContactLink>
                   <HeroWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
                 </StyledButtonContainer>
               }

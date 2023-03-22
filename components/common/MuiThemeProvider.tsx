@@ -16,6 +16,7 @@ declare module "@mui/material" {
   export interface TypeBackground {
     background: {
       inverse?: string;
+      interactive?: string;
     };
   }
   export interface TypeText {

@@ -80,9 +80,10 @@ export const StyledCoverContentContainer = styled.div`
   }
 `;
 
-export const HeroContactLink = styled(Link)`
+export const StyledCoverContactLink = styled(Link)`
   color: white;
-  background-color: #c1a87d;
+  background-color: ${(props) =>
+    props?.theme?.palette?.background?.interactive};
   margin-top: 2em;
   padding: 0.5em 0.93em 0.5em 0.93em;
   font-size: 24px;
@@ -94,7 +95,7 @@ export const HeroContactLink = styled(Link)`
   z-index: 100;
 
   :hover {
-    color: #c1a87d;
+    color: ${(props) => props?.theme?.palette?.background?.interactive};
     background-color: white;
   }
 `;

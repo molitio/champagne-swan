@@ -10,6 +10,7 @@ export const ApplicationTheme = {
       default: "#C6DDE2ff",
       secondary: "#0c7b93ff",
       inverse: "#fff",
+      interactive: "#c1a87dff",
     },
     text: {
       primary: "#0C7B93",

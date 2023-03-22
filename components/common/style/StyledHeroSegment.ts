@@ -80,25 +80,6 @@ export const StyledHeroSegmentContainer = styled.div`
   }
 `;
 
-export const HeroContactLink = styled(Link)`
-  color: white;
-  background-color: #c1a87d;
-  margin-top: 2em;
-  padding: 0.5em 0.93em 0.5em 0.93em;
-  font-size: 24px;
-  font-weight: 200;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  text-decoration: none;
-  z-index: 100;
-
-  :hover {
-    color: #c1a87d;
-    background-color: white;
-  }
-`;
-
 export const StyledButtonContainer = styled.div`
   margin-top: 4em;
   display: flex;
