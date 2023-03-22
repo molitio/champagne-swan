@@ -7,11 +7,19 @@ declare module "@mui/material" {
       blue?: string;
       white?: string;
     };
+    gradient?: {
+      cover?: string;
+      partial?: string;
+      reversePartial?: string;
+    };
   }
   export interface TypeBackground {
     background: {
       inverse?: string;
     };
+  }
+  export interface TypeText {
+    tertiary?: string;
   }
   export interface Theme {
     dimensions: {

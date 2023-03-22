@@ -1,13 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import { StyledSelectForm } from "../common/style";
+import { StyledSelectForm } from "../common";
 import Input from "./Input";
-import { StyledFormContainer } from "./style/StyledFormContainer";
+import { ContactButton, StyledFormContainer } from "./style";
 import {
   StyledServicesButtonContainer,
   ServicesWaterSplash,
-  ContactButton,
-} from "../page/style";
+} from "../services";
 
 const SelectForm: React.FC = () => {
   type InputFields = {

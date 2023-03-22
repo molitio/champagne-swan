@@ -7,21 +7,22 @@ import {
   RotatedServicesLayer,
   ServicesStyledImg,
   ServicesWaterSplash,
-  ServicesHeroSegmentContainer,
+  ServicesCoverContainer,
 } from "./style";
 import {
   PremiumLayerContainer,
   StyledButtonContainer,
   HeroContactLink,
   HeroWaterSplash,
+  StyledMainTitle,
+  StyledDescription,
 } from "../common";
-import { StyledMainTitle, StyledDescription } from "../common";
 
 /* import SelectForm from "../common/SelectForm"; */
 import { SystemContext } from "@molitio/ui-core";
 import Link from "next/link";
 
-const ServicesHeroSegment: React.FC = (props) => {
+const ServicesCover: React.FC = (props) => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
   const navBarExpanded = champagneSwanContext?.interactive?.navBarExpanded;
 
@@ -40,7 +41,7 @@ const ServicesHeroSegment: React.FC = (props) => {
         <RotatedServicesLayer src={commonAssetUrls?.gradientTop ?? ""} />
         <ServicesStyledLayerSegment>
           {!navBarExpanded ? (
-            <ServicesHeroSegmentContainer>
+            <ServicesCoverContainer>
               <StyledMainTitle color="#0C7B93">
                 {textContent?.title ?? ""}
               </StyledMainTitle>
@@ -62,7 +63,7 @@ const ServicesHeroSegment: React.FC = (props) => {
                 </HeroContactLink>
                 <ServicesWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
               </StyledButtonContainer>
-            </ServicesHeroSegmentContainer>
+            </ServicesCoverContainer>
           ) : null}
         </ServicesStyledLayerSegment>
       </ServicesStyledImg>
@@ -71,4 +72,4 @@ const ServicesHeroSegment: React.FC = (props) => {
   );
 };
 
-export default ServicesHeroSegment;
+export default ServicesCover;

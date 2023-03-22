@@ -41,7 +41,7 @@ export const ServicesWaterSplash = styled.img`
   object-fit: cover;
 `;
 
-export const ServicesHeroSegmentContainer = styled.div`
+export const ServicesCoverContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: ${(props) => props?.theme?.dimensions?.page?.height ?? "100vh"};
@@ -57,23 +57,4 @@ export const StyledServicesButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
-
-export const ContactButton = styled.button`
-  display: block;
-  color: white;
-  background-color: #c1a87d;
-  padding: 0.5em 0.93em 0.5em 0.93em;
-  font-size: 24px;
-  font-weight: 200;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  text-decoration: none;
-  z-index: 100;
-  margin: auto;
-  :hover {
-    color: #c1a87d;
-    background-color: white;
-  }
 `;

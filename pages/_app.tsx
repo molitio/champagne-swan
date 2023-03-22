@@ -1,11 +1,10 @@
-import { createTheme } from "@mui/material";
 import type { AppProps } from "next/app";
+import { createTheme } from "@mui/material";
+import { AppShell } from "@molitio/ui-core";
 import Script from "next/script";
 import { ApplicationContextRoot, ApplicationTheme } from "../context";
-import { Layout } from "../components";
-import GlobalStyle from "../global-style/globalStyle";
-import { AppShell } from "@molitio/ui-core";
-import { MuiThemeProvider } from "../components";
+import { GlobalStyle } from "../globalStyle";
+import { MuiThemeProvider, Layout } from "../components";
 
 export default function ChampagneSwanApp({ Component, pageProps }: AppProps) {
   const muiDefault = createTheme();

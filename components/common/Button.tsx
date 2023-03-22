@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes } from "react";
+import React from "react";
 
 const Button: React.FC<
   React.ButtonHTMLAttributes<HTMLButtonElement> & React.PropsWithChildren

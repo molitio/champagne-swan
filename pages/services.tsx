@@ -1,12 +1,12 @@
 import { ServicesPageContent } from "../components";
-import { ServicesHeroSegment } from "../components";
+import { ServicesCover } from "../components";
 import ContactContent from "../components/contact/ContactContent";
 import { NextPage } from "next";
 
 const ServicesPage: NextPage = () => {
   return (
     <section>
-      <ServicesHeroSegment />
+      <ServicesCover />
       <ServicesPageContent />
       <ContactContent />
     </section>

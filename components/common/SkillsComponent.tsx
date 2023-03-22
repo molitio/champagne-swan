@@ -12,6 +12,7 @@ const SkillsComponent: React.FC = () => {
 
   const opinionsLeafs = systemContext?.contentRoot?.opinions?.leafs;
   const textContent = opinionsLeafs?.opinionCards?.textContent;
+
   return (
     <SkillsContainer>
       <SkillInfoContainer>

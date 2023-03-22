@@ -17,3 +17,4 @@ export * from "./StyledOpinions";
 export * from "./StyledPremiumQuality";
 export * from "./StyledCloseIcon";
 export * from "./StyledStarSvgIcon";
+export * from "./StyledFormContainer";
