@@ -1,19 +1,19 @@
 import React from "react";
 import { IconGroup, NextImage } from ".";
-import SkillsComponent from "./SkillsComponent";
+import BrandFeats from "./BrandFeats";
 import Link from "next/link";
 import { ImageBox } from ".";
 import {
   StyledContentContainer,
-  PremiumQualityBackgroundLayerContainer,
+  StyledPremiumQuality,
   StyledContentBoxTitle,
   StyledContentBoxText,
   StyledContactLink,
   StyledContentTitle,
-  StyledPremiumQualityIconContainer,
+  StyledIconContainer,
   StyledContentBox,
   PremiumLayerContainer,
-  SyledPremiumQuality,
+  SyledImageAndEffect,
 } from "./style";
 import { SystemContext } from "@molitio/ui-core";
 
@@ -27,16 +27,30 @@ const PremiumQuality: React.FC = () => {
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
-    <PremiumQualityBackgroundLayerContainer>
-      <StyledPremiumQualityIconContainer>
+    <StyledPremiumQuality>
+      <StyledIconContainer>
         <IconGroup
           fill={systemContext?.theme?.palette?.stars?.blue ?? ""}
           starCount={5}
         />
-      </StyledPremiumQualityIconContainer>
+      </StyledIconContainer>
+
       <StyledContentTitle>{textContent?.title ?? ""}</StyledContentTitle>
 
       <StyledContentContainer>
+        <SyledImageAndEffect>
+          <NextImage
+            containerPosition="relative"
+            containerDimensions={{
+              height: "353px",
+              width: "529px",
+            }}
+            imageProps={{
+              src: assetUrls?.officeCleaners ?? "",
+              alt: "office-cleaners",
+            }}
+          />
+        </SyledImageAndEffect>
         <StyledContentBox>
           <StyledContentBoxTitle>
             {textContent?.contentTitle ?? ""}
@@ -53,10 +67,10 @@ const PremiumQuality: React.FC = () => {
             {textContent?.moreInfoButton ?? ""}
           </StyledContactLink>
         </StyledContentBox>
+
         {/*       
         
         //TODO: Add image with water splash effect as a component specific or generic that need research
-        
         
         
         <NextImage
@@ -114,7 +128,7 @@ const PremiumQuality: React.FC = () => {
           />
  */}
       </StyledContentContainer>
-    </PremiumQualityBackgroundLayerContainer>
+    </StyledPremiumQuality>
   );
 };
 

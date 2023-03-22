@@ -12,7 +12,7 @@ export * from "./StyledSection";
 export * from "./StyledAppCover";
 export * from "./StyledOpinions";
 export * from "./StyledOurPartnersContent";
-export * from "./StyledSkillComponent";
+export * from "./StyledBrandFeats";
 export * from "./StyledOpinions";
 export * from "./StyledPremiumQuality";
 export * from "./StyledCloseIcon";

@@ -3,7 +3,7 @@ import { SystemContext } from "@molitio/ui-core";
 import { IconGroup } from "../common";
 import { ImageBox } from "../common";
 import {
-  StyledPremiumQualityIconContainer,
+  StyledIconContainer,
   AboutPremiumQualityContainer,
   StyledTitle,
   AboutQuote,
@@ -26,12 +26,12 @@ const AboutPremiumQuality: React.FC = () => {
 
   return (
     <AboutPremiumQualityBackgroundLayerContainer>
-      <StyledPremiumQualityIconContainer>
+      <StyledIconContainer>
         <IconGroup
           fill={systemContext?.theme?.palette?.stars?.blue}
           starCount={5}
         />
-      </StyledPremiumQualityIconContainer>
+      </StyledIconContainer>
       <StyledTitle>{textContent?.title ?? ""}</StyledTitle>
       <StyledTitle>{textContent?.subTitle ?? ""}</StyledTitle>
       <AboutQuoteContainer>

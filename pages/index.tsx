@@ -4,7 +4,7 @@ import styled from "styled-components";
 import PremiumQuality from "../components/common/PremiumQuality";
 import Opinions from "../components/common/Opinions";
 import OurPartnersContent from "../components/common/OurPartnersContent";
-import { SkillsComponent, AppCover, ContactContent } from "../components";
+import { BrandFeats, AppCover, ContactContent } from "../components";
 import ServicesHomeContent from "../components/services/ServicesHomeContent";
 
 type IndexPageProps = {
@@ -15,13 +15,17 @@ type IndexPageProps = {
 const IndexPage: NextPage<IndexPageProps> = (props) => {
   return (
     <main>
+      {/*
       <AppCover />
-      <SkillsComponent />
+      <BrandFeats />
+       */}
       <PremiumQuality />
+      {/*
       <ServicesHomeContent />
       <Opinions />
       <OurPartnersContent />
-      <ContactContent />
+      <ContactContent /> 
+      */}
     </main>
   );
 };

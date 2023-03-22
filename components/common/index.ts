@@ -7,7 +7,7 @@ export { default as NavBar } from "./NavBar";
 export { default as NextImage } from "./NextImage";
 export { default as ImageBox } from "./ImageBox";
 export { default as AppCover } from "./AppCover";
-export { default as SkillsComponent } from "./SkillsComponent";
+export { default as BrandFeats } from "./BrandFeats";
 export { default as CloseIcon } from "./CloseIcon";
 export { default as MenuIcon } from "./MenuIcon";
 export { default as StarSvgIcon } from "./StarSvgIcon";

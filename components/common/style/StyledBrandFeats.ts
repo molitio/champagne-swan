@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SkillsContainer = styled.div`
+export const StyledBrandFeats = styled.section`
   position: relative;
   display: flex;
   flex-direction: row;
@@ -12,7 +12,7 @@ export const SkillsContainer = styled.div`
     props?.theme?.palette?.background?.default ?? ""};
 `;
 
-export const SkillInfoContainer = styled.div`
+export const StyledInfoContainer = styled.div`
   display: flex;
   flex: 25%;
   text-align: center;
@@ -29,7 +29,7 @@ export const SkillInfoContainer = styled.div`
   }
 `;
 
-export const SkillScore = styled.h1`
+export const StyledSkillScore = styled.h1`
   margin: 0;
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -40,7 +40,7 @@ export const SkillScore = styled.h1`
   }
 `;
 
-export const SkillName = styled.h4`
+export const StyledSkillName = styled.h4`
   margin: 0;
   font-size: 1.5em;
 

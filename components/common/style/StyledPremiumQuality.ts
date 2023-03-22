@@ -1,8 +1,11 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-export const SyledPremiumQuality = styled.div`
-  outline: 3px dashed purple;
+export const StyledPremiumQuality = styled.section`
+  position: relative;
+  padding: 0;
+  align-items: center;
+  background: ${(props) => props?.theme?.palette?.background?.default ?? ""};
 `;
 
 export const PremiumLayerContainer = styled.img`
@@ -14,24 +17,23 @@ export const PremiumLayerContainer = styled.img`
 `;
 
 export const StyledContentContainer = styled.div`
-  position: relative;
+  outline: 3px dashed purple;
+
   display: flex;
   justify-content: center;
-  bottom: 260px;
+  /*  bottom: 260px; */
 
   @media (max-width: 1440px) {
     align-items: center;
-    flex-direction: column-reverse;
-    bottom: 260px;
+    flex-direction: column;
+    /* bottom: 260px; */
   }
 `;
 
-export const PremiumQualityBackgroundLayerContainer = styled.div`
-  position: relative;
-  padding: 0;
-  align-items: center;
-  background: ${(props) => props?.theme?.palette?.background?.default ?? ""};
+export const SyledImageAndEffect = styled.div`
+  outline: 3px dashed teal;
 `;
+
 export const AboutPremiumQualityBackgroundLayerContainer = styled.div`
   position: relative;
   padding: 0;
@@ -61,30 +63,33 @@ export const AboutPremiumQualityBackgroundLayerContainer = styled.div`
   }
 `;
 
-export const StyledPremiumQualityIconContainer = styled.div`
-  padding-top: 6em;
-
+export const StyledIconContainer = styled.div`
+  padding-top: 12em;
+  outline: 3px dashed yellow;
   @media (max-width: 975px) {
   }
 `;
 
 export const StyledContentTitle = styled.h1`
+  outline: 3px dashed orange;
+
   text-align: center;
   color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
   font-weight: 400;
   font-size: 105px;
   opacity: 0.5;
-  margin-top: 0.6em;
+  margin: 0;
+  /* margin-top: 0.6em; */
 
   @media (max-width: 1440px) {
     font-size: 67px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
   @media (max-width: 975px) {
     font-size: 50px;
   }
   @media (max-width: 665px) {
-    margin-top: 1em;
+    /* margin-top: 1em; */
     font-size: 32px;
   }
 `;
@@ -178,6 +183,7 @@ export const AboutTextPQualityContent = styled.p`
 `;
 
 export const StyledContentBox = styled.div`
+  outline: 3px dashed red;
   /*   height: 353px; */
   min-height: 353px;
   width: 529px;
