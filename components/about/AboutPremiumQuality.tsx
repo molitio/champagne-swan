@@ -5,13 +5,13 @@ import { ImageBox } from "../common";
 import {
   StyledPremiumQualityIconContainer,
   AboutPremiumQualityContainer,
-  AboutPremiumQualityTitle,
+  StyledTitle,
   AboutQuote,
   AboutQuoteAuthor,
   AboutQuoteContainer,
   AboutPremiumQualityContentText,
   AboutPremiumQualityImageBox,
-  AboutPQBackgroundLayerContainer,
+  AboutPremiumQualityBackgroundLayerContainer,
   AboutPremiumQualityWaterSplash,
   RotateLayer,
 } from "../common";
@@ -25,19 +25,15 @@ const AboutPremiumQuality: React.FC = () => {
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
-    <AboutPQBackgroundLayerContainer>
+    <AboutPremiumQualityBackgroundLayerContainer>
       <StyledPremiumQualityIconContainer>
         <IconGroup
           fill={systemContext?.theme?.palette?.stars?.blue}
           starCount={5}
         />
       </StyledPremiumQualityIconContainer>
-      <AboutPremiumQualityTitle>
-        {textContent?.title ?? ""}
-      </AboutPremiumQualityTitle>
-      <AboutPremiumQualityTitle>
-        {textContent?.subTitle ?? ""}
-      </AboutPremiumQualityTitle>
+      <StyledTitle>{textContent?.title ?? ""}</StyledTitle>
+      <StyledTitle>{textContent?.subTitle ?? ""}</StyledTitle>
       <AboutQuoteContainer>
         <AboutQuote>{textContent?.aboutQuote}</AboutQuote>
         <AboutQuoteAuthor>
@@ -144,7 +140,7 @@ const AboutPremiumQuality: React.FC = () => {
         tabletTop={"-13px"}
         src={commonAssetUrls?.gradientBottom ?? ""}
       />
-    </AboutPQBackgroundLayerContainer>
+    </AboutPremiumQualityBackgroundLayerContainer>
   );
 };
 

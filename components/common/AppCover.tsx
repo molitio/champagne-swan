@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  StyledCallToAction,
-  StyledDescription,
-  StyledMainTitle,
-  SystemContext,
-} from "@molitio/ui-core";
+import { SystemContext } from "@molitio/ui-core";
 import {
   IconGroup,
   NextImage,
@@ -16,7 +11,12 @@ import {
   StyledButtonContainer,
 } from ".";
 import { useLineBreakParser } from "../utils";
-import { StyledSubTitle } from "./style";
+import {
+  StyledCallToAction,
+  StyledDescription,
+  StyledMainTitle,
+  StyledSubTitle,
+} from "./style";
 
 const AppCover: React.FC = () => {
   const systemContext = React.useContext(SystemContext);

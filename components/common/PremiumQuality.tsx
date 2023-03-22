@@ -4,14 +4,14 @@ import SkillsComponent from "./SkillsComponent";
 import Link from "next/link";
 import { ImageBox } from ".";
 import {
-  PremiumQualityContainer,
+  StyledContentContainer,
   PremiumQualityBackgroundLayerContainer,
-  PremiumQualityContentBoxTitle,
-  PremiumQualityContentBoxText,
-  PremiumQualityContactLink,
-  PremiumQualityContentTitle,
+  StyledContentBoxTitle,
+  StyledContentBoxText,
+  StyledContactLink,
+  StyledContentTitle,
   StyledPremiumQualityIconContainer,
-  PremiumQualityContentBox,
+  StyledContentBox,
   PremiumLayerContainer,
   SyledPremiumQuality,
 } from "./style";
@@ -27,36 +27,39 @@ const PremiumQuality: React.FC = () => {
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
-    <SyledPremiumQuality>
-      <PremiumQualityBackgroundLayerContainer>
-        <StyledPremiumQualityIconContainer>
-          <IconGroup
-            fill={systemContext?.theme?.palette?.stars?.blue ?? ""}
-            starCount={5}
-          />
-        </StyledPremiumQualityIconContainer>
-        <PremiumQualityContentTitle>
-          {textContent?.title ?? ""}
-        </PremiumQualityContentTitle>
+    <PremiumQualityBackgroundLayerContainer>
+      <StyledPremiumQualityIconContainer>
+        <IconGroup
+          fill={systemContext?.theme?.palette?.stars?.blue ?? ""}
+          starCount={5}
+        />
+      </StyledPremiumQualityIconContainer>
+      <StyledContentTitle>{textContent?.title ?? ""}</StyledContentTitle>
 
-        <PremiumQualityContainer>
-          <PremiumQualityContentBox>
-            <PremiumQualityContentBoxTitle>
-              {textContent?.contentTitle ?? ""}
-            </PremiumQualityContentBoxTitle>
+      <StyledContentContainer>
+        <StyledContentBox>
+          <StyledContentBoxTitle>
+            {textContent?.contentTitle ?? ""}
+          </StyledContentBoxTitle>
 
-            <PremiumQualityContentBoxText>
-              {textContent?.contentText ?? ""}
-            </PremiumQualityContentBoxText>
+          <StyledContentBoxText>
+            {textContent?.contentText ?? ""}
+          </StyledContentBoxText>
 
-            <PremiumQualityContactLink
-              key={navTree?.about?.path ?? ""}
-              href={navTree?.about?.path ?? ""}
-            >
-              {textContent?.moreInfoButton ?? ""}
-            </PremiumQualityContactLink>
-          </PremiumQualityContentBox>
-          {/*        <NextImage
+          <StyledContactLink
+            key={navTree?.about?.path ?? ""}
+            href={navTree?.about?.path ?? ""}
+          >
+            {textContent?.moreInfoButton ?? ""}
+          </StyledContactLink>
+        </StyledContentBox>
+        {/*       
+        
+        //TODO: Add image with water splash effect as a component specific or generic that need research
+        
+        
+        
+        <NextImage
             containerPosition="relative"
             containerDimensions={{
               height: "353px",
@@ -78,7 +81,7 @@ const PremiumQuality: React.FC = () => {
               alt: "water-splash",
             }}
           /> */}
-          {/* <ImageBox
+        {/* <ImageBox
             imageBoxParams={{
               imageUrl: assetUrls?.officeCleaners ?? "",
               positioning: {
@@ -110,9 +113,8 @@ const PremiumQuality: React.FC = () => {
             }}
           />
  */}
-        </PremiumQualityContainer>
-      </PremiumQualityBackgroundLayerContainer>
-    </SyledPremiumQuality>
+      </StyledContentContainer>
+    </PremiumQualityBackgroundLayerContainer>
   );
 };
 

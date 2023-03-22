@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  StyledCallToAction,
-  StyledDescription,
-  StyledMainTitle,
-  SystemContext,
-} from "@molitio/ui-core";
+import { SystemContext } from "@molitio/ui-core";
 import { ChampagneSwanContext } from "../context";
 import {
   RotatedLayer,
@@ -14,6 +9,9 @@ import {
   StyledCoverContactLink,
   StyledButtonContainer,
   StyledSubTitle,
+  StyledMainTitle,
+  StyledDescription,
+  StyledCallToAction,
 } from "../common";
 import { StyledCoverImage } from "./style";
 import { StyledLinearGradient } from "../common";

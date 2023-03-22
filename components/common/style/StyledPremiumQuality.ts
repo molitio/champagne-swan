@@ -13,7 +13,7 @@ export const PremiumLayerContainer = styled.img`
   margin-top: -1px;
 `;
 
-export const PremiumQualityContainer = styled.div`
+export const StyledContentContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
@@ -29,22 +29,10 @@ export const PremiumQualityContainer = styled.div`
 export const PremiumQualityBackgroundLayerContainer = styled.div`
   position: relative;
   padding: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
   align-items: center;
-  background-size: cover;
-  background: #c1dadf;
-  height: 1500px;
-
-  @media (max-width: 1440px) {
-    height: 1750px;
-  }
-  @media (max-width: 975px) {
-    height: 1500px;
-  }
+  background: ${(props) => props?.theme?.palette?.background?.default ?? ""};
 `;
-export const AboutPQBackgroundLayerContainer = styled.div`
+export const AboutPremiumQualityBackgroundLayerContainer = styled.div`
   position: relative;
   padding: 0;
   top: 0;
@@ -52,7 +40,7 @@ export const AboutPQBackgroundLayerContainer = styled.div`
   width: 100%;
   align-items: center;
   background-size: cover;
-  background: #c1dadf;
+  background: ${(props) => props?.theme?.palette?.background?.default ?? ""};
   height: 1905px;
 
   @media (max-width: 1440px) {
@@ -80,9 +68,9 @@ export const StyledPremiumQualityIconContainer = styled.div`
   }
 `;
 
-export const PremiumQualityContentTitle = styled.h1`
+export const StyledContentTitle = styled.h1`
   text-align: center;
-  color: #0c7a93;
+  color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
   font-weight: 400;
   font-size: 105px;
   opacity: 0.5;
@@ -105,6 +93,7 @@ export const AboutPremiumQualityContainer = styled.div`
   @media (max-width: 1440px) {
   }
 `;
+
 export const AboutPremiumQualityImageBox = styled.div`
   width: 100%;
   display: flex;
@@ -116,9 +105,9 @@ export const AboutPremiumQualityImageBox = styled.div`
   }
 `;
 
-export const AboutPremiumQualityTitle = styled.h1`
+export const StyledTitle = styled.h1`
   text-align: center;
-  color: #0c7a93;
+  color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
   font-weight: 400;
   font-size: 90px;
   opacity: 0.5;
@@ -150,7 +139,7 @@ export const AboutQuoteContainer = styled.div`
   }
 `;
 export const AboutQuote = styled.p`
-  color: #0c7b93;
+  color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
   font-style: italic;
   font-size: 24px;
   text-align: center;
@@ -167,7 +156,7 @@ export const AboutQuote = styled.p`
   }
 `;
 export const AboutQuoteAuthor = styled.p`
-  color: #0c7b93;
+  color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
   font-size: 24px;
   text-align: end;
   font-weight: 300;
@@ -181,14 +170,14 @@ export const AboutQuoteAuthor = styled.p`
   }
 `;
 export const AboutTextPQualityContent = styled.p`
-  color: #0c7b93;
+  color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
   font-size: 24px;
   text-align: end;
   font-weight: 400;
   padding: 0em 0 0em 0;
 `;
 
-export const PremiumQualityContentBox = styled.div`
+export const StyledContentBox = styled.div`
   /*   height: 353px; */
   min-height: 353px;
   width: 529px;
@@ -207,10 +196,10 @@ export const PremiumQualityContentBox = styled.div`
   }
 `;
 
-export const PremiumQualityContentBoxTitle = styled.h1`
+export const StyledContentBoxTitle = styled.h1`
   text-align: initial;
   font-family: "Lato", sans-serif;
-  color: #0c7b93;
+  color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
   font-weight: 400;
   font-size: 35px;
   margin-top: 0;
@@ -227,7 +216,7 @@ export const PremiumQualityContentBoxTitle = styled.h1`
   }
 `;
 
-type PremiumQuality = {
+type PremiumQualityContentProps = {
   fontSize?: string;
   width?: string;
   tabletFontSize?: string;
@@ -237,11 +226,11 @@ type PremiumQuality = {
   smallMobileFonsize?: string;
 };
 
-export const PremiumQualityContentBoxText = styled.p<PremiumQuality>`
+export const StyledContentBoxText = styled.p<PremiumQualityContentProps>`
   font-family: "Lato", sans-serif;
   position: relative;
   text-align: start;
-  color: #0c7b93;
+  color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
   font-weight: 300;
   font-size: ${(props) => props.fontSize || "20px"};
   margin-bottom: 2em;
@@ -256,12 +245,12 @@ export const PremiumQualityContentBoxText = styled.p<PremiumQuality>`
     width: 290px;
   }
 `;
-export const AboutPremiumQualityContentText = styled.p<PremiumQuality>`
+export const AboutPremiumQualityContentText = styled.p<PremiumQualityContentProps>`
   display: block;
   margin: auto;
   position: relative;
   text-align: center;
-  color: #0c7b93;
+  color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: ${(props) => props.fontSize || "25px"};
@@ -329,7 +318,7 @@ export const AboutPremiumQualityWaterSplash = styled.img`
   }
 `;
 
-export const PremiumQualityContactLink = styled(Link)`
+export const StyledContactLink = styled(Link)`
   color: white;
   background-color: #c1a87d;
   padding: 0.5em 0.93em 0.5em 0.93em;
