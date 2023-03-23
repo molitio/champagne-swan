@@ -7,7 +7,7 @@ import {
   ServiceEvaluatorContainerName,
   ServiceEvaluatorContainer,
   MainOpinionsTitle,
-} from "../common";
+} from "../index";
 
 const AboutOpinions: React.FC = () => {
   const systemContext = React.useContext(SystemContext);

@@ -1,8 +1,8 @@
 import React from "react";
-import { IconGroup, NextImage } from ".";
+import { IconGroup, NextImage } from "../common";
 import BrandFeats from "./BrandFeats";
 import Link from "next/link";
-import { ImageBox } from ".";
+import { ImageBox, SyledImageAndEffect } from "../common";
 import {
   StyledContentContainer,
   StyledPremiumQuality,
@@ -13,7 +13,6 @@ import {
   StyledIconContainer,
   StyledContentBox,
   PremiumLayerContainer,
-  SyledImageAndEffect,
 } from "./style";
 import { SystemContext } from "@molitio/ui-core";
 

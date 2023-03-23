@@ -1,2 +1,2 @@
 export * from "./StyledServicesCover";
-export * from "./StyledServicesPageContent";
+export * from "./StyledServicesContent";

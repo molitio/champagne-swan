@@ -14,7 +14,7 @@ import {
   StyledContentContactInfo,
 } from "./style";
 
-const ContactContent: React.FC = () => {
+const Contact: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
   const contactLeafs = systemContext?.contentRoot?.contact?.leafs;
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
@@ -72,4 +72,4 @@ const ContactContent: React.FC = () => {
   );
 };
 
-export default ContactContent;
+export default Contact;

@@ -1,16 +1,16 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
 import {
-  OurPartnersContainer,
+  StyledPartners,
   OurPartnersTitle,
   OurPartnersContentContainer,
   PartnersImageContainer,
   PartnerImg,
   HouseLogo,
   BrandLogo,
-} from "./style";
+} from "../common/style";
 
-const OurPartnersContent: React.FC = () => {
+const Partners: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
   const partnersLeafs = systemContext?.contentRoot?.partners?.leafs;
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
@@ -19,7 +19,7 @@ const OurPartnersContent: React.FC = () => {
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
-    <OurPartnersContainer>
+    <StyledPartners>
       <OurPartnersTitle>{textContent?.title ?? ""}</OurPartnersTitle>
       <OurPartnersContentContainer>
         <PartnersImageContainer>
@@ -41,8 +41,8 @@ TODO: this layer will be replaced when next/image is implemented
 
 
 <SimpledLayer top={"4px"} src={commonAssetUrls?.gradientBottom ?? ""} /> */}
-    </OurPartnersContainer>
+    </StyledPartners>
   );
 };
 
-export default OurPartnersContent;
+export default Partners;

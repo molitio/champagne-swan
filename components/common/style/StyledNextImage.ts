@@ -37,3 +37,9 @@ export const StyledNextImageContainer = styled.div<StyledNextImageContainerProps
           width: 100%;
         `}
 `;
+
+export const SyledImageAndEffect = styled.div`
+  outline: 3px dashed purple;
+  padding: 1em;
+  position: relative;
+`;

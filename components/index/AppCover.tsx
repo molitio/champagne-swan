@@ -5,13 +5,12 @@ import {
   NextImage,
   StyledLinearGradient,
   StyledSegmentSection,
-  HeroWaterSplash,
+} from "../common";
+import { useLineBreakParser } from "../utils";
+import {
   StyledCoverContentContainer,
   StyledCoverContactLink,
   StyledButtonContainer,
-} from ".";
-import { useLineBreakParser } from "../utils";
-import {
   StyledCallToAction,
   StyledDescription,
   StyledMainTitle,

@@ -1,5 +1,4 @@
 export { default as ServicesCover } from "./ServicesCover";
-export { default as ServicesHeroContent } from "./ServicesHomeContent";
-export { default as ServicesPageContent } from "./ServicesPageContent";
+export { default as ServicesContent } from "./ServicesContent";
 
 export * from "./style";

@@ -1,14 +1,13 @@
-import { ServicesPageContent } from "../components";
-import { ServicesCover } from "../components";
-import ContactContent from "../components/contact/ContactContent";
 import { NextPage } from "next";
+import { ServicesContent, ServicesCover } from "../components/services";
+import { Contact } from "../components/contact";
 
 const ServicesPage: NextPage = () => {
   return (
     <section>
       <ServicesCover />
-      <ServicesPageContent />
-      <ContactContent />
+      <ServicesContent />
+      <Contact />
     </section>
   );
 };

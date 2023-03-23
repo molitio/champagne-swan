@@ -2,7 +2,7 @@ import {
   AboutCover,
   AboutPremiumQuality,
   AboutOpinions,
-  ContactContent,
+  Contact,
 } from "../components";
 
 const AboutPage: React.FC = () => {
@@ -11,7 +11,7 @@ const AboutPage: React.FC = () => {
       <AboutCover />
       <AboutPremiumQuality />
       <AboutOpinions />
-      <ContactContent />
+      <Contact />
     </section>
   );
 };

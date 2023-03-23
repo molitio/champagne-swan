@@ -14,7 +14,7 @@ import {
   AboutPremiumQualityBackgroundLayerContainer,
   AboutPremiumQualityWaterSplash,
   RotateLayer,
-} from "../common";
+} from "../index";
 
 const AboutPremiumQuality: React.FC = () => {
   const systemContext = React.useContext(SystemContext);

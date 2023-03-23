@@ -1,13 +1,14 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
 import { ChampagneSwanContext } from "../context";
+import {} from "../common";
+import { MainTitle, FormText } from "./style";
 import {
   RotatedLayer,
   ImageLayer,
   ContactStyledImg,
   StyledCoverContentContainer,
-} from "../common";
-import { MainTitle, FormText } from "./style";
+} from "../index";
 
 const ContactPageCover: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);

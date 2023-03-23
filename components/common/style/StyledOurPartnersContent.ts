@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const OurPartnersContainer = styled.div``;
+export const StyledPartners = styled.div``;
 
 export const OurPartnersTitle = styled.h1`
   position: relative;
@@ -70,7 +70,7 @@ export const HouseLogo = styled.img`
     height: 90px;
     width: 120px;
   }
-  `;
+`;
 export const BrandLogo = styled.img`
   height: 130px;
   width: 150px;

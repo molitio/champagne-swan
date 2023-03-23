@@ -1,6 +1,6 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
-import { StyledFooter } from "./style/StyledFooter";
+import { StyledFooter } from "./style";
 
 const Footer: React.FC = () => {
   const systemContext = React.useContext(SystemContext);

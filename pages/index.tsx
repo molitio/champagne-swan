@@ -1,31 +1,25 @@
-import type { NextPage } from "next";
 import React from "react";
-import styled from "styled-components";
-import PremiumQuality from "../components/common/PremiumQuality";
-import Opinions from "../components/common/Opinions";
-import OurPartnersContent from "../components/common/OurPartnersContent";
-import { BrandFeats, AppCover, ContactContent } from "../components";
-import ServicesHomeContent from "../components/services/ServicesHomeContent";
+import type { NextPage } from "next";
+import {
+  AppCover,
+  PremiumQuality,
+  BrandFeats,
+  Services,
+  Opinions,
+  Partners,
+} from "../components/index";
+import { Contact } from "../components/contact";
 
-type IndexPageProps = {
-  title?: string;
-  description?: string;
-};
-
-const IndexPage: NextPage<IndexPageProps> = (props) => {
+const IndexPage: NextPage = (props) => {
   return (
     <main>
-      {/*
-       */}
       <AppCover />
       <BrandFeats />
       <PremiumQuality />
-      {/*
-      <ServicesHomeContent />
-      <Opinions />
-      <OurPartnersContent />
-      <ContactContent /> 
-      */}
+      <Services />
+      {/*       <Opinions />
+      <Partners />
+      <Contact /> */}
     </main>
   );
 };

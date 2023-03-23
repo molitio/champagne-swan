@@ -68,8 +68,6 @@ export const StyledCoverContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* height: 1150px;  //${(props) =>
-    props?.theme?.dimensions?.page?.height ?? "100vh"}; */
   top: 23em;
   position: absolute;
   @media (max-width: 1000px) {

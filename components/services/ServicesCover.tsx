@@ -13,10 +13,9 @@ import {
   PremiumLayerContainer,
   StyledButtonContainer,
   StyledCoverContactLink,
-  HeroWaterSplash,
   StyledMainTitle,
   StyledDescription,
-} from "../common";
+} from "../index";
 
 /* import SelectForm from "../common/SelectForm"; */
 import { SystemContext } from "@molitio/ui-core";

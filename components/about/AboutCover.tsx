@@ -12,7 +12,7 @@ import {
   StyledMainTitle,
   StyledDescription,
   StyledCallToAction,
-} from "../common";
+} from "../index";
 import { StyledCoverImage } from "./style";
 import { StyledLinearGradient } from "../common";
 import { useLineBreakParser } from "../utils";

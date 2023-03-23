@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { StyledLinearGradient } from "../components";
+import { StyledLinearGradient } from "../components/common";
 
 const StyledContainer = styled.div`
   position: relative;

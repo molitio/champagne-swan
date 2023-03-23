@@ -27,19 +27,16 @@ export const StyledContentContainer = styled.div`
   @media (max-width: 1440px) {
     align-items: center;
     flex-direction: column-reverse;
-    /* bottom: 260px; */
   }
-`;
-
-export const SyledImageAndEffect = styled.div`
-  padding: 1em;
-  position: relative;
 `;
 
 export const StyledContentBox = styled.div`
   padding: 1em;
   width: 35em;
   text-align: center;
+  @media (max-width: 1440px) {
+    padding-top: 6em;
+  }
 `;
 
 export const AboutPremiumQualityBackgroundLayerContainer = styled.div`
