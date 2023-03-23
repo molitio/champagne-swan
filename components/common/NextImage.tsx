@@ -2,15 +2,18 @@ import React from "react";
 import { ImageProps } from "next/image";
 import { Dimensions } from "@molitio/ui-core";
 import { StyledNextImage, StyledNextImageContainer } from "./style";
+import { Positioning, Visual } from "./types";
 
 type NextImageProps = {
   imageProps: ImageProps;
   containerDimensions?: Dimensions;
-  containerPosition?: string;
+  containerPositioning?: Positioning;
+  visual?: Visual;
 };
 
 const NextImage: React.FC<NextImageProps> = (props) => {
-  const { containerDimensions, imageProps, containerPosition } = props;
+  const { containerDimensions, imageProps, containerPositioning, visual } =
+    props;
   const nextImageProps = {
     ...imageProps,
   };
@@ -22,7 +25,8 @@ const NextImage: React.FC<NextImageProps> = (props) => {
   return (
     <StyledNextImageContainer
       dimensions={containerDimensions}
-      position={containerPosition}
+      positioning={containerPositioning}
+      visual={visual}
     >
       <StyledNextImage {...nextImageProps} />
     </StyledNextImageContainer>

@@ -38,19 +38,6 @@ const PremiumQuality: React.FC = () => {
       <StyledContentTitle>{textContent?.title ?? ""}</StyledContentTitle>
 
       <StyledContentContainer>
-        <SyledImageAndEffect>
-          <NextImage
-            containerPosition="relative"
-            containerDimensions={{
-              height: "353px",
-              width: "529px",
-            }}
-            imageProps={{
-              src: assetUrls?.officeCleaners ?? "",
-              alt: "office-cleaners",
-            }}
-          />
-        </SyledImageAndEffect>
         <StyledContentBox>
           <StyledContentBoxTitle>
             {textContent?.contentTitle ?? ""}
@@ -67,14 +54,27 @@ const PremiumQuality: React.FC = () => {
             {textContent?.moreInfoButton ?? ""}
           </StyledContactLink>
         </StyledContentBox>
-
-        {/*       
-        
-        //TODO: Add image with water splash effect as a component specific or generic that need research
-        
-        
-        <NextImage
-            containerPosition="relative"
+        <SyledImageAndEffect>
+          <NextImage
+            containerPositioning={{
+              position: "absolute",
+              right: "-50px",
+              bottom: "-100px",
+              transform: "rotate(-15deg)",
+            }}
+            containerDimensions={{
+              width: "250px",
+              height: "250px",
+            }}
+            imageProps={{
+              src: commonAssetUrls?.waterSplash ?? "",
+              alt: "water-splash",
+            }}
+          />
+          <NextImage
+            containerPositioning={{
+              position: "relative",
+            }}
             containerDimensions={{
               height: "353px",
               width: "529px",
@@ -83,50 +83,11 @@ const PremiumQuality: React.FC = () => {
               src: assetUrls?.officeCleaners ?? "",
               alt: "office-cleaners",
             }}
-          />
-          <NextImage
-            containerPosition="absolute"
-            containerDimensions={{
-              width: "300px",
-              height: "300px",
-            }}
-            imageProps={{
-              src: commonAssetUrls?.waterSplash ?? "",
-              alt: "water-splash",
-            }}
-          /> */}
-        {/* <ImageBox
-            imageBoxParams={{
-              imageUrl: assetUrls?.officeCleaners ?? "",
-              positioning: {
-                margin: "30px 0 0 25px",
-                tablet: { margin: "30px 0 0 0" },
-              },
-              dimensions: {
-                height: "353px",
-                width: "529px",
-                minHeight: "353px",
-                minWidth: "529px",
-                tablet: {
-                  height: "353px",
-                  width: "529px",
-                  minHeight: "353px",
-                  minWidth: "529px",
-                },
-                mobile: {
-                  height: "300px",
-                  width: "450px",
-                  minHeight: "300px",
-                  minWidth: "450px",
-                },
-              },
-              breakpoints: {
-                breakpoint1: "1440px",
-                breakpoint2: "975px",
-              },
+            visual={{
+              boxShadow: " 0px 4px 4px rgba(0, 0, 0, 0.5)",
             }}
           />
- */}
+        </SyledImageAndEffect>
       </StyledContentContainer>
     </StyledPremiumQuality>
   );

@@ -39,7 +39,6 @@ const AppCover: React.FC = () => {
         imageProps={{
           src: assetUrls?.heroBackground ?? "",
           alt: "cover-image",
-          fill: true,
         }}
       />
       <StyledLinearGradient
@@ -72,7 +71,20 @@ const AppCover: React.FC = () => {
                 >
                   {textContent?.moreInfoButton ?? ""}
                 </StyledCoverContactLink>
-                <HeroWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
+                <NextImage
+                  containerPositioning={{
+                    bottom: "-80px",
+                    position: "absolute",
+                  }}
+                  containerDimensions={{
+                    width: "250px",
+                    height: "250px",
+                  }}
+                  imageProps={{
+                    src: commonAssetUrls?.waterSplash ?? "",
+                    alt: "water-splash",
+                  }}
+                />
               </StyledButtonContainer>
             }
           </StyledCallToAction>

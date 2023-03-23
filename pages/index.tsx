@@ -16,9 +16,9 @@ const IndexPage: NextPage<IndexPageProps> = (props) => {
   return (
     <main>
       {/*
+       */}
       <AppCover />
       <BrandFeats />
-       */}
       <PremiumQuality />
       {/*
       <ServicesHomeContent />

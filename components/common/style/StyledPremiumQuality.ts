@@ -18,20 +18,28 @@ export const PremiumLayerContainer = styled.img`
 
 export const StyledContentContainer = styled.div`
   display: flex;
+  gap: 1em;
   justify-content: center;
-  padding-top: 6em;
-  /*  bottom: 260px; */
-  outline: 3px dashed navy;
+  margin-top: 6em;
+  align-items: center;
+  text-align: center;
 
   @media (max-width: 1440px) {
     align-items: center;
-    flex-direction: row;
+    flex-direction: column-reverse;
     /* bottom: 260px; */
   }
 `;
 
 export const SyledImageAndEffect = styled.div`
-  outline: 3px dashed teal;
+  padding: 1em;
+  position: relative;
+`;
+
+export const StyledContentBox = styled.div`
+  padding: 1em;
+  width: 35em;
+  text-align: center;
 `;
 
 export const AboutPremiumQualityBackgroundLayerContainer = styled.div`
@@ -180,25 +188,6 @@ export const AboutTextPQualityContent = styled.p`
   padding: 0em 0 0em 0;
 `;
 
-export const StyledContentBox = styled.div`
-  outline: 3px dashed red;
-  /*   height: 353px; */
-  min-height: 353px;
-  width: 529px;
-  min-width: 529px;
-  /*   margin: 30px 25px 0 0; */
-  text-align: center;
-
-  @media (max-width: 1440px) {
-    /*     height: 1750px; */
-    /*     margin: 150px 0px 0 0; */
-  }
-  @media (max-width: 665px) {
-    min-width: 300px;
-    width: 300px;
-  }
-`;
-
 export const StyledContentBoxTitle = styled.h1`
   text-align: initial;
   font-family: "Lato", sans-serif;
@@ -280,7 +269,6 @@ export const PremiumQualityWaterSplash = styled.img`
 
   object-fit: cover;
   transform: rotate(-15deg);
-  outline: 3px dashed purple;
   bottom: -255px;
   left: 490px;
 

@@ -49,7 +49,7 @@ TODO: when auth implemented uncomment this
       <StyledImageContainer>
         <NextImage
           containerDimensions={{ width: "150px", height: "120px" }}
-          containerPosition={"relative"}
+          containerPositioning={{ position: "relative" }}
           imageProps={{
             src: commonAssetUrls?.horizontalLogo ?? "",
             alt: "logo",
