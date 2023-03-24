@@ -1,7 +1,7 @@
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { initializeFirebase } from "./firebase";
 
-const { firebaseApp, analytics } = initializeFirebase();
+const { firebaseApp } = initializeFirebase();
 
 const auth = getAuth(firebaseApp);
 const provider = new GoogleAuthProvider();
@@ -12,7 +12,7 @@ const signIn = async () => {
     const { displayName, email, uid } = result.user;
     console.log({ displayName, email, uid });
 
-    const response = await fetch("/api/user", {
+    await fetch("/api/user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

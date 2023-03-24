@@ -2,8 +2,8 @@ import {
   AboutCover,
   AboutPremiumQuality,
   AboutOpinions,
-  Contact,
-} from "../components";
+} from "../components/about";
+import { Contact } from "../components/contact";
 
 const AboutPage: React.FC = () => {
   return (

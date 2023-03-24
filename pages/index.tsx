@@ -10,16 +10,16 @@ import {
 } from "../components/index";
 import { Contact } from "../components/contact";
 
-const IndexPage: NextPage = (props) => {
+const IndexPage: NextPage = () => {
   return (
     <main>
       <AppCover />
       <BrandFeats />
       <PremiumQuality />
       <Services />
-      {/*       <Opinions />
+      <Opinions />
       <Partners />
-      <Contact /> */}
+      <Contact />
     </main>
   );
 };

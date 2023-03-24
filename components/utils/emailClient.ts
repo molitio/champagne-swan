@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Email, SendResult } from "./types";
 import emailjs from "@emailjs/browser";
 

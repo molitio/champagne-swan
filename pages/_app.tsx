@@ -33,7 +33,7 @@ export default function App({ Component, pageProps }: AppProps) {
   );
 }
 
-export async function getSserverSideProps() {
+export async function getServerSideProps() {
   return {
     props: {
       title: "Champagne Swan",

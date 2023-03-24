@@ -8,9 +8,7 @@ import {
   StyledNavLinksContainer,
   StyledNavButton,
 } from "./style";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { signIn, signOut, auth } from "../utils";
-import Button from "./Button";
+
 import { SystemContext } from "@molitio/ui-core";
 import NextImage from "./NextImage";
 
@@ -23,24 +21,6 @@ const NavBar: React.FC = () => {
   const navTree = systemContext?.navRoot ?? {};
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
-  /* 
-TODO: when auth implemented uncomment this
-
-  const [user, loading] = useAuthState(auth);
-
-  const [isLoginWindowOpen, setIsLoginWindowOpen] = React.useState(false);
-
-  const handleLoginWindow = (): void => {
-    setIsLoginWindowOpen(!isLoginWindowOpen);
-  };
-
-  const handleSignIn = (): void => {
-    if (user) {
-      signOut();
-    } else {
-      signIn();
-    }
-  }; */
 
   return (
     <StyledNav

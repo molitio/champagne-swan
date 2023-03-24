@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { SyledInput, SyledTextArea, SyledSelectInput } from "./style";
 
 interface InputProps<T> {

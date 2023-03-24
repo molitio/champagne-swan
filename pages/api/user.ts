@@ -7,7 +7,7 @@ type User = {
 };
 
 const registerUser = async (req: NextApiRequest, res: NextApiResponse) => {
-  const { username, email, secretHash } = req?.body;
+  const { username, email, secretHash } = req?.body ?? "";
   const result = register({
     username: username,
     email: email,
@@ -22,6 +22,7 @@ const register = async (data: User) => {
   const user = {};
 
   console.log("user", user);
+  console.log("data", data);
   return { ...user };
 };
 

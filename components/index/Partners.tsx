@@ -13,10 +13,8 @@ import {
 const Partners: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
   const partnersLeafs = systemContext?.contentRoot?.partners?.leafs;
-  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
   const textContent = partnersLeafs?.cover?.textContent;
   const assetUrls = partnersLeafs?.cover?.assetUrls;
-  const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
     <StyledPartners>

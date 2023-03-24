@@ -17,8 +17,6 @@ import {
 
 const ServicesContent: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
-  const navTree = systemContext?.navRoot ?? {};
-  const navLeafs = navTree?.services?.leafs;
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
   const servicesLeafs = systemContext?.contentRoot?.services?.leafs;
   const textContent = servicesLeafs?.content?.textContent;

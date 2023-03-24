@@ -19,14 +19,12 @@ import {
 
 /* import SelectForm from "../common/SelectForm"; */
 import { SystemContext } from "@molitio/ui-core";
-import Link from "next/link";
 
-const ServicesCover: React.FC = (props) => {
+const ServicesCover: React.FC = () => {
   const champagneSwanContext = React.useContext(ChampagneSwanContext);
   const navBarExpanded = champagneSwanContext?.interactive?.navBarExpanded;
 
   const systemContext = React.useContext(SystemContext);
-  const navTree = systemContext?.navRoot ?? {};
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
   const servicesLeafs = systemContext?.contentRoot?.services?.leafs;
   const textContent = servicesLeafs?.cover?.textContent;

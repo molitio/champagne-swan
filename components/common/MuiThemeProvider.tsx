@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { createTheme, ThemeProvider } from "@mui/material";
 
 declare module "@mui/material" {

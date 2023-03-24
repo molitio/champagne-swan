@@ -25,8 +25,6 @@ const SelectForm: React.FC = () => {
   console.log(inputFields.input2Value);
   console.log(inputFields.input3Value);
 
-  const [result, setResult] = useState<number>(0);
-
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setInputFields({
       ...inputFields,

@@ -12,9 +12,7 @@ import {
 const AboutOpinions: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
   const aboutLeafs = systemContext?.contentRoot?.about?.leafs;
-  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
   const textContent = aboutLeafs?.opinions?.textContent;
-  const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
     <>
