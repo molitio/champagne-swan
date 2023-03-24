@@ -52,7 +52,7 @@ const AppCover: React.FC = () => {
       />
       <StyledCoverContentContainer>
         <IconGroup
-          fill={systemContext?.theme?.palette?.stars?.gold ?? ""}
+          fill={systemContext?.theme?.palette?.stars?.white ?? ""}
           starCount={5}
         />
         <div>

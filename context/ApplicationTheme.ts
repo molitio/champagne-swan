@@ -17,15 +17,16 @@ export const ApplicationTheme = {
       inverse: "#0c7a93ff",
       secondary: "#9d8d7b",
       tertiary: "#fff",
+      interactive: "#c1a87dff",
     },
     stars: {
       gold: "#bda982ff",
-      blue: "#0c7a9352",
+      blue: "#0c7b93ff",
       white: "#ffffff",
     },
     gradient: {
       cover:
-        "rgba(229, 236, 238, 0) 0%, rgba(153, 198, 208, 0.5) 42%, rgba(13, 124, 149, 0.6) 100%",
+        "rgba(229, 236, 238, 0) 0%, rgba(153, 198, 208, 0.5) 42%, rgba(198, 221, 226, 1) 100%",
       partial:
         "rgba(255,255,255, 0) 0%, rgba(247, 255, 255, 0.2) 20%, rgba(198, 221, 226, 1) 100%",
       reversePartial:

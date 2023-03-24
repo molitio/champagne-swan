@@ -54,8 +54,8 @@ const PremiumQuality: React.FC = () => {
           <NextImage
             containerPositioning={{
               position: "absolute",
-              right: "-50px",
-              bottom: "-100px",
+              right: "-60px",
+              bottom: "-120px",
               transform: "rotate(-15deg)",
             }}
             containerDimensions={{

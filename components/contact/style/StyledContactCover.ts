@@ -55,7 +55,7 @@ export const StyledRelIconContainer = styled.div`
 export const MainTitle = styled.h1`
   position: relative;
   text-align: center;
-  color: #ffffff;
+  color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   font-weight: 400;
   font-size: 105px;

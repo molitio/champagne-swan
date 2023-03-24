@@ -1,14 +1,11 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 export const StyledServices = styled.div<ServicesMainContainerProps>`
-  margin: 0;
-  margin-top: -2px;
-  padding: 0;
-  top: 0;
-  left: 0;
+  position: relative;
+  padding: 5em 0 5em 0;
   width: 100%;
   align-items: center;
-  background-size: cover;
 
   /*   @media (max-width: 1440px) {
     height: ${(props) => props.tabletHeight || "4500px"};
@@ -29,6 +26,7 @@ type StyledIconContainerProps = {
 };
 
 export const StyledIconContainer = styled.div<StyledIconContainerProps>`
+  position: relative;
   padding-top: ${(props) => props.paddingTop || "10em"};
   padding-bottom: 3em;
 
@@ -49,12 +47,13 @@ type ServicesMainContainerProps = {
 
 export const StyledMainTitle = styled.h1`
   text-align: center;
-  color: #ffffff;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  color: ${(props) => props?.theme?.palette?.text?.interactive ?? ""};
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   font-weight: 400;
   font-size: 105px;
   margin-top: 0.4em;
   margin-bottom: 2em;
+  position: relative;
 
   @media (max-width: 1440px) {
     font-size: 65px;
@@ -181,96 +180,37 @@ export const BottomWaterSplash = styled.img<WaterSplashProp>`
 `;
 
 type InternalContainerProps = {
-  tabletTop?: string;
-  mobileTop?: string;
-  smallMobileTop?: string;
+  reversed?: boolean;
 };
 
 export const StyledContentContainer = styled.div<InternalContainerProps>`
   position: relative;
   display: flex;
   justify-content: center;
-  outline: 3px dashed orange;
+  align-items: center;
+  flex-direction: ${(props) => (props?.reversed ? "row-reverse" : "row")};
 
   @media (max-width: 1440px) {
-    align-items: center;
     flex-direction: column;
-    /*     top: ${(props) => props.tabletTop}; */
   }
-  /*   @media (max-width: 975px) {
-    align-items: center;
-    flex-direction: column-reverse;
-    top: ${(props) => props.mobileTop};
-  }
-  @media (max-width: 665px) {
-    top: ${(props) => props.smallMobileTop};
-    align-items: center;
-    flex-direction: column-reverse;
-  } */
 `;
 
 export const InternalContentContainer = styled.div<InternalContainerProps>`
   position: relative;
   display: flex;
   justify-content: center;
-
-  @media (max-width: 1440px) {
-    top: ${(props) => props.tabletTop};
-    align-items: center;
-    flex-direction: column;
-  }
-  @media (max-width: 975px) {
-    top: ${(props) => props.mobileTop};
-    align-items: center;
-    flex-direction: column;
-  }
-  @media (max-width: 665px) {
-    top: ${(props) => props.smallMobileTop};
-    align-items: center;
-    flex-direction: column;
-  }
 `;
 
 export const StyledContentBox = styled.div`
-  padding: 1em;
-  width: 35em;
+  margin: 3em;
+  width: 40em;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
   text-align: center;
-  margin-left: 3em;
+  /*   margin-left: 3em; */
   @media (max-width: 1440px) {
-    margin-left: 0;
     padding-top: 6em;
-  }
-
-  outline: 3px dashed teal;
-
-  /* 
-  height: 353px;
-  min-height: 353px;
-  width: 529px;
-  min-width: 529px;
-    margin: 30px 25px 110px 25px;
-
-  @media (max-width: 975px) {
-    width: 450px;
-    min-width: 450px;
-  }
-
-  @media (max-width: 645px) {
-    width: 300px;
-    min-width: 30px;
-    margin: 30px auto 110px auto;
-  } */
-`;
-
-export const ContactLink = styled.a`
-  font-size: 20px;
-  color: #c1a87d;
-  text-decoration: underline;
-
-  @media (max-width: 975px) {
-    position: relative;
-    top: 30px;
-    left: 30px;
   }
 `;
 
@@ -278,7 +218,8 @@ export const StyledContentBoxTitle = styled.h1`
   font-family: "Lato", sans-serif;
   font-weight: 400;
   text-align: initial;
-  color: #c1a87d;
+  color: ${(props) => props?.theme?.palette?.text?.interactive ?? ""};
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
   font-size: 35px;
   margin-top: 0;
   margin-bottom: 55px;
@@ -318,7 +259,7 @@ type ContentBoxTextProps = {
 
 export const StyledContentBoxText = styled.p<ContentBoxTextProps>`
   display: ${(props) => props.display};
-  position: ${(props) => props.position || "relative"};
+  position: ${(props) => props.position || ""};
   padding: ${(props) => props.padding || "0px 0px 0px 0px"};
   margin: ${(props) => props.margin || "0px 0px 0px 0px"};
   width: ${(props) => props.width || "529px"};
@@ -326,24 +267,36 @@ export const StyledContentBoxText = styled.p<ContentBoxTextProps>`
   bottom: ${(props) => props.bottom || "0"};
   font-family: "Lato", sans-serif;
   text-align: start;
-  color: #c1a87d;
-  font-size: 18px;
+  color: ${(props) => props?.theme?.palette?.text?.interactive ?? ""};
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  font-size: 1.2em;
   font-weight: 300;
 
   @media (max-width: ${(props) => props.breakpoint1 || "1440px"}) {
     margin: ${(props) => props.marginTablet || "0px 0px 0px 0px"};
     padding: ${(props) => props.paddingTablet || "0px 0px 0px 0px"};
     display: ${(props) => props.displayTablet};
-  }
-  @media (max-width: ${(props) => props.breakpoint2 || "975px"}) {
-    display: ${(props) => props.displayMobile || "block"};
     text-align: center;
     margin: auto;
     width: 450px;
   }
+  @media (max-width: ${(props) => props.breakpoint2 || "975px"}) {
+    display: ${(props) => props.displayMobile || "block"};
+  }
 
   @media (max-width: 665px) {
     width: 290px;
+  }
+`;
+
+export const StyledContactLink = styled(Link)`
+  font-size: 20px;
+  color: ${(props) => props?.theme?.palette?.text?.interactive ?? ""};
+  text-decoration: underline;
+  @media (max-width: 975px) {
+    position: relative;
+    top: 30px;
+    left: 30px;
   }
 `;
 

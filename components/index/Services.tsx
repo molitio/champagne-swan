@@ -1,18 +1,20 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
-import { ImageBox, IconGroup, NextImage, SyledImageAndEffect } from "../common";
+import {
+  IconGroup,
+  NextImage,
+  StyledLinearGradient,
+  SyledImageAndEffect,
+} from "../common";
 import {
   StyledServices,
   StyledIconContainer,
   StyledMainTitle,
-  RightSideWaterSplash,
   StyledContentContainer,
   StyledContentBox,
-  ContactLink,
-  InternalContentContainer,
+  StyledContactLink,
   StyledContentBoxTitle,
   StyledContentBoxText,
-  ExternalContentContainer,
 } from "../services";
 
 const Services: React.FC = () => {
@@ -27,6 +29,13 @@ const Services: React.FC = () => {
 
   return (
     <StyledServices>
+      <StyledLinearGradient direction="top" variation="partial" opacity={1} />
+
+      {/*    <StyledLinearGradient
+        direction="bottom"
+        variation="partial"
+        opacity={1}
+      /> */}
       <StyledIconContainer mobilePaddingTop={"7em"} tabletPaddingTop={"10em"}>
         <IconGroup
           fill={systemContext?.theme?.palette?.stars?.gold}
@@ -34,6 +43,7 @@ const Services: React.FC = () => {
         />
       </StyledIconContainer>
       <StyledMainTitle>{textContent?.title ?? ""}</StyledMainTitle>
+
       <StyledContentContainer>
         <StyledContentBox>
           <StyledContentBoxTitle>
@@ -42,16 +52,70 @@ const Services: React.FC = () => {
           <StyledContentBoxText>
             {textContent?.comercialServicesContentText ?? ""}
           </StyledContentBoxText>
-          <ContactLink href={navLeafs?.mainContent?.path ?? ""}>
+          <StyledContactLink href={navLeafs?.mainContent?.path ?? ""}>
             {navLeafs?.mainContent?.label ?? ""}
-          </ContactLink>
+          </StyledContactLink>
         </StyledContentBox>
-        <SyledImageAndEffect>
+        <SyledImageAndEffect
+          dimensions={{
+            height: "353px",
+            width: "529px",
+          }}
+          margin="3em"
+        >
           <NextImage
             containerPositioning={{
               position: "absolute",
-              right: "-50px",
-              bottom: "-100px",
+              right: "-60px",
+              bottom: "-120px",
+              transform: "rotate(-15deg)",
+            }}
+            containerDimensions={{ width: "250px", height: "250px" }}
+            imageProps={{
+              src: commonAssetUrls?.waterSplash ?? "",
+              alt: "water-splash",
+            }}
+          />
+          <NextImage
+            containerPositioning={{
+              position: "absolute",
+            }}
+            imageProps={{
+              src: assetUrls?.morning ?? "",
+              alt: "morning-sunshine",
+            }}
+            visual={{
+              boxShadow: " 0px 4px 4px rgba(0, 0, 0, 0.5)",
+            }}
+          />
+        </SyledImageAndEffect>
+      </StyledContentContainer>
+
+      <StyledContentContainer reversed>
+        <StyledContentBox>
+          <StyledContentBoxTitle>
+            {textContent?.privateServicesContentTitle ?? ""}
+          </StyledContentBoxTitle>
+          <StyledContentBoxText>
+            {textContent?.privateServicesContentText ?? ""}
+          </StyledContentBoxText>
+          <StyledContactLink href={navLeafs?.privateServices?.path ?? ""}>
+            {navLeafs?.privateServices?.label ?? ""}
+          </StyledContactLink>
+        </StyledContentBox>
+
+        <SyledImageAndEffect
+          dimensions={{
+            height: "353px",
+            width: "529px",
+          }}
+          margin="3em"
+        >
+          <NextImage
+            containerPositioning={{
+              position: "absolute",
+              right: "-60px",
+              bottom: "-120px",
               transform: "rotate(-15deg)",
             }}
             containerDimensions={{
@@ -65,14 +129,10 @@ const Services: React.FC = () => {
           />
           <NextImage
             containerPositioning={{
-              position: "relative",
-            }}
-            containerDimensions={{
-              height: "353px",
-              width: "529px",
+              position: "absolute",
             }}
             imageProps={{
-              src: assetUrls?.morning ?? "",
+              src: assetUrls?.flatRoom ?? "",
               alt: "morning-sunshine",
             }}
             visual={{
@@ -81,81 +141,55 @@ const Services: React.FC = () => {
           />
         </SyledImageAndEffect>
       </StyledContentContainer>
-
-      <ExternalContentContainer>
-        <InternalContentContainer>
-          <StyledContentBox>
-            <StyledContentBoxTitle>
-              {textContent?.privateServicesContentTitle ?? ""}
-            </StyledContentBoxTitle>
-            <StyledContentBoxText>
-              {textContent?.privateServicesContentText ?? ""}
-            </StyledContentBoxText>
-            <ContactLink href={navLeafs?.privateServices?.path ?? ""}>
-              {navLeafs?.privateServices?.label ?? ""}
-            </ContactLink>
-          </StyledContentBox>
-          <ImageBox
-            imageBoxParams={{
-              imageUrl: assetUrls?.flatRoom ?? "",
-              dimensions: {
-                height: "397px",
-                width: "556px",
-                minHeight: "397px",
-                minWidth: "556px",
-              },
-              positioning: {
-                margin: "30px 15px 0 15px",
-                tablet: {
-                  top: "0px",
-                },
-              },
-              breakpoints: {
-                breakpoint1: "1440px",
-              },
+      <StyledContentContainer>
+        <StyledContentBox>
+          <StyledContentBoxTitle>
+            {textContent?.highCeilingContentTitle ?? ""}
+          </StyledContentBoxTitle>
+          <StyledContentBoxText>
+            {textContent?.highCeilingContentText ?? ""}
+          </StyledContentBoxText>
+          <StyledContactLink href={navLeafs?.highCeilingServices?.path ?? ""}>
+            {navLeafs?.highCeilingServices?.label ?? ""}
+          </StyledContactLink>
+        </StyledContentBox>
+        <SyledImageAndEffect
+          dimensions={{
+            height: "353px",
+            width: "529px",
+          }}
+          margin="3em"
+        >
+          <NextImage
+            containerPositioning={{
+              position: "absolute",
+              right: "-60px",
+              bottom: "-120px",
+              transform: "rotate(-15deg)",
+            }}
+            containerDimensions={{
+              width: "250px",
+              height: "250px",
+            }}
+            imageProps={{
+              src: commonAssetUrls?.waterSplash ?? "",
+              alt: "water-splash",
             }}
           />
-        </InternalContentContainer>
-        <RightSideWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
-      </ExternalContentContainer>
-      {/* 
-      <ExternalContentContainer>
-        <StyledContentContainer>
-          <ImageBox
-            imageBoxParams={{
-              imageUrl: assetUrls?.industry ?? "",
-              dimensions: {
-                height: "396px",
-                width: "529px",
-                minHeight: "396px",
-                minWidth: "529px",
-              },
-              positioning: {
-                margin: "30px 15px 0 15px",
-                tablet: {
-                  top: "0px",
-                },
-              },
-              breakpoints: {
-                breakpoint1: "1440px",
-              },
+          <NextImage
+            containerPositioning={{
+              position: "absolute",
+            }}
+            imageProps={{
+              src: assetUrls?.industry ?? "",
+              alt: "morning-sunshine",
+            }}
+            visual={{
+              boxShadow: " 0px 4px 4px rgba(0, 0, 0, 0.5)",
             }}
           />
-
-          <StyledContentBox>
-            <StyledContentBoxTitle>
-              {textContent?.highCeilingContentTitle ?? ""}
-            </StyledContentBoxTitle>
-            <StyledContentBoxText>
-              {textContent?.highCeilingContentText ?? ""}
-            </StyledContentBoxText>
-            <ContactLink href={navLeafs?.highCeilingServices?.path ?? ""}>
-              {navLeafs?.highCeilingServices?.label ?? ""}
-            </ContactLink>
-          </StyledContentBox>
-        </StyledContentContainer>
-        <BottomWaterSplash src={commonAssetUrls?.waterSplash ?? ""} />
-      </ExternalContentContainer> */}
+        </SyledImageAndEffect>
+      </StyledContentContainer>
     </StyledServices>
   );
 };

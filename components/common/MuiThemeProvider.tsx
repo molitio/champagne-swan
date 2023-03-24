@@ -23,6 +23,7 @@ declare module "@mui/material" {
   export interface TypeText {
     tertiary?: string;
     inverse?: string;
+    interactive?: string;
   }
   export interface Theme {
     dimensions: {

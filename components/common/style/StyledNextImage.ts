@@ -19,9 +19,9 @@ type StyledNextImageContainerProps = {
 };
 
 export const StyledNextImageContainer = styled.div<StyledNextImageContainerProps>`
-  box-shadow: ${(props) => props?.visual?.boxShadow ?? "none"};
-  position: ${(props) => props?.positioning?.position ?? "absolute"};
-  transform: ${(props) => props?.positioning?.transform ?? "none"};
+  box-shadow: ${(props) => props?.visual?.boxShadow ?? ""};
+  position: ${(props) => props?.positioning?.position ?? ""};
+  transform: ${(props) => props?.positioning?.transform ?? ""};
   top: ${(props) => props?.positioning?.top ?? ""};
   right: ${(props) => props?.positioning?.right ?? ""};
   bottom: ${(props) => props?.positioning?.bottom ?? ""};
@@ -30,16 +30,32 @@ export const StyledNextImageContainer = styled.div<StyledNextImageContainerProps
   ${(props) =>
     props?.dimensions
       ? css`
-          ${{ ...props.dimensions }}
+          height: ${props?.dimensions?.height ?? ""};
+          width: ${props?.dimensions?.width ?? ""};
+          min-height: ${props?.dimensions?.minHeight ?? ""};
+          min-height: ${props?.dimensions?.minHeight ?? ""};
+          max-height: ${props?.dimensions?.maxHeight ?? ""};
+          max-width: ${props?.dimensions?.maxWidth ?? ""};
         `
       : css`
-          height: 100vh;
+          height: 100%;
           width: 100%;
         `}
 `;
 
-export const SyledImageAndEffect = styled.div`
-  outline: 3px dashed purple;
-  padding: 1em;
+type SyledImageAndEffectProps = {
+  dimensions?: Dimensions;
+  margin?: string;
+};
+
+export const SyledImageAndEffect = styled.div<SyledImageAndEffectProps>`
+  height: ${(props) => props?.dimensions?.height ?? ""};
+  width: ${(props) => props?.dimensions?.width ?? ""};
+  min-height: ${(props) => props?.dimensions?.minHeight ?? ""};
+  min-height: ${(props) => props?.dimensions?.minHeight ?? ""};
+  max-height: ${(props) => props?.dimensions?.maxHeight ?? ""};
+  max-width: ${(props) => props?.dimensions?.maxWidth ?? ""};
+  background-color: teal;
   position: relative;
+  margin: ${(props) => props?.margin ?? ""};
 `;

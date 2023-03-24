@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const StyledPremiumQuality = styled.section`
   position: relative;
-  padding: 0;
+  padding: 5em 0 5em 0;
   align-items: center;
   background: ${(props) => props?.theme?.palette?.background?.default ?? ""};
 `;
@@ -76,11 +76,13 @@ export const StyledIconContainer = styled.div`
 `;
 
 export const StyledContentTitle = styled.h1`
+  position: relative;
   text-align: center;
   color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   font-weight: 400;
   font-size: 6.5em;
-  opacity: 0.5;
+  opacity: 0.8;
   margin: 0;
   padding-top: 0.6em;
 
@@ -189,6 +191,7 @@ export const StyledContentBoxTitle = styled.h1`
   text-align: initial;
   font-family: "Lato", sans-serif;
   color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
   font-weight: 400;
   font-size: 35px;
   margin-top: 0;
@@ -220,6 +223,7 @@ export const StyledContentBoxText = styled.p<PremiumQualityContentProps>`
   position: relative;
   text-align: start;
   color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
   font-weight: 300;
   font-size: ${(props) => props.fontSize || "20px"};
   margin-bottom: 2em;
