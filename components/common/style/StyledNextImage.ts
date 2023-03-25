@@ -15,6 +15,7 @@ export const StyledNextImage = styled(Image)<StyledNextImageProps>`
   position: absolute;
   object-fit: cover;
   border-radius: ${(props) => props?.visual?.borderRadius ?? ""};
+  box-shadow: ${(props) => props?.visual?.boxShadow ?? ""};
 `;
 
 type StyledNextImageContainerProps = {
@@ -61,7 +62,6 @@ export const SyledImageAndEffect = styled.div<SyledImageAndEffectProps>`
   min-height: ${(props) => props?.dimensions?.minHeight ?? ""};
   max-height: ${(props) => props?.dimensions?.maxHeight ?? ""};
   max-width: ${(props) => props?.dimensions?.maxWidth ?? ""};
-  background-color: teal;
   position: relative;
   margin: ${(props) => props?.margin ?? ""};
 `;

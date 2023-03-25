@@ -113,9 +113,9 @@ const ServicesContent: React.FC = () => {
 
       <ExternalContentContainer>
         <InternalContentContainer
-          tabletTop={"200px"}
+        /*           tabletTop={"200px"}
           mobileTop={"250px"}
-          smallMobileTop={"550px"}
+          smallMobileTop={"550px"} */
         >
           <StyledContentBox>
             <StyledContentBoxTitle>
@@ -187,9 +187,9 @@ const ServicesContent: React.FC = () => {
 
       <ExternalContentContainer>
         <StyledContentContainer
-          tabletTop={"390px"}
+        /*          tabletTop={"390px"}
           mobileTop={"480px"}
-          smallMobileTop={"1150px"}
+          smallMobileTop={"1150px"} */
         >
           <ImageBox
             imageBoxParams={{

@@ -1,13 +1,13 @@
 import { NextPage } from "next";
 import { ServicesContent, ServicesCover } from "../components/services";
-import { Contact } from "../components/contact";
+import { ContactInfo } from "../components/contact";
 
 const ServicesPage: NextPage = () => {
   return (
     <section>
       <ServicesCover />
       <ServicesContent />
-      <Contact />
+      <ContactInfo />
     </section>
   );
 };

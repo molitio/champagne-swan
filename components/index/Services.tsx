@@ -8,14 +8,14 @@ import {
 } from "../common";
 import {
   StyledServices,
-  StyledIconContainer,
   StyledMainTitle,
-  StyledContentContainer,
+  StyledServicesContentContainer,
   StyledContentBox,
   StyledContactLink,
   StyledContentBoxTitle,
   StyledContentBoxText,
 } from "../services";
+import { StyledServicesIconContainer } from "./style";
 
 const Services: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
@@ -31,20 +31,20 @@ const Services: React.FC = () => {
     <StyledServices>
       <StyledLinearGradient direction="top" variation="partial" opacity={1} />
 
-      {/*    <StyledLinearGradient
+      <StyledLinearGradient
         direction="bottom"
         variation="partial"
         opacity={1}
-      /> */}
-      <StyledIconContainer mobilePaddingTop={"7em"} tabletPaddingTop={"10em"}>
+      />
+      <StyledServicesIconContainer>
         <IconGroup
           fill={systemContext?.theme?.palette?.stars?.gold}
           starCount={5}
         />
-      </StyledIconContainer>
+      </StyledServicesIconContainer>
       <StyledMainTitle>{textContent?.title ?? ""}</StyledMainTitle>
 
-      <StyledContentContainer>
+      <StyledServicesContentContainer>
         <StyledContentBox>
           <StyledContentBoxTitle>
             {textContent?.comercialServicesContentTitle ?? ""}
@@ -85,13 +85,14 @@ const Services: React.FC = () => {
               alt: "morning-sunshine",
             }}
             imageVisual={{
-              boxShadow: " 0px 4px 4px rgba(0, 0, 0, 0.5)",
+              boxShadow: "2px 4px 4px #C1DFE6ff",
+              borderRadius: "1em",
             }}
           />
         </SyledImageAndEffect>
-      </StyledContentContainer>
+      </StyledServicesContentContainer>
 
-      <StyledContentContainer reversed>
+      <StyledServicesContentContainer reversed>
         <StyledContentBox>
           <StyledContentBoxTitle>
             {textContent?.privateServicesContentTitle ?? ""}
@@ -133,15 +134,16 @@ const Services: React.FC = () => {
             }}
             imageProps={{
               src: assetUrls?.flatRoom ?? "",
-              alt: "morning-sunshine",
+              alt: "flat-room",
             }}
             imageVisual={{
-              boxShadow: " 0px 4px 4px rgba(0, 0, 0, 0.5)",
+              boxShadow: "2px 4px 4px #C1DFE6ff",
+              borderRadius: "1em",
             }}
           />
         </SyledImageAndEffect>
-      </StyledContentContainer>
-      <StyledContentContainer>
+      </StyledServicesContentContainer>
+      <StyledServicesContentContainer>
         <StyledContentBox>
           <StyledContentBoxTitle>
             {textContent?.highCeilingContentTitle ?? ""}
@@ -182,14 +184,15 @@ const Services: React.FC = () => {
             }}
             imageProps={{
               src: assetUrls?.industry ?? "",
-              alt: "morning-sunshine",
+              alt: "industry-park",
             }}
             imageVisual={{
-              boxShadow: " 0px 4px 4px rgba(0, 0, 0, 0.5)",
+              boxShadow: "2px 4px 4px #C1DFE6ff",
+              borderRadius: "1em",
             }}
           />
         </SyledImageAndEffect>
-      </StyledContentContainer>
+      </StyledServicesContentContainer>
     </StyledServices>
   );
 };

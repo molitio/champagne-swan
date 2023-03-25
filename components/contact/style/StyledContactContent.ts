@@ -5,7 +5,7 @@ type StyledContentContainerProps = {
   heightTablet?: string;
 };
 
-export const StyledContentContainer = styled.div<StyledContentContainerProps>`
+export const StyledContactContentContainer = styled.div<StyledContentContainerProps>`
   position: relative;
   width: 100%;
   height: ${(props) => props.height || "1600px"};

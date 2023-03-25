@@ -68,19 +68,14 @@ export const RotateLayer = styled.img<RotateLayer>`
   }
 `;
 
-type MainOpinionsTitleProps = {
-  color?: string;
-  fontSize?: string;
-  padding?: string;
-};
-
-export const StyledMainTitle = styled.h1<MainOpinionsTitleProps>`
+export const StyledOpinionsMainTitle = styled.h1`
   position: relative;
   text-align: center;
-  color: ${(props) => props.color || "#ffffff"};
-  font-size: ${(props) => props.fontSize || "105px"};
-  padding: ${(props) => props.padding || "0.3em 0 0.3em 0"};
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.08);
+  font-size: "6.5em";
+  padding: "0.3em 0 0.3em 0";
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["opinionsTitleShadow"]?.textShadow ?? ""};
   font-weight: 400;
   margin-bottom: 0em;
 
@@ -108,7 +103,7 @@ export const InternalOpinionsContentContainer = styled.div`
     flex-direction: column;
   }
 `;
-export const StyledContentContainer = styled.div`
+export const StyledOpinionsContentContainer = styled.div`
   outline: 3px dashed purple;
   position: relative;
   display: flex;
@@ -139,7 +134,7 @@ type ServiceEvaluatorProps = {
   fontSize?: string;
   padding?: string;
 };
-export const ServiceEvaluatorContainerText = styled.p<ServiceEvaluatorProps>`
+export const StyledOpinionText = styled.p<ServiceEvaluatorProps>`
   color: ${(props) => props.color || "#0c7b93"};
   width: 400px;
   font-family: "Lato", sans-serif;
@@ -158,7 +153,7 @@ type ServiceEvaluatorName = {
   color?: string;
 };
 
-export const ServiceEvaluatorContainerName = styled.p<ServiceEvaluatorName>`
+export const StyledOpinionTitle = styled.p<ServiceEvaluatorName>`
   text-align: center;
   color: ${(props) => props.color || "#0c7b93"};
   font-family: "Lato" sans-serif;
@@ -166,7 +161,7 @@ export const ServiceEvaluatorContainerName = styled.p<ServiceEvaluatorName>`
   font-size: 30px;
 `;
 
-export const StyledOpininsLogoImage = styled.img`
+export const StyledOpininsLogo = styled.div`
   position: relative;
   padding-top: 100px;
   display: block;

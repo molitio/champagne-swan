@@ -109,20 +109,15 @@ export const StyledCallToAction = styled.div`
   text-align: center;
 `;
 
-type StyledProps = {
-  color?: string;
-  textShadow?: string;
-};
-
-export const StyledMainTitle = styled.h1<StyledProps>`
+export const StyledMainTitle = styled.h1`
   position: relative;
   text-align: center;
   margin: 30px 30px 0 30px;
   font-style: normal;
   font-weight: 200;
-  font-size: 60px;
+  font-size: 3.8em;
   line-height: 78px;
-  color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["appCoverTitleShadow"]?.textShadow ?? ""};
 
@@ -145,17 +140,18 @@ export const StyledMainTitle = styled.h1<StyledProps>`
   }
 `;
 
-export const StyledSubTitle = styled.h1<StyledProps>`
+export const StyledSubTitle = styled.h2`
   position: relative;
   text-align: center;
   font-size: 3.6rem;
   margin: 0px 30px 0 30px;
   font-style: normal;
   font-weight: 200;
-  font-size: 60px;
+  font-size: 2.8em;
   line-height: 78px;
-  color: ${(props) => props.color || " #ffffff"};
-  text-shadow: 2px 4px 8px #000000;
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["appCoverTitleShadow"]?.textShadow ?? ""};
 
   @media (max-width: 1400px) {
     font-size: 3.2rem;
@@ -180,19 +176,19 @@ export const StyledSubTitle = styled.h1<StyledProps>`
   }
 `;
 
-export const StyledDescription = styled.pre<StyledProps>`
+export const StyledDescription = styled.pre`
   width: 36em;
-  font-style: normal;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-size: 24px;
-  color: ${(props) => props?.theme?.palette?.text?.tertiary};
   margin-top: 1em;
   margin-bottom: 0;
   margin-right: auto;
   margin-left: auto;
-  text-align: center;
   padding: 0 2em 0 2em;
+  font-style: normal;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  text-align: center;
+  color: ${(props) => props?.theme?.palette?.text?.primary};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["appCoverTextShadow"]?.textShadow ?? ""};
   white-space: pre-wrap;

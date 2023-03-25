@@ -2,38 +2,38 @@ import React from "react";
 import { IconGroup, NextImage } from "../common";
 import { SyledImageAndEffect } from "../common";
 import {
-  StyledContentContainer,
-  StyledPremiumQuality,
+  StyledBrandMessage,
   StyledContentBoxTitle,
   StyledContentBoxText,
   StyledContactLink,
   StyledContentTitle,
-  StyledIconContainer,
+  StyledBrandMessageIconContainer,
   StyledContentBox,
+  StyledBrandMessageContentContainer,
 } from "./style";
 import { SystemContext } from "@molitio/ui-core";
 
-const PremiumQuality: React.FC = () => {
+const BrandMessage: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
   const navTree = systemContext.navRoot ?? {};
-  const premiumQualityLeafs = systemContext?.contentRoot?.premiumQuality?.leafs;
+  const premiumQualityLeafs = systemContext?.contentRoot?.BrandMessage?.leafs;
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
   const textContent = premiumQualityLeafs?.cover?.textContent;
   const assetUrls = premiumQualityLeafs?.cover?.assetUrls;
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
-    <StyledPremiumQuality>
-      <StyledIconContainer>
+    <StyledBrandMessage>
+      <StyledBrandMessageIconContainer>
         <IconGroup
-          fill={systemContext?.theme?.palette?.stars?.blue ?? ""}
+          fill={systemContext?.theme?.palette?.stars?.gold ?? ""}
           starCount={5}
         />
-      </StyledIconContainer>
+      </StyledBrandMessageIconContainer>
 
       <StyledContentTitle>{textContent?.title ?? ""}</StyledContentTitle>
 
-      <StyledContentContainer>
+      <StyledBrandMessageContentContainer>
         <StyledContentBox>
           <StyledContentBoxTitle>
             {textContent?.contentTitle ?? ""}
@@ -81,12 +81,13 @@ const PremiumQuality: React.FC = () => {
             }}
             imageVisual={{
               boxShadow: " 0px 4px 4px rgba(0, 0, 0, 0.5)",
+              borderRadius: "1em",
             }}
           />
         </SyledImageAndEffect>
-      </StyledContentContainer>
-    </StyledPremiumQuality>
+      </StyledBrandMessageContentContainer>
+    </StyledBrandMessage>
   );
 };
 
-export default PremiumQuality;
+export default BrandMessage;

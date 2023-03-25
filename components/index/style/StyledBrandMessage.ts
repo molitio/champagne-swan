@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-export const StyledPremiumQuality = styled.section`
+export const StyledBrandMessage = styled.section`
   position: relative;
   padding: 5em 0 5em 0;
   align-items: center;
@@ -16,7 +16,7 @@ export const PremiumLayerContainer = styled.img`
   margin-top: -1px;
 `;
 
-export const StyledContentContainer = styled.div`
+export const StyledBrandMessageContentContainer = styled.div`
   display: flex;
   gap: 1em;
   justify-content: center;
@@ -39,7 +39,7 @@ export const StyledContentBox = styled.div`
   }
 `;
 
-export const AboutPremiumQualityBackgroundLayerContainer = styled.div`
+export const StyledBrandMessageContainer = styled.div`
   position: relative;
   padding: 0;
   top: 0;
@@ -68,7 +68,7 @@ export const AboutPremiumQualityBackgroundLayerContainer = styled.div`
   }
 `;
 
-export const StyledIconContainer = styled.div`
+export const StyledBrandMessageIconContainer = styled.div`
   padding-top: 12em;
   @media (max-width: 975px) {
     padding-top: 8em;
@@ -78,8 +78,9 @@ export const StyledIconContainer = styled.div`
 export const StyledContentTitle = styled.h1`
   position: relative;
   text-align: center;
-  color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["appCoverTitleShadow"]?.textShadow ?? ""};
   font-weight: 400;
   font-size: 6.5em;
   opacity: 0.8;
@@ -190,8 +191,10 @@ export const AboutTextPQualityContent = styled.p`
 export const StyledContentBoxTitle = styled.h1`
   text-align: initial;
   font-family: "Lato", sans-serif;
-  color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
+
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["appCoverTextShadow"]?.textShadow ?? ""};
   font-weight: 400;
   font-size: 35px;
   margin-top: 0;
@@ -208,24 +211,16 @@ export const StyledContentBoxTitle = styled.h1`
   }
 `;
 
-type PremiumQualityContentProps = {
-  fontSize?: string;
-  width?: string;
-  tabletFontSize?: string;
-  tabletWidth?: string;
-  mobileWidth?: string;
-  smallMobileWidth?: string;
-  smallMobileFonsize?: string;
-};
-
-export const StyledContentBoxText = styled.p<PremiumQualityContentProps>`
+export const StyledContentBoxText = styled.p`
   font-family: "Lato", sans-serif;
   position: relative;
   text-align: start;
-  color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
+
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["appCoverTextShadow"]?.textShadow ?? ""};
   font-weight: 300;
-  font-size: ${(props) => props.fontSize || "20px"};
+  font-size: 1.4em;
   margin-bottom: 2em;
 
   @media (max-width: 975px) {
@@ -238,7 +233,7 @@ export const StyledContentBoxText = styled.p<PremiumQualityContentProps>`
     width: 290px;
   }
 `;
-export const AboutPremiumQualityContentText = styled.p<PremiumQualityContentProps>`
+export const AboutPremiumQualityContentText = styled.p`
   display: block;
   margin: auto;
   position: relative;
@@ -246,21 +241,8 @@ export const AboutPremiumQualityContentText = styled.p<PremiumQualityContentProp
   color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: ${(props) => props.fontSize || "25px"};
-  width: ${(props) => props.width || ""};
+  font-size: "25px";
   margin-bottom: 7em;
-
-  @media (max-width: 1440px) {
-    font-size: ${(props) => props.tabletFontSize || "25px"};
-    width: ${(props) => props.tabletWidth || ""};
-  }
-  @media (max-width: 975px) {
-    width: ${(props) => props.mobileWidth || ""};
-  }
-  @media (max-width: 665px) {
-    width: ${(props) => props.smallMobileWidth || ""};
-    font-size: ${(props) => props.smallMobileFonsize || ""};
-  }
 `;
 
 export const PremiumQualityWaterSplash = styled.img`

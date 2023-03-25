@@ -2,24 +2,24 @@ import React from "react";
 import type { NextPage } from "next";
 import {
   AppCover,
-  PremiumQuality,
+  BrandMessage,
   BrandFeats,
   Services,
   Opinions,
   Partners,
 } from "../components/index";
-import { Contact } from "../components/contact";
+import { ContactInfo } from "../components/contact";
 
 const IndexPage: NextPage = () => {
   return (
     <main>
       <AppCover />
       <BrandFeats />
-      <PremiumQuality />
+      <BrandMessage />
       <Services />
       <Opinions />
       <Partners />
-      <Contact />
+      <ContactInfo />
     </main>
   );
 };

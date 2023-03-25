@@ -25,7 +25,7 @@ type StyledIconContainerProps = {
   mobilePaddingTop?: string;
 };
 
-export const StyledIconContainer = styled.div<StyledIconContainerProps>`
+export const StyledServicesIconContainer = styled.div<StyledIconContainerProps>`
   position: relative;
   padding-top: ${(props) => props.paddingTop || "10em"};
   padding-bottom: 3em;
@@ -47,10 +47,11 @@ type ServicesMainContainerProps = {
 
 export const StyledMainTitle = styled.h1`
   text-align: center;
-  color: ${(props) => props?.theme?.palette?.text?.interactive ?? ""};
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["servicesTextShadow"]?.textShadow ?? ""};
   font-weight: 400;
-  font-size: 105px;
+  font-size: 6.5em;
   margin-top: 0.4em;
   margin-bottom: 2em;
   position: relative;
@@ -183,7 +184,7 @@ type InternalContainerProps = {
   reversed?: boolean;
 };
 
-export const StyledContentContainer = styled.div<InternalContainerProps>`
+export const StyledServicesContentContainer = styled.div<InternalContainerProps>`
   position: relative;
   display: flex;
   justify-content: center;
@@ -218,8 +219,9 @@ export const StyledContentBoxTitle = styled.h1`
   font-family: "Lato", sans-serif;
   font-weight: 400;
   text-align: initial;
-  color: ${(props) => props?.theme?.palette?.text?.interactive ?? ""};
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  color: ${(props) => props?.theme?.palette?.text?.secondary};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["servicesTitleShadow"]?.textShadow ?? ""};
   font-size: 35px;
   margin-top: 0;
   margin-bottom: 55px;
@@ -267,10 +269,11 @@ export const StyledContentBoxText = styled.p<ContentBoxTextProps>`
   bottom: ${(props) => props.bottom || "0"};
   font-family: "Lato", sans-serif;
   text-align: start;
-  color: ${(props) => props?.theme?.palette?.text?.interactive ?? ""};
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  color: ${(props) => props?.theme?.palette?.text?.secondary};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["servicesTextShadow"]?.textShadow ?? ""};
   font-size: 1.2em;
-  font-weight: 300;
+  font-weight: 400;
 
   @media (max-width: ${(props) => props.breakpoint1 || "1440px"}) {
     margin: ${(props) => props.marginTablet || "0px 0px 0px 0px"};

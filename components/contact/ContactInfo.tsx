@@ -9,12 +9,12 @@ import {
   StyledContentFormText,
   StyledContentBackgroundLayer,
   StyledContentRelIcon,
-  StyledContentContainer,
+  StyledContactContentContainer,
   StyledContentContactInfoContainer,
   StyledContentContactInfo,
 } from "./style";
 
-const Contact: React.FC = () => {
+const ContactInfo: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
   const contactLeafs = systemContext?.contentRoot?.contact?.leafs;
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
-    <StyledContentContainer>
+    <StyledContactContentContainer>
       <StyledContentBackgroundLayer>
         <IconGroup
           starCount={5}
@@ -68,8 +68,8 @@ const Contact: React.FC = () => {
         </SyledContentFormBox>
         <StyledContentLogoImage src={commonAssetUrls?.logo ?? ""} alt="logo" />
       </StyledContentBackgroundLayer>
-    </StyledContentContainer>
+    </StyledContactContentContainer>
   );
 };
 
-export default Contact;
+export default ContactInfo;

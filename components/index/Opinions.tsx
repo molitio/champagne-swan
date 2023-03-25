@@ -1,20 +1,15 @@
 import { SystemContext } from "@molitio/ui-core";
 import React from "react";
-import { NextImage } from "../common";
+import { NextImage, StyledLinearGradient } from "../common";
 import { IconGroup } from "../common/IconGroup";
 import {
   StyledOpinions,
-  StyledLayer,
-  StyledMiddleLayer,
-  RotateLayer,
-  InternalOpinionsContentContainer,
-  ServiceEvaluatorContainerImage,
-  ServiceEvaluatorContainerText,
-  ServiceEvaluatorContainerName,
-  StyledContentContainer,
-  StyledOpininsLogoImage,
-  StyledMainTitle,
-  StyledIconContainer,
+  StyledOpinionText,
+  StyledOpinionTitle,
+  StyledOpinionsContentContainer,
+  StyledOpininsLogo,
+  StyledOpinionsMainTitle,
+  StyledOpinionsIconContainer,
 } from "./style";
 
 const Opinions: React.FC = () => {
@@ -26,20 +21,25 @@ const Opinions: React.FC = () => {
 
   return (
     <StyledOpinions>
-      {/*       <StyledLayer src={commonAssetUrls?.gradientBottom ?? ""} />
-      <StyledMiddleLayer />
-      <RotateLayer src={commonAssetUrls?.gradientBottom ?? ""} /> */}
+      <StyledLinearGradient
+        direction="top"
+        variation="reversePartial"
+        opacity={1}
+      />
+      <StyledLinearGradient direction="top" variation="partial" opacity={1} />
 
-      <StyledIconContainer>
+      <StyledOpinionsIconContainer>
         <IconGroup
-          fill={systemContext?.theme?.palette?.stars?.white}
+          fill={systemContext?.theme?.palette?.stars?.gold}
           starCount={5}
         />
-      </StyledIconContainer>
+      </StyledOpinionsIconContainer>
 
-      <StyledMainTitle>{textContent?.title ?? ""}</StyledMainTitle>
+      <StyledOpinionsMainTitle>
+        {textContent?.title ?? ""}
+      </StyledOpinionsMainTitle>
 
-      <StyledContentContainer>
+      <StyledOpinionsContentContainer>
         <NextImage
           containerPositioning={{
             position: "relative",
@@ -47,23 +47,21 @@ const Opinions: React.FC = () => {
           containerDimensions={{ width: "120px", height: "120px" }}
           imageProps={{
             src: commonAssetUrls?.stockPersonAvatar ?? "",
-            alt: "water-splash",
+            alt: "person-avatar",
           }}
           imageVisual={{
             borderRadius: "50%",
           }}
         />
-        {/*       <ServiceEvaluatorContainerImage
-            src={commonAssetUrls?.stockPersonAvatar ?? ""}
-          /> */}
-        <ServiceEvaluatorContainerText>
+        <StyledOpinionText>
           {textContent?.defaultCostumerOpinion ?? ""}
-        </ServiceEvaluatorContainerText>
-        <ServiceEvaluatorContainerName>
+        </StyledOpinionText>
+        <StyledOpinionTitle>
           {textContent?.defaultCustomerName ?? ""}
-        </ServiceEvaluatorContainerName>
-      </StyledContentContainer>
-      <StyledContentContainer>
+        </StyledOpinionTitle>
+      </StyledOpinionsContentContainer>
+
+      <StyledOpinionsContentContainer>
         <NextImage
           containerPositioning={{
             position: "relative",
@@ -71,21 +69,29 @@ const Opinions: React.FC = () => {
           containerDimensions={{ width: "120px", height: "120px" }}
           imageProps={{
             src: commonAssetUrls?.stockPersonAvatar ?? "",
-            alt: "water-splash",
+            alt: "person-avatar",
           }}
           imageVisual={{
             borderRadius: "50%",
           }}
         />
-        <ServiceEvaluatorContainerText>
+        <StyledOpinionText>
           {textContent?.defaultCostumerOpinion ?? ""}
-        </ServiceEvaluatorContainerText>
-        <ServiceEvaluatorContainerName>
+        </StyledOpinionText>
+        <StyledOpinionTitle>
           {textContent?.defaultCustomerName ?? ""}
-        </ServiceEvaluatorContainerName>
-      </StyledContentContainer>
-
-      <StyledOpininsLogoImage src={commonAssetUrls?.logo ?? ""} alt="logo" />
+        </StyledOpinionTitle>
+      </StyledOpinionsContentContainer>
+      <StyledOpininsLogo>
+        <NextImage
+          containerDimensions={{ width: "150px", height: "150px" }}
+          containerPositioning={{ position: "relative" }}
+          imageProps={{
+            src: commonAssetUrls?.logo ?? "",
+            alt: "logo",
+          }}
+        />
+      </StyledOpininsLogo>
     </StyledOpinions>
   );
 };

@@ -113,7 +113,7 @@ export const ApplicationContextRoot = {
         },
       },
     },
-    premiumQuality: {
+    brandMessage: {
       leafs: {
         cover: {
           textContent: {
@@ -273,6 +273,7 @@ export const ApplicationContextRoot = {
             title: "SZAKKÉPZETT MUNKAERŐ",
             subTitle: "MINŐSÉGI SZOLGÁLTATÁS",
             contactLinkText: "Kapcsolat",
+            description: "Lorem ipusm dolor sit amet",
           },
           assetUrls: {
             cleaners:
@@ -287,11 +288,11 @@ export const ApplicationContextRoot = {
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit.consectetur adipiscing elit.consectetur adipiscing elit.",
           },
         },
-        premiumQuality: {
+        brandMessage: {
           textContent: {
             title: "ISMERJEN MEG",
             subTitle: "BENNÜNKET",
-            aboutQuote: `"A minőség azt jelenti, hogy akkor is jól csinálsz valamit amikor nem látják. \"`,
+            aboutQuote: `"A minőség azt jelenti, hogy akkor is jól csinálsz valamit amikor nem látják. \n"`,
             aboutQuoteAuthor: "Henry Ford",
             premiumQualityContentText:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Cras convallis, elit in efficitur tristique, metus metus semper massa, consequat convallis orci diam quis massa. Integer varius laoreet augue sed mollis. Curabitur id scelerisque lacus, non pellentesque tellus. Cras molestie, ligula rutrum convallis placerat, arcu ante sollicitudin elit, pretium interdum sapien tortor nec urna. Cras molestie auctor nisi, nec fringilla nisl vulputate gravida. Suspendisse potenti. Morbi eu posuere leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse quis neque mollis, porta turpis in, fermentum lectus.",

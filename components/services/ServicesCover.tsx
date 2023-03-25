@@ -39,10 +39,8 @@ const ServicesCover: React.FC = () => {
         <ServicesStyledLayerSegment>
           {!navBarExpanded ? (
             <ServicesCoverContainer>
-              <StyledMainTitle color="#0C7B93">
-                {textContent?.title ?? ""}
-              </StyledMainTitle>
-              <StyledDescription textShadow="0px 0px 0px " color="#0C7B93">
+              <StyledMainTitle>{textContent?.title ?? ""}</StyledMainTitle>
+              <StyledDescription>
                 {textContent?.introText ?? ""}
               </StyledDescription>
               {/*   <br />
