@@ -79,7 +79,7 @@ const PremiumQuality: React.FC = () => {
               src: assetUrls?.officeCleaners ?? "",
               alt: "office-cleaners",
             }}
-            visual={{
+            imageVisual={{
               boxShadow: " 0px 4px 4px rgba(0, 0, 0, 0.5)",
             }}
           />

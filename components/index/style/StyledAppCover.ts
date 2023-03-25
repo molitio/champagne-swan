@@ -122,8 +122,9 @@ export const StyledMainTitle = styled.h1<StyledProps>`
   font-weight: 200;
   font-size: 60px;
   line-height: 78px;
-  color: ${(props) => props.color || " #ffffff"};
-  text-shadow: 1px 3px 5px #000000;
+  color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["appCoverTitleShadow"]?.textShadow ?? ""};
 
   @media (max-width: 1400px) {
     font-size: 3.2rem;
@@ -185,14 +186,15 @@ export const StyledDescription = styled.pre<StyledProps>`
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 24px;
-  color: ${(props) => props.color || " #ffffff"};
+  color: ${(props) => props?.theme?.palette?.text?.tertiary};
   margin-top: 1em;
   margin-bottom: 0;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
   padding: 0 2em 0 2em;
-  text-shadow: ${(props) => props.textShadow || "2px 4px 4px #000000"};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["appCoverTextShadow"]?.textShadow ?? ""};
   white-space: pre-wrap;
 
   @media (max-width: 975px) {

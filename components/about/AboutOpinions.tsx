@@ -1,12 +1,12 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
 import {
-  OpinionsMainContainer,
+  StyledOpinions,
   InternalOpinionsContentContainer,
   ServiceEvaluatorContainerText,
   ServiceEvaluatorContainerName,
-  ServiceEvaluatorContainer,
-  MainOpinionsTitle,
+  StyledContentContainer,
+  StyledMainTitle,
 } from "../index";
 
 const AboutOpinions: React.FC = () => {
@@ -16,37 +16,38 @@ const AboutOpinions: React.FC = () => {
 
   return (
     <>
-      <OpinionsMainContainer
-        tabletHeight={"600px"}
+      <StyledOpinions
+      /* TODO: trace back the effects of the refactor */
+      /*         tabletHeight={"600px"}
         height={"600px"}
-        mobileHeight={"600px"}
+        mobileHeight={"600px"} */
       >
-        <MainOpinionsTitle
-          padding={" 0em 0 0.3em 0"}
+        <StyledMainTitle
+        /*           padding={" 0em 0 0.3em 0"}
           color={"#C1A87D"}
-          className="title"
+          className="title" */
         >
           {textContent?.title ?? ""}
-        </MainOpinionsTitle>
+        </StyledMainTitle>
         <InternalOpinionsContentContainer>
-          <ServiceEvaluatorContainer>
+          <StyledContentContainer>
             <ServiceEvaluatorContainerText color={"#C1A87D"}>
               {textContent?.defaultCustomerOpinion ?? ""}
             </ServiceEvaluatorContainerText>
             <ServiceEvaluatorContainerName color={"#C1A87D"}>
               {textContent?.defaultCustomerName ?? ""}
             </ServiceEvaluatorContainerName>
-          </ServiceEvaluatorContainer>
-          <ServiceEvaluatorContainer>
+          </StyledContentContainer>
+          <StyledContentContainer>
             <ServiceEvaluatorContainerText color={"#C1A87D"}>
               {textContent?.defaultCustomerOpinion ?? ""}
             </ServiceEvaluatorContainerText>
             <ServiceEvaluatorContainerName color={"#C1A87D"}>
               {textContent?.defaultCustomerName ?? ""}
             </ServiceEvaluatorContainerName>
-          </ServiceEvaluatorContainer>
+          </StyledContentContainer>
         </InternalOpinionsContentContainer>
-      </OpinionsMainContainer>
+      </StyledOpinions>
 
       {/*   
 

@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { createTheme, ThemeProvider } from "@mui/material";
+import { Visual } from "./types";
 
 declare module "@mui/material" {
   export interface Palette {
@@ -13,6 +14,7 @@ declare module "@mui/material" {
       partial?: string;
       reversePartial?: string;
     };
+    visual?: Record<string, Visual>;
   }
   export interface TypeBackground {
     background: {

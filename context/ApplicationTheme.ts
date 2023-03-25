@@ -13,16 +13,19 @@ export const ApplicationTheme = {
       interactive: "#c1a87dff",
     },
     text: {
-      primary: "#0c7b93",
-      inverse: "#0c7a93ff",
+      primary: "#076174ff",
+      inverse: "#075E72ff",
       secondary: "#9d8d7b",
-      tertiary: "#fff",
+      /* TODO: select tone for default white hue */
+      /* tertiary: "#fff", */
+      tertiary: "#E6FAFFff",
       interactive: "#c1a87dff",
     },
     stars: {
       gold: "#bda982ff",
       blue: "#0c7b93ff",
-      white: "#ffffff",
+      /* white: "#ffffff", */
+      white: "#E6FAFFff",
     },
     gradient: {
       cover:
@@ -31,6 +34,10 @@ export const ApplicationTheme = {
         "rgba(255,255,255, 0) 0%, rgba(247, 255, 255, 0.2) 20%, rgba(198, 221, 226, 1) 100%",
       reversePartial:
         "rgba(255,255,255, 1) 0%, rgba(247, 255, 255, 0.6) 20%, rgba(198, 221, 226, 0) 100%",
+    },
+    visual: {
+      appCoverTitleShadow: { textShadow: "1px 1px 1px #0344527f" },
+      appCoverTextShadow: { textShadow: "1px 1.2px 0px #034452ff" },
     },
   },
   dimensions: {

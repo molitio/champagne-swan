@@ -1,9 +1,9 @@
 import { SystemContext } from "@molitio/ui-core";
 import React from "react";
+import { NextImage } from "../common";
 import { IconGroup } from "../common/IconGroup";
 import {
-  OpinionsMainContainer,
-  StyledOpinionsIconContainer,
+  StyledOpinions,
   StyledLayer,
   StyledMiddleLayer,
   RotateLayer,
@@ -11,9 +11,10 @@ import {
   ServiceEvaluatorContainerImage,
   ServiceEvaluatorContainerText,
   ServiceEvaluatorContainerName,
-  ServiceEvaluatorContainer,
+  StyledContentContainer,
   StyledOpininsLogoImage,
-  MainOpinionsTitle,
+  StyledMainTitle,
+  StyledIconContainer,
 } from "./style";
 
 const Opinions: React.FC = () => {
@@ -24,47 +25,68 @@ const Opinions: React.FC = () => {
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
-    <OpinionsMainContainer mobileHeight={"1400px"}>
-      <StyledLayer src={commonAssetUrls?.gradientBottom ?? ""} />
+    <StyledOpinions>
+      {/*       <StyledLayer src={commonAssetUrls?.gradientBottom ?? ""} />
       <StyledMiddleLayer />
-      <RotateLayer src={commonAssetUrls?.gradientBottom ?? ""} />
+      <RotateLayer src={commonAssetUrls?.gradientBottom ?? ""} /> */}
 
-      <StyledOpinionsIconContainer>
+      <StyledIconContainer>
         <IconGroup
-          fill={systemContext?.theme?.palette?.stars?.white ?? ""}
+          fill={systemContext?.theme?.palette?.stars?.white}
           starCount={5}
         />
-      </StyledOpinionsIconContainer>
+      </StyledIconContainer>
 
-      <MainOpinionsTitle>{textContent?.title ?? ""}</MainOpinionsTitle>
+      <StyledMainTitle>{textContent?.title ?? ""}</StyledMainTitle>
 
-      <InternalOpinionsContentContainer>
-        <ServiceEvaluatorContainer>
-          <ServiceEvaluatorContainerImage
+      <StyledContentContainer>
+        <NextImage
+          containerPositioning={{
+            position: "relative",
+          }}
+          containerDimensions={{ width: "120px", height: "120px" }}
+          imageProps={{
+            src: commonAssetUrls?.stockPersonAvatar ?? "",
+            alt: "water-splash",
+          }}
+          imageVisual={{
+            borderRadius: "50%",
+          }}
+        />
+        {/*       <ServiceEvaluatorContainerImage
             src={commonAssetUrls?.stockPersonAvatar ?? ""}
-          />
-          <ServiceEvaluatorContainerText>
-            {textContent?.defaultCostumerOpinion ?? ""}
-          </ServiceEvaluatorContainerText>
-          <ServiceEvaluatorContainerName>
-            {textContent?.defaultCustomerName ?? ""}
-          </ServiceEvaluatorContainerName>
-        </ServiceEvaluatorContainer>
-        <ServiceEvaluatorContainer>
-          <ServiceEvaluatorContainerImage
-            src={commonAssetUrls?.stockPersonAvatar ?? ""}
-          />
-          <ServiceEvaluatorContainerText>
-            {textContent?.defaultCostumerOpinion ?? ""}
-          </ServiceEvaluatorContainerText>
-          <ServiceEvaluatorContainerName>
-            {textContent?.defaultCustomerName ?? ""}
-          </ServiceEvaluatorContainerName>
-        </ServiceEvaluatorContainer>
-      </InternalOpinionsContentContainer>
+          /> */}
+        <ServiceEvaluatorContainerText>
+          {textContent?.defaultCostumerOpinion ?? ""}
+        </ServiceEvaluatorContainerText>
+        <ServiceEvaluatorContainerName>
+          {textContent?.defaultCustomerName ?? ""}
+        </ServiceEvaluatorContainerName>
+      </StyledContentContainer>
+      <StyledContentContainer>
+        <NextImage
+          containerPositioning={{
+            position: "relative",
+          }}
+          containerDimensions={{ width: "120px", height: "120px" }}
+          imageProps={{
+            src: commonAssetUrls?.stockPersonAvatar ?? "",
+            alt: "water-splash",
+          }}
+          imageVisual={{
+            borderRadius: "50%",
+          }}
+        />
+        <ServiceEvaluatorContainerText>
+          {textContent?.defaultCostumerOpinion ?? ""}
+        </ServiceEvaluatorContainerText>
+        <ServiceEvaluatorContainerName>
+          {textContent?.defaultCustomerName ?? ""}
+        </ServiceEvaluatorContainerName>
+      </StyledContentContainer>
 
       <StyledOpininsLogoImage src={commonAssetUrls?.logo ?? ""} alt="logo" />
-    </OpinionsMainContainer>
+    </StyledOpinions>
   );
 };
 

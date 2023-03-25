@@ -3,22 +3,9 @@ import styled from "styled-components";
 // TODO: need to ivestigate this with context font as direction
 import "typeface-lato";
 
-type OpinionsMainContainerProps = {
-  height?: string;
-  tabletHeight?: string;
-  mobileHeight?: string;
-};
-
-export const OpinionsMainContainer = styled.div<OpinionsMainContainerProps>`
+export const StyledOpinions = styled.div`
+  padding-top: 5em;
   position: relative;
-  height: ${(props) => props.height || "1300px"};
-
-  @media (max-width: 1440px) {
-    height: ${(props) => props.tabletHeight || "1600px"};
-  }
-  @media (max-width: 665px) {
-    height: ${(props) => props.mobileHeight || "1600px"};
-  }
 `;
 
 export const StyledOpinionsIconContainer = styled.div`
@@ -87,7 +74,7 @@ type MainOpinionsTitleProps = {
   padding?: string;
 };
 
-export const MainOpinionsTitle = styled.h1<MainOpinionsTitleProps>`
+export const StyledMainTitle = styled.h1<MainOpinionsTitleProps>`
   position: relative;
   text-align: center;
   color: ${(props) => props.color || "#ffffff"};
@@ -121,7 +108,8 @@ export const InternalOpinionsContentContainer = styled.div`
     flex-direction: column;
   }
 `;
-export const ServiceEvaluatorContainer = styled.div`
+export const StyledContentContainer = styled.div`
+  outline: 3px dashed purple;
   position: relative;
   display: flex;
   flex-direction: column;

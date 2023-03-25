@@ -1,15 +1,20 @@
-import styled, { css } from "styled-components";
 import Image from "next/image";
+import styled, { css } from "styled-components";
 import { Dimensions } from "@molitio/ui-core";
 import { Positioning, Visual } from "../types";
 
-export const StyledNextImage = styled(Image)`
+type StyledNextImageProps = {
+  visual?: Visual;
+};
+
+export const StyledNextImage = styled(Image)<StyledNextImageProps>`
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   position: absolute;
   object-fit: cover;
+  border-radius: ${(props) => props?.visual?.borderRadius ?? ""};
 `;
 
 type StyledNextImageContainerProps = {
@@ -27,6 +32,7 @@ export const StyledNextImageContainer = styled.div<StyledNextImageContainerProps
   bottom: ${(props) => props?.positioning?.bottom ?? ""};
   left: ${(props) => props?.positioning?.left ?? ""};
   padding: ${(props) => props?.positioning?.padding ?? ""};
+  border-radius: ${(props) => props?.visual?.borderRadius ?? ""};
   ${(props) =>
     props?.dimensions
       ? css`

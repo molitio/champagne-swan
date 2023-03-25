@@ -84,7 +84,7 @@ const Services: React.FC = () => {
               src: assetUrls?.morning ?? "",
               alt: "morning-sunshine",
             }}
-            visual={{
+            imageVisual={{
               boxShadow: " 0px 4px 4px rgba(0, 0, 0, 0.5)",
             }}
           />
@@ -135,7 +135,7 @@ const Services: React.FC = () => {
               src: assetUrls?.flatRoom ?? "",
               alt: "morning-sunshine",
             }}
-            visual={{
+            imageVisual={{
               boxShadow: " 0px 4px 4px rgba(0, 0, 0, 0.5)",
             }}
           />
@@ -184,7 +184,7 @@ const Services: React.FC = () => {
               src: assetUrls?.industry ?? "",
               alt: "morning-sunshine",
             }}
-            visual={{
+            imageVisual={{
               boxShadow: " 0px 4px 4px rgba(0, 0, 0, 0.5)",
             }}
           />
