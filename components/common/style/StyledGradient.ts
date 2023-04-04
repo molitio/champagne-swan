@@ -24,8 +24,8 @@ export const StyledLinearGradient = styled.div<StyledLinearGradientProps>`
   ${(props) =>
     props?.dimensions
       ? css`
-          height: ${props?.dimensions?.height ?? ""};
-          width: ${props?.dimensions?.width ?? ""};
+          height: ${props?.dimensions?.height ?? "100%"};
+          width: ${props?.dimensions?.width ?? "100%"};
           min-height: ${props?.dimensions?.minHeight ?? ""};
           min-height: ${props?.dimensions?.minHeight ?? ""};
           max-height: ${props?.dimensions?.maxHeight ?? ""};

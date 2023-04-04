@@ -28,13 +28,19 @@ export const ApplicationTheme = {
       white: "#E6FAFFff",
     },
     gradient: {
+      /* TODO: should be named like  primarySecondaryTertiary, or to named component */
       cover:
         "rgba(229, 236, 238, 0) 0%, rgba(153, 198, 208, 0.5) 42%, rgba(198, 221, 226, 1) 100%",
       partial:
         "rgba(255,255,255, 0) 0%, rgba(247, 255, 255, 0.2) 20%, rgba(198, 221, 226, 1) 100%",
       reversePartial:
         "rgba(255,255,255, 1) 0%, rgba(247, 255, 255, 0.6) 20%, rgba(198, 221, 226, 0) 100%",
+      contactCoverTop:
+        "rgba(229, 236, 238, 0.9) 0%, rgba(153, 198, 208, 0.6) 24%, rgba(198, 221, 226, 0) 68%",
+      contactCoverBottom:
+        "rgba(198, 221, 226, 1) 0%, rgba(198, 221, 226, 0.6), 36%, rgba(229, 236, 238, 0.0) 100%",
     },
+
     visual: {
       appCoverTitleShadow: { textShadow: "3px 3px 5px #C1DFE6ff" },
       appCoverTextShadow: { textShadow: "2px 2px 4px #C1DFE6ff" },
@@ -42,8 +48,8 @@ export const ApplicationTheme = {
       servicesTextShadow: { textShadow: "2px 2px 4px #C1DFE6ff" },
       opinionsTitleShadow: { textShadow: "3px 3px 5px #C1DFE6ff" },
       opinionsTextShadow: { textShadow: "2px 2px 4px #C1DFE6ff" },
-      contactTitleShadow: { textShadow: "2px 2px 4px #C1DFE6ff" },
-      contactTextShadow: { textShadow: "2px 2px 4px #C1DFE6ff" },
+      contactTitleShadow: { textShadow: "2px 2px 4px #424E51ff" },
+      contactTextShadow: { textShadow: "1px 1px 2px #424E51ff" },
     },
   },
   dimensions: {

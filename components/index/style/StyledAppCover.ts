@@ -72,7 +72,7 @@ export const StyledCoverContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  top: 23em;
+  top: 12em;
   position: absolute;
   @media (max-width: 1000px) {
     top: 12em;

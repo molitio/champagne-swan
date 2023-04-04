@@ -1,18 +1,30 @@
 import styled from "styled-components";
 
 export const StyledContact = styled.section`
+  outline: inset thick;
   position: relative;
 `;
 
-export const ContactContainer = styled.div`
+export const StyledTitle = styled.h1`
   position: relative;
-  height: 2000px;
-  width: 100%;
+  text-align: center;
+  color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["contactTitleShadow"]?.textShadow ?? ""};
+  font-weight: 400;
+  font-size: 6.5em;
+  margin-top: 0.4em;
+
+  @media (max-width: 1440px) {
+    font-size: 65px;
+  }
 `;
 
 export const StyledCoverText = styled.text`
   display: block;
-  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
+  color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["contactTextShadow"]?.textShadow ?? ""};
   text-align: center;
   width: 40em;
   margin: 2em auto auto;
@@ -47,20 +59,6 @@ export const ResponsiveFormBox = styled.div`
 export const StyledRelIconContainer = styled.div`
   position: relative;
   bottom: 130px;
-`;
-
-export const StyledTitle = styled.h1`
-  position: relative;
-  text-align: center;
-  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  font-weight: 400;
-  font-size: 105px;
-  margin-top: 0.4em;
-
-  @media (max-width: 1440px) {
-    font-size: 65px;
-  }
 `;
 
 export const FormContainer = styled.div`

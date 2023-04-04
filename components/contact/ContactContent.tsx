@@ -11,7 +11,7 @@ import {
 import { ContactForm, StyledAnchor } from "../common";
 import { SystemContext } from "@molitio/ui-core";
 
-const ContactPageContent: React.FC = () => {
+const ContactContent: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
 
   const contactLeafs = systemContext?.contentRoot?.contact?.leafs;
@@ -59,4 +59,4 @@ const ContactPageContent: React.FC = () => {
   );
 };
 
-export default ContactPageContent;
+export default ContactContent;
