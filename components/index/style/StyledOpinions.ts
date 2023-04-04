@@ -3,7 +3,7 @@ import styled from "styled-components";
 // TODO: need to ivestigate this with context font as direction
 import "typeface-lato";
 
-export const StyledOpinions = styled.div`
+export const StyledOpinions = styled.section`
   padding-top: 5em;
   position: relative;
 `;
@@ -104,13 +104,11 @@ export const InternalOpinionsContentContainer = styled.div`
   }
 `;
 export const StyledOpinionsContentContainer = styled.div`
-  outline: 3px dashed purple;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 100px;
-  margin-left: 100px;
+  margin: 3em;
 
   @media (max-width: 665px) {
     margin-right: auto;
@@ -118,47 +116,29 @@ export const StyledOpinionsContentContainer = styled.div`
   }
 `;
 
-export const ServiceEvaluatorContainerImage = styled.img`
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 80px;
-  width: 130px;
-  height: 120px;
-  border-radius: 50px;
-  padding: 0px;
-  margin-bottom: 30px;
-`;
-
-type ServiceEvaluatorProps = {
-  color?: string;
-  fontSize?: string;
-  padding?: string;
-};
-export const StyledOpinionText = styled.p<ServiceEvaluatorProps>`
-  color: ${(props) => props.color || "#0c7b93"};
-  width: 400px;
+export const StyledOpinionText = styled.p`
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   font-family: "Lato", sans-serif;
   font-style: italic;
   font-weight: 300;
   text-align: center;
-  font-size: 25px;
-  margin-bottom: 30px;
+  font-size: 1.2em;
+  width: 300px;
+  margin: 0.5em auto 0.5em auto;
 
   @media (max-width: 665px) {
     font-size: 18px;
-    width: 300px;
   }
 `;
-type ServiceEvaluatorName = {
-  color?: string;
-};
 
-export const StyledOpinionTitle = styled.p<ServiceEvaluatorName>`
+export const StyledOpinionTitle = styled.p`
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-align: center;
-  color: ${(props) => props.color || "#0c7b93"};
   font-family: "Lato" sans-serif;
   font-weight: 100;
-  font-size: 30px;
+  font-size: 1.8em;
+  width: 300px;
+  margin: auto;
 `;
 
 export const StyledOpininsLogo = styled.div`

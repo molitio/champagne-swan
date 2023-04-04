@@ -116,6 +116,7 @@ const About: React.FC = () => {
           </StyledCallToAction>
         </StyledCoverContentContainer>
       </StyledAboutCoverContainer>
+
       <StyledBrandMessageContainer>
         <IconGroup
           fill={systemContext?.theme?.palette?.stars?.blue}

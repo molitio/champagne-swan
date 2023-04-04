@@ -43,6 +43,7 @@ const Opinions: React.FC = () => {
         <NextImage
           containerPositioning={{
             position: "relative",
+            margin: "auto",
           }}
           containerDimensions={{ width: "120px", height: "120px" }}
           imageProps={{
@@ -65,6 +66,7 @@ const Opinions: React.FC = () => {
         <NextImage
           containerPositioning={{
             position: "relative",
+            margin: "auto",
           }}
           containerDimensions={{ width: "120px", height: "120px" }}
           imageProps={{

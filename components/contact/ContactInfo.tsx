@@ -1,17 +1,21 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
-import { IconGroup, StyledAnchor, ContactForm } from "../common";
 import {
-  StyledContentLogoImage,
-  StyledContentFormContainer,
-  StyledContentMainTitle,
-  SyledContentFormBox,
-  StyledContentFormText,
-  StyledContentBackgroundLayer,
-  StyledContentRelIcon,
+  IconGroup,
+  StyledAnchor,
+  ContactForm,
+  StyledLinearGradient,
+  NextImage,
+} from "../common";
+import {
+  StyledFormContainer,
+  StyledTitle,
+  SyledFormBox,
+  StyledFormText,
   StyledContactContentContainer,
-  StyledContentContactInfoContainer,
-  StyledContentContactInfo,
+  StyledContactInfoContainer,
+  StyledContactInfo,
+  StyledLogoContainer,
 } from "./style";
 
 const ContactInfo: React.FC = () => {
@@ -24,50 +28,53 @@ const ContactInfo: React.FC = () => {
 
   return (
     <StyledContactContentContainer>
-      <StyledContentBackgroundLayer>
-        <IconGroup
-          starCount={5}
-          fill={systemContext?.theme?.palette?.stars?.gold}
+      <StyledLinearGradient direction="bottom" variation="cover" opacity={1} />
+      <IconGroup
+        starCount={5}
+        fill={systemContext?.theme?.palette?.stars?.gold}
+      />
+      <StyledTitle>{textContent?.title ?? ""}</StyledTitle>
+      <StyledFormText>{textContent?.formText ?? ""}</StyledFormText>
+      <SyledFormBox>
+        <StyledContactInfoContainer>
+          <StyledContactInfo>
+            <StyledAnchor href={iconDefinitions?.phone?.hrefUrl ?? ""}>
+              {iconDefinitions?.phone?.title ?? ""}
+              <br />
+              {textContent?.phoneMain ?? ""}
+            </StyledAnchor>
+          </StyledContactInfo>
+          <StyledContactInfo>
+            <StyledAnchor href={iconDefinitions?.email?.hrefUrl ?? ""}>
+              {iconDefinitions?.email?.title ?? ""}
+              <br />
+              {textContent?.email ?? ""}
+            </StyledAnchor>
+          </StyledContactInfo>
+          <StyledContactInfo>
+            <StyledAnchor href={iconDefinitions?.address?.hrefUrl ?? ""}>
+              {iconDefinitions?.address?.title ?? ""}
+              <br />
+              {textContent?.address1 ?? ""}
+              <br />
+              {textContent?.address2 ?? ""}
+            </StyledAnchor>
+          </StyledContactInfo>
+        </StyledContactInfoContainer>
+        <StyledFormContainer>
+          <ContactForm />
+        </StyledFormContainer>
+      </SyledFormBox>
+      <StyledLogoContainer>
+        <NextImage
+          containerDimensions={{ width: "150px", height: "150px" }}
+          containerPositioning={{ position: "relative" }}
+          imageProps={{
+            src: commonAssetUrls?.logo ?? "",
+            alt: "logo",
+          }}
         />
-        <StyledContentRelIcon />
-        <StyledContentMainTitle>
-          {textContent?.title ?? ""}
-        </StyledContentMainTitle>
-        <StyledContentFormText>
-          {textContent?.formText ?? ""}
-        </StyledContentFormText>
-        <SyledContentFormBox>
-          <StyledContentContactInfoContainer>
-            <StyledContentContactInfo>
-              <StyledAnchor href={iconDefinitions?.phone?.hrefUrl ?? ""}>
-                {iconDefinitions?.phone?.title ?? ""}
-                <br />
-                {textContent?.phoneMain ?? ""}
-              </StyledAnchor>
-            </StyledContentContactInfo>
-            <StyledContentContactInfo>
-              <StyledAnchor href={iconDefinitions?.email?.hrefUrl ?? ""}>
-                {iconDefinitions?.email?.title ?? ""}
-                <br />
-                {textContent?.email ?? ""}
-              </StyledAnchor>
-            </StyledContentContactInfo>
-            <StyledContentContactInfo>
-              <StyledAnchor href={iconDefinitions?.address?.hrefUrl ?? ""}>
-                {iconDefinitions?.address?.title ?? ""}
-                <br />
-                {textContent?.address1 ?? ""}
-                <br />
-                {textContent?.address2 ?? ""}
-              </StyledAnchor>
-            </StyledContentContactInfo>
-          </StyledContentContactInfoContainer>
-          <StyledContentFormContainer>
-            <ContactForm />
-          </StyledContentFormContainer>
-        </SyledContentFormBox>
-        <StyledContentLogoImage src={commonAssetUrls?.logo ?? ""} alt="logo" />
-      </StyledContentBackgroundLayer>
+      </StyledLogoContainer>
     </StyledContactContentContainer>
   );
 };

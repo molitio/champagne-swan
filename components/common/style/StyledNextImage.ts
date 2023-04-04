@@ -5,15 +5,19 @@ import { Positioning, Visual } from "../types";
 
 type StyledNextImageProps = {
   visual?: Visual;
+  positioning?: Positioning;
 };
 
 export const StyledNextImage = styled(Image)<StyledNextImageProps>`
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  object-fit: cover;
+  position: ${(props) => props?.positioning?.position ?? ""};
+  transform: ${(props) => props?.positioning?.transform ?? ""};
+  top: ${(props) => props?.positioning?.top ?? ""};
+  right: ${(props) => props?.positioning?.right ?? ""};
+  bottom: ${(props) => props?.positioning?.bottom ?? ""};
+  left: ${(props) => props?.positioning?.left ?? ""};
+  padding: ${(props) => props?.positioning?.padding ?? ""};
+  margin: ${(props) => props?.positioning?.margin ?? ""};
+  object-fit: ${(props) => props?.positioning?.objectFit ?? ""};
   border-radius: ${(props) => props?.visual?.borderRadius ?? ""};
   box-shadow: ${(props) => props?.visual?.boxShadow ?? ""};
 `;
@@ -26,6 +30,7 @@ type StyledNextImageContainerProps = {
 
 export const StyledNextImageContainer = styled.div<StyledNextImageContainerProps>`
   box-shadow: ${(props) => props?.visual?.boxShadow ?? ""};
+  border-radius: ${(props) => props?.visual?.borderRadius ?? ""};
   position: ${(props) => props?.positioning?.position ?? ""};
   transform: ${(props) => props?.positioning?.transform ?? ""};
   top: ${(props) => props?.positioning?.top ?? ""};
@@ -33,7 +38,7 @@ export const StyledNextImageContainer = styled.div<StyledNextImageContainerProps
   bottom: ${(props) => props?.positioning?.bottom ?? ""};
   left: ${(props) => props?.positioning?.left ?? ""};
   padding: ${(props) => props?.positioning?.padding ?? ""};
-  border-radius: ${(props) => props?.visual?.borderRadius ?? ""};
+  margin: ${(props) => props?.positioning?.margin ?? ""};
   ${(props) =>
     props?.dimensions
       ? css`

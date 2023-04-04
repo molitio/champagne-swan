@@ -1,11 +1,14 @@
 import styled from "styled-components";
 
-export const StyledPartners = styled.div``;
+export const StyledPartners = styled.section`
+  padding-top: 5em;
+  position: relative;
+`;
 
-export const OurPartnersTitle = styled.h1`
+export const StyledPartnersTitle = styled.h1`
   position: relative;
   text-align: center;
-  color: #c1a87d;
+  color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   font-weight: 400;
   font-size: 105px;
   margin-top: 0em;
@@ -19,7 +22,7 @@ export const OurPartnersTitle = styled.h1`
   }
 `;
 
-export const OurPartnersContentContainer = styled.div`
+export const StyledPartnersContentContainer = styled.div`
   margin-top: 180px;
   margin-bottom: 140px;
   position: relative;
@@ -32,10 +35,9 @@ export const OurPartnersContentContainer = styled.div`
   }
 `;
 
-export const PartnersImageContainer = styled.div`
+export const StyledPartnersImageContainer = styled.div`
   display: flex;
   justify-content: space-around;
-
   margin-top: 40px;
   margin-bottom: 40px;
 
@@ -47,8 +49,7 @@ export const PartnersImageContainer = styled.div`
 
   @media (max-width: 665px) {
     flex: 50%;
-    height: 90px;
-    width: 90px;
+    /* s */
   }
 `;
 

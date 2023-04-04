@@ -16,10 +16,12 @@ import { SystemContext } from "@molitio/ui-core";
 const BrandMessage: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
   const navTree = systemContext.navRoot ?? {};
-  const premiumQualityLeafs = systemContext?.contentRoot?.BrandMessage?.leafs;
+
+  const brandMessageLeafs = systemContext?.contentRoot?.brandMessage?.leafs;
+  const textContent = brandMessageLeafs?.cover?.textContent;
+  const assetUrls = brandMessageLeafs?.cover?.assetUrls;
+
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
-  const textContent = premiumQualityLeafs?.cover?.textContent;
-  const assetUrls = premiumQualityLeafs?.cover?.assetUrls;
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (

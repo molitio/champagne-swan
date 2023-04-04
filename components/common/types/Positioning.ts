@@ -6,4 +6,6 @@ export type Positioning = {
   left?: string;
   transform?: string;
   padding?: string;
+  margin?: string;
+  objectFit?: string;
 };

@@ -15,7 +15,7 @@ export const ApplicationTheme = {
     text: {
       primary: "#076174ff",
       inverse: "#075E72ff",
-      secondary: "#6C5741",
+      secondary: "#6C5741ff",
       /* TODO: select tone for default white hue */
       /* tertiary: "#fff", */
       tertiary: "#E6FAFFff",
@@ -42,6 +42,8 @@ export const ApplicationTheme = {
       servicesTextShadow: { textShadow: "2px 2px 4px #C1DFE6ff" },
       opinionsTitleShadow: { textShadow: "3px 3px 5px #C1DFE6ff" },
       opinionsTextShadow: { textShadow: "2px 2px 4px #C1DFE6ff" },
+      contactTitleShadow: { textShadow: "2px 2px 4px #C1DFE6ff" },
+      contactTextShadow: { textShadow: "2px 2px 4px #C1DFE6ff" },
     },
   },
   dimensions: {
