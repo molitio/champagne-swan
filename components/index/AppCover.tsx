@@ -15,21 +15,24 @@ import {
   StyledDescription,
   StyledMainTitle,
   StyledSubTitle,
+  StyledAppCover,
 } from "./style";
 
 const AppCover: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
   const navTree = systemContext?.navRoot ?? {};
+
   const heroLeafs = systemContext?.contentRoot?.home?.leafs;
-  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
   const textContent = heroLeafs?.hero?.textContent;
-  const commonAssetUrls = commonLeafs?.images?.assetUrls;
   const assetUrls = heroLeafs?.hero?.assetUrls;
+
+  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
+  const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   const theme = systemContext?.theme;
 
   return (
-    <StyledSegmentSection>
+    <StyledAppCover>
       <NextImage
         containerDimensions={{
           height: theme?.dimensions?.page?.height ?? "100vh",
@@ -43,12 +46,12 @@ const AppCover: React.FC = () => {
       <StyledLinearGradient
         direction="bottom"
         variation="reversePartial"
-        opacity={1}
+        visual={{ opacity: 1 }}
       />
       <StyledLinearGradient
         direction="bottom"
         variation="partial"
-        opacity={1}
+        visual={{ opacity: 1 }}
       />
       <StyledCoverContentContainer>
         <IconGroup
@@ -89,7 +92,7 @@ const AppCover: React.FC = () => {
           </StyledCallToAction>
         </div>
       </StyledCoverContentContainer>
-    </StyledSegmentSection>
+    </StyledAppCover>
   );
 };
 

@@ -3,10 +3,10 @@ import { ContactPageCover, ContactPageContent } from "../components/contact";
 
 const ContactPage: NextPage = () => {
   return (
-    <section>
+    <main>
       <ContactPageCover />
       <ContactPageContent />
-    </section>
+    </main>
   );
 };
 

@@ -1,22 +1,11 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-export const StyledServices = styled.div<ServicesMainContainerProps>`
+export const StyledServices = styled.section`
   position: relative;
   padding: 5em 0 5em 0;
   width: 100%;
   align-items: center;
-
-  /*   @media (max-width: 1440px) {
-    height: ${(props) => props.tabletHeight || "4500px"};
-  }
-
-  @media (max-width: 975px) {
-    height: ${(props) => props.mobileHeight || "3350px"};
-  }
-  @media (max-width: 665px) {
-    height: ${(props) => props.smallMobileHeight || "3350px"};
-  } */
 `;
 
 type StyledIconContainerProps = {
@@ -37,13 +26,6 @@ export const StyledServicesIconContainer = styled.div<StyledIconContainerProps>`
     padding-top: ${(props) => props.mobilePaddingTop || "26em"};
   }
 `;
-
-type ServicesMainContainerProps = {
-  height?: string;
-  tabletHeight?: string;
-  mobileHeight?: string;
-  smallMobileHeight?: string;
-};
 
 export const StyledMainTitle = styled.h1`
   text-align: center;

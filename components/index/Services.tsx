@@ -29,12 +29,16 @@ const Services: React.FC = () => {
 
   return (
     <StyledServices>
-      <StyledLinearGradient direction="top" variation="partial" opacity={1} />
+      <StyledLinearGradient
+        direction="top"
+        variation="partial"
+        visual={{ opacity: 1 }}
+      />
 
       <StyledLinearGradient
         direction="bottom"
         variation="partial"
-        opacity={1}
+        visual={{ opacity: 1 }}
       />
       <StyledServicesIconContainer>
         <IconGroup

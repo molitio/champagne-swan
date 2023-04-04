@@ -79,6 +79,8 @@ export const ApplicationContextRoot = {
             phoneMainHref: "tel:+36204160391",
             logoImage:
               "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/logo/jeliza_logo_horizontal_jeliza_logo_horizontal.svg",
+            skyScraper:
+              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/skyscraper.jpg",
           },
           iconDefinitions: {
             phone: {

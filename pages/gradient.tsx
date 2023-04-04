@@ -16,7 +16,7 @@ const GradientBottom: React.FC = () => {
       <StyledLinearGradient
         direction="top"
         variation="reversePartial"
-        opacity={1}
+        visual={{ opacity: 1 }}
       />
     </StyledContainer>
   );

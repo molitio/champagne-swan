@@ -1,21 +1,41 @@
+import { Dimensions } from "@molitio/ui-core";
 import styled, { css } from "styled-components";
+import { Visual, Positioning } from "../types";
 
 type StyledLinearGradientProps = {
   direction: "top" | "bottom" | "left" | "right";
   variation?: string;
-  opacity: number;
+  visual?: Visual;
+  positioning?: Positioning;
+  dimensions?: Dimensions;
 };
 
 export const StyledLinearGradient = styled.div<StyledLinearGradientProps>`
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: 0;
-  min-height: ${(props) => props?.theme?.dimensions?.page?.height ?? "100vh"};
-  width: 100%;
-  opacity: ${(props) => props?.opacity};
+  box-shadow: ${(props) => props?.visual?.boxShadow ?? ""};
+  border-radius: ${(props) => props?.visual?.borderRadius ?? ""};
+  position: ${(props) => props?.positioning?.position ?? ""};
+  transform: ${(props) => props?.positioning?.transform ?? ""};
+  top: ${(props) => props?.positioning?.top ?? ""};
+  right: ${(props) => props?.positioning?.right ?? ""};
+  bottom: ${(props) => props?.positioning?.bottom ?? ""};
+  left: ${(props) => props?.positioning?.left ?? ""};
+  padding: ${(props) => props?.positioning?.padding ?? ""};
+  margin: ${(props) => props?.positioning?.margin ?? ""};
+  ${(props) =>
+    props?.dimensions
+      ? css`
+          height: ${props?.dimensions?.height ?? ""};
+          width: ${props?.dimensions?.width ?? ""};
+          min-height: ${props?.dimensions?.minHeight ?? ""};
+          min-height: ${props?.dimensions?.minHeight ?? ""};
+          max-height: ${props?.dimensions?.maxHeight ?? ""};
+          max-width: ${props?.dimensions?.maxWidth ?? ""};
+        `
+      : css`
+          height: 100%;
+          width: 100%;
+        `}
+  opacity: ${(props) => props?.visual?.opacity};
   background: ${(props) => css`
     linear-gradient(to ${props?.direction ?? "top"}, ${
     props?.theme?.palette?.gradient?.[props?.variation ?? ""]
@@ -23,6 +43,6 @@ export const StyledLinearGradient = styled.div<StyledLinearGradientProps>`
   `};
 
   @media (max-width: 665px) {
-    min-height: 910px;
+    /*     min-height: 910px; */
   }
 `;

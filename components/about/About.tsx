@@ -71,12 +71,12 @@ const About: React.FC = () => {
         <StyledLinearGradient
           direction="bottom"
           variation="reversePartial"
-          opacity={0.5}
+          visual={{ opacity: 0.5 }}
         />
         <StyledLinearGradient
           direction="bottom"
           variation="partial"
-          opacity={1}
+          visual={{ opacity: 1 }}
         />
         <StyledCoverContentContainer>
           <StyledMainTitle>

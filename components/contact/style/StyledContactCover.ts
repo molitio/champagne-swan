@@ -1,14 +1,18 @@
 import styled from "styled-components";
 
+export const StyledContact = styled.section`
+  position: relative;
+`;
+
 export const ContactContainer = styled.div`
   position: relative;
   height: 2000px;
   width: 100%;
 `;
 
-export const FormText = styled.text`
+export const StyledCoverText = styled.text`
   display: block;
-  color: white;
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-align: center;
   width: 40em;
   margin: 2em auto auto;
@@ -30,13 +34,6 @@ export const SimpledLayer = styled.img<React.CSSProperties>`
   width: 100%;
 `; */
 
-export const BackgroundLayer = styled.div`
-  position: absolute;
-  background-color: #c1dadf;
-  height: 2000px;
-  width: 100%;
-`;
-
 export const ResponsiveFormBox = styled.div`
   display: flex;
   flex-direction: row;
@@ -52,10 +49,10 @@ export const StyledRelIconContainer = styled.div`
   bottom: 130px;
 `;
 
-export const MainTitle = styled.h1`
+export const StyledTitle = styled.h1`
   position: relative;
   text-align: center;
-  color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   font-weight: 400;
   font-size: 105px;

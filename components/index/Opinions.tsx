@@ -24,9 +24,13 @@ const Opinions: React.FC = () => {
       <StyledLinearGradient
         direction="top"
         variation="reversePartial"
-        opacity={1}
+        visual={{ opacity: 1 }}
       />
-      <StyledLinearGradient direction="top" variation="partial" opacity={1} />
+      <StyledLinearGradient
+        direction="top"
+        variation="partial"
+        visual={{ opacity: 1 }}
+      />
 
       <StyledOpinionsIconContainer>
         <IconGroup

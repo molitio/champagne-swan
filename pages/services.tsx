@@ -4,11 +4,11 @@ import { ContactInfo } from "../components/contact";
 
 const ServicesPage: NextPage = () => {
   return (
-    <section>
+    <main>
       <ServicesCover />
       <ServicesContent />
       <ContactInfo />
-    </section>
+    </main>
   );
 };
 

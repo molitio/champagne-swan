@@ -1,6 +1,10 @@
 import Link from "next/link";
 import styled from "styled-components";
 
+export const StyledAppCover = styled.section`
+  position: relative;
+`;
+
 export const ImageLayer = styled.img`
   position: absolute;
   margin: 0;
@@ -42,7 +46,7 @@ export const StyledImg = styled.div`
     height: 896px;
   }
 `;
-
+/* 
 export const ContactStyledImg = styled.div`
   object-fit: fill;
   background: url(https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/skyscraper.jpg);
@@ -54,7 +58,7 @@ export const ContactStyledImg = styled.div`
     height: 896px;
   }
 `;
-
+ */
 export const HeroWaterSplash = styled.img`
   margin-top: 30px;
   position: absolute;

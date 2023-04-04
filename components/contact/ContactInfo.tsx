@@ -28,7 +28,11 @@ const ContactInfo: React.FC = () => {
 
   return (
     <StyledContactContentContainer>
-      <StyledLinearGradient direction="bottom" variation="cover" opacity={1} />
+      <StyledLinearGradient
+        direction="bottom"
+        variation="cover"
+        visual={{ opacity: 1 }}
+      />
       <IconGroup
         starCount={5}
         fill={systemContext?.theme?.palette?.stars?.gold}
