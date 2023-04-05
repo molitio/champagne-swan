@@ -2,9 +2,10 @@ import React from "react";
 import {
   FormContainer,
   ContactInfoContainer,
-  ContactInfo,
+  StyledContactInfo,
+  StyledContactContent,
   StyledLogoImage,
-  ResponsiveFormBox,
+  StyledFlexGroup,
   StyledContactContentContainer,
   StyledContentBackgroundLayer,
 } from "./style";
@@ -21,41 +22,41 @@ const ContactContent: React.FC = () => {
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
-    <StyledContactContentContainer heightTablet={"1900px"} height={"1200px"}>
-      <StyledContentBackgroundLayer height={"1200px"} heightTablet={"1900px"}>
-        <ResponsiveFormBox>
-          <ContactInfoContainer>
-            <ContactInfo>
-              <StyledAnchor href={iconDefinitions?.phone?.hrefUrl ?? ""}>
-                {iconDefinitions?.phone?.title ?? ""}
-                <br />
-                {textContent?.phoneMain ?? ""}
-              </StyledAnchor>
-            </ContactInfo>
-            <ContactInfo>
-              <StyledAnchor href={iconDefinitions?.email?.hrefUrl ?? ""}>
-                {iconDefinitions?.email?.title ?? ""}
-                <br />
-                {textContent?.email ?? ""}
-              </StyledAnchor>
-            </ContactInfo>
-            <ContactInfo>
-              <StyledAnchor href={iconDefinitions?.address?.hrefUrl ?? ""}>
-                {iconDefinitions?.address?.title ?? ""}
-                <br />
-                {textContent?.address1 ?? ""}
-                <br />
-                {textContent?.address2 ?? ""}
-              </StyledAnchor>
-            </ContactInfo>
-          </ContactInfoContainer>
-          <FormContainer>
-            <ContactForm />
-          </FormContainer>
-        </ResponsiveFormBox>
-        <StyledLogoImage src={commonAssetUrls?.logo ?? ""} alt="logo" />
-      </StyledContentBackgroundLayer>
-    </StyledContactContentContainer>
+    <StyledContactContent>
+      {/*  <StyledContentBackgroundLayer height={"1200px"} heightTablet={"1900px"}> */}
+      <StyledFlexGroup>
+        <ContactInfoContainer>
+          <StyledContactInfo>
+            <StyledAnchor href={iconDefinitions?.phone?.hrefUrl ?? ""}>
+              {iconDefinitions?.phone?.title ?? ""}
+              <br />
+              {textContent?.phoneMain ?? ""}
+            </StyledAnchor>
+          </StyledContactInfo>
+          <StyledContactInfo>
+            <StyledAnchor href={iconDefinitions?.email?.hrefUrl ?? ""}>
+              {iconDefinitions?.email?.title ?? ""}
+              <br />
+              {textContent?.email ?? ""}
+            </StyledAnchor>
+          </StyledContactInfo>
+          <StyledContactInfo>
+            <StyledAnchor href={iconDefinitions?.address?.hrefUrl ?? ""}>
+              {iconDefinitions?.address?.title ?? ""}
+              <br />
+              {textContent?.address1 ?? ""}
+              <br />
+              {textContent?.address2 ?? ""}
+            </StyledAnchor>
+          </StyledContactInfo>
+        </ContactInfoContainer>
+        <FormContainer>
+          <ContactForm />
+        </FormContainer>
+      </StyledFlexGroup>
+      <StyledLogoImage src={commonAssetUrls?.logo ?? ""} alt="logo" />
+      {/*     </StyledContentBackgroundLayer> */}
+    </StyledContactContent>
   );
 };
 

@@ -13,3 +13,4 @@ export * from "./StyledOurPartnersContent";
 export * from "./StyledCloseIcon";
 export * from "./StyledStarSvgIcon";
 export * from "./StyledFormContainer";
+export * from "./StyledCover";

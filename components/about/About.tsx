@@ -1,12 +1,6 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
-import {
-  IconGroup,
-  ImageBox,
-  NextImage,
-  StyledLinearGradient,
-  StyledSegmentSection,
-} from "../common";
+import { IconGroup, ImageBox, StyledSegmentSection } from "../common";
 import {
   StyledBrandMessageContainer,
   AboutPremiumQualityContainer,
@@ -17,13 +11,7 @@ import {
   AboutQuoteAuthor,
   AboutQuoteContainer,
   RotateLayer,
-  StyledButtonContainer,
-  StyledCallToAction,
-  StyledCoverContactLink,
-  StyledCoverContentContainer,
-  StyledDescription,
   StyledMainTitle,
-  StyledSubTitle,
   StyledTitle,
   InternalOpinionsContentContainer,
   StyledOpinions,
@@ -31,92 +19,19 @@ import {
   StyledOpinionText,
   StyledOpinionTitle,
 } from "../index";
-import { StyledAboutCoverContainer } from "./style";
-import { useLineBreakParser } from "../utils";
 import { ContactInfo } from "../contact";
 
 const About: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
-  const navTree = systemContext?.navRoot ?? {};
-
   const aboutLeafs = systemContext?.contentRoot?.about?.leafs;
-
-  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
-
-  const aboutCoverTextContent = aboutLeafs?.cover?.textContent;
-  const aboutCoverAssetUrls = aboutLeafs?.cover?.assetUrls;
-
   const brandMessageTextContent = aboutLeafs?.brandMessage?.textContent;
   const brandMessageAssetUrls = aboutLeafs?.brandMessage?.assetUrls;
-
   const opinionsTextContent = aboutLeafs?.opinions?.textContent;
-
+  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
-
-  const theme = systemContext?.theme;
 
   return (
     <StyledSegmentSection>
-      <StyledAboutCoverContainer>
-        <NextImage
-          containerDimensions={{
-            height: theme?.dimensions?.page?.height ?? "100vh",
-            width: "100%",
-          }}
-          imageProps={{
-            src: aboutCoverAssetUrls?.cleaners ?? "",
-            alt: "cleaner-working",
-          }}
-        />
-        <StyledLinearGradient
-          direction="bottom"
-          variation="reversePartial"
-          visual={{ opacity: 0.5 }}
-        />
-        <StyledLinearGradient
-          direction="bottom"
-          variation="partial"
-          visual={{ opacity: 1 }}
-        />
-        <StyledCoverContentContainer>
-          <StyledMainTitle>
-            {aboutCoverTextContent?.title ?? ""}
-          </StyledMainTitle>
-          <StyledSubTitle>
-            {aboutCoverTextContent?.subTitle ?? ""}
-          </StyledSubTitle>
-          <StyledDescription>
-            {useLineBreakParser(aboutCoverTextContent?.description ?? "")}
-          </StyledDescription>
-          <StyledCallToAction>
-            {
-              <StyledButtonContainer>
-                <StyledCoverContactLink
-                  key={navTree?.contact?.path ?? ""}
-                  href={navTree?.contact?.path ?? ""}
-                >
-                  {aboutCoverTextContent?.contactLinkText ?? ""}
-                </StyledCoverContactLink>
-                <NextImage
-                  containerPositioning={{
-                    bottom: "-80px",
-                    position: "absolute",
-                  }}
-                  containerDimensions={{
-                    width: "250px",
-                    height: "250px",
-                  }}
-                  imageProps={{
-                    src: commonAssetUrls?.waterSplash ?? "",
-                    alt: "water-splash",
-                  }}
-                />
-              </StyledButtonContainer>
-            }
-          </StyledCallToAction>
-        </StyledCoverContentContainer>
-      </StyledAboutCoverContainer>
-
       <StyledBrandMessageContainer>
         <IconGroup
           fill={systemContext?.theme?.palette?.stars?.blue}

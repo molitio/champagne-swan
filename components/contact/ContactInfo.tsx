@@ -12,10 +12,10 @@ import {
   StyledTitle,
   SyledFormBox,
   StyledFormText,
-  StyledContactContentContainer,
   StyledContactInfoContainer,
   StyledContactInfo,
   StyledLogoContainer,
+  StyledContactInfoText,
 } from "./style";
 
 const ContactInfo: React.FC = () => {
@@ -27,7 +27,7 @@ const ContactInfo: React.FC = () => {
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
-    <StyledContactContentContainer>
+    <StyledContactInfo>
       <StyledLinearGradient
         direction="bottom"
         variation="cover"
@@ -41,21 +41,21 @@ const ContactInfo: React.FC = () => {
       <StyledFormText>{textContent?.formText ?? ""}</StyledFormText>
       <SyledFormBox>
         <StyledContactInfoContainer>
-          <StyledContactInfo>
+          <StyledContactInfoText>
             <StyledAnchor href={iconDefinitions?.phone?.hrefUrl ?? ""}>
               {iconDefinitions?.phone?.title ?? ""}
               <br />
               {textContent?.phoneMain ?? ""}
             </StyledAnchor>
-          </StyledContactInfo>
-          <StyledContactInfo>
+          </StyledContactInfoText>
+          <StyledContactInfoText>
             <StyledAnchor href={iconDefinitions?.email?.hrefUrl ?? ""}>
               {iconDefinitions?.email?.title ?? ""}
               <br />
               {textContent?.email ?? ""}
             </StyledAnchor>
-          </StyledContactInfo>
-          <StyledContactInfo>
+          </StyledContactInfoText>
+          <StyledContactInfoText>
             <StyledAnchor href={iconDefinitions?.address?.hrefUrl ?? ""}>
               {iconDefinitions?.address?.title ?? ""}
               <br />
@@ -63,7 +63,7 @@ const ContactInfo: React.FC = () => {
               <br />
               {textContent?.address2 ?? ""}
             </StyledAnchor>
-          </StyledContactInfo>
+          </StyledContactInfoText>
         </StyledContactInfoContainer>
         <StyledFormContainer>
           <ContactForm />
@@ -79,7 +79,7 @@ const ContactInfo: React.FC = () => {
           }}
         />
       </StyledLogoContainer>
-    </StyledContactContentContainer>
+    </StyledContactInfo>
   );
 };
 

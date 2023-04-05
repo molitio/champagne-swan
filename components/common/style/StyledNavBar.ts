@@ -64,10 +64,12 @@ export const StyledNavLink = styled(Link)`
   cursor: pointer;
   font-family: "Fahkwang", sans-serif;
   font-weight: 400;
-  color: #0c7b93;
+  color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
   font-size: 24px;
   font-style: normal;
   text-decoration: none;
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["navBarMenuTextShadow"]?.textShadow ?? ""};
 
   :hover {
     text-decoration: underline;
@@ -80,7 +82,7 @@ type StyledNavButtonProps = {
 
 export const StyledNavButton = styled.div<StyledNavButtonProps>`
   cursor: pointer;
-  color: #0c7b93;
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   position: fixed;
   top: 2em;
   right: 2em;

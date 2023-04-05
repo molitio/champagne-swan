@@ -27,6 +27,8 @@ export const StyledCoverText = styled.text`
     props?.theme?.palette?.visual["contactTextShadow"]?.textShadow ?? ""};
   text-align: center;
   width: 40em;
+  font-size: 1.2em;
+  font-weight: 600;
   margin: 2em auto auto;
 `;
 
@@ -46,13 +48,13 @@ export const SimpledLayer = styled.img<React.CSSProperties>`
   width: 100%;
 `; */
 
-export const ResponsiveFormBox = styled.div`
+export const StyledFlexGroup = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
 
   @media (max-width: 1440px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 `;
 
@@ -77,12 +79,6 @@ export const ContactInfoContainer = styled.div`
   padding: 5em;
   color: white;
   line-height: 1.6;
-`;
-
-export const ContactInfo = styled.p`
-  font-size: 2.4rem;
-  font-family: "Tenor Sans";
-  text-shadow: 0px 2px 4px #8c7b6c;
 `;
 
 export const StyledLogoImage = styled.img`

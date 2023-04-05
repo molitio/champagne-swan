@@ -68,20 +68,6 @@ export const HeroWaterSplash = styled.img`
   z-index: 90;
 `;
 
-export const StyledCoverContentContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  top: 12em;
-  position: absolute;
-  @media (max-width: 1000px) {
-    top: 12em;
-  }
-  @media (max-width: 665px) {
-    top: 8em;
-  }
-`;
-
 export const StyledCoverContactLink = styled(Link)`
   color: white;
   background-color: ${(props) =>
@@ -106,12 +92,12 @@ export const StyledButtonContainer = styled.div`
   margin-top: 4em;
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: center;
 `;
 
-export const StyledCallToAction = styled.div`
-  text-align: center;
-`;
+/* export const StyledCallToAction = styled.div`
+`; */
 
 export const StyledMainTitle = styled.h1`
   position: relative;
@@ -121,7 +107,7 @@ export const StyledMainTitle = styled.h1`
   font-weight: 200;
   font-size: 3.8em;
   line-height: 78px;
-  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
+  color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["appCoverTitleShadow"]?.textShadow ?? ""};
 
@@ -192,7 +178,7 @@ export const StyledDescription = styled.pre`
   font-weight: 400;
   font-size: 1.5em;
   text-align: center;
-  color: ${(props) => props?.theme?.palette?.text?.primary};
+  color: ${(props) => props?.theme?.palette?.text?.tertiary};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["appCoverTextShadow"]?.textShadow ?? ""};
   white-space: pre-wrap;

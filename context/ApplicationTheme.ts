@@ -1,3 +1,9 @@
+/* 
+palette;
+
+
+*/
+
 export const ApplicationTheme = {
   palette: {
     primary: {
@@ -9,12 +15,10 @@ export const ApplicationTheme = {
     background: {
       default: "#c6dde2ff",
       secondary: "#0c7b93ff",
-      inverse: "#c1dadfff",
       interactive: "#c1a87dff",
     },
     text: {
-      primary: "#076174ff",
-      inverse: "#075E72ff",
+      primary: "#0C7B93ff",
       secondary: "#6C5741ff",
       /* TODO: select tone for default white hue */
       /* tertiary: "#fff", */
@@ -42,8 +46,11 @@ export const ApplicationTheme = {
     },
 
     visual: {
-      appCoverTitleShadow: { textShadow: "3px 3px 5px #C1DFE6ff" },
-      appCoverTextShadow: { textShadow: "2px 2px 4px #C1DFE6ff" },
+      navBarMenuTextShadow: { textShadow: "2px 2px 4px #424E51ff" },
+      appCoverTitleShadow: { textShadow: "2px 2px 4px #424E51ff" },
+      aboutCoverTitleShadow: { textShadow: "2px 2px 4px #C1DFE6ff" },
+      aboutCoverSubTitleShadow: { textShadow: "1px 1px 2px #424E51ff" },
+      appCoverTextShadow: { textShadow: "2px 2px 4px #424E51ff" },
       servicesTitleShadow: { textShadow: "3px 3px 5px #C1DFE6ff" },
       servicesTextShadow: { textShadow: "2px 2px 4px #C1DFE6ff" },
       opinionsTitleShadow: { textShadow: "3px 3px 5px #C1DFE6ff" },

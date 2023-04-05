@@ -28,7 +28,7 @@ const NavBar: React.FC = () => {
     >
       <StyledImageContainer>
         <NextImage
-          containerDimensions={{ width: "150px", height: "120px" }}
+          containerDimensions={{ width: "14em", height: "12em" }}
           containerPositioning={{ position: "relative" }}
           imageProps={{
             src: commonAssetUrls?.horizontalLogo ?? "",

@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const StyledContactInfo = styled.section`
+  position: relative;
+`;
+
+export const StyledContactContent = styled.section`
+  position: relative;
+`;
+
 type StyledContentContainerProps = {
   height?: string;
   heightTablet?: string;
@@ -100,10 +108,11 @@ export const StyledContactInfoContainer = styled.div`
   }
 `;
 
-export const StyledContactInfo = styled.p`
+export const StyledContactInfoText = styled.p`
   font-size: 2.4rem;
   font-family: "Tenor Sans", sans-serif;
   font-weight: 200;
+  color: red;
   text-shadow: 0px 2px 4px #8c7b6c;
 
   @media (max-width: 665px) {

@@ -1,5 +1,5 @@
 export type Positioning = {
-  position: string;
+  position?: string;
   top?: string;
   right?: string;
   bottom?: string;

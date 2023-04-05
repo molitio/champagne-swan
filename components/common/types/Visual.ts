@@ -3,4 +3,5 @@ export type Visual = {
   textShadow?: string;
   borderRadius?: string;
   opacity?: number;
+  overflow?: string;
 };

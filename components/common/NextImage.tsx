@@ -6,6 +6,7 @@ import { Positioning, Visual } from "./types";
 
 type NextImageProps = {
   imageProps: ImageProps;
+  imagePositioning?: Positioning;
   imageVisual?: Visual;
   containerDimensions?: Dimensions;
   containerPositioning?: Positioning;
@@ -14,12 +15,14 @@ type NextImageProps = {
 
 const NextImage: React.FC<NextImageProps> = (props) => {
   const {
-    containerDimensions,
     imageProps,
+    imagePositioning,
+    containerDimensions,
     containerPositioning,
     containerVisual,
     imageVisual,
   } = props;
+
   const nextImageProps = {
     ...imageProps,
   };
@@ -34,7 +37,11 @@ const NextImage: React.FC<NextImageProps> = (props) => {
       positioning={containerPositioning}
       visual={containerVisual}
     >
-      <StyledNextImage {...nextImageProps} visual={{ ...imageVisual }} />
+      <StyledNextImage
+        positioning={{ ...imagePositioning }}
+        visual={{ ...imageVisual }}
+        {...nextImageProps}
+      />
     </StyledNextImageContainer>
   );
 };

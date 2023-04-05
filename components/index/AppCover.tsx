@@ -4,14 +4,12 @@ import {
   IconGroup,
   NextImage,
   StyledLinearGradient,
-  StyledSegmentSection,
+  StyledCoverContentContainer,
 } from "../common";
 import { useLineBreakParser } from "../utils";
 import {
-  StyledCoverContentContainer,
   StyledCoverContactLink,
   StyledButtonContainer,
-  StyledCallToAction,
   StyledDescription,
   StyledMainTitle,
   StyledSubTitle,
@@ -29,13 +27,11 @@ const AppCover: React.FC = () => {
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
-  const theme = systemContext?.theme;
-
   return (
     <StyledAppCover>
       <NextImage
         containerDimensions={{
-          height: theme?.dimensions?.page?.height ?? "100vh",
+          height: "80vh",
           width: "100%",
         }}
         imageProps={{
@@ -46,12 +42,14 @@ const AppCover: React.FC = () => {
       <StyledLinearGradient
         direction="bottom"
         variation="reversePartial"
-        visual={{ opacity: 1 }}
+        positioning={{ position: "absolute", top: "0px" }}
+        visual={{ opacity: 0.6 }}
       />
       <StyledLinearGradient
         direction="bottom"
         variation="partial"
-        visual={{ opacity: 1 }}
+        positioning={{ position: "absolute", top: "0px" }}
+        visual={{ opacity: 0.8 }}
       />
       <StyledCoverContentContainer>
         <IconGroup
@@ -64,32 +62,29 @@ const AppCover: React.FC = () => {
           <StyledDescription>
             {useLineBreakParser(textContent?.description ?? "")}
           </StyledDescription>
-          <StyledCallToAction>
-            {
-              <StyledButtonContainer>
-                <StyledCoverContactLink
-                  key={navTree?.contact?.path ?? ""}
-                  href={navTree?.contact?.path ?? ""}
-                >
-                  {textContent?.moreInfoButton ?? ""}
-                </StyledCoverContactLink>
-                <NextImage
-                  containerPositioning={{
-                    bottom: "-80px",
-                    position: "absolute",
-                  }}
-                  containerDimensions={{
-                    width: "250px",
-                    height: "250px",
-                  }}
-                  imageProps={{
-                    src: commonAssetUrls?.waterSplash ?? "",
-                    alt: "water-splash",
-                  }}
-                />
-              </StyledButtonContainer>
-            }
-          </StyledCallToAction>
+
+          <StyledButtonContainer>
+            <StyledCoverContactLink
+              key={navTree?.contact?.path ?? ""}
+              href={navTree?.contact?.path ?? ""}
+            >
+              {textContent?.moreInfoButton ?? ""}
+            </StyledCoverContactLink>
+            <NextImage
+              containerPositioning={{
+                bottom: "-80px",
+                position: "absolute",
+              }}
+              containerDimensions={{
+                width: "250px",
+                height: "250px",
+              }}
+              imageProps={{
+                src: commonAssetUrls?.waterSplash ?? "",
+                alt: "water-splash",
+              }}
+            />
+          </StyledButtonContainer>
         </div>
       </StyledCoverContentContainer>
     </StyledAppCover>

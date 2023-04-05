@@ -1,21 +1,17 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
-import { NextImage, StyledLinearGradient } from "../common";
-import { StyledTitle, StyledContact, StyledCoverText } from "./style";
 import {
-  RotatedLayer,
-  ImageLayer,
-  /*   ContactStyledImg, */
+  NextImage,
+  StyledLinearGradient,
   StyledCoverContentContainer,
-} from "../index/index";
+} from "../common";
+import { StyledTitle, StyledContact, StyledCoverText } from "./style";
 
 const ContactCover: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
   const contactLeafs = systemContext?.contentRoot?.contact?.leafs;
   const textContent = contactLeafs?.contactInfo?.textContent;
   const assetUrls = contactLeafs?.contactInfo?.assetUrls;
-
-  console.log("assetUrls", assetUrls);
 
   return (
     <StyledContact>
@@ -24,8 +20,7 @@ const ContactCover: React.FC = () => {
           minHeight: "80vh",
           width: "100%",
         }}
-        containerPositioning={{
-          position: "relative",
+        imagePositioning={{
           objectFit: "cover",
         }}
         imageProps={{
