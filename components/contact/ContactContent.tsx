@@ -6,8 +6,6 @@ import {
   StyledContactContent,
   StyledLogoImage,
   StyledFlexGroup,
-  StyledContactContentContainer,
-  StyledContentBackgroundLayer,
 } from "./style";
 import { ContactForm, StyledAnchor } from "../common";
 import { SystemContext } from "@molitio/ui-core";
@@ -23,7 +21,6 @@ const ContactContent: React.FC = () => {
 
   return (
     <StyledContactContent>
-      {/*  <StyledContentBackgroundLayer height={"1200px"} heightTablet={"1900px"}> */}
       <StyledFlexGroup>
         <ContactInfoContainer>
           <StyledContactInfo>
@@ -55,7 +52,6 @@ const ContactContent: React.FC = () => {
         </FormContainer>
       </StyledFlexGroup>
       <StyledLogoImage src={commonAssetUrls?.logo ?? ""} alt="logo" />
-      {/*     </StyledContentBackgroundLayer> */}
     </StyledContactContent>
   );
 };

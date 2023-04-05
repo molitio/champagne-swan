@@ -1,7 +1,11 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
 import { NextImage, StyledLinearGradient, StyledCoverContent } from "../common";
-import { StyledTitle, StyledContact, StyledCoverText } from "./style";
+import {
+  StyledContactCoverTitle,
+  StyledContact,
+  StyledCoverText,
+} from "./style";
 
 const ContactCover: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
@@ -37,7 +41,9 @@ const ContactCover: React.FC = () => {
         visual={{ opacity: 1 }}
       />
       <StyledCoverContent>
-        <StyledTitle>{textContent?.title ?? ""}</StyledTitle>
+        <StyledContactCoverTitle>
+          {textContent?.title ?? ""}
+        </StyledContactCoverTitle>
         <StyledCoverText>{textContent?.formText ?? ""}</StyledCoverText>
       </StyledCoverContent>
     </StyledContact>

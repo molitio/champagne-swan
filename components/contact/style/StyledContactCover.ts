@@ -5,7 +5,7 @@ export const StyledContact = styled.section`
   position: relative;
 `;
 
-export const StyledTitle = styled.h1`
+export const StyledContactCoverTitle = styled.h1`
   position: relative;
   text-align: center;
   color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
