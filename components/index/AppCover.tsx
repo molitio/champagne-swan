@@ -4,7 +4,7 @@ import {
   IconGroup,
   NextImage,
   StyledLinearGradient,
-  StyledCoverContentContainer,
+  StyledCoverContent,
 } from "../common";
 import { useLineBreakParser } from "../utils";
 import {
@@ -51,7 +51,7 @@ const AppCover: React.FC = () => {
         positioning={{ position: "absolute", top: "0px" }}
         visual={{ opacity: 0.8 }}
       />
-      <StyledCoverContentContainer>
+      <StyledCoverContent>
         <IconGroup
           fill={systemContext?.theme?.palette?.stars?.gold ?? ""}
           starCount={5}
@@ -86,7 +86,7 @@ const AppCover: React.FC = () => {
             />
           </StyledButtonContainer>
         </div>
-      </StyledCoverContentContainer>
+      </StyledCoverContent>
     </StyledAppCover>
   );
 };

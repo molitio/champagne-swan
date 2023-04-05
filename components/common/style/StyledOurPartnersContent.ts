@@ -8,7 +8,7 @@ export const StyledPartners = styled.section`
 export const StyledPartnersTitle = styled.h1`
   position: relative;
   text-align: center;
-  color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
+  color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
   font-weight: 400;
   font-size: 105px;
   margin-top: 0em;

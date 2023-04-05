@@ -29,7 +29,7 @@ export const StyledServicesIconContainer = styled.div<StyledIconContainerProps>`
 
 export const StyledMainTitle = styled.h1`
   text-align: center;
-  color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
+  color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["servicesTextShadow"]?.textShadow ?? ""};
   font-weight: 400;
@@ -201,7 +201,7 @@ export const StyledContentBoxTitle = styled.h1`
   font-family: "Lato", sans-serif;
   font-weight: 400;
   text-align: initial;
-  color: ${(props) => props?.theme?.palette?.text?.secondary};
+  color: ${(props) => props?.theme?.palette?.text?.tertiary};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["servicesTitleShadow"]?.textShadow ?? ""};
   font-size: 35px;
@@ -251,7 +251,7 @@ export const StyledContentBoxText = styled.p<ContentBoxTextProps>`
   bottom: ${(props) => props.bottom || "0"};
   font-family: "Lato", sans-serif;
   text-align: start;
-  color: ${(props) => props?.theme?.palette?.text?.secondary};
+  color: ${(props) => props?.theme?.palette?.text?.tertiary};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["servicesTextShadow"]?.textShadow ?? ""};
   font-size: 1.2em;

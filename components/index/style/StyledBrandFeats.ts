@@ -19,7 +19,7 @@ export const StyledInfoContainer = styled.div`
   flex-direction: column;
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
+  color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   margin-top: 40px;
   margin-bottom: 40px;
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2));

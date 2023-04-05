@@ -7,7 +7,7 @@ palette;
 export const ApplicationTheme = {
   palette: {
     primary: {
-      main: "#00a7ccff",
+      main: "#c1a87dff",
     },
     secondary: {
       main: "#c1dadf",
@@ -19,10 +19,10 @@ export const ApplicationTheme = {
     },
     text: {
       primary: "#0C7B93ff",
-      secondary: "#6C5741ff",
+      secondary: "#E6FAFFff",
       /* TODO: select tone for default white hue */
       /* tertiary: "#fff", */
-      tertiary: "#E6FAFFff",
+      tertiary: "#6C5741ff",
       interactive: "#c1a87dff",
     },
     stars: {
@@ -46,11 +46,13 @@ export const ApplicationTheme = {
     },
 
     visual: {
-      navBarMenuTextShadow: { textShadow: "2px 2px 4px #424E51ff" },
+      navBarMenuTextShadow: { textShadow: "2px 2px 4px #c6dde2ff" },
       appCoverTitleShadow: { textShadow: "2px 2px 4px #424E51ff" },
-      aboutCoverTitleShadow: { textShadow: "2px 2px 4px #C1DFE6ff" },
-      aboutCoverSubTitleShadow: { textShadow: "1px 1px 2px #424E51ff" },
       appCoverTextShadow: { textShadow: "2px 2px 4px #424E51ff" },
+      aboutCoverTitleShadow: { textShadow: "2px 2px 4px #424E51ff" },
+      aboutCoverSubTitleShadow: { textShadow: "2px 2px 4px #424E51ff" },
+      aboutCoverTextShadow: { textShadow: "1px 1px 2px #424E51ff" },
+      aboutCoverCtaShadow: { boxShadow: "2px 4px 4px #424E51ff" },
       servicesTitleShadow: { textShadow: "3px 3px 5px #C1DFE6ff" },
       servicesTextShadow: { textShadow: "2px 2px 4px #C1DFE6ff" },
       opinionsTitleShadow: { textShadow: "3px 3px 5px #C1DFE6ff" },

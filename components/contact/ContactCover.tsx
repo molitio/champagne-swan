@@ -1,10 +1,6 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
-import {
-  NextImage,
-  StyledLinearGradient,
-  StyledCoverContentContainer,
-} from "../common";
+import { NextImage, StyledLinearGradient, StyledCoverContent } from "../common";
 import { StyledTitle, StyledContact, StyledCoverText } from "./style";
 
 const ContactCover: React.FC = () => {
@@ -40,10 +36,10 @@ const ContactCover: React.FC = () => {
         positioning={{ position: "absolute", top: "0" }}
         visual={{ opacity: 1 }}
       />
-      <StyledCoverContentContainer>
+      <StyledCoverContent>
         <StyledTitle>{textContent?.title ?? ""}</StyledTitle>
         <StyledCoverText>{textContent?.formText ?? ""}</StyledCoverText>
-      </StyledCoverContentContainer>
+      </StyledCoverContent>
     </StyledContact>
   );
 };

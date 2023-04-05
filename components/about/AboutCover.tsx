@@ -8,8 +8,7 @@ import {
   StyledSubTitle,
   StyledCoverContactLink,
 } from "./style";
-import { NextImage, StyledLinearGradient } from "../common";
-import { StyledCoverContentContainer } from "../common";
+import { NextImage, StyledLinearGradient, StyledCoverContent } from "../common";
 import { useLineBreakParser } from "../utils";
 
 const AboutCover: React.FC = () => {
@@ -48,23 +47,22 @@ const AboutCover: React.FC = () => {
         positioning={{ position: "absolute", top: "0" }}
         visual={{ opacity: 1 }}
       />
-      <StyledCoverContentContainer>
-        <StyledMainTitle>{aboutCoverTextContent?.title ?? ""}</StyledMainTitle>
-        <StyledSubTitle>{aboutCoverTextContent?.subTitle ?? ""}</StyledSubTitle>
+      <StyledCoverContent>
+        <StyledMainTitle>
+          {useLineBreakParser(aboutCoverTextContent?.title ?? "")}
+        </StyledMainTitle>
+        <StyledSubTitle>
+          {useLineBreakParser(aboutCoverTextContent?.subTitle ?? "")}
+        </StyledSubTitle>
         <StyledDescription>
           {useLineBreakParser(aboutCoverTextContent?.description ?? "")}
         </StyledDescription>
 
         <StyledButtonContainer>
-          <StyledCoverContactLink
-            key={navTree?.contact?.path ?? ""}
-            href={navTree?.contact?.path ?? ""}
-          >
-            {aboutCoverTextContent?.contactLinkText ?? ""}
-          </StyledCoverContactLink>
           <NextImage
             containerPositioning={{
-              bottom: "-80px",
+              bottom: "-120px",
+              right: "-80px",
               position: "absolute",
             }}
             containerDimensions={{
@@ -76,8 +74,14 @@ const AboutCover: React.FC = () => {
               alt: "water-splash",
             }}
           />
+          <StyledCoverContactLink
+            key={navTree?.contact?.path ?? ""}
+            href={navTree?.contact?.path ?? ""}
+          >
+            {aboutCoverTextContent?.contactLinkText ?? ""}
+          </StyledCoverContactLink>
         </StyledButtonContainer>
-      </StyledCoverContentContainer>
+      </StyledCoverContent>
     </StyledAboutCover>
   );
 };

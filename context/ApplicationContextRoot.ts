@@ -272,8 +272,8 @@ export const ApplicationContextRoot = {
       leafs: {
         cover: {
           textContent: {
-            title: "SZAKKÉPZETT MUNKAERŐ",
-            subTitle: "MINŐSÉGI SZOLGÁLTATÁS",
+            title: "SZAKKÉPZETT \\n MUNKAERŐ",
+            subTitle: "MINŐSÉGI \\n SZOLGÁLTATÁS",
             contactLinkText: "Kapcsolat",
             description: "Lorem ipusm dolor sit amet",
           },

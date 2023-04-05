@@ -7,87 +7,73 @@ export const StyledAboutCover = styled.section`
 
 export const StyledMainTitle = styled.h1`
   position: relative;
-  text-align: center;
-  margin: 30px 30px 0 30px;
-  font-style: normal;
-  font-weight: 200;
+  width: 80vw;
+  margin: auto;
   font-size: 3.8em;
-  line-height: 78px;
-  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.2em;
+  color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["aboutCoverTitleShadow"]?.textShadow ?? ""};
 
   @media (max-width: 1400px) {
-    font-size: 3.2rem;
+    font-size: 3.2em;
   }
 
   @media (max-width: 975px) {
-    display: block;
-    margin: 30px auto 30px auto;
-    width: 12em;
+    white-space: pre;
+    font-size: 2.8em;
   }
 
   @media (max-width: 665px) {
-    display: block;
-    margin: 30px auto 30px auto;
-    font-size: 2.25rem;
-    width: 8em;
-    line-height: 50px;
+    font-size: 2.2em;
   }
 `;
 
 export const StyledSubTitle = styled.h2`
   position: relative;
-  text-align: center;
+  width: 80vw;
+  margin: auto;
   font-size: 3.6rem;
-  margin: 0px 30px 0 30px;
-  font-style: normal;
-  font-weight: 200;
-  font-size: 2.8em;
-  line-height: 78px;
-  color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.2em;
+  color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["aboutCoverSubTitleShadow"]?.textShadow ??
     ""};
 
   @media (max-width: 1400px) {
-    font-size: 3.2rem;
+    font-size: 3em;
   }
 
   @media (max-width: 975px) {
-    margin: auto;
-    width: 10em;
+    white-space: pre;
+    font-size: 2.6em;
   }
 
   @media (max-width: 665px) {
-    display: block;
-    margin: 30px auto 30px auto;
-    font-size: 2.1rem;
-    width: 8em;
-    line-height: 50px;
-  }
-
-  @media (max-width: 280px) {
-    font-size: 1.6rem;
-    width: 8em;
+    font-size: 2rem;
   }
 `;
 
 export const StyledDescription = styled.p`
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5em;
+  text-align: center;
   width: 36em;
   margin-top: 1em;
   margin-bottom: 0;
   margin-right: auto;
   margin-left: auto;
   padding: 0 2em 0 2em;
-  font-style: normal;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.5em;
-  text-align: center;
-  color: ${(props) => props?.theme?.palette?.text?.primary};
+  color: ${(props) => props?.theme?.palette?.text?.secondary};
   text-shadow: ${(props) =>
-    props?.theme?.palette?.visual["appCoverTextShadow"]?.textShadow ?? ""};
+    props?.theme?.palette?.visual["aboutCoverTextShadow"]?.textShadow ?? ""};
+
   white-space: pre-wrap;
 
   @media (max-width: 975px) {
@@ -103,29 +89,29 @@ export const StyledDescription = styled.p`
 `;
 
 export const StyledButtonContainer = styled.div`
-  margin-top: 4em;
-  display: flex;
-  align-items: center;
+  position: relative;
+  width: max-content;
+  margin: auto;
+  padding-top: 3em;
   text-align: center;
-  justify-content: center;
 `;
 
 export const StyledCoverContactLink = styled(Link)`
-  color: white;
-  background-color: ${(props) =>
-    props?.theme?.palette?.background?.interactive};
-  margin-top: 2em;
-  padding: 0.5em 0.93em 0.5em 0.93em;
-  font-size: 24px;
-  font-weight: 200;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
+  position: relative;
+  padding: 0.6em 1.2em;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: ${(props) => props?.theme?.palette?.text?.secondary};
+  background-color: ${(props) => props?.theme?.palette?.primary?.main};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["aboutCoverTextShadow"]?.textShadow ?? ""};
+  box-shadow: ${(props) =>
+    props?.theme?.palette?.visual["aboutCoverCtaShadow"]?.boxShadow ?? ""};
   text-decoration: none;
-  z-index: 100;
+  cursor: pointer;
 
   :hover {
-    color: ${(props) => props?.theme?.palette?.background?.interactive};
-    background-color: white;
+    color: ${(props) => props?.theme?.palette?.primary?.main};
+    background-color: ${(props) => props?.theme?.palette?.text?.secondary};
   }
 `;

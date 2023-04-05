@@ -107,7 +107,7 @@ export const StyledMainTitle = styled.h1`
   font-weight: 200;
   font-size: 3.8em;
   line-height: 78px;
-  color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
+  color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["appCoverTitleShadow"]?.textShadow ?? ""};
 
@@ -178,7 +178,7 @@ export const StyledDescription = styled.pre`
   font-weight: 400;
   font-size: 1.5em;
   text-align: center;
-  color: ${(props) => props?.theme?.palette?.text?.tertiary};
+  color: ${(props) => props?.theme?.palette?.text?.secondary};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["appCoverTextShadow"]?.textShadow ?? ""};
   white-space: pre-wrap;

@@ -8,7 +8,7 @@ export const StyledContact = styled.section`
 export const StyledTitle = styled.h1`
   position: relative;
   text-align: center;
-  color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
+  color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["contactTitleShadow"]?.textShadow ?? ""};
   font-weight: 400;
@@ -22,7 +22,7 @@ export const StyledTitle = styled.h1`
 
 export const StyledCoverText = styled.text`
   display: block;
-  color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
+  color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["contactTextShadow"]?.textShadow ?? ""};
   text-align: center;

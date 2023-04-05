@@ -2,9 +2,7 @@ import React from "react";
 import { SystemContext } from "@molitio/ui-core";
 import { ImageBox, IconGroup } from "../common";
 import {
-  StyledIconContainer,
   StyledMainTitle,
-  StyledContentContainer,
   StyledContentBox,
   InternalContentContainer,
   StyledContentBoxTitle,
@@ -25,65 +23,64 @@ const ServicesContent: React.FC = () => {
 
   return (
     <StyledServices>
-      <StyledIconContainer mobilePaddingTop={"40em"}>
-        <IconGroup
-          fill={systemContext?.theme?.palette?.stars?.gold ?? ""}
-          starCount={5}
-        />
-      </StyledIconContainer>
+      {/*       <StyledIconContainer mobilePaddingTop={"40em"}> */}
+      <IconGroup
+        fill={systemContext?.theme?.palette?.stars?.gold ?? ""}
+        starCount={5}
+      />
+      {/*      </StyledIconContainer> */}
       <StyledMainTitle id="main-content">
         {textContent?.title ?? ""}
       </StyledMainTitle>
 
       <div>
-        <StyledContentContainer>
-          <ImageBox
-            imageBoxParams={{
-              imageUrl: assetUrls?.officeCleaners ?? "",
-              dimensions: {
-                height: "350px",
-                width: "490px",
-                minHeight: "350px",
-                minWidth: "490px",
+        {/*  <StyledContentContainer> */}
+        <ImageBox
+          imageBoxParams={{
+            imageUrl: assetUrls?.officeCleaners ?? "",
+            dimensions: {
+              height: "350px",
+              width: "490px",
+              minHeight: "350px",
+              minWidth: "490px",
+            },
+            positioning: {
+              margin: "30px 15px 0 15px",
+              tablet: {
+                top: "220px",
               },
-              positioning: {
-                margin: "30px 15px 0 15px",
-                tablet: {
-                  top: "220px",
-                },
-                mobile: {
-                  top: "300px",
-                },
-                mobileSmall: {
-                  top: "570px",
-                },
+              mobile: {
+                top: "300px",
               },
-              breakpoints: {
-                breakpoint1: "1440px",
+              mobileSmall: {
+                top: "570px",
               },
-            }}
-          />
+            },
+            breakpoints: {
+              breakpoint1: "1440px",
+            },
+          }}
+        />
 
-          <StyledContentBox>
-            <StyledContentBoxTitle>
-              {textContent?.officeCleaningTitle ?? ""}
-            </StyledContentBoxTitle>
-            <StyledContentBoxText>
-              {textContent?.officeCleaningText ?? ""}
-            </StyledContentBoxText>
-            <StyledContentBoxText
-              width={"535px"}
-              margin={"0px auto 0px auto"}
-              top={"0px"}
-              padding={"0px"}
-              display={"none"}
-              displayTablet={"block"}
-              paddingTablet={"20px 0px 0px 0px"}
-            >
-              {textContent?.officeCleaningInfo ?? ""}
-            </StyledContentBoxText>
-          </StyledContentBox>
-        </StyledContentContainer>
+        <StyledContentBox>
+          <StyledContentBoxTitle>
+            {textContent?.officeCleaningTitle ?? ""}
+          </StyledContentBoxTitle>
+          <StyledContentBoxText>
+            {textContent?.officeCleaningText ?? ""}
+          </StyledContentBoxText>
+          <StyledContentBoxText
+            width={"535px"}
+            margin={"0px auto 0px auto"}
+            top={"0px"}
+            padding={"0px"}
+            display={"none"}
+            displayTablet={"block"}
+            paddingTablet={"20px 0px 0px 0px"}
+          >
+            {textContent?.officeCleaningInfo ?? ""}
+          </StyledContentBoxText>
+        </StyledContentBox>
 
         {/* TODO: fix layout to display text content on all devices */}
         <StyledContentBoxText
@@ -112,11 +109,7 @@ const ServicesContent: React.FC = () => {
       </div>
 
       <ExternalContentContainer>
-        <InternalContentContainer
-        /*           tabletTop={"200px"}
-          mobileTop={"250px"}
-          smallMobileTop={"550px"} */
-        >
+        <InternalContentContainer>
           <StyledContentBox>
             <StyledContentBoxTitle>
               {textContent?.personalCleaningTitle ?? ""}
@@ -186,58 +179,52 @@ const ServicesContent: React.FC = () => {
       </ExternalContentContainer>
 
       <ExternalContentContainer>
-        <StyledContentContainer
-        /*          tabletTop={"390px"}
-          mobileTop={"480px"}
-          smallMobileTop={"1150px"} */
-        >
-          <ImageBox
-            imageBoxParams={{
-              imageUrl: assetUrls?.industrial ?? "",
-              dimensions: {
-                height: "396px",
-                width: "529px",
-                minHeight: "396px",
-                minWidth: "529px",
+        <ImageBox
+          imageBoxParams={{
+            imageUrl: assetUrls?.industrial ?? "",
+            dimensions: {
+              height: "396px",
+              width: "529px",
+              minHeight: "396px",
+              minWidth: "529px",
+            },
+            positioning: {
+              margin: "30px 15px 0 15px",
+              tablet: {
+                top: "240px",
               },
-              positioning: {
-                margin: "30px 15px 0 15px",
-                tablet: {
-                  top: "240px",
-                },
-                mobile: {
-                  top: "300px",
-                },
-                mobileSmall: {
-                  top: "420px",
-                },
+              mobile: {
+                top: "300px",
               },
-              breakpoints: {
-                breakpoint1: "1440px",
+              mobileSmall: {
+                top: "420px",
               },
-            }}
-          />
+            },
+            breakpoints: {
+              breakpoint1: "1440px",
+            },
+          }}
+        />
 
-          <StyledContentBox>
-            <StyledContentBoxTitle>
-              {textContent?.highCeilingTitle ?? ""}
-            </StyledContentBoxTitle>
-            <StyledContentBoxText>
-              {textContent?.highCeilingText ?? ""}
-            </StyledContentBoxText>
-            <StyledContentBoxText
-              width={"535px"}
-              margin={"0px auto 0px auto"}
-              top={"0px"}
-              padding={"0px"}
-              display={"none"}
-              displayTablet={"block"}
-              paddingTablet={"20px 0px 0px 0px"}
-            >
-              {textContent?.highCeilingInfo ?? ""}
-            </StyledContentBoxText>
-          </StyledContentBox>
-        </StyledContentContainer>
+        <StyledContentBox>
+          <StyledContentBoxTitle>
+            {textContent?.highCeilingTitle ?? ""}
+          </StyledContentBoxTitle>
+          <StyledContentBoxText>
+            {textContent?.highCeilingText ?? ""}
+          </StyledContentBoxText>
+          <StyledContentBoxText
+            width={"535px"}
+            margin={"0px auto 0px auto"}
+            top={"0px"}
+            padding={"0px"}
+            display={"none"}
+            displayTablet={"block"}
+            paddingTablet={"20px 0px 0px 0px"}
+          >
+            {textContent?.highCeilingInfo ?? ""}
+          </StyledContentBoxText>
+        </StyledContentBox>
         <StyledContentBoxText
           width={"1080px"}
           margin={"0px auto 0px auto"}

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledCoverContentContainer = styled.div`
+export const StyledCoverContent = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
