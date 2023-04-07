@@ -181,7 +181,7 @@ export const ApplicationContextRoot = {
           textContent: {
             title: "TISZTASÁG FELSŐFOKON!",
             description:
-              "Cégünk magas színvonalon kínál takarító szolgáltatást szállodák, irodaházak \\n és magánszemélyek részére, \\n valamint vállaljuk nagy belmagasságú ipari üzemek, \\ngyártó csarnokok, raktárak és logisztikai központok speciális \\ntakarítását!",
+              "Cégünk magas színvonalon kínál takarító szolgáltatást szállodák, irodaházak és magánszemélyek részére, valamint vállaljuk nagy belmagasságú ipari üzemek, gyártó csarnokok, raktárak és logisztikai központok speciális takarítását!",
             moreInfoButton: "Bővebben",
           },
           assetUrls: {

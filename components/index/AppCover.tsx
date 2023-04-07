@@ -34,6 +34,13 @@ const AppCover: React.FC = () => {
           height: "80vh",
           width: "100%",
         }}
+        containerPositioning={{
+          position: "relative",
+          top: "-2em",
+        }}
+        imagePositioning={{
+          objectFit: "cover",
+        }}
         imageProps={{
           src: assetUrls?.heroBackground ?? "",
           alt: "cover-image",
@@ -56,36 +63,34 @@ const AppCover: React.FC = () => {
           fill={systemContext?.theme?.palette?.stars?.gold ?? ""}
           starCount={5}
         />
-        <div>
-          <StyledMainTitle>{textContent?.title ?? ""}</StyledMainTitle>
-          <StyledSubTitle>{textContent?.subTitle ?? ""}</StyledSubTitle>
-          <StyledDescription>
-            {useLineBreakParser(textContent?.description ?? "")}
-          </StyledDescription>
+        <StyledMainTitle>{textContent?.title ?? ""}</StyledMainTitle>
+        <StyledSubTitle>{textContent?.subTitle ?? ""}</StyledSubTitle>
+        <StyledDescription>
+          {useLineBreakParser(textContent?.description ?? "")}
+        </StyledDescription>
 
-          <StyledButtonContainer>
-            <StyledCoverContactLink
-              key={navTree?.contact?.path ?? ""}
-              href={navTree?.contact?.path ?? ""}
-            >
-              {textContent?.moreInfoButton ?? ""}
-            </StyledCoverContactLink>
-            <NextImage
-              containerPositioning={{
-                bottom: "-80px",
-                position: "absolute",
-              }}
-              containerDimensions={{
-                width: "250px",
-                height: "250px",
-              }}
-              imageProps={{
-                src: commonAssetUrls?.waterSplash ?? "",
-                alt: "water-splash",
-              }}
-            />
-          </StyledButtonContainer>
-        </div>
+        <StyledButtonContainer>
+          <StyledCoverContactLink
+            key={navTree?.contact?.path ?? ""}
+            href={navTree?.contact?.path ?? ""}
+          >
+            {textContent?.moreInfoButton ?? ""}
+          </StyledCoverContactLink>
+          <NextImage
+            containerPositioning={{
+              bottom: "-80px",
+              position: "absolute",
+            }}
+            containerDimensions={{
+              width: "250px",
+              height: "250px",
+            }}
+            imageProps={{
+              src: commonAssetUrls?.waterSplash ?? "",
+              alt: "water-splash",
+            }}
+          />
+        </StyledButtonContainer>
       </StyledCoverContent>
     </StyledAppCover>
   );

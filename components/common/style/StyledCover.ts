@@ -4,10 +4,10 @@ export const StyledCoverContent = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  top: 12em;
+  top: 10em;
   position: absolute;
-  @media (max-width: 1000px) {
-    top: 12em;
+  @media (max-width: 1440px) {
+    //top: 6em;
   }
   @media (max-width: 665px) {
     top: 8em;

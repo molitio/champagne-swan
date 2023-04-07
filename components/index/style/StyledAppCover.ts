@@ -3,69 +3,7 @@ import styled from "styled-components";
 
 export const StyledAppCover = styled.section`
   position: relative;
-`;
-
-export const ImageLayer = styled.img`
-  position: absolute;
-  margin: 0;
-  margin-top: 0px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1150px;
-
-  @media (max-width: 665px) {
-    height: 910px;
-  }
-`;
-
-export const RotatedLayer = styled.img`
-  position: absolute;
-  transform: rotate(180deg);
-  margin: 0;
-  margin-top: 536px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 634px;
-
-  @media (max-width: 665px) {
-    height: 363px;
-  }
-`;
-
-export const StyledImg = styled.div`
-  position: relative;
-  object-fit: fill;
-  background: url(https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/hero.webp);
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 1169px;
-  @media (max-width: 665px) {
-    height: 896px;
-  }
-`;
-/* 
-export const ContactStyledImg = styled.div`
-  object-fit: fill;
-  background: url(https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/skyscraper.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 1169px;
-  @media (max-width: 665px) {
-    height: 896px;
-  }
-`;
- */
-export const HeroWaterSplash = styled.img`
-  margin-top: 30px;
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  z-index: 90;
+  background-color: ${(props) => props?.theme?.palette?.background?.default};
 `;
 
 export const StyledCoverContactLink = styled(Link)`
@@ -89,24 +27,19 @@ export const StyledCoverContactLink = styled(Link)`
 `;
 
 export const StyledButtonContainer = styled.div`
-  margin-top: 4em;
+  margin-top: 2em;
   display: flex;
-  align-items: center;
-  text-align: center;
   justify-content: center;
 `;
-
-/* export const StyledCallToAction = styled.div`
-`; */
 
 export const StyledMainTitle = styled.h1`
   position: relative;
   text-align: center;
-  margin: 30px 30px 0 30px;
+  margin: 0.4em 0;
   font-style: normal;
   font-weight: 200;
   font-size: 3.8em;
-  line-height: 78px;
+  line-height: 1.2em;
   color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["appCoverTitleShadow"]?.textShadow ?? ""};
@@ -117,7 +50,7 @@ export const StyledMainTitle = styled.h1`
 
   @media (max-width: 975px) {
     display: block;
-    margin: 30px auto 30px auto;
+    margin: 1.8em auto 1.8em auto;
     width: 12em;
   }
 
@@ -133,18 +66,18 @@ export const StyledMainTitle = styled.h1`
 export const StyledSubTitle = styled.h2`
   position: relative;
   text-align: center;
-  font-size: 3.6rem;
-  margin: 0px 30px 0 30px;
+  font-size: 3.6em;
+  margin: 0px 2em 0 2em;
   font-style: normal;
   font-weight: 200;
   font-size: 2.8em;
-  line-height: 78px;
+  line-height: 4.8em;
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["appCoverTitleShadow"]?.textShadow ?? ""};
 
   @media (max-width: 1400px) {
-    font-size: 3.2rem;
+    font-size: 3.2em;
   }
 
   @media (max-width: 975px) {
@@ -167,17 +100,14 @@ export const StyledSubTitle = styled.h2`
 `;
 
 export const StyledDescription = styled.pre`
-  width: 36em;
-  margin-top: 1em;
-  margin-bottom: 0;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 2em 0 2em;
+  width: 40em;
+  margin: auto;
   font-style: normal;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.5em;
   text-align: center;
+  line-height: 1.2em;
   color: ${(props) => props?.theme?.palette?.text?.secondary};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["appCoverTextShadow"]?.textShadow ?? ""};
