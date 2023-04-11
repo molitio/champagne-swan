@@ -46,37 +46,4 @@ export const StyledPartnersImageContainer = styled.div`
   @media (max-width: 1440px) {
     flex: 50%;
   }
-
-  @media (max-width: 665px) {
-    flex: 50%;
-    /* s */
-  }
-`;
-
-export const PartnerImg = styled.img`
-  height: 130px;
-  width: 130px;
-
-  @media (max-width: 665px) {
-    height: 90px;
-    width: 90px;
-  }
-`;
-
-export const HouseLogo = styled.img`
-  height: 130px;
-  width: 190px;
-
-  @media (max-width: 665px) {
-    height: 90px;
-    width: 120px;
-  }
-`;
-export const BrandLogo = styled.img`
-  height: 130px;
-  width: 150px;
-  @media (max-width: 665px) {
-    height: 90px;
-    width: 120px;
-  }
 `;

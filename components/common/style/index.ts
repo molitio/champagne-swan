@@ -8,7 +8,6 @@ export * from "./StyledNavBar";
 export * from "./StyledAnchor";
 export * from "./StyledGradient";
 export * from "./StyledNextImage";
-export * from "./StyledSection";
 export * from "./StyledOurPartnersContent";
 export * from "./StyledCloseIcon";
 export * from "./StyledStarSvgIcon";

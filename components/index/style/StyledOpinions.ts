@@ -12,40 +12,6 @@ export const StyledOpinionsIconContainer = styled.div`
   position: relative;
 `;
 
-export const StyledLayer = styled.img`
-  position: absolute;
-  top: -400px;
-  height: 800px;
-  margin: 0;
-  padding: 0;
-  left: 0;
-  width: 100%;
-  align-items: center;
-`;
-
-export const StyledMiddleLayer = styled.div`
-  position: absolute;
-  height: 236px;
-  top: 400px;
-  width: 100%;
-  background: #c1dadf;
-
-  @media (max-width: 1440px) {
-    top: 400px;
-    height: 536px;
-  }
-`;
-export const AboutStyledMiddleLayer = styled.div`
-  position: absolute;
-  height: 236px;
-  width: 100%;
-  background: #c1dadf;
-
-  @media (max-width: 1440px) {
-    height: 834x;
-  }
-`;
-
 type RotateLayer = {
   top?: string;
   tabletTop?: string;

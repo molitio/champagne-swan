@@ -33,7 +33,6 @@ export const StyledNav = styled.nav<StyledNavProps>`
 export const StyledImageContainer = styled.div`
   flex: 40%;
   margin-left: 2em;
-  display: flex;
 `;
 
 type StyledNavLinksContainerProps = {

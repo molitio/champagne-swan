@@ -1,6 +1,6 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
-import { IconGroup, ImageBox, StyledSegmentSection } from "../common";
+import { IconGroup, ImageBox } from "../common";
 import {
   StyledBrandMessageContainer,
   AboutPremiumQualityContainer,
@@ -20,6 +20,7 @@ import {
   StyledOpinionTitle,
 } from "../index";
 import { ContactInfo } from "../contact";
+import { StyledAboutContent } from "./style";
 
 const About: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
@@ -31,7 +32,7 @@ const About: React.FC = () => {
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
-    <StyledSegmentSection>
+    <StyledAboutContent>
       <StyledBrandMessageContainer>
         <IconGroup
           fill={systemContext?.theme?.palette?.stars?.blue}
@@ -162,7 +163,7 @@ const About: React.FC = () => {
       </StyledOpinions>
 
       <ContactInfo />
-    </StyledSegmentSection>
+    </StyledAboutContent>
   );
 };
 

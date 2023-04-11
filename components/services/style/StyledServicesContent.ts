@@ -8,25 +8,6 @@ export const StyledServices = styled.section`
   align-items: center;
 `;
 
-type StyledIconContainerProps = {
-  paddingTop?: string;
-  tabletPaddingTop?: string;
-  mobilePaddingTop?: string;
-};
-
-export const StyledServicesIconContainer = styled.div<StyledIconContainerProps>`
-  position: relative;
-  padding-top: ${(props) => props.paddingTop || "10em"};
-  padding-bottom: 3em;
-
-  @media (max-width: 1440px) {
-    padding-top: ${(props) => props.tabletPaddingTop || "26em"};
-  }
-  @media (max-width: 975px) {
-    padding-top: ${(props) => props.mobilePaddingTop || "26em"};
-  }
-`;
-
 export const StyledMainTitle = styled.h1`
   text-align: center;
   color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
@@ -126,47 +107,11 @@ export const RightSideWaterSplash = styled.img<WaterSplashProp>`
   }
 `;
 
-export const BottomWaterSplash = styled.img<WaterSplashProp>`
-  -moz-transform: scaleX(-1) rotate(-15deg);
-  -webkit-transform: scaleX(-1) rotate(-15deg);
-  -o-transform: scaleX(-1) rotate(-15deg);
-  -ms-transform: scaleX(-1) rotate(-15deg);
-  -webkit-transform: scaleX(-1) rotate(-15deg);
-  transform: scaleX(-1) rotate(-15deg);
-  display: block;
-  margin: auto;
-  position: relative;
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  bottom: 220px;
-  right: 490px;
-
-  @media (max-width: 1440px) {
-    bottom: 160px;
-    right: 210px;
-  }
-
-  @media (max-width: 975px) {
-    width: 230px;
-    height: 230px;
-    bottom: ${(props) => props.bottomMobile || "130px"};
-    right: ${(props) => props.rightMobile || "165px"};
-  }
-  @media (max-width: 665px) {
-    width: 230px;
-    height: 230px;
-    bottom: ${(props) => props.bottomSmallMobile || "100px"};
-    right: ${(props) => props.rightSmallMobile || "0px"};
-    transform: scaleX(-1) rotate(-15deg);
-  }
-`;
-
-type InternalContainerProps = {
+type StyledServicesContentContainerProps = {
   reversed?: boolean;
 };
 
-export const StyledServicesContentContainer = styled.div<InternalContainerProps>`
+export const StyledServicesContentContainer = styled.div<StyledServicesContentContainerProps>`
   position: relative;
   display: flex;
   justify-content: center;
@@ -178,7 +123,7 @@ export const StyledServicesContentContainer = styled.div<InternalContainerProps>
   }
 `;
 
-export const InternalContentContainer = styled.div<InternalContainerProps>`
+export const InternalContentContainer = styled.div<StyledServicesContentContainerProps>`
   position: relative;
   display: flex;
   justify-content: center;

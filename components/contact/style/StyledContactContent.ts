@@ -8,38 +8,6 @@ export const StyledContactContent = styled.section`
   position: relative;
 `;
 
-type StyledContentContainerProps = {
-  height?: string;
-  heightTablet?: string;
-};
-
-export const StyledContactContentContainer = styled.div<StyledContentContainerProps>`
-  position: relative;
-  width: 100%;
-  height: ${(props) => props.height || "1600px"};
-  @media (max-width: 1440px) {
-    height: ${(props) => props.heightTablet || "2200px"};
-  }
-
-  @media (max-width: 665px) {
-    height: ${(props) => props.heightTablet || "2000px"};
-  }
-`;
-
-export const StyledContentBackgroundLayer = styled.div<StyledContentContainerProps>`
-  position: absolute;
-  background-color: #c1dadf;
-  height: ${(props) => props.height || "1600px"};
-  width: 100%;
-
-  @media (max-width: 1440px) {
-    height: ${(props) => props.heightTablet || "2200px"};
-  }
-  @media (max-width: 665px) {
-    height: ${(props) => props.heightTablet || "2000px"};
-  }
-`;
-
 export const StyledFormText = styled.p`
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   font-family: "Lato" sans-serif;
@@ -61,11 +29,6 @@ export const SyledFormBox = styled.div`
   @media (max-width: 1440px) {
     flex-direction: column-reverse;
   }
-`;
-
-export const StyledContentRelIcon = styled.div`
-  position: relative;
-  bottom: 130px;
 `;
 
 export const StyledTitle = styled.h1`

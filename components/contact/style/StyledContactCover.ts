@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledContact = styled.section`
-  outline: inset thick;
   position: relative;
 `;
 
@@ -32,22 +31,6 @@ export const StyledCoverText = styled.text`
   margin: 2em auto auto;
 `;
 
-/* 
-
-
-TODO: this layer will be replaced when next/image is implemented
-
-
-export const SimpledLayer = styled.img<React.CSSProperties>`
-  position: relative;
-  margin: 0;
-  margin-top: 0px;
-  top:${(props)  => props.top || "0"};
-  left: 0;
-  height: 200px;
-  width: 100%;
-`; */
-
 export const StyledFlexGroup = styled.div`
   display: flex;
   flex-direction: row;
@@ -56,11 +39,6 @@ export const StyledFlexGroup = styled.div`
   @media (max-width: 1440px) {
     flex-direction: column-reverse;
   }
-`;
-
-export const StyledRelIconContainer = styled.div`
-  position: relative;
-  bottom: 130px;
 `;
 
 export const FormContainer = styled.div`

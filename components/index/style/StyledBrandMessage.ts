@@ -180,13 +180,6 @@ export const AboutQuoteAuthor = styled.p`
     font-size: 17px;
   }
 `;
-export const AboutTextPQualityContent = styled.p`
-  color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
-  font-size: 24px;
-  text-align: end;
-  font-weight: 400;
-  padding: 0em 0 0em 0;
-`;
 
 export const StyledContentBoxTitle = styled.h1`
   text-align: initial;
@@ -245,33 +238,6 @@ export const AboutPremiumQualityContentText = styled.p`
   margin-bottom: 7em;
 `;
 
-export const PremiumQualityWaterSplash = styled.img`
-  display: block;
-  margin: auto;
-  position: relative;
-
-  object-fit: cover;
-  transform: rotate(-15deg);
-  bottom: -255px;
-  left: 490px;
-
-  @media (max-width: 1440px) {
-    bottom: -265px;
-    left: 230px;
-  }
-  @media (max-width: 975px) {
-    bottom: -190px;
-    left: 170px;
-    width: 250px;
-    height: 250px;
-  }
-  @media (max-width: 665px) {
-    bottom: -130px;
-    left: 0px;
-    width: 220px;
-    height: 220px;
-  }
-`;
 export const AboutPremiumQualityWaterSplash = styled.img`
   display: block;
   margin: auto;
