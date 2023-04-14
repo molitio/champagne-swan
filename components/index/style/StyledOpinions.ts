@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
-// TODO: need to ivestigate this with context font as direction
-import "typeface-lato";
-
-export const StyledOpinions = styled.section`
+export const StyledOpinions = styled.div`
   padding-top: 5em;
   position: relative;
 `;
@@ -12,32 +9,10 @@ export const StyledOpinionsIconContainer = styled.div`
   position: relative;
 `;
 
-type RotateLayer = {
-  top?: string;
-  tabletTop?: string;
-  position?: string;
-};
-
-export const RotateLayer = styled.img<RotateLayer>`
-  position: ${(props) => props.position || "absolute"};
-  height: 800px;
-  margin-top: 0px;
-  padding: 0;
-  top: ${(props) => props.top || "636px"};
-  left: 0;
-  width: 100%;
-  align-items: center;
-  transform: rotate(180deg);
-
-  @media (max-width: 1440px) {
-    top: ${(props) => props.tabletTop || "936px"};
-  }
-`;
-
 export const StyledOpinionsMainTitle = styled.h1`
   position: relative;
   text-align: center;
-  font-size: "6.5em";
+  font-size: 6.5em;
   padding: "0.3em 0 0.3em 0";
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-shadow: ${(props) =>
@@ -59,17 +34,7 @@ export const StyledOpinionsMainTitle = styled.h1`
   }
 `;
 
-export const InternalOpinionsContentContainer = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-
-  @media (max-width: 1440px) {
-    align-items: center;
-    flex-direction: column;
-  }
-`;
-export const StyledOpinionsContentContainer = styled.div`
+export const StyledOpinion = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -79,6 +44,17 @@ export const StyledOpinionsContentContainer = styled.div`
   @media (max-width: 665px) {
     margin-right: auto;
     margin-left: auto;
+  }
+`;
+
+export const StyledOpinionsContainer = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 1440px) {
+    align-items: center;
+    flex-direction: column;
   }
 `;
 
@@ -93,7 +69,7 @@ export const StyledOpinionText = styled.p`
   margin: 0.5em auto 0.5em auto;
 
   @media (max-width: 665px) {
-    font-size: 18px;
+    font-size: 1em;
   }
 `;
 

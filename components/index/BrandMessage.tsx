@@ -3,12 +3,12 @@ import { IconGroup, NextImage } from "../common";
 import { SyledImageAndEffect } from "../common";
 import {
   StyledBrandMessage,
-  StyledContentBoxTitle,
-  StyledContentBoxText,
+  StyledBrandMessageContentTitle,
+  StyledBrandMessageContentText,
   StyledContactLink,
   StyledContentTitle,
   StyledBrandMessageIconContainer,
-  StyledContentBox,
+  StyledBrandMessageContent,
   StyledBrandMessageContentContainer,
 } from "./style";
 import { SystemContext } from "@molitio/ui-core";
@@ -32,18 +32,16 @@ const BrandMessage: React.FC = () => {
           starCount={5}
         />
       </StyledBrandMessageIconContainer>
-
       <StyledContentTitle>{textContent?.title ?? ""}</StyledContentTitle>
-
       <StyledBrandMessageContentContainer>
-        <StyledContentBox>
-          <StyledContentBoxTitle>
+        <StyledBrandMessageContent>
+          <StyledBrandMessageContentTitle>
             {textContent?.contentTitle ?? ""}
-          </StyledContentBoxTitle>
+          </StyledBrandMessageContentTitle>
 
-          <StyledContentBoxText>
+          <StyledBrandMessageContentText>
             {textContent?.contentText ?? ""}
-          </StyledContentBoxText>
+          </StyledBrandMessageContentText>
 
           <StyledContactLink
             key={navTree?.about?.path ?? ""}
@@ -51,7 +49,7 @@ const BrandMessage: React.FC = () => {
           >
             {textContent?.moreInfoButton ?? ""}
           </StyledContactLink>
-        </StyledContentBox>
+        </StyledBrandMessageContent>
         <SyledImageAndEffect>
           <NextImage
             containerPositioning={{

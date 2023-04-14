@@ -6,7 +6,7 @@ import {
   StyledOpinions,
   StyledOpinionText,
   StyledOpinionTitle,
-  StyledOpinionsContentContainer,
+  StyledOpinion,
   StyledOpininsLogo,
   StyledOpinionsMainTitle,
   StyledOpinionsIconContainer,
@@ -43,7 +43,7 @@ const Opinions: React.FC = () => {
         {textContent?.title ?? ""}
       </StyledOpinionsMainTitle>
 
-      <StyledOpinionsContentContainer>
+      <StyledOpinion>
         <NextImage
           containerPositioning={{
             position: "relative",
@@ -64,9 +64,9 @@ const Opinions: React.FC = () => {
         <StyledOpinionTitle>
           {textContent?.defaultCustomerName ?? ""}
         </StyledOpinionTitle>
-      </StyledOpinionsContentContainer>
+      </StyledOpinion>
 
-      <StyledOpinionsContentContainer>
+      <StyledOpinion>
         <NextImage
           containerPositioning={{
             position: "relative",
@@ -87,7 +87,7 @@ const Opinions: React.FC = () => {
         <StyledOpinionTitle>
           {textContent?.defaultCustomerName ?? ""}
         </StyledOpinionTitle>
-      </StyledOpinionsContentContainer>
+      </StyledOpinion>
       <StyledOpininsLogo>
         <NextImage
           containerDimensions={{ width: "150px", height: "150px" }}

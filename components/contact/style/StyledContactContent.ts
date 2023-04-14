@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const StyledContactInfo = styled.section`
+export const StyledContactContent = styled.section`
   position: relative;
 `;
 
-export const StyledContactContent = styled.section`
+export const StyledContactInfo = styled.div`
   position: relative;
 `;
 

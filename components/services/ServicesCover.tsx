@@ -10,7 +10,7 @@ import {
   ServicesCoverContainer,
 } from "./style";
 import {
-  PremiumLayerContainer,
+  /*   PremiumLayerContainer, */
   StyledButtonContainer,
   StyledCoverContactLink,
   StyledMainTitle,
@@ -62,7 +62,7 @@ const ServicesCover: React.FC = () => {
           ) : null}
         </ServicesStyledLayerSegment>
       </ServicesStyledImg>
-      <PremiumLayerContainer src={commonAssetUrls?.gradientTop ?? ""} />
+      {/*  <PremiumLayerContainer src={commonAssetUrls?.gradientTop ?? ""} /> */}
     </>
   );
 };

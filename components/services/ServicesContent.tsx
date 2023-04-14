@@ -23,18 +23,15 @@ const ServicesContent: React.FC = () => {
 
   return (
     <StyledServices>
-      {/*       <StyledIconContainer mobilePaddingTop={"40em"}> */}
       <IconGroup
         fill={systemContext?.theme?.palette?.stars?.gold ?? ""}
         starCount={5}
       />
-      {/*      </StyledIconContainer> */}
       <StyledMainTitle id="main-content">
         {textContent?.title ?? ""}
       </StyledMainTitle>
 
       <div>
-        {/*  <StyledContentContainer> */}
         <ImageBox
           imageBoxParams={{
             imageUrl: assetUrls?.officeCleaners ?? "",

@@ -1,20 +1,41 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-export const StyledBrandMessage = styled.section`
+export const StyledBrandMessage = styled.div`
   position: relative;
   padding: 5em 0 5em 0;
   align-items: center;
   background: ${(props) => props?.theme?.palette?.background?.default ?? ""};
 `;
 
-export const PremiumLayerContainer = styled.img`
+export const StyledBrandMessageTitle = styled.h1`
+  text-align: center;
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual?.["aboutContentTitleShadow"]?.textShadow ??
+    ""};
+  font-weight: 400;
+  font-size: 5.6em;
+  white-space: pre;
+  line-height: 2em;
+
+  @media (max-width: 1440px) {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 665px) {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+`;
+
+/* export const PremiumLayerContainer = styled.img`
   position: absolute;
   width: 100%;
   height: 540px;
   z-index: -1;
   margin-top: -1px;
-`;
+`; */
 
 export const StyledBrandMessageContentContainer = styled.div`
   display: flex;
@@ -30,42 +51,10 @@ export const StyledBrandMessageContentContainer = styled.div`
   }
 `;
 
-export const StyledContentBox = styled.div`
+export const StyledBrandMessageContent = styled.div`
   padding: 1em;
   width: 35em;
   text-align: center;
-  @media (max-width: 1440px) {
-    padding-top: 6em;
-  }
-`;
-
-export const StyledBrandMessageContainer = styled.div`
-  position: relative;
-  padding: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  align-items: center;
-  background-size: cover;
-  background: ${(props) => props?.theme?.palette?.background?.default ?? ""};
-  height: 1905px;
-
-  @media (max-width: 1440px) {
-    height: 2356px;
-  }
-
-  @media (max-width: 975px) {
-    height: 2739px;
-  }
-  @media (max-width: 900px) {
-    height: 2900px;
-  }
-  @media (max-width: 665px) {
-    height: 2230px;
-  }
-  @media (max-width: 400px) {
-    height: 2235px;
-  }
 `;
 
 export const StyledBrandMessageIconContainer = styled.div`
@@ -84,7 +73,6 @@ export const StyledContentTitle = styled.h1`
   font-weight: 400;
   font-size: 6.5em;
   opacity: 0.8;
-  margin: 0;
   padding-top: 0.6em;
 
   @media (max-width: 1440px) {
@@ -100,41 +88,18 @@ export const StyledContentTitle = styled.h1`
   }
 `;
 
-export const AboutPremiumQualityContainer = styled.div`
-  @media (max-width: 1440px) {
-  }
-`;
-
-export const AboutPremiumQualityImageBox = styled.div`
-  width: 100%;
+export const StyledBrandMessageImageContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
 
   @media (max-width: 1440px) {
-    align-items: center;
     flex-direction: column;
   }
 `;
 
-export const StyledTitle = styled.h1`
-  text-align: center;
-  color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
-  font-weight: 400;
-  font-size: 90px;
-  opacity: 0.5;
-
-  @media (max-width: 1440px) {
-    font-size: 60px;
-    margin-bottom: 20px;
-  }
-  @media (max-width: 665px) {
-    font-size: 35px;
-    margin-bottom: 20px;
-  }
-`;
-
-export const AboutQuoteContainer = styled.div`
-  width: 54em;
+export const StyledBrandMessageQuoteContainer = styled.div`
+  width: 50em;
   display: block;
   margin: 0 auto 3em auto;
 
@@ -149,8 +114,8 @@ export const AboutQuoteContainer = styled.div`
     width: 18em;
   }
 `;
-export const AboutQuote = styled.p`
-  color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
+export const StyledAboutQuoteText = styled.p`
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   font-style: italic;
   font-size: 24px;
   text-align: center;
@@ -166,8 +131,8 @@ export const AboutQuote = styled.p`
     width: 17em;
   }
 `;
-export const AboutQuoteAuthor = styled.p`
-  color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
+export const StyledAboutQuoteAuthorText = styled.p`
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   font-size: 24px;
   text-align: end;
   font-weight: 300;
@@ -181,17 +146,15 @@ export const AboutQuoteAuthor = styled.p`
   }
 `;
 
-export const StyledContentBoxTitle = styled.h1`
-  text-align: initial;
+export const StyledBrandMessageContentTitle = styled.h1`
   font-family: "Lato", sans-serif;
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
-
   text-shadow: ${(props) =>
-    props?.theme?.palette?.visual["appCoverTextShadow"]?.textShadow ?? ""};
+    props?.theme?.palette?.visual["brandMessageContentTitleShadow"]
+      ?.textShadow ?? ""};
   font-weight: 400;
-  font-size: 35px;
-  margin-top: 0;
-  margin-bottom: 55px;
+  font-size: 2.4em;
+  padding-top: 2em;
 
   @media (max-width: 975px) {
     display: block;
@@ -200,18 +163,19 @@ export const StyledContentBoxTitle = styled.h1`
     width: 10em;
   }
   @media (max-width: 665px) {
-    font-size: 30px;
+    font-size: 2em;
   }
 `;
 
-export const StyledContentBoxText = styled.p`
+export const StyledBrandMessageContentText = styled.p`
   font-family: "Lato", sans-serif;
   position: relative;
-  text-align: start;
+  text-align: center;
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
 
   text-shadow: ${(props) =>
-    props?.theme?.palette?.visual["appCoverTextShadow"]?.textShadow ?? ""};
+    props?.theme?.palette?.visual["brandMessageContentTextShadow"]
+      ?.textShadow ?? ""};
   font-weight: 300;
   font-size: 1.4em;
   margin-bottom: 2em;
@@ -226,12 +190,12 @@ export const StyledContentBoxText = styled.p`
     width: 290px;
   }
 `;
-export const AboutPremiumQualityContentText = styled.p`
-  display: block;
+export const StyledBrandMessageText = styled.p`
+  width: 50em;
   margin: auto;
   position: relative;
   text-align: center;
-  color: ${(props) => props?.theme?.palette?.text?.inverse ?? ""};
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: "25px";

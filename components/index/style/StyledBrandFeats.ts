@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledBrandFeats = styled.section`
+export const StyledBrandFeats = styled.div`
   position: relative;
   display: flex;
   flex-direction: row;

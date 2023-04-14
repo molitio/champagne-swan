@@ -1,2 +1,2 @@
-export * from "./StyledAbout";
+export * from "./StyledAboutContent";
 export * from "./StyledAboutCover";

@@ -292,8 +292,7 @@ export const ApplicationContextRoot = {
         },
         brandMessage: {
           textContent: {
-            title: "ISMERJEN MEG",
-            subTitle: "BENNÜNKET",
+            title: "ISMERJEN MEG\nBENNÜNKET",
             aboutQuote: `"A minőség azt jelenti, hogy akkor is jól csinálsz valamit amikor nem látják. \n"`,
             aboutQuoteAuthor: "Henry Ford",
             premiumQualityContentText:
