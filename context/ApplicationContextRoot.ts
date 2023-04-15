@@ -230,6 +230,8 @@ export const ApplicationContextRoot = {
           },
           assetUrls: {
             cover: "#main-content",
+            window:
+              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/window.jpg",
           },
         },
         content: {

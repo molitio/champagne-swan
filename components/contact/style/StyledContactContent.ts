@@ -75,7 +75,7 @@ export const StyledContactInfoText = styled.p`
   font-size: 2.4rem;
   font-family: "Tenor Sans", sans-serif;
   font-weight: 200;
-  color: red;
+  color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: 0px 2px 4px #8c7b6c;
 
   @media (max-width: 665px) {

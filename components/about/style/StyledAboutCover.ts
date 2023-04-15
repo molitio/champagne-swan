@@ -5,21 +5,16 @@ export const StyledAboutCover = styled.section`
   position: relative;
 `;
 
-export const StyledMainTitle = styled.h1`
+export const StyledAboutMainTitle = styled.h1`
   position: relative;
-  width: 80vw;
   margin: auto;
+  text-align: center;
   font-size: 3.8em;
   font-weight: 300;
-  text-align: center;
-  line-height: 1.2em;
+  line-height: 2em;
   color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["aboutCoverTitleShadow"]?.textShadow ?? ""};
-
-  @media (max-width: 1400px) {
-    font-size: 3.2em;
-  }
 
   @media (max-width: 975px) {
     white-space: pre;
@@ -31,22 +26,17 @@ export const StyledMainTitle = styled.h1`
   }
 `;
 
-export const StyledSubTitle = styled.h2`
+export const StyledAboutSubTitle = styled.h2`
   position: relative;
-  width: 80vw;
   margin: auto;
+  text-align: center;
   font-size: 3.6rem;
   font-weight: 300;
-  text-align: center;
-  line-height: 1.2em;
+  line-height: 2em;
   color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["aboutCoverSubTitleShadow"]?.textShadow ??
     ""};
-
-  @media (max-width: 1400px) {
-    font-size: 3em;
-  }
 
   @media (max-width: 975px) {
     white-space: pre;
@@ -58,31 +48,27 @@ export const StyledSubTitle = styled.h2`
   }
 `;
 
-export const StyledDescription = styled.p`
-  font-family: "Lato", sans-serif;
+export const StyledAboutDescription = styled.p`
+  width: 36em;
+  margin: 0 auto;
+  padding: 0 2em;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.5em;
   text-align: center;
-  width: 36em;
-  margin-top: 1em;
-  margin-bottom: 0;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 2em 0 2em;
+  white-space: pre-wrap;
+  font-family: "Lato", sans-serif;
   color: ${(props) => props?.theme?.palette?.text?.secondary};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["aboutCoverTextShadow"]?.textShadow ?? ""};
 
-  white-space: pre-wrap;
-
   @media (max-width: 975px) {
-    font-size: 28px;
+    font-size: 1.8em;
     width: 16em;
   }
 
   @media (max-width: 660px) {
-    font-size: 21px;
+    font-size: 1.5em
     width: 13em;
     padding: 0;
   }

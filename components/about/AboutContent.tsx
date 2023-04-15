@@ -33,7 +33,7 @@ const AboutContent: React.FC = () => {
     <StyledAboutContent>
       <StyledBrandMessageContainer>
         <IconGroup
-          fill={systemContext?.theme?.palette?.stars?.blue}
+          fill={systemContext?.theme?.palette?.stars?.gold}
           starCount={5}
         />
         <StyledBrandMessageTitle>

@@ -46,6 +46,10 @@ const NavBar: React.FC = () => {
                 key={branch}
                 href={navTree[branch]?.path}
                 className="nav-text"
+                onClick={() => {
+                  if (champagneSwanContext?.interactive?.navBarExpanded)
+                    setNavBarExpanded?.(false);
+                }}
               >
                 {`${navTree[branch].label}`}
               </StyledNavLink>

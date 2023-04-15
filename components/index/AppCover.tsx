@@ -70,15 +70,10 @@ const AppCover: React.FC = () => {
         </StyledDescription>
 
         <StyledButtonContainer>
-          <StyledCoverContactLink
-            key={navTree?.contact?.path ?? ""}
-            href={navTree?.contact?.path ?? ""}
-          >
-            {textContent?.moreInfoButton ?? ""}
-          </StyledCoverContactLink>
           <NextImage
             containerPositioning={{
-              bottom: "-80px",
+              right: "-80px",
+              bottom: "-120px",
               position: "absolute",
             }}
             containerDimensions={{
@@ -90,6 +85,12 @@ const AppCover: React.FC = () => {
               alt: "water-splash",
             }}
           />
+          <StyledCoverContactLink
+            key={navTree?.contact?.path ?? ""}
+            href={navTree?.contact?.path ?? ""}
+          >
+            {textContent?.moreInfoButton ?? ""}
+          </StyledCoverContactLink>
         </StyledButtonContainer>
       </StyledCoverContent>
     </StyledAppCover>

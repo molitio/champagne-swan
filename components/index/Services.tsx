@@ -7,7 +7,7 @@ import {
   SyledImageAndEffect,
 } from "../common";
 import {
-  StyledServices,
+  StyledServicesContent,
   StyledMainTitle,
   StyledServicesContentContainer,
   StyledContentBox,
@@ -28,7 +28,7 @@ const Services: React.FC = () => {
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
-    <StyledServices>
+    <StyledServicesContent>
       <StyledLinearGradient
         direction="top"
         variation="partial"
@@ -197,7 +197,7 @@ const Services: React.FC = () => {
           />
         </SyledImageAndEffect>
       </StyledServicesContentContainer>
-    </StyledServices>
+    </StyledServicesContent>
   );
 };
 

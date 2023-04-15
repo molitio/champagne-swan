@@ -89,6 +89,7 @@ export const StyledContentTitle = styled.h1`
 `;
 
 export const StyledBrandMessageImageContainer = styled.div`
+  padding-top: 5em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,7 +134,7 @@ export const StyledAboutQuoteText = styled.p`
 `;
 export const StyledAboutQuoteAuthorText = styled.p`
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
-  font-size: 24px;
+  font-size: 1.5em;
   text-align: end;
   font-weight: 300;
   padding: 0em 2em 0em 0;
@@ -142,7 +143,7 @@ export const StyledAboutQuoteAuthorText = styled.p`
   }
   @media (max-width: 665px) {
     padding: 0em 3em 0em 0;
-    font-size: 17px;
+    font-size: 1em;
   }
 `;
 
@@ -168,17 +169,16 @@ export const StyledBrandMessageContentTitle = styled.h1`
 `;
 
 export const StyledBrandMessageContentText = styled.p`
-  font-family: "Lato", sans-serif;
   position: relative;
+  margin-bottom: 2em;
   text-align: center;
-  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
-
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.4em;
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["brandMessageContentTextShadow"]
       ?.textShadow ?? ""};
-  font-weight: 300;
-  font-size: 1.4em;
-  margin-bottom: 2em;
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
 
   @media (max-width: 975px) {
     display: block;
@@ -191,51 +191,35 @@ export const StyledBrandMessageContentText = styled.p`
   }
 `;
 export const StyledBrandMessageText = styled.p`
-  width: 50em;
-  margin: auto;
   position: relative;
-  text-align: center;
-  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
+  margin: 0 auto;
+  padding: 0 6em;
   font-family: "Lato", sans-serif;
+  text-align: center;
   font-weight: 300;
-  font-size: "25px";
-  margin-bottom: 7em;
-`;
-
-export const AboutPremiumQualityWaterSplash = styled.img`
-  display: block;
-  margin: auto;
-  position: relative;
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  transform: rotate(-15deg);
-  top: -140px;
-  @media (max-width: 1440px) {
-    top: 0px;
-  }
-  @media (max-width: 655px) {
-    height: 270px;
-    width: 270px;
-    transform: rotate(0deg);
-    top: 0px;
-  }
+  font-size: 1.2em;
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["brandMessageContentTextShadow"]
+      ?.textShadow ?? ""};
 `;
 
 export const StyledContactLink = styled(Link)`
-  color: white;
-  background-color: #c1a87d;
-  padding: 0.5em 0.93em 0.5em 0.93em;
-  font-size: 24px;
-  font-weight: 200;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
+  position: relative;
+  padding: 0.6em 1.2em;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: ${(props) => props?.theme?.palette?.text?.secondary};
+  background-color: ${(props) => props?.theme?.palette?.primary?.main};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["aboutCoverTextShadow"]?.textShadow ?? ""};
+  box-shadow: ${(props) =>
+    props?.theme?.palette?.visual["aboutCoverCtaShadow"]?.boxShadow ?? ""};
   text-decoration: none;
-  z-index: 100;
+  cursor: pointer;
 
   :hover {
-    color: #c1a87d;
-    background-color: white;
+    color: ${(props) => props?.theme?.palette?.primary?.main};
+    background-color: ${(props) => props?.theme?.palette?.text?.secondary};
   }
 `;

@@ -62,9 +62,9 @@ export const ApplicationTheme = {
     visual: {
       navBarMenuTextShadow: { textShadow: "2px 2px 4px #c6dde2ff" },
       appCoverTitleShadow: { textShadow: "2px 2px 4px #424E51ff" },
-      appCoverTextShadow: { textShadow: "2px 2px 4px #424E51ff" },
+      appCoverTextShadow: { textShadow: "1px 1px 2px #424E51ff" },
       brandMessageContentTitleShadow: { textShadow: "1px 1px 2px #C1DFE6ff" },
-      brandMessageContentTextShadow: { textShadow: "1px 1px 2px #C1DFE6ff" },
+      brandMessageContentTextShadow: { textShadow: "1px 1px 2px #424E51ff" },
       brandMessageImageShadow: { boxShadow: "0px 3px 3px 0px #424E51ff" },
       aboutContentTitleShadow: { textShadow: "2px 2px 4px #C1DFE6ff" },
       aboutCoverTitleShadow: { textShadow: "2px 2px 4px #424E51ff" },

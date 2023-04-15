@@ -6,7 +6,7 @@ const AboutPage: NextPage = () => {
   return (
     <main>
       <AboutCover />
-      <AboutContent />;
+      <AboutContent />
     </main>
   );
 };

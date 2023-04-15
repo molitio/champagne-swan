@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-export const StyledServices = styled.section`
+export const StyledServicesContent = styled.section`
   position: relative;
   padding: 5em 0 5em 0;
   width: 100%;

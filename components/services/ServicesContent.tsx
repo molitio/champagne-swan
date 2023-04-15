@@ -8,7 +8,7 @@ import {
   StyledContentBoxTitle,
   StyledContentBoxText,
   ExternalContentContainer,
-  StyledServices,
+  StyledServicesContent,
   WaterSplash,
   RightSideWaterSplash,
 } from "./style";
@@ -22,7 +22,7 @@ const ServicesContent: React.FC = () => {
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
-    <StyledServices>
+    <StyledServicesContent>
       <IconGroup
         fill={systemContext?.theme?.palette?.stars?.gold ?? ""}
         starCount={5}
@@ -249,7 +249,7 @@ const ServicesContent: React.FC = () => {
   
   
   <SimpledLayer top={"4px"} src={commonAssetUrls?.gradientBottom ?? ""} /> */}
-    </StyledServices>
+    </StyledServicesContent>
   );
 };
 

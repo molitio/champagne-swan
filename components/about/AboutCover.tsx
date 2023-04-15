@@ -2,10 +2,10 @@ import React from "react";
 import { SystemContext } from "@molitio/ui-core";
 import {
   StyledAboutCover,
-  StyledMainTitle,
-  StyledDescription,
+  StyledAboutMainTitle,
+  StyledAboutDescription,
   StyledButtonContainer,
-  StyledSubTitle,
+  StyledAboutSubTitle,
   StyledCoverContactLink,
 } from "./style";
 import { NextImage, StyledLinearGradient, StyledCoverContent } from "../common";
@@ -48,15 +48,15 @@ const AboutCover: React.FC = () => {
         visual={{ opacity: 1 }}
       />
       <StyledCoverContent>
-        <StyledMainTitle>
+        <StyledAboutMainTitle>
           {useLineBreakParser(aboutCoverTextContent?.title ?? "")}
-        </StyledMainTitle>
-        <StyledSubTitle>
+        </StyledAboutMainTitle>
+        <StyledAboutSubTitle>
           {useLineBreakParser(aboutCoverTextContent?.subTitle ?? "")}
-        </StyledSubTitle>
-        <StyledDescription>
+        </StyledAboutSubTitle>
+        <StyledAboutDescription>
           {useLineBreakParser(aboutCoverTextContent?.description ?? "")}
-        </StyledDescription>
+        </StyledAboutDescription>
 
         <StyledButtonContainer>
           <NextImage

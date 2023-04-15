@@ -43,7 +43,7 @@ export const StyledSkillScore = styled.h1`
 export const StyledSkillName = styled.h4`
   margin: 0;
   font-size: 1.5em;
-
+  font-weight: 400;
   @media (max-width: 975px) {
     font-size: 1em;
   }

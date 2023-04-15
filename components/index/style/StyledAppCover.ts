@@ -7,29 +7,32 @@ export const StyledAppCover = styled.section`
 `;
 
 export const StyledCoverContactLink = styled(Link)`
-  color: white;
-  background-color: ${(props) =>
-    props?.theme?.palette?.background?.interactive};
   margin-top: 2em;
-  padding: 0.5em 0.93em 0.5em 0.93em;
-  font-size: 24px;
-  font-weight: 200;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
+  position: relative;
+  padding: 0.6em 1.2em;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: ${(props) => props?.theme?.palette?.text?.secondary};
+  background-color: ${(props) => props?.theme?.palette?.primary?.main};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["aboutCoverTextShadow"]?.textShadow ?? ""};
+  box-shadow: ${(props) =>
+    props?.theme?.palette?.visual["aboutCoverCtaShadow"]?.boxShadow ?? ""};
   text-decoration: none;
-  z-index: 100;
+  cursor: pointer;
 
   :hover {
-    color: ${(props) => props?.theme?.palette?.background?.interactive};
-    background-color: white;
+    color: ${(props) => props?.theme?.palette?.primary?.main};
+    background-color: ${(props) => props?.theme?.palette?.text?.secondary};
   }
 `;
 
 export const StyledButtonContainer = styled.div`
-  margin-top: 2em;
+  padding-top: 2em;
   display: flex;
   justify-content: center;
+  position: relative;
+  margin: auto;
 `;
 
 export const StyledMainTitle = styled.h1`
@@ -104,7 +107,7 @@ export const StyledDescription = styled.pre`
   margin: auto;
   font-style: normal;
   font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.5em;
   text-align: center;
   line-height: 1.2em;
