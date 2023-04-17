@@ -14,10 +14,10 @@ import {
   StyledContactLink,
   StyledContentBoxTitle,
   StyledContentBoxText,
-} from "../services";
-import { StyledServicesIconContainer } from "./style";
+  StyledServicesIconContainer,
+} from "./style";
 
-const Services: React.FC = () => {
+const ServicesLanding: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
   const navTree = systemContext?.navRoot ?? {};
   const navLeafs = navTree?.services?.leafs;
@@ -201,4 +201,4 @@ const Services: React.FC = () => {
   );
 };
 
-export default Services;
+export default ServicesLanding;

@@ -8,6 +8,7 @@ export { default as ImageBox } from "./ImageBox";
 export { default as CloseIcon } from "./CloseIcon";
 export { default as MenuIcon } from "./MenuIcon";
 export { default as StarSvgIcon } from "./StarSvgIcon";
+export { default as AppCover } from "./AppCover";
 
 export * from "./types";
 export * from "./style";

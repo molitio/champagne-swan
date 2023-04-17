@@ -6,7 +6,7 @@ import {
   StyledCoverContactLink,
   StyledMainTitle,
   StyledDescription,
-} from "../index";
+} from "../common";
 
 import { NextImage, StyledCoverContent, StyledLinearGradient } from "../common";
 

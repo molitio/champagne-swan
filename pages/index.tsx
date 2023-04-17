@@ -1,13 +1,10 @@
 import React from "react";
 import type { NextPage } from "next";
-import {
-  AppCover,
-  BrandMessage,
-  BrandFeats,
-  Services,
-  Opinions,
-  Partners,
-} from "../components/index";
+import { AppCover } from "../components/common";
+import { Partners } from "../components/partners";
+import { Opinions } from "../components/opinions";
+import { ServicesLanding } from "../components/services";
+import { BrandMessage, BrandFeats } from "../components/brand";
 import { ContactInfo } from "../components/contact";
 
 const IndexPage: NextPage = () => {
@@ -16,7 +13,7 @@ const IndexPage: NextPage = () => {
       <AppCover />
       <BrandFeats />
       <BrandMessage />
-      <Services />
+      <ServicesLanding />
       <Opinions />
       <Partners />
       <ContactInfo />

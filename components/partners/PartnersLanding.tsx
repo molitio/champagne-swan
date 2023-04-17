@@ -1,12 +1,12 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
+import { NextImage } from "../common";
 import {
   StyledPartners,
   StyledPartnersTitle,
   StyledPartnersContentContainer,
   StyledPartnersImageContainer,
-  NextImage,
-} from "../common";
+} from "./style";
 
 const Partners: React.FC = () => {
   const systemContext = React.useContext(SystemContext);

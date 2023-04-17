@@ -18,13 +18,13 @@ export const ApplicationTheme = {
   },
   palette: {
     primary: {
-      main: "#c1a87dff",
+      main: "#0C7B93ff",
     },
     secondary: {
       main: "#c1dadf",
     },
     tertiary: {
-      main: "#6C5741ff",
+      main: "#c1a87dff",
     },
     background: {
       default: "#c6dde2ff",

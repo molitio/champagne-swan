@@ -2,19 +2,21 @@ import React from "react";
 import { SystemContext } from "@molitio/ui-core";
 import { IconGroup, NextImage, SyledImageAndEffect } from "../common";
 import {
-  StyledBrandMessageText,
-  StyledBrandMessageImageContainer,
-  StyledAboutQuoteText,
-  StyledAboutQuoteAuthorText,
-  StyledBrandMessageQuoteContainer,
   StyledOpinionsMainTitle,
   StyledOpinionsContainer,
   StyledOpinions,
   StyledOpinion,
   StyledOpinionText,
   StyledOpinionTitle,
+} from "../opinions";
+import {
+  StyledBrandMessageText,
+  StyledBrandMessageImageContainer,
+  StyledAboutQuoteText,
+  StyledAboutQuoteAuthorText,
+  StyledBrandMessageQuoteContainer,
   StyledBrandMessageTitle,
-} from "../index";
+} from "../brand";
 import { ContactInfo } from "../contact";
 import { StyledAboutContent, StyledBrandMessageContainer } from "./style";
 import { useLineBreakParser } from "../utils";

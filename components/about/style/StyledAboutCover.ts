@@ -88,7 +88,7 @@ export const StyledCoverContactLink = styled(Link)`
   font-size: 1.5em;
   font-weight: 300;
   color: ${(props) => props?.theme?.palette?.text?.secondary};
-  background-color: ${(props) => props?.theme?.palette?.primary?.main};
+  background-color: ${(props) => props?.theme?.palette?.tertiary?.main};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["aboutCoverTextShadow"]?.textShadow ?? ""};
   box-shadow: ${(props) =>
@@ -97,7 +97,7 @@ export const StyledCoverContactLink = styled(Link)`
   cursor: pointer;
 
   :hover {
-    color: ${(props) => props?.theme?.palette?.primary?.main};
+    color: ${(props) => props?.theme?.palette?.tertiary?.main};
     background-color: ${(props) => props?.theme?.palette?.text?.secondary};
   }
 `;

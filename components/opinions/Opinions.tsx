@@ -1,7 +1,6 @@
 import { SystemContext } from "@molitio/ui-core";
 import React from "react";
-import { NextImage, StyledLinearGradient } from "../common";
-import { IconGroup } from "../common/IconGroup";
+import { NextImage, StyledLinearGradient, IconGroup } from "../common";
 import {
   StyledOpinions,
   StyledOpinionText,
