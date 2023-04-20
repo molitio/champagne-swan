@@ -1,6 +1,6 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
-import { ImageBox, IconGroup } from "../common";
+import { ImageBox, IconGroup, NextImage, SyledImageAndEffect } from "../common";
 import {
   StyledMainTitle,
   StyledContentBox,
@@ -20,6 +20,7 @@ const ServicesContent: React.FC = () => {
   const textContent = servicesLeafs?.content?.textContent;
   const assetUrls = servicesLeafs?.content?.assetUrls;
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
+  const theme = systemContext?.theme;
 
   return (
     <StyledServicesContent>
@@ -30,9 +31,48 @@ const ServicesContent: React.FC = () => {
       <StyledMainTitle id="main-content">
         {textContent?.title ?? ""}
       </StyledMainTitle>
+      <SyledImageAndEffect
+        dimensions={{
+          height: "350px",
+          width: "490px",
+        }}
+        positioning={{ margin: "1em" }}
+      >
+        <NextImage
+          containerPositioning={{
+            position: "absolute",
+            left: "0px",
+            bottom: "0px",
+            transform: "rotate(-15deg)",
+          }}
+          containerDimensions={{ width: "250px", height: "250px" }}
+          imageProps={{
+            src: commonAssetUrls?.waterSplash ?? "",
+            alt: "water-splash",
+          }}
+        />
+        <NextImage
+          containerDimensions={{
+            height: "350px",
+            width: "490px",
+          }}
+          containerPositioning={{
+            position: "absolute",
+          }}
+          imageProps={{
+            src: assetUrls?.officeCleaners ?? "",
+            alt: "cleaning-machine",
+          }}
+          imageVisual={{
+            boxShadow:
+              theme?.palette?.visual["brandMessageImageShadow"]?.boxShadow ??
+              "",
+            borderRadius: "1em",
+          }}
+        />
+      </SyledImageAndEffect>
 
-      <div>
-        <ImageBox
+      {/*         <ImageBox
           imageBoxParams={{
             imageUrl: assetUrls?.officeCleaners ?? "",
             dimensions: {
@@ -57,53 +97,52 @@ const ServicesContent: React.FC = () => {
               breakpoint1: "1440px",
             },
           }}
-        />
+        /> */}
 
-        <StyledContentBox>
-          <StyledContentBoxTitle>
-            {textContent?.officeCleaningTitle ?? ""}
-          </StyledContentBoxTitle>
-          <StyledContentBoxText>
-            {textContent?.officeCleaningText ?? ""}
-          </StyledContentBoxText>
-          <StyledContentBoxText
-            width={"535px"}
-            margin={"0px auto 0px auto"}
-            top={"0px"}
-            padding={"0px"}
-            display={"none"}
-            displayTablet={"block"}
-            paddingTablet={"20px 0px 0px 0px"}
-          >
-            {textContent?.officeCleaningInfo ?? ""}
-          </StyledContentBoxText>
-        </StyledContentBox>
-
-        {/* TODO: fix layout to display text content on all devices */}
-        <StyledContentBoxText
-          width={"1050px"}
-          margin={"0px auto 0px auto"}
-          top={"-50px"}
-          display={"block"}
-          displayTablet={"none"}
-          displayMobile={"none"}
-        >
-          {textContent?.officeCleaningExtendedInfo ?? ""}
+      <StyledContentBox>
+        <StyledContentBoxTitle>
+          {textContent?.officeCleaningTitle ?? ""}
+        </StyledContentBoxTitle>
+        <StyledContentBoxText>
+          {textContent?.officeCleaningText ?? ""}
         </StyledContentBoxText>
+        <StyledContentBoxText
+          width={"535px"}
+          margin={"0px auto 0px auto"}
+          top={"0px"}
+          padding={"0px"}
+          display={"none"}
+          displayTablet={"block"}
+          paddingTablet={"20px 0px 0px 0px"}
+        >
+          {textContent?.officeCleaningInfo ?? ""}
+        </StyledContentBoxText>
+      </StyledContentBox>
 
-        <div id="private-services"></div>
+      {/* TODO: fix layout to display text content on all devices */}
+      <StyledContentBoxText
+        width={"1050px"}
+        margin={"0px auto 0px auto"}
+        top={"-50px"}
+        display={"block"}
+        displayTablet={"none"}
+        displayMobile={"none"}
+      >
+        {textContent?.officeCleaningExtendedInfo ?? ""}
+      </StyledContentBoxText>
 
-        <WaterSplash
-          bottom={"430px"}
-          bottomTablet={"-50px"}
-          right={"500px"}
-          rightTablet={"220px"}
-          rightMobile={"170px"}
-          bottomMobile={"-170px"}
-          bottomSmallMobile={"-470px"}
-          src={commonAssetUrls?.waterSplash ?? ""}
-        />
-      </div>
+      <div id="private-services"></div>
+
+      <WaterSplash
+        bottom={"430px"}
+        bottomTablet={"-50px"}
+        right={"500px"}
+        rightTablet={"220px"}
+        rightMobile={"170px"}
+        bottomMobile={"-170px"}
+        bottomSmallMobile={"-470px"}
+        src={commonAssetUrls?.waterSplash ?? ""}
+      />
 
       <ExternalContentContainer>
         <InternalContentContainer>
@@ -126,7 +165,7 @@ const ServicesContent: React.FC = () => {
               {textContent?.personalCleaningInfo ?? ""}
             </StyledContentBoxText>
           </StyledContentBox>
-          <ImageBox
+          {/*           <ImageBox
             imageBoxParams={{
               imageUrl: assetUrls?.flatRoom ?? "",
               dimensions: {
@@ -151,7 +190,47 @@ const ServicesContent: React.FC = () => {
                 breakpoint1: "1440px",
               },
             }}
-          />
+          /> */}
+          <SyledImageAndEffect
+            dimensions={{
+              height: "350px",
+              width: "490px",
+            }}
+            positioning={{ margin: "1em" }}
+          >
+            <NextImage
+              containerPositioning={{
+                position: "absolute",
+                left: "0px",
+                bottom: "0px",
+                transform: "rotate(-15deg)",
+              }}
+              containerDimensions={{ width: "250px", height: "250px" }}
+              imageProps={{
+                src: commonAssetUrls?.waterSplash ?? "",
+                alt: "water-splash",
+              }}
+            />
+            <NextImage
+              containerDimensions={{
+                height: "350px",
+                width: "490px",
+              }}
+              containerPositioning={{
+                position: "absolute",
+              }}
+              imageProps={{
+                src: assetUrls?.flatRoom ?? "",
+                alt: "cleaning-machine",
+              }}
+              imageVisual={{
+                boxShadow:
+                  theme?.palette?.visual["brandMessageImageShadow"]
+                    ?.boxShadow ?? "",
+                borderRadius: "1em",
+              }}
+            />
+          </SyledImageAndEffect>
         </InternalContentContainer>
         <StyledContentBoxText
           width={"1100px"}

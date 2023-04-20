@@ -65,7 +65,7 @@ const ServicesLanding: React.FC = () => {
             height: "353px",
             width: "529px",
           }}
-          margin="3em"
+          positioning={{ margin: "3em" }}
         >
           <NextImage
             containerPositioning={{
@@ -114,7 +114,7 @@ const ServicesLanding: React.FC = () => {
             height: "353px",
             width: "529px",
           }}
-          margin="3em"
+          positioning={{ margin: "3em" }}
         >
           <NextImage
             containerPositioning={{
@@ -164,7 +164,7 @@ const ServicesLanding: React.FC = () => {
             height: "353px",
             width: "529px",
           }}
-          margin="3em"
+          positioning={{ margin: "3em" }}
         >
           <NextImage
             containerPositioning={{

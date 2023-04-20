@@ -53,20 +53,22 @@ export const StyledNextImageContainer = styled.div<StyledNextImageContainerProps
           height: 100%;
           width: 100%;
         `}
+  outline: 3px dashed orange;
 `;
 
 type SyledImageAndEffectProps = {
   dimensions?: Dimensions;
-  margin?: string;
+  positioning?: Positioning;
 };
 
 export const SyledImageAndEffect = styled.div<SyledImageAndEffectProps>`
+  outline: 3px dashed purple;
+  position: ${(props) => props?.positioning?.position ?? "relative"};
   height: ${(props) => props?.dimensions?.height ?? ""};
   width: ${(props) => props?.dimensions?.width ?? ""};
   min-height: ${(props) => props?.dimensions?.minHeight ?? ""};
   min-height: ${(props) => props?.dimensions?.minHeight ?? ""};
   max-height: ${(props) => props?.dimensions?.maxHeight ?? ""};
   max-width: ${(props) => props?.dimensions?.maxWidth ?? ""};
-  position: relative;
-  margin: ${(props) => props?.margin ?? ""};
+  margin: ${(props) => props?.positioning?.margin ?? ""};
 `;

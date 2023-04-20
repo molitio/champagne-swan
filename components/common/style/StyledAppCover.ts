@@ -17,7 +17,7 @@ export const StyledCoverContactLink = styled(Link)`
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["aboutCoverTextShadow"]?.textShadow ?? ""};
   box-shadow: ${(props) =>
-    props?.theme?.palette?.visual["aboutCoverCtaShadow"]?.boxShadow ?? ""};
+    props?.theme?.palette?.visual["buttonDafaultShadow"]?.boxShadow ?? ""};
   text-decoration: none;
   cursor: pointer;
 
@@ -66,48 +66,12 @@ export const StyledMainTitle = styled.h1`
   }
 `;
 
-export const StyledSubTitle = styled.h2`
-  position: relative;
-  text-align: center;
-  font-size: 3.6em;
-  margin: 0px 2em 0 2em;
-  font-style: normal;
-  font-weight: 200;
-  font-size: 2.8em;
-  line-height: 4.8em;
-  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
-  text-shadow: ${(props) =>
-    props?.theme?.palette?.visual["appCoverTitleShadow"]?.textShadow ?? ""};
-
-  @media (max-width: 1400px) {
-    font-size: 3.2em;
-  }
-
-  @media (max-width: 975px) {
-    margin: auto;
-    width: 10em;
-  }
-
-  @media (max-width: 665px) {
-    display: block;
-    margin: 30px auto 30px auto;
-    font-size: 2.1rem;
-    width: 8em;
-    line-height: 50px;
-  }
-
-  @media (max-width: 280px) {
-    font-size: 1.6rem;
-    width: 8em;
-  }
-`;
-
 export const StyledDescription = styled.pre`
   width: 40em;
   margin: auto;
   font-style: normal;
   font-family: "Lato", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.5em;
   text-align: center;
   line-height: 1.2em;

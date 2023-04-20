@@ -1,4 +1,5 @@
 import React from "react";
+import { SystemContext } from "@molitio/ui-core";
 import {
   FormContainer,
   ContactInfoContainer,
@@ -8,7 +9,6 @@ import {
   StyledFlexGroup,
 } from "./style";
 import { ContactForm, StyledAnchor } from "../common";
-import { SystemContext } from "@molitio/ui-core";
 
 const ContactContent: React.FC = () => {
   const systemContext = React.useContext(SystemContext);

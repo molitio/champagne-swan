@@ -1,16 +1,14 @@
 import React from "react";
-import ChampagneSwanContext from "./ChampagneSwanContext";
+import AppContext from "./AppContext";
 import { signIn, signOut } from "../utils";
 
-const ChampagneSwanContextProvider: React.FC<React.PropsWithChildren> = (
-  props
-) => {
+const AppContextProvider: React.FC<React.PropsWithChildren> = (props) => {
   const { children } = props;
 
   const [extendNavBar, setExtendNavBar] = React.useState(false);
 
   return (
-    <ChampagneSwanContext.Provider
+    <AppContext.Provider
       value={{
         interactive: {
           navBarExpanded: extendNavBar,
@@ -24,8 +22,8 @@ const ChampagneSwanContextProvider: React.FC<React.PropsWithChildren> = (
       }}
     >
       {children}
-    </ChampagneSwanContext.Provider>
+    </AppContext.Provider>
   );
 };
 
-export default ChampagneSwanContextProvider;
+export default AppContextProvider;

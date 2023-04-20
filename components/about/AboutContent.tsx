@@ -53,7 +53,7 @@ const AboutContent: React.FC = () => {
           {brandMessageTextContent?.premiumQualityContentText ?? ""}
         </StyledBrandMessageText>
         <StyledBrandMessageImageContainer>
-          <SyledImageAndEffect margin="1em">
+          <SyledImageAndEffect positioning={{ margin: "1em" }}>
             <NextImage
               containerDimensions={{
                 height: "250px",
@@ -79,7 +79,7 @@ const AboutContent: React.FC = () => {
               height: "250px",
               width: "372px",
             }}
-            margin="1em"
+            positioning={{ margin: "1em" }}
           >
             <NextImage
               containerPositioning={{
@@ -102,7 +102,7 @@ const AboutContent: React.FC = () => {
               height: "250px",
               width: "372px",
             }}
-            margin="1em"
+            positioning={{ margin: "1em" }}
           >
             <NextImage
               containerPositioning={{

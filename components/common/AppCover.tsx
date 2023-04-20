@@ -12,7 +12,6 @@ import {
   StyledButtonContainer,
   StyledDescription,
   StyledMainTitle,
-  StyledSubTitle,
   StyledAppCover,
 } from "./style";
 
@@ -48,15 +47,15 @@ const AppCover: React.FC = () => {
       />
       <StyledLinearGradient
         direction="bottom"
-        variation="reversePartial"
+        variation="appCoverBottom"
         positioning={{ position: "absolute", top: "0px" }}
-        visual={{ opacity: 0.6 }}
+        visual={{ opacity: 1 }}
       />
       <StyledLinearGradient
-        direction="bottom"
-        variation="partial"
+        direction="top"
+        variation="appCoverTop"
         positioning={{ position: "absolute", top: "0px" }}
-        visual={{ opacity: 0.8 }}
+        visual={{ opacity: 1 }}
       />
       <StyledCoverContent>
         <IconGroup
@@ -64,7 +63,6 @@ const AppCover: React.FC = () => {
           starCount={5}
         />
         <StyledMainTitle>{textContent?.title ?? ""}</StyledMainTitle>
-        <StyledSubTitle>{textContent?.subTitle ?? ""}</StyledSubTitle>
         <StyledDescription>
           {useLineBreakParser(textContent?.description ?? "")}
         </StyledDescription>

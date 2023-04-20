@@ -69,7 +69,7 @@ export const StyledContentTitle = styled.h1`
   text-align: center;
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-shadow: ${(props) =>
-    props?.theme?.palette?.visual["appCoverTitleShadow"]?.textShadow ?? ""};
+    props?.theme?.palette?.visual["brandMessageTitleShadow"]?.textShadow ?? ""};
   font-weight: 400;
   font-size: 6.5em;
   opacity: 0.8;
@@ -196,7 +196,8 @@ export const StyledBrandMessageText = styled.p`
   padding: 0 6em;
   font-family: "Lato", sans-serif;
   text-align: center;
-  font-weight: 300;
+  font-weight: 400;
+  outline: 3px dashed purple;
   font-size: 1.2em;
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-shadow: ${(props) =>
@@ -214,7 +215,7 @@ export const StyledContactLink = styled(Link)`
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["aboutCoverTextShadow"]?.textShadow ?? ""};
   box-shadow: ${(props) =>
-    props?.theme?.palette?.visual["aboutCoverCtaShadow"]?.boxShadow ?? ""};
+    props?.theme?.palette?.visual["buttonDafaultShadow"]?.boxShadow ?? ""};
   text-decoration: none;
   cursor: pointer;
 

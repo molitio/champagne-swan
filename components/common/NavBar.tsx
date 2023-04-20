@@ -1,5 +1,5 @@
 import React from "react";
-import { ChampagneSwanContext } from "../context";
+import { AppContext } from "../context";
 import { CloseIcon, MenuIcon } from "../common";
 import {
   StyledImageContainer,
@@ -13,7 +13,7 @@ import { SystemContext } from "@molitio/ui-core";
 import NextImage from "./NextImage";
 
 const NavBar: React.FC = () => {
-  const champagneSwanContext = React.useContext(ChampagneSwanContext);
+  const champagneSwanContext = React.useContext(AppContext);
   const navBarExpanded = champagneSwanContext?.interactive?.navBarExpanded;
   const setNavBarExpanded = champagneSwanContext.interactive.setNavBarExpanded;
 

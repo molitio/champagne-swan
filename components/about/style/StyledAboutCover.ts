@@ -92,7 +92,7 @@ export const StyledCoverContactLink = styled(Link)`
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["aboutCoverTextShadow"]?.textShadow ?? ""};
   box-shadow: ${(props) =>
-    props?.theme?.palette?.visual["aboutCoverCtaShadow"]?.boxShadow ?? ""};
+    props?.theme?.palette?.visual["buttonDafaultShadow"]?.boxShadow ?? ""};
   text-decoration: none;
   cursor: pointer;
 
