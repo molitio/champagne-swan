@@ -53,7 +53,6 @@ export const StyledNextImageContainer = styled.div<StyledNextImageContainerProps
           height: 100%;
           width: 100%;
         `}
-  outline: 3px dashed orange;
 `;
 
 type SyledImageAndEffectProps = {
@@ -62,7 +61,6 @@ type SyledImageAndEffectProps = {
 };
 
 export const SyledImageAndEffect = styled.div<SyledImageAndEffectProps>`
-  outline: 3px dashed purple;
   position: ${(props) => props?.positioning?.position ?? "relative"};
   height: ${(props) => props?.dimensions?.height ?? ""};
   width: ${(props) => props?.dimensions?.width ?? ""};

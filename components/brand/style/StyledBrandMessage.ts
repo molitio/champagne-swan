@@ -197,7 +197,6 @@ export const StyledBrandMessageText = styled.p`
   font-family: "Lato", sans-serif;
   text-align: center;
   font-weight: 400;
-  outline: 3px dashed purple;
   font-size: 1.2em;
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-shadow: ${(props) =>

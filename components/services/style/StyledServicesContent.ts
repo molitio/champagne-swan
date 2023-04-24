@@ -33,77 +33,29 @@ export const StyledMainTitle = styled.h1`
   }
 `;
 
-type WaterSplashProp = {
-  bottom?: string;
-  right?: string;
-  left?: string;
-  leftTablet?: string;
-  leftMobile?: string;
-  leftSmallMobile?: string;
-  rightTablet?: string;
-  rightMobile?: string;
-  rightSmallMobile?: string;
-  bottomTablet?: string;
-  bottomMobile?: string;
-  bottomSmallMobile?: string;
-};
-
-export const WaterSplash = styled.img<WaterSplashProp>`
-  transform: scaleX(-1) rotate(-15deg);
-  display: block;
-  margin: auto;
-  position: relative;
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  bottom: ${(props) => props.bottom || "270px"};
-  right: ${(props) => props.right || "490px"};
-
-  @media (max-width: 1440px) {
-    bottom: ${(props) => props.bottomTablet || "150px"};
-    right: ${(props) => props.rightTablet || "200px"};
-  }
-  @media (max-width: 975px) {
-    width: 230px;
-    height: 230px;
-    bottom: ${(props) => props.bottomMobile || "130px"};
-    right: ${(props) => props.rightMobile || "160px"};
-  }
-  @media (max-width: 665px) {
-    width: 230px;
-    height: 230px;
-    bottom: ${(props) => props.bottomSmallMobile || "100px"};
-    right: ${(props) => props.rightSmallMobile || "0px"};
+export const StyledServicesContentBlock = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  @media (max-width: 1200px) {
+    /* @media (max-width: 1440px) { */
+    flex-direction: column;
   }
 `;
 
-export const RightSideWaterSplash = styled.img<WaterSplashProp>`
-  display: block;
-  margin: auto;
-  position: relative;
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  transform: rotate(-15deg);
-  bottom: ${(props) => props.bottom || "220px"};
-  left: ${(props) => props.left || "505px"};
+export const StyledServicesContentBlockItem = styled.div`
+  flex: 1 0 50%;
 
-  @media (max-width: 1440px) {
-    bottom: ${(props) => props.bottomTablet || "160px"};
-    left: ${(props) => props.leftTablet || "225px"};
+  /* @media (max-width: 1440px) { */
+  @media (max-width: 1200px) {
+    flex: 1 0 100%;
   }
+`;
 
-  @media (max-width: 975px) {
-    width: 230px;
-    height: 230px;
-    bottom: ${(props) => props.bottomMobile || "130px"};
-    left: ${(props) => props.leftMobile || "170px"};
-  }
-  @media (max-width: 665px) {
-    width: 230px;
-    height: 230px;
-    bottom: ${(props) => props.bottomSmallMobile || "100px"};
-    left: ${(props) => props.leftSmallMobile || "0px"};
+export const StyledServicesContentBlockImage = styled.div`
+  /* @media (max-width: 1440px) { */
+  @media (max-width: 1200px) {
+    order: 3;
+    flex: 1 0 100%;
   }
 `;
 
@@ -228,8 +180,4 @@ export const StyledContactLink = styled(Link)`
     top: 30px;
     left: 30px;
   }
-`;
-
-export const ExternalContentContainer = styled.div`
-  margin-top: -100px;
 `;
