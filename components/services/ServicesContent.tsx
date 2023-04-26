@@ -30,9 +30,6 @@ const ServicesContent: React.FC = () => {
         {textContent?.title ?? ""}
       </StyledMainTitle>
 
-      <StyledContentBoxTitle>
-        {textContent?.officeCleaningTitle ?? ""}
-      </StyledContentBoxTitle>
       <StyledServicesContentBlock>
         <StyledServicesContentBlockImage>
           <SyledImageAndEffect
@@ -40,7 +37,7 @@ const ServicesContent: React.FC = () => {
               height: "350px",
               width: "490px",
             }}
-            positioning={{ margin: "1em" }}
+            positioning={{ margin: "1em", position: "relative" }}
           >
             <NextImage
               containerPositioning={{
@@ -65,7 +62,7 @@ const ServicesContent: React.FC = () => {
               }}
               imageProps={{
                 src: assetUrls?.officeCleaners ?? "",
-                alt: "cleaning-machine",
+                alt: "office-cleaners",
               }}
               imageVisual={{
                 boxShadow:
@@ -77,6 +74,9 @@ const ServicesContent: React.FC = () => {
           </SyledImageAndEffect>
         </StyledServicesContentBlockImage>
         <StyledServicesContentBlockItem>
+          <StyledContentBoxTitle>
+            {textContent?.officeCleaningTitle ?? ""}
+          </StyledContentBoxTitle>
           <StyledContentBoxText>
             {textContent?.officeCleaningText ?? ""}
           </StyledContentBoxText>
