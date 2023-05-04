@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useThemeBreakPoint } from "../../common";
 
 export const StyledServicesContent = styled.section`
   position: relative;
@@ -17,18 +18,19 @@ export const StyledMainTitle = styled.h1`
   padding-top: 3em;
   position: relative;
 
-  @media (max-width: 1440px) {
+  @media (${useThemeBreakPoint()}) {
+    outline: 3px dashed purple;
     font-size: 4em;
     margin-bottom: 1em;
   }
 
-  @media (max-width: 975px) {
+  /*   @media (max-width: 975px) {
     font-size: 3.1em;
   }
 
   @media (max-width: 660px) {
     font-size: 1.7em;
-  }
+  } */
 `;
 
 export const StyledServicesContentBlock = styled.div`
@@ -49,7 +51,7 @@ export const StyledServicesContentBlock = styled.div`
 export const StyledServicesContentBlockItem = styled.div`
   outline: 1px solid red;
   align-self: center;
-  flex: 1 0 50%;
+  flex: 1 0 0;
 
   @media (max-width: 1440px) {
     outline: 1px solid violet;
@@ -60,7 +62,7 @@ export const StyledServicesContentBlockItem = styled.div`
 
 export const StyledServicesContentBlockImage = styled.div`
   outline: 1px solid red;
-  flex: 1 0 50%;
+  flex: 1 0 0;
   @media (max-width: 1440px) {
     outline: 1px solid violet;
     order: 2;
