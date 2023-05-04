@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
+import { resolveThemeBreakPointValues } from "../hooks";
 
 export const StyledAppCover = styled.section`
   position: relative;
@@ -47,17 +48,20 @@ export const StyledMainTitle = styled.h1`
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["appCoverTitleShadow"]?.textShadow ?? ""};
 
-  @media (max-width: 1400px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     font-size: 3.2rem;
   }
 
-  @media (max-width: 975px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     display: block;
     margin: 1.8em auto 1.8em auto;
     width: 12em;
   }
 
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     display: block;
     margin: 30px auto 30px auto;
     font-size: 2.25rem;
@@ -80,12 +84,14 @@ export const StyledDescription = styled.pre`
     props?.theme?.palette?.visual["appCoverTextShadow"]?.textShadow ?? ""};
   white-space: pre-wrap;
 
-  @media (max-width: 975px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     font-size: 28px;
     width: 16em;
   }
 
-  @media (max-width: 660px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     font-size: 21px;
     width: 13em;
     padding: 0;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { resolveThemeBreakPointValues } from "../hooks";
 
 export const StyledCoverContent = styled.div`
   display: flex;
@@ -6,10 +7,12 @@ export const StyledCoverContent = styled.div`
   width: 100%;
   top: 10em;
   position: absolute;
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     //top: 6em;
   }
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     top: 8em;
   }
 `;

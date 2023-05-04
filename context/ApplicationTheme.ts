@@ -3,7 +3,7 @@ export const ApplicationTheme = {
     keys: ["xs", "sm", "md", "lg", "xl"],
     values: {
       xs: 0,
-      sm: 600,
+      sm: 665,
       md: 960,
       lg: 880,
       /* lg: 1280, */
@@ -76,6 +76,7 @@ export const ApplicationTheme = {
       opinionsTextShadow: { textShadow: "2px 2px 4px #C1DFE6ff" },
       contactTitleShadow: { textShadow: "2px 2px 4px #424E51ff" },
       contactTextShadow: { textShadow: "1px 1px 2px #424E51ff" },
+      contactInfoTextShadow: { textShadow: "0px 2px 4px #8c7b6c" },
     },
   },
   dimensions: {

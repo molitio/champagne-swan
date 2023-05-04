@@ -1,5 +1,6 @@
 import { Dimensions } from "@molitio/ui-core";
 import styled, { css } from "styled-components";
+import { resolveThemeBreakPointValues } from "../hooks";
 import { Visual, Positioning } from "../types";
 
 type StyledLinearGradientProps = {
@@ -42,7 +43,8 @@ export const StyledLinearGradient = styled.div<StyledLinearGradientProps>`
   })
   `};
 
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     /*     min-height: 910px; */
   }
 `;

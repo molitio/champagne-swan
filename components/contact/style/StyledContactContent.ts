@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { resolveThemeBreakPointValues } from "../../common";
 
 export const StyledContactContent = styled.section`
   position: relative;
@@ -15,7 +16,8 @@ export const StyledFormText = styled.p`
   text-align: center;
   width: 30em;
   margin: 2em auto 0 auto;
-  @media (max-width: 660px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     width: 15em;
     font-size: 1em;
   }
@@ -26,7 +28,8 @@ export const SyledFormBox = styled.div`
   flex-direction: row;
   justify-content: center;
 
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     flex-direction: column-reverse;
   }
 `;
@@ -41,10 +44,12 @@ export const StyledTitle = styled.h1`
   font-size: 6.5em;
   margin-top: 1em;
 
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     font-size: 4em;
   }
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     font-size: 2.8em;
   }
 `;
@@ -54,7 +59,8 @@ export const StyledFormContainer = styled.div`
   display: flex;
   justify-content: center;
   padding: 5em 0 0 10em;
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     padding: 5em 0 0 0;
   }
 `;
@@ -66,7 +72,8 @@ export const StyledContactInfoContainer = styled.div`
   color: white;
   line-height: 1.6;
 
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     padding: 5em 0 0 0;
   }
 `;
@@ -76,9 +83,11 @@ export const StyledContactInfoText = styled.p`
   font-family: "Tenor Sans", sans-serif;
   font-weight: 200;
   color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
-  text-shadow: 0px 2px 4px #8c7b6c;
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual?.["contactInfoTextShadow"]?.textShadow ?? ""};
 
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     font-size: 2em;
   }
 `;

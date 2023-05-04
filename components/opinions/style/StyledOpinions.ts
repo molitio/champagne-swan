@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { resolveThemeBreakPointValues } from "../../common";
 
 export const StyledOpinions = styled.div`
   padding-top: 5em;
@@ -20,14 +21,17 @@ export const StyledOpinionsMainTitle = styled.h1`
   font-weight: 400;
   margin-bottom: 0em;
 
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     font-size: 65px;
   }
-  @media (max-width: 975px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     margin: auto;
     width: 10em;
   }
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     padding-top: 150px;
     font-size: 36px;
     width: 8em;
@@ -41,7 +45,8 @@ export const StyledOpinion = styled.div`
   justify-content: center;
   margin: 3em;
 
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     margin-right: auto;
     margin-left: auto;
   }
@@ -52,7 +57,8 @@ export const StyledOpinionsContainer = styled.div`
   display: flex;
   justify-content: center;
 
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     align-items: center;
     flex-direction: column;
   }
@@ -68,7 +74,8 @@ export const StyledOpinionText = styled.p`
   width: 300px;
   margin: 0.5em auto 0.5em auto;
 
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     font-size: 1em;
   }
 `;

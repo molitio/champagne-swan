@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styled, { css } from "styled-components";
+import { resolveThemeBreakPointValues } from "../hooks";
 
 type StyledNavProps = {
   navBarExpanded?: boolean;
@@ -53,7 +54,8 @@ export const StyledNavLinksContainer = styled.div<StyledNavLinksContainerProps>`
       : css`
           flex-direction: row;
           flex: 60%;
-          @media (max-width: 1000px) {
+          @media (max-width: ${(props) =>
+              resolveThemeBreakPointValues(props?.theme, "md")}) {
             display: none;
           }
         `}

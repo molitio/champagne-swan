@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import Link from "next/link";
+import { resolveThemeBreakPointValues } from "../../common";
 
 export const StyledServicesIconContainer = styled.div`
   position: relative;
   padding-top: 12em;
-  @media (max-width: 975px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     padding-top: 8em;
   }
 `;
@@ -20,7 +22,8 @@ export const StyledServicesContentContainer = styled.div<StyledServicesContentCo
   align-items: center;
   flex-direction: ${(props) => (props?.reversed ? "row-reverse" : "row")};
 
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     flex-direction: column;
   }
 `;
@@ -32,7 +35,8 @@ export const StyledContentBox = styled.div`
   flex-direction: column;
   justify-items: center;
   text-align: center;
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     padding-top: 6em;
   }
 `;
@@ -41,7 +45,8 @@ export const StyledContactLink = styled(Link)`
   font-size: 20px;
   color: ${(props) => props?.theme?.palette?.text?.interactive ?? ""};
   text-decoration: underline;
-  @media (max-width: 975px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     position: relative;
     top: 30px;
     left: 30px;

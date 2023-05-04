@@ -14,7 +14,8 @@ export const StyledContactCoverTitle = styled.h1`
   font-size: 6.5em;
   margin-top: 0.4em;
 
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     font-size: 65px;
   }
 `;
@@ -36,7 +37,8 @@ export const StyledFlexGroup = styled.div`
   flex-direction: row;
   justify-content: center;
 
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     flex-direction: column-reverse;
   }
 `;
@@ -46,7 +48,8 @@ export const FormContainer = styled.div`
   display: flex;
   justify-content: center;
   padding: 5em 0 0 10em;
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     padding: 5em 0 0 0;
   }
 `;

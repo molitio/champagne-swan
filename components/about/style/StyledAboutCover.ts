@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
+import { resolveThemeBreakPointValues } from "../../common";
 
 export const StyledAboutCover = styled.section`
   position: relative;
@@ -16,12 +17,14 @@ export const StyledAboutMainTitle = styled.h1`
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["aboutCoverTitleShadow"]?.textShadow ?? ""};
 
-  @media (max-width: 975px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     white-space: pre;
     font-size: 2.8em;
   }
 
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     font-size: 2.2em;
   }
 `;
@@ -38,12 +41,14 @@ export const StyledAboutSubTitle = styled.h2`
     props?.theme?.palette?.visual["aboutCoverSubTitleShadow"]?.textShadow ??
     ""};
 
-  @media (max-width: 975px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     white-space: pre;
     font-size: 2.6em;
   }
 
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     font-size: 2rem;
   }
 `;
@@ -62,12 +67,14 @@ export const StyledAboutDescription = styled.p`
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["aboutCoverTextShadow"]?.textShadow ?? ""};
 
-  @media (max-width: 975px) {
+  @media (max-width: ${(props) =>
+    resolveThemeBreakPointValues(props?.theme, "md")}) {
     font-size: 1.8em;
     width: 16em;
   }
 
-  @media (max-width: 660px) {
+  @media (max-width: ${(props) =>
+    resolveThemeBreakPointValues(props?.theme, "sm")}) {
     font-size: 1.5em
     width: 13em;
     padding: 0;

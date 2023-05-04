@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
+import { resolveThemeBreakPointValues } from "../../common";
 
 export const StyledBrandMessage = styled.div`
   position: relative;
@@ -19,11 +20,13 @@ export const StyledBrandMessageTitle = styled.h1`
   white-space: pre;
   line-height: 2em;
 
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     font-size: 60px;
     margin-bottom: 20px;
   }
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     font-size: 35px;
     margin-bottom: 20px;
   }
@@ -45,7 +48,8 @@ export const StyledBrandMessageContentContainer = styled.div`
   align-items: center;
   text-align: center;
 
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     align-items: center;
     flex-direction: column-reverse;
   }
@@ -59,7 +63,8 @@ export const StyledBrandMessageContent = styled.div`
 
 export const StyledBrandMessageIconContainer = styled.div`
   padding-top: 12em;
-  @media (max-width: 975px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     padding-top: 8em;
   }
 `;
@@ -75,15 +80,18 @@ export const StyledContentTitle = styled.h1`
   opacity: 0.8;
   padding-top: 0.6em;
 
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     font-size: 4.2em;
   }
 
-  @media (max-width: 975px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     font-size: 3.1em;
   }
 
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     font-size: 2em;
   }
 `;
@@ -94,7 +102,8 @@ export const StyledBrandMessageImageContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     flex-direction: column;
   }
 `;
@@ -104,14 +113,16 @@ export const StyledBrandMessageQuoteContainer = styled.div`
   display: block;
   margin: 0 auto 3em auto;
 
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+    resolveThemeBreakPointValues(props?.theme, "lg")}) {
     width: 30em;
   }
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+    resolveThemeBreakPointValues(props?.theme, "sm")}) {
     width: 25em;
   }
-
-  @media (max-width: 436px) {
+  @media (max-width: ${(props) =>
+    resolveThemeBreakPointValues(props?.theme, "sm")}) 
     width: 18em;
   }
 `;
@@ -122,12 +133,14 @@ export const StyledAboutQuoteText = styled.p`
   text-align: center;
   font-weight: 300;
   padding: 3em 0 1em 0;
-  @media (max-width: 975px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     display: block;
     margin: auto;
     width: 20em;
   }
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     font-size: 17px;
     width: 17em;
   }
@@ -138,10 +151,12 @@ export const StyledAboutQuoteAuthorText = styled.p`
   text-align: end;
   font-weight: 300;
   padding: 0em 2em 0em 0;
-  @media (max-width: 975px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     padding: 0em 2em 0em 0;
   }
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     padding: 0em 3em 0em 0;
     font-size: 1em;
   }
@@ -157,13 +172,15 @@ export const StyledBrandMessageContentTitle = styled.h1`
   font-size: 2.4em;
   padding-top: 2em;
 
-  @media (max-width: 975px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     display: block;
     margin: auto;
     text-align: center;
     width: 10em;
   }
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     font-size: 2em;
   }
 `;
@@ -180,13 +197,15 @@ export const StyledBrandMessageContentText = styled.p`
       ?.textShadow ?? ""};
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
 
-  @media (max-width: 975px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     display: block;
     margin: 2em auto 2em auto;
     text-align: center;
   }
 
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     width: 290px;
   }
 `;

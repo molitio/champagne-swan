@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const StyledFormContainer = styled.div`
-display: flex;
-justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 
-@media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     flex-direction: column;
     text-align: center;
-}
+  }
 `;

@@ -1,5 +1,6 @@
 import { Field } from "formik";
 import styled from "styled-components";
+import { resolveThemeBreakPointValues } from "../hooks";
 
 type StyledInputProps = {
   position?: string;
@@ -34,7 +35,8 @@ export const StyledField = styled(Field)<StyledInputProps>`
     outline: none !important;
   }
 
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     width: 280px;
   }
 `;
@@ -56,7 +58,8 @@ export const SyledInput = styled.input<StyledInputProps>`
     outline: none !important;
   }
 
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     width: 280px;
   }
 `;
@@ -78,7 +81,8 @@ export const SyledTextArea = styled.textarea<StyledInputProps>`
   :focus {
     outline: none !important;
   }
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     width: 320px;
   }
 `;
@@ -98,7 +102,8 @@ export const SyledSelectInput = styled.select<StyledInputProps>`
   :focus {
     outline: none !important;
   }
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     width: 280px;
   }
 `;

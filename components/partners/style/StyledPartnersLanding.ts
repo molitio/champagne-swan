@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { resolveThemeBreakPointValues } from "../../common";
 
 export const StyledPartners = styled.section`
   padding-top: 5em;
@@ -14,10 +15,12 @@ export const StyledPartnersTitle = styled.h1`
   margin-top: 0em;
   margin-bottom: 1em;
 
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     font-size: 65px;
   }
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     font-size: 40px;
   }
 `;
@@ -29,9 +32,10 @@ export const StyledPartnersContentContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  flex-wrap: wrap;
 
-  @media (max-width: 395px) {
+  flex-wrap: wrap;
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
   }
 `;
 
@@ -43,7 +47,8 @@ export const StyledPartnersImageContainer = styled.div`
 
   flex: 25%;
 
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     flex: 50%;
   }
 `;

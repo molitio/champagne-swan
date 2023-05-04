@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useThemeBreakPoint } from "../../common";
+import { resolveThemeBreakPointValues } from "../../common";
 
 export const StyledServicesContent = styled.section`
   position: relative;
@@ -18,17 +18,20 @@ export const StyledMainTitle = styled.h1`
   padding-top: 3em;
   position: relative;
 
-  @media (${useThemeBreakPoint()}) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     outline: 3px dashed purple;
     font-size: 4em;
     margin-bottom: 1em;
   }
 
-  /*   @media (max-width: 975px) {
+  /*   @media (max-width: ${(props) =>
+    resolveThemeBreakPointValues(props?.theme, "md")}) {
     font-size: 3.1em;
   }
 
-  @media (max-width: 660px) {
+  @media (max-width: ${(props) =>
+    resolveThemeBreakPointValues(props?.theme, "sm")}) {
     font-size: 1.7em;
   } */
 `;
@@ -42,7 +45,8 @@ export const StyledServicesContentBlock = styled.div`
   padding-top: 2em;
   gap: 1em;
   width: 40%;
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     width: 60%;
     flex-direction: column;
   }
@@ -53,7 +57,8 @@ export const StyledServicesContentBlockItem = styled.div`
   align-self: center;
   flex: 1 0 0;
 
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     outline: 1px solid violet;
     order: 1;
     flex: 1 0 100%;
@@ -63,7 +68,8 @@ export const StyledServicesContentBlockItem = styled.div`
 export const StyledServicesContentBlockImage = styled.div`
   outline: 1px solid red;
   flex: 1 0 0;
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     outline: 1px solid violet;
     order: 2;
     flex: 1 0 100%;
@@ -81,8 +87,8 @@ export const StyledContentBoxTitle = styled.h1`
   margin-top: 0;
   margin-bottom: 3.4em;
 
-  /* @media (max-width: 1440px) { */
-  @media (max-width: 800px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     outline: 3px dashed purple;
     display: block;
     margin: 0 auto 55px auto;
@@ -90,7 +96,8 @@ export const StyledContentBoxTitle = styled.h1`
     /* width: 28em; */
   }
 
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     /* width: 20em; */
     font-size: 25px;
   }
@@ -106,12 +113,15 @@ export const StyledContentBoxText = styled.p`
   font-weight: 400;
   outline: 1px solid red;
 
-  @media (max-width: 1440px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     outline: 1px solid violet;
   }
-  @media (max-width: 975px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
   }
 
-  @media (max-width: 665px) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
   }
 `;
