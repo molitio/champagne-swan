@@ -32,7 +32,9 @@ export const resolveThemeBreakPointValues = <
 
   // Look for the key in the breakpoints object and return its corresponding value
   if (key in values) {
-    return `${values[key]}${unit}`;
+    const value = `${values[key]}${unit}`;
+    return value;
+    /* return `${values[key]}${unit}`; */
   } else {
     throw new Error(
       `Could not find a matching breakpoint value for key: ${key}`

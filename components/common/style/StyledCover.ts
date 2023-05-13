@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { resolveThemeBreakPointValues } from "../hooks";
+import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledCoverContent = styled.div`
   display: flex;

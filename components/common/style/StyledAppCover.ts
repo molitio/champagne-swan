@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
-import { resolveThemeBreakPointValues } from "../hooks";
+import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledAppCover = styled.section`
   position: relative;

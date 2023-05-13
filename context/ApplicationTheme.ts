@@ -4,9 +4,9 @@ export const ApplicationTheme = {
     values: {
       xs: 0,
       sm: 665,
-      md: 960,
-      lg: 880,
-      /* lg: 1280, */
+      /*    md: 960, */
+      /*       lg: 880, */
+      lg: 800,
       xl: 1920,
     },
     unit: "px",

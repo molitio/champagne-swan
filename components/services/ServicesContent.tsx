@@ -9,6 +9,7 @@ import {
   StyledServicesContentBlock,
   StyledServicesContentBlockItem,
   StyledServicesContentBlockImage,
+  StyledServicesContentBlockItemInfo,
 } from "./style";
 
 const ServicesContent: React.FC = () => {
@@ -81,11 +82,11 @@ const ServicesContent: React.FC = () => {
             {textContent?.officeCleaningText ?? ""}
           </StyledContentBoxText>
         </StyledServicesContentBlockItem>
-        <StyledServicesContentBlockItem>
+        <StyledServicesContentBlockItemInfo>
           <StyledContentBoxText>
             {textContent?.officeCleaningInfo ?? ""}
           </StyledContentBoxText>
-        </StyledServicesContentBlockItem>
+        </StyledServicesContentBlockItemInfo>
       </StyledServicesContentBlock>
 
       <StyledContentBoxTitle>
@@ -139,11 +140,11 @@ const ServicesContent: React.FC = () => {
             {textContent?.personalCleaningInfo ?? ""}
           </StyledContentBoxText>
         </StyledServicesContentBlockItem>
-        <StyledServicesContentBlockItem>
+        <StyledServicesContentBlockItemInfo>
           <StyledContentBoxText>
             {textContent?.personalCleaningExtendedInfo ?? ""}
           </StyledContentBoxText>
-        </StyledServicesContentBlockItem>
+        </StyledServicesContentBlockItemInfo>
       </StyledServicesContentBlock>
 
       <StyledContentBoxTitle>
@@ -197,14 +198,14 @@ const ServicesContent: React.FC = () => {
             {textContent?.highCeilingText ?? ""}
           </StyledContentBoxText>
         </StyledServicesContentBlockItem>
-        <StyledServicesContentBlockItem>
+        <StyledServicesContentBlockItemInfo>
           <StyledContentBoxText>
             {textContent?.highCeilingInfo ?? ""}
           </StyledContentBoxText>
           <StyledContentBoxText>
             {textContent?.highCeilingExtendedInfo ?? ""}
           </StyledContentBoxText>
-        </StyledServicesContentBlockItem>
+        </StyledServicesContentBlockItemInfo>
       </StyledServicesContentBlock>
     </StyledServicesContent>
   );

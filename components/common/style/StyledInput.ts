@@ -1,6 +1,6 @@
 import { Field } from "formik";
 import styled from "styled-components";
-import { resolveThemeBreakPointValues } from "../hooks";
+import { resolveThemeBreakPointValues } from "../../utils";
 
 type StyledInputProps = {
   position?: string;

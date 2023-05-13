@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { resolveThemeBreakPointValues } from "../../common";
+import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledServicesIconContainer = styled.div`
   position: relative;

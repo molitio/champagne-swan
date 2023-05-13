@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled, { css } from "styled-components";
-import { resolveThemeBreakPointValues } from "../hooks";
+import { resolveThemeBreakPointValues } from "../../utils";
 
 type StyledNavProps = {
   navBarExpanded?: boolean;
@@ -88,7 +88,8 @@ export const StyledNavButton = styled.div<StyledNavButtonProps>`
   top: 2em;
   right: 2em;
   margin-right: 1em;
-  @media (min-width: 1000px) {
+  @media (min-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     display: none;
   }
   ${(props) => (props?.navBarExpanded ? css`` : css``)}

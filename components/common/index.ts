@@ -11,4 +11,3 @@ export { default as AppCover } from "./AppCover";
 
 export * from "./types";
 export * from "./style";
-export * from "./hooks";

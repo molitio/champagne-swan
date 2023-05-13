@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
-import { resolveThemeBreakPointValues } from "../../common";
+import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledBrandMessage = styled.div`
   position: relative;

@@ -1,6 +1,6 @@
 import { Dimensions } from "@molitio/ui-core";
 import styled, { css } from "styled-components";
-import { resolveThemeBreakPointValues } from "../hooks";
+import { resolveThemeBreakPointValues } from "../../utils";
 import { Visual, Positioning } from "../types";
 
 type StyledLinearGradientProps = {

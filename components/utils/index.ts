@@ -4,4 +4,5 @@ export * from "./nonce";
 export * from "./firebase";
 export * from "./userStateManager";
 export * from "./textHelpers";
+export * from "./resolveThemeBreakPointValues";
 export { default as startServerWithHandler } from "./graphqlHandler";

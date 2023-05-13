@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { resolveThemeBreakPointValues } from "../../common";
+import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledOpinions = styled.div`
   padding-top: 5em;

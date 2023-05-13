@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { resolveThemeBreakPointValues } from "../../common";
+import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledServicesContent = styled.section`
   position: relative;
@@ -25,15 +25,15 @@ export const StyledMainTitle = styled.h1`
     margin-bottom: 1em;
   }
 
-  /*   @media (max-width: ${(props) =>
-    resolveThemeBreakPointValues(props?.theme, "md")}) {
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     font-size: 3.1em;
   }
 
   @media (max-width: ${(props) =>
-    resolveThemeBreakPointValues(props?.theme, "sm")}) {
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     font-size: 1.7em;
-  } */
+  }
 `;
 
 export const StyledServicesContentBlock = styled.div`
@@ -44,7 +44,7 @@ export const StyledServicesContentBlock = styled.div`
   margin: auto;
   padding-top: 2em;
   gap: 1em;
-  width: 40%;
+  width: 80%;
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "lg")}) {
     width: 60%;
@@ -52,10 +52,21 @@ export const StyledServicesContentBlock = styled.div`
   }
 `;
 
+export const StyledServicesContentBlockImage = styled.div`
+  outline: 1px solid red;
+  flex: 1 0 40vw;
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+    outline: 1px solid violet;
+    order: 2;
+    flex: 1 1 100%;
+  }
+`;
+
 export const StyledServicesContentBlockItem = styled.div`
   outline: 1px solid red;
   align-self: center;
-  flex: 1 0 0;
+  flex: 1 0 40vw;
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "lg")}) {
@@ -65,14 +76,14 @@ export const StyledServicesContentBlockItem = styled.div`
   }
 `;
 
-export const StyledServicesContentBlockImage = styled.div`
-  outline: 1px solid red;
-  flex: 1 0 0;
+export const StyledServicesContentBlockItemInfo = styled(
+  StyledServicesContentBlockItem
+)`
+  flex: 1 1 100%;
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    outline: 1px solid violet;
-    order: 2;
-    flex: 1 0 100%;
+    outline: 3px dashed pink;
+    flex: 1 1 100%;
   }
 `;
 
