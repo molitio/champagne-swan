@@ -4,11 +4,11 @@ import {
   IconGroup,
   NextImage,
   StyledLinearGradient,
-  SyledImageAndEffect,
+  StyledImageAndEffect,
 } from "../common";
 import {
   StyledServicesContent,
-  StyledMainTitle,
+  StyledServicesLandingMainTitle,
   StyledServicesContentContainer,
   StyledContentBox,
   StyledContactLink,
@@ -31,14 +31,16 @@ const ServicesLanding: React.FC = () => {
     <StyledServicesContent>
       <StyledLinearGradient
         direction="top"
-        variation="partial"
+        variation="landingServicesContent"
         visual={{ opacity: 1 }}
+        positioning={{ position: "absolute", top: "0px" }}
       />
 
       <StyledLinearGradient
         direction="bottom"
-        variation="partial"
+        variation="landingServicesContent"
         visual={{ opacity: 1 }}
+        positioning={{ position: "absolute", bottom: "0px" }}
       />
       <StyledServicesIconContainer>
         <IconGroup
@@ -46,7 +48,9 @@ const ServicesLanding: React.FC = () => {
           starCount={5}
         />
       </StyledServicesIconContainer>
-      <StyledMainTitle>{textContent?.title ?? ""}</StyledMainTitle>
+      <StyledServicesLandingMainTitle>
+        {textContent?.title ?? ""}
+      </StyledServicesLandingMainTitle>
 
       <StyledServicesContentContainer>
         <StyledContentBox>
@@ -60,7 +64,7 @@ const ServicesLanding: React.FC = () => {
             {navLeafs?.mainContent?.label ?? ""}
           </StyledContactLink>
         </StyledContentBox>
-        <SyledImageAndEffect
+        <StyledImageAndEffect
           dimensions={{
             height: "353px",
             width: "529px",
@@ -93,7 +97,7 @@ const ServicesLanding: React.FC = () => {
               borderRadius: "1em",
             }}
           />
-        </SyledImageAndEffect>
+        </StyledImageAndEffect>
       </StyledServicesContentContainer>
 
       <StyledServicesContentContainer reversed>
@@ -109,7 +113,7 @@ const ServicesLanding: React.FC = () => {
           </StyledContactLink>
         </StyledContentBox>
 
-        <SyledImageAndEffect
+        <StyledImageAndEffect
           dimensions={{
             height: "353px",
             width: "529px",
@@ -145,7 +149,7 @@ const ServicesLanding: React.FC = () => {
               borderRadius: "1em",
             }}
           />
-        </SyledImageAndEffect>
+        </StyledImageAndEffect>
       </StyledServicesContentContainer>
       <StyledServicesContentContainer>
         <StyledContentBox>
@@ -159,7 +163,7 @@ const ServicesLanding: React.FC = () => {
             {navLeafs?.highCeilingServices?.label ?? ""}
           </StyledContactLink>
         </StyledContentBox>
-        <SyledImageAndEffect
+        <StyledImageAndEffect
           dimensions={{
             height: "353px",
             width: "529px",
@@ -195,7 +199,7 @@ const ServicesLanding: React.FC = () => {
               borderRadius: "1em",
             }}
           />
-        </SyledImageAndEffect>
+        </StyledImageAndEffect>
       </StyledServicesContentContainer>
     </StyledServicesContent>
   );

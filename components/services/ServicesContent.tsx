@@ -1,8 +1,13 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
-import { IconGroup, NextImage, SyledImageAndEffect } from "../common";
 import {
-  StyledMainTitle,
+  IconGroup,
+  NextImage,
+  StyledImageAndEffect,
+  StyledLinearGradient,
+} from "../common";
+import {
+  StyledServicesContentMainTitle,
   StyledContentBoxTitle,
   StyledContentBoxText,
   StyledServicesContent,
@@ -23,22 +28,34 @@ const ServicesContent: React.FC = () => {
 
   return (
     <StyledServicesContent>
+      <StyledLinearGradient
+        direction="bottom"
+        variation="appCoverBottom"
+        positioning={{ position: "absolute", top: "0px" }}
+        visual={{ opacity: 1 }}
+      />
+      <StyledLinearGradient
+        direction="top"
+        variation="appCoverTop"
+        positioning={{ position: "absolute", top: "0px" }}
+        visual={{ opacity: 1 }}
+      />
       <IconGroup
         fill={systemContext?.theme?.palette?.stars?.gold ?? ""}
         starCount={5}
       />
-      <StyledMainTitle id="main-content">
+      <StyledServicesContentMainTitle id="main-content">
         {textContent?.title ?? ""}
-      </StyledMainTitle>
+      </StyledServicesContentMainTitle>
 
       <StyledServicesContentBlock>
         <StyledServicesContentBlockImage>
-          <SyledImageAndEffect
+          <StyledImageAndEffect
             dimensions={{
               height: "350px",
               width: "490px",
             }}
-            positioning={{ margin: "1em", position: "relative" }}
+            positioning={{ margin: "auto" }}
           >
             <NextImage
               containerPositioning={{
@@ -72,7 +89,7 @@ const ServicesContent: React.FC = () => {
                 borderRadius: "1em",
               }}
             />
-          </SyledImageAndEffect>
+          </StyledImageAndEffect>
         </StyledServicesContentBlockImage>
         <StyledServicesContentBlockItem>
           <StyledContentBoxTitle>
@@ -94,12 +111,12 @@ const ServicesContent: React.FC = () => {
       </StyledContentBoxTitle>
       <StyledServicesContentBlock>
         <StyledServicesContentBlockImage>
-          <SyledImageAndEffect
+          <StyledImageAndEffect
             dimensions={{
               height: "350px",
               width: "490px",
             }}
-            positioning={{ margin: "1em" }}
+            positioning={{ margin: "auto" }}
           >
             <NextImage
               containerPositioning={{
@@ -133,7 +150,7 @@ const ServicesContent: React.FC = () => {
                 borderRadius: "1em",
               }}
             />
-          </SyledImageAndEffect>
+          </StyledImageAndEffect>
         </StyledServicesContentBlockImage>
         <StyledServicesContentBlockItem>
           <StyledContentBoxText>
@@ -152,12 +169,14 @@ const ServicesContent: React.FC = () => {
       </StyledContentBoxTitle>
       <StyledServicesContentBlock>
         <StyledServicesContentBlockImage>
-          <SyledImageAndEffect
+          <StyledImageAndEffect
             dimensions={{
               height: "350px",
               width: "490px",
             }}
-            positioning={{ margin: "1em" }}
+            positioning={{
+              margin: "auto",
+            }}
           >
             <NextImage
               containerPositioning={{
@@ -191,7 +210,7 @@ const ServicesContent: React.FC = () => {
                 borderRadius: "1em",
               }}
             />
-          </SyledImageAndEffect>
+          </StyledImageAndEffect>
         </StyledServicesContentBlockImage>
         <StyledServicesContentBlockItem>
           <StyledContentBoxText>

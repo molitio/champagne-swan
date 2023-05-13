@@ -1,12 +1,11 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
-import { StyledServicesCover } from "./style";
 import {
-  StyledButtonContainer,
-  StyledCoverContactLink,
-  StyledMainTitle,
-  StyledDescription,
-} from "../common";
+  StyledServicesCover,
+  StyledServicesCoverMainTitle,
+  StyledServicesCoverDescription,
+} from "./style";
+import { StyledButtonContainer, StyledCoverContactLink } from "../common";
 
 import { NextImage, StyledCoverContent, StyledLinearGradient } from "../common";
 
@@ -46,12 +45,16 @@ const ServicesCover: React.FC = () => {
         direction="bottom"
         variation="partial"
         positioning={{ position: "absolute", top: "0px" }}
-        visual={{ opacity: 0.8 }}
+        visual={{ opacity: 1 }}
       />
 
       <StyledCoverContent>
-        <StyledMainTitle>{textContent?.title ?? ""}</StyledMainTitle>
-        <StyledDescription>{textContent?.introText ?? ""}</StyledDescription>
+        <StyledServicesCoverMainTitle>
+          {textContent?.title ?? ""}
+        </StyledServicesCoverMainTitle>
+        <StyledServicesCoverDescription>
+          {textContent?.introText ?? ""}
+        </StyledServicesCoverDescription>
 
         <StyledButtonContainer>
           <NextImage

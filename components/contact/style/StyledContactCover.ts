@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledContact = styled.section`
   position: relative;

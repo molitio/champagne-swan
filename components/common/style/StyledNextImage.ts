@@ -55,12 +55,12 @@ export const StyledNextImageContainer = styled.div<StyledNextImageContainerProps
         `}
 `;
 
-type SyledImageAndEffectProps = {
+type StyledImageAndEffectProps = {
   dimensions?: Dimensions;
   positioning?: Positioning;
 };
 
-export const SyledImageAndEffect = styled.div<SyledImageAndEffectProps>`
+export const StyledImageAndEffect = styled.div<StyledImageAndEffectProps>`
   position: ${(props) => props?.positioning?.position ?? "relative"};
   height: ${(props) => props?.dimensions?.height ?? ""};
   width: ${(props) => props?.dimensions?.width ?? ""};

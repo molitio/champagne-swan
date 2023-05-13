@@ -10,9 +10,9 @@ import { useLineBreakParser } from "../utils";
 import {
   StyledCoverContactLink,
   StyledButtonContainer,
-  StyledDescription,
-  StyledMainTitle,
+  StyledAppCoverDescription,
   StyledAppCover,
+  StyledAppCoverMainTitle,
 } from "./style";
 
 const AppCover: React.FC = () => {
@@ -62,10 +62,12 @@ const AppCover: React.FC = () => {
           fill={systemContext?.theme?.palette?.stars?.gold ?? ""}
           starCount={5}
         />
-        <StyledMainTitle>{textContent?.title ?? ""}</StyledMainTitle>
-        <StyledDescription>
+        <StyledAppCoverMainTitle>
+          {textContent?.title ?? ""}
+        </StyledAppCoverMainTitle>
+        <StyledAppCoverDescription>
           {useLineBreakParser(textContent?.description ?? "")}
-        </StyledDescription>
+        </StyledAppCoverDescription>
 
         <StyledButtonContainer>
           <NextImage

@@ -55,6 +55,8 @@ export const ApplicationTheme = {
         "rgba(229, 236, 238, 0.9) 0%, rgba(153, 198, 208, 0.6) 24%, rgba(198, 221, 226, 0) 68%",
       contactCoverBottom:
         "rgba(198, 221, 226, 1) 0%, rgba(198, 221, 226, 0.6), 36%, rgba(229, 236, 238, 0.0) 100%",
+      landingServicesContent:
+        "rgba(198, 221, 226, 1) 0%, rgba(198, 221, 226, 0.6), 36%, rgba(229, 236, 238, 0.0) 100%",
     },
 
     visual: {

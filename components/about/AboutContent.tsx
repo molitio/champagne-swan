@@ -1,6 +1,6 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
-import { IconGroup, NextImage, SyledImageAndEffect } from "../common";
+import { IconGroup, NextImage, StyledImageAndEffect } from "../common";
 import {
   StyledOpinionsMainTitle,
   StyledOpinionsContainer,
@@ -53,7 +53,7 @@ const AboutContent: React.FC = () => {
           {brandMessageTextContent?.premiumQualityContentText ?? ""}
         </StyledBrandMessageText>
         <StyledBrandMessageImageContainer>
-          <SyledImageAndEffect positioning={{ margin: "1em" }}>
+          <StyledImageAndEffect positioning={{ margin: "1em" }}>
             <NextImage
               containerDimensions={{
                 height: "250px",
@@ -73,8 +73,8 @@ const AboutContent: React.FC = () => {
                 borderRadius: "1em",
               }}
             />
-          </SyledImageAndEffect>
-          <SyledImageAndEffect
+          </StyledImageAndEffect>
+          <StyledImageAndEffect
             dimensions={{
               height: "250px",
               width: "372px",
@@ -96,8 +96,8 @@ const AboutContent: React.FC = () => {
                 borderRadius: "1em",
               }}
             />
-          </SyledImageAndEffect>
-          <SyledImageAndEffect
+          </StyledImageAndEffect>
+          <StyledImageAndEffect
             dimensions={{
               height: "250px",
               width: "372px",
@@ -132,7 +132,7 @@ const AboutContent: React.FC = () => {
                 borderRadius: "1em",
               }}
             />
-          </SyledImageAndEffect>
+          </StyledImageAndEffect>
         </StyledBrandMessageImageContainer>
       </StyledBrandMessageContainer>
       <StyledOpinions>

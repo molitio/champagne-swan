@@ -15,6 +15,40 @@ type StyledServicesContentContainerProps = {
   reversed?: boolean;
 };
 
+export const StyledServicesLandingMainTitle = styled.h1`
+  position: relative;
+  text-align: center;
+  margin: 0.4em 0;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 3.8em;
+  line-height: 1.2em;
+  color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["servicesTitleShadow"]?.textShadow ?? ""};
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+    font-size: 3.2rem;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    display: block;
+    margin: 1.8em auto 1.8em auto;
+    width: 12em;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    display: block;
+    margin: 30px auto 30px auto;
+    font-size: 2.25rem;
+    width: 8em;
+    line-height: 50px;
+  }
+`;
+
 export const StyledServicesContentContainer = styled.div<StyledServicesContentContainerProps>`
   position: relative;
   display: flex;

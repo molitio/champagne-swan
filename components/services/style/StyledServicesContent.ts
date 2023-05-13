@@ -8,7 +8,7 @@ export const StyledServicesContent = styled.section`
   align-items: center;
 `;
 
-export const StyledMainTitle = styled.h1`
+export const StyledServicesContentMainTitle = styled.h1`
   text-align: center;
   color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
   text-shadow: ${(props) =>
@@ -20,7 +20,6 @@ export const StyledMainTitle = styled.h1`
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    outline: 3px dashed purple;
     font-size: 4em;
     margin-bottom: 1em;
   }
@@ -44,46 +43,48 @@ export const StyledServicesContentBlock = styled.div`
   margin: auto;
   padding-top: 2em;
   gap: 1em;
-  width: 80%;
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    width: 60%;
+  position: relative;
+  width: 80vw;
+  @media (max-width: 768px) {
+    width: 60vw;
     flex-direction: column;
   }
 `;
 
 export const StyledServicesContentBlockImage = styled.div`
-  outline: 1px solid red;
-  flex: 1 0 40vw;
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    outline: 1px solid violet;
-    order: 2;
-    flex: 1 1 100%;
+  height: 28em;
+  flex: 1 0 10vw;
+  @media (max-width: 768px) {
+    order: 3;
+    height: auto;
+    width: 100%;
+    flex: 1 1 10em;
   }
 `;
 
 export const StyledServicesContentBlockItem = styled.div`
-  outline: 1px solid red;
+  height: 28em;
   align-self: center;
-  flex: 1 0 40vw;
+  flex: 1 0 10vw;
 
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    outline: 1px solid violet;
+  @media (max-width: 768px) {
     order: 1;
-    flex: 1 0 100%;
+    height: auto;
+    width: 100%;
+    flex: 1 0 10em;
   }
 `;
 
 export const StyledServicesContentBlockItemInfo = styled(
   StyledServicesContentBlockItem
 )`
-  flex: 1 1 100%;
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    outline: 3px dashed pink;
-    flex: 1 1 100%;
+  height: 28em;
+  order: 2;
+  flex: 2 0 80vw;
+  @media (max-width: 768px) {
+    height: auto;
+    width: 100%;
+    flex: 1 1 10em;
   }
 `;
 
@@ -97,10 +98,10 @@ export const StyledContentBoxTitle = styled.h1`
   font-size: 2.4em;
   margin-top: 0;
   margin-bottom: 3.4em;
+  position: relative;
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    outline: 3px dashed purple;
     display: block;
     margin: 0 auto 55px auto;
     text-align: center;
@@ -122,11 +123,9 @@ export const StyledContentBoxText = styled.p`
     props?.theme?.palette?.visual["servicesTextShadow"]?.textShadow ?? ""};
   font-size: 1.2em;
   font-weight: 400;
-  outline: 1px solid red;
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    outline: 1px solid violet;
   }
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {

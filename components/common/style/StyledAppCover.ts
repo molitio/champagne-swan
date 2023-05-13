@@ -7,36 +7,7 @@ export const StyledAppCover = styled.section`
   background-color: ${(props) => props?.theme?.palette?.background?.default};
 `;
 
-export const StyledCoverContactLink = styled(Link)`
-  margin-top: 2em;
-  position: relative;
-  padding: 0.6em 1.2em;
-  font-size: 1.5em;
-  font-weight: 300;
-  color: ${(props) => props?.theme?.palette?.text?.secondary};
-  background-color: ${(props) => props?.theme?.palette?.tertiary?.main};
-  text-shadow: ${(props) =>
-    props?.theme?.palette?.visual["aboutCoverTextShadow"]?.textShadow ?? ""};
-  box-shadow: ${(props) =>
-    props?.theme?.palette?.visual["buttonDafaultShadow"]?.boxShadow ?? ""};
-  text-decoration: none;
-  cursor: pointer;
-
-  :hover {
-    color: ${(props) => props?.theme?.palette?.tertiary?.main};
-    background-color: ${(props) => props?.theme?.palette?.text?.secondary};
-  }
-`;
-
-export const StyledButtonContainer = styled.div`
-  padding-top: 2em;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  margin: auto;
-`;
-
-export const StyledMainTitle = styled.h1`
+export const StyledAppCoverMainTitle = styled.h1`
   position: relative;
   text-align: center;
   margin: 0.4em 0;
@@ -70,7 +41,36 @@ export const StyledMainTitle = styled.h1`
   }
 `;
 
-export const StyledDescription = styled.pre`
+export const StyledCoverContactLink = styled(Link)`
+  margin-top: 2em;
+  position: relative;
+  padding: 0.6em 1.2em;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: ${(props) => props?.theme?.palette?.text?.secondary};
+  background-color: ${(props) => props?.theme?.palette?.tertiary?.main};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["aboutCoverTextShadow"]?.textShadow ?? ""};
+  box-shadow: ${(props) =>
+    props?.theme?.palette?.visual["buttonDafaultShadow"]?.boxShadow ?? ""};
+  text-decoration: none;
+  cursor: pointer;
+
+  :hover {
+    color: ${(props) => props?.theme?.palette?.tertiary?.main};
+    background-color: ${(props) => props?.theme?.palette?.text?.secondary};
+  }
+`;
+
+export const StyledButtonContainer = styled.div`
+  padding-top: 2em;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+`;
+
+export const StyledAppCoverDescription = styled.pre`
   width: 40em;
   margin: auto;
   font-style: normal;

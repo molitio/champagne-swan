@@ -69,7 +69,7 @@ export const StyledBrandMessageIconContainer = styled.div`
   }
 `;
 
-export const StyledContentTitle = styled.h1`
+export const StyledBrandMessageMainTitle = styled.h1`
   position: relative;
   text-align: center;
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};

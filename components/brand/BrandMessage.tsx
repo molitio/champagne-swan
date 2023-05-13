@@ -1,15 +1,15 @@
 import React from "react";
 import { IconGroup, NextImage } from "../common";
-import { SyledImageAndEffect } from "../common";
+import { StyledImageAndEffect } from "../common";
 import {
   StyledBrandMessage,
   StyledBrandMessageContentTitle,
   StyledBrandMessageContentText,
   StyledContactLink,
-  StyledContentTitle,
   StyledBrandMessageIconContainer,
   StyledBrandMessageContent,
   StyledBrandMessageContentContainer,
+  StyledBrandMessageMainTitle,
 } from "./style";
 import { SystemContext } from "@molitio/ui-core";
 
@@ -32,7 +32,9 @@ const BrandMessage: React.FC = () => {
           starCount={5}
         />
       </StyledBrandMessageIconContainer>
-      <StyledContentTitle>{textContent?.title ?? ""}</StyledContentTitle>
+      <StyledBrandMessageMainTitle>
+        {textContent?.title ?? ""}
+      </StyledBrandMessageMainTitle>
       <StyledBrandMessageContentContainer>
         <StyledBrandMessageContent>
           <StyledBrandMessageContentTitle>
@@ -50,7 +52,7 @@ const BrandMessage: React.FC = () => {
             {textContent?.moreInfoButton ?? ""}
           </StyledContactLink>
         </StyledBrandMessageContent>
-        <SyledImageAndEffect>
+        <StyledImageAndEffect>
           <NextImage
             containerPositioning={{
               position: "absolute",
@@ -84,7 +86,7 @@ const BrandMessage: React.FC = () => {
               borderRadius: "1em",
             }}
           />
-        </SyledImageAndEffect>
+        </StyledImageAndEffect>
       </StyledBrandMessageContentContainer>
     </StyledBrandMessage>
   );
