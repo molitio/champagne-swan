@@ -15,6 +15,7 @@ import {
   StyledServicesContentBoxTitle,
   StyledServicesContentBoxText,
   StyledServicesIconContainer,
+  StyledServicesContentBlockImage,
 } from "./style";
 
 const ServicesLanding: React.FC = () => {
@@ -64,40 +65,42 @@ const ServicesLanding: React.FC = () => {
             {navLeafs?.mainContent?.label ?? ""}
           </StyledContactLink>
         </StyledContentBox>
-        <StyledImageAndEffect
-          dimensions={{
-            height: "353px",
-            width: "529px",
-          }}
-          positioning={{ margin: "3em" }}
-        >
-          <NextImage
-            containerPositioning={{
-              position: "absolute",
-              right: "-60px",
-              bottom: "-120px",
-              transform: "rotate(-15deg)",
+        <StyledServicesContentBlockImage>
+          <StyledImageAndEffect
+            dimensions={{
+              height: "353px",
+              width: "529px",
             }}
-            containerDimensions={{ width: "250px", height: "250px" }}
-            imageProps={{
-              src: commonAssetUrls?.waterSplash ?? "",
-              alt: "water-splash",
-            }}
-          />
-          <NextImage
-            containerPositioning={{
-              position: "absolute",
-            }}
-            imageProps={{
-              src: assetUrls?.morning ?? "",
-              alt: "morning-sunshine",
-            }}
-            imageVisual={{
-              boxShadow: "2px 4px 4px #C1DFE6ff",
-              borderRadius: "1em",
-            }}
-          />
-        </StyledImageAndEffect>
+            positioning={{ margin: "3em" }}
+          >
+            <NextImage
+              containerPositioning={{
+                position: "absolute",
+                right: "-80px",
+                bottom: "-120px",
+                transform: "rotate(-15deg)",
+              }}
+              containerDimensions={{ width: "250px", height: "250px" }}
+              imageProps={{
+                src: commonAssetUrls?.waterSplash ?? "",
+                alt: "water-splash",
+              }}
+            />
+            <NextImage
+              containerPositioning={{
+                position: "absolute",
+              }}
+              imageProps={{
+                src: assetUrls?.morning ?? "",
+                alt: "morning-sunshine",
+              }}
+              imageVisual={{
+                boxShadow: "2px 4px 4px #C1DFE6ff",
+                borderRadius: "1em",
+              }}
+            />
+          </StyledImageAndEffect>
+        </StyledServicesContentBlockImage>
       </StyledServicesContentContainer>
 
       <StyledServicesContentContainer reversed>
@@ -112,44 +115,45 @@ const ServicesLanding: React.FC = () => {
             {navLeafs?.privateServices?.label ?? ""}
           </StyledContactLink>
         </StyledContentBox>
-
-        <StyledImageAndEffect
-          dimensions={{
-            height: "353px",
-            width: "529px",
-          }}
-          positioning={{ margin: "3em" }}
-        >
-          <NextImage
-            containerPositioning={{
-              position: "absolute",
-              right: "-60px",
-              bottom: "-120px",
-              transform: "rotate(-15deg)",
+        <StyledServicesContentBlockImage>
+          <StyledImageAndEffect
+            dimensions={{
+              height: "353px",
+              width: "529px",
             }}
-            containerDimensions={{
-              width: "250px",
-              height: "250px",
-            }}
-            imageProps={{
-              src: commonAssetUrls?.waterSplash ?? "",
-              alt: "water-splash",
-            }}
-          />
-          <NextImage
-            containerPositioning={{
-              position: "absolute",
-            }}
-            imageProps={{
-              src: assetUrls?.flatRoom ?? "",
-              alt: "flat-room",
-            }}
-            imageVisual={{
-              boxShadow: "2px 4px 4px #C1DFE6ff",
-              borderRadius: "1em",
-            }}
-          />
-        </StyledImageAndEffect>
+            positioning={{ margin: "3em" }}
+          >
+            <NextImage
+              containerPositioning={{
+                position: "absolute",
+                right: "-80px",
+                bottom: "-120px",
+                transform: "rotate(-15deg)",
+              }}
+              containerDimensions={{
+                width: "250px",
+                height: "250px",
+              }}
+              imageProps={{
+                src: commonAssetUrls?.waterSplash ?? "",
+                alt: "water-splash",
+              }}
+            />
+            <NextImage
+              containerPositioning={{
+                position: "absolute",
+              }}
+              imageProps={{
+                src: assetUrls?.flatRoom ?? "",
+                alt: "flat-room",
+              }}
+              imageVisual={{
+                boxShadow: "2px 4px 4px #C1DFE6ff",
+                borderRadius: "1em",
+              }}
+            />
+          </StyledImageAndEffect>
+        </StyledServicesContentBlockImage>
       </StyledServicesContentContainer>
       <StyledServicesContentContainer>
         <StyledContentBox>
@@ -163,43 +167,45 @@ const ServicesLanding: React.FC = () => {
             {navLeafs?.highCeilingServices?.label ?? ""}
           </StyledContactLink>
         </StyledContentBox>
-        <StyledImageAndEffect
-          dimensions={{
-            height: "353px",
-            width: "529px",
-          }}
-          positioning={{ margin: "3em" }}
-        >
-          <NextImage
-            containerPositioning={{
-              position: "absolute",
-              right: "-60px",
-              bottom: "-120px",
-              transform: "rotate(-15deg)",
+        <StyledServicesContentBlockImage>
+          <StyledImageAndEffect
+            dimensions={{
+              height: "353px",
+              width: "529px",
             }}
-            containerDimensions={{
-              width: "250px",
-              height: "250px",
-            }}
-            imageProps={{
-              src: commonAssetUrls?.waterSplash ?? "",
-              alt: "water-splash",
-            }}
-          />
-          <NextImage
-            containerPositioning={{
-              position: "absolute",
-            }}
-            imageProps={{
-              src: assetUrls?.industry ?? "",
-              alt: "industry-park",
-            }}
-            imageVisual={{
-              boxShadow: "2px 4px 4px #C1DFE6ff",
-              borderRadius: "1em",
-            }}
-          />
-        </StyledImageAndEffect>
+            positioning={{ margin: "3em" }}
+          >
+            <NextImage
+              containerPositioning={{
+                position: "absolute",
+                right: "-80px",
+                bottom: "-120px",
+                transform: "rotate(-15deg)",
+              }}
+              containerDimensions={{
+                width: "250px",
+                height: "250px",
+              }}
+              imageProps={{
+                src: commonAssetUrls?.waterSplash ?? "",
+                alt: "water-splash",
+              }}
+            />
+            <NextImage
+              containerPositioning={{
+                position: "absolute",
+              }}
+              imageProps={{
+                src: assetUrls?.industry ?? "",
+                alt: "industry-park",
+              }}
+              imageVisual={{
+                boxShadow: "2px 4px 4px #C1DFE6ff",
+                borderRadius: "1em",
+              }}
+            />
+          </StyledImageAndEffect>
+        </StyledServicesContentBlockImage>
       </StyledServicesContentContainer>
     </StyledServicesContent>
   );

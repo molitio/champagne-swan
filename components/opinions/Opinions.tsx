@@ -23,11 +23,13 @@ const Opinions: React.FC = () => {
       <StyledLinearGradient
         direction="top"
         variation="reversePartial"
+        positioning={{ position: "absolute", top: "0px" }}
         visual={{ opacity: 1 }}
       />
       <StyledLinearGradient
         direction="top"
         variation="partial"
+        positioning={{ position: "absolute", top: "0px" }}
         visual={{ opacity: 1 }}
       />
 

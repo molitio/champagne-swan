@@ -11,44 +11,36 @@ export const StyledPartnersTitle = styled.h1`
   text-align: center;
   color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
   font-weight: 400;
-  font-size: 105px;
+  font-size: 3.8em;
   margin-top: 0em;
-  margin-bottom: 1em;
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    font-size: 65px;
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    font-size: 2.4em;
   }
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "sm")}) {
-    font-size: 40px;
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    font-size: 1.8em;
   }
 `;
 
 export const StyledPartnersContentContainer = styled.div`
-  margin-top: 180px;
-  margin-bottom: 140px;
+  padding: 4em 0;
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
   flex-wrap: wrap;
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "sm")}) {
-  }
 `;
 
 export const StyledPartnersImageContainer = styled.div`
   display: flex;
   justify-content: space-around;
-  margin-top: 40px;
-  margin-bottom: 40px;
-
-  flex: 25%;
+  padding: 2em;
+  flex: 1 0 25%;
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    flex: 50%;
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    flex: 1 0 50%;
   }
 `;

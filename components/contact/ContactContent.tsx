@@ -5,10 +5,14 @@ import {
   ContactInfoContainer,
   StyledContactInfo,
   StyledContactContent,
-  StyledLogoImage,
   StyledFlexGroup,
 } from "./style";
-import { ContactForm, StyledAnchor } from "../common";
+import {
+  StyledLinearGradient,
+  ContactForm,
+  StyledAnchor,
+  NextImage,
+} from "../common";
 
 const ContactContent: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
@@ -21,6 +25,18 @@ const ContactContent: React.FC = () => {
 
   return (
     <StyledContactContent>
+      <StyledLinearGradient
+        direction="bottom"
+        variation="appCoverBottom"
+        positioning={{ position: "absolute", top: "0px" }}
+        visual={{ opacity: 1 }}
+      />
+      <StyledLinearGradient
+        direction="top"
+        variation="appCoverTop"
+        positioning={{ position: "absolute", top: "0px" }}
+        visual={{ opacity: 1 }}
+      />
       <StyledFlexGroup>
         <ContactInfoContainer>
           <StyledContactInfo>
@@ -51,7 +67,14 @@ const ContactContent: React.FC = () => {
           <ContactForm />
         </FormContainer>
       </StyledFlexGroup>
-      <StyledLogoImage src={commonAssetUrls?.logo ?? ""} alt="logo" />
+      <NextImage
+        containerDimensions={{ width: "250px", height: "250px" }}
+        containerPositioning={{ position: "relative", margin: "auto" }}
+        imageProps={{
+          src: commonAssetUrls?.logo ?? "",
+          alt: "logo",
+        }}
+      />
     </StyledContactContent>
   );
 };

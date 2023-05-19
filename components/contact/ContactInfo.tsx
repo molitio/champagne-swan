@@ -30,9 +30,21 @@ const ContactInfo: React.FC = () => {
     <StyledContactInfo>
       <StyledLinearGradient
         direction="bottom"
-        variation="cover"
+        variation="appCoverBottom"
+        positioning={{ position: "absolute", top: "0px" }}
         visual={{ opacity: 1 }}
       />
+      {/*       <StyledLinearGradient
+        direction="top"
+        variation="appCoverTop"
+        positioning={{ position: "absolute", top: "0px" }}
+        visual={{ opacity: 1 }}
+      /> */}
+      {/*       <StyledLinearGradient
+        direction="bottom"
+        variation="cover"
+        visual={{ opacity: 1 }}
+      /> */}
       <IconGroup
         starCount={5}
         fill={systemContext?.theme?.palette?.stars?.gold}

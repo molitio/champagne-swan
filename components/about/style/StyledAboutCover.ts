@@ -18,13 +18,13 @@ export const StyledAboutMainTitle = styled.h1`
     props?.theme?.palette?.visual["aboutCoverTitleShadow"]?.textShadow ?? ""};
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
     white-space: pre;
     font-size: 2.8em;
   }
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     font-size: 2.2em;
   }
 `;
@@ -42,13 +42,13 @@ export const StyledAboutSubTitle = styled.h2`
     ""};
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
     white-space: pre;
     font-size: 2.6em;
   }
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     font-size: 2rem;
   }
 `;

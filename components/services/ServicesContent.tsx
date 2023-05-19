@@ -28,12 +28,12 @@ const ServicesContent: React.FC = () => {
 
   return (
     <StyledServicesContent>
-      <StyledLinearGradient
+      {/*       <StyledLinearGradient
         direction="bottom"
         variation="appCoverBottom"
         positioning={{ position: "absolute", top: "0px" }}
         visual={{ opacity: 1 }}
-      />
+      /> */}
       <StyledLinearGradient
         direction="top"
         variation="appCoverTop"
@@ -55,7 +55,7 @@ const ServicesContent: React.FC = () => {
               height: "350px",
               width: "490px",
             }}
-            positioning={{ margin: "auto" }}
+            /*            positioning={{ margin: "auto" }} */
           >
             <NextImage
               containerPositioning={{
@@ -113,7 +113,7 @@ const ServicesContent: React.FC = () => {
               height: "350px",
               width: "490px",
             }}
-            positioning={{ margin: "auto" }}
+            /*             positioning={{ margin: "auto" }} */
           >
             <NextImage
               containerPositioning={{
@@ -171,10 +171,9 @@ const ServicesContent: React.FC = () => {
               height: "350px",
               width: "490px",
             }}
-            positioning={{
-              margin: "auto",
+            /*             positioning={{
               position: "relative",
-            }}
+            }} */
           >
             <NextImage
               containerPositioning={{

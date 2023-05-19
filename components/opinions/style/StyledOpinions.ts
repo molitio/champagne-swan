@@ -13,7 +13,7 @@ export const StyledOpinionsIconContainer = styled.div`
 export const StyledOpinionsMainTitle = styled.h1`
   position: relative;
   text-align: center;
-  font-size: 6.5em;
+  font-size: 3.8em;
   padding: "0.3em 0 0.3em 0";
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-shadow: ${(props) =>
@@ -22,18 +22,18 @@ export const StyledOpinionsMainTitle = styled.h1`
   margin-bottom: 0em;
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    font-size: 65px;
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    font-size: 3.2em;
   }
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     margin: auto;
     width: 10em;
   }
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     padding-top: 150px;
-    font-size: 36px;
+    font-size: 2.4em;
     width: 8em;
   }
 `;
@@ -46,7 +46,7 @@ export const StyledOpinion = styled.div`
   margin: 3em;
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     margin-right: auto;
     margin-left: auto;
   }
@@ -58,7 +58,7 @@ export const StyledOpinionsContainer = styled.div`
   justify-content: center;
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
     align-items: center;
     flex-direction: column;
   }
@@ -75,7 +75,7 @@ export const StyledOpinionText = styled.p`
   margin: 0.5em auto 0.5em auto;
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     font-size: 1em;
   }
 `;

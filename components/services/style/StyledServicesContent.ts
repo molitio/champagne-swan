@@ -14,24 +14,31 @@ export const StyledServicesContentMainTitle = styled.h1`
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["servicesTextShadow"]?.textShadow ?? ""};
   font-weight: 400;
-  font-size: 4.5em;
+  font-size: 3.8em;
   padding-top: 3em;
   position: relative;
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+      resolveThemeBreakPointValues(props?.theme, "xxl")}) {
     font-size: 3.2em;
+    margin-bottom: 1em;
+    font-weight: 700;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    font-size: 2.4em;
     margin-bottom: 1em;
   }
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
-    font-size: 2.6em;
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+    font-size: 1.8em;
   }
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "sm")}) {
-    font-size: 1.7em;
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    font-size: 1.2em;
   }
 `;
 
@@ -46,31 +53,35 @@ export const StyledServicesContentBlock = styled.div`
   padding-top: 3em;
   width: 80vw;
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
     flex-direction: column;
   }
 `;
 
 export const StyledServicesContentBlockImage = styled.div`
   flex: 1 0 30vw;
+  &:first-child {
+    margin: 0;
+    top: 0;
+    left: 0;
+  }
+  align-self: flex-start;
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
     order: 3;
-    width: 100%;
-    margin: auto;
+    padding: 4em 0 0 0;
+    align-self: center;
     flex: 1 1 10em;
   }
 `;
 
 export const StyledServicesContentBlockItem = styled.div`
-  flex: 2 0 30vw;
-  /* outline: 1px solid red; */
-  padding: 0 2.5em 1em 2.5em;
+  flex: 4 0 30vw;
+  padding: 0 2.4em 1em 2.4em;
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
     order: 1;
-    height: auto;
-    width: 100%;
+    padding: 4em 0 0 0;
     flex: 1 0 10em;
   }
 `;
@@ -80,15 +91,13 @@ export const StyledServicesContentBlockItemInfo = styled(
 )`
   order: 2;
   flex: 2 0 80vw;
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    order: 2;
-    flex: 1 1 10em;
-  }
+  padding: 4em 0 0 0;
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xxl")}) {
-    outline: 1px solid red;
-    padding: 2em 0 0 0;
+  }
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    flex: 1 1 10em;
   }
 `;
 
@@ -104,7 +113,7 @@ export const StyledServicesContentBoxTitle = styled.h1`
   position: relative;
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
     display: block;
     margin: 0 auto 55px auto;
     text-align: center;
@@ -112,9 +121,9 @@ export const StyledServicesContentBoxTitle = styled.h1`
   }
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     /* width: 20em; */
-    font-size: 25px;
+    font-size: 1.6em;
   }
 `;
 
@@ -129,13 +138,13 @@ export const StyledServicesContentBoxText = styled.p`
   margin: 0;
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
   }
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
   }
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
   }
 `;

@@ -56,7 +56,7 @@ const BrandMessage: React.FC = () => {
           <NextImage
             containerPositioning={{
               position: "absolute",
-              right: "-60px",
+              right: "-80px",
               bottom: "-120px",
               transform: "rotate(-15deg)",
             }}

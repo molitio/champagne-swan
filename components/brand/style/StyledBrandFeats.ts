@@ -26,7 +26,7 @@ export const StyledInfoContainer = styled.div`
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2));
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
     flex: 50%;
   }
 `;
@@ -36,9 +36,10 @@ export const StyledSkillScore = styled.h1`
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 6.8em;
-
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["skillScore"]?.textShadow ?? ""};
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     font-size: 5em;
   }
 `;
@@ -47,8 +48,10 @@ export const StyledSkillName = styled.h4`
   margin: 0;
   font-size: 1.5em;
   font-weight: 400;
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["skillName"]?.textShadow ?? ""};
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     font-size: 1em;
   }
 `;

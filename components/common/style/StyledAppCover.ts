@@ -20,19 +20,19 @@ export const StyledAppCoverMainTitle = styled.h1`
     props?.theme?.palette?.visual["appCoverTitleShadow"]?.textShadow ?? ""};
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
     font-size: 3.2rem;
   }
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     display: block;
     margin: 1.8em auto 1.8em auto;
     width: 12em;
   }
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     display: block;
     margin: 30px auto 30px auto;
     font-size: 2.25rem;
@@ -85,13 +85,13 @@ export const StyledAppCoverDescription = styled.pre`
   white-space: pre-wrap;
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     font-size: 28px;
     width: 16em;
   }
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     font-size: 21px;
     width: 13em;
     padding: 0;

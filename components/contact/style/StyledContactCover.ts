@@ -12,12 +12,20 @@ export const StyledContactCoverTitle = styled.h1`
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["contactTitleShadow"]?.textShadow ?? ""};
   font-weight: 400;
-  font-size: 6.5em;
+  font-size: 3.8em;
   margin-top: 0.4em;
 
   @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    font-size: 3.2em;
+  }
+  @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    font-size: 65px;
+    font-size: 2.4em;
+  }
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    font-size: 1.8em;
   }
 `;
 
@@ -29,7 +37,7 @@ export const StyledCoverText = styled.text`
   text-align: center;
   width: 40em;
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: 400;
   margin: 2em auto auto;
 `;
 
@@ -39,7 +47,7 @@ export const StyledFlexGroup = styled.div`
   justify-content: center;
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
     flex-direction: column-reverse;
   }
 `;
@@ -50,7 +58,7 @@ export const FormContainer = styled.div`
   justify-content: center;
   padding: 5em 0 0 10em;
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
     padding: 5em 0 0 0;
   }
 `;
@@ -60,7 +68,7 @@ export const ContactInfoContainer = styled.div`
   text-align: center;
   padding: 5em;
   color: white;
-  line-height: 1.6;
+  line-height: 1.4;
 `;
 
 export const StyledLogoImage = styled.img`

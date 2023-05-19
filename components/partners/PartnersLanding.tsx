@@ -47,7 +47,7 @@ const Partners: React.FC = () => {
             containerPositioning={{
               position: "relative",
             }}
-            containerDimensions={{ width: "100%", height: "100%" }}
+            containerDimensions={{ width: "12em", height: "10em" }}
             imageProps={{
               src: assetUrls?.brandLogo ?? "",
               alt: "brand-logo",
