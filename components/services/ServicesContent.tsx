@@ -8,8 +8,8 @@ import {
 } from "../common";
 import {
   StyledServicesContentMainTitle,
-  StyledContentBoxTitle,
-  StyledContentBoxText,
+  StyledServicesContentBoxTitle,
+  StyledServicesContentBoxText,
   StyledServicesContent,
   StyledServicesContentBlock,
   StyledServicesContentBlockItem,
@@ -60,9 +60,9 @@ const ServicesContent: React.FC = () => {
             <NextImage
               containerPositioning={{
                 position: "absolute",
-                left: "0px",
-                bottom: "0px",
-                transform: "rotate(-15deg)",
+                left: "-120px",
+                bottom: "-100px",
+                transform: "rotate(40deg) scaleX(-1)",
               }}
               containerDimensions={{ width: "250px", height: "250px" }}
               imageProps={{
@@ -92,23 +92,20 @@ const ServicesContent: React.FC = () => {
           </StyledImageAndEffect>
         </StyledServicesContentBlockImage>
         <StyledServicesContentBlockItem>
-          <StyledContentBoxTitle>
+          <StyledServicesContentBoxTitle>
             {textContent?.officeCleaningTitle ?? ""}
-          </StyledContentBoxTitle>
-          <StyledContentBoxText>
+          </StyledServicesContentBoxTitle>
+          <StyledServicesContentBoxText>
             {textContent?.officeCleaningText ?? ""}
-          </StyledContentBoxText>
+          </StyledServicesContentBoxText>
         </StyledServicesContentBlockItem>
         <StyledServicesContentBlockItemInfo>
-          <StyledContentBoxText>
+          <StyledServicesContentBoxText>
             {textContent?.officeCleaningInfo ?? ""}
-          </StyledContentBoxText>
+          </StyledServicesContentBoxText>
         </StyledServicesContentBlockItemInfo>
       </StyledServicesContentBlock>
 
-      <StyledContentBoxTitle>
-        {textContent?.highCeilingTitle ?? ""}
-      </StyledContentBoxTitle>
       <StyledServicesContentBlock>
         <StyledServicesContentBlockImage>
           <StyledImageAndEffect
@@ -121,9 +118,9 @@ const ServicesContent: React.FC = () => {
             <NextImage
               containerPositioning={{
                 position: "absolute",
-                left: "0px",
-                bottom: "0px",
-                transform: "rotate(-15deg)",
+                left: "-120px",
+                bottom: "-100px",
+                transform: "rotate(40deg) scaleX(-1)",
               }}
               containerDimensions={{ width: "250px", height: "250px" }}
               imageProps={{
@@ -153,20 +150,20 @@ const ServicesContent: React.FC = () => {
           </StyledImageAndEffect>
         </StyledServicesContentBlockImage>
         <StyledServicesContentBlockItem>
-          <StyledContentBoxText>
+          <StyledServicesContentBoxTitle>
+            {textContent?.highCeilingTitle ?? ""}
+          </StyledServicesContentBoxTitle>
+          <StyledServicesContentBoxText>
             {textContent?.personalCleaningInfo ?? ""}
-          </StyledContentBoxText>
+          </StyledServicesContentBoxText>
         </StyledServicesContentBlockItem>
         <StyledServicesContentBlockItemInfo>
-          <StyledContentBoxText>
+          <StyledServicesContentBoxText>
             {textContent?.personalCleaningExtendedInfo ?? ""}
-          </StyledContentBoxText>
+          </StyledServicesContentBoxText>
         </StyledServicesContentBlockItemInfo>
       </StyledServicesContentBlock>
 
-      <StyledContentBoxTitle>
-        {textContent?.highCeilingTitle ?? ""}
-      </StyledContentBoxTitle>
       <StyledServicesContentBlock>
         <StyledServicesContentBlockImage>
           <StyledImageAndEffect
@@ -176,14 +173,15 @@ const ServicesContent: React.FC = () => {
             }}
             positioning={{
               margin: "auto",
+              position: "relative",
             }}
           >
             <NextImage
               containerPositioning={{
                 position: "absolute",
-                left: "0px",
-                bottom: "0px",
-                transform: "rotate(-15deg)",
+                left: "-120px",
+                bottom: "-100px",
+                transform: "rotate(40deg) scaleX(-1)",
               }}
               containerDimensions={{ width: "250px", height: "250px" }}
               imageProps={{
@@ -213,17 +211,20 @@ const ServicesContent: React.FC = () => {
           </StyledImageAndEffect>
         </StyledServicesContentBlockImage>
         <StyledServicesContentBlockItem>
-          <StyledContentBoxText>
+          <StyledServicesContentBoxTitle>
+            {textContent?.highCeilingTitle ?? ""}
+          </StyledServicesContentBoxTitle>
+          <StyledServicesContentBoxText>
             {textContent?.highCeilingText ?? ""}
-          </StyledContentBoxText>
+          </StyledServicesContentBoxText>
         </StyledServicesContentBlockItem>
         <StyledServicesContentBlockItemInfo>
-          <StyledContentBoxText>
+          <StyledServicesContentBoxText>
             {textContent?.highCeilingInfo ?? ""}
-          </StyledContentBoxText>
-          <StyledContentBoxText>
+          </StyledServicesContentBoxText>
+          <StyledServicesContentBoxText>
             {textContent?.highCeilingExtendedInfo ?? ""}
-          </StyledContentBoxText>
+          </StyledServicesContentBoxText>
         </StyledServicesContentBlockItemInfo>
       </StyledServicesContentBlock>
     </StyledServicesContent>

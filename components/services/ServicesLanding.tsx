@@ -12,8 +12,8 @@ import {
   StyledServicesContentContainer,
   StyledContentBox,
   StyledContactLink,
-  StyledContentBoxTitle,
-  StyledContentBoxText,
+  StyledServicesContentBoxTitle,
+  StyledServicesContentBoxText,
   StyledServicesIconContainer,
 } from "./style";
 
@@ -54,12 +54,12 @@ const ServicesLanding: React.FC = () => {
 
       <StyledServicesContentContainer>
         <StyledContentBox>
-          <StyledContentBoxTitle>
+          <StyledServicesContentBoxTitle>
             {textContent?.comercialServicesContentTitle ?? ""}
-          </StyledContentBoxTitle>
-          <StyledContentBoxText>
+          </StyledServicesContentBoxTitle>
+          <StyledServicesContentBoxText>
             {textContent?.comercialServicesContentText ?? ""}
-          </StyledContentBoxText>
+          </StyledServicesContentBoxText>
           <StyledContactLink href={navLeafs?.mainContent?.path ?? ""}>
             {navLeafs?.mainContent?.label ?? ""}
           </StyledContactLink>
@@ -102,12 +102,12 @@ const ServicesLanding: React.FC = () => {
 
       <StyledServicesContentContainer reversed>
         <StyledContentBox>
-          <StyledContentBoxTitle>
+          <StyledServicesContentBoxTitle>
             {textContent?.privateServicesContentTitle ?? ""}
-          </StyledContentBoxTitle>
-          <StyledContentBoxText>
+          </StyledServicesContentBoxTitle>
+          <StyledServicesContentBoxText>
             {textContent?.privateServicesContentText ?? ""}
-          </StyledContentBoxText>
+          </StyledServicesContentBoxText>
           <StyledContactLink href={navLeafs?.privateServices?.path ?? ""}>
             {navLeafs?.privateServices?.label ?? ""}
           </StyledContactLink>
@@ -153,12 +153,12 @@ const ServicesLanding: React.FC = () => {
       </StyledServicesContentContainer>
       <StyledServicesContentContainer>
         <StyledContentBox>
-          <StyledContentBoxTitle>
+          <StyledServicesContentBoxTitle>
             {textContent?.highCeilingContentTitle ?? ""}
-          </StyledContentBoxTitle>
-          <StyledContentBoxText>
+          </StyledServicesContentBoxTitle>
+          <StyledServicesContentBoxText>
             {textContent?.highCeilingContentText ?? ""}
-          </StyledContentBoxText>
+          </StyledServicesContentBoxText>
           <StyledContactLink href={navLeafs?.highCeilingServices?.path ?? ""}>
             {navLeafs?.highCeilingServices?.label ?? ""}
           </StyledContactLink>

@@ -14,19 +14,19 @@ export const StyledServicesContentMainTitle = styled.h1`
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["servicesTextShadow"]?.textShadow ?? ""};
   font-weight: 400;
-  font-size: 6.5em;
+  font-size: 4.5em;
   padding-top: 3em;
   position: relative;
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    font-size: 4em;
+    font-size: 3.2em;
     margin-bottom: 1em;
   }
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    font-size: 3.1em;
+    font-size: 2.6em;
   }
 
   @media (max-width: ${(props) =>
@@ -38,36 +38,36 @@ export const StyledServicesContentMainTitle = styled.h1`
 export const StyledServicesContentBlock = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   margin: auto;
-  padding-top: 2em;
   gap: 1em;
   position: relative;
+  padding-top: 3em;
   width: 80vw;
-  @media (max-width: 768px) {
-    width: 60vw;
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     flex-direction: column;
   }
 `;
 
 export const StyledServicesContentBlockImage = styled.div`
-  height: 28em;
-  flex: 1 0 10vw;
-  @media (max-width: 768px) {
+  flex: 1 0 30vw;
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     order: 3;
-    height: auto;
     width: 100%;
+    margin: auto;
     flex: 1 1 10em;
   }
 `;
 
 export const StyledServicesContentBlockItem = styled.div`
-  height: 28em;
-  align-self: center;
-  flex: 1 0 10vw;
-
-  @media (max-width: 768px) {
+  flex: 2 0 30vw;
+  /* outline: 1px solid red; */
+  padding: 0 2.5em 1em 2.5em;
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
     order: 1;
     height: auto;
     width: 100%;
@@ -78,17 +78,21 @@ export const StyledServicesContentBlockItem = styled.div`
 export const StyledServicesContentBlockItemInfo = styled(
   StyledServicesContentBlockItem
 )`
-  height: 28em;
   order: 2;
   flex: 2 0 80vw;
-  @media (max-width: 768px) {
-    height: auto;
-    width: 100%;
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+    order: 2;
     flex: 1 1 10em;
+  }
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xxl")}) {
+    outline: 1px solid red;
+    padding: 2em 0 0 0;
   }
 `;
 
-export const StyledContentBoxTitle = styled.h1`
+export const StyledServicesContentBoxTitle = styled.h1`
   font-family: "Lato", sans-serif;
   font-weight: 400;
   text-align: center;
@@ -96,8 +100,7 @@ export const StyledContentBoxTitle = styled.h1`
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["servicesTitleShadow"]?.textShadow ?? ""};
   font-size: 2.4em;
-  margin-top: 0;
-  margin-bottom: 3.4em;
+  margin: 0;
   position: relative;
 
   @media (max-width: ${(props) =>
@@ -115,7 +118,7 @@ export const StyledContentBoxTitle = styled.h1`
   }
 `;
 
-export const StyledContentBoxText = styled.p`
+export const StyledServicesContentBoxText = styled.p`
   font-family: "Lato", sans-serif;
   text-align: start;
   color: ${(props) => props?.theme?.palette?.text?.tertiary};
@@ -123,6 +126,7 @@ export const StyledContentBoxText = styled.p`
     props?.theme?.palette?.visual["servicesTextShadow"]?.textShadow ?? ""};
   font-size: 1.2em;
   font-weight: 400;
+  margin: 0;
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "lg")}) {

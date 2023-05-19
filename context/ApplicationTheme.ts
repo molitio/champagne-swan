@@ -1,13 +1,13 @@
 export const ApplicationTheme = {
   breakpoints: {
-    keys: ["xs", "sm", "md", "lg", "xl"],
+    keys: ["xs", "sm", "md", "lg", "xl", "xxl"],
     values: {
       xs: 0,
-      sm: 665,
-      /*    md: 960, */
-      /*       lg: 880, */
-      lg: 800,
-      xl: 1920,
+      sm: 576, // Extra small devices (e.g., phones) - screens up to 576px
+      md: 768, // Small devices (e.g., tablets) - screens between 576px and 768px
+      lg: 992, // Medium devices (e.g., laptops) - screens between 768px and 992px
+      xl: 1200, // Large devices (e.g., desktops) - screens between 992px and 1200px
+      xxl: 1400, // Extra large devices - screens above 1400px
     },
     unit: "px",
   },
