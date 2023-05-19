@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "./style/StyledScrollButton";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 

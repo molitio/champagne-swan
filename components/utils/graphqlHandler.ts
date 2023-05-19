@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextApiHandler } from "next";
 import {
   ApolloServer,

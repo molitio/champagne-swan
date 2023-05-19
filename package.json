@@ -43,7 +43,7 @@
     "styled-components": "^5.3.6",
     "typeface-lato": "^1.1.13",
     "uuid": "^9.0.0",
-    "webpack": "^5.75.0",
+    "webpack": "^5.76.0",
     "workspaces": "^0.1.0",
     "yup": "^0.32.11"
   },
@@ -59,6 +59,8 @@
     "@types/smoothscroll-polyfill": "^0.3.1",
     "@types/styled-components": "^5.1.26",
     "@types/uuid": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
     "eslint": "8.22.0",
     "eslint-config-next": "latest",
     "sass": "^1.56.0",

@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { StyledForm } from "./style";
-import { ContactButton } from "./style";
-import Input from "./Input";
-import { StyledField } from "./style";
-import { handleRecaptcha } from "../utils";
-import { Formik, Form, Field } from "formik";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React from "react";
 import * as Yup from "yup";
 import { SystemContext } from "@molitio/ui-core";
+import { StyledForm } from "./style";
+import { ContactButton } from "./style";
+import { StyledField } from "./style";
+import { handleRecaptcha } from "../utils";
+import { Formik } from "formik";
 
 interface FormProps {
   position?: string;
@@ -66,7 +66,7 @@ const ContactForm: React.FC<FormProps> = () => {
             }),
           });
 
-          const result = response.json();
+          response.json();
         }
       }
     } catch (error: any) {

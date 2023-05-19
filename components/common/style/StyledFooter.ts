@@ -1,9 +1,12 @@
-import styled from 'styled-components';
- 
+import styled from "styled-components";
+
 export const StyledFooter = styled.footer`
-  position: relative;
+  background-color: ${(props) =>
+    props?.theme?.palette?.background?.default ?? "#000000"};
+  padding: 1em;
+  font-size: 0.8em;
   text-align: center;
   color: #9d8d7b;
-  margin-top: -28px;
-  bottom: -8px;
+  width: 100%;
+  height: 3em;
 `;

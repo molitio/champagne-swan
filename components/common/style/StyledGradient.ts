@@ -1,65 +1,50 @@
+import { Dimensions } from "@molitio/ui-core";
 import styled, { css } from "styled-components";
+import { resolveThemeBreakPointValues } from "../../utils";
+import { Visual, Positioning } from "../types";
 
 type StyledLinearGradientProps = {
   direction: "top" | "bottom" | "left" | "right";
-  opacity: number;
-  variation: "cover" | "partial";
+  variation?: string;
+  visual?: Visual;
+  positioning?: Positioning;
+  dimensions?: Dimensions;
 };
 
-//TODO: page height should come from the theme.dimesions
-
 export const StyledLinearGradient = styled.div<StyledLinearGradientProps>`
-  ${(props) => {
-    const { direction } = props;
-    switch (direction) {
-      case "top":
-        return css`
-          top: 0;
-          left: 0;
-        `;
-      case "bottom":
-        return css`
-          bottom: 0;
-          left: 0;
-        `;
-      case "left":
-        return css`
-          top: 0;
-          left: 0;
-        `;
-      case "bottom":
-        return css`
-          bottom: 0;
-          left: 0;
-        `;
-      default:
-        return;
-    }
-  }}
-  position: absolute;
-  margin: 0;
-  height: 1150px;
-  width: 100%;
-  opacity: ${(props) => props?.opacity};
+  box-shadow: ${(props) => props?.visual?.boxShadow ?? ""};
+  border-radius: ${(props) => props?.visual?.borderRadius ?? ""};
+  position: ${(props) => props?.positioning?.position ?? ""};
+  transform: ${(props) => props?.positioning?.transform ?? ""};
+  top: ${(props) => props?.positioning?.top ?? ""};
+  right: ${(props) => props?.positioning?.right ?? ""};
+  bottom: ${(props) => props?.positioning?.bottom ?? ""};
+  left: ${(props) => props?.positioning?.left ?? ""};
+  padding: ${(props) => props?.positioning?.padding ?? ""};
+  margin: ${(props) => props?.positioning?.margin ?? ""};
+  ${(props) =>
+    props?.dimensions
+      ? css`
+          height: ${props?.dimensions?.height ?? "100%"};
+          width: ${props?.dimensions?.width ?? "100%"};
+          min-height: ${props?.dimensions?.minHeight ?? ""};
+          min-height: ${props?.dimensions?.minHeight ?? ""};
+          max-height: ${props?.dimensions?.maxHeight ?? ""};
+          max-width: ${props?.dimensions?.maxWidth ?? ""};
+        `
+      : css`
+          height: 100%;
+          width: 100%;
+        `}
+  opacity: ${(props) => props?.visual?.opacity};
+  background: ${(props) => css`
+    linear-gradient(to ${props?.direction ?? "top"}, ${
+    props?.theme?.palette?.gradient?.[props?.variation ?? ""]
+  })
+  `};
 
-  background: ${(props) => {
-    const resolveToVariation = () => {
-      const { variation } = props;
-      switch (variation) {
-        case "cover":
-          return "rgba(229, 236, 238, 0) 0%, rgba(153, 198, 208, 0.5) 33%, rgba(13, 124, 149, 0.6) 100%";
-        case "partial":
-          return "rgba(255,255,255, 0) 0%, rgba(247, 255, 255, 0.2) 20%, rgba(198, 221, 226, 1) 100%";
-        default:
-          return;
-      }
-    };
-    return css`
-    linear-gradient(to ${props?.direction ?? "top"}, ${resolveToVariation()})
-  `;
-  }};
-
-  @media (max-width: 665px) {
-    height: 910px;
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    /*     min-height: 910px; */
   }
 `;

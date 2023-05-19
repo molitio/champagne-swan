@@ -1,22 +1,21 @@
-import { createTheme } from "@mui/material";
 import type { AppProps } from "next/app";
 import Script from "next/script";
-import { ChampagneSwanContextRoot, ChampagneSwanTheme } from "../context";
-import { Layout } from "../components";
-import GlobalStyle from "../global-style/globalStyle";
+import { createTheme } from "@mui/material";
 import { AppShell } from "@molitio/ui-core";
-import { MuiThemeProvider } from "../components";
+import { ApplicationContextRoot, ApplicationTheme } from "../context";
+import { GlobalStyle } from "../globalStyle";
+import { MuiThemeProvider, Layout } from "../components/common";
 
-export default function ChampagneSwanApp({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
   const muiDefault = createTheme();
   const appTheme = createTheme(muiDefault, {
-    ...ChampagneSwanTheme,
+    ...ApplicationTheme,
   });
 
   return (
     <AppShell
       externalTheme={appTheme}
-      externalAppContextRoot={ChampagneSwanContextRoot}
+      externalAppContextRoot={ApplicationContextRoot}
     >
       <Layout>
         <GlobalStyle />
@@ -34,7 +33,7 @@ export default function ChampagneSwanApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export async function getSserverSideProps() {
+export async function getServerSideProps() {
   return {
     props: {
       title: "Champagne Swan",

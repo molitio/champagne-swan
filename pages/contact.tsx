@@ -1,13 +1,13 @@
-import { ContactPageHero } from "../components/page";
-import { ContactPageContent } from "../components/page";
+import { NextPage } from "next";
+import { ContactCover, ContactContent } from "../components/contact";
 
-const Contact: React.FC = () => {
+const ContactPage: NextPage = () => {
   return (
-    <section>
-      <ContactPageHero />
-      <ContactPageContent />
-    </section>
+    <main>
+      <ContactCover />
+      <ContactContent />
+    </main>
   );
 };
 
-export default Contact;
+export default ContactPage;
