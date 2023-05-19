@@ -1,2 +1,2 @@
-export { ChampagneSwanContextRoot } from "./ChampagneSwanContextRoot";
-export { ChampagneSwanTheme } from "./ChampagneSwanTheme";
+export { ApplicationContextRoot } from "./ApplicationContextRoot";
+export { ApplicationTheme } from "./ApplicationTheme";

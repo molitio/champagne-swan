@@ -1,5 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ApolloServer } from "@apollo/server";
 
 import { startServerWithHandler } from "../../components/utils";

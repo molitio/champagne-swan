@@ -1,126 +1,96 @@
 import Link from "next/link";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { resolveThemeBreakPointValues } from "../../utils";
+
+type StyledNavProps = {
+  navBarExpanded?: boolean;
+};
+
+export const StyledNav = styled.nav<StyledNavProps>`
+  z-index: 1000;
+  ${(props) =>
+    props?.navBarExpanded
+      ? css`
+          background: linear-gradient(
+            to top,
+            rgba(255, 255, 255, 0.6) 0%,
+            rgba(247, 255, 255, 0.9) 20%,
+            rgba(198, 221, 226, 1) 100%
+          );
+          position: fixed;
+          height: 100vh;
+          width: 100%;
+        `
+      : css`
+          position: absolute;
+          width: 100%;
+          height: 120px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        `}
+`;
 
 export const StyledImageContainer = styled.div`
+  flex: 40%;
   margin-left: 2em;
 `;
 
-export const RelativeNav = styled.div`
-  position: absolute;
-  margin-top: -100px;
-  top: 100px;
+type StyledNavLinksContainerProps = {
+  navBarExpanded?: boolean;
+};
+
+export const StyledNavLinksContainer = styled.div<StyledNavLinksContainerProps>`
   display: flex;
-  justify-content: space-around;
   align-items: center;
   z-index: 1000;
-  width: 100%;
-`;
-
-export const NavBarContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  z-index: 1000;
+  justify-content: space-around;
+  ${(props) =>
+    props?.navBarExpanded
+      ? css`
+          flex-direction: column;
+          gap: 1em;
+        `
+      : css`
+          flex-direction: row;
+          flex: 60%;
+          @media (max-width: ${(props) =>
+              resolveThemeBreakPointValues(props?.theme, "md")}) {
+            display: none;
+          }
+        `}
 `;
 
 export const StyledNavLink = styled(Link)`
-  cursor: pointer;
   font-family: "Fahkwang", sans-serif;
-  font-weight: 400;
-  color: #0c7b93;
-  margin: 0em 1.7em 0 0;
-  font-size: 24px;
+  font-weight: 300;
+  font-size: 1.5em;
   font-style: normal;
   text-decoration: none;
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["navBarMenuTextShadow"]?.textShadow ?? ""};
+  cursor: pointer;
 
   :hover {
     text-decoration: underline;
   }
-
-  @media (max-width: 1000px) {
-    display: none;
-  }
 `;
 
-export const ExtendedStyledNavLink = styled.a`
-  position: relative;
+type StyledNavButtonProps = {
+  navBarExpanded?: boolean;
+};
+
+export const StyledNavButton = styled.div<StyledNavButtonProps>`
   cursor: pointer;
-  color: #0c7b93;
-  text-decoration: none;
-  margin: 2em 0 0 0;
-  font-size: 24px;
-  font-style: normal;
-  font-family: "Fahkwang", sans-serif;
-  font-weight: 400;
-  z-index: 1000;
-  :hover {
-    text-decoration: underline;
-  }
-
-  @media (min-width: 1000px) {
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
+  position: fixed;
+  top: 2em;
+  right: 2em;
+  margin-right: 1em;
+  @media (min-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     display: none;
   }
-`;
-
-export const LeftContainer = styled.div`
-  display: flex;
-  flex: 20%;
-  align-items: center;
-  margin-right: 2em;
-  justify-content: end;
-`;
-
-export const RightContainer = styled.div`
-  flex: 80%;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-
-  justify-content: space-around;
-
-  @media (max-width: 1000px) {
-    flex: 80%;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    margin-right: 2em;
-    justify-content: flex-end;
-  }
-`;
-
-export const NavBarLinkContainer = styled.div`
-  display: flex;
-  margin-right: 30px;
-`;
-
-export const NavBarInnerContainer = styled.div`
-  width: 100%;
-  display: flex;
-`;
-
-export const NavBarExtendedContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-export const OpenLinksButtonContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  cursor: pointer;
-  color: #0c7b93;
-`;
-
-export const OpenLinksButton = styled.div`
-  color: #0c7b93;
-  position: relative;
-
-  @media (min-width: 1000px) {
-    display: none;
-  }
-`;
-
-export const StyledLogoPng = styled.img`
-  width: 150px;
+  ${(props) => (props?.navBarExpanded ? css`` : css``)}
 `;

@@ -1,6 +1,6 @@
 import React from "react";
-import styled, { css } from "styled-components";
-import { StyledLinearGradient } from "../components";
+import styled from "styled-components";
+import { StyledLinearGradient } from "../components/common";
 
 const StyledContainer = styled.div`
   position: relative;
@@ -14,11 +14,10 @@ const GradientBottom: React.FC = () => {
   return (
     <StyledContainer>
       <StyledLinearGradient
-        direction="bottom"
-        variation="partial"
-        opacity={1}
+        direction="top"
+        variation="reversePartial"
+        visual={{ opacity: 1 }}
       />
-      ;
     </StyledContainer>
   );
 };

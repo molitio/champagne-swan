@@ -9,10 +9,12 @@ const nextConfig = {
     ignoreDuringBuilds: false,
   },
   images: {
+    loader: "default",
     remotePatterns: [
       {
         protocol: "https",
         hostname: "**.amazonaws.com",
+        pathname: "/filestore.molitio.org/**",
       },
     ],
   },
