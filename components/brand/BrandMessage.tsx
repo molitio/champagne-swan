@@ -12,9 +12,11 @@ import {
   StyledBrandMessageMainTitle,
 } from "./style";
 import { SystemContext } from "@molitio/ui-core";
+import { resolveThemeBreakPointValues } from "../utils";
 
 const BrandMessage: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
+  const theme = systemContext?.theme ?? {};
   const navTree = systemContext.navRoot ?? {};
 
   const brandMessageLeafs = systemContext?.contentRoot?.brandMessage?.leafs;
@@ -52,7 +54,7 @@ const BrandMessage: React.FC = () => {
             {textContent?.moreInfoButton ?? ""}
           </StyledContactLink>
         </StyledBrandMessageContent>
-        <StyledImageAndEffect>
+        <StyledImageAndEffect dimensions={{ height: "200px", width: "350px" }}>
           <NextImage
             containerPositioning={{
               position: "absolute",
@@ -73,13 +75,15 @@ const BrandMessage: React.FC = () => {
             containerPositioning={{
               position: "relative",
             }}
-            containerDimensions={{
-              height: "353px",
-              width: "529px",
-            }}
+            /*             containerDimensions={{
+              height: "150px",
+              width: "250px",
+            }} */
             imageProps={{
+              sizes: `(min-width: ${theme?.breakpoints?.values["xxl"]}${theme?.breakpoints?.unit})50vw`,
               src: assetUrls?.officeCleaners ?? "",
               alt: "office-cleaners",
+              fill: true,
             }}
             imageVisual={{
               boxShadow: " 0px 4px 4px rgba(0, 0, 0, 0.5)",

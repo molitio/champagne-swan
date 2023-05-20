@@ -126,8 +126,7 @@ export const ApplicationContextRoot = {
             moreInfoButton: "Bővebben",
           },
           assetUrls: {
-            officeCleaners:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/officecleaners.jpg",
+            officeCleaners: "/web_content/img/officecleaners.webp",
           },
         },
       },
