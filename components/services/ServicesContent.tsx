@@ -68,6 +68,7 @@ const ServicesContent: React.FC = () => {
               imageProps={{
                 src: commonAssetUrls?.waterSplash ?? "",
                 alt: "water-splash",
+                fill: true,
               }}
             />
             <NextImage
@@ -126,6 +127,7 @@ const ServicesContent: React.FC = () => {
               imageProps={{
                 src: commonAssetUrls?.waterSplash ?? "",
                 alt: "water-splash",
+                fill: true,
               }}
             />
             <NextImage
@@ -139,6 +141,7 @@ const ServicesContent: React.FC = () => {
               imageProps={{
                 src: assetUrls?.flatRoom ?? "",
                 alt: "flat-room",
+                fill: true,
               }}
               imageVisual={{
                 boxShadow:
@@ -186,6 +189,7 @@ const ServicesContent: React.FC = () => {
               imageProps={{
                 src: commonAssetUrls?.waterSplash ?? "",
                 alt: "water-splash",
+                fill: true,
               }}
             />
             <NextImage

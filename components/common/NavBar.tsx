@@ -33,6 +33,7 @@ const NavBar: React.FC = () => {
           imageProps={{
             src: commonAssetUrls?.horizontalLogo ?? "",
             alt: "logo",
+            fill: true,
           }}
         />
       </StyledImageContainer>
