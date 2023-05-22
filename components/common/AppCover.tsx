@@ -2,9 +2,9 @@ import React from "react";
 import { SystemContext } from "@molitio/ui-core";
 import {
   IconGroup,
-  NextImage,
   StyledLinearGradient,
   StyledCoverContent,
+  NextImage,
 } from "../common";
 import { useLineBreakParser } from "../utils";
 import {
@@ -13,6 +13,7 @@ import {
   StyledAppCoverDescription,
   StyledAppCover,
   StyledAppCoverMainTitle,
+  StyledAppCoverImage,
 } from "./style";
 
 const AppCover: React.FC = () => {
@@ -28,23 +29,10 @@ const AppCover: React.FC = () => {
 
   return (
     <StyledAppCover>
-      <NextImage
-        containerDimensions={{
-          height: "80vh",
-          width: "100%",
-        }}
-        containerPositioning={{
-          position: "relative",
-          top: "-2em",
-        }}
-        imagePositioning={{
-          objectFit: "cover",
-        }}
-        imageProps={{
-          src: assetUrls?.heroBackground ?? "",
-          alt: "cover-image",
-          fill: true,
-        }}
+      <StyledAppCoverImage
+        src={assetUrls?.heroBackground ?? ""}
+        alt={"cover-image"}
+        fill={true}
       />
       <StyledLinearGradient
         direction="bottom"

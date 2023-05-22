@@ -5,14 +5,13 @@ export const StyledCoverContent = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  top: 10em;
-  position: absolute;
+  padding: 10em 0 0 0;
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    //top: 6em;
+    padding: 8em 0 0 0;
   }
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "sm")}) {
-    top: 8em;
+    padding: 6em 0 0 0;
   }
 `;

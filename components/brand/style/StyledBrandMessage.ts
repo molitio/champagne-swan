@@ -36,7 +36,7 @@ export const StyledBrandMessageTitle = styled.h1`
 export const StyledBrandMessageContentContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   text-align: center;
   gap: 1em;
   margin-top: 6em;
@@ -44,6 +44,7 @@ export const StyledBrandMessageContentContainer = styled.div`
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
     flex-direction: column-reverse;
+    margin: auto;
   }
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
@@ -63,30 +64,34 @@ export const StyledBrandMessageContent = styled.div`
 export const StyledBrandMessageOfficeCleanerImageContainer = styled.div`
   position: relative;
   flex: 1;
-  min-height: 24em;
+  min-height: 28em;
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
     padding-top: 4em;
-    min-height: 20em;
+    min-height: 24em;
     width: 36em;
   }
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    min-height: 16em;
+    min-height: 20em;
     width: 24em;
   }
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "sm")}) {
-    min-height: 8em;
-    width: 12em;
+    min-height: 12em;
+    width: 16em;
   }
 `;
 
 export const StyledBrandMessageOfficeCleanerImage = styled(Image)`
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: ${(props) =>
+    props?.theme?.palette?.visual["brandMessageOfficeCleaners"]?.boxShadow ??
+    ""};
   border-radius: "1em";
   border-radius: 1em;
+  object-fit: cover;
+  object-position: center;
 `;
 
 export const StyledBrandMessageIconContainer = styled.div`
