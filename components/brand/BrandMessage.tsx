@@ -1,7 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import { SystemContext } from "@molitio/ui-core";
-import { StyledImageAndEffect, IconGroup, NextImage } from "../common";
+import { IconGroup } from "../common";
 import {
   StyledBrandMessage,
   StyledBrandMessageContentTitle,
@@ -11,9 +10,10 @@ import {
   StyledBrandMessageContent,
   StyledBrandMessageContentContainer,
   StyledBrandMessageMainTitle,
-  StyledBrandMessageImageContainer,
-  StyledBrandMessageInfoImageContainer,
+  StyledBrandMessageOfficeCleanerImageContainer,
+  StyledBrandMessageOfficeCleanerImage,
 } from "./style";
+import { StyledWaterSplash } from "../common/style/StyledWaterSplash";
 
 const BrandMessage: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
@@ -55,47 +55,23 @@ const BrandMessage: React.FC = () => {
             {textContent?.moreInfoButton ?? ""}
           </StyledContactLink>
         </StyledBrandMessageContent>
-        <StyledBrandMessageInfoImageContainer>
-          <NextImage
-            chilrenSequence="before"
-            containerPositioning={{
-              position: "relative",
-              margin: "auto",
-            }}
-            imageProps={{
-              id: "office-cleaners",
-              sizes: `(max-width: ${theme?.breakpoints?.values["xl"]}${theme?.breakpoints?.unit}) 50vw,
-                33vw`,
-              src: assetUrls?.officeCleaners ?? "",
-              alt: "office-cleaners",
-              fill: true,
-              style: { objectFit: "cover", objectPosition: "top" },
-            }}
-            imageVisual={{
-              boxShadow: " 0px 4px 4px rgba(0, 0, 0, 0.5)",
-              borderRadius: "1em",
-            }}
-          >
-            <NextImage
-              containerPositioning={{
-                position: "absolute",
-                right: "-80px",
-                bottom: "-120px",
-                transform: "rotate(-15deg)",
-                zIndex: "-1",
-              }}
-              containerDimensions={{
-                width: "250px",
-                height: "250px",
-              }}
-              imageProps={{
-                src: commonAssetUrls?.waterSplash ?? "",
-                alt: "water-splash",
-                fill: true,
-              }}
-            />
-          </NextImage>
-        </StyledBrandMessageInfoImageContainer>
+        <StyledBrandMessageOfficeCleanerImageContainer>
+          <StyledWaterSplash
+            src={commonAssetUrls?.waterSplash ?? ""}
+            alt={"water-splash"}
+            width={240}
+            height={240}
+          />
+          <StyledBrandMessageOfficeCleanerImage
+            id={"office-cleaners"}
+            sizes={`(max-width: ${theme?.breakpoints?.values["xl"]}${theme?.breakpoints?.unit}) 50vw,
+                33vw`}
+            src={assetUrls?.officeCleaners ?? ""}
+            alt={"office-cleaners"}
+            fill={true}
+            style={{ objectFit: "cover", objectPosition: "center" }}
+          />
+        </StyledBrandMessageOfficeCleanerImageContainer>
       </StyledBrandMessageContentContainer>
     </StyledBrandMessage>
   );

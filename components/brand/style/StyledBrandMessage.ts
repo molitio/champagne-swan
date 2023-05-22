@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
-import { NextImage } from "../../common";
+import Image from "next/image";
 import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledBrandMessage = styled.div`
@@ -33,26 +33,16 @@ export const StyledBrandMessageTitle = styled.h1`
   }
 `;
 
-/* export const PremiumLayerContainer = styled.img`
-  position: absolute;
-  width: 100%;
-  height: 540px;
-  z-index: -1;
-  margin-top: -1px;
-`; */
-
 export const StyledBrandMessageContentContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: stretch;
+  align-items: start;
   text-align: center;
   gap: 1em;
   margin-top: 6em;
   padding: 0 10em;
-
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    align-items: baseline;
     flex-direction: column-reverse;
   }
   @media (max-width: ${(props) =>
@@ -70,21 +60,33 @@ export const StyledBrandMessageContent = styled.div`
   flex: 1;
 `;
 
-export const StyledBrandMessageInfoImageContainer = styled.div`
+export const StyledBrandMessageOfficeCleanerImageContainer = styled.div`
+  position: relative;
   flex: 1;
+  min-height: 24em;
+
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
     padding-top: 4em;
+    min-height: 20em;
     width: 36em;
   }
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
+    min-height: 16em;
     width: 24em;
   }
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    min-height: 8em;
     width: 12em;
   }
+`;
+
+export const StyledBrandMessageOfficeCleanerImage = styled(Image)`
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  border-radius: "1em";
+  border-radius: 1em;
 `;
 
 export const StyledBrandMessageIconContainer = styled.div`
