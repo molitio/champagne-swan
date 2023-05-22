@@ -27,6 +27,7 @@ const Partners: React.FC = () => {
             imageProps={{
               src: assetUrls?.mLogo ?? "",
               alt: "m-logo",
+              fill: true,
             }}
           />
         </StyledPartnersImageContainer>
@@ -39,6 +40,7 @@ const Partners: React.FC = () => {
             imageProps={{
               src: assetUrls?.houseLogo ?? "",
               alt: "house-logo",
+              fill: true,
             }}
           />
         </StyledPartnersImageContainer>
@@ -51,6 +53,7 @@ const Partners: React.FC = () => {
             imageProps={{
               src: assetUrls?.brandLogo ?? "",
               alt: "brand-logo",
+              fill: true,
             }}
           />
         </StyledPartnersImageContainer>
@@ -63,6 +66,7 @@ const Partners: React.FC = () => {
             imageProps={{
               src: assetUrls?.officeLogo ?? "",
               alt: "office-logo",
+              fill: true,
             }}
           />
         </StyledPartnersImageContainer>

@@ -43,6 +43,7 @@ const AppCover: React.FC = () => {
         imageProps={{
           src: assetUrls?.heroBackground ?? "",
           alt: "cover-image",
+          fill: true,
         }}
       />
       <StyledLinearGradient
@@ -83,6 +84,7 @@ const AppCover: React.FC = () => {
             imageProps={{
               src: commonAssetUrls?.waterSplash ?? "",
               alt: "water-splash",
+              fill: true,
             }}
           />
           <StyledCoverContactLink

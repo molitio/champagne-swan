@@ -115,6 +115,7 @@ const AboutContent: React.FC = () => {
               imageProps={{
                 src: commonAssetUrls?.waterSplash ?? "",
                 alt: "water-splash",
+                fill: true,
               }}
             />
             <NextImage

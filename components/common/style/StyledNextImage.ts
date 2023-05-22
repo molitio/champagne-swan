@@ -50,8 +50,8 @@ export const StyledNextImageContainer = styled.div<StyledNextImageContainerProps
           max-width: ${props?.dimensions?.maxWidth ?? ""};
         `
       : css`
-          height: 100%;
-          width: 100%;
+          /*           height: 100%;
+          width: 100%; */
         `}
 `;
 
@@ -65,7 +65,7 @@ export const StyledImageAndEffect = styled.div<StyledImageAndEffectProps>`
   height: ${(props) => props?.dimensions?.height ?? ""};
   width: ${(props) => props?.dimensions?.width ?? ""};
   min-height: ${(props) => props?.dimensions?.minHeight ?? ""};
-  min-height: ${(props) => props?.dimensions?.minHeight ?? ""};
+  min-width: ${(props) => props?.dimensions?.minHeight ?? ""};
   max-height: ${(props) => props?.dimensions?.maxHeight ?? ""};
   max-width: ${(props) => props?.dimensions?.maxWidth ?? ""};
   margin: ${(props) => props?.positioning?.margin ?? ""};
