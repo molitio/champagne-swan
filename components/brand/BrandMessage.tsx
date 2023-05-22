@@ -14,10 +14,11 @@ import {
   StyledBrandMessageOfficeCleanerImage,
 } from "./style";
 import { StyledWaterSplash } from "../common/style/StyledWaterSplash";
+import { resolveThemeBreakPointValues } from "../utils";
 
 const BrandMessage: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
-  const theme = systemContext?.theme ?? {};
+
   const navTree = systemContext.navRoot ?? {};
 
   const brandMessageLeafs = systemContext?.contentRoot?.brandMessage?.leafs;
@@ -64,12 +65,14 @@ const BrandMessage: React.FC = () => {
           />
           <StyledBrandMessageOfficeCleanerImage
             id={"office-cleaners"}
-            sizes={`(max-width: ${theme?.breakpoints?.values["xl"]}${theme?.breakpoints?.unit}) 50vw,
+            sizes={`(max-width: ${resolveThemeBreakPointValues(
+              systemContext?.theme,
+              "xl"
+            )}) 50vw,
                 33vw`}
             src={assetUrls?.officeCleaners ?? ""}
             alt={"office-cleaners"}
             fill={true}
-            style={{ objectFit: "cover", objectPosition: "center" }}
           />
         </StyledBrandMessageOfficeCleanerImageContainer>
       </StyledBrandMessageContentContainer>
