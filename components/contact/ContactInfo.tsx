@@ -88,6 +88,7 @@ const ContactInfo: React.FC = () => {
           imageProps={{
             src: commonAssetUrls?.logo ?? "",
             alt: "logo",
+            fill: true,
           }}
         />
       </StyledLogoContainer>

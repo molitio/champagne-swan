@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
+import { NextImage } from "../../common";
 import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledBrandMessage = styled.div`
@@ -22,12 +23,12 @@ export const StyledBrandMessageTitle = styled.h1`
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    font-size: 2.4;
+    font-size: 2.4em;
     margin-bottom: 20px;
   }
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    font-size: 1.6em;
+    font-size: 1.8em;
     margin-bottom: 20px;
   }
 `;
@@ -42,23 +43,48 @@ export const StyledBrandMessageTitle = styled.h1`
 
 export const StyledBrandMessageContentContainer = styled.div`
   display: flex;
-  gap: 1em;
   justify-content: center;
-  margin-top: 6em;
-  align-items: center;
+  align-items: stretch;
   text-align: center;
+  gap: 1em;
+  margin-top: 6em;
+  padding: 0 10em;
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    align-items: center;
+    align-items: baseline;
     flex-direction: column-reverse;
+  }
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    width: 24em;
+  }
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    width: 12em;
   }
 `;
 
 export const StyledBrandMessageContent = styled.div`
-  padding: 1em;
-  width: 36em;
   text-align: center;
+  flex: 1;
+`;
+
+export const StyledBrandMessageInfoImageContainer = styled.div`
+  flex: 1;
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    padding-top: 4em;
+    width: 36em;
+  }
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    width: 24em;
+  }
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    width: 12em;
+  }
 `;
 
 export const StyledBrandMessageIconContainer = styled.div`
@@ -166,13 +192,14 @@ export const StyledBrandMessageContentTitle = styled.h1`
       ?.textShadow ?? ""};
   font-weight: 400;
   font-size: 2.4em;
-  padding-top: 2em;
-
+  margin: 0;
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
     display: block;
     margin: auto;
     text-align: center;
+    padding: 2em 0 0 0;
+
     width: 10em;
   }
   @media (max-width: ${(props) =>

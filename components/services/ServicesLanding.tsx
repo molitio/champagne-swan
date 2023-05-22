@@ -84,15 +84,21 @@ const ServicesLanding: React.FC = () => {
               imageProps={{
                 src: commonAssetUrls?.waterSplash ?? "",
                 alt: "water-splash",
+                fill: true,
               }}
             />
             <NextImage
               containerPositioning={{
                 position: "absolute",
               }}
+              containerDimensions={{
+                width: "25em",
+                height: "15em",
+              }}
               imageProps={{
                 src: assetUrls?.morning ?? "",
                 alt: "morning-sunshine",
+                fill: true,
               }}
               imageVisual={{
                 boxShadow: "2px 4px 4px #C1DFE6ff",
@@ -137,15 +143,21 @@ const ServicesLanding: React.FC = () => {
               imageProps={{
                 src: commonAssetUrls?.waterSplash ?? "",
                 alt: "water-splash",
+                fill: true,
               }}
             />
             <NextImage
               containerPositioning={{
                 position: "absolute",
               }}
+              containerDimensions={{
+                width: "25em",
+                height: "15em",
+              }}
               imageProps={{
                 src: assetUrls?.flatRoom ?? "",
                 alt: "flat-room",
+                fill: true,
               }}
               imageVisual={{
                 boxShadow: "2px 4px 4px #C1DFE6ff",
@@ -189,15 +201,21 @@ const ServicesLanding: React.FC = () => {
               imageProps={{
                 src: commonAssetUrls?.waterSplash ?? "",
                 alt: "water-splash",
+                fill: true,
               }}
             />
             <NextImage
               containerPositioning={{
                 position: "absolute",
               }}
+              containerDimensions={{
+                width: "25em",
+                height: "15em",
+              }}
               imageProps={{
                 src: assetUrls?.industry ?? "",
                 alt: "industry-park",
+                fill: true,
               }}
               imageVisual={{
                 boxShadow: "2px 4px 4px #C1DFE6ff",

@@ -12,6 +12,7 @@
  * @property {string} [padding] - The CSS padding property.
  * @property {string} [margin] - The CSS margin property.
  * @property {string} [objectFit] - The CSS object-fit property.
+ * @property {string} [zIndex] - The CSS z-index property.
  */
 
 export type Positioning = {
@@ -24,4 +25,5 @@ export type Positioning = {
   padding?: string;
   margin?: string;
   objectFit?: string;
+  zIndex?: string;
 };

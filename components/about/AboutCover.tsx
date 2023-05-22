@@ -72,6 +72,7 @@ const AboutCover: React.FC = () => {
             imageProps={{
               src: commonAssetUrls?.waterSplash ?? "",
               alt: "water-splash",
+              fill: true,
             }}
           />
           <StyledCoverContactLink

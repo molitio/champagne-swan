@@ -54,6 +54,7 @@ const Opinions: React.FC = () => {
           imageProps={{
             src: commonAssetUrls?.stockPersonAvatar ?? "",
             alt: "person-avatar",
+            fill: true,
           }}
           imageVisual={{
             borderRadius: "50%",
@@ -77,6 +78,7 @@ const Opinions: React.FC = () => {
           imageProps={{
             src: commonAssetUrls?.stockPersonAvatar ?? "",
             alt: "person-avatar",
+            fill: true,
           }}
           imageVisual={{
             borderRadius: "50%",
@@ -96,6 +98,7 @@ const Opinions: React.FC = () => {
           imageProps={{
             src: commonAssetUrls?.logo ?? "",
             alt: "logo",
+            fill: true,
           }}
         />
       </StyledOpininsLogo>

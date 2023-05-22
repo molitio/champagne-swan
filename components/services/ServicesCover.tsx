@@ -33,6 +33,7 @@ const ServicesCover: React.FC = () => {
         imageProps={{
           src: assetUrls?.window ?? "",
           alt: "cover-image",
+          fill: true,
         }}
       />
       <StyledLinearGradient

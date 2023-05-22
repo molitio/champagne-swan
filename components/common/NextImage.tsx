@@ -11,9 +11,12 @@ type NextImageProps = {
   containerDimensions?: Dimensions;
   containerPositioning?: Positioning;
   containerVisual?: Visual;
+  chilrenSequence?: "before" | "after";
 };
 
-const NextImage: React.FC<NextImageProps> = (props) => {
+const NextImage: React.FC<NextImageProps & React.PropsWithChildren> = (
+  props
+) => {
   const {
     imageProps,
     imagePositioning,
@@ -21,15 +24,17 @@ const NextImage: React.FC<NextImageProps> = (props) => {
     containerPositioning,
     containerVisual,
     imageVisual,
+    children,
+    chilrenSequence,
   } = props;
 
   const nextImageProps = {
     ...imageProps,
   };
 
-  if (!imageProps.width || !imageProps.height) {
+  /*   if (!imageProps.width || !imageProps.height) {
     nextImageProps.fill = true;
-  }
+  } */
 
   return (
     <StyledNextImageContainer
@@ -37,11 +42,13 @@ const NextImage: React.FC<NextImageProps> = (props) => {
       positioning={containerPositioning}
       visual={containerVisual}
     >
+      {chilrenSequence === "before" ? children : ""}
       <StyledNextImage
         positioning={{ ...imagePositioning }}
         visual={{ ...imageVisual }}
         {...nextImageProps}
       />
+      {chilrenSequence === "after" ? children : ""}
     </StyledNextImageContainer>
   );
 };
