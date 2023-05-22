@@ -55,7 +55,7 @@ export const StyledNavLinksContainer = styled.div<StyledNavLinksContainerProps>`
           flex-direction: row;
           flex: 60%;
           @media (max-width: ${(props) =>
-              resolveThemeBreakPointValues(props?.theme, "md")}) {
+              resolveThemeBreakPointValues(props?.theme, "xl")}) {
             display: none;
           }
         `}
@@ -89,7 +89,7 @@ export const StyledNavButton = styled.div<StyledNavButtonProps>`
   right: 2em;
   margin-right: 1em;
   @media (min-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
     display: none;
   }
   ${(props) => (props?.navBarExpanded ? css`` : css``)}
