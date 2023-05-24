@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { resolveThemeBreakPointValues } from "../../utils";
 
-export const StyledOpinions = styled.div`
+export const StyledOpinions = styled.section`
   padding-top: 5em;
   position: relative;
 `;

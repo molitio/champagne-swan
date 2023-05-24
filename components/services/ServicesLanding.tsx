@@ -2,21 +2,23 @@ import React from "react";
 import { SystemContext } from "@molitio/ui-core";
 import {
   IconGroup,
-  NextImage,
   StyledLinearGradient,
-  StyledImageAndEffect,
+  StyledServicesLandingPanelImageWaterSplash,
 } from "../common";
 import {
   StyledServicesContent,
   StyledServicesLandingMainTitle,
   StyledServicesContentContainer,
-  StyledContentBox,
+  StyledServicesLandingPanelContent,
   StyledContactLink,
   StyledServicesContentBoxTitle,
   StyledServicesContentBoxText,
   StyledServicesIconContainer,
-  StyledServicesContentBlockImage,
+  StyledServicesLandingPanelImageContainer,
+  StyledServicesLandingPanelImageAndEffect,
+  StyledServicesLandingPanelImage,
 } from "./style";
+import { resolveThemeBreakPointValues } from "../utils";
 
 const ServicesLanding: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
@@ -54,7 +56,7 @@ const ServicesLanding: React.FC = () => {
       </StyledServicesLandingMainTitle>
 
       <StyledServicesContentContainer>
-        <StyledContentBox>
+        <StyledServicesLandingPanelContent>
           <StyledServicesContentBoxTitle>
             {textContent?.comercialServicesContentTitle ?? ""}
           </StyledServicesContentBoxTitle>
@@ -64,53 +66,32 @@ const ServicesLanding: React.FC = () => {
           <StyledContactLink href={navLeafs?.mainContent?.path ?? ""}>
             {navLeafs?.mainContent?.label ?? ""}
           </StyledContactLink>
-        </StyledContentBox>
-        <StyledServicesContentBlockImage>
-          <StyledImageAndEffect
-            dimensions={{
-              height: "353px",
-              width: "529px",
-            }}
-            positioning={{ margin: "3em" }}
-          >
-            <NextImage
-              containerPositioning={{
-                position: "absolute",
-                right: "-80px",
-                bottom: "-120px",
-                transform: "rotate(-15deg)",
-              }}
-              containerDimensions={{ width: "250px", height: "250px" }}
-              imageProps={{
-                src: commonAssetUrls?.waterSplash ?? "",
-                alt: "water-splash",
-                fill: true,
-              }}
+        </StyledServicesLandingPanelContent>
+        <StyledServicesLandingPanelImageContainer>
+          <StyledServicesLandingPanelImageAndEffect>
+            <StyledServicesLandingPanelImageWaterSplash
+              src={commonAssetUrls?.waterSplash ?? ""}
+              alt={"water-splash"}
+              width={240}
+              height={240}
             />
-            <NextImage
-              containerPositioning={{
-                position: "absolute",
-              }}
-              containerDimensions={{
-                width: "25em",
-                height: "15em",
-              }}
-              imageProps={{
-                src: assetUrls?.morning ?? "",
-                alt: "morning-sunshine",
-                fill: true,
-              }}
-              imageVisual={{
-                boxShadow: "2px 4px 4px #C1DFE6ff",
-                borderRadius: "1em",
-              }}
+            <StyledServicesLandingPanelImage
+              id={"office-cleaners"}
+              sizes={`(max-width: ${resolveThemeBreakPointValues(
+                systemContext?.theme,
+                "xl"
+              )}) 50vw,
+                33vw`}
+              src={assetUrls?.morning ?? ""}
+              alt={"morning-sunshine"}
+              fill={true}
             />
-          </StyledImageAndEffect>
-        </StyledServicesContentBlockImage>
+          </StyledServicesLandingPanelImageAndEffect>
+        </StyledServicesLandingPanelImageContainer>
       </StyledServicesContentContainer>
 
       <StyledServicesContentContainer reversed>
-        <StyledContentBox>
+        <StyledServicesLandingPanelContent>
           <StyledServicesContentBoxTitle>
             {textContent?.privateServicesContentTitle ?? ""}
           </StyledServicesContentBoxTitle>
@@ -120,55 +101,31 @@ const ServicesLanding: React.FC = () => {
           <StyledContactLink href={navLeafs?.privateServices?.path ?? ""}>
             {navLeafs?.privateServices?.label ?? ""}
           </StyledContactLink>
-        </StyledContentBox>
-        <StyledServicesContentBlockImage>
-          <StyledImageAndEffect
-            dimensions={{
-              height: "353px",
-              width: "529px",
-            }}
-            positioning={{ margin: "3em" }}
-          >
-            <NextImage
-              containerPositioning={{
-                position: "absolute",
-                right: "-80px",
-                bottom: "-120px",
-                transform: "rotate(-15deg)",
-              }}
-              containerDimensions={{
-                width: "250px",
-                height: "250px",
-              }}
-              imageProps={{
-                src: commonAssetUrls?.waterSplash ?? "",
-                alt: "water-splash",
-                fill: true,
-              }}
+        </StyledServicesLandingPanelContent>
+        <StyledServicesLandingPanelImageContainer>
+          <StyledServicesLandingPanelImageAndEffect>
+            <StyledServicesLandingPanelImageWaterSplash
+              src={commonAssetUrls?.waterSplash ?? ""}
+              alt={"water-splash"}
+              width={240}
+              height={240}
             />
-            <NextImage
-              containerPositioning={{
-                position: "absolute",
-              }}
-              containerDimensions={{
-                width: "25em",
-                height: "15em",
-              }}
-              imageProps={{
-                src: assetUrls?.flatRoom ?? "",
-                alt: "flat-room",
-                fill: true,
-              }}
-              imageVisual={{
-                boxShadow: "2px 4px 4px #C1DFE6ff",
-                borderRadius: "1em",
-              }}
+            <StyledServicesLandingPanelImage
+              id={"office-cleaners"}
+              sizes={`(max-width: ${resolveThemeBreakPointValues(
+                systemContext?.theme,
+                "xl"
+              )}) 50vw,
+                33vw`}
+              src={assetUrls?.flatRoom ?? ""}
+              alt={"flat-room"}
+              fill={true}
             />
-          </StyledImageAndEffect>
-        </StyledServicesContentBlockImage>
+          </StyledServicesLandingPanelImageAndEffect>
+        </StyledServicesLandingPanelImageContainer>
       </StyledServicesContentContainer>
       <StyledServicesContentContainer>
-        <StyledContentBox>
+        <StyledServicesLandingPanelContent>
           <StyledServicesContentBoxTitle>
             {textContent?.highCeilingContentTitle ?? ""}
           </StyledServicesContentBoxTitle>
@@ -178,52 +135,28 @@ const ServicesLanding: React.FC = () => {
           <StyledContactLink href={navLeafs?.highCeilingServices?.path ?? ""}>
             {navLeafs?.highCeilingServices?.label ?? ""}
           </StyledContactLink>
-        </StyledContentBox>
-        <StyledServicesContentBlockImage>
-          <StyledImageAndEffect
-            dimensions={{
-              height: "353px",
-              width: "529px",
-            }}
-            positioning={{ margin: "3em" }}
-          >
-            <NextImage
-              containerPositioning={{
-                position: "absolute",
-                right: "-80px",
-                bottom: "-120px",
-                transform: "rotate(-15deg)",
-              }}
-              containerDimensions={{
-                width: "250px",
-                height: "250px",
-              }}
-              imageProps={{
-                src: commonAssetUrls?.waterSplash ?? "",
-                alt: "water-splash",
-                fill: true,
-              }}
+        </StyledServicesLandingPanelContent>
+        <StyledServicesLandingPanelImageContainer>
+          <StyledServicesLandingPanelImageAndEffect>
+            <StyledServicesLandingPanelImageWaterSplash
+              src={commonAssetUrls?.waterSplash ?? ""}
+              alt={"water-splash"}
+              width={240}
+              height={240}
             />
-            <NextImage
-              containerPositioning={{
-                position: "absolute",
-              }}
-              containerDimensions={{
-                width: "25em",
-                height: "15em",
-              }}
-              imageProps={{
-                src: assetUrls?.industry ?? "",
-                alt: "industry-park",
-                fill: true,
-              }}
-              imageVisual={{
-                boxShadow: "2px 4px 4px #C1DFE6ff",
-                borderRadius: "1em",
-              }}
+            <StyledServicesLandingPanelImage
+              id={"office-cleaners"}
+              sizes={`(max-width: ${resolveThemeBreakPointValues(
+                systemContext?.theme,
+                "xl"
+              )}) 50vw,
+                33vw`}
+              src={assetUrls?.industry ?? ""}
+              alt={"industry-park"}
+              fill={true}
             />
-          </StyledImageAndEffect>
-        </StyledServicesContentBlockImage>
+          </StyledServicesLandingPanelImageAndEffect>
+        </StyledServicesLandingPanelImageContainer>
       </StyledServicesContentContainer>
     </StyledServicesContent>
   );

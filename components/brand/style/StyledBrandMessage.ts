@@ -1,101 +1,131 @@
+import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
-import Image from "next/image";
 import { resolveThemeBreakPointValues } from "../../utils";
 
-export const StyledBrandMessage = styled.div`
+export const StyledBrandMessage = styled.section`
   position: relative;
-  padding: 5em 0 5em 0;
   align-items: center;
+  padding: 0 10vw 0 10vw;
+  height: 80vh;
   background: ${(props) => props?.theme?.palette?.background?.default ?? ""};
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xxl")}) {
+    padding: 0 8vw 0 8vw;
+  }
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    padding: 5vw 0 5vw 0;
+    height: auto;
+  }
 `;
 
 export const StyledBrandMessageTitle = styled.h1`
   text-align: center;
+  font-weight: 400;
+  font-size: 3.8rem;
+  line-height: 2em;
+  white-space: pre;
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual?.["aboutContentTitleShadow"]?.textShadow ??
     ""};
-  font-weight: 400;
-  font-size: 3.8em;
-  white-space: pre;
-  line-height: 2em;
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    font-size: 2.4em;
-    margin-bottom: 20px;
+    font-size: 2.4rem;
   }
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    font-size: 1.8em;
-    margin-bottom: 20px;
+    font-size: 1.8rem;
   }
 `;
 
-export const StyledBrandMessageContentContainer = styled.div`
+export const StyledBrandMessagePanel = styled.div`
+  position: relative;
   display: flex;
+  align-items: flex-start;
   justify-content: center;
-  align-items: center;
-  text-align: center;
   gap: 1em;
   margin-top: 6em;
-  padding: 0 10em;
+
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    flex-direction: column-reverse;
-    margin: auto;
+    flex-wrap: wrap;
+    align-content: flex-start;
   }
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    width: 24em;
+    padding: 0;
   }
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "sm")}) {
+  }
+`;
+
+export const StyledBrandMessagePanelContent = styled.div`
+  flex: 1 0 36em;
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    text-align: center;
+    order: 2;
+  }
+`;
+
+export const StyledBrandMessagePanelImage = styled.div`
+  position: relative;
+  flex: 1 0 36em;
+  order: 1;
+`;
+
+export const StyledBrandMessageImageAndEffect = styled.div`
+  position: relative;
+  height: 28em;
+  width: 36em;
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xxl")}) {
+    height: 20em;
+    width: 28em;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    height: 20em;
+    width: 28em;
+    margin: auto;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+    height: 20em;
+    width: 28em;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    height: 12em;
+    width: 20em;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    height: 8em;
     width: 12em;
   }
 `;
 
-export const StyledBrandMessageContent = styled.div`
-  text-align: center;
-  flex: 1;
-`;
-
-export const StyledBrandMessageOfficeCleanerImageContainer = styled.div`
-  position: relative;
-  flex: 1;
-  min-height: 28em;
-
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    padding-top: 4em;
-    min-height: 24em;
-    width: 36em;
-  }
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
-    min-height: 20em;
-    width: 24em;
-  }
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "sm")}) {
-    min-height: 12em;
-    width: 16em;
-  }
-`;
-
 export const StyledBrandMessageOfficeCleanerImage = styled(Image)`
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1em;
   box-shadow: ${(props) =>
     props?.theme?.palette?.visual["brandMessageOfficeCleaners"]?.boxShadow ??
     ""};
-  border-radius: "1em";
-  border-radius: 1em;
-  object-fit: cover;
-  object-position: center;
 `;
 
-export const StyledBrandMessageIconContainer = styled.div`
-  padding-top: 12em;
+export const StyledBrandMessageIcons = styled.div`
+  padding-top: 4em;
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
     padding-top: 8em;
@@ -126,33 +156,6 @@ export const StyledBrandMessageMainTitle = styled.h1`
 
 export const StyledBrandMessageImageContainer = styled.div`
   padding-top: 5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    flex-direction: column;
-  }
-`;
-
-export const StyledBrandMessageQuoteContainer = styled.div`
-  width: 52em;
-  display: block;
-  margin: 0 auto 3em auto;
-
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    width: 30em;
-  }
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    width: 25em;
-  }
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
-    width: 18em;
-  }
 `;
 
 export const StyledAboutQuoteText = styled.p`
@@ -191,7 +194,7 @@ export const StyledAboutQuoteAuthorText = styled.p`
   }
 `;
 
-export const StyledBrandMessageContentTitle = styled.h1`
+export const StyledBrandMessagePanelTitle = styled.h1`
   font-family: "Lato", sans-serif;
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-shadow: ${(props) =>
@@ -215,23 +218,26 @@ export const StyledBrandMessageContentTitle = styled.h1`
   }
 `;
 
-export const StyledBrandMessageContentText = styled.p`
+export const StyledBrandMessagePanelText = styled.p`
   position: relative;
-  margin-bottom: 2em;
-  text-align: center;
+  margin: 0 0 2em 0;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.4em;
+  width: 28em;
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["brandMessageContentTextShadow"]
       ?.textShadow ?? ""};
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xxl")}) {
+    width: 20em;
+  }
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    display: block;
-    margin: 2em auto 2em auto;
-    text-align: center;
+    margin: 2em auto;
+    text-align: start;
   }
 
   @media (max-width: ${(props) =>
@@ -244,7 +250,6 @@ export const StyledBrandMessageText = styled.p`
   margin: 0 auto;
   padding: 0 6em;
   font-family: "Lato", sans-serif;
-  text-align: center;
   font-weight: 400;
   font-size: 1.2em;
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
@@ -253,7 +258,7 @@ export const StyledBrandMessageText = styled.p`
       ?.textShadow ?? ""};
 `;
 
-export const StyledContactLink = styled(Link)`
+export const StyledBrandMessagePanelContactLink = styled(Link)`
   position: relative;
   padding: 0.6em 1.2em;
   font-size: 1.5em;

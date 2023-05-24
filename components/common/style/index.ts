@@ -13,3 +13,5 @@ export * from "./StyledStarSvgIcon";
 export * from "./StyledFormContainer";
 export * from "./StyledCover";
 export * from "./StyledAppCover";
+export * from "./StyledWaterSplash";
+export * from "./StyledBreakPointDisplay";
