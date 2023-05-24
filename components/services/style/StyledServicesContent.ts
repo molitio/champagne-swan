@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image";
 import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledServicesContent = styled.section`
@@ -58,7 +59,7 @@ export const StyledServicesContentBlock = styled.div`
   }
 `;
 
-export const StyledServicesContentBlockImage = styled.div`
+export const StyledServicesLandingPanelImageContainer = styled.div`
   flex: 1 0 30vw;
   &:first-child {
     margin: 0;
@@ -72,6 +73,52 @@ export const StyledServicesContentBlockImage = styled.div`
     padding: 4em 0 0 0;
     align-self: center;
     flex: 1 1 10em;
+  }
+`;
+
+export const StyledServicesLandingPanelImage = styled(Image)`
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1em;
+  box-shadow: ${(props) =>
+    props?.theme?.palette?.visual["brandMessageOfficeCleaners"]?.boxShadow ??
+    ""};
+`;
+
+export const StyledServicesLandingPanelImageAndEffect = styled.div`
+  position: relative;
+  height: 28em;
+  width: 36em;
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xxl")}) {
+    height: 20em;
+    width: 28em;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    height: 20em;
+    width: 28em;
+    margin: auto;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+    height: 20em;
+    width: 28em;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    height: 12em;
+    width: 20em;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    height: 8em;
+    width: 12em;
   }
 `;
 

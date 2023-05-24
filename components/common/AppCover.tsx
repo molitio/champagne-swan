@@ -1,11 +1,6 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
-import {
-  IconGroup,
-  StyledLinearGradient,
-  StyledCoverContent,
-  NextImage,
-} from "../common";
+import { IconGroup, StyledLinearGradient, StyledCoverContent } from "../common";
 import { useLineBreakParser } from "../utils";
 import {
   StyledCoverContactLink,
@@ -14,6 +9,7 @@ import {
   StyledAppCover,
   StyledAppCoverMainTitle,
   StyledAppCoverImage,
+  StyledWaterSplashButton,
 } from "./style";
 
 const AppCover: React.FC = () => {
@@ -59,7 +55,13 @@ const AppCover: React.FC = () => {
         </StyledAppCoverDescription>
 
         <StyledButtonContainer>
-          <NextImage
+          {/* have dynamic asset size loading from theme context? */}
+          <StyledWaterSplashButton
+            src={commonAssetUrls?.waterSplash ?? ""}
+            alt={"water-splash"}
+            fill={true}
+          />
+          {/*           <NextImage
             containerPositioning={{
               right: "-80px",
               bottom: "-120px",
@@ -74,7 +76,7 @@ const AppCover: React.FC = () => {
               alt: "water-splash",
               fill: true,
             }}
-          />
+          /> */}
           <StyledCoverContactLink
             key={navTree?.contact?.path ?? ""}
             href={navTree?.contact?.path ?? ""}

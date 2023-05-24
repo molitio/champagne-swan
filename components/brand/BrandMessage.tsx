@@ -1,19 +1,19 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
-import { IconGroup } from "../common";
+import { IconGroup, StyledBrandMessageInfoWaterSplash } from "../common";
 import {
   StyledBrandMessage,
-  StyledBrandMessageContentTitle,
-  StyledBrandMessageContentText,
-  StyledContactLink,
-  StyledBrandMessageIconContainer,
-  StyledBrandMessageContent,
-  StyledBrandMessageContentContainer,
+  StyledBrandMessagePanelTitle,
+  StyledBrandMessagePanelText,
+  StyledBrandMessagePanelContactLink,
+  StyledBrandMessageIcons,
+  StyledBrandMessagePanelContent,
+  StyledBrandMessagePanel,
   StyledBrandMessageMainTitle,
-  StyledBrandMessageOfficeCleanerImageContainer,
+  StyledBrandMessagePanelImage,
   StyledBrandMessageOfficeCleanerImage,
+  StyledBrandMessageImageAndEffect,
 } from "./style";
-import { StyledWaterSplash } from "../common/style/StyledWaterSplash";
 import { resolveThemeBreakPointValues } from "../utils";
 
 const BrandMessage: React.FC = () => {
@@ -30,52 +30,57 @@ const BrandMessage: React.FC = () => {
 
   return (
     <StyledBrandMessage>
-      <StyledBrandMessageIconContainer>
+      <StyledBrandMessageIcons>
         <IconGroup
           fill={systemContext?.theme?.palette?.stars?.gold ?? ""}
           starCount={5}
         />
-      </StyledBrandMessageIconContainer>
+      </StyledBrandMessageIcons>
+
       <StyledBrandMessageMainTitle>
         {textContent?.title ?? ""}
       </StyledBrandMessageMainTitle>
-      <StyledBrandMessageContentContainer>
-        <StyledBrandMessageContent>
-          <StyledBrandMessageContentTitle>
+
+      <StyledBrandMessagePanel>
+        <StyledBrandMessagePanelContent>
+          <StyledBrandMessagePanelTitle>
             {textContent?.contentTitle ?? ""}
-          </StyledBrandMessageContentTitle>
+          </StyledBrandMessagePanelTitle>
 
-          <StyledBrandMessageContentText>
+          <StyledBrandMessagePanelText>
             {textContent?.contentText ?? ""}
-          </StyledBrandMessageContentText>
+          </StyledBrandMessagePanelText>
 
-          <StyledContactLink
+          <StyledBrandMessagePanelContactLink
             key={navTree?.about?.path ?? ""}
             href={navTree?.about?.path ?? ""}
           >
             {textContent?.moreInfoButton ?? ""}
-          </StyledContactLink>
-        </StyledBrandMessageContent>
-        <StyledBrandMessageOfficeCleanerImageContainer>
-          <StyledWaterSplash
-            src={commonAssetUrls?.waterSplash ?? ""}
-            alt={"water-splash"}
-            width={240}
-            height={240}
-          />
-          <StyledBrandMessageOfficeCleanerImage
-            id={"office-cleaners"}
-            sizes={`(max-width: ${resolveThemeBreakPointValues(
-              systemContext?.theme,
-              "xl"
-            )}) 50vw,
+          </StyledBrandMessagePanelContactLink>
+        </StyledBrandMessagePanelContent>
+
+        <StyledBrandMessagePanelImage>
+          <StyledBrandMessageImageAndEffect>
+            <StyledBrandMessageInfoWaterSplash
+              src={commonAssetUrls?.waterSplash ?? ""}
+              alt={"water-splash"}
+              width={240}
+              height={240}
+            />
+            <StyledBrandMessageOfficeCleanerImage
+              id={"office-cleaners"}
+              sizes={`(max-width: ${resolveThemeBreakPointValues(
+                systemContext?.theme,
+                "xl"
+              )}) 50vw,
                 33vw`}
-            src={assetUrls?.officeCleaners ?? ""}
-            alt={"office-cleaners"}
-            fill={true}
-          />
-        </StyledBrandMessageOfficeCleanerImageContainer>
-      </StyledBrandMessageContentContainer>
+              src={assetUrls?.officeCleaners ?? ""}
+              alt={"office-cleaners"}
+              fill={true}
+            />
+          </StyledBrandMessageImageAndEffect>
+        </StyledBrandMessagePanelImage>
+      </StyledBrandMessagePanel>
     </StyledBrandMessage>
   );
 };

@@ -13,7 +13,7 @@ import {
   StyledServicesContent,
   StyledServicesContentBlock,
   StyledServicesContentBlockItem,
-  StyledServicesContentBlockImage,
+  StyledServicesLandingPanelImageContainer,
   StyledServicesContentBlockItemInfo,
 } from "./style";
 
@@ -49,7 +49,7 @@ const ServicesContent: React.FC = () => {
       </StyledServicesContentMainTitle>
 
       <StyledServicesContentBlock>
-        <StyledServicesContentBlockImage>
+        <StyledServicesLandingPanelImageContainer>
           <StyledImageAndEffect
             dimensions={{
               height: "350px",
@@ -91,7 +91,7 @@ const ServicesContent: React.FC = () => {
               }}
             />
           </StyledImageAndEffect>
-        </StyledServicesContentBlockImage>
+        </StyledServicesLandingPanelImageContainer>
         <StyledServicesContentBlockItem>
           <StyledServicesContentBoxTitle>
             {textContent?.officeCleaningTitle ?? ""}
@@ -108,7 +108,7 @@ const ServicesContent: React.FC = () => {
       </StyledServicesContentBlock>
 
       <StyledServicesContentBlock>
-        <StyledServicesContentBlockImage>
+        <StyledServicesLandingPanelImageContainer>
           <StyledImageAndEffect
             dimensions={{
               height: "350px",
@@ -151,7 +151,7 @@ const ServicesContent: React.FC = () => {
               }}
             />
           </StyledImageAndEffect>
-        </StyledServicesContentBlockImage>
+        </StyledServicesLandingPanelImageContainer>
         <StyledServicesContentBlockItem>
           <StyledServicesContentBoxTitle>
             {textContent?.highCeilingTitle ?? ""}
@@ -168,7 +168,7 @@ const ServicesContent: React.FC = () => {
       </StyledServicesContentBlock>
 
       <StyledServicesContentBlock>
-        <StyledServicesContentBlockImage>
+        <StyledServicesLandingPanelImageContainer>
           <StyledImageAndEffect
             dimensions={{
               height: "350px",
@@ -212,7 +212,7 @@ const ServicesContent: React.FC = () => {
               }}
             />
           </StyledImageAndEffect>
-        </StyledServicesContentBlockImage>
+        </StyledServicesLandingPanelImageContainer>
         <StyledServicesContentBlockItem>
           <StyledServicesContentBoxTitle>
             {textContent?.highCeilingTitle ?? ""}
