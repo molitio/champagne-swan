@@ -62,7 +62,7 @@ export const StyledServicesContentContainer = styled.div<StyledServicesContentCo
   }
 `;
 
-export const StyledContentBox = styled.div`
+export const StyledServicesLandingPanelContent = styled.div`
   margin: 3em;
   display: flex;
   flex-direction: column;

@@ -14,11 +14,14 @@ import {
   StyledBrandMessageImageContainer,
   StyledAboutQuoteText,
   StyledAboutQuoteAuthorText,
-  StyledBrandMessageQuoteContainer,
   StyledBrandMessageTitle,
 } from "../brand";
 import { ContactInfo } from "../contact";
-import { StyledAboutContent, StyledBrandMessageContainer } from "./style";
+import {
+  StyledAboutContent,
+  StyledBrandMessageContainer,
+  StyledBrandMessageQuoteContainer,
+} from "./style";
 import { useLineBreakParser } from "../utils";
 
 const AboutContent: React.FC = () => {

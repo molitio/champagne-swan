@@ -90,6 +90,10 @@ export const ApplicationTheme = {
     page: {
       height: "1150px",
     },
+    waterSplash: {
+      height: 240,
+      width: 240,
+    },
     header: {
       height: "5em",
     },

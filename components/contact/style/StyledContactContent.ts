@@ -6,7 +6,7 @@ export const StyledContactContent = styled.section`
   position: relative;
 `;
 
-export const StyledContactInfo = styled.div`
+export const StyledContactInfo = styled.section`
   padding: 5em 0 0 0;
   position: relative;
 `;

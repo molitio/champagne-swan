@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { resolveThemeBreakPointValues } from "../../utils";
 
-export const StyledBrandFeats = styled.div`
+export const StyledBrandFeats = styled.section`
   position: relative;
   display: flex;
   flex-direction: row;
