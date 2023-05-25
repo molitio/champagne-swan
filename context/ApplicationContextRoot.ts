@@ -41,7 +41,8 @@ export const ApplicationContextRoot = {
             gradientTop: "/web_content/img/cs_gradient_top.webp",
             gradientBottom: "/web_content/img/cs_gradient_bottom.webp",
             waterSplash: "/web_content/img/water_splash-01.webp",
-            stockPersonAvatar: "/web_content/img/person2.webp",
+            stockPersonAvatar1: "/web_content/img/person1.webp",
+            stockPersonAvatar2: "/web_content/img/person2.webp",
             logo: "/web_content/logo/jeliza_logokit_jeliza_logo_submark.svg",
             horizontalLogo:
               "/web_content/logo/jeliza_logokit_jeliza_logo_horizontal.svg",

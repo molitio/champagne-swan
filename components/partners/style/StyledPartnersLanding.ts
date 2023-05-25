@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image";
 import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledPartners = styled.section`
@@ -24,7 +25,7 @@ export const StyledPartnersTitle = styled.h1`
   }
 `;
 
-export const StyledPartnersContentContainer = styled.div`
+export const StyledPartnersPanel = styled.div`
   padding: 4em 0;
   position: relative;
   display: flex;
@@ -33,7 +34,8 @@ export const StyledPartnersContentContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-export const StyledPartnersImageContainer = styled.div`
+export const StyledPartnersPanelItem = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-around;
   padding: 2em;
@@ -43,4 +45,14 @@ export const StyledPartnersImageContainer = styled.div`
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
     flex: 1 0 50%;
   }
+`;
+
+export const StyledPartnersImageContainer = styled.div`
+  position: relative;
+  width: 12em;
+  height: 12em;
+`;
+
+export const StyledPartnersImage = styled(Image)`
+  /* object-fit: cover; */
 `;

@@ -67,8 +67,8 @@ export const StyledCoverContactLink = styled(Link)`
 
 export const StyledButtonContainer = styled.div`
   padding-top: 2em;
-  display: flex;
-  justify-content: center;
+  /*   display: flex;
+  justify-content: center; */
   position: relative;
   margin: auto;
 `;

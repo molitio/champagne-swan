@@ -6,7 +6,7 @@ import {
   StyledServicesLandingPanelImageWaterSplash,
 } from "../common";
 import {
-  StyledServicesContent,
+  StyledServicesLanding,
   StyledServicesLandingMainTitle,
   StyledServicesContentContainer,
   StyledServicesLandingPanelContent,
@@ -31,7 +31,7 @@ const ServicesLanding: React.FC = () => {
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
-    <StyledServicesContent>
+    <StyledServicesLanding>
       <StyledLinearGradient
         direction="top"
         variation="landingServicesContent"
@@ -158,7 +158,7 @@ const ServicesLanding: React.FC = () => {
           </StyledServicesLandingPanelImageAndEffect>
         </StyledServicesLandingPanelImageContainer>
       </StyledServicesContentContainer>
-    </StyledServicesContent>
+    </StyledServicesLanding>
   );
 };
 

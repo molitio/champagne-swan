@@ -98,7 +98,7 @@ export const StyledContactInfoText = styled.p`
   }
 `;
 
-export const StyledLogoContainer = styled.div`
+export const StyledContactLogoContainer = styled.div`
   position: relative;
   padding-top: 100px;
   display: block;

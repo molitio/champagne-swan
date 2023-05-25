@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import { resolveThemeBreakPointValues } from "../../utils";
 
-export const StyledServicesContent = styled.section`
+export const StyledServicesLanding = styled.section`
   position: relative;
   padding: 5em 0 5em 0;
   width: 100%;

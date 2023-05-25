@@ -10,7 +10,7 @@ import {
   StyledServicesContentMainTitle,
   StyledServicesContentBoxTitle,
   StyledServicesContentBoxText,
-  StyledServicesContent,
+  StyledServicesLanding,
   StyledServicesContentBlock,
   StyledServicesContentBlockItem,
   StyledServicesLandingPanelImageContainer,
@@ -27,13 +27,7 @@ const ServicesContent: React.FC = () => {
   const theme = systemContext?.theme;
 
   return (
-    <StyledServicesContent>
-      {/*       <StyledLinearGradient
-        direction="bottom"
-        variation="appCoverBottom"
-        positioning={{ position: "absolute", top: "0px" }}
-        visual={{ opacity: 1 }}
-      /> */}
+    <StyledServicesLanding>
       <StyledLinearGradient
         direction="top"
         variation="appCoverTop"
@@ -230,7 +224,7 @@ const ServicesContent: React.FC = () => {
           </StyledServicesContentBoxText>
         </StyledServicesContentBlockItemInfo>
       </StyledServicesContentBlock>
-    </StyledServicesContent>
+    </StyledServicesLanding>
   );
 };
 
