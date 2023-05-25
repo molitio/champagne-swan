@@ -42,23 +42,6 @@ const BrandMessage: React.FC = () => {
       </StyledBrandMessageMainTitle>
 
       <StyledBrandMessagePanel>
-        <StyledBrandMessagePanelContent>
-          <StyledBrandMessagePanelTitle>
-            {textContent?.contentTitle ?? ""}
-          </StyledBrandMessagePanelTitle>
-
-          <StyledBrandMessagePanelText>
-            {textContent?.contentText ?? ""}
-          </StyledBrandMessagePanelText>
-
-          <StyledBrandMessagePanelContactLink
-            key={navTree?.about?.path ?? ""}
-            href={navTree?.about?.path ?? ""}
-          >
-            {textContent?.moreInfoButton ?? ""}
-          </StyledBrandMessagePanelContactLink>
-        </StyledBrandMessagePanelContent>
-
         <StyledBrandMessagePanelImage>
           <StyledBrandMessageImageAndEffect>
             <StyledBrandMessageInfoWaterSplash
@@ -80,6 +63,22 @@ const BrandMessage: React.FC = () => {
             />
           </StyledBrandMessageImageAndEffect>
         </StyledBrandMessagePanelImage>
+        <StyledBrandMessagePanelContent>
+          <StyledBrandMessagePanelTitle>
+            {textContent?.contentTitle ?? ""}
+          </StyledBrandMessagePanelTitle>
+
+          <StyledBrandMessagePanelText>
+            {textContent?.contentText ?? ""}
+          </StyledBrandMessagePanelText>
+
+          <StyledBrandMessagePanelContactLink
+            key={navTree?.about?.path ?? ""}
+            href={navTree?.about?.path ?? ""}
+          >
+            {textContent?.moreInfoButton ?? ""}
+          </StyledBrandMessagePanelContactLink>
+        </StyledBrandMessagePanelContent>
       </StyledBrandMessagePanel>
     </StyledBrandMessage>
   );

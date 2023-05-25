@@ -1,7 +1,7 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
 import { IconGroup, StyledLinearGradient, StyledCoverContent } from "../common";
-import { useLineBreakParser } from "../utils";
+import { resolveThemeBreakPointValues, useLineBreakParser } from "../utils";
 import {
   StyledCoverContactLink,
   StyledButtonContainer,
@@ -10,6 +10,8 @@ import {
   StyledAppCoverMainTitle,
   StyledAppCoverImage,
   StyledWaterSplashButton,
+  StyledWaterSplashButtonContainer,
+  StyledWaterSplash,
 } from "./style";
 
 const AppCover: React.FC = () => {
@@ -29,6 +31,11 @@ const AppCover: React.FC = () => {
         src={assetUrls?.heroBackground ?? ""}
         alt={"cover-image"}
         fill={true}
+        sizes={`(max-width: ${resolveThemeBreakPointValues(
+          systemContext?.theme,
+          "xl"
+        )}) 50vw,
+                33vw`}
       />
       <StyledLinearGradient
         direction="bottom"
@@ -56,27 +63,18 @@ const AppCover: React.FC = () => {
 
         <StyledButtonContainer>
           {/* have dynamic asset size loading from theme context? */}
-          <StyledWaterSplashButton
-            src={commonAssetUrls?.waterSplash ?? ""}
-            alt={"water-splash"}
-            fill={true}
-          />
-          {/*           <NextImage
-            containerPositioning={{
-              right: "-80px",
-              bottom: "-120px",
-              position: "absolute",
-            }}
-            containerDimensions={{
-              width: "250px",
-              height: "250px",
-            }}
-            imageProps={{
-              src: commonAssetUrls?.waterSplash ?? "",
-              alt: "water-splash",
-              fill: true,
-            }}
-          /> */}
+          <StyledWaterSplashButtonContainer>
+            <StyledWaterSplash
+              src={commonAssetUrls?.waterSplash ?? ""}
+              alt={"water-splash"}
+              fill={true}
+              sizes={`(max-width: ${resolveThemeBreakPointValues(
+                systemContext?.theme,
+                "xl"
+              )}) 50vw,
+              33vw`}
+            />
+          </StyledWaterSplashButtonContainer>
           <StyledCoverContactLink
             key={navTree?.contact?.path ?? ""}
             href={navTree?.contact?.path ?? ""}

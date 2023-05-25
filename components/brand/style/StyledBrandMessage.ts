@@ -7,7 +7,7 @@ export const StyledBrandMessage = styled.section`
   position: relative;
   align-items: center;
   padding: 0 10vw 0 10vw;
-  height: 80vh;
+  height: auto;
   background: ${(props) => props?.theme?.palette?.background?.default ?? ""};
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xxl")}) {
@@ -16,7 +16,7 @@ export const StyledBrandMessage = styled.section`
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
     padding: 5vw 0 5vw 0;
-    height: auto;
+    /* height: auto; */
   }
 `;
 
@@ -64,24 +64,25 @@ export const StyledBrandMessagePanel = styled.div`
 `;
 
 export const StyledBrandMessagePanelContent = styled.div`
-  flex: 1 0 36em;
+  flex: 1 0 50%;
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
     text-align: center;
-    order: 2;
+    order: 1;
   }
 `;
 
 export const StyledBrandMessagePanelImage = styled.div`
   position: relative;
-  flex: 1 0 36em;
-  order: 1;
+  flex: 1 0 50%;
+  order: 2;
 `;
 
 export const StyledBrandMessageImageAndEffect = styled.div`
   position: relative;
   height: 28em;
   width: 36em;
+  margin: auto;
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xxl")}) {
@@ -93,7 +94,6 @@ export const StyledBrandMessageImageAndEffect = styled.div`
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
     height: 20em;
     width: 28em;
-    margin: auto;
   }
 
   @media (max-width: ${(props) =>
@@ -185,7 +185,7 @@ export const StyledAboutQuoteAuthorText = styled.p`
   padding: 0em 2em 0em 0;
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    padding: 0em 2em 0em 0;
+    padding: 0 2em 0 0;
   }
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
@@ -208,7 +208,7 @@ export const StyledBrandMessagePanelTitle = styled.h1`
     display: block;
     margin: auto;
     text-align: center;
-    padding: 2em 0 0 0;
+    /*   padding: 2em 0 0 0; */
 
     width: 10em;
   }
@@ -242,7 +242,7 @@ export const StyledBrandMessagePanelText = styled.p`
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    width: 290px;
+    width: 18em;
   }
 `;
 export const StyledBrandMessageText = styled.p`
