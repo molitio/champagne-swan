@@ -35,17 +35,14 @@ export const StyledServicesLandingMainTitle = styled.h1`
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "lg")}) {
     display: block;
-    margin: 1.8em auto 1.8em auto;
-    width: 12em;
+    /*     margin: 1.8em auto 1.8em auto;
+    width: 12em; */
   }
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    display: block;
-    margin: 30px auto 30px auto;
-    font-size: 2.25rem;
-    width: 8em;
-    line-height: 50px;
+    margin: 2em auto;
+    font-size: 2rem;
   }
 `;
 
@@ -70,7 +67,6 @@ export const StyledServicesLandingPanelContent = styled.div`
   text-align: center;
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    padding-top: 6em;
   }
 `;
 
