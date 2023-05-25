@@ -46,7 +46,8 @@ export const StyledAppCoverImage = styled(Image)`
 `;
 
 export const StyledCoverContactLink = styled(Link)`
-  position: relative;
+  position: absolute;
+  top: 0;
   padding: 0.5em 1em;
   font-size: 1.5em;
   font-weight: 300;
@@ -65,12 +66,9 @@ export const StyledCoverContactLink = styled(Link)`
   }
 `;
 
-export const StyledButtonContainer = styled.div`
-  padding-top: 2em;
-  /*   display: flex;
-  justify-content: center; */
+export const StyledAppCoverButtonContainer = styled.div`
   position: relative;
-  margin: auto;
+  margin: 2em auto;
 `;
 
 export const StyledAppCoverDescription = styled.pre`
