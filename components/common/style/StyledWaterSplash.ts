@@ -11,8 +11,8 @@ export const StyledWaterSplashButtonContainer = styled.div`
   position: relative;
   width: 160px;
   height: 160px;
-  right: -50px;
-  bottom: -120px;
+  right: -60px;
+  bottom: 20px;
   transform: rotate(-15deg);
 `;
 
