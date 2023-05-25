@@ -80,9 +80,9 @@ export const StyledBrandMessagePanelImage = styled.div`
 
 export const StyledBrandMessageImageAndEffect = styled.div`
   position: relative;
-  height: 28em;
-  width: 36em;
-  margin: auto;
+  height: 24em;
+  width: 32em;
+  margin: 2em auto 4em auto;
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xxl")}) {
@@ -92,26 +92,26 @@ export const StyledBrandMessageImageAndEffect = styled.div`
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    height: 20em;
-    width: 28em;
+    height: 26em;
+    width: 36em;
   }
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    height: 20em;
-    width: 28em;
+    height: 24em;
+    width: 32em;
   }
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    height: 12em;
-    width: 20em;
+    height: 18em;
+    width: 24em;
   }
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "sm")}) {
-    height: 8em;
-    width: 12em;
+    height: 12em;
+    width: 16em;
   }
 `;
 
@@ -224,7 +224,7 @@ export const StyledBrandMessagePanelText = styled.p`
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.4em;
-  width: 28em;
+  width: 24em;
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["brandMessageContentTextShadow"]
       ?.textShadow ?? ""};
@@ -236,13 +236,13 @@ export const StyledBrandMessagePanelText = styled.p`
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    margin: 2em auto;
+    width: auto;
+    margin: 3em;
     text-align: start;
   }
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    width: 18em;
   }
 `;
 export const StyledBrandMessageText = styled.p`
