@@ -4,7 +4,7 @@ import { IconGroup, StyledLinearGradient, StyledCoverContent } from "../common";
 import { resolveThemeBreakPointValues, useLineBreakParser } from "../utils";
 import {
   StyledCoverContactLink,
-  StyledButtonContainer,
+  StyledAppCoverButtonContainer,
   StyledAppCoverDescription,
   StyledAppCover,
   StyledAppCoverMainTitle,
@@ -61,7 +61,7 @@ const AppCover: React.FC = () => {
           {useLineBreakParser(textContent?.description ?? "")}
         </StyledAppCoverDescription>
 
-        <StyledButtonContainer>
+        <StyledAppCoverButtonContainer>
           {/* have dynamic asset size loading from theme context? */}
           <StyledWaterSplashButtonContainer>
             <StyledWaterSplash
@@ -81,7 +81,7 @@ const AppCover: React.FC = () => {
           >
             {textContent?.moreInfoButton ?? ""}
           </StyledCoverContactLink>
-        </StyledButtonContainer>
+        </StyledAppCoverButtonContainer>
       </StyledCoverContent>
     </StyledAppCover>
   );
