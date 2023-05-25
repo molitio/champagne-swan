@@ -5,7 +5,7 @@ import {
   StyledOpinionsMainTitle,
   StyledOpinionsContainer,
   StyledOpinions,
-  StyledOpinion,
+  StyledOpinionsPanel,
   StyledOpinionText,
   StyledOpinionTitle,
 } from "../opinions";
@@ -144,22 +144,22 @@ const AboutContent: React.FC = () => {
           {opinionsTextContent?.title ?? ""}
         </StyledOpinionsMainTitle>
         <StyledOpinionsContainer>
-          <StyledOpinion>
+          <StyledOpinionsPanel>
             <StyledOpinionText>
               {opinionsTextContent?.defaultCustomerOpinion ?? ""}
             </StyledOpinionText>
             <StyledOpinionTitle>
               {opinionsTextContent?.defaultCustomerName ?? ""}
             </StyledOpinionTitle>
-          </StyledOpinion>
-          <StyledOpinion>
+          </StyledOpinionsPanel>
+          <StyledOpinionsPanel>
             <StyledOpinionText>
               {opinionsTextContent?.defaultCustomerOpinion ?? ""}
             </StyledOpinionText>
             <StyledOpinionTitle>
               {opinionsTextContent?.defaultCustomerName ?? ""}
             </StyledOpinionTitle>
-          </StyledOpinion>
+          </StyledOpinionsPanel>
         </StyledOpinionsContainer>
       </StyledOpinions>
       <ContactInfo />

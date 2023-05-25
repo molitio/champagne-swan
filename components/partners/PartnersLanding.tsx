@@ -4,7 +4,9 @@ import { NextImage } from "../common";
 import {
   StyledPartners,
   StyledPartnersTitle,
-  StyledPartnersContentContainer,
+  StyledPartnersPanel,
+  StyledPartnersPanelItem,
+  StyledPartnersImage,
   StyledPartnersImageContainer,
 } from "./style";
 
@@ -17,60 +19,44 @@ const Partners: React.FC = () => {
   return (
     <StyledPartners>
       <StyledPartnersTitle>{textContent?.title ?? ""}</StyledPartnersTitle>
-      <StyledPartnersContentContainer>
-        <StyledPartnersImageContainer>
-          <NextImage
-            containerPositioning={{
-              position: "relative",
-            }}
-            containerDimensions={{ width: "10em", height: "10em" }}
-            imageProps={{
-              src: assetUrls?.mLogo ?? "",
-              alt: "m-logo",
-              fill: true,
-            }}
-          />
-        </StyledPartnersImageContainer>
-        <StyledPartnersImageContainer>
-          <NextImage
-            containerPositioning={{
-              position: "relative",
-            }}
-            containerDimensions={{ width: "12em", height: "10em" }}
-            imageProps={{
-              src: assetUrls?.houseLogo ?? "",
-              alt: "house-logo",
-              fill: true,
-            }}
-          />
-        </StyledPartnersImageContainer>
-        <StyledPartnersImageContainer>
-          <NextImage
-            containerPositioning={{
-              position: "relative",
-            }}
-            containerDimensions={{ width: "12em", height: "10em" }}
-            imageProps={{
-              src: assetUrls?.brandLogo ?? "",
-              alt: "brand-logo",
-              fill: true,
-            }}
-          />
-        </StyledPartnersImageContainer>
-        <StyledPartnersImageContainer>
-          <NextImage
-            containerPositioning={{
-              position: "relative",
-            }}
-            containerDimensions={{ width: "10em", height: "10em" }}
-            imageProps={{
-              src: assetUrls?.officeLogo ?? "",
-              alt: "office-logo",
-              fill: true,
-            }}
-          />
-        </StyledPartnersImageContainer>
-      </StyledPartnersContentContainer>
+      <StyledPartnersPanel>
+        <StyledPartnersPanelItem>
+          <StyledPartnersImageContainer>
+            <StyledPartnersImage
+              src={assetUrls?.mLogo ?? ""}
+              alt={"m-logo"}
+              fill={true}
+            />
+          </StyledPartnersImageContainer>
+        </StyledPartnersPanelItem>
+        <StyledPartnersPanelItem>
+          <StyledPartnersImageContainer>
+            <StyledPartnersImage
+              src={assetUrls?.houseLogo ?? ""}
+              alt={"house-logo"}
+              fill={true}
+            />
+          </StyledPartnersImageContainer>
+        </StyledPartnersPanelItem>
+        <StyledPartnersPanelItem>
+          <StyledPartnersImageContainer>
+            <StyledPartnersImage
+              src={assetUrls?.brandLogo ?? ""}
+              alt={"brand-logo"}
+              fill={true}
+            />
+          </StyledPartnersImageContainer>
+        </StyledPartnersPanelItem>
+        <StyledPartnersPanelItem>
+          <StyledPartnersImageContainer>
+            <StyledPartnersImage
+              src={assetUrls?.officeLogo ?? ""}
+              alt={"office-logo"}
+              fill={true}
+            />
+          </StyledPartnersImageContainer>
+        </StyledPartnersPanelItem>
+      </StyledPartnersPanel>
     </StyledPartners>
   );
 };

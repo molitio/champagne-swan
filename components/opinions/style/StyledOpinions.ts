@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image";
 import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledOpinions = styled.section`
@@ -38,7 +39,7 @@ export const StyledOpinionsMainTitle = styled.h1`
   }
 `;
 
-export const StyledOpinion = styled.div`
+export const StyledOpinionsPanel = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -50,6 +51,18 @@ export const StyledOpinion = styled.div`
     margin-right: auto;
     margin-left: auto;
   }
+`;
+
+export const StyledOpinionsAvatarImage = styled(Image)`
+  object-fit: cover;
+  border-radius: 50%;
+`;
+
+export const StyledOpinionsAvatarImageContainer = styled.div`
+  position: relative;
+  height: 10em;
+  width: 10em;
+  margin: auto;
 `;
 
 export const StyledOpinionsContainer = styled.div`
@@ -90,10 +103,15 @@ export const StyledOpinionTitle = styled.p`
   margin: auto;
 `;
 
-export const StyledOpininsLogo = styled.div`
+export const StyledOpinionsLogoContainer = styled.div`
   position: relative;
   padding-top: 100px;
   display: block;
-  width: 130px;
+  height: 12em;
+  width: 12em;
   margin: auto;
+`;
+
+export const StyledOpinionsLogoImage = styled(Image)`
+  object-fit: cover;
 `;

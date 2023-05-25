@@ -14,7 +14,7 @@ import {
   StyledFormText,
   StyledContactInfoContainer,
   StyledContactInfo,
-  StyledLogoContainer,
+  StyledContactLogoContainer,
   StyledContactInfoText,
 } from "./style";
 
@@ -34,17 +34,6 @@ const ContactInfo: React.FC = () => {
         positioning={{ position: "absolute", top: "0px" }}
         visual={{ opacity: 1 }}
       />
-      {/*       <StyledLinearGradient
-        direction="top"
-        variation="appCoverTop"
-        positioning={{ position: "absolute", top: "0px" }}
-        visual={{ opacity: 1 }}
-      /> */}
-      {/*       <StyledLinearGradient
-        direction="bottom"
-        variation="cover"
-        visual={{ opacity: 1 }}
-      /> */}
       <IconGroup
         starCount={5}
         fill={systemContext?.theme?.palette?.stars?.gold}
@@ -81,7 +70,7 @@ const ContactInfo: React.FC = () => {
           <ContactForm />
         </StyledFormContainer>
       </SyledFormBox>
-      <StyledLogoContainer>
+      <StyledContactLogoContainer>
         <NextImage
           containerDimensions={{ width: "150px", height: "150px" }}
           containerPositioning={{ position: "relative" }}
@@ -91,7 +80,7 @@ const ContactInfo: React.FC = () => {
             fill: true,
           }}
         />
-      </StyledLogoContainer>
+      </StyledContactLogoContainer>
     </StyledContactInfo>
   );
 };
