@@ -10,36 +10,24 @@ export const StyledServicesLanding = styled.section`
 `;
 
 export const StyledServicesContentMainTitle = styled.h1`
+  position: relative;
   text-align: center;
+  font-weight: 400;
+  font-size: 3.8em;
+  opacity: 0.8;
+  padding-top: 0.6em;
   color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["servicesTextShadow"]?.textShadow ?? ""};
-  font-weight: 400;
-  font-size: 3.8em;
-  padding-top: 3em;
-  position: relative;
-
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "xxl")}) {
-    font-size: 3.2em;
-    margin-bottom: 1em;
-    font-weight: 700;
-  }
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    font-size: 2.4em;
-    margin-bottom: 1em;
-  }
-
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    font-size: 1.8em;
+    font-size: 3.2em;
   }
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    font-size: 1.2em;
+    font-size: 2.4em;
   }
 `;
 
@@ -83,43 +71,6 @@ export const StyledServicesLandingPanelImage = styled(Image)`
   box-shadow: ${(props) =>
     props?.theme?.palette?.visual["brandMessageOfficeCleaners"]?.boxShadow ??
     ""};
-`;
-
-export const StyledServicesLandingPanelImageAndEffect = styled.div`
-  position: relative;
-  height: 28em;
-  width: 36em;
-
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "xxl")}) {
-    height: 20em;
-    width: 28em;
-  }
-
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    height: 20em;
-    width: 28em;
-    margin: auto;
-  }
-
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    height: 20em;
-    width: 28em;
-  }
-
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
-    height: 12em;
-    width: 20em;
-  }
-
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "sm")}) {
-    height: 8em;
-    width: 12em;
-  }
 `;
 
 export const StyledServicesContentBlockItem = styled.div`

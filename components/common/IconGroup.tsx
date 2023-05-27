@@ -1,6 +1,6 @@
 import React from "react";
 import StarSvgIcon from "./StarSvgIcon";
-import { IconContainer } from "./style";
+import { StyledIconContainer } from "./style";
 import { SystemContext } from "@molitio/ui-core";
 
 type IconGroupProps = {
@@ -17,7 +17,7 @@ export const IconGroup: React.FC<IconGroupProps> = (props) => {
   const { fill, dx, dy, stdDeviation, floodOpacity, starCount } = props;
 
   return (
-    <IconContainer>
+    <StyledIconContainer>
       {Array.from({ length: starCount }).map((_, i) => (
         <StarSvgIcon
           fill={fill ?? context?.theme?.palette?.secondary?.main ?? ""}
@@ -28,7 +28,7 @@ export const IconGroup: React.FC<IconGroupProps> = (props) => {
           key={i}
         />
       ))}
-    </IconContainer>
+    </StyledIconContainer>
   );
 };
 

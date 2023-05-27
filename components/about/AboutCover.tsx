@@ -4,12 +4,18 @@ import {
   StyledAboutCover,
   StyledAboutMainTitle,
   StyledAboutDescription,
-  StyledButtonContainer,
+  StyledAboutCoverButtonContainer,
   StyledAboutSubTitle,
   StyledCoverContactLink,
+  StyledBoutCoverImage,
 } from "./style";
-import { NextImage, StyledLinearGradient, StyledCoverContent } from "../common";
-import { useLineBreakParser } from "../utils";
+import {
+  StyledLinearGradient,
+  StyledCoverContent,
+  StyledWaterSplash,
+  StyledWaterSplashButtonContainer,
+} from "../common";
+import { resolveThemeBreakPointValues, useLineBreakParser } from "../utils";
 
 const AboutCover: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
@@ -22,18 +28,15 @@ const AboutCover: React.FC = () => {
 
   return (
     <StyledAboutCover>
-      <NextImage
-        containerDimensions={{
-          height: "80vh",
-          width: "100%",
-        }}
-        imagePositioning={{
-          objectFit: "cover",
-        }}
-        imageProps={{
-          src: aboutCoverAssetUrls?.cleaners ?? "",
-          alt: "cleaner-working",
-        }}
+      <StyledBoutCoverImage
+        src={aboutCoverAssetUrls?.cleaners ?? ""}
+        alt={"cleaner-working"}
+        fill={true}
+        sizes={`(max-width: ${resolveThemeBreakPointValues(
+          systemContext?.theme,
+          "xl"
+        )}) 50vw,
+                33vw`}
       />
       <StyledLinearGradient
         direction="bottom"
@@ -58,30 +61,26 @@ const AboutCover: React.FC = () => {
           {useLineBreakParser(aboutCoverTextContent?.description ?? "")}
         </StyledAboutDescription>
 
-        <StyledButtonContainer>
-          <NextImage
-            containerPositioning={{
-              bottom: "-120px",
-              right: "-80px",
-              position: "absolute",
-            }}
-            containerDimensions={{
-              width: "250px",
-              height: "250px",
-            }}
-            imageProps={{
-              src: commonAssetUrls?.waterSplash ?? "",
-              alt: "water-splash",
-              fill: true,
-            }}
-          />
+        <StyledAboutCoverButtonContainer>
+          <StyledWaterSplashButtonContainer>
+            <StyledWaterSplash
+              src={commonAssetUrls?.waterSplash ?? ""}
+              alt={"water-splash"}
+              fill={true}
+              sizes={`(max-width: ${resolveThemeBreakPointValues(
+                systemContext?.theme,
+                "xl"
+              )}) 50vw,
+              33vw`}
+            />
+          </StyledWaterSplashButtonContainer>
           <StyledCoverContactLink
             key={navTree?.contact?.path ?? ""}
             href={navTree?.contact?.path ?? ""}
           >
             {aboutCoverTextContent?.contactLinkText ?? ""}
           </StyledCoverContactLink>
-        </StyledButtonContainer>
+        </StyledAboutCoverButtonContainer>
       </StyledCoverContent>
     </StyledAboutCover>
   );

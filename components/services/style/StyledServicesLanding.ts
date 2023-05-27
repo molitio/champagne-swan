@@ -16,33 +16,29 @@ type StyledServicesContentContainerProps = {
 };
 
 export const StyledServicesLandingMainTitle = styled.h1`
-  position: relative;
+  @media (max-width: ${(props) =>
+    resolveThemeBreakPointValues(props?.theme, "md")}) {
+    margin: 2em auto;
+    font-size: 2rem;
+  } */
+    position: relative;
   text-align: center;
-  margin: 0.4em 0;
-  font-style: normal;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 3.8em;
-  line-height: 1.2em;
+  opacity: 0.8;
+  padding-top: 0.6em;
   color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["servicesTitleShadow"]?.textShadow ?? ""};
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    font-size: 3.2rem;
+    resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    font-size: 3.2em;
   }
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    display: block;
-    /*     margin: 1.8em auto 1.8em auto;
-    width: 12em; */
-  }
-
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
-    margin: 2em auto;
-    font-size: 2rem;
+    resolveThemeBreakPointValues(props?.theme, "md")}) {
+    font-size: 2.4em;
   }
 `;
 
@@ -79,5 +75,43 @@ export const StyledContactLink = styled(Link)`
     position: relative;
     top: 30px;
     left: 30px;
+  }
+`;
+
+export const StyledServicesLandingPanelImageAndEffect = styled.div`
+  position: relative;
+  height: 24em;
+  width: 32em;
+  margin: 8em;
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xxl")}) {
+    height: 20em;
+    width: 28em;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    height: 20em;
+    width: 28em;
+    margin: auto;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+    height: 20em;
+    width: 28em;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    height: 12em;
+    width: 20em;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    height: 8em;
+    width: 12em;
   }
 `;
