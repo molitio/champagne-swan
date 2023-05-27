@@ -9,7 +9,6 @@ import {
   StyledAppCover,
   StyledAppCoverMainTitle,
   StyledAppCoverImage,
-  StyledWaterSplashButton,
   StyledWaterSplashButtonContainer,
   StyledWaterSplash,
 } from "./style";
@@ -60,9 +59,7 @@ const AppCover: React.FC = () => {
         <StyledAppCoverDescription>
           {useLineBreakParser(textContent?.description ?? "")}
         </StyledAppCoverDescription>
-
         <StyledAppCoverButtonContainer>
-          {/* have dynamic asset size loading from theme context? */}
           <StyledWaterSplashButtonContainer>
             <StyledWaterSplash
               src={commonAssetUrls?.waterSplash ?? ""}

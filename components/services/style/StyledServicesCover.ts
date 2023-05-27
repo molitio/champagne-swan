@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image";
 import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledServicesCover = styled.div`
@@ -8,35 +9,27 @@ export const StyledServicesCover = styled.div`
 export const StyledServicesCoverMainTitle = styled.h1`
   position: relative;
   text-align: center;
-  margin: 0.4em 0;
-  font-style: normal;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 3.8em;
-  line-height: 1.2em;
+  opacity: 0.8;
+  padding-top: 0.6em;
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["servicesTitleShadow"]?.textShadow ?? ""};
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    font-size: 3.2rem;
-  }
-
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    display: block;
-    margin: 1.8em auto 1.8em auto;
-    width: 12em;
+    font-size: 3.2em;
   }
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    display: block;
-    margin: 30px auto 30px auto;
-    font-size: 2.4rem;
-    width: 8em;
-    line-height: 50px;
+    font-size: 2.4em;
   }
+`;
+
+export const StyledServicesCoverImage = styled(Image)`
+  object-fit: cover;
 `;
 
 export const StyledServicesCoverDescription = styled.pre`
@@ -65,4 +58,9 @@ export const StyledServicesCoverDescription = styled.pre`
     width: 13em;
     padding: 0;
   }
+`;
+
+export const StyledServicesCoverButtonContainer = styled.div`
+  position: relative;
+  margin: 2em auto;
 `;
