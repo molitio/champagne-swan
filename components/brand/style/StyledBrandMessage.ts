@@ -135,13 +135,13 @@ export const StyledBrandMessageIcons = styled.div`
 export const StyledBrandMessageMainTitle = styled.h1`
   position: relative;
   text-align: center;
-  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
-  text-shadow: ${(props) =>
-    props?.theme?.palette?.visual["brandMessageTitleShadow"]?.textShadow ?? ""};
   font-weight: 400;
   font-size: 3.8em;
   opacity: 0.8;
   padding-top: 0.6em;
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["brandMessageTitleShadow"]?.textShadow ?? ""};
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {

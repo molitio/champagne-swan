@@ -14,28 +14,22 @@ export const StyledOpinionsIconContainer = styled.div`
 export const StyledOpinionsMainTitle = styled.h1`
   position: relative;
   text-align: center;
+  font-weight: 400;
   font-size: 3.8em;
-  padding: "0.3em 0 0.3em 0";
+  opacity: 0.8;
+  padding-top: 0.6em;
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["opinionsTitleShadow"]?.textShadow ?? ""};
-  font-weight: 400;
-  margin-bottom: 0em;
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
     font-size: 3.2em;
   }
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    margin: auto;
-    width: 10em;
-  }
+
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    padding-top: 150px;
     font-size: 2.4em;
-    width: 8em;
   }
 `;
 

@@ -13,31 +13,21 @@ export const StyledAppCover = styled.section`
 export const StyledAppCoverMainTitle = styled.h1`
   position: relative;
   text-align: center;
-  margin: 0.4em 0;
-  font-style: normal;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 3.8em;
+  opacity: 0.8;
   color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["appCoverTitleShadow"]?.textShadow ?? ""};
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    font-size: 2.8em;
-  }
-
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    font-size: 2em;
+    font-size: 3.2em;
   }
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    display: block;
-    margin: 30px auto 30px auto;
-    font-size: 2.25rem;
-    width: 8em;
-    line-height: 50px;
+    font-size: 2.4em;
   }
 `;
 

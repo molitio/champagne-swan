@@ -76,6 +76,7 @@ const ServicesContent: React.FC = () => {
               imageProps={{
                 src: assetUrls?.officeCleaners ?? "",
                 alt: "office-cleaners",
+                fill: true,
               }}
               imageVisual={{
                 boxShadow:
@@ -197,6 +198,7 @@ const ServicesContent: React.FC = () => {
               imageProps={{
                 src: assetUrls?.industrial ?? "",
                 alt: "industry-complex",
+                fill: true,
               }}
               imageVisual={{
                 boxShadow:

@@ -68,6 +68,7 @@ const AboutContent: React.FC = () => {
               imageProps={{
                 src: brandMessageAssetUrls?.mop ?? "",
                 alt: "cleaning-machine",
+                fill: true,
               }}
               imageVisual={{
                 boxShadow:
@@ -91,6 +92,7 @@ const AboutContent: React.FC = () => {
               imageProps={{
                 src: brandMessageAssetUrls?.colleague ?? "",
                 alt: "cleaning-machine",
+                fill: true,
               }}
               imageVisual={{
                 boxShadow:
@@ -128,6 +130,7 @@ const AboutContent: React.FC = () => {
               imageProps={{
                 src: brandMessageAssetUrls?.machine ?? "",
                 alt: "cleaning-machine",
+                fill: true,
               }}
               imageVisual={{
                 boxShadow:
