@@ -14,7 +14,7 @@ import {
   StyledFormText,
   StyledContactInfoContainer,
   StyledContactInfo,
-  StyledContactLogoContainer,
+  StyledContactInfoLogoContainer,
   StyledContactInfoText,
 } from "./style";
 
@@ -70,7 +70,7 @@ const ContactInfo: React.FC = () => {
           <ContactForm />
         </StyledFormContainer>
       </SyledFormBox>
-      <StyledContactLogoContainer>
+      <StyledContactInfoLogoContainer>
         <NextImage
           containerDimensions={{ width: "150px", height: "150px" }}
           containerPositioning={{ position: "relative" }}
@@ -80,7 +80,7 @@ const ContactInfo: React.FC = () => {
             fill: true,
           }}
         />
-      </StyledContactLogoContainer>
+      </StyledContactInfoLogoContainer>
     </StyledContactInfo>
   );
 };

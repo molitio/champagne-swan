@@ -6,6 +6,8 @@ import {
   StyledContactInfo,
   StyledContactContent,
   StyledFlexGroup,
+  StyledContactContentLogoImage,
+  StyledContactContentLogoContainer,
 } from "./style";
 import {
   StyledLinearGradient,
@@ -67,15 +69,13 @@ const ContactContent: React.FC = () => {
           <ContactForm />
         </FormContainer>
       </StyledFlexGroup>
-      <NextImage
-        containerDimensions={{ width: "250px", height: "250px" }}
-        containerPositioning={{ position: "relative", margin: "auto" }}
-        imageProps={{
-          src: commonAssetUrls?.logo ?? "",
-          alt: "logo",
-          fill: true,
-        }}
-      />
+      <StyledContactContentLogoContainer>
+        <StyledContactContentLogoImage
+          src={commonAssetUrls?.logo ?? ""}
+          alt={"logo"}
+          fill={true}
+        />
+      </StyledContactContentLogoContainer>
     </StyledContactContent>
   );
 };

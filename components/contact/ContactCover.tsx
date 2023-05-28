@@ -5,7 +5,9 @@ import {
   StyledContactCoverTitle,
   StyledContact,
   StyledCoverText,
+  StyledAboutContentCoverImage,
 } from "./style";
+import { resolveThemeBreakPointValues } from "../utils";
 
 const ContactCover: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
@@ -15,18 +17,15 @@ const ContactCover: React.FC = () => {
 
   return (
     <StyledContact>
-      <NextImage
-        containerDimensions={{
-          minHeight: "80vh",
-          width: "100%",
-        }}
-        imagePositioning={{
-          objectFit: "cover",
-        }}
-        imageProps={{
-          src: assetUrls?.skyScraper ?? "",
-          alt: "contact-cover-image",
-        }}
+      <StyledAboutContentCoverImage
+        src={assetUrls?.skyScraper ?? ""}
+        alt={"sky-scraper"}
+        fill={true}
+        sizes={`(max-width: ${resolveThemeBreakPointValues(
+          systemContext?.theme,
+          "xl"
+        )}) 50vw,
+                33vw`}
       />
       <StyledLinearGradient
         direction="bottom"

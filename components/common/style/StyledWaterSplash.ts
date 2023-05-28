@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledWaterSplash = styled(Image)`
   position: absolute;
@@ -27,3 +28,23 @@ export const StyledBrandMessageInfoWaterSplash = styled(StyledWaterSplash)`
 export const StyledServicesLandingPanelImageWaterSplash = styled(
   StyledBrandMessageInfoWaterSplash
 )``;
+
+export const StyledContactContentPanelWaterSplash = styled(StyledWaterSplash)`
+  right: -80px;
+  bottom: -120px;
+  transform: rotate(-15deg);
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    right: -60px;
+    bottom: -100px;
+    width: 200px;
+    height: 200px;
+  }
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    right: -60px;
+    bottom: -90px;
+    width: 180px;
+    height: 180px;
+  }
+`;
