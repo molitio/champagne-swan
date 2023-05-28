@@ -8,12 +8,12 @@ import {
   StyledServicesCoverImage,
 } from "./style";
 import {
-  StyledCoverContactLink,
+  StyledAppCoverContactLink,
   StyledWaterSplash,
-  StyledWaterSplashButtonContainer,
+  StyledButtonWaterSplash,
 } from "../common";
 
-import { NextImage, StyledCoverContent, StyledLinearGradient } from "../common";
+import { StyledCoverContent, StyledLinearGradient } from "../common";
 import { resolveThemeBreakPointValues } from "../utils";
 
 const ServicesCover: React.FC = () => {
@@ -36,23 +36,6 @@ const ServicesCover: React.FC = () => {
         )}) 50vw,
                 33vw`}
       />
-      {/*       <NextImage
-        containerDimensions={{
-          height: "80vh",
-          width: "100%",
-        }}
-        containerPositioning={{
-          position: "relative",
-        }}
-        imagePositioning={{
-          objectFit: "cover",
-        }}
-        imageProps={{
-          src: assetUrls?.window ?? "",
-          alt: "cover-image",
-          fill: true,
-        }}
-      /> */}
       <StyledLinearGradient
         direction="bottom"
         variation="reversePartial"
@@ -75,7 +58,7 @@ const ServicesCover: React.FC = () => {
         </StyledServicesCoverDescription>
 
         <StyledServicesCoverButtonContainer>
-          <StyledWaterSplashButtonContainer>
+          <StyledButtonWaterSplash>
             <StyledWaterSplash
               src={commonAssetUrls?.waterSplash ?? ""}
               alt={"water-splash"}
@@ -86,13 +69,13 @@ const ServicesCover: React.FC = () => {
               )}) 50vw,
               33vw`}
             />
-          </StyledWaterSplashButtonContainer>
-          <StyledCoverContactLink
+          </StyledButtonWaterSplash>
+          <StyledAppCoverContactLink
             key={assetUrls?.cover ?? ""}
             href={assetUrls?.cover ?? ""}
           >
             {textContent?.introCta ?? ""}
-          </StyledCoverContactLink>
+          </StyledAppCoverContactLink>
         </StyledServicesCoverButtonContainer>
       </StyledCoverContent>
     </StyledServicesCover>

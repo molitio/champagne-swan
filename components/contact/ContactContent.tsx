@@ -9,12 +9,8 @@ import {
   StyledContactContentLogoImage,
   StyledContactContentLogoContainer,
 } from "./style";
-import {
-  StyledLinearGradient,
-  ContactForm,
-  StyledAnchor,
-  NextImage,
-} from "../common";
+import { StyledLinearGradient, ContactForm, StyledAnchor } from "../common";
+import { resolveThemeBreakPointValues } from "../utils";
 
 const ContactContent: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
@@ -74,6 +70,11 @@ const ContactContent: React.FC = () => {
           src={commonAssetUrls?.logo ?? ""}
           alt={"logo"}
           fill={true}
+          sizes={`(max-width: ${resolveThemeBreakPointValues(
+            systemContext?.theme,
+            "xl"
+          )}) 50vw,
+                33vw`}
         />
       </StyledContactContentLogoContainer>
     </StyledContactContent>

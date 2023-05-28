@@ -35,7 +35,7 @@ export const StyledAppCoverImage = styled(Image)`
   object-fit: cover;
 `;
 
-export const StyledCoverContactLink = styled(Link)`
+export const StyledAppCoverContactLink = styled(Link)`
   position: absolute;
   top: 0;
   padding: 0.5em 1em;

@@ -63,4 +63,5 @@ export const StyledServicesCoverDescription = styled.pre`
 export const StyledServicesCoverButtonContainer = styled.div`
   position: relative;
   margin: 2em auto;
+  outline: 3px dashed purple;
 `;
