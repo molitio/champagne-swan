@@ -10,7 +10,16 @@
   "parserOptions": { "project": ["./tsconfig.json"] },
   "plugins": ["@typescript-eslint"],
   "rules": {
-    /* "@next/next/no-img-element": "off", */
-    "max-len": ["warning", { "code": 160, "ignoreComments": true }]
+    "max-len": [
+      "warning",
+      {
+        "code": 160,
+        "ignoreComments": true,
+        "tabWidth": 2,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ]
   }
 }

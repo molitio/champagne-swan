@@ -8,7 +8,7 @@ import {
 import {
   StyledServicesLanding,
   StyledServicesLandingMainTitle,
-  StyledServicesContentContainer,
+  StyledServicesLandingPanel,
   StyledServicesLandingPanelContent,
   StyledContactLink,
   StyledServicesContentBoxTitle,
@@ -55,7 +55,7 @@ const ServicesLanding: React.FC = () => {
         {textContent?.title ?? ""}
       </StyledServicesLandingMainTitle>
 
-      <StyledServicesContentContainer>
+      <StyledServicesLandingPanel>
         <StyledServicesLandingPanelContent>
           <StyledServicesContentBoxTitle>
             {textContent?.comercialServicesContentTitle ?? ""}
@@ -67,6 +67,7 @@ const ServicesLanding: React.FC = () => {
             {navLeafs?.mainContent?.label ?? ""}
           </StyledContactLink>
         </StyledServicesLandingPanelContent>
+
         <StyledServicesLandingPanelImageContainer>
           <StyledServicesLandingPanelImageAndEffect>
             <StyledServicesLandingPanelImageWaterSplash
@@ -88,9 +89,9 @@ const ServicesLanding: React.FC = () => {
             />
           </StyledServicesLandingPanelImageAndEffect>
         </StyledServicesLandingPanelImageContainer>
-      </StyledServicesContentContainer>
+      </StyledServicesLandingPanel>
 
-      <StyledServicesContentContainer reversed>
+      <StyledServicesLandingPanel reversed>
         <StyledServicesLandingPanelContent>
           <StyledServicesContentBoxTitle>
             {textContent?.privateServicesContentTitle ?? ""}
@@ -123,8 +124,8 @@ const ServicesLanding: React.FC = () => {
             />
           </StyledServicesLandingPanelImageAndEffect>
         </StyledServicesLandingPanelImageContainer>
-      </StyledServicesContentContainer>
-      <StyledServicesContentContainer>
+      </StyledServicesLandingPanel>
+      <StyledServicesLandingPanel>
         <StyledServicesLandingPanelContent>
           <StyledServicesContentBoxTitle>
             {textContent?.highCeilingContentTitle ?? ""}
@@ -157,7 +158,7 @@ const ServicesLanding: React.FC = () => {
             />
           </StyledServicesLandingPanelImageAndEffect>
         </StyledServicesLandingPanelImageContainer>
-      </StyledServicesContentContainer>
+      </StyledServicesLandingPanel>
     </StyledServicesLanding>
   );
 };

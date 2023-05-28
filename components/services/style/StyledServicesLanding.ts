@@ -2,6 +2,13 @@ import styled from "styled-components";
 import Link from "next/link";
 import { resolveThemeBreakPointValues } from "../../utils";
 
+export const StyledServicesLanding = styled.section`
+  position: relative;
+  padding: 5em 0 5em 0;
+  width: 100%;
+  align-items: center;
+`;
+
 export const StyledServicesIconContainer = styled.div`
   position: relative;
   padding-top: 12em;
@@ -11,17 +18,8 @@ export const StyledServicesIconContainer = styled.div`
   }
 `;
 
-type StyledServicesContentContainerProps = {
-  reversed?: boolean;
-};
-
 export const StyledServicesLandingMainTitle = styled.h1`
-  @media (max-width: ${(props) =>
-    resolveThemeBreakPointValues(props?.theme, "md")}) {
-    margin: 2em auto;
-    font-size: 2rem;
-  } */
-    position: relative;
+  position: relative;
   text-align: center;
   font-weight: 400;
   font-size: 3.8em;
@@ -32,17 +30,26 @@ export const StyledServicesLandingMainTitle = styled.h1`
     props?.theme?.palette?.visual["servicesTitleShadow"]?.textShadow ?? ""};
 
   @media (max-width: ${(props) =>
-    resolveThemeBreakPointValues(props?.theme, "xl")}) {
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    margin: 2em auto;
+    font-size: 2rem;
+  }
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
     font-size: 3.2em;
   }
 
   @media (max-width: ${(props) =>
-    resolveThemeBreakPointValues(props?.theme, "md")}) {
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
     font-size: 2.4em;
   }
 `;
 
-export const StyledServicesContentContainer = styled.div<StyledServicesContentContainerProps>`
+type StyledServicesLandingProps = {
+  reversed?: boolean;
+};
+
+export const StyledServicesLandingPanel = styled.div<StyledServicesLandingProps>`
   position: relative;
   display: flex;
   justify-content: center;

@@ -13,7 +13,7 @@ import {
   StyledLinearGradient,
   StyledCoverContent,
   StyledWaterSplash,
-  StyledButtonWaterSplash,
+  StyledButtonWaterSplashContainer,
 } from "../common";
 import { resolveThemeBreakPointValues, useLineBreakParser } from "../utils";
 
@@ -62,7 +62,7 @@ const AboutCover: React.FC = () => {
         </StyledAboutDescription>
 
         <StyledAboutCoverButtonContainer>
-          <StyledButtonWaterSplash>
+          <StyledButtonWaterSplashContainer>
             <StyledWaterSplash
               src={commonAssetUrls?.waterSplash ?? ""}
               alt={"water-splash"}
@@ -73,7 +73,7 @@ const AboutCover: React.FC = () => {
               )}) 50vw,
               33vw`}
             />
-          </StyledButtonWaterSplash>
+          </StyledButtonWaterSplashContainer>
           <StyledAppCoverContactLink
             key={navTree?.contact?.path ?? ""}
             href={navTree?.contact?.path ?? ""}
