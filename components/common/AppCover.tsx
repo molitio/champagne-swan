@@ -3,13 +3,13 @@ import { SystemContext } from "@molitio/ui-core";
 import { IconGroup, StyledLinearGradient, StyledCoverContent } from "../common";
 import { resolveThemeBreakPointValues, useLineBreakParser } from "../utils";
 import {
-  StyledCoverContactLink,
+  StyledAppCoverContactLink,
   StyledAppCoverButtonContainer,
   StyledAppCoverDescription,
   StyledAppCover,
   StyledAppCoverMainTitle,
   StyledAppCoverImage,
-  StyledWaterSplashButtonContainer,
+  StyledButtonWaterSplash,
   StyledWaterSplash,
 } from "./style";
 
@@ -60,7 +60,7 @@ const AppCover: React.FC = () => {
           {useLineBreakParser(textContent?.description ?? "")}
         </StyledAppCoverDescription>
         <StyledAppCoverButtonContainer>
-          <StyledWaterSplashButtonContainer>
+          <StyledButtonWaterSplash>
             <StyledWaterSplash
               src={commonAssetUrls?.waterSplash ?? ""}
               alt={"water-splash"}
@@ -71,13 +71,13 @@ const AppCover: React.FC = () => {
               )}) 50vw,
               33vw`}
             />
-          </StyledWaterSplashButtonContainer>
-          <StyledCoverContactLink
+          </StyledButtonWaterSplash>
+          <StyledAppCoverContactLink
             key={navTree?.contact?.path ?? ""}
             href={navTree?.contact?.path ?? ""}
           >
             {textContent?.moreInfoButton ?? ""}
-          </StyledCoverContactLink>
+          </StyledAppCoverContactLink>
         </StyledAppCoverButtonContainer>
       </StyledCoverContent>
     </StyledAppCover>

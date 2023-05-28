@@ -2,15 +2,17 @@ import React from "react";
 import { AppContext } from "../context";
 import { CloseIcon, MenuIcon } from "../common";
 import {
-  StyledImageContainer,
-  StyledNav,
+  StyledNavBar,
   StyledNavLink,
   StyledNavLinksContainer,
   StyledNavButton,
+  StyledNavBarLogoImage,
+  StyledNavBarLogoImageContainer,
+  StyledNavBarLogo,
 } from "./style";
 
 import { SystemContext } from "@molitio/ui-core";
-import NextImage from "./NextImage";
+import { resolveThemeBreakPointValues } from "../utils";
 
 const NavBar: React.FC = () => {
   const champagneSwanContext = React.useContext(AppContext);
@@ -23,20 +25,23 @@ const NavBar: React.FC = () => {
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
-    <StyledNav
+    <StyledNavBar
       navBarExpanded={champagneSwanContext?.interactive?.navBarExpanded}
     >
-      <StyledImageContainer>
-        <NextImage
-          containerDimensions={{ width: "14em", height: "12em" }}
-          containerPositioning={{ position: "relative" }}
-          imageProps={{
-            src: commonAssetUrls?.horizontalLogo ?? "",
-            alt: "logo",
-            fill: true,
-          }}
-        />
-      </StyledImageContainer>
+      <StyledNavBarLogo>
+        <StyledNavBarLogoImageContainer>
+          <StyledNavBarLogoImage
+            src={commonAssetUrls?.horizontalLogo ?? ""}
+            alt={"logo"}
+            fill={true}
+            sizes={`(max-width: ${resolveThemeBreakPointValues(
+              systemContext?.theme,
+              "xl"
+            )}) 50vw,
+                33vw`}
+          />
+        </StyledNavBarLogoImageContainer>
+      </StyledNavBarLogo>
 
       <StyledNavLinksContainer
         navBarExpanded={champagneSwanContext?.interactive?.navBarExpanded}
@@ -67,7 +72,7 @@ const NavBar: React.FC = () => {
       >
         {navBarExpanded ? <CloseIcon /> : <MenuIcon />}
       </StyledNavButton>
-    </StyledNav>
+    </StyledNavBar>
   );
 };
 

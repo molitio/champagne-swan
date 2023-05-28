@@ -1,6 +1,6 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
-import { NextImage, StyledLinearGradient, StyledCoverContent } from "../common";
+import { StyledLinearGradient, StyledCoverContent } from "../common";
 import {
   StyledContactCoverTitle,
   StyledContact,
