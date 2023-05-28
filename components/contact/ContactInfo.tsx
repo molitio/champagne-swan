@@ -5,7 +5,6 @@ import {
   StyledAnchor,
   ContactForm,
   StyledLinearGradient,
-  NextImage,
 } from "../common";
 import {
   StyledFormContainer,

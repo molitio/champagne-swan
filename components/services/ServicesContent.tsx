@@ -2,20 +2,23 @@ import React from "react";
 import { SystemContext } from "@molitio/ui-core";
 import {
   IconGroup,
-  NextImage,
-  StyledImageAndEffect,
   StyledLinearGradient,
+  StyledServicesLandingPanelImageWaterSplash,
 } from "../common";
 import {
   StyledServicesContentMainTitle,
   StyledServicesContentBoxTitle,
   StyledServicesContentBoxText,
   StyledServicesLanding,
-  StyledServicesContentBlock,
+  StyledServicesContentPanel,
   StyledServicesContentBlockItem,
   StyledServicesLandingPanelImageContainer,
   StyledServicesContentBlockItemInfo,
+  StyledServicesContentPanelImageAndEffect,
+  StyledServicesLandingPanelImage,
+  StyledServicesLandingPanelContent,
 } from "./style";
+import { resolveThemeBreakPointValues } from "../utils";
 
 const ServicesContent: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
@@ -42,190 +45,126 @@ const ServicesContent: React.FC = () => {
         {textContent?.title ?? ""}
       </StyledServicesContentMainTitle>
 
-      <StyledServicesContentBlock>
-        <StyledServicesLandingPanelImageContainer>
-          <StyledImageAndEffect
-            dimensions={{
-              height: "350px",
-              width: "490px",
-            }}
-            /*            positioning={{ margin: "auto" }} */
-          >
-            <NextImage
-              containerPositioning={{
-                position: "absolute",
-                left: "-120px",
-                bottom: "-100px",
-                transform: "rotate(40deg) scaleX(-1)",
-              }}
-              containerDimensions={{ width: "250px", height: "250px" }}
-              imageProps={{
-                src: commonAssetUrls?.waterSplash ?? "",
-                alt: "water-splash",
-                fill: true,
-              }}
-            />
-            <NextImage
-              containerDimensions={{
-                height: "350px",
-                width: "490px",
-              }}
-              containerPositioning={{
-                position: "absolute",
-              }}
-              imageProps={{
-                src: assetUrls?.officeCleaners ?? "",
-                alt: "office-cleaners",
-                fill: true,
-              }}
-              imageVisual={{
-                boxShadow:
-                  theme?.palette?.visual["brandMessageImageShadow"]
-                    ?.boxShadow ?? "",
-                borderRadius: "1em",
-              }}
-            />
-          </StyledImageAndEffect>
-        </StyledServicesLandingPanelImageContainer>
-        <StyledServicesContentBlockItem>
-          <StyledServicesContentBoxTitle>
-            {textContent?.officeCleaningTitle ?? ""}
-          </StyledServicesContentBoxTitle>
-          <StyledServicesContentBoxText>
-            {textContent?.officeCleaningText ?? ""}
-          </StyledServicesContentBoxText>
-        </StyledServicesContentBlockItem>
-        <StyledServicesContentBlockItemInfo>
-          <StyledServicesContentBoxText>
-            {textContent?.officeCleaningInfo ?? ""}
-          </StyledServicesContentBoxText>
-        </StyledServicesContentBlockItemInfo>
-      </StyledServicesContentBlock>
+      <StyledServicesContentPanel>
+        <StyledServicesLandingPanelContent>
+          <StyledServicesContentBlockItem>
+            <StyledServicesContentBoxTitle>
+              {textContent?.officeCleaningTitle ?? ""}
+            </StyledServicesContentBoxTitle>
+            <StyledServicesContentBoxText>
+              {textContent?.officeCleaningText ?? ""}
+            </StyledServicesContentBoxText>
+          </StyledServicesContentBlockItem>
+        </StyledServicesLandingPanelContent>
+        <StyledServicesLandingPanelContent>
+          <StyledServicesContentBlockItemInfo>
+            <StyledServicesContentBoxText>
+              {textContent?.officeCleaningInfo ?? ""}
+            </StyledServicesContentBoxText>
+          </StyledServicesContentBlockItemInfo>
+        </StyledServicesLandingPanelContent>
 
-      <StyledServicesContentBlock>
         <StyledServicesLandingPanelImageContainer>
-          <StyledImageAndEffect
-            dimensions={{
-              height: "350px",
-              width: "490px",
-            }}
-            /*             positioning={{ margin: "auto" }} */
-          >
-            <NextImage
-              containerPositioning={{
-                position: "absolute",
-                left: "-120px",
-                bottom: "-100px",
-                transform: "rotate(40deg) scaleX(-1)",
-              }}
-              containerDimensions={{ width: "250px", height: "250px" }}
-              imageProps={{
-                src: commonAssetUrls?.waterSplash ?? "",
-                alt: "water-splash",
-                fill: true,
-              }}
+          <StyledServicesContentPanelImageAndEffect>
+            <StyledServicesLandingPanelImageWaterSplash
+              src={commonAssetUrls?.waterSplash ?? ""}
+              alt={"water-splash"}
+              width={240}
+              height={240}
             />
-            <NextImage
-              containerDimensions={{
-                height: "350px",
-                width: "490px",
-              }}
-              containerPositioning={{
-                position: "absolute",
-              }}
-              imageProps={{
-                src: assetUrls?.flatRoom ?? "",
-                alt: "flat-room",
-                fill: true,
-              }}
-              imageVisual={{
-                boxShadow:
-                  theme?.palette?.visual["brandMessageImageShadow"]
-                    ?.boxShadow ?? "",
-                borderRadius: "1em",
-              }}
+            <StyledServicesLandingPanelImage
+              sizes={`(max-width: ${resolveThemeBreakPointValues(
+                systemContext?.theme,
+                "xl"
+              )}) 50vw,
+                33vw`}
+              src={assetUrls?.officeCleaners ?? ""}
+              alt={"office-cleaners"}
+              fill={true}
             />
-          </StyledImageAndEffect>
+          </StyledServicesContentPanelImageAndEffect>
         </StyledServicesLandingPanelImageContainer>
-        <StyledServicesContentBlockItem>
-          <StyledServicesContentBoxTitle>
-            {textContent?.highCeilingTitle ?? ""}
-          </StyledServicesContentBoxTitle>
-          <StyledServicesContentBoxText>
-            {textContent?.personalCleaningInfo ?? ""}
-          </StyledServicesContentBoxText>
-        </StyledServicesContentBlockItem>
-        <StyledServicesContentBlockItemInfo>
-          <StyledServicesContentBoxText>
-            {textContent?.personalCleaningExtendedInfo ?? ""}
-          </StyledServicesContentBoxText>
-        </StyledServicesContentBlockItemInfo>
-      </StyledServicesContentBlock>
+      </StyledServicesContentPanel>
 
-      <StyledServicesContentBlock>
+      <StyledServicesContentPanel>
         <StyledServicesLandingPanelImageContainer>
-          <StyledImageAndEffect
-            dimensions={{
-              height: "350px",
-              width: "490px",
-            }}
-            /*             positioning={{
-              position: "relative",
-            }} */
-          >
-            <NextImage
-              containerPositioning={{
-                position: "absolute",
-                left: "-120px",
-                bottom: "-100px",
-                transform: "rotate(40deg) scaleX(-1)",
-              }}
-              containerDimensions={{ width: "250px", height: "250px" }}
-              imageProps={{
-                src: commonAssetUrls?.waterSplash ?? "",
-                alt: "water-splash",
-                fill: true,
-              }}
+          <StyledServicesContentPanelImageAndEffect>
+            <StyledServicesLandingPanelImageWaterSplash
+              src={commonAssetUrls?.waterSplash ?? ""}
+              alt={"water-splash"}
+              width={240}
+              height={240}
             />
-            <NextImage
-              containerDimensions={{
-                height: "350px",
-                width: "490px",
-              }}
-              containerPositioning={{
-                position: "absolute",
-              }}
-              imageProps={{
-                src: assetUrls?.industrial ?? "",
-                alt: "industry-complex",
-                fill: true,
-              }}
-              imageVisual={{
-                boxShadow:
-                  theme?.palette?.visual["brandMessageImageShadow"]
-                    ?.boxShadow ?? "",
-                borderRadius: "1em",
-              }}
+            <StyledServicesLandingPanelImage
+              sizes={`(max-width: ${resolveThemeBreakPointValues(
+                systemContext?.theme,
+                "xl"
+              )}) 50vw,
+                33vw`}
+              src={assetUrls?.flatRoom ?? ""}
+              alt={"flat-room"}
+              fill={true}
             />
-          </StyledImageAndEffect>
+          </StyledServicesContentPanelImageAndEffect>
         </StyledServicesLandingPanelImageContainer>
-        <StyledServicesContentBlockItem>
-          <StyledServicesContentBoxTitle>
-            {textContent?.highCeilingTitle ?? ""}
-          </StyledServicesContentBoxTitle>
-          <StyledServicesContentBoxText>
-            {textContent?.highCeilingText ?? ""}
-          </StyledServicesContentBoxText>
-        </StyledServicesContentBlockItem>
-        <StyledServicesContentBlockItemInfo>
-          <StyledServicesContentBoxText>
-            {textContent?.highCeilingInfo ?? ""}
-          </StyledServicesContentBoxText>
-          <StyledServicesContentBoxText>
-            {textContent?.highCeilingExtendedInfo ?? ""}
-          </StyledServicesContentBoxText>
-        </StyledServicesContentBlockItemInfo>
-      </StyledServicesContentBlock>
+
+        <StyledServicesLandingPanelContent>
+          <StyledServicesContentBlockItem>
+            <StyledServicesContentBoxTitle>
+              {textContent?.highCeilingTitle ?? ""}
+            </StyledServicesContentBoxTitle>
+            <StyledServicesContentBoxText>
+              {textContent?.personalCleaningInfo ?? ""}
+            </StyledServicesContentBoxText>
+          </StyledServicesContentBlockItem>
+          <StyledServicesContentBlockItemInfo>
+            <StyledServicesContentBoxText>
+              {textContent?.personalCleaningExtendedInfo ?? ""}
+            </StyledServicesContentBoxText>
+          </StyledServicesContentBlockItemInfo>
+        </StyledServicesLandingPanelContent>
+      </StyledServicesContentPanel>
+
+      <StyledServicesContentPanel>
+        <StyledServicesLandingPanelImageContainer>
+          <StyledServicesContentPanelImageAndEffect>
+            <StyledServicesLandingPanelImageWaterSplash
+              src={commonAssetUrls?.waterSplash ?? ""}
+              alt={"water-splash"}
+              width={240}
+              height={240}
+            />
+            <StyledServicesLandingPanelImage
+              sizes={`(max-width: ${resolveThemeBreakPointValues(
+                systemContext?.theme,
+                "xl"
+              )}) 50vw,
+                33vw`}
+              src={assetUrls?.industrial ?? ""}
+              alt={"industry-complex"}
+              fill={true}
+            />
+          </StyledServicesContentPanelImageAndEffect>
+        </StyledServicesLandingPanelImageContainer>
+        <StyledServicesLandingPanelContent>
+          <StyledServicesContentBlockItem>
+            <StyledServicesContentBoxTitle>
+              {textContent?.highCeilingTitle ?? ""}
+            </StyledServicesContentBoxTitle>
+            <StyledServicesContentBoxText>
+              {textContent?.highCeilingText ?? ""}
+            </StyledServicesContentBoxText>
+          </StyledServicesContentBlockItem>
+          <StyledServicesContentBlockItemInfo>
+            <StyledServicesContentBoxText>
+              {textContent?.highCeilingInfo ?? ""}
+            </StyledServicesContentBoxText>
+            <StyledServicesContentBoxText>
+              {textContent?.highCeilingExtendedInfo ?? ""}
+            </StyledServicesContentBoxText>
+          </StyledServicesContentBlockItemInfo>
+        </StyledServicesLandingPanelContent>
+      </StyledServicesContentPanel>
     </StyledServicesLanding>
   );
 };

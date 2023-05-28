@@ -10,7 +10,7 @@ import {
 import {
   StyledAppCoverContactLink,
   StyledWaterSplash,
-  StyledButtonWaterSplash,
+  StyledButtonWaterSplashContainer,
 } from "../common";
 
 import { StyledCoverContent, StyledLinearGradient } from "../common";
@@ -58,7 +58,7 @@ const ServicesCover: React.FC = () => {
         </StyledServicesCoverDescription>
 
         <StyledServicesCoverButtonContainer>
-          <StyledButtonWaterSplash>
+          <StyledButtonWaterSplashContainer>
             <StyledWaterSplash
               src={commonAssetUrls?.waterSplash ?? ""}
               alt={"water-splash"}
@@ -69,7 +69,7 @@ const ServicesCover: React.FC = () => {
               )}) 50vw,
               33vw`}
             />
-          </StyledButtonWaterSplash>
+          </StyledButtonWaterSplashContainer>
           <StyledAppCoverContactLink
             key={assetUrls?.cover ?? ""}
             href={assetUrls?.cover ?? ""}

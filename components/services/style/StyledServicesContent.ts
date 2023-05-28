@@ -2,13 +2,6 @@ import styled from "styled-components";
 import Image from "next/image";
 import { resolveThemeBreakPointValues } from "../../utils";
 
-export const StyledServicesLanding = styled.section`
-  position: relative;
-  padding: 5em 0 5em 0;
-  width: 100%;
-  align-items: center;
-`;
-
 export const StyledServicesContentMainTitle = styled.h1`
   position: relative;
   text-align: center;
@@ -31,16 +24,17 @@ export const StyledServicesContentMainTitle = styled.h1`
   }
 `;
 
-export const StyledServicesContentBlock = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: auto;
-  gap: 1em;
+type StyledServicesContentPanelProps = {
+  reversed?: boolean;
+};
+
+export const StyledServicesContentPanel = styled.div<StyledServicesContentPanelProps>`
   position: relative;
-  padding-top: 3em;
-  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: ${(props) => (props?.reversed ? "row-reverse" : "row")};
+
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
     flex-direction: column;
@@ -144,5 +138,43 @@ export const StyledServicesContentBoxText = styled.p`
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
+  }
+`;
+
+export const StyledServicesContentPanelImageAndEffect = styled.div`
+  position: relative;
+  height: 24em;
+  width: 32em;
+  margin: 8em;
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xxl")}) {
+    height: 20em;
+    width: 28em;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    height: 20em;
+    width: 28em;
+    margin: auto;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+    height: 20em;
+    width: 28em;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    height: 12em;
+    width: 20em;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    height: 8em;
+    width: 12em;
   }
 `;
