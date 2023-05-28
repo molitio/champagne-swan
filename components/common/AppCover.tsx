@@ -9,7 +9,7 @@ import {
   StyledAppCover,
   StyledAppCoverMainTitle,
   StyledAppCoverImage,
-  StyledButtonWaterSplash,
+  StyledButtonWaterSplashContainer,
   StyledWaterSplash,
 } from "./style";
 
@@ -34,7 +34,7 @@ const AppCover: React.FC = () => {
           systemContext?.theme,
           "xl"
         )}) 50vw,
-                33vw`}
+            33vw`}
       />
       <StyledLinearGradient
         direction="bottom"
@@ -59,8 +59,9 @@ const AppCover: React.FC = () => {
         <StyledAppCoverDescription>
           {useLineBreakParser(textContent?.description ?? "")}
         </StyledAppCoverDescription>
+
         <StyledAppCoverButtonContainer>
-          <StyledButtonWaterSplash>
+          <StyledButtonWaterSplashContainer>
             <StyledWaterSplash
               src={commonAssetUrls?.waterSplash ?? ""}
               alt={"water-splash"}
@@ -71,7 +72,8 @@ const AppCover: React.FC = () => {
               )}) 50vw,
               33vw`}
             />
-          </StyledButtonWaterSplash>
+          </StyledButtonWaterSplashContainer>
+
           <StyledAppCoverContactLink
             key={navTree?.contact?.path ?? ""}
             href={navTree?.contact?.path ?? ""}

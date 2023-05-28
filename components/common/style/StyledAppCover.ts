@@ -58,7 +58,11 @@ export const StyledAppCoverContactLink = styled(Link)`
 
 export const StyledAppCoverButtonContainer = styled.div`
   position: relative;
+  display: flex;
+  justify-content: center;
   margin: 2em auto;
+  width: max-content;
+  height: max-content;
 `;
 
 export const StyledAppCoverDescription = styled.pre`
