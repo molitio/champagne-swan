@@ -20,27 +20,6 @@ export const StyledBrandMessage = styled.section`
   }
 `;
 
-export const StyledBrandMessageTitle = styled.h1`
-  text-align: center;
-  font-weight: 400;
-  font-size: 3.8rem;
-  line-height: 2em;
-  white-space: pre;
-  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
-  text-shadow: ${(props) =>
-    props?.theme?.palette?.visual?.["aboutContentTitleShadow"]?.textShadow ??
-    ""};
-
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    font-size: 2.4rem;
-  }
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
-    font-size: 1.8rem;
-  }
-`;
-
 export const StyledBrandMessagePanel = styled.div`
   position: relative;
   display: flex;
@@ -154,46 +133,6 @@ export const StyledBrandMessageMainTitle = styled.h1`
   }
 `;
 
-export const StyledBrandMessageImageContainer = styled.div`
-  padding-top: 5em;
-`;
-
-export const StyledAboutQuoteText = styled.p`
-  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
-  font-style: italic;
-  font-size: 24px;
-  text-align: center;
-  font-weight: 300;
-  padding: 3em 0 1em 0;
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    display: block;
-    margin: auto;
-    width: 20em;
-  }
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
-    font-size: 17px;
-    width: 17em;
-  }
-`;
-export const StyledAboutQuoteAuthorText = styled.p`
-  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
-  font-size: 1.5em;
-  text-align: end;
-  font-weight: 300;
-  padding: 0em 2em 0em 0;
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    padding: 0 2em 0 0;
-  }
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
-    padding: 0em 3em 0em 0;
-    font-size: 1em;
-  }
-`;
-
 export const StyledBrandMessagePanelTitle = styled.h1`
   font-family: "Lato", sans-serif;
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
@@ -244,18 +183,6 @@ export const StyledBrandMessagePanelText = styled.p`
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
   }
-`;
-export const StyledBrandMessageText = styled.p`
-  position: relative;
-  margin: 0 auto;
-  padding: 0 6em;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.2em;
-  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
-  text-shadow: ${(props) =>
-    props?.theme?.palette?.visual["brandMessageContentTextShadow"]
-      ?.textShadow ?? ""};
 `;
 
 export const StyledBrandMessagePanelContactLink = styled(Link)`
