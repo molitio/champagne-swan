@@ -6,14 +6,14 @@ import {
   StyledAboutDescription,
   StyledAboutCoverButtonContainer,
   StyledAboutSubTitle,
-  StyledCoverContactLink,
+  StyledAppCoverContactLink,
   StyledBoutCoverImage,
 } from "./style";
 import {
   StyledLinearGradient,
   StyledCoverContent,
   StyledWaterSplash,
-  StyledWaterSplashButtonContainer,
+  StyledButtonWaterSplash,
 } from "../common";
 import { resolveThemeBreakPointValues, useLineBreakParser } from "../utils";
 
@@ -62,7 +62,7 @@ const AboutCover: React.FC = () => {
         </StyledAboutDescription>
 
         <StyledAboutCoverButtonContainer>
-          <StyledWaterSplashButtonContainer>
+          <StyledButtonWaterSplash>
             <StyledWaterSplash
               src={commonAssetUrls?.waterSplash ?? ""}
               alt={"water-splash"}
@@ -73,13 +73,13 @@ const AboutCover: React.FC = () => {
               )}) 50vw,
               33vw`}
             />
-          </StyledWaterSplashButtonContainer>
-          <StyledCoverContactLink
+          </StyledButtonWaterSplash>
+          <StyledAppCoverContactLink
             key={navTree?.contact?.path ?? ""}
             href={navTree?.contact?.path ?? ""}
           >
             {aboutCoverTextContent?.contactLinkText ?? ""}
-          </StyledCoverContactLink>
+          </StyledAppCoverContactLink>
         </StyledAboutCoverButtonContainer>
       </StyledCoverContent>
     </StyledAboutCover>

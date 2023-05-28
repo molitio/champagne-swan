@@ -1,6 +1,5 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
-import { NextImage } from "../common";
 import {
   StyledPartners,
   StyledPartnersTitle,

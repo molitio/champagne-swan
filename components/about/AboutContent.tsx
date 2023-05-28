@@ -32,7 +32,6 @@ const AboutContent: React.FC = () => {
   const opinionsTextContent = aboutLeafs?.opinions?.textContent;
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
-  const theme = systemContext?.theme;
 
   return (
     <StyledAboutContent>

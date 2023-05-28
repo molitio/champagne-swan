@@ -16,7 +16,9 @@ import {
   StyledContactInfo,
   StyledContactInfoLogoContainer,
   StyledContactInfoText,
+  StyledContactInfoLogoImage,
 } from "./style";
+import { resolveThemeBreakPointValues } from "../utils";
 
 const ContactInfo: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
@@ -71,14 +73,15 @@ const ContactInfo: React.FC = () => {
         </StyledFormContainer>
       </SyledFormBox>
       <StyledContactInfoLogoContainer>
-        <NextImage
-          containerDimensions={{ width: "150px", height: "150px" }}
-          containerPositioning={{ position: "relative" }}
-          imageProps={{
-            src: commonAssetUrls?.logo ?? "",
-            alt: "logo",
-            fill: true,
-          }}
+        <StyledContactInfoLogoImage
+          src={commonAssetUrls?.logo ?? ""}
+          alt={"logo"}
+          fill={true}
+          sizes={`(max-width: ${resolveThemeBreakPointValues(
+            systemContext?.theme,
+            "xl"
+          )}) 50vw,
+                33vw`}
         />
       </StyledContactInfoLogoContainer>
     </StyledContactInfo>
