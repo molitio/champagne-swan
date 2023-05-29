@@ -9,11 +9,12 @@ export const StyledWaterSplash = styled(Image)`
 `;
 
 export const StyledButtonWaterSplashContainer = styled.div`
-  position: relative;
+  outline: 3px dashed orange;
+  position: absolute;
   width: 160px;
   height: 160px;
-  right: -50px;
-  bottom: 20px;
+  right: -60px;
+  bottom: -80px;
   transform: rotate(-15deg);
 `;
 
