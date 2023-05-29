@@ -9,7 +9,6 @@ export const StyledWaterSplash = styled(Image)`
 `;
 
 export const StyledButtonWaterSplashContainer = styled.div`
-  outline: 3px dashed orange;
   position: absolute;
   width: 160px;
   height: 160px;
