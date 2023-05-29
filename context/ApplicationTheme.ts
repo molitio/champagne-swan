@@ -80,12 +80,20 @@ export const ApplicationTheme = {
       contactTextShadow: { textShadow: "1px 1px 2px #424E51ff" },
       skillScore: { textShadow: "1px 2px 4px #424E51ff" },
       skillName: { textShadow: "1px 2px 2px #424E51ff" },
+      /* contactInfoTextShadow: { textShadow: "0px 2px 4px #8c7b6c" }, */
       contactInfoTextShadow: { textShadow: "0px 2px 4px #8c7b6c" },
+      brandMessageOfficeCleaners: {
+        boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.5)",
+      },
     },
   },
   dimensions: {
     page: {
       height: "1150px",
+    },
+    waterSplash: {
+      height: 240,
+      width: 240,
     },
     header: {
       height: "5em",

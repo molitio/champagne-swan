@@ -1,18 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 import styled from "styled-components";
 import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledAboutCover = styled.section`
   position: relative;
+  width: 100%;
+  height: 80vh;
 `;
 
 export const StyledAboutMainTitle = styled.h1`
   position: relative;
-  margin: auto;
   text-align: center;
   font-size: 3.8em;
-  font-weight: 300;
-  line-height: 2em;
+  font-weight: 400;
+  opacity: 0.8;
   color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["aboutCoverTitleShadow"]?.textShadow ?? ""};
@@ -20,22 +22,21 @@ export const StyledAboutMainTitle = styled.h1`
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
     white-space: pre;
-    font-size: 2.8em;
+    font-size: 3.2em;
   }
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    font-size: 2.2em;
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    font-size: 2.4em;
   }
 `;
 
 export const StyledAboutSubTitle = styled.h2`
   position: relative;
-  margin: auto;
   text-align: center;
   font-size: 3.6rem;
   font-weight: 300;
-  line-height: 2em;
+  opacity: 0.8;
   color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["aboutCoverSubTitleShadow"]?.textShadow ??
@@ -81,17 +82,18 @@ export const StyledAboutDescription = styled.p`
   }
 `;
 
-export const StyledButtonContainer = styled.div`
+export const StyledAboutCoverButtonContainer = styled.div`
   position: relative;
-  width: max-content;
-  margin: auto;
-  padding-top: 3em;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 2em auto;
+  width: min-content;
+  height: min-content;
 `;
 
-export const StyledCoverContactLink = styled(Link)`
+export const StyledAppCoverContactLink = styled(Link)`
   position: relative;
-  padding: 0.6em 1.2em;
+  padding: 0.5em 1em;
   font-size: 1.5em;
   font-weight: 300;
   color: ${(props) => props?.theme?.palette?.text?.secondary};
@@ -107,4 +109,8 @@ export const StyledCoverContactLink = styled(Link)`
     color: ${(props) => props?.theme?.palette?.tertiary?.main};
     background-color: ${(props) => props?.theme?.palette?.text?.secondary};
   }
+`;
+
+export const StyledBoutCoverImage = styled(Image)`
+  object-fit: cover;
 `;

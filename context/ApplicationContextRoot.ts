@@ -37,19 +37,15 @@ export const ApplicationContextRoot = {
       leafs: {
         images: {
           assetUrls: {
-            gradientHero:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_hero.png",
-            gradientTop:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_top.png",
-            gradientBottom:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cs_gradient_bottom.png",
-            waterSplash:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/water_splash-01.png",
-            stockPersonAvatar:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/person2.png",
-            logo: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/logo/jeliza_logokit_jeliza_logo_submark.svg",
+            gradientHero: "/web_content/img/cs_gradient_hero.webp",
+            gradientTop: "/web_content/img/cs_gradient_top.webp",
+            gradientBottom: "/web_content/img/cs_gradient_bottom.webp",
+            waterSplash: "/web_content/img/water_splash-01.webp",
+            stockPersonAvatar1: "/web_content/img/person1.webp",
+            stockPersonAvatar2: "/web_content/img/person2.webp",
+            logo: "/web_content/logo/jeliza_logokit_jeliza_logo_submark.svg",
             horizontalLogo:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/logo/jeliza_logokit_jeliza_logo_horizontal.svg",
+              "/web_content/logo/jeliza_logokit_jeliza_logo_horizontal.svg",
             emailApi: "/api/email",
           },
         },
@@ -78,24 +74,23 @@ export const ApplicationContextRoot = {
             addressHref: "https://goo.gl/maps/FK9mXYG25HLPXEvR6",
             phoneMainHref: "tel:+36204160391",
             logoImage:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/logo/jeliza_logo_horizontal_jeliza_logo_horizontal.svg",
-            skyScraper:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/skyscraper.jpg",
+              "/web_content/logo/jeliza_logo_horizontal_jeliza_logo_horizontal.svg",
+            skyScraper: "/web_content/img/skyscraper.webp",
           },
           iconDefinitions: {
             phone: {
               title: "Mobile",
-              url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/icons/icons_jeliza-01.svg",
+              url: "/web_content/icons/icons_jeliza-01.svg",
               hrefUrl: "tel:+36204160391",
             },
             email: {
               title: "E-mail",
-              url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/icons/icons_jeliza_phone.svg",
+              url: "/web_content/icons/icons_jeliza_phone.svg",
               hrefUrl: "mailto:info@jeliza.com",
             },
             address: {
               title: "Cím",
-              url: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/icons/icons_jeliza_envelope.svg",
+              url: "/web_content/icons/icons_jeliza_envelope.svg",
               hrefUrl: "https://goo.gl/maps/FK9mXYG25HLPXEvR6",
             },
           },
@@ -126,8 +121,7 @@ export const ApplicationContextRoot = {
             moreInfoButton: "Bővebben",
           },
           assetUrls: {
-            officeCleaners:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/officecleaners.jpg",
+            officeCleaners: "/web_content/img/officecleaners.webp",
           },
         },
       },
@@ -139,14 +133,10 @@ export const ApplicationContextRoot = {
             title: "PARTNEREINK",
           },
           assetUrls: {
-            mLogo:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/mlogo.png",
-            houseLogo:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/houselogo.png",
-            brandLogo:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/brand.png",
-            officeLogo:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/officelogo.png",
+            mLogo: "/web_content/img/mlogo.webp",
+            houseLogo: "/web_content/img/houselogo.webp",
+            brandLogo: "/web_content/img/brand.webp",
+            officeLogo: "/web_content/img/officelogo.webp",
           },
         },
       },
@@ -168,9 +158,8 @@ export const ApplicationContextRoot = {
         customerOpinions: {
           textContent: {
             title: "VÉLEMÉNYEK",
-            defaultCostumerOpinion:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit.consectetur adipiscing elit.consectetur adipiscing elit.",
-            defaultCustomerName: "John Doe",
+            defaultCostumerOpinion: "Hamarosan érkezik.",
+            defaultCustomerName: "",
           },
         },
       },
@@ -185,10 +174,8 @@ export const ApplicationContextRoot = {
             moreInfoButton: "Bővebben",
           },
           assetUrls: {
-            heroBackground:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/hero.webp",
-            effectLayer:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/jeliza_hero_gradient.svg",
+            heroBackground: "/web_content/img/hero.webp",
+            effectLayer: "/web_content/img/jeliza_hero_gradient.svg",
           },
         },
       },
@@ -209,12 +196,9 @@ export const ApplicationContextRoot = {
               "Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is",
           },
           assetUrls: {
-            morning:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/morning.jpg",
-            flatRoom:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/flatroom.jpg",
-            industry:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/industrial.jpg",
+            morning: "/web_content/img/morning.webp",
+            flatRoom: "/web_content/img/flatroom.webp",
+            industry: "/web_content/img/industrial.webp",
           },
         },
         cover: {
@@ -230,8 +214,7 @@ export const ApplicationContextRoot = {
           },
           assetUrls: {
             cover: "#main-content",
-            window:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/window.jpg",
+            window: "/web_content/img/window.webp",
           },
         },
         content: {
@@ -240,32 +223,23 @@ export const ApplicationContextRoot = {
             officeCleaningTitle: "Szállodák és irodaházak takarítása",
             officeCleaningText:
               "Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is",
-            officeCleaningInfo:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.",
-            officeCleaningExtendedInfo:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.",
+            officeCleaningInfo: "",
+            officeCleaningExtendedInfo: "",
             personalCleaningTitle: "Magánszemélyeknél végzett takarítás",
             personalCleaningText:
               "Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is",
-            personalCleaningInfo:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.",
-            personalCleaningExtendedInfo:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.",
+            personalCleaningInfo: "",
+            personalCleaningExtendedInfo: "",
             highCeilingTitle: "Nagy belmagasságú épületek takarítása",
             highCeilingText:
               "Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is",
-            highCeilingInfo:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.",
-            highCeilingExtendedInfo:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum.",
+            highCeilingInfo: "",
+            highCeilingExtendedInfo: "",
           },
           assetUrls: {
-            officeCleaners:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/officecleaners.jpg",
-            industrial:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/industrial.jpg",
-            flatRoom:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/flatroom.jpg",
+            officeCleaners: "/web_content/img/officecleaners.webp",
+            industrial: "/web_content/img/industrial.webp",
+            flatRoom: "/web_content/img/flatroom.webp",
           },
         },
       },
@@ -277,19 +251,17 @@ export const ApplicationContextRoot = {
             title: "SZAKKÉPZETT \\n MUNKAERŐ",
             subTitle: "MINŐSÉGI \\n SZOLGÁLTATÁS",
             contactLinkText: "Kapcsolat",
-            description: "Lorem ipusm dolor sit amet",
+            description: "",
           },
           assetUrls: {
-            cleaners:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/cleaners.jpg",
+            cleaners: "/web_content/img/cleaners.webp",
           },
         },
         opinions: {
           textContent: {
             title: "KOLLÉGÁINK MONDTÁK",
-            defaultCustomerName: "John Doe",
-            defaultCustomerOpinion:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit.consectetur adipiscing elit.consectetur adipiscing elit.",
+            defaultCustomerName: "",
+            defaultCustomerOpinion: "Hamarosan érkezik.",
           },
         },
         brandMessage: {
@@ -297,15 +269,12 @@ export const ApplicationContextRoot = {
             title: "ISMERJEN MEG\nBENNÜNKET",
             aboutQuote: `"A minőség azt jelenti, hogy akkor is jól csinálsz valamit amikor nem látják. \n"`,
             aboutQuoteAuthor: "Henry Ford",
-            premiumQualityContentText:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nulla nulla, lobortis in mi nec, scelerisque malesuada metus. Morbi massa sem, ultricies euismod nisl vitae, porttitor lacinia lorem. Vestibulum lectus eros, faucibus placerat ex id, pretium auctor lectus. Morbi fringilla odio sit amet turpis aliquet, at gravida nisl dictum. Cras convallis, elit in efficitur tristique, metus metus semper massa, consequat convallis orci diam quis massa. Integer varius laoreet augue sed mollis. Curabitur id scelerisque lacus, non pellentesque tellus. Cras molestie, ligula rutrum convallis placerat, arcu ante sollicitudin elit, pretium interdum sapien tortor nec urna. Cras molestie auctor nisi, nec fringilla nisl vulputate gravida. Suspendisse potenti. Morbi eu posuere leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse quis neque mollis, porta turpis in, fermentum lectus.",
+            premiumQualityContentText: "Hamarosan érkezik.",
           },
           assetUrls: {
-            mop: "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/mop.jpg",
-            colleague:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/colleague.jpg",
-            machine:
-              "https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/img/machine.jpg",
+            mop: "/web_content/img/mop.webp",
+            colleague: "/web_content/img/colleague.webp",
+            machine: "/web_content/img/machine.webp",
           },
         },
       },

@@ -1,25 +1,28 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
-import { IconGroup, NextImage, StyledImageAndEffect } from "../common";
+import { IconGroup, StyledContactContentPanelWaterSplash } from "../common";
 import {
   StyledOpinionsMainTitle,
   StyledOpinionsContainer,
   StyledOpinions,
-  StyledOpinion,
+  StyledOpinionsPanel,
   StyledOpinionText,
   StyledOpinionTitle,
 } from "../opinions";
-import {
-  StyledBrandMessageText,
-  StyledBrandMessageImageContainer,
-  StyledAboutQuoteText,
-  StyledAboutQuoteAuthorText,
-  StyledBrandMessageQuoteContainer,
-  StyledBrandMessageTitle,
-} from "../brand";
 import { ContactInfo } from "../contact";
-import { StyledAboutContent, StyledBrandMessageContainer } from "./style";
-import { useLineBreakParser } from "../utils";
+import {
+  StyledAboutContent,
+  StyledAboutContentPanel,
+  StyledAboutContentPanelQuotes,
+  StyledAboutContentPanelImage,
+  StyledAboutContentPanelImageAndEffect,
+  StyledAboutContentPanelText,
+  StyledAboutContentQuote,
+  StyledAboutContentQuoteAuthor,
+  StyledAboutContentPanelTitle,
+  StyledAboutContentImagePanel,
+} from "./style";
+import { resolveThemeBreakPointValues, useLineBreakParser } from "../utils";
 
 const AboutContent: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
@@ -29,133 +32,94 @@ const AboutContent: React.FC = () => {
   const opinionsTextContent = aboutLeafs?.opinions?.textContent;
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
-  const theme = systemContext?.theme;
 
   return (
     <StyledAboutContent>
-      <StyledBrandMessageContainer>
+      <StyledAboutContentPanel>
         <IconGroup
           fill={systemContext?.theme?.palette?.stars?.gold}
           starCount={5}
         />
-        <StyledBrandMessageTitle>
+        <StyledAboutContentPanelTitle>
           {useLineBreakParser(brandMessageTextContent?.title ?? "")}
-        </StyledBrandMessageTitle>
-        <StyledBrandMessageQuoteContainer>
-          <StyledAboutQuoteText>
+        </StyledAboutContentPanelTitle>
+        <StyledAboutContentPanelQuotes>
+          <StyledAboutContentQuote>
             {brandMessageTextContent?.aboutQuote}
-          </StyledAboutQuoteText>
-          <StyledAboutQuoteAuthorText>
+          </StyledAboutContentQuote>
+          <StyledAboutContentQuoteAuthor>
             {brandMessageTextContent?.aboutQuoteAuthor ?? ""}
-          </StyledAboutQuoteAuthorText>
-        </StyledBrandMessageQuoteContainer>
-        <StyledBrandMessageText>
+          </StyledAboutContentQuoteAuthor>
+        </StyledAboutContentPanelQuotes>
+        <StyledAboutContentPanelText>
           {brandMessageTextContent?.premiumQualityContentText ?? ""}
-        </StyledBrandMessageText>
-        <StyledBrandMessageImageContainer>
-          <StyledImageAndEffect positioning={{ margin: "1em" }}>
-            <NextImage
-              containerDimensions={{
-                height: "250px",
-                width: "372px",
-              }}
-              containerPositioning={{
-                position: "relative",
-              }}
-              imageProps={{
-                src: brandMessageAssetUrls?.mop ?? "",
-                alt: "cleaning-machine",
-              }}
-              imageVisual={{
-                boxShadow:
-                  theme?.palette?.visual["brandMessageImageShadow"]
-                    ?.boxShadow ?? "",
-                borderRadius: "1em",
-              }}
+        </StyledAboutContentPanelText>
+        <StyledAboutContentImagePanel>
+          <StyledAboutContentPanelImageAndEffect>
+            <StyledAboutContentPanelImage
+              src={brandMessageAssetUrls?.mop ?? ""}
+              alt={"cleaner-moping"}
+              fill={true}
+              sizes={`(max-width: ${resolveThemeBreakPointValues(
+                systemContext?.theme,
+                "xl"
+              )}) 50vw,
+                33vw`}
             />
-          </StyledImageAndEffect>
-          <StyledImageAndEffect
-            dimensions={{
-              height: "250px",
-              width: "372px",
-            }}
-            positioning={{ margin: "1em" }}
-          >
-            <NextImage
-              containerPositioning={{
-                position: "relative",
-              }}
-              imageProps={{
-                src: brandMessageAssetUrls?.colleague ?? "",
-                alt: "cleaning-machine",
-              }}
-              imageVisual={{
-                boxShadow:
-                  theme?.palette?.visual["brandMessageImageShadow"]
-                    ?.boxShadow ?? "",
-                borderRadius: "1em",
-              }}
+          </StyledAboutContentPanelImageAndEffect>
+          <StyledAboutContentPanelImageAndEffect>
+            <StyledAboutContentPanelImage
+              src={brandMessageAssetUrls?.colleague ?? ""}
+              alt={"cleaner-with-a-vacum"}
+              fill={true}
+              sizes={`(max-width: ${resolveThemeBreakPointValues(
+                systemContext?.theme,
+                "xl"
+              )}) 50vw,
+                33vw`}
             />
-          </StyledImageAndEffect>
-          <StyledImageAndEffect
-            dimensions={{
-              height: "250px",
-              width: "372px",
-            }}
-            positioning={{ margin: "1em" }}
-          >
-            <NextImage
-              containerPositioning={{
-                position: "absolute",
-                right: "-80px",
-                bottom: "-120px",
-                transform: "rotate(-15deg)",
-              }}
-              containerDimensions={{ width: "250px", height: "250px" }}
-              imageProps={{
-                src: commonAssetUrls?.waterSplash ?? "",
-                alt: "water-splash",
-              }}
+          </StyledAboutContentPanelImageAndEffect>
+          <StyledAboutContentPanelImageAndEffect>
+            <StyledContactContentPanelWaterSplash
+              src={commonAssetUrls?.waterSplash ?? ""}
+              alt={"water-splash"}
+              width={240}
+              height={240}
             />
-            <NextImage
-              containerPositioning={{
-                position: "relative",
-              }}
-              imageProps={{
-                src: brandMessageAssetUrls?.machine ?? "",
-                alt: "cleaning-machine",
-              }}
-              imageVisual={{
-                boxShadow:
-                  theme?.palette?.visual["brandMessageImageShadow"]
-                    ?.boxShadow ?? "",
-                borderRadius: "1em",
-              }}
+            <StyledAboutContentPanelImage
+              src={brandMessageAssetUrls?.machine ?? ""}
+              alt={"cleaning-machine"}
+              fill={true}
+              sizes={`(max-width: ${resolveThemeBreakPointValues(
+                systemContext?.theme,
+                "xl"
+              )}) 50vw,
+                33vw`}
             />
-          </StyledImageAndEffect>
-        </StyledBrandMessageImageContainer>
-      </StyledBrandMessageContainer>
+          </StyledAboutContentPanelImageAndEffect>
+        </StyledAboutContentImagePanel>
+      </StyledAboutContentPanel>
       <StyledOpinions>
         <StyledOpinionsMainTitle>
           {opinionsTextContent?.title ?? ""}
         </StyledOpinionsMainTitle>
         <StyledOpinionsContainer>
-          <StyledOpinion>
+          <StyledOpinionsPanel>
             <StyledOpinionText>
               {opinionsTextContent?.defaultCustomerOpinion ?? ""}
             </StyledOpinionText>
             <StyledOpinionTitle>
               {opinionsTextContent?.defaultCustomerName ?? ""}
             </StyledOpinionTitle>
-          </StyledOpinion>
-          <StyledOpinion>
+          </StyledOpinionsPanel>
+          <StyledOpinionsPanel>
             <StyledOpinionText>
               {opinionsTextContent?.defaultCustomerOpinion ?? ""}
             </StyledOpinionText>
             <StyledOpinionTitle>
               {opinionsTextContent?.defaultCustomerName ?? ""}
             </StyledOpinionTitle>
-          </StyledOpinion>
+          </StyledOpinionsPanel>
         </StyledOpinionsContainer>
       </StyledOpinions>
       <ContactInfo />

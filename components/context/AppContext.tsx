@@ -1,8 +1,8 @@
 import React from "react";
-import { AppContext } from "../common";
+import { AppContextInteractive } from "../common";
 import { AuthContext } from "./types";
 
-const AppContext = React.createContext<AppContext & AuthContext>({
+const AppContext = React.createContext<AppContextInteractive & AuthContext>({
   interactive: { navBarExpanded: false, setNavBarExpanded: undefined },
   authContext: {},
 });

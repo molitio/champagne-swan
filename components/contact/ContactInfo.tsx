@@ -5,7 +5,6 @@ import {
   StyledAnchor,
   ContactForm,
   StyledLinearGradient,
-  NextImage,
 } from "../common";
 import {
   StyledFormContainer,
@@ -14,9 +13,11 @@ import {
   StyledFormText,
   StyledContactInfoContainer,
   StyledContactInfo,
-  StyledLogoContainer,
+  StyledContactInfoLogoContainer,
   StyledContactInfoText,
+  StyledContactInfoLogoImage,
 } from "./style";
+import { resolveThemeBreakPointValues } from "../utils";
 
 const ContactInfo: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
@@ -34,17 +35,6 @@ const ContactInfo: React.FC = () => {
         positioning={{ position: "absolute", top: "0px" }}
         visual={{ opacity: 1 }}
       />
-      {/*       <StyledLinearGradient
-        direction="top"
-        variation="appCoverTop"
-        positioning={{ position: "absolute", top: "0px" }}
-        visual={{ opacity: 1 }}
-      /> */}
-      {/*       <StyledLinearGradient
-        direction="bottom"
-        variation="cover"
-        visual={{ opacity: 1 }}
-      /> */}
       <IconGroup
         starCount={5}
         fill={systemContext?.theme?.palette?.stars?.gold}
@@ -81,16 +71,18 @@ const ContactInfo: React.FC = () => {
           <ContactForm />
         </StyledFormContainer>
       </SyledFormBox>
-      <StyledLogoContainer>
-        <NextImage
-          containerDimensions={{ width: "150px", height: "150px" }}
-          containerPositioning={{ position: "relative" }}
-          imageProps={{
-            src: commonAssetUrls?.logo ?? "",
-            alt: "logo",
-          }}
+      <StyledContactInfoLogoContainer>
+        <StyledContactInfoLogoImage
+          src={commonAssetUrls?.logo ?? ""}
+          alt={"logo"}
+          fill={true}
+          sizes={`(max-width: ${resolveThemeBreakPointValues(
+            systemContext?.theme,
+            "xl"
+          )}) 50vw,
+                33vw`}
         />
-      </StyledLogoContainer>
+      </StyledContactInfoLogoContainer>
     </StyledContactInfo>
   );
 };

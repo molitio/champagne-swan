@@ -1,64 +1,47 @@
 import styled from "styled-components";
+import Image from "next/image";
 import { resolveThemeBreakPointValues } from "../../utils";
 
-export const StyledServicesContent = styled.section`
-  position: relative;
-  padding: 5em 0 5em 0;
-  width: 100%;
-  align-items: center;
-`;
-
 export const StyledServicesContentMainTitle = styled.h1`
+  position: relative;
   text-align: center;
+  font-weight: 400;
+  font-size: 3.8em;
+  opacity: 0.8;
+  padding-top: 0.6em;
   color: ${(props) => props?.theme?.palette?.text?.tertiary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["servicesTextShadow"]?.textShadow ?? ""};
-  font-weight: 400;
-  font-size: 3.8em;
-  padding-top: 3em;
-  position: relative;
-
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "xxl")}) {
-    font-size: 3.2em;
-    margin-bottom: 1em;
-    font-weight: 700;
-  }
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    font-size: 2.4em;
-    margin-bottom: 1em;
-  }
-
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    font-size: 1.8em;
+    font-size: 3.2em;
   }
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    font-size: 1.2em;
+    font-size: 2.4em;
   }
 `;
 
-export const StyledServicesContentBlock = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: auto;
-  gap: 1em;
+type StyledServicesContentPanelProps = {
+  reversed?: boolean;
+};
+
+export const StyledServicesContentPanel = styled.div<StyledServicesContentPanelProps>`
   position: relative;
-  padding-top: 3em;
-  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: ${(props) => (props?.reversed ? "row-reverse" : "row")};
+
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
     flex-direction: column;
   }
 `;
 
-export const StyledServicesContentBlockImage = styled.div`
+export const StyledServicesLandingPanelImageContainer = styled.div`
   flex: 1 0 30vw;
   &:first-child {
     margin: 0;
@@ -73,6 +56,15 @@ export const StyledServicesContentBlockImage = styled.div`
     align-self: center;
     flex: 1 1 10em;
   }
+`;
+
+export const StyledServicesLandingPanelImage = styled(Image)`
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1em;
+  box-shadow: ${(props) =>
+    props?.theme?.palette?.visual["brandMessageOfficeCleaners"]?.boxShadow ??
+    ""};
 `;
 
 export const StyledServicesContentBlockItem = styled.div`
@@ -146,5 +138,43 @@ export const StyledServicesContentBoxText = styled.p`
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
+  }
+`;
+
+export const StyledServicesContentPanelImageAndEffect = styled.div`
+  position: relative;
+  height: 24em;
+  width: 32em;
+  margin: 0 8em;
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xxl")}) {
+    height: 20em;
+    width: 28em;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    height: 20em;
+    width: 28em;
+    margin: auto;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+    height: 20em;
+    width: 28em;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    height: 12em;
+    width: 20em;
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    height: 8em;
+    width: 12em;
   }
 `;

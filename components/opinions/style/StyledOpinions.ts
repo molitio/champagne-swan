@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import Image from "next/image";
 import { resolveThemeBreakPointValues } from "../../utils";
 
-export const StyledOpinions = styled.div`
+export const StyledOpinions = styled.section`
   padding-top: 5em;
   position: relative;
 `;
@@ -13,32 +14,26 @@ export const StyledOpinionsIconContainer = styled.div`
 export const StyledOpinionsMainTitle = styled.h1`
   position: relative;
   text-align: center;
+  font-weight: 400;
   font-size: 3.8em;
-  padding: "0.3em 0 0.3em 0";
+  opacity: 0.8;
+  padding-top: 0.6em;
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["opinionsTitleShadow"]?.textShadow ?? ""};
-  font-weight: 400;
-  margin-bottom: 0em;
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
     font-size: 3.2em;
   }
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    margin: auto;
-    width: 10em;
-  }
+
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    padding-top: 150px;
     font-size: 2.4em;
-    width: 8em;
   }
 `;
 
-export const StyledOpinion = styled.div`
+export const StyledOpinionsPanel = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -50,6 +45,18 @@ export const StyledOpinion = styled.div`
     margin-right: auto;
     margin-left: auto;
   }
+`;
+
+export const StyledOpinionsAvatarImage = styled(Image)`
+  object-fit: cover;
+  border-radius: 50%;
+`;
+
+export const StyledOpinionsAvatarImageContainer = styled.div`
+  position: relative;
+  height: 10em;
+  width: 10em;
+  margin: auto;
 `;
 
 export const StyledOpinionsContainer = styled.div`
@@ -90,10 +97,15 @@ export const StyledOpinionTitle = styled.p`
   margin: auto;
 `;
 
-export const StyledOpininsLogo = styled.div`
+export const StyledOpinionsLogoContainer = styled.div`
   position: relative;
   padding-top: 100px;
   display: block;
-  width: 130px;
+  height: 12em;
+  width: 12em;
   margin: auto;
+`;
+
+export const StyledOpinionsLogoImage = styled(Image)`
+  object-fit: cover;
 `;

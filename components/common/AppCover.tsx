@@ -1,18 +1,16 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
+import { IconGroup, StyledLinearGradient, StyledCoverContent } from "../common";
+import { resolveThemeBreakPointValues, useLineBreakParser } from "../utils";
 import {
-  IconGroup,
-  NextImage,
-  StyledLinearGradient,
-  StyledCoverContent,
-} from "../common";
-import { useLineBreakParser } from "../utils";
-import {
-  StyledCoverContactLink,
-  StyledButtonContainer,
+  StyledAppCoverContactLink,
+  StyledAppCoverButtonContainer,
   StyledAppCoverDescription,
   StyledAppCover,
   StyledAppCoverMainTitle,
+  StyledAppCoverImage,
+  StyledButtonWaterSplashContainer,
+  StyledWaterSplash,
 } from "./style";
 
 const AppCover: React.FC = () => {
@@ -28,22 +26,15 @@ const AppCover: React.FC = () => {
 
   return (
     <StyledAppCover>
-      <NextImage
-        containerDimensions={{
-          height: "80vh",
-          width: "100%",
-        }}
-        containerPositioning={{
-          position: "relative",
-          top: "-2em",
-        }}
-        imagePositioning={{
-          objectFit: "cover",
-        }}
-        imageProps={{
-          src: assetUrls?.heroBackground ?? "",
-          alt: "cover-image",
-        }}
+      <StyledAppCoverImage
+        src={assetUrls?.heroBackground ?? ""}
+        alt={"cover-image"}
+        fill={true}
+        sizes={`(max-width: ${resolveThemeBreakPointValues(
+          systemContext?.theme,
+          "xl"
+        )}) 50vw,
+            33vw`}
       />
       <StyledLinearGradient
         direction="bottom"
@@ -69,29 +60,27 @@ const AppCover: React.FC = () => {
           {useLineBreakParser(textContent?.description ?? "")}
         </StyledAppCoverDescription>
 
-        <StyledButtonContainer>
-          <NextImage
-            containerPositioning={{
-              right: "-80px",
-              bottom: "-120px",
-              position: "absolute",
-            }}
-            containerDimensions={{
-              width: "250px",
-              height: "250px",
-            }}
-            imageProps={{
-              src: commonAssetUrls?.waterSplash ?? "",
-              alt: "water-splash",
-            }}
-          />
-          <StyledCoverContactLink
+        <StyledAppCoverButtonContainer>
+          <StyledButtonWaterSplashContainer>
+            <StyledWaterSplash
+              src={commonAssetUrls?.waterSplash ?? ""}
+              alt={"water-splash"}
+              fill={true}
+              sizes={`(max-width: ${resolveThemeBreakPointValues(
+                systemContext?.theme,
+                "xl"
+              )}) 50vw,
+              33vw`}
+            />
+          </StyledButtonWaterSplashContainer>
+
+          <StyledAppCoverContactLink
             key={navTree?.contact?.path ?? ""}
             href={navTree?.contact?.path ?? ""}
           >
             {textContent?.moreInfoButton ?? ""}
-          </StyledCoverContactLink>
-        </StyledButtonContainer>
+          </StyledAppCoverContactLink>
+        </StyledAppCoverButtonContainer>
       </StyledCoverContent>
     </StyledAppCover>
   );

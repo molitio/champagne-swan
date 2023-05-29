@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image";
 import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledContactContent = styled.section`
@@ -87,8 +88,8 @@ export const StyledContactInfoContainer = styled.div`
 export const StyledContactInfoText = styled.p`
   font-size: 1.8rem;
   font-family: "Tenor Sans", sans-serif;
-  font-weight: 400;
-  color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
+  font-weight: 300;
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual?.["contactInfoTextShadow"]?.textShadow ?? ""};
 
@@ -98,10 +99,15 @@ export const StyledContactInfoText = styled.p`
   }
 `;
 
-export const StyledLogoContainer = styled.div`
+export const StyledContactContentLogoContainer = styled.div`
   position: relative;
   padding-top: 100px;
   display: block;
-  width: 130px;
+  height: 12em;
+  width: 12em;
   margin: auto;
+`;
+
+export const StyledContactContentLogoImage = styled(Image)`
+  object-fit: cover;
 `;

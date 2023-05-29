@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styled, { css } from "styled-components";
 import { resolveThemeBreakPointValues } from "../../utils";
 
@@ -6,7 +7,7 @@ type StyledNavProps = {
   navBarExpanded?: boolean;
 };
 
-export const StyledNav = styled.nav<StyledNavProps>`
+export const StyledNavBar = styled.nav<StyledNavProps>`
   z-index: 1000;
   ${(props) =>
     props?.navBarExpanded
@@ -31,10 +32,18 @@ export const StyledNav = styled.nav<StyledNavProps>`
         `}
 `;
 
-export const StyledImageContainer = styled.div`
-  flex: 40%;
+export const StyledNavBarLogoImageContainer = styled.div`
+  position: relative;
   margin-left: 2em;
+  width: 14em;
+  height: 12em;
 `;
+
+export const StyledNavBarLogo = styled.div`
+  flex: 40%;
+`;
+
+export const StyledNavBarLogoImage = styled(Image)``;
 
 type StyledNavLinksContainerProps = {
   navBarExpanded?: boolean;
@@ -55,7 +64,7 @@ export const StyledNavLinksContainer = styled.div<StyledNavLinksContainerProps>`
           flex-direction: row;
           flex: 60%;
           @media (max-width: ${(props) =>
-              resolveThemeBreakPointValues(props?.theme, "md")}) {
+              resolveThemeBreakPointValues(props?.theme, "xl")}) {
             display: none;
           }
         `}
@@ -89,7 +98,7 @@ export const StyledNavButton = styled.div<StyledNavButtonProps>`
   right: 2em;
   margin-right: 1em;
   @media (min-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
     display: none;
   }
   ${(props) => (props?.navBarExpanded ? css`` : css``)}

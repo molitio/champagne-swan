@@ -1,42 +1,38 @@
 import styled from "styled-components";
+import Image from "next/image";
 import { resolveThemeBreakPointValues } from "../../utils";
+import Link from "next/link";
 
 export const StyledServicesCover = styled.div`
   position: relative;
+  width: 100%;
+  height: 80vh;
 `;
 
 export const StyledServicesCoverMainTitle = styled.h1`
   position: relative;
   text-align: center;
-  margin: 0.4em 0;
-  font-style: normal;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 3.8em;
-  line-height: 1.2em;
+  opacity: 0.8;
+  padding-top: 0.6em;
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["servicesTitleShadow"]?.textShadow ?? ""};
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    font-size: 3.2rem;
-  }
-
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    display: block;
-    margin: 1.8em auto 1.8em auto;
-    width: 12em;
+    font-size: 3.2em;
   }
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    display: block;
-    margin: 30px auto 30px auto;
-    font-size: 2.4rem;
-    width: 8em;
-    line-height: 50px;
+    font-size: 2.4em;
   }
+`;
+
+export const StyledServicesCoverImage = styled(Image)`
+  object-fit: cover;
 `;
 
 export const StyledServicesCoverDescription = styled.pre`
@@ -64,5 +60,36 @@ export const StyledServicesCoverDescription = styled.pre`
     font-size: 21px;
     width: 13em;
     padding: 0;
+  }
+`;
+
+export const StyledServicesCoverButtonContainer = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 2em auto;
+  width: min-content;
+  height: min-content;
+`;
+
+export const StyledServicesCoverContactLink = styled(Link)`
+  position: relative;
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+  font-weight: 300;
+  width: min-content;
+  height: min-content;
+  color: ${(props) => props?.theme?.palette?.text?.secondary};
+  background-color: ${(props) => props?.theme?.palette?.tertiary?.main};
+  text-shadow: ${(props) =>
+    props?.theme?.palette?.visual["aboutCoverTextShadow"]?.textShadow ?? ""};
+  box-shadow: ${(props) =>
+    props?.theme?.palette?.visual["buttonDafaultShadow"]?.boxShadow ?? ""};
+  text-decoration: none;
+  cursor: pointer;
+
+  :hover {
+    color: ${(props) => props?.theme?.palette?.tertiary?.main};
+    background-color: ${(props) => props?.theme?.palette?.text?.secondary};
   }
 `;

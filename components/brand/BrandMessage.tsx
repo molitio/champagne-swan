@@ -1,20 +1,24 @@
 import React from "react";
-import { IconGroup, NextImage } from "../common";
-import { StyledImageAndEffect } from "../common";
+import { SystemContext } from "@molitio/ui-core";
+import { IconGroup, StyledBrandMessageInfoWaterSplash } from "../common";
 import {
   StyledBrandMessage,
-  StyledBrandMessageContentTitle,
-  StyledBrandMessageContentText,
-  StyledContactLink,
-  StyledBrandMessageIconContainer,
-  StyledBrandMessageContent,
-  StyledBrandMessageContentContainer,
+  StyledBrandMessagePanelTitle,
+  StyledBrandMessagePanelText,
+  StyledBrandMessagePanelContactLink,
+  StyledBrandMessageIcons,
+  StyledBrandMessagePanelContent,
+  StyledBrandMessagePanel,
   StyledBrandMessageMainTitle,
+  StyledBrandMessagePanelImage,
+  StyledBrandMessageOfficeCleanerImage,
+  StyledBrandMessageImageAndEffect,
 } from "./style";
-import { SystemContext } from "@molitio/ui-core";
+import { resolveThemeBreakPointValues } from "../utils";
 
 const BrandMessage: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
+
   const navTree = systemContext.navRoot ?? {};
 
   const brandMessageLeafs = systemContext?.contentRoot?.brandMessage?.leafs;
@@ -26,68 +30,56 @@ const BrandMessage: React.FC = () => {
 
   return (
     <StyledBrandMessage>
-      <StyledBrandMessageIconContainer>
+      <StyledBrandMessageIcons>
         <IconGroup
           fill={systemContext?.theme?.palette?.stars?.gold ?? ""}
           starCount={5}
         />
-      </StyledBrandMessageIconContainer>
+      </StyledBrandMessageIcons>
+
       <StyledBrandMessageMainTitle>
         {textContent?.title ?? ""}
       </StyledBrandMessageMainTitle>
-      <StyledBrandMessageContentContainer>
-        <StyledBrandMessageContent>
-          <StyledBrandMessageContentTitle>
+
+      <StyledBrandMessagePanel>
+        <StyledBrandMessagePanelImage>
+          <StyledBrandMessageImageAndEffect>
+            <StyledBrandMessageInfoWaterSplash
+              src={commonAssetUrls?.waterSplash ?? ""}
+              alt={"water-splash"}
+              width={240}
+              height={240}
+            />
+            <StyledBrandMessageOfficeCleanerImage
+              id={"office-cleaners"}
+              sizes={`(max-width: ${resolveThemeBreakPointValues(
+                systemContext?.theme,
+                "xl"
+              )}) 50vw,
+                33vw`}
+              src={assetUrls?.officeCleaners ?? ""}
+              alt={"office-cleaners"}
+              fill={true}
+            />
+          </StyledBrandMessageImageAndEffect>
+        </StyledBrandMessagePanelImage>
+        <StyledBrandMessagePanelContent>
+          <StyledBrandMessagePanelTitle>
             {textContent?.contentTitle ?? ""}
-          </StyledBrandMessageContentTitle>
+          </StyledBrandMessagePanelTitle>
 
-          <StyledBrandMessageContentText>
+          <StyledBrandMessagePanelText>
             {textContent?.contentText ?? ""}
-          </StyledBrandMessageContentText>
+          </StyledBrandMessagePanelText>
 
-          <StyledContactLink
+          <StyledBrandMessagePanelContactLink
             key={navTree?.about?.path ?? ""}
             href={navTree?.about?.path ?? ""}
           >
             {textContent?.moreInfoButton ?? ""}
-          </StyledContactLink>
-        </StyledBrandMessageContent>
-        <StyledImageAndEffect>
-          <NextImage
-            containerPositioning={{
-              position: "absolute",
-              right: "-80px",
-              bottom: "-120px",
-              transform: "rotate(-15deg)",
-            }}
-            containerDimensions={{
-              width: "250px",
-              height: "250px",
-            }}
-            imageProps={{
-              src: commonAssetUrls?.waterSplash ?? "",
-              alt: "water-splash",
-            }}
-          />
-          <NextImage
-            containerPositioning={{
-              position: "relative",
-            }}
-            containerDimensions={{
-              height: "353px",
-              width: "529px",
-            }}
-            imageProps={{
-              src: assetUrls?.officeCleaners ?? "",
-              alt: "office-cleaners",
-            }}
-            imageVisual={{
-              boxShadow: " 0px 4px 4px rgba(0, 0, 0, 0.5)",
-              borderRadius: "1em",
-            }}
-          />
-        </StyledImageAndEffect>
-      </StyledBrandMessageContentContainer>
+          </StyledBrandMessagePanelContactLink>
+        </StyledBrandMessagePanelContent>
+      </StyledBrandMessagePanel>
     </StyledBrandMessage>
   );
 };

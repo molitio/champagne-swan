@@ -1,50 +1,43 @@
 import Link from "next/link";
+import Image from "next/image";
 import styled from "styled-components";
 import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledAppCover = styled.section`
   position: relative;
+  width: 100%;
+  height: 80vh;
   background-color: ${(props) => props?.theme?.palette?.background?.default};
 `;
 
 export const StyledAppCoverMainTitle = styled.h1`
   position: relative;
   text-align: center;
-  margin: 0.4em 0;
-  font-style: normal;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 3.8em;
-  line-height: 1.2em;
+  opacity: 0.8;
   color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["appCoverTitleShadow"]?.textShadow ?? ""};
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    font-size: 3.2rem;
-  }
-
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    display: block;
-    margin: 1.8em auto 1.8em auto;
-    width: 12em;
+    font-size: 3.2em;
   }
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    display: block;
-    margin: 30px auto 30px auto;
-    font-size: 2.25rem;
-    width: 8em;
-    line-height: 50px;
+    font-size: 2.4em;
   }
 `;
 
-export const StyledCoverContactLink = styled(Link)`
-  margin-top: 2em;
+export const StyledAppCoverImage = styled(Image)`
+  object-fit: cover;
+`;
+
+export const StyledAppCoverContactLink = styled(Link)`
   position: relative;
-  padding: 0.6em 1.2em;
+  padding: 0.5em 1em;
   font-size: 1.5em;
   font-weight: 300;
   color: ${(props) => props?.theme?.palette?.text?.secondary};
@@ -62,38 +55,39 @@ export const StyledCoverContactLink = styled(Link)`
   }
 `;
 
-export const StyledButtonContainer = styled.div`
-  padding-top: 2em;
+export const StyledAppCoverButtonContainer = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
-  position: relative;
-  margin: auto;
+  margin: 2em auto;
+  width: min-content;
+  height: min-content;
 `;
 
 export const StyledAppCoverDescription = styled.pre`
-  width: 40em;
+  width: 42em;
   margin: auto;
   font-style: normal;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.5em;
   text-align: center;
-  line-height: 1.2em;
   color: ${(props) => props?.theme?.palette?.text?.secondary};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["appCoverTextShadow"]?.textShadow ?? ""};
   white-space: pre-wrap;
+  position: relative;
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    font-size: 28px;
-    width: 16em;
+    font-size: 1.2em;
+    width: 36em;
   }
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    font-size: 21px;
-    width: 13em;
+    font-size: 1em;
+    width: 24em;
     padding: 0;
   }
 `;

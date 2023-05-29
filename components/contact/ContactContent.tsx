@@ -6,13 +6,11 @@ import {
   StyledContactInfo,
   StyledContactContent,
   StyledFlexGroup,
+  StyledContactContentLogoImage,
+  StyledContactContentLogoContainer,
 } from "./style";
-import {
-  StyledLinearGradient,
-  ContactForm,
-  StyledAnchor,
-  NextImage,
-} from "../common";
+import { StyledLinearGradient, ContactForm, StyledAnchor } from "../common";
+import { resolveThemeBreakPointValues } from "../utils";
 
 const ContactContent: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
@@ -67,14 +65,18 @@ const ContactContent: React.FC = () => {
           <ContactForm />
         </FormContainer>
       </StyledFlexGroup>
-      <NextImage
-        containerDimensions={{ width: "250px", height: "250px" }}
-        containerPositioning={{ position: "relative", margin: "auto" }}
-        imageProps={{
-          src: commonAssetUrls?.logo ?? "",
-          alt: "logo",
-        }}
-      />
+      <StyledContactContentLogoContainer>
+        <StyledContactContentLogoImage
+          src={commonAssetUrls?.logo ?? ""}
+          alt={"logo"}
+          fill={true}
+          sizes={`(max-width: ${resolveThemeBreakPointValues(
+            systemContext?.theme,
+            "xl"
+          )}) 50vw,
+                33vw`}
+        />
+      </StyledContactContentLogoContainer>
     </StyledContactContent>
   );
 };
