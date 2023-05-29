@@ -5,6 +5,8 @@ import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledAboutCover = styled.section`
   position: relative;
+  width: 100%;
+  height: 80vh;
 `;
 
 export const StyledAboutMainTitle = styled.h1`
@@ -83,12 +85,15 @@ export const StyledAboutDescription = styled.p`
 
 export const StyledAboutCoverButtonContainer = styled.div`
   position: relative;
+  display: flex;
+  justify-content: center;
   margin: 2em auto;
+  width: min-content;
+  height: min-content;
 `;
 
 export const StyledAppCoverContactLink = styled(Link)`
-  position: absolute;
-  top: 0;
+  position: relative;
   padding: 0.5em 1em;
   font-size: 1.5em;
   font-weight: 300;

@@ -36,8 +36,7 @@ export const StyledAppCoverImage = styled(Image)`
 `;
 
 export const StyledAppCoverContactLink = styled(Link)`
-  position: absolute;
-  top: 0;
+  position: relative;
   padding: 0.5em 1em;
   font-size: 1.5em;
   font-weight: 300;
@@ -61,8 +60,8 @@ export const StyledAppCoverButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   margin: 2em auto;
-  width: max-content;
-  height: max-content;
+  width: min-content;
+  height: min-content;
 `;
 
 export const StyledAppCoverDescription = styled.pre`
