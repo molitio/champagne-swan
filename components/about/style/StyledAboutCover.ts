@@ -33,11 +33,10 @@ export const StyledAboutMainTitle = styled.h1`
 
 export const StyledAboutSubTitle = styled.h2`
   position: relative;
-  margin: auto;
   text-align: center;
   font-size: 3.6rem;
   font-weight: 300;
-  line-height: 2em;
+  opacity: 0.8;
   color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["aboutCoverSubTitleShadow"]?.textShadow ??

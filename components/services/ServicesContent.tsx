@@ -27,7 +27,6 @@ const ServicesContent: React.FC = () => {
   const textContent = servicesLeafs?.content?.textContent;
   const assetUrls = servicesLeafs?.content?.assetUrls;
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
-  const theme = systemContext?.theme;
 
   return (
     <StyledServicesLanding>

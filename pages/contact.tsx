@@ -1,11 +1,11 @@
 import { NextPage } from "next";
-import { ContactCover, ContactContent } from "../components/contact";
+import { ContactCover, ContactInfo } from "../components/contact";
 
 const ContactPage: NextPage = () => {
   return (
     <main>
       <ContactCover />
-      <ContactContent />
+      <ContactInfo />
     </main>
   );
 };

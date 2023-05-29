@@ -54,6 +54,7 @@ export const StyledServicesLandingPanel = styled.div<StyledServicesLandingProps>
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 8em 0;
   flex-direction: ${(props) => (props?.reversed ? "row-reverse" : "row")};
 
   @media (max-width: ${(props) =>
@@ -63,7 +64,7 @@ export const StyledServicesLandingPanel = styled.div<StyledServicesLandingProps>
 `;
 
 export const StyledServicesLandingPanelContent = styled.div`
-  margin: 3em;
+  margin: 0 3em;
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -89,7 +90,7 @@ export const StyledServicesLandingPanelImageAndEffect = styled.div`
   position: relative;
   height: 24em;
   width: 32em;
-  margin: 8em;
+  margin: 0 8em;
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xxl")}) {
