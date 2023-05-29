@@ -70,13 +70,10 @@ export const StyledServicesCoverButtonContainer = styled.div`
   margin: 2em auto;
   width: min-content;
   height: min-content;
-  outline: 3px dashed purple;
 `;
 
 export const StyledServicesCoverContactLink = styled(Link)`
-  outline: 3px dashed green;
   position: relative;
-  top: 0;
   padding: 0.5em 1em;
   font-size: 1.5em;
   font-weight: 300;
