@@ -6,12 +6,9 @@ import {
   StyledServicesCoverDescription,
   StyledServicesCoverButtonContainer,
   StyledServicesCoverImage,
+  StyledServicesCoverContactLink,
 } from "./style";
-import {
-  StyledAppCoverContactLink,
-  StyledWaterSplash,
-  StyledButtonWaterSplashContainer,
-} from "../common";
+import { StyledWaterSplash, StyledButtonWaterSplashContainer } from "../common";
 
 import { StyledCoverContent, StyledLinearGradient } from "../common";
 import { resolveThemeBreakPointValues } from "../utils";
@@ -70,12 +67,12 @@ const ServicesCover: React.FC = () => {
               33vw`}
             />
           </StyledButtonWaterSplashContainer>
-          <StyledAppCoverContactLink
+          <StyledServicesCoverContactLink
             key={assetUrls?.cover ?? ""}
             href={assetUrls?.cover ?? ""}
           >
             {textContent?.introCta ?? ""}
-          </StyledAppCoverContactLink>
+          </StyledServicesCoverContactLink>
         </StyledServicesCoverButtonContainer>
       </StyledCoverContent>
     </StyledServicesCover>

@@ -88,8 +88,8 @@ export const StyledContactInfoContainer = styled.div`
 export const StyledContactInfoText = styled.p`
   font-size: 1.8rem;
   font-family: "Tenor Sans", sans-serif;
-  font-weight: 400;
-  color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
+  font-weight: 300;
+  color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual?.["contactInfoTextShadow"]?.textShadow ?? ""};
 
