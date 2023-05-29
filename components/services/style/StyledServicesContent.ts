@@ -32,7 +32,7 @@ export const StyledServicesContentPanel = styled.div<StyledServicesContentPanelP
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   flex-direction: ${(props) => (props?.reversed ? "row-reverse" : "row")};
 
   @media (max-width: ${(props) =>
@@ -145,7 +145,7 @@ export const StyledServicesContentPanelImageAndEffect = styled.div`
   position: relative;
   height: 24em;
   width: 32em;
-  margin: 8em;
+  margin: 0 8em;
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xxl")}) {
