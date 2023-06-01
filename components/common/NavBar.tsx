@@ -32,8 +32,11 @@ const NavBar: React.FC = () => {
         <StyledNavBarLogoImageContainer>
           <StyledNavBarLogoImage
             src={commonAssetUrls?.horizontalLogo ?? ""}
+            placeholder={"empty"}
             alt={"logo"}
-            fill={true}
+            width={224}
+            height={192}
+            /* fill={true} */
             sizes={`(max-width: ${resolveThemeBreakPointValues(
               systemContext?.theme,
               "xl"

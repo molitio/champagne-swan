@@ -52,7 +52,16 @@ const AboutContent: React.FC = () => {
           </StyledAboutContentQuoteAuthor>
         </StyledAboutContentPanelQuotes>
         <StyledAboutContentPanelText>
-          {brandMessageTextContent?.premiumQualityContentText ?? ""}
+          {brandMessageTextContent?.introduction ?? ""}
+        </StyledAboutContentPanelText>
+        <StyledAboutContentPanelText>
+          {brandMessageTextContent?.companyInfo ?? ""}
+        </StyledAboutContentPanelText>
+        <StyledAboutContentPanelText>
+          {brandMessageTextContent?.serviceDescirption ?? ""}
+        </StyledAboutContentPanelText>
+        <StyledAboutContentPanelText>
+          {brandMessageTextContent?.qualityStatement ?? ""}
         </StyledAboutContentPanelText>
         <StyledAboutContentImagePanel>
           <StyledAboutContentPanelImageAndEffect>

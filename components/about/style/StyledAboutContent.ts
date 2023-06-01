@@ -79,7 +79,7 @@ export const StyledAboutContentPanelImage = styled(Image)`
 export const StyledAboutContentPanelText = styled.p`
   position: relative;
   margin: 0 auto;
-  padding: 0 6em;
+  padding: 2em 6em;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.2em;

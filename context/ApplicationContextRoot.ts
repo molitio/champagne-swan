@@ -170,7 +170,7 @@ export const ApplicationContextRoot = {
           textContent: {
             title: "TISZTASÁG FELSŐFOKON!",
             description:
-              "Cégünk magas színvonalon kínál takarító szolgáltatást szállodák, irodaházak és magánszemélyek részére, valamint vállaljuk nagy belmagasságú ipari üzemek, gyártó csarnokok, raktárak és logisztikai központok speciális takarítását!",
+              "Mi, a JeliZa Services Kft, családi vállalkozás vagyunk, amelynek fő célja az ügyfeleink maximális elégedettségének biztosítása. ",
             moreInfoButton: "Bővebben",
           },
           assetUrls: {
@@ -251,7 +251,8 @@ export const ApplicationContextRoot = {
             title: "SZAKKÉPZETT \\n MUNKAERŐ",
             subTitle: "MINŐSÉGI \\n SZOLGÁLTATÁS",
             contactLinkText: "Kapcsolat",
-            description: "",
+            description:
+              "Ha bármilyen kérdése vagy kérése van, kérjük, ne habozzon velünk kapcsolatba lépni.",
           },
           assetUrls: {
             cleaners: "/web_content/img/cleaners.webp",
@@ -269,7 +270,14 @@ export const ApplicationContextRoot = {
             title: "ISMERJEN MEG\nBENNÜNKET",
             aboutQuote: `"A minőség azt jelenti, hogy akkor is jól csinálsz valamit amikor nem látják. \n"`,
             aboutQuoteAuthor: "Henry Ford",
-            premiumQualityContentText: "Hamarosan érkezik.",
+            companyInfo:
+              "Cégünk már több éve sikeresen működik a piacon egy másik, családi partner cégével együtt. Az együttműködés révén képesek vagyunk szélesebb körű szolgáltatásokat nyújtani, és erősödni a piaci pozíciónkban. A két cég közötti szoros együttműködés révén a takarítási szolgáltatásaink minősége és a megbízhatóságunk folyamatosan fejlődik, ami az ügyfeleink számára kiváló minőségű takarítást biztosít.",
+            serviceDescirption:
+              "A JeliZa Services Kft szállodák, irodaházak és magas csarnokok takarításával foglalkozik. Mindent megtettünk annak érdekében, hogy a lehető legmagasabb szolgáltatást nyújtsuk ügyfeleinknek. A takarítóink és vezetőink képzett és tapasztalt szakemberek, akik kiemelkedő figyelmet fordítanak a részletekre, és biztosítják, hogy az ön épülete tiszta, rendezett és higiénikus legyen. Az évek során számos sikeres projektet vezettünk le, amelyek alapján megszerzett tudásunk és tapasztalatunk biztosítja, hogy vállalkozásunk magas színvonalú szolgáltatásokat nyújt.",
+            qualityStatement:
+              "Az évek során szoros együttműködést alakítottunk ki partnereinkkel. Cégünk folyamatosan fejleszti magát, legjobb és legmodernebb takarítási technikákat használja. Fontos számunkra, hogy az ügyfelek elégedettek legyenek a szolgáltatásainkkal. Bízunk benne, hogy tapasztalatainkkal és a hozzáállásunkkal vállalkozásunk az ön bizalmának és támogatásának büszke vállalata lesz.",
+            introduction:
+              "Mi, a JeliZa Services Kft, családi vállalkozás vagyunk, amelynek fő célja az ügyfeleink maximális elégedettségének biztosítása. ",
           },
           assetUrls: {
             mop: "/web_content/img/mop.webp",
