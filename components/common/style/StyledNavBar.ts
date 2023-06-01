@@ -35,8 +35,8 @@ export const StyledNavBar = styled.nav<StyledNavProps>`
 export const StyledNavBarLogoImageContainer = styled.div`
   position: relative;
   margin-left: 2em;
-  width: 14em;
-  height: 12em;
+  width: 14em; //224
+  height: 12em; // 192
 `;
 
 export const StyledNavBarLogo = styled.div`

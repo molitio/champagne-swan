@@ -15,6 +15,7 @@ export const StyledAboutMainTitle = styled.h1`
   font-size: 3.8em;
   font-weight: 400;
   opacity: 0.8;
+  margin: 0;
   color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["aboutCoverTitleShadow"]?.textShadow ?? ""};
@@ -37,6 +38,7 @@ export const StyledAboutSubTitle = styled.h2`
   font-size: 3.6rem;
   font-weight: 300;
   opacity: 0.8;
+  margin: 0;
   color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["aboutCoverSubTitleShadow"]?.textShadow ??
@@ -55,11 +57,12 @@ export const StyledAboutSubTitle = styled.h2`
 `;
 
 export const StyledAboutDescription = styled.p`
+position: relative;
   width: 36em;
   margin: 0 auto;
   padding: 0 2em;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.5em;
   text-align: center;
   white-space: pre-wrap;
