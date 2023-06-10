@@ -36,6 +36,7 @@ export const StyledServicesCoverImage = styled(Image)`
 `;
 
 export const StyledServicesCoverDescription = styled.pre`
+  position: relative;
   width: 40em;
   margin: auto;
   font-style: normal;

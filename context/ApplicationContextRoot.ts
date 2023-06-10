@@ -222,8 +222,9 @@ export const ApplicationContextRoot = {
             title: "SZOLGÁLTATÁSAINK",
             officeCleaningTitle: "Szállodák és irodaházak takarítása",
             officeCleaningText:
-              "Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is",
-            officeCleaningInfo: "",
+              "A szállodák és irodaházak takarítása rendkívül fontos a tiszta és higiénikus környezet fenntartása érdekében. A takarítási folyamat általában magában foglalja a következő lépéseket",
+            officeCleaningInfo:
+              "Előkészítés és tervezés: A takarítási folyamat előtt fontos előkészítő tevékenységeket végezni, mint például az időpontok meghatározása, a szükséges eszközök és anyagok beszerzése, valamint a munkaerő és a feladatok megszervezése",
             officeCleaningExtendedInfo: "",
             personalCleaningTitle: "Magánszemélyeknél végzett takarítás",
             personalCleaningText:

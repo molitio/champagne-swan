@@ -58,6 +58,17 @@ export const StyledServicesLandingPanelImageContainer = styled.div`
   }
 `;
 
+export const StyledServicesContentPanelContent = styled.div`
+  margin: 0 3em;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  text-align: center;
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+  }
+`;
+
 export const StyledServicesLandingPanelImage = styled(Image)`
   object-fit: cover;
   object-position: center;
@@ -122,6 +133,7 @@ export const StyledServicesContentBoxTitle = styled.h1`
 export const StyledServicesContentBoxText = styled.p`
   font-family: "Lato", sans-serif;
   text-align: start;
+  display: flex;
   color: ${(props) => props?.theme?.palette?.text?.tertiary};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["servicesTextShadow"]?.textShadow ?? ""};
