@@ -3,6 +3,7 @@ import { SystemContext } from "@molitio/ui-core";
 import {
   IconGroup,
   StyledLinearGradient,
+  StyledParagraphBullet,
   StyledServicesLandingPanelImageWaterSplash,
 } from "../common";
 import {
@@ -16,7 +17,7 @@ import {
   StyledServicesContentBlockItemInfo,
   StyledServicesContentPanelImageAndEffect,
   StyledServicesLandingPanelImage,
-  StyledServicesLandingPanelContent,
+  StyledServicesContentPanelContent,
 } from "./style";
 import { resolveThemeBreakPointValues } from "../utils";
 
@@ -45,23 +46,29 @@ const ServicesContent: React.FC = () => {
       </StyledServicesContentMainTitle>
 
       <StyledServicesContentPanel>
-        <StyledServicesLandingPanelContent>
+        <StyledServicesContentPanelContent>
           <StyledServicesContentBlockItem>
             <StyledServicesContentBoxTitle>
               {textContent?.officeCleaningTitle ?? ""}
             </StyledServicesContentBoxTitle>
+
             <StyledServicesContentBoxText>
               {textContent?.officeCleaningText ?? ""}
             </StyledServicesContentBoxText>
           </StyledServicesContentBlockItem>
-        </StyledServicesLandingPanelContent>
-        <StyledServicesLandingPanelContent>
+
           <StyledServicesContentBlockItemInfo>
+            {/* TODO: buleted list 
+            one bulet point on the first paragraph
+            
+            */}
+
             <StyledServicesContentBoxText>
+              <StyledParagraphBullet>{`${"\u2B24"}`}</StyledParagraphBullet>
               {textContent?.officeCleaningInfo ?? ""}
             </StyledServicesContentBoxText>
           </StyledServicesContentBlockItemInfo>
-        </StyledServicesLandingPanelContent>
+        </StyledServicesContentPanelContent>
 
         <StyledServicesLandingPanelImageContainer>
           <StyledServicesContentPanelImageAndEffect>
@@ -107,7 +114,7 @@ const ServicesContent: React.FC = () => {
           </StyledServicesContentPanelImageAndEffect>
         </StyledServicesLandingPanelImageContainer>
 
-        <StyledServicesLandingPanelContent>
+        <StyledServicesContentPanelContent>
           <StyledServicesContentBlockItem>
             <StyledServicesContentBoxTitle>
               {textContent?.highCeilingTitle ?? ""}
@@ -121,7 +128,7 @@ const ServicesContent: React.FC = () => {
               {textContent?.personalCleaningExtendedInfo ?? ""}
             </StyledServicesContentBoxText>
           </StyledServicesContentBlockItemInfo>
-        </StyledServicesLandingPanelContent>
+        </StyledServicesContentPanelContent>
       </StyledServicesContentPanel>
 
       <StyledServicesContentPanel>
@@ -145,7 +152,7 @@ const ServicesContent: React.FC = () => {
             />
           </StyledServicesContentPanelImageAndEffect>
         </StyledServicesLandingPanelImageContainer>
-        <StyledServicesLandingPanelContent>
+        <StyledServicesContentPanelContent>
           <StyledServicesContentBlockItem>
             <StyledServicesContentBoxTitle>
               {textContent?.highCeilingTitle ?? ""}
@@ -162,7 +169,7 @@ const ServicesContent: React.FC = () => {
               {textContent?.highCeilingExtendedInfo ?? ""}
             </StyledServicesContentBoxText>
           </StyledServicesContentBlockItemInfo>
-        </StyledServicesLandingPanelContent>
+        </StyledServicesContentPanelContent>
       </StyledServicesContentPanel>
     </StyledServicesLanding>
   );
