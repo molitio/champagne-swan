@@ -17,7 +17,6 @@ import {
   StyledContactInfoText,
   StyledContactInfoLogoImage,
 } from "./style";
-import { resolveThemeBreakPointValues } from "../utils";
 
 const ContactInfo: React.FC = () => {
   const systemContext = React.useContext(SystemContext);
