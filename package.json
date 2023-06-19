@@ -12,7 +12,7 @@
   "dependencies": {
     "@apollo/client": "^3.7.9",
     "@apollo/react-hooks": "^4.0.0",
-    "@apollo/server": "^4.4.0",
+    "@apollo/server": "^4.7.4",
     "@apollo/utils.withrequired": "^2.0.0",
     "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.0",
