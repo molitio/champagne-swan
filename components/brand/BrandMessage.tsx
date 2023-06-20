@@ -47,8 +47,8 @@ const BrandMessage: React.FC = () => {
             <StyledBrandMessageInfoWaterSplash
               src={commonAssetUrls?.waterSplash ?? ""}
               alt={"water-splash"}
-              width={240}
-              height={240}
+              width={180}
+              height={180}
             />
             <StyledBrandMessageOfficeCleanerImage
               id={"office-cleaners"}

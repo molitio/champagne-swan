@@ -22,6 +22,11 @@ export const StyledServicesContentMainTitle = styled.h1`
       resolveThemeBreakPointValues(props?.theme, "md")}) {
     font-size: 2.4em;
   }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    font-size: 1.8em;
+  }
 `;
 
 type StyledServicesContentPanelProps = {

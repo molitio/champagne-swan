@@ -59,13 +59,13 @@ export const StyledAboutContentPanelImageAndEffect = styled.div`
   }
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    height: 15em;
-    width: 23em;
+    height: 16em;
+    width: 22em;
   }
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "sm")}) {
-    height: 12em;
-    width: 18em;
+    height: 10em;
+    width: 16em;
   }
 `;
 
@@ -102,11 +102,11 @@ export const StyledAboutContentPanelTitle = styled.h1`
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    font-size: 2.4rem;
+    font-size: 2.4em;
   }
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    font-size: 1.8rem;
+    font-size: 1.8em;
   }
 `;
 

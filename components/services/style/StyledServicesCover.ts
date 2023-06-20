@@ -29,6 +29,11 @@ export const StyledServicesCoverMainTitle = styled.h1`
       resolveThemeBreakPointValues(props?.theme, "md")}) {
     font-size: 2.4em;
   }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    font-size: 1.6em;
+  }
 `;
 
 export const StyledServicesCoverImage = styled(Image)`
@@ -45,22 +50,26 @@ export const StyledServicesCoverDescription = styled.pre`
   font-size: 1.5em;
   text-align: center;
   line-height: 1.2em;
+  white-space: pre-wrap;
   color: ${(props) => props?.theme?.palette?.text?.primary};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["servicesTitleShadow"]?.textShadow ?? ""};
-  white-space: pre-wrap;
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
-    font-size: 28px;
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    font-size: 1.8em;
     width: 16em;
   }
-
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    font-size: 21px;
-    width: 13em;
+    font-size: 1em;
+    width: 24em;
     padding: 0;
+  }
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    font-size: 0.8em;
+    width: 18em;
   }
 `;
 
@@ -92,5 +101,14 @@ export const StyledServicesCoverContactLink = styled(Link)`
   :hover {
     color: ${(props) => props?.theme?.palette?.tertiary?.main};
     background-color: ${(props) => props?.theme?.palette?.text?.secondary};
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    font-size: 1.2em;
+  }
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    font-size: 1em;
   }
 `;
