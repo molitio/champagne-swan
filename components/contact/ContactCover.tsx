@@ -4,7 +4,7 @@ import { StyledLinearGradient, StyledCoverContent } from "../common";
 import {
   StyledContactCoverTitle,
   StyledContact,
-  StyledCoverText,
+  StyledCOntactCoverDescription,
   StyledAboutContentCoverImage,
 } from "./style";
 import { resolveThemeBreakPointValues } from "../utils";
@@ -43,7 +43,9 @@ const ContactCover: React.FC = () => {
         <StyledContactCoverTitle>
           {textContent?.title ?? ""}
         </StyledContactCoverTitle>
-        <StyledCoverText>{textContent?.formText ?? ""}</StyledCoverText>
+        <StyledCOntactCoverDescription>
+          {textContent?.formText ?? ""}
+        </StyledCOntactCoverDescription>
       </StyledCoverContent>
     </StyledContact>
   );

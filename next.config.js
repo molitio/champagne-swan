@@ -20,7 +20,6 @@ const nextConfig = {
     ],
   },
   async headers() {
-    console.log("headers nonce", process.env.NONCE);
     return [
       {
         // Apply these headers to all routes in your application.

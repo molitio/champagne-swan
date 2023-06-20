@@ -29,6 +29,11 @@ export const StyledAppCoverMainTitle = styled.h1`
       resolveThemeBreakPointValues(props?.theme, "md")}) {
     font-size: 2.4em;
   }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    font-size: 1.6em;
+  }
 `;
 
 export const StyledAppCoverImage = styled(Image)`
@@ -52,6 +57,15 @@ export const StyledAppCoverContactLink = styled(Link)`
   :hover {
     color: ${(props) => props?.theme?.palette?.tertiary?.main};
     background-color: ${(props) => props?.theme?.palette?.text?.secondary};
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    font-size: 1.2em;
+  }
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    font-size: 1em;
   }
 `;
 
@@ -79,7 +93,7 @@ export const StyledAppCoverDescription = styled.pre`
   position: relative;
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "lg")}) {
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
     font-size: 1.2em;
     width: 36em;
   }
@@ -89,5 +103,10 @@ export const StyledAppCoverDescription = styled.pre`
     font-size: 1em;
     width: 24em;
     padding: 0;
+  }
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    font-size: 0.8em;
+    width: 18em;
   }
 `;
