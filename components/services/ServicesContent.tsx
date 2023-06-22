@@ -28,6 +28,7 @@ const ServicesContent: React.FC = () => {
   const textContent = servicesLeafs?.content?.textContent;
   const assetUrls = servicesLeafs?.content?.assetUrls;
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
+  const contentInfoList = Array.from(textContent?.officeCleaningInfo ?? "");
 
   return (
     <StyledServicesLanding>
@@ -60,13 +61,13 @@ const ServicesContent: React.FC = () => {
           <StyledServicesContentBlockItemInfo>
             {/* TODO: buleted list 
             one bulet point on the first paragraph
-            
-            */}
-
-            <StyledServicesContentBoxText>
-              <StyledParagraphBullet>{`${"\u2B24"}`}</StyledParagraphBullet>
-              {textContent?.officeCleaningInfo ?? ""}
-            </StyledServicesContentBoxText>
+          */}
+            {contentInfoList.map((listItem, i) => (
+              <StyledServicesContentBoxText key={i}>
+                <StyledParagraphBullet>{`${"\u2B24"}`}</StyledParagraphBullet>
+                {listItem}
+              </StyledServicesContentBoxText>
+            ))}
           </StyledServicesContentBlockItemInfo>
         </StyledServicesContentPanelContent>
 

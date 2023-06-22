@@ -224,7 +224,11 @@ export const ApplicationContextRoot = {
             officeCleaningText:
               "A szállodák és irodaházak takarítása rendkívül fontos a tiszta és higiénikus környezet fenntartása érdekében. A takarítási folyamat általában magában foglalja a következő lépéseket",
             officeCleaningInfo:
-              "Előkészítés és tervezés: A takarítási folyamat előtt fontos előkészítő tevékenységeket végezni, mint például az időpontok meghatározása, a szükséges eszközök és anyagok beszerzése, valamint a munkaerő és a feladatok megszervezése",
+              /*   "lorem ipsum", */
+              [
+                "Előkészítés és tervezés: A takarítási folyamat előtt fontos előkészítő tevékenységeket végezni, mint például az időpontok meghatározása, a szükséges eszközök és anyagok beszerzése, valamint a munkaerő és a feladatok megszervezése",
+                "lorem upsum",
+              ],
             officeCleaningExtendedInfo: "",
             personalCleaningTitle: "Magánszemélyeknél végzett takarítás",
             personalCleaningText:
