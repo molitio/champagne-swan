@@ -227,13 +227,20 @@ export const ApplicationContextRoot = {
               /*   "lorem ipsum", */
               [
                 "Előkészítés és tervezés: A takarítási folyamat előtt fontos előkészítő tevékenységeket végezni, mint például az időpontok meghatározása, a szükséges eszközök és anyagok beszerzése, valamint a munkaerő és a feladatok megszervezése",
-                "lorem upsum",
+                "Általános takarítás: Az általános takarítás magában foglalja a portörlést, a porszívózást, a padlófelületek söprését és felmosását, valamint az ablakok és üvegfelületek tisztítását. Ezen kívül törölhetők az asztalok, a székek és más bútorok, és eltávolítható a port és a szennyeződéseket a felületekről.",
+                "Szobák és irodák takarítása: A szobák és irodák takarítása magában foglalja a padló felmosását, a por eltávolítását a bútorokról, az ágyak megrendezését és a friss ágyneműk elhelyezését. Emellett a tükrök és üvegfelületek tisztítása, valamint az összes felület fertőtlenítése is fontos.",
+                "Fürdőszobák takarítása: A fürdőszobák takarítása különös figyelmet igényel. Fontos a WC-k és a mosdók tisztítása, a csapok, a csempék és a zuhanyzók tisztítása. A tisztítószereknek fertőtlenítő hatásúaknak kell lenniük, hogy elpusztítsák a baktériumokat és a kórokozókat.",
+                "Közös terek és recepció takarítása: A közös terek, mint például a recepció, a várótermek és a tárgyalók, nagyon fontosak az ügyfelek és a vendégek számára. Ezekben a területeken a takarítás magában foglalja a padlók felmosását, a portörlést, a bútorok és felületek tisztítását, valamint az esetleges szemetesek ürítését.",
+                "Nagytakarítási feladatok: Ezen felül vannak olyan eseti takarítási feladatok, amelyek időnként elvégzendők, mint például vegyszeres gépi tisztítás, ablaktisztítás.",
               ],
             officeCleaningExtendedInfo: "",
             personalCleaningTitle: "Magánszemélyeknél végzett takarítás",
             personalCleaningText:
               "Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is",
-            personalCleaningInfo: "",
+            personalCleaningInfo: [
+              "Az első lépés az épület alapos felmérése és a takarítási tervek kidolgozása. Ebben a fázisban fontos megismerni az épület belső és külső szerkezetét, az elérhetőséget, a takarítandó területeket és a lehetséges veszélyforrásokat.",
+              "Biztonsági intézkedéseket kell hozni a magasban történő munkához, például biztosítani kell az alkalmazottak számára megfelelő védőfelszerelést, be kell tartani a magasban történő munkavégzésre vonatkozó szabályokat, és szükség esetén biztosítani kell az emelőkosarak, kötelek vagy más eszközök használatát.",
+            ],
             personalCleaningExtendedInfo: "",
             highCeilingTitle: "Nagy belmagasságú épületek takarítása",
             highCeilingText:
@@ -283,6 +290,8 @@ export const ApplicationContextRoot = {
               "Az évek során szoros együttműködést alakítottunk ki partnereinkkel. Cégünk folyamatosan fejleszti magát, legjobb és legmodernebb takarítási technikákat használja. Fontos számunkra, hogy az ügyfelek elégedettek legyenek a szolgáltatásainkkal. Bízunk benne, hogy tapasztalatainkkal és a hozzáállásunkkal vállalkozásunk az ön bizalmának és támogatásának büszke vállalata lesz.",
             introduction:
               "Mi, a JeliZa Services Kft, családi vállalkozás vagyunk, amelynek fő célja az ügyfeleink maximális elégedettségének biztosítása. ",
+            kapcsolat:
+              "Ha bármilyen kérdése vagy kérése van, kérjük, ne habozzon velünk kapcsolatba lépni.",
           },
           assetUrls: {
             mop: "/web_content/img/mop.webp",

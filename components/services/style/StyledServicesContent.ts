@@ -144,7 +144,7 @@ export const StyledServicesContentBoxText = styled.p`
     props?.theme?.palette?.visual["servicesTextShadow"]?.textShadow ?? ""};
   font-size: 1.2em;
   font-weight: 400;
-  margin: 0;
+  margin: 0.5em;
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {

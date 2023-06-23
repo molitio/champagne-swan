@@ -28,7 +28,12 @@ const ServicesContent: React.FC = () => {
   const textContent = servicesLeafs?.content?.textContent;
   const assetUrls = servicesLeafs?.content?.assetUrls;
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
-  const contentInfoList = Array.from(textContent?.officeCleaningInfo ?? "");
+  const officeCleaningInfoList = Array.from(
+    textContent?.officeCleaningInfo ?? ""
+  );
+  const personalCleaningInfoList = Array.from(
+    textContent?.personalCleaningInfo ?? ""
+  );
 
   return (
     <StyledServicesLanding>
@@ -59,10 +64,7 @@ const ServicesContent: React.FC = () => {
           </StyledServicesContentBlockItem>
 
           <StyledServicesContentBlockItemInfo>
-            {/* TODO: buleted list 
-            one bulet point on the first paragraph
-          */}
-            {contentInfoList.map((listItem, i) => (
+            {officeCleaningInfoList.map((listItem, i) => (
               <StyledServicesContentBoxText key={i}>
                 <StyledParagraphBullet>{`${"\u2B24"}`}</StyledParagraphBullet>
                 {listItem}
@@ -70,7 +72,6 @@ const ServicesContent: React.FC = () => {
             ))}
           </StyledServicesContentBlockItemInfo>
         </StyledServicesContentPanelContent>
-
         <StyledServicesLandingPanelImageContainer>
           <StyledServicesContentPanelImageAndEffect>
             <StyledServicesLandingPanelImageWaterSplash
@@ -114,20 +115,24 @@ const ServicesContent: React.FC = () => {
             />
           </StyledServicesContentPanelImageAndEffect>
         </StyledServicesLandingPanelImageContainer>
-
         <StyledServicesContentPanelContent>
           <StyledServicesContentBlockItem>
             <StyledServicesContentBoxTitle>
               {textContent?.highCeilingTitle ?? ""}
             </StyledServicesContentBoxTitle>
+
             <StyledServicesContentBoxText>
               {textContent?.personalCleaningInfo ?? ""}
             </StyledServicesContentBoxText>
           </StyledServicesContentBlockItem>
+
           <StyledServicesContentBlockItemInfo>
-            <StyledServicesContentBoxText>
-              {textContent?.personalCleaningExtendedInfo ?? ""}
-            </StyledServicesContentBoxText>
+            {personalCleaningInfoList.map((listItem, i) => (
+              <StyledServicesContentBoxText key={i}>
+                <StyledParagraphBullet>{`${"\u2B24"}`}</StyledParagraphBullet>
+                {listItem}
+              </StyledServicesContentBoxText>
+            ))}
           </StyledServicesContentBlockItemInfo>
         </StyledServicesContentPanelContent>
       </StyledServicesContentPanel>

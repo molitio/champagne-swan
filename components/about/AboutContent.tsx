@@ -63,6 +63,9 @@ const AboutContent: React.FC = () => {
         <StyledAboutContentPanelText>
           {brandMessageTextContent?.qualityStatement ?? ""}
         </StyledAboutContentPanelText>
+        <StyledAboutContentPanelText>
+          {brandMessageTextContent?.kapcsolat ?? ""}
+        </StyledAboutContentPanelText>
         <StyledAboutContentImagePanel>
           <StyledAboutContentPanelImageAndEffect>
             <StyledAboutContentPanelImage
