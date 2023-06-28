@@ -3,7 +3,6 @@ import Image from "next/image";
 import { resolveThemeBreakPointValues } from "../../utils";
 
 export const StyledServicesContent = styled.section`
-  outline: 3px dashed orange;
   position: relative;
   padding: 5em 0 5em 0;
   width: 100%;
@@ -133,12 +132,10 @@ export const StyledServicesContentBoxTitle = styled.h1`
     display: block;
     margin: 0 auto 55px auto;
     text-align: center;
-    /* width: 28em; */
   }
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
-    /* width: 20em; */
     font-size: 1.6em;
   }
 `;
