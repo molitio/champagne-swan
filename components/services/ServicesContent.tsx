@@ -37,7 +37,6 @@ const ServicesContent: React.FC = () => {
     textContent?.logisticsAndEcoMaintenanceInfoList ?? ""
   );
 
-  //update context variables to reflect structure
   // refactor to grid for the services content tiles
 
   return (
