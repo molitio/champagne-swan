@@ -10,7 +10,6 @@ import {
   StyledServicesContentMainTitle,
   StyledServicesContentBoxTitle,
   StyledServicesContentBoxText,
-  StyledServicesLanding,
   StyledServicesContentPanel,
   StyledServicesContentBlockItem,
   StyledServicesLandingPanelImageContainer,
@@ -18,6 +17,7 @@ import {
   StyledServicesContentPanelImageAndEffect,
   StyledServicesLandingPanelImage,
   StyledServicesContentPanelContent,
+  StyledServicesContent,
 } from "./style";
 import { resolveThemeBreakPointValues } from "../utils";
 
@@ -28,15 +28,20 @@ const ServicesContent: React.FC = () => {
   const textContent = servicesLeafs?.content?.textContent;
   const assetUrls = servicesLeafs?.content?.assetUrls;
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
+
   const officeCleaningInfoList = Array.from(
-    textContent?.officeCleaningInfo ?? ""
+    textContent?.officeCleaningInfoList ?? ""
   );
-  const personalCleaningInfoList = Array.from(
-    textContent?.personalCleaningInfo ?? ""
+  const highCeilingnfoList = Array.from(textContent?.highCeilingnfoList ?? "");
+  const logisticsAndEcoMaintenanceInfoList = Array.from(
+    textContent?.logisticsAndEcoMaintenanceInfoList ?? ""
   );
 
+  //update context variables to reflect structure
+  // refactor to grid for the services content tiles
+
   return (
-    <StyledServicesLanding>
+    <StyledServicesContent>
       <StyledLinearGradient
         direction="top"
         variation="appCoverTop"
@@ -59,7 +64,7 @@ const ServicesContent: React.FC = () => {
             </StyledServicesContentBoxTitle>
 
             <StyledServicesContentBoxText>
-              {textContent?.officeCleaningText ?? ""}
+              {textContent?.officeCleaning ?? ""}
             </StyledServicesContentBoxText>
           </StyledServicesContentBlockItem>
 
@@ -122,12 +127,12 @@ const ServicesContent: React.FC = () => {
             </StyledServicesContentBoxTitle>
 
             <StyledServicesContentBoxText>
-              {textContent?.personalCleaningInfo ?? ""}
+              {textContent?.highCeiling ?? ""}
             </StyledServicesContentBoxText>
           </StyledServicesContentBlockItem>
 
           <StyledServicesContentBlockItemInfo>
-            {personalCleaningInfoList.map((listItem, i) => (
+            {highCeilingnfoList.map((listItem, i) => (
               <StyledServicesContentBoxText key={i}>
                 <StyledParagraphBullet>{`${"\u2B24"}`}</StyledParagraphBullet>
                 {listItem}
@@ -161,23 +166,24 @@ const ServicesContent: React.FC = () => {
         <StyledServicesContentPanelContent>
           <StyledServicesContentBlockItem>
             <StyledServicesContentBoxTitle>
-              {textContent?.highCeilingTitle ?? ""}
+              {textContent?.logisticsAndEcoMaintenanceTitle ?? ""}
             </StyledServicesContentBoxTitle>
             <StyledServicesContentBoxText>
-              {textContent?.highCeilingText ?? ""}
+              {textContent?.logisticsAndEcoMaintenance ?? ""}
             </StyledServicesContentBoxText>
           </StyledServicesContentBlockItem>
+
           <StyledServicesContentBlockItemInfo>
-            <StyledServicesContentBoxText>
-              {textContent?.highCeilingInfo ?? ""}
-            </StyledServicesContentBoxText>
-            <StyledServicesContentBoxText>
-              {textContent?.highCeilingExtendedInfo ?? ""}
-            </StyledServicesContentBoxText>
+            {logisticsAndEcoMaintenanceInfoList.map((listItem, i) => (
+              <StyledServicesContentBoxText key={i}>
+                <StyledParagraphBullet>{`${"\u2B24"}`}</StyledParagraphBullet>
+                {listItem}
+              </StyledServicesContentBoxText>
+            ))}
           </StyledServicesContentBlockItemInfo>
         </StyledServicesContentPanelContent>
       </StyledServicesContentPanel>
-    </StyledServicesLanding>
+    </StyledServicesContent>
   );
 };
 

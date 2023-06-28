@@ -2,6 +2,14 @@ import styled from "styled-components";
 import Image from "next/image";
 import { resolveThemeBreakPointValues } from "../../utils";
 
+export const StyledServicesContent = styled.section`
+  outline: 3px dashed orange;
+  position: relative;
+  padding: 5em 0 5em 0;
+  width: 100%;
+  align-items: center;
+`;
+
 export const StyledServicesContentMainTitle = styled.h1`
   position: relative;
   text-align: center;
