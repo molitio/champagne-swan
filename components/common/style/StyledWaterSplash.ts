@@ -18,31 +18,33 @@ export const StyledButtonWaterSplashContainer = styled.div`
 `;
 
 export const StyledBrandMessageInfoWaterSplash = styled(StyledWaterSplash)`
-  right: -80px;
-  bottom: -120px;
+  right: -60px;
+  bottom: -90px;
   transform: rotate(-15deg);
+  overflow: hidden;
 `;
 
 export const StyledServicesLandingPanelImageWaterSplash = styled(
-  StyledBrandMessageInfoWaterSplash
-)``;
-
-export const StyledContactContentPanelWaterSplash = styled(StyledWaterSplash)`
+  StyledWaterSplash
+)`
   right: -80px;
-  bottom: -120px;
+  bottom: -110px;
   transform: rotate(-15deg);
+
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    right: -60px;
-    bottom: -100px;
-    width: 200px;
-    height: 200px;
-  }
-  @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "xl")}) {
-    right: -60px;
-    bottom: -90px;
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
     width: 180px;
     height: 180px;
   }
+`;
+
+export const StyledContactContentPanelWaterSplash = styled(StyledWaterSplash)`
+  right: -60px;
+  bottom: -90px;
+  transform: rotate(-15deg);
+  /*   @media (max-width: ${(props) =>
+    resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    right: -60px;
+    bottom: -100px;
+  } */
 `;

@@ -13,3 +13,4 @@ export * from "./StyledCover";
 export * from "./StyledAppCover";
 export * from "./StyledWaterSplash";
 export * from "./StyledBreakPointDisplay";
+export * from "./StyledParagraph";

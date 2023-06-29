@@ -43,7 +43,13 @@ export const StyledNavBarLogo = styled.div`
   flex: 40%;
 `;
 
-export const StyledNavBarLogoImage = styled(Image)``;
+export const StyledNavBarLogoImage = styled(Image)`
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    width: 184px;
+    height: 152px;
+  }
+`;
 
 type StyledNavLinksContainerProps = {
   navBarExpanded?: boolean;

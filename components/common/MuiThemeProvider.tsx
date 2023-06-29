@@ -1,33 +1,31 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { createTheme, ThemeProvider } from "@mui/material";
+import { createTheme } from "@mui/material";
+import { ThemeProvider } from "styled-components";
 import { Visual } from "./types";
-
 declare module "@mui/material" {
   export interface Palette {
     stars?: {
-      gold?: string;
-      blue?: string;
-      white?: string;
+      [key: string]: string;
     };
     gradient?: {
-      cover?: string;
-      partial?: string;
-      reversePartial?: string;
+      [key: string]: string;
     };
     visual?: Record<string, Visual>;
   }
   export interface TypeBackground {
     background: {
-      inverse?: string;
-      interactive?: string;
+      [key: string]: string;
     };
   }
   export interface TypeText {
-    tertiary?: string;
-    inverse?: string;
-    interactive?: string;
+    [key: string]: string;
   }
+
   export interface Theme {
+    background: {
+      [key: string]: string;
+    };
+
     dimensions: {
       page: {
         height: string;

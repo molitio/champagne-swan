@@ -17,7 +17,7 @@ export const StyledContactCoverTitle = styled.h1`
   text-align: center;
   color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
-    props?.theme?.palette?.visual["contactTitleShadow"]?.textShadow ?? ""};
+    props?.theme?.palette?.visual["contactCoverTitleShadow"]?.textShadow ?? ""};
   font-weight: 400;
   font-size: 3.8em;
   margin-top: 0.4em;
@@ -36,16 +36,37 @@ export const StyledContactCoverTitle = styled.h1`
   }
 `;
 
-export const StyledCoverText = styled.text`
-  display: block;
+export const StyledCOntactCoverDescription = styled.text`
+  position: relative;
+  width: 40em;
+  margin: auto;
+  font-style: normal;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 1.2em;
+  white-space: pre-wrap;
   color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
-    props?.theme?.palette?.visual["contactTextShadow"]?.textShadow ?? ""};
-  text-align: center;
-  width: 40em;
-  font-size: 1.2em;
-  font-weight: 400;
-  margin: 2em auto auto;
+    props?.theme?.palette?.visual["contactCoverTextShadow"]?.textShadow ?? ""};
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    font-size: 1.8em;
+    width: 16em;
+  }
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    font-size: 1em;
+    width: 24em;
+    padding: 0;
+  }
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    font-size: 0.8em;
+    width: 18em;
+  }
 `;
 
 export const StyledFlexGroup = styled.div`

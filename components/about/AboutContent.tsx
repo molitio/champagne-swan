@@ -52,7 +52,19 @@ const AboutContent: React.FC = () => {
           </StyledAboutContentQuoteAuthor>
         </StyledAboutContentPanelQuotes>
         <StyledAboutContentPanelText>
-          {brandMessageTextContent?.premiumQualityContentText ?? ""}
+          {brandMessageTextContent?.introduction ?? ""}
+        </StyledAboutContentPanelText>
+        <StyledAboutContentPanelText>
+          {brandMessageTextContent?.companyInfo ?? ""}
+        </StyledAboutContentPanelText>
+        <StyledAboutContentPanelText>
+          {brandMessageTextContent?.serviceDescirption ?? ""}
+        </StyledAboutContentPanelText>
+        <StyledAboutContentPanelText>
+          {brandMessageTextContent?.qualityStatement ?? ""}
+        </StyledAboutContentPanelText>
+        <StyledAboutContentPanelText>
+          {brandMessageTextContent?.kapcsolat ?? ""}
         </StyledAboutContentPanelText>
         <StyledAboutContentImagePanel>
           <StyledAboutContentPanelImageAndEffect>
@@ -83,8 +95,8 @@ const AboutContent: React.FC = () => {
             <StyledContactContentPanelWaterSplash
               src={commonAssetUrls?.waterSplash ?? ""}
               alt={"water-splash"}
-              width={240}
-              height={240}
+              width={180}
+              height={180}
             />
             <StyledAboutContentPanelImage
               src={brandMessageAssetUrls?.machine ?? ""}

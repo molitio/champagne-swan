@@ -32,7 +32,7 @@ export const StyledServicesLandingMainTitle = styled.h1`
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "md")}) {
     margin: 2em auto;
-    font-size: 2rem;
+    font-size: 2.4em;
   }
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
@@ -40,8 +40,8 @@ export const StyledServicesLandingMainTitle = styled.h1`
   }
 
   @media (max-width: ${(props) =>
-      resolveThemeBreakPointValues(props?.theme, "md")}) {
-    font-size: 2.4em;
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    font-size: 1.8em;
   }
 `;
 
@@ -71,6 +71,23 @@ export const StyledServicesLandingPanelContent = styled.div`
   text-align: center;
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {
+  }
+`;
+
+export const StyledServicesLandingPanelImageContainer = styled.div`
+  flex: 1 0 30vw;
+  &:first-child {
+    margin: 0;
+    top: 0;
+    left: 0;
+  }
+  align-self: flex-start;
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    order: 3;
+    padding: 4em 0 0 0;
+    align-self: center;
+    flex: 1 1 10em;
   }
 `;
 

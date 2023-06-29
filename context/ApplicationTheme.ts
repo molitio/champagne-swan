@@ -14,12 +14,21 @@ export const ApplicationTheme = {
   palette: {
     primary: {
       main: "#0C7B93ff",
+      light: "",
+      dark: "",
+      contrastText: "",
     },
     secondary: {
       main: "#c1dadfff",
+      light: "",
+      dark: "",
+      contrastText: "",
     },
     tertiary: {
       main: "#c1a87dff",
+      light: "",
+      dark: "",
+      contrastText: "",
     },
     background: {
       default: "#c6dde2ff",
@@ -33,6 +42,7 @@ export const ApplicationTheme = {
       /* tertiary: "#fff", */
       tertiary: "#6C5741ff",
       interactive: "#c1a87dff",
+      disabled: "",
     },
     stars: {
       gold: "#bda982ff",
@@ -50,11 +60,12 @@ export const ApplicationTheme = {
       partial:
         "rgba(255,255,255, 0) 0%, rgba(247, 255, 255, 0.2) 20%, rgba(198, 221, 226, 1) 100%",
       reversePartial:
-        "rgba(255,255,255, 1) 0%, rgba(247, 255, 255, 0.6) 20%, rgba(198, 221, 226, 0) 100%",
+        "rgba(255,255,255, 1) 10%, rgba(247, 255, 255, 0.6) 20%, rgba(198, 221, 226, 0) 100%",
       contactCoverTop:
-        "rgba(229, 236, 238, 0.9) 0%, rgba(153, 198, 208, 0.6) 24%, rgba(198, 221, 226, 0) 68%",
+        "rgba(229, 236, 238, 0.9) 0%,  24%, rgba(198, 221, 226, 0) 68%",
       contactCoverBottom:
-        "rgba(198, 221, 226, 1) 0%, rgba(198, 221, 226, 0.6), 36%, rgba(229, 236, 238, 0.0) 100%",
+        "rgba(255,255,255, 1) 10%, rgba(198, 221, 226, 0.6), 60%, rgba(229, 236, 238, 0.0) 100%",
+      /* "rgba(198, 221, 226, 1) 0%, rgba(198, 221, 226, 0.6), 36%, rgba(229, 236, 238, 0.0) 100%", */
       landingServicesContent:
         "rgba(198, 221, 226, 1) 0%, rgba(198, 221, 226, 0.6), 36%, rgba(229, 236, 238, 0.0) 100%",
     },
@@ -76,12 +87,13 @@ export const ApplicationTheme = {
       servicesTextShadow: { textShadow: "2px 2px 4px #C1DFE6ff" },
       opinionsTitleShadow: { textShadow: "3px 3px 5px #C1DFE6ff" },
       opinionsTextShadow: { textShadow: "2px 2px 4px #C1DFE6ff" },
-      contactTitleShadow: { textShadow: "1px 1px 4px #424E51ff" },
-      contactTextShadow: { textShadow: "1px 1px 2px #424E51ff" },
+      contactCoverTitleShadow: { textShadow: "2px 2px 4px #424E51ff" },
+      contactCoverTextShadow: { textShadow: "1px 1px 2px #424E51ff" },
+      contactTitleShadow: { textShadow: "1px 1px 4px #C1DFE6ff" },
+      contactTextShadow: { textShadow: "1px 1px 2px #C1DFE6ff" },
       skillScore: { textShadow: "1px 2px 4px #424E51ff" },
       skillName: { textShadow: "1px 2px 2px #424E51ff" },
-      /* contactInfoTextShadow: { textShadow: "0px 2px 4px #8c7b6c" }, */
-      contactInfoTextShadow: { textShadow: "0px 2px 4px #8c7b6c" },
+      contactInfoTextShadow: { textShadow: "0px 1px 2px #C1DFE6ff" },
       brandMessageOfficeCleaners: {
         boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.5)",
       },

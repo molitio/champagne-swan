@@ -170,7 +170,7 @@ export const ApplicationContextRoot = {
           textContent: {
             title: "TISZTASÁG FELSŐFOKON!",
             description:
-              "Cégünk magas színvonalon kínál takarító szolgáltatást szállodák, irodaházak és magánszemélyek részére, valamint vállaljuk nagy belmagasságú ipari üzemek, gyártó csarnokok, raktárak és logisztikai központok speciális takarítását!",
+              "Mi, a JeliZa Services Kft, családi vállalkozás vagyunk, amelynek fő célja az ügyfeleink maximális elégedettségének biztosítása. ",
             moreInfoButton: "Bővebben",
           },
           assetUrls: {
@@ -218,23 +218,41 @@ export const ApplicationContextRoot = {
           },
         },
         content: {
+          textContentList: {
+            officeCleaningInfoList: [
+              "Előkészítés és tervezés: A takarítási folyamat előtt fontos előkészítő tevékenységeket végezni, mint például az időpontok meghatározása, a szükséges eszközök és anyagok beszerzése, valamint a munkaerő és a feladatok megszervezése",
+              "Általános takarítás: Az általános takarítás magában foglalja a portörlést, a porszívózást, a padlófelületek söprését és felmosását, valamint az ablakok és üvegfelületek tisztítását. Ezen kívül törölhetők az asztalok, a székek és más bútorok, és eltávolítható a port és a szennyeződéseket a felületekről.",
+              "Szobák és irodák takarítása: A szobák és irodák takarítása magában foglalja a padló felmosását, a por eltávolítását a bútorokról, az ágyak megrendezését és a friss ágyneműk elhelyezését. Emellett a tükrök és üvegfelületek tisztítása, valamint az összes felület fertőtlenítése is fontos.",
+              "Fürdőszobák takarítása: A fürdőszobák takarítása különös figyelmet igényel. Fontos a WC-k és a mosdók tisztítása, a csapok, a csempék és a zuhanyzók tisztítása. A tisztítószereknek fertőtlenítő hatásúaknak kell lenniük, hogy elpusztítsák a baktériumokat és a kórokozókat.",
+              "Közös terek és recepció takarítása: A közös terek, mint például a recepció, a várótermek és a tárgyalók, nagyon fontosak az ügyfelek és a vendégek számára. Ezekben a területeken a takarítás magában foglalja a padlók felmosását, a portörlést, a bútorok és felületek tisztítását, valamint az esetleges szemetesek ürítését.",
+              "Nagytakarítási feladatok: Ezen felül vannak olyan eseti takarítási feladatok, amelyek időnként elvégzendők, mint például vegyszeres gépi tisztítás, ablaktisztítás.",
+            ],
+            highCeilingnfoList: [
+              "Az első lépés az épület alapos felmérése és a takarítási tervek kidolgozása. Ebben a fázisban fontos megismerni az épület belső és külső szerkezetét, az elérhetőséget, a takarítandó területeket és a lehetséges veszélyforrásokat.",
+              "Biztonsági intézkedéseket kell hozni a magasban történő munkához, például biztosítani kell az alkalmazottak számára megfelelő védőfelszerelést, be kell tartani a magasban történő munkavégzésre vonatkozó szabályokat, és szükség esetén biztosítani kell az emelőkosarak, kötelek vagy más eszközök használatát.",
+            ],
+            logisticsAndEcoMaintenanceInfoList: [
+              "Területfelmérés és tervezés: Az első lépés a területfelmérés és a tervezés. A területet át fogóan kell értékelni, figyelembe véve a növényzet típusát, a talaj minőségét, az ökoszisztémát és a környezeti tényezőket. Ez segít a megfelelő karbantartási terv kidolgozásában.",
+              "Növényápolás: A zöld terület karbantartásának egyik legfontosabb része a növények gondozása. Ez magában foglalja a növények öntözését, a rendszeres trágyázást, a gyomlálást és az elszáradt, sérült vagy beteg növényi részek eltávolítását. Az egészséges növények gondozása biztosítja a zöld terület esztétikus megjelenését és növekedését.",
+              "Fűnyírás: Ha a zöld területen van fű, rendszeres fűnyírásra lesz szükség. A fűnyírást a fű növekedési ütemének megfelelően végezzük. A megfelelő fűmagasság fenntartása segít a gyep egészségének megőrzésében és a gyomnövények terjedésének gátlásában.",
+              "Bokrok és sövények metszése: A bokrok és sövények metszése segít megőrizni az alakjukat és növekedési formájukat. Rendszeres metszéssel kordában tarthatók a növények és megakadályozható a túlzott elburjánzás.",
+              "Gyomirtás: A gyomok eltávolítása fontos része a zöld terület karbantartásának. A gyomok versengenek a tápanyagokért és a vízért a növényekkel, és esztétikailag sem kívánatosak. A gyomirtás lehet kézi, mechanikai vagy vegyi úton történő, a megfelelő módszert a helyzet és a terület mérete határozza meg.",
+            ],
+          },
           textContent: {
             title: "SZOLGÁLTATÁSAINK",
             officeCleaningTitle: "Szállodák és irodaházak takarítása",
-            officeCleaningText:
-              "Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is",
-            officeCleaningInfo: "",
-            officeCleaningExtendedInfo: "",
-            personalCleaningTitle: "Magánszemélyeknél végzett takarítás",
-            personalCleaningText:
-              "Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is",
-            personalCleaningInfo: "",
-            personalCleaningExtendedInfo: "",
+            officeCleaning:
+              "A szállodák és irodaházak takarítása rendkívül fontos a tiszta és higiénikus környezet fenntartása érdekében. A takarítási folyamat általában magában foglalja a következő lépéseket",
+
             highCeilingTitle: "Nagy belmagasságú épületek takarítása",
-            highCeilingText:
+            highCeiling:
+              "A nagy belmagasságú épületek takarítása komplex és kihívást jelentő feladat, amely speciális módszereket, felszereléseket és szakértelmet igényel. A következőkben leírom a folyamatot, amelyet általában alkalmaznak az ilyen épületek takarítására. Felkészülés és biztonság:",
+
+            logisticsAndEcoMaintenanceTitle:
+              "Magánszemélyeknél végzett takarítás",
+            logisticsAndEcoMaintenance:
               "Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is",
-            highCeilingInfo: "",
-            highCeilingExtendedInfo: "",
           },
           assetUrls: {
             officeCleaners: "/web_content/img/officecleaners.webp",
@@ -251,7 +269,8 @@ export const ApplicationContextRoot = {
             title: "SZAKKÉPZETT \\n MUNKAERŐ",
             subTitle: "MINŐSÉGI \\n SZOLGÁLTATÁS",
             contactLinkText: "Kapcsolat",
-            description: "",
+            description:
+              "Ha bármilyen kérdése vagy kérése van, kérjük, ne habozzon velünk kapcsolatba lépni.",
           },
           assetUrls: {
             cleaners: "/web_content/img/cleaners.webp",
@@ -269,7 +288,16 @@ export const ApplicationContextRoot = {
             title: "ISMERJEN MEG\nBENNÜNKET",
             aboutQuote: `"A minőség azt jelenti, hogy akkor is jól csinálsz valamit amikor nem látják. \n"`,
             aboutQuoteAuthor: "Henry Ford",
-            premiumQualityContentText: "Hamarosan érkezik.",
+            companyInfo:
+              "Cégünk már több éve sikeresen működik a piacon egy másik, családi partner cégével együtt. Az együttműködés révén képesek vagyunk szélesebb körű szolgáltatásokat nyújtani, és erősödni a piaci pozíciónkban. A két cég közötti szoros együttműködés révén a takarítási szolgáltatásaink minősége és a megbízhatóságunk folyamatosan fejlődik, ami az ügyfeleink számára kiváló minőségű takarítást biztosít.",
+            serviceDescirption:
+              "A JeliZa Services Kft szállodák, irodaházak és magas csarnokok takarításával foglalkozik. Mindent megtettünk annak érdekében, hogy a lehető legmagasabb szolgáltatást nyújtsuk ügyfeleinknek. A takarítóink és vezetőink képzett és tapasztalt szakemberek, akik kiemelkedő figyelmet fordítanak a részletekre, és biztosítják, hogy az ön épülete tiszta, rendezett és higiénikus legyen. Az évek során számos sikeres projektet vezettünk le, amelyek alapján megszerzett tudásunk és tapasztalatunk biztosítja, hogy vállalkozásunk magas színvonalú szolgáltatásokat nyújt.",
+            qualityStatement:
+              "Az évek során szoros együttműködést alakítottunk ki partnereinkkel. Cégünk folyamatosan fejleszti magát, legjobb és legmodernebb takarítási technikákat használja. Fontos számunkra, hogy az ügyfelek elégedettek legyenek a szolgáltatásainkkal. Bízunk benne, hogy tapasztalatainkkal és a hozzáállásunkkal vállalkozásunk az ön bizalmának és támogatásának büszke vállalata lesz.",
+            introduction:
+              "Mi, a JeliZa Services Kft, családi vállalkozás vagyunk, amelynek fő célja az ügyfeleink maximális elégedettségének biztosítása. ",
+            kapcsolat:
+              "Ha bármilyen kérdése vagy kérése van, kérjük, ne habozzon velünk kapcsolatba lépni.",
           },
           assetUrls: {
             mop: "/web_content/img/mop.webp",

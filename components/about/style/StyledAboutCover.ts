@@ -15,6 +15,7 @@ export const StyledAboutMainTitle = styled.h1`
   font-size: 3.8em;
   font-weight: 400;
   opacity: 0.8;
+  margin: 0;
   color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["aboutCoverTitleShadow"]?.textShadow ?? ""};
@@ -29,6 +30,11 @@ export const StyledAboutMainTitle = styled.h1`
       resolveThemeBreakPointValues(props?.theme, "md")}) {
     font-size: 2.4em;
   }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    font-size: 1.6em;
+  }
 `;
 
 export const StyledAboutSubTitle = styled.h2`
@@ -37,6 +43,7 @@ export const StyledAboutSubTitle = styled.h2`
   font-size: 3.6rem;
   font-weight: 300;
   opacity: 0.8;
+  margin: 0;
   color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
     props?.theme?.palette?.visual["aboutCoverSubTitleShadow"]?.textShadow ??
@@ -52,14 +59,20 @@ export const StyledAboutSubTitle = styled.h2`
       resolveThemeBreakPointValues(props?.theme, "md")}) {
     font-size: 2rem;
   }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    font-size: 1.4em;
+  }
 `;
 
 export const StyledAboutDescription = styled.p`
+  position: relative;
   width: 36em;
   margin: 0 auto;
   padding: 0 2em;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.5em;
   text-align: center;
   white-space: pre-wrap;
@@ -69,16 +82,21 @@ export const StyledAboutDescription = styled.p`
     props?.theme?.palette?.visual["aboutCoverTextShadow"]?.textShadow ?? ""};
 
   @media (max-width: ${(props) =>
-    resolveThemeBreakPointValues(props?.theme, "md")}) {
-    font-size: 1.8em;
-    width: 16em;
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    font-size: 1.2em;
+    width: 36em;
   }
 
   @media (max-width: ${(props) =>
-    resolveThemeBreakPointValues(props?.theme, "sm")}) {
-    font-size: 1.5em
-    width: 13em;
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    font-size: 1em;
+    width: 24em;
     padding: 0;
+  }
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    font-size: 0.8em;
+    width: 18em;
   }
 `;
 
@@ -108,6 +126,15 @@ export const StyledAppCoverContactLink = styled(Link)`
   :hover {
     color: ${(props) => props?.theme?.palette?.tertiary?.main};
     background-color: ${(props) => props?.theme?.palette?.text?.secondary};
+  }
+
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    font-size: 1.2em;
+  }
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "sm")}) {
+    font-size: 1em;
   }
 `;
 
