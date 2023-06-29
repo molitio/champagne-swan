@@ -1,17 +1,14 @@
-import { AboutHeroSegment } from "../components/page";
-import { AboutPremiumQuality } from "../components/page";
-import { AboutOpinions } from "../components/page";
-import ContactContent from "../components/page/ContactContent";
+import { NextPage } from "next";
+import { AboutContent } from "../components/about";
+import AboutCover from "../components/about/AboutCover";
 
-const About: React.FC = () => {
+const AboutPage: NextPage = () => {
   return (
-    <section>
-      <AboutHeroSegment />
-      <AboutPremiumQuality />
-      <AboutOpinions />
-      <ContactContent />
-    </section>
+    <main>
+      <AboutCover />
+      <AboutContent />
+    </main>
   );
 };
 
-export default About;
+export default AboutPage;

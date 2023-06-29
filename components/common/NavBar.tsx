@@ -1,98 +1,78 @@
 import React from "react";
-import { ChampagneSwanContext } from "../context";
-import { CloseIcon, MenuIcon } from "../svg";
-import Link from "next/link";
-import { 
-  StyledImageContainer,
-  RelativNav,
-  NavBarContainer,
+import { AppContext } from "../context";
+import { CloseIcon, MenuIcon } from "../common";
+import {
+  StyledNavBar,
   StyledNavLink,
-  ExtendedStyledNavLink,
-  LeftContainer,
-  RightContainer,
-  NavBarLinkContainer,
-  NavBarInnerContainer,
-  NavBarExtendedContainer,
-  OpenLinksButtonContainer,
-  OpenLinksButton,
-  StyledLogoPng} from './style'
+  StyledNavLinksContainer,
+  StyledNavButton,
+  StyledNavBarLogoImage,
+  StyledNavBarLogoImageContainer,
+  StyledNavBarLogo,
+} from "./style";
 
+import { SystemContext } from "@molitio/ui-core";
+import { resolveThemeBreakPointValues } from "../utils";
 
 const NavBar: React.FC = () => {
-  const champagneSwanContext = React.useContext(ChampagneSwanContext);
+  const champagneSwanContext = React.useContext(AppContext);
+  const navBarExpanded = champagneSwanContext?.interactive?.navBarExpanded;
   const setNavBarExpanded = champagneSwanContext.interactive.setNavBarExpanded;
-  const navBarExpanded = champagneSwanContext.interactive.navBarExpanded;
-  const navTree = champagneSwanContext.navTree ?? {};
 
-  if (typeof window !== "undefined") {
-    window.addEventListener("resize", function () {
-      if (window.innerWidth > 834 && navBarExpanded === true) {
-        setNavBarExpanded?.(!champagneSwanContext.interactive.navBarExpanded);
-      }
-    });
-  }
+  const systemContext = React.useContext(SystemContext);
+  const navTree = systemContext?.navRoot ?? {};
+  const commonLeafs = systemContext?.contentRoot?.common?.leafs;
+  const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   return (
-    <RelativNav>
-      <NavBarContainer>
-        <NavBarInnerContainer>
-          <StyledImageContainer>
-            <StyledLogoPng
-              src="https://s3.eu-west-1.amazonaws.com/filestore.molitio.org/champagne-swan/web_content/logo/jeliza_logokit_jeliza_logo_horizontal.svg"
-              alt="logo"
-            />
-          </StyledImageContainer>
-          <LeftContainer></LeftContainer>
-          <RightContainer>
-            {navTree
-              ? Object.keys(navTree).map((branch) => (
-                  <Link
-                    key={branch}
-                    href={navTree[branch].path}
-                    className="nav-text"
-                  >
-                    <StyledNavLink>{`${navTree[branch].label}`} </StyledNavLink>
-                  </Link>
-                ))
-              : null}
-            <OpenLinksButtonContainer
-              onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-                setNavBarExpanded?.(
-                  !champagneSwanContext.interactive.navBarExpanded
-                );
-              }}
-            >
-              {navBarExpanded ? (
-                <OpenLinksButton>
-                  <CloseIcon />
-                </OpenLinksButton>
-              ) : (
-                <OpenLinksButton>
-                  <MenuIcon />
-                </OpenLinksButton>
-              )}
-            </OpenLinksButtonContainer>
-          </RightContainer>
-        </NavBarInnerContainer>
-        <NavBarExtendedContainer>
-          {navBarExpanded ?? navTree
-            ? Object.keys(navTree).map((branch) => (
-                <Link key={branch} href={navTree[branch].path}>
-                  <ExtendedStyledNavLink
-                    onClick={(e: React.MouseEvent) => {
-                      setNavBarExpanded?.(
-                        !champagneSwanContext.interactive.navBarExpanded
-                      );
-                    }}
-                  >
-                    {`${navTree[branch].label}`}
-                  </ExtendedStyledNavLink>
-                </Link>
-              ))
-            : null}
-        </NavBarExtendedContainer>
-      </NavBarContainer>
-    </RelativNav>
+    <StyledNavBar
+      navBarExpanded={champagneSwanContext?.interactive?.navBarExpanded}
+    >
+      <StyledNavBarLogo>
+        <StyledNavBarLogoImageContainer>
+          <StyledNavBarLogoImage
+            src={commonAssetUrls?.horizontalLogo ?? ""}
+            alt={"logo"}
+            fill={true}
+            sizes={`(max-width: ${resolveThemeBreakPointValues(
+              systemContext?.theme,
+              "xl"
+            )}) 50vw,
+                33vw`}
+          />
+        </StyledNavBarLogoImageContainer>
+      </StyledNavBarLogo>
+
+      <StyledNavLinksContainer
+        navBarExpanded={champagneSwanContext?.interactive?.navBarExpanded}
+      >
+        {navTree
+          ? Object.keys(navTree).map((branch) => (
+              <StyledNavLink
+                key={branch}
+                href={navTree[branch]?.path}
+                className="nav-text"
+                onClick={() => {
+                  if (champagneSwanContext?.interactive?.navBarExpanded)
+                    setNavBarExpanded?.(false);
+                }}
+              >
+                {`${navTree[branch].label}`}
+              </StyledNavLink>
+            ))
+          : null}
+      </StyledNavLinksContainer>
+      <StyledNavButton
+        navBarExpanded={champagneSwanContext?.interactive?.navBarExpanded}
+        onClick={() => {
+          setNavBarExpanded?.(
+            !champagneSwanContext?.interactive?.navBarExpanded
+          );
+        }}
+      >
+        {navBarExpanded ? <CloseIcon /> : <MenuIcon />}
+      </StyledNavButton>
+    </StyledNavBar>
   );
 };
 

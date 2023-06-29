@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 const submitEmail = async (req: NextApiRequest, res: NextApiResponse) => {
-  const { from_name, from_email, message } = req?.body;
+  const { from_name, from_email, message } = req?.body ?? "";
 
   const emailData = {
     service_id: process.env.EMAILJS_SERVICE_ID ?? "",

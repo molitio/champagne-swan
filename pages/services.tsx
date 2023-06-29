@@ -1,15 +1,15 @@
-import { ServicesPageContent } from "../components/page";
-import { ServicesHeroSegment } from "../components/page";
-import ContactContent from "../components/page/ContactContent";
+import { NextPage } from "next";
+import { ServicesContent, ServicesCover } from "../components/services";
+import { ContactInfo } from "../components/contact";
 
-const Services: React.FC = () => {
+const ServicesPage: NextPage = () => {
   return (
-    <>
-      <ServicesHeroSegment />
-      <ServicesPageContent />
-      <ContactContent />
-    </>
+    <main>
+      <ServicesCover />
+      <ServicesContent />
+      <ContactInfo />
+    </main>
   );
 };
 
-export default Services;
+export default ServicesPage;

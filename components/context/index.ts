@@ -1,2 +1,2 @@
-export {default as ChampagneSwanContext} from './ChampagneSwanContext';
-export {default as ChampagneSwanContextProvider} from './ChampagneSwanContextProvider';
+export { default as AppContext } from "./AppContext";
+export { default as AppContextProvider } from "./AppContextProvider";

@@ -1,11 +1,31 @@
-import React from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { createTheme, ThemeProvider } from "@mui/material";
+import { Visual } from "./types";
 
 declare module "@mui/material" {
+  export interface Palette {
+    stars?: {
+      gold?: string;
+      blue?: string;
+      white?: string;
+    };
+    gradient?: {
+      cover?: string;
+      partial?: string;
+      reversePartial?: string;
+    };
+    visual?: Record<string, Visual>;
+  }
   export interface TypeBackground {
     background: {
       inverse?: string;
+      interactive?: string;
     };
+  }
+  export interface TypeText {
+    tertiary?: string;
+    inverse?: string;
+    interactive?: string;
   }
   export interface Theme {
     dimensions: {

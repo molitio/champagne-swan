@@ -1,39 +1,24 @@
-import type { NextPage } from "next";
 import React from "react";
-import styled from "styled-components";
-import { HeroSegment } from "../components/page";
-import PremiumQuality from "../components/page/PremiumQuality";
-import ServicesHomeContent from "../components/page/ServicesHomeContent";
-import Opinions from "../components/page/Opinions";
-import OurPartnersContent from "../components/page/OurPartnersContent";
+import type { NextPage } from "next";
+import { AppCover } from "../components/common";
+import { Partners } from "../components/partners";
+import { Opinions } from "../components/opinions";
+import { ServicesLanding } from "../components/services";
+import { BrandMessage, BrandFeats } from "../components/brand";
+import { ContactInfo } from "../components/contact";
 
-import ContactContent from "../components/page/ContactContent";
-
-type HomeProps = {
-  title?: string;
-  description?: string;
-};
-
-const HomePage: NextPage<HomeProps> = (props) => {
+const IndexPage: NextPage = () => {
   return (
-    <section>
-      <HeroSegment />
-      <PremiumQuality />
-      <ServicesHomeContent />
+    <main>
+      <AppCover />
+      <BrandFeats />
+      <BrandMessage />
+      <ServicesLanding />
       <Opinions />
-      <OurPartnersContent />
-      <ContactContent />
-    </section>
+      <Partners />
+      <ContactInfo />
+    </main>
   );
 };
 
-export default HomePage;
-
-export async function getInitialProps() {
-  return {
-    props: {
-      title: "Champagne Swan",
-      description: "Champagne Swan",
-    },
-  };
-}
+export default IndexPage;

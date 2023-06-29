@@ -1,23 +1,15 @@
-export { StyledForm, StyledSelectForm } from "./StyledForm";
-export { IconContainer } from "./StyledIconContainer";
-export { ContactButton } from "./StyledContactButton";
-export { ImageContainer } from "./StyledImageContainer";
-export {StyledField, SyledInput, SyledTextArea, SyledSelectInput } from "./StyledInput";
-export {StyledFooter} from "./StyledFooter";
-export {
-  StyledImageContainer,
-  RelativNav,
-  NavBarContainer,
-  StyledNavLink,
-  ExtendedStyledNavLink,
-  LeftContainer,
-  RightContainer,
-  NavBarLinkContainer,
-  NavBarInnerContainer,
-  NavBarExtendedContainer,
-  OpenLinksButtonContainer,
-  OpenLinksButton,
-  StyledLogoPng
-} from "./StyledNavBar";
-
-import { Button, ArrowUp } from "./StyledScrollButton";
+export * from "./StyledForm";
+export * from "./StyledIconContainer";
+export * from "./StyledContactButton";
+export * from "./StyledInput";
+export * from "./StyledFooter";
+export * from "./StyledNavBar";
+export * from "./StyledAnchor";
+export * from "./StyledGradient";
+export * from "./StyledCloseIcon";
+export * from "./StyledStarSvgIcon";
+export * from "./StyledFormContainer";
+export * from "./StyledCover";
+export * from "./StyledAppCover";
+export * from "./StyledWaterSplash";
+export * from "./StyledBreakPointDisplay";

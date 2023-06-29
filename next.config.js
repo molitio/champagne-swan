@@ -5,6 +5,20 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  eslint: {
+    ignoreDuringBuilds: false,
+  },
+  images: {
+    loader: "default",
+    deviceSizes: [576, 768, 992, 1200, 1400],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**.amazonaws.com",
+        pathname: "/filestore.molitio.org/**",
+      },
+    ],
+  },
   async headers() {
     console.log("headers nonce", process.env.NONCE);
     return [
@@ -70,17 +84,6 @@ const nextConfig = {
         ],
       },
     ];
-  },
-  experimental: {
-    images: {
-      remotePatterns: [
-        {
-          protocol: "https",
-          hostname: "s3.eu-west-1.amazonaws.com",
-          pathname: "/filestore.molitio.orgchampagne-swan/web-content/**/*",
-        },
-      ],
-    },
   },
 };
 

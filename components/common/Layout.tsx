@@ -1,25 +1,21 @@
 import React from "react";
-import ScrollButton from './ScrollButton';
+import ScrollButton from "./ScrollButton";
 import Footer from "./Footer";
-import { ChampagneSwanContextProvider } from "../context";
+import { AppContextProvider } from "../context";
 import NavBar from "./NavBar";
+import { BreakPointDisplay } from "./BreakPointDisplay";
 
-type LayoutProps = {
-  appTheme: any;
-};
-
-
-
-const Layout: React.FC<LayoutProps & React.PropsWithChildren> = (props) => {
-  const { children, appTheme } = props;
+const Layout: React.FC<React.PropsWithChildren> = (props) => {
+  const { children } = props;
 
   return (
-    <ChampagneSwanContextProvider>
+    <AppContextProvider>
+      <BreakPointDisplay />
       <NavBar />
       {children}
-      <ScrollButton/>
-      <Footer/>
-    </ChampagneSwanContextProvider>
+      <ScrollButton />
+      <Footer />
+    </AppContextProvider>
   );
 };
 
