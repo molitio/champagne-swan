@@ -4,31 +4,28 @@ import { createTheme } from "@mui/material";
 import { AppShell } from "@molitio/ui-core";
 import { ApplicationContextRoot, ApplicationTheme } from "../context";
 import { GlobalStyle } from "../globalStyle";
-import { MuiThemeProvider, Layout } from "../components/common";
+import { Layout } from "../components/common";
+import { ThemeProvider } from "styled-components";
 
 export default function App({ Component, pageProps }: AppProps) {
   const muiDefault = createTheme();
-  const appTheme = createTheme(muiDefault, {
-    ...ApplicationTheme,
-  });
+  const appTheme = createTheme(muiDefault, { ...ApplicationTheme });
 
   return (
     <AppShell
-      externalTheme={appTheme}
       externalAppContextRoot={ApplicationContextRoot}
+      externalTheme={{ ...appTheme }}
     >
-      <Layout>
-        <GlobalStyle />
-        <Script
-          strategy="lazyOnload"
-          /* nonce={nonce} */
-          src={`https://www.google.com/recaptcha/enterprise.js?render=${process?.env?.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY}`}
-        />
-
-        <MuiThemeProvider externalTheme={appTheme}>
+      <ThemeProvider theme={{ ...appTheme }}>
+        <Layout>
+          <GlobalStyle />
+          <Script
+            strategy="lazyOnload"
+            src={`https://www.google.com/recaptcha/enterprise.js?render=${process?.env?.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY}`}
+          />
           <Component {...pageProps} />
-        </MuiThemeProvider>
-      </Layout>
+        </Layout>
+      </ThemeProvider>
     </AppShell>
   );
 }
