@@ -17,7 +17,7 @@ export const StyledContactCoverTitle = styled.h1`
   text-align: center;
   color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
-    props?.theme?.palette?.visual["contactTitleShadow"]?.textShadow ?? ""};
+    props?.theme?.palette?.visual["contactCoverTitleShadow"]?.textShadow ?? ""};
   font-weight: 400;
   font-size: 3.8em;
   margin-top: 0.4em;
@@ -49,7 +49,7 @@ export const StyledCOntactCoverDescription = styled.text`
   white-space: pre-wrap;
   color: ${(props) => props?.theme?.palette?.text?.secondary ?? ""};
   text-shadow: ${(props) =>
-    props?.theme?.palette?.visual["contactTextShadow"]?.textShadow ?? ""};
+    props?.theme?.palette?.visual["contactCoverTextShadow"]?.textShadow ?? ""};
 
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "xl")}) {

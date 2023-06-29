@@ -36,7 +36,6 @@ const NavBar: React.FC = () => {
             alt={"logo"}
             width={224}
             height={192}
-            /* fill={true} */
             sizes={`(max-width: ${resolveThemeBreakPointValues(
               systemContext?.theme,
               "xl"

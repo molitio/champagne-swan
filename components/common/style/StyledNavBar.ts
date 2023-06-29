@@ -35,15 +35,21 @@ export const StyledNavBar = styled.nav<StyledNavProps>`
 export const StyledNavBarLogoImageContainer = styled.div`
   position: relative;
   margin-left: 2em;
-  width: 14em; //224
-  height: 12em; // 192
+  width: 14em;
+  height: 12em;
 `;
 
 export const StyledNavBarLogo = styled.div`
   flex: 40%;
 `;
 
-export const StyledNavBarLogoImage = styled(Image)``;
+export const StyledNavBarLogoImage = styled(Image)`
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "md")}) {
+    width: 184px;
+    height: 152px;
+  }
+`;
 
 type StyledNavLinksContainerProps = {
   navBarExpanded?: boolean;

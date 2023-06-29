@@ -25,8 +25,12 @@ export const StyledBrandMessageInfoWaterSplash = styled(StyledWaterSplash)`
 `;
 
 export const StyledServicesLandingPanelImageWaterSplash = styled(
-  StyledBrandMessageInfoWaterSplash
+  StyledWaterSplash
 )`
+  right: -80px;
+  bottom: -110px;
+  transform: rotate(-15deg);
+
   @media (max-width: ${(props) =>
       resolveThemeBreakPointValues(props?.theme, "sm")}) {
     width: 180px;

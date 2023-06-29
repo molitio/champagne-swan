@@ -13,7 +13,7 @@ export const resolveThemeBreakPointValues = <
   key: string
 ): string => {
   if (!theme.breakpoints) {
-    throw new Error("The theme object does not have a `breakpoints` key.");
+    console.error("The theme object does not have a `breakpoints` key.");
   }
 
   // Use a type guard to narrow down the type of `theme.breakpoints`
@@ -23,21 +23,25 @@ export const resolveThemeBreakPointValues = <
     typeof obj === "object" && obj !== null && "values" in obj && "unit" in obj;
 
   if (!hasBreakpoints(theme.breakpoints)) {
-    throw new Error(
+    console.error(
       "The `breakpoints` key in the theme object is not of the expected type."
     );
+  }
+
+  if (!(Object.keys(theme.breakpoints?.values ?? {}).length > 0)) {
+    console.error("The `breakpoints` values object missing its values.");
+    return "0px";
   }
 
   const { values, unit } = theme.breakpoints;
 
   // Look for the key in the breakpoints object and return its corresponding value
-  if (key in values) {
+  if (values && key in values) {
     const value = `${values[key]}${unit}`;
     return value;
     /* return `${values[key]}${unit}`; */
   } else {
-    throw new Error(
-      `Could not find a matching breakpoint value for key: ${key}`
-    );
+    console.error(`Could not find a matching breakpoint value for key: ${key}`);
   }
+  return "0px";
 };

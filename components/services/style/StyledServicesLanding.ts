@@ -74,6 +74,23 @@ export const StyledServicesLandingPanelContent = styled.div`
   }
 `;
 
+export const StyledServicesLandingPanelImageContainer = styled.div`
+  flex: 1 0 30vw;
+  &:first-child {
+    margin: 0;
+    top: 0;
+    left: 0;
+  }
+  align-self: flex-start;
+  @media (max-width: ${(props) =>
+      resolveThemeBreakPointValues(props?.theme, "xl")}) {
+    order: 3;
+    padding: 4em 0 0 0;
+    align-self: center;
+    flex: 1 1 10em;
+  }
+`;
+
 export const StyledContactLink = styled(Link)`
   font-size: 20px;
   color: ${(props) => props?.theme?.palette?.text?.interactive ?? ""};

@@ -4,7 +4,6 @@ import {
   IconGroup,
   StyledLinearGradient,
   StyledParagraphBullet,
-  StyledServicesLandingPanelImageWaterSplash,
 } from "../common";
 import {
   StyledServicesContentMainTitle,
@@ -12,12 +11,12 @@ import {
   StyledServicesContentBoxText,
   StyledServicesContentPanel,
   StyledServicesContentBlockItem,
-  StyledServicesLandingPanelImageContainer,
   StyledServicesContentBlockItemInfo,
   StyledServicesContentPanelImageAndEffect,
   StyledServicesLandingPanelImage,
-  StyledServicesContentPanelContent,
   StyledServicesContent,
+  StyledServicesContentPanelImageContainer,
+  StyledServicesContentPanelImageWaterSplash,
 } from "./style";
 import { resolveThemeBreakPointValues } from "../utils";
 
@@ -26,15 +25,18 @@ const ServicesContent: React.FC = () => {
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
   const servicesLeafs = systemContext?.contentRoot?.services?.leafs;
   const textContent = servicesLeafs?.content?.textContent;
+  const textContentList = servicesLeafs?.content?.textContentList;
   const assetUrls = servicesLeafs?.content?.assetUrls;
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
   const officeCleaningInfoList = Array.from(
-    textContent?.officeCleaningInfoList ?? ""
+    textContentList?.officeCleaningInfoList ?? ""
   );
-  const highCeilingnfoList = Array.from(textContent?.highCeilingnfoList ?? "");
+  const highCeilingnfoList = Array.from(
+    textContentList?.highCeilingnfoList ?? ""
+  );
   const logisticsAndEcoMaintenanceInfoList = Array.from(
-    textContent?.logisticsAndEcoMaintenanceInfoList ?? ""
+    textContentList?.logisticsAndEcoMaintenanceInfoList ?? ""
   );
 
   // refactor to grid for the services content tiles
@@ -56,29 +58,9 @@ const ServicesContent: React.FC = () => {
       </StyledServicesContentMainTitle>
 
       <StyledServicesContentPanel>
-        <StyledServicesContentPanelContent>
-          <StyledServicesContentBlockItem>
-            <StyledServicesContentBoxTitle>
-              {textContent?.officeCleaningTitle ?? ""}
-            </StyledServicesContentBoxTitle>
-
-            <StyledServicesContentBoxText>
-              {textContent?.officeCleaning ?? ""}
-            </StyledServicesContentBoxText>
-          </StyledServicesContentBlockItem>
-
-          <StyledServicesContentBlockItemInfo>
-            {officeCleaningInfoList.map((listItem, i) => (
-              <StyledServicesContentBoxText key={i}>
-                <StyledParagraphBullet>{`${"\u2B24"}`}</StyledParagraphBullet>
-                {listItem}
-              </StyledServicesContentBoxText>
-            ))}
-          </StyledServicesContentBlockItemInfo>
-        </StyledServicesContentPanelContent>
-        <StyledServicesLandingPanelImageContainer>
+        <StyledServicesContentPanelImageContainer>
           <StyledServicesContentPanelImageAndEffect>
-            <StyledServicesLandingPanelImageWaterSplash
+            <StyledServicesContentPanelImageWaterSplash
               src={commonAssetUrls?.waterSplash ?? ""}
               alt={"water-splash"}
               width={240}
@@ -89,19 +71,38 @@ const ServicesContent: React.FC = () => {
                 systemContext?.theme,
                 "xl"
               )}) 50vw,
-                33vw`}
+              33vw`}
               src={assetUrls?.officeCleaners ?? ""}
               alt={"office-cleaners"}
               fill={true}
             />
           </StyledServicesContentPanelImageAndEffect>
-        </StyledServicesLandingPanelImageContainer>
+        </StyledServicesContentPanelImageContainer>
+
+        <StyledServicesContentBlockItem>
+          <StyledServicesContentBoxTitle>
+            {textContent?.officeCleaningTitle ?? ""}
+          </StyledServicesContentBoxTitle>
+
+          <StyledServicesContentBoxText>
+            {textContent?.officeCleaning ?? ""}
+          </StyledServicesContentBoxText>
+        </StyledServicesContentBlockItem>
+
+        <StyledServicesContentBlockItemInfo>
+          {officeCleaningInfoList.map((listItem, i) => (
+            <StyledServicesContentBoxText key={i}>
+              <StyledParagraphBullet>{`${"\u2B24"}`}</StyledParagraphBullet>
+              {listItem}
+            </StyledServicesContentBoxText>
+          ))}
+        </StyledServicesContentBlockItemInfo>
       </StyledServicesContentPanel>
 
       <StyledServicesContentPanel>
-        <StyledServicesLandingPanelImageContainer>
+        <StyledServicesContentPanelImageContainer reversed>
           <StyledServicesContentPanelImageAndEffect>
-            <StyledServicesLandingPanelImageWaterSplash
+            <StyledServicesContentPanelImageWaterSplash
               src={commonAssetUrls?.waterSplash ?? ""}
               alt={"water-splash"}
               width={240}
@@ -118,33 +119,32 @@ const ServicesContent: React.FC = () => {
               fill={true}
             />
           </StyledServicesContentPanelImageAndEffect>
-        </StyledServicesLandingPanelImageContainer>
-        <StyledServicesContentPanelContent>
-          <StyledServicesContentBlockItem>
-            <StyledServicesContentBoxTitle>
-              {textContent?.highCeilingTitle ?? ""}
-            </StyledServicesContentBoxTitle>
+        </StyledServicesContentPanelImageContainer>
 
-            <StyledServicesContentBoxText>
-              {textContent?.highCeiling ?? ""}
+        <StyledServicesContentBlockItem reversed>
+          <StyledServicesContentBoxTitle>
+            {textContent?.highCeilingTitle ?? ""}
+          </StyledServicesContentBoxTitle>
+
+          <StyledServicesContentBoxText>
+            {textContent?.highCeiling ?? ""}
+          </StyledServicesContentBoxText>
+        </StyledServicesContentBlockItem>
+
+        <StyledServicesContentBlockItemInfo>
+          {highCeilingnfoList.map((listItem, i) => (
+            <StyledServicesContentBoxText key={i}>
+              <StyledParagraphBullet>{`${"\u2B24"}`}</StyledParagraphBullet>
+              {listItem}
             </StyledServicesContentBoxText>
-          </StyledServicesContentBlockItem>
-
-          <StyledServicesContentBlockItemInfo>
-            {highCeilingnfoList.map((listItem, i) => (
-              <StyledServicesContentBoxText key={i}>
-                <StyledParagraphBullet>{`${"\u2B24"}`}</StyledParagraphBullet>
-                {listItem}
-              </StyledServicesContentBoxText>
-            ))}
-          </StyledServicesContentBlockItemInfo>
-        </StyledServicesContentPanelContent>
+          ))}
+        </StyledServicesContentBlockItemInfo>
       </StyledServicesContentPanel>
 
       <StyledServicesContentPanel>
-        <StyledServicesLandingPanelImageContainer>
+        <StyledServicesContentPanelImageContainer>
           <StyledServicesContentPanelImageAndEffect>
-            <StyledServicesLandingPanelImageWaterSplash
+            <StyledServicesContentPanelImageWaterSplash
               src={commonAssetUrls?.waterSplash ?? ""}
               alt={"water-splash"}
               width={240}
@@ -161,26 +161,25 @@ const ServicesContent: React.FC = () => {
               fill={true}
             />
           </StyledServicesContentPanelImageAndEffect>
-        </StyledServicesLandingPanelImageContainer>
-        <StyledServicesContentPanelContent>
-          <StyledServicesContentBlockItem>
-            <StyledServicesContentBoxTitle>
-              {textContent?.logisticsAndEcoMaintenanceTitle ?? ""}
-            </StyledServicesContentBoxTitle>
-            <StyledServicesContentBoxText>
-              {textContent?.logisticsAndEcoMaintenance ?? ""}
-            </StyledServicesContentBoxText>
-          </StyledServicesContentBlockItem>
+        </StyledServicesContentPanelImageContainer>
 
-          <StyledServicesContentBlockItemInfo>
-            {logisticsAndEcoMaintenanceInfoList.map((listItem, i) => (
-              <StyledServicesContentBoxText key={i}>
-                <StyledParagraphBullet>{`${"\u2B24"}`}</StyledParagraphBullet>
-                {listItem}
-              </StyledServicesContentBoxText>
-            ))}
-          </StyledServicesContentBlockItemInfo>
-        </StyledServicesContentPanelContent>
+        <StyledServicesContentBlockItem>
+          <StyledServicesContentBoxTitle>
+            {textContent?.logisticsAndEcoMaintenanceTitle ?? ""}
+          </StyledServicesContentBoxTitle>
+          <StyledServicesContentBoxText>
+            {textContent?.logisticsAndEcoMaintenance ?? ""}
+          </StyledServicesContentBoxText>
+        </StyledServicesContentBlockItem>
+
+        <StyledServicesContentBlockItemInfo>
+          {logisticsAndEcoMaintenanceInfoList.map((listItem, i) => (
+            <StyledServicesContentBoxText key={i}>
+              <StyledParagraphBullet>{`${"\u2B24"}`}</StyledParagraphBullet>
+              {listItem}
+            </StyledServicesContentBoxText>
+          ))}
+        </StyledServicesContentBlockItemInfo>
       </StyledServicesContentPanel>
     </StyledServicesContent>
   );
