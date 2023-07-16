@@ -95,8 +95,8 @@ const AboutContent: React.FC = () => {
             <StyledContactContentPanelWaterSplash
               src={commonAssetUrls?.waterSplash ?? ""}
               alt={"water-splash"}
-              width={180}
-              height={180}
+              width={160}
+              height={160}
             />
             <StyledAboutContentPanelImage
               src={brandMessageAssetUrls?.machine ?? ""}
@@ -111,7 +111,7 @@ const AboutContent: React.FC = () => {
           </StyledAboutContentPanelImageAndEffect>
         </StyledAboutContentImagePanel>
       </StyledAboutContentPanel>
-      <StyledOpinions>
+      {/* <StyledOpinions>
         <StyledOpinionsMainTitle>
           {opinionsTextContent?.title ?? ""}
         </StyledOpinionsMainTitle>
@@ -133,7 +133,7 @@ const AboutContent: React.FC = () => {
             </StyledOpinionTitle>
           </StyledOpinionsPanel>
         </StyledOpinionsContainer>
-      </StyledOpinions>
+      </StyledOpinions> */}
       <ContactInfo />
     </StyledAboutContent>
   );

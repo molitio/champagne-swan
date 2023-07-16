@@ -61,6 +61,7 @@ export const StyledBrandMessageImageAndEffect = styled.div`
   position: relative;
   height: 24em;
   width: 32em;
+
   margin: 2em auto 4em auto;
 
   @media (max-width: ${(props) =>

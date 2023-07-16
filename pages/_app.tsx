@@ -1,11 +1,10 @@
 import type { AppProps } from "next/app";
 import Script from "next/script";
-import { createTheme } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material";
 import { AppShell } from "@molitio/ui-core";
 import { ApplicationContextRoot, ApplicationTheme } from "../context";
 import { GlobalStyle } from "../globalStyle";
 import { Layout } from "../components/common";
-import { ThemeProvider } from "styled-components";
 
 export default function App({ Component, pageProps }: AppProps) {
   const muiDefault = createTheme();
@@ -14,9 +13,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <AppShell
       externalAppContextRoot={ApplicationContextRoot}
-      externalTheme={{ ...appTheme }}
+      externalTheme={appTheme}
     >
-      <ThemeProvider theme={{ ...appTheme }}>
+      <ThemeProvider theme={appTheme}>
         <Layout>
           <GlobalStyle />
           <Script
@@ -28,13 +27,4 @@ export default function App({ Component, pageProps }: AppProps) {
       </ThemeProvider>
     </AppShell>
   );
-}
-
-export async function getServerSideProps() {
-  return {
-    props: {
-      title: "Champagne Swan",
-      description: "Champagne Swan",
-    },
-  };
 }

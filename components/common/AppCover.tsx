@@ -75,8 +75,8 @@ const AppCover: React.FC = () => {
           </StyledButtonWaterSplashContainer>
 
           <StyledAppCoverContactLink
-            key={navTree?.contact?.path ?? ""}
-            href={navTree?.contact?.path ?? ""}
+            key={navTree?.about?.path ?? ""}
+            href={navTree?.about?.path ?? ""}
           >
             {textContent?.moreInfoButton ?? ""}
           </StyledAppCoverContactLink>
