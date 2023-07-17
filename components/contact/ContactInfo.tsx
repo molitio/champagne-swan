@@ -57,7 +57,10 @@ const ContactInfo: React.FC = () => {
             </StyledAnchor>
           </StyledContactInfoText>
           <StyledContactInfoText>
-            <StyledAnchor href={iconDefinitions?.address?.hrefUrl ?? ""}>
+            <StyledAnchor
+              href={iconDefinitions?.address?.hrefUrl ?? ""}
+              target="_blank"
+            >
               {iconDefinitions?.address?.title ?? ""}
               <br />
               {textContent?.address1 ?? ""}

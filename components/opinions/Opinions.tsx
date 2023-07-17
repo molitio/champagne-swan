@@ -48,13 +48,13 @@ const Opinions: React.FC = () => {
       </StyledOpinionsMainTitle>
 
       <StyledOpinionsPanel>
-        <StyledOpinionsAvatarImageContainer>
+        {/*         <StyledOpinionsAvatarImageContainer>
           <StyledOpinionsAvatarImage
             src={commonAssetUrls?.stockPersonAvatar1 ?? ""}
             alt={"person-avatar"}
             fill={true}
           />
-        </StyledOpinionsAvatarImageContainer>
+        </StyledOpinionsAvatarImageContainer> */}
         <StyledOpinionText>
           {textContent?.defaultCostumerOpinion ?? ""}
         </StyledOpinionText>
@@ -62,21 +62,7 @@ const Opinions: React.FC = () => {
           {textContent?.defaultCustomerName ?? ""}
         </StyledOpinionTitle>
       </StyledOpinionsPanel>
-      <StyledOpinionsPanel>
-        <StyledOpinionsAvatarImageContainer>
-          <StyledOpinionsAvatarImage
-            src={commonAssetUrls?.stockPersonAvatar2 ?? ""}
-            alt={"person-avatar"}
-            fill={true}
-          />
-        </StyledOpinionsAvatarImageContainer>
-        <StyledOpinionText>
-          {textContent?.defaultCostumerOpinion ?? ""}
-        </StyledOpinionText>
-        <StyledOpinionTitle>
-          {textContent?.defaultCustomerName ?? ""}
-        </StyledOpinionTitle>
-      </StyledOpinionsPanel>
+
       <StyledOpinionsLogoContainer>
         <StyledOpinionsLogoImage
           src={commonAssetUrls?.logo ?? ""}

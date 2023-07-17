@@ -63,13 +63,13 @@ export const ApplicationContextRoot = {
             title: "KAPCSOLAT",
             formText:
               "Írjon Nekünk az alábbi kapcsolati űrlapon keresztül vagy vegye fel velünk a kapcsolatot az alábbi elérhetőségek egyikén!",
-            email: "info@gmail.com",
+            email: "info@jelizaclean.com",
             phoneMain: "+36 20 416 0391",
             address1: "1134 Budapest",
             address2: "Lehel utca 11.",
           },
           assetUrls: {
-            emailHref: "mailto:szatmari.marica@gmail.com",
+            emailHref: "mailto:info@jelizaclean.com",
             webSiteHref: "https://jelizaclean.com",
             addressHref: "https://goo.gl/maps/FK9mXYG25HLPXEvR6",
             phoneMainHref: "tel:+36204160391",
@@ -86,7 +86,7 @@ export const ApplicationContextRoot = {
             email: {
               title: "E-mail",
               url: "/web_content/icons/icons_jeliza_phone.svg",
-              hrefUrl: "mailto:info@jeliza.com",
+              hrefUrl: "mailto:info@jelizaclean.com",
             },
             address: {
               title: "Cím",
@@ -158,8 +158,10 @@ export const ApplicationContextRoot = {
         customerOpinions: {
           textContent: {
             title: "VÉLEMÉNYEK",
-            defaultCostumerOpinion: "Hamarosan érkezik.",
-            defaultCustomerName: "",
+            defaultCostumerOpinion:
+              "A Jeliza Kft a 16 stúdió alartmanból álló szálláshelyünkön végez teljes körű takarítási feladatokat. Mind az utazó és napi szobák takarítása, mind az időszakos nagytakarítások során megbízható és színvonalas szolgáltatást nyújtanak, ami a szálláshelyünk vendégértékelésein is egyértelműen mérhető. Hozzáértő szakértelmükkel és együttműködésükkel folyamatosan fejlesztjük és tökéletesítjük a takarítási protokollunkat, melyet az új dolgozók minden esetben tréning keretében sajátítanak el. A napi szintű kapcsolattartásnak és kommunikációnak köszönhetően rugalmasan kezeli a cég az igényelt takarító létszámot és megfelelően ütemezi az extra takarítási feladatokat. Abszolút elégedett vagyok a Jeliza Kft munkájával, őszintén ajánlom őket.",
+            defaultCustomerName:
+              "Katona Zsuzsanna\nLofter Max Kft.\nHeritage Home Apartmanház",
           },
         },
       },
@@ -244,7 +246,6 @@ export const ApplicationContextRoot = {
             officeCleaningTitle: "Szállodák és irodaházak takarítása",
             officeCleaning:
               "A szállodák és irodaházak takarítása rendkívül fontos a tiszta és higiénikus környezet fenntartása érdekében. A takarítási folyamat általában magában foglalja a következő lépéseket",
-
             highCeilingTitle: "Nagy belmagasságú épületek takarítása",
             highCeiling:
               "A nagy belmagasságú épületek takarítása komplex és kihívást jelentő feladat, amely speciális módszereket, felszereléseket és szakértelmet igényel. A következőkben leírom a folyamatot, amelyet általában alkalmaznak az ilyen épületek takarítására. Felkészülés és biztonság:",

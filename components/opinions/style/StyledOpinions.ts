@@ -78,10 +78,10 @@ export const StyledOpinionsContainer = styled.div`
 
 export const StyledOpinionText = styled.p`
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
-  font-family: "Lato", sans-serif;
+  /*   font-family: "Lato", sans-serif; */
   font-style: italic;
   font-weight: 300;
-  text-align: center;
+  text-align: left;
   font-size: 1.2em;
   width: 300px;
   margin: 0.5em auto 0.5em auto;
@@ -92,12 +92,12 @@ export const StyledOpinionText = styled.p`
   }
 `;
 
-export const StyledOpinionTitle = styled.p`
+export const StyledOpinionTitle = styled.pre`
   color: ${(props) => props?.theme?.palette?.text?.primary ?? ""};
   text-align: center;
   font-family: "Lato" sans-serif;
   font-weight: 100;
-  font-size: 1.8em;
+  font-size: 1.2em;
   width: 300px;
   margin: auto;
 `;

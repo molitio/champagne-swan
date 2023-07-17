@@ -39,8 +39,6 @@ const ServicesContent: React.FC = () => {
     textContentList?.logisticsAndEcoMaintenanceInfoList ?? ""
   );
 
-  // refactor to grid for the services content tiles
-
   return (
     <StyledServicesContent>
       <StyledLinearGradient

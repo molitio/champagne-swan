@@ -18,8 +18,8 @@ export const StyledButtonWaterSplashContainer = styled.div`
 `;
 
 export const StyledBrandMessageInfoWaterSplash = styled(StyledWaterSplash)`
-  right: -60px;
-  bottom: -90px;
+  right: -50px;
+  bottom: -80px;
   transform: rotate(-15deg);
   overflow: hidden;
 `;
@@ -39,8 +39,8 @@ export const StyledServicesLandingPanelImageWaterSplash = styled(
 `;
 
 export const StyledContactContentPanelWaterSplash = styled(StyledWaterSplash)`
-  right: -60px;
-  bottom: -90px;
+  right: -50px;
+  bottom: -80px;
   transform: rotate(-15deg);
   /*   @media (max-width: ${(props) =>
     resolveThemeBreakPointValues(props?.theme, "xl")}) {

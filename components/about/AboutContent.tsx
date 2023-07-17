@@ -1,14 +1,6 @@
 import React from "react";
 import { SystemContext } from "@molitio/ui-core";
 import { IconGroup, StyledContactContentPanelWaterSplash } from "../common";
-import {
-  StyledOpinionsMainTitle,
-  StyledOpinionsContainer,
-  StyledOpinions,
-  StyledOpinionsPanel,
-  StyledOpinionText,
-  StyledOpinionTitle,
-} from "../opinions";
 import { ContactInfo } from "../contact";
 import {
   StyledAboutContent,
@@ -29,7 +21,6 @@ const AboutContent: React.FC = () => {
   const aboutLeafs = systemContext?.contentRoot?.about?.leafs;
   const brandMessageTextContent = aboutLeafs?.brandMessage?.textContent;
   const brandMessageAssetUrls = aboutLeafs?.brandMessage?.assetUrls;
-  const opinionsTextContent = aboutLeafs?.opinions?.textContent;
   const commonLeafs = systemContext?.contentRoot?.common?.leafs;
   const commonAssetUrls = commonLeafs?.images?.assetUrls;
 
@@ -95,8 +86,8 @@ const AboutContent: React.FC = () => {
             <StyledContactContentPanelWaterSplash
               src={commonAssetUrls?.waterSplash ?? ""}
               alt={"water-splash"}
-              width={180}
-              height={180}
+              width={160}
+              height={160}
             />
             <StyledAboutContentPanelImage
               src={brandMessageAssetUrls?.machine ?? ""}
@@ -111,29 +102,6 @@ const AboutContent: React.FC = () => {
           </StyledAboutContentPanelImageAndEffect>
         </StyledAboutContentImagePanel>
       </StyledAboutContentPanel>
-      <StyledOpinions>
-        <StyledOpinionsMainTitle>
-          {opinionsTextContent?.title ?? ""}
-        </StyledOpinionsMainTitle>
-        <StyledOpinionsContainer>
-          <StyledOpinionsPanel>
-            <StyledOpinionText>
-              {opinionsTextContent?.defaultCustomerOpinion ?? ""}
-            </StyledOpinionText>
-            <StyledOpinionTitle>
-              {opinionsTextContent?.defaultCustomerName ?? ""}
-            </StyledOpinionTitle>
-          </StyledOpinionsPanel>
-          <StyledOpinionsPanel>
-            <StyledOpinionText>
-              {opinionsTextContent?.defaultCustomerOpinion ?? ""}
-            </StyledOpinionText>
-            <StyledOpinionTitle>
-              {opinionsTextContent?.defaultCustomerName ?? ""}
-            </StyledOpinionTitle>
-          </StyledOpinionsPanel>
-        </StyledOpinionsContainer>
-      </StyledOpinions>
       <ContactInfo />
     </StyledAboutContent>
   );
