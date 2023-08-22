@@ -251,9 +251,9 @@ export const ApplicationContextRoot = {
               "A nagy belmagasságú épületek takarítása komplex és kihívást jelentő feladat, amely speciális módszereket, felszereléseket és szakértelmet igényel. A következőkben leírom a folyamatot, amelyet általában alkalmaznak az ilyen épületek takarítására. Felkészülés és biztonság:",
 
             logisticsAndEcoMaintenanceTitle:
-              "Magánszemélyeknél végzett takarítás",
+              "Logisztikai központok és egyéb zöld területek karbantartása",
             logisticsAndEcoMaintenance:
-              "Szállodák és irodaházak takarítása Minden egyes munkatársunk képzett szakember, akik a legmagasabb szintű takarító szolgáltatást nyújtják megbízóink számára. Munkánkat precízen és alaposan végezzük, ezáltal ügyfeleink helyiségei tökéletesen tiszták legyenek. Nagy figyelmet fordítunk az egészségügyi előírások betartására is, így biztosítva, hogy munkánk során az ügyfeleink és munkatársaink egészsége is védve legyen. Szolgáltatásaink között megtalálhatóak a lakások, irodák, üzlethelyiségek takarítása, valamint a különböző események előkészítéséhez szükséges takarítás is",
+              "A nagyobb területeken található zöld övezetek karbantartása több odafigyelést és tervezést igényel, mivel ezek általában parkok vagy egyéb természetes területek lehetnek. Az alábbiakban bemutatom a nagyobb területeken lévő zöld övezetek karbantartásának fő lépéseit:",
           },
           assetUrls: {
             officeCleaners: "/web_content/img/officecleaners.webp",
