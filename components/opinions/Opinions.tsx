@@ -9,8 +9,6 @@ import {
   StyledOpinionsLogoContainer,
   StyledOpinionsMainTitle,
   StyledOpinionsIconContainer,
-  StyledOpinionsAvatarImage,
-  StyledOpinionsAvatarImageContainer,
   StyledOpinionsLogoImage,
 } from "./style";
 
