@@ -1,5 +1,5 @@
 export const ApplicationContextRoot = {
-  appName: "Champagne Swan v1.0.0",
+  appName: "Champagne Swan v1.0.2",
   navRoot: {
     home: {
       label: "Főoldal",
