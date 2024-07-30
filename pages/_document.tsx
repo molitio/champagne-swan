@@ -6,7 +6,8 @@ export default function Document() {
   return (
     <Html>
       <Head>
-      <link href="https://fonts.googleapis.com/css2?family=Fahkwang&family=Lato:ital,wght@0,100;0,400;1,300&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Fahkwang&family=Lato:ital,wght@0,100;0,400;1,300&display=swap" rel="stylesheet" />
+        <script async src='https://r3.minicrm.hu/api/loader.js?60823-1y8vh5dekw08fsfrhd1i0v01i33zp8'/>
       </Head>
       <body>
         <Main />
