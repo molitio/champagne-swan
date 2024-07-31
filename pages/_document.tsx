@@ -6,8 +6,10 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <link href="https://fonts.googleapis.com/css2?family=Fahkwang&family=Lato:ital,wght@0,100;0,400;1,300&display=swap" rel="stylesheet" />
-        <Script async src='https://r3.minicrm.hu/api/loader.js?60823-1y8vh5dekw08fsfrhd1i0v01i33zp8'/>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fahkwang&family=Lato:ital,wght@0,100;0,400;1,300&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <body>
         <Main />
@@ -18,7 +20,6 @@ export default function Document() {
         strategy="beforeInteractive"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
       />
-
       <Script
         /* nonce={nonce} */
         id="emailClient"
@@ -26,6 +27,10 @@ export default function Document() {
         onLoad={() =>
           emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_API_KEY ?? "")
         }
+      />
+      <Script
+        strategy="lazyOnload"
+        src="https://r3.minicrm.hu/api/loader.js?60823-1y8vh5dekw08fsfrhd1i0v01i33zp8"
       />
     </Html>
   );

@@ -3,6 +3,7 @@
   "version": "1.0.2",
   "private": true,
   "scripts": {
+    "ci": "yarn install --immutable --immutable-cache --check-cache",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
